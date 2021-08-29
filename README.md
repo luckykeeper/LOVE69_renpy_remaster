@@ -68,4 +68,8 @@ CG、BGM等素材的解包工作已全部完成，无需帮助
 ## 😥其它事项😅
 
 - 项目可能因为学业原因无限期推迟（学业繁忙+是只鸽子😅）【所以有其他人想来汉化那是大欢迎，也欢迎使用本项目已经汉化好的文本和提取出的日语文本，不过如果用的话希望加上我的名字（Luckykeeper）】{就不要着急催着填坑了哈}
-- 本页面最后修改时间 2021年8月28日
+- 项目相关文件下载地址（微力同步）解压密码为本页面网址（即 https://github.com/luckykeeper/LOVE69_renpy_remaster ）
+
+https://link.verysync.com/#f=%E9%A1%B9%E7%9B%AE%E7%9B%B8%E5%85%B3%E6%96%87%E4%BB%B6&sz=105E4&k=O4UCHDEBE4CKZXDJAMXP2MG6DIWQ7H2GY6HPEIOAJPB4KOP4G7DJKD&d=J6XJZFRYBQANB4SKQEV7BXFQEAKQ&t=1&tm=1630204958593&v=v2.9.2&a=1
+
+- 本页面最后修改时间 2021年8月29日
