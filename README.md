@@ -1,6 +1,8 @@
 # LOVE69_renpy_remaster
 使用ren'py重制LOVEPOTION SIXTYNINE，并加以汉化和全平台适配
 
+<img src="images/项目组logo.png" alt="项目组logo" style="zoom: 25%;" />
+
 ## 🎉开坑宣告🎉
 
 推了好多年的Gal，也想自己做出一些贡献呢，最近正好推完了LOVEPOTION SIXTYNINE，文本难度不是很高，基本上都看懂了，又简单看了一下ren’py，似乎不是很难，所以打算开个坑，整个个人汉化，当然，如果能有其它组来做那是大欢迎啦~~但是感觉这么冷门的电波系作品应该没有哪个组来做汉化，所以我就这么打算开坑啦~~
