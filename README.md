@@ -39,7 +39,7 @@ Demo版实机开发界面_主菜单
 
 安卓Demo实机运行页面_安装
 
-<img src="images/安卓Demo实机运行页面_安装.jpg" alt="安卓Demo安卓Demo实机运行页面_安装.jpg" style="zoom:20%;" />
+<img src="images/安卓Demo实机运行页面_安装.jpg" alt="安卓Demo安卓Demo实机运行页面_安装.jpg" style="zoom:10%;" />
 
 安卓Demo实机运行页面_项目组logo
 
