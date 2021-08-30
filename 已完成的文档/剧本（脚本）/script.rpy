@@ -1,3 +1,8 @@
+﻿# Author:Luckykeeper
+# Blog：http://b.luckykeeper.site
+# 脚本模块
+# 开坑日期 2021年8月28日
+
 #----------------------------------------------------------------
 # 主程序开始
 # Author:Luckykeeper
@@ -32,6 +37,13 @@
 # 一周目开始前 主题BGM：anonatsu_piano.ogg
 
 label start:
-    jump sence01
+    jump scene01
 
 # 一周目，共通线（一周目莫得选项）
+
+# sence01
+# Author:Luckykeeper
+# Blog：http://b.luckykeeper.site
+# 开始日期 2021年8月28日
+# 版本：null（还未完成）
+

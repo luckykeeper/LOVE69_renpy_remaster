@@ -1,4 +1,4 @@
-# GUI自定义脚本
+﻿# GUI自定义脚本
 # Author:Luckykeeper
 # Blog：http://b.luckykeeper.site
 # 修订日期 2021年8月30日
@@ -10,7 +10,7 @@
 init offset = -2
 
 ## 调用gui.init会将样式重置为合理的默认值，并设置游戏的宽度和高度（分辨率）。
-## 原定是1280*720，ren'py会自动缩放，不过发现在我的电脑（1400*900）有一定显示问题，目前改到1920*1080尚未发现问题
+## 这里的像素需要设置成主菜单素材的基础像素
 ## ren'py能够自动地使用各种各样的屏幕
 init python:
     gui.init(1920, 1080)
@@ -60,7 +60,8 @@ define gui.interface_text_color = u'#ffffff'
 ## 用于游戏内文本的字体。
 # define gui.text_font = "SourceHanSansLite.ttf"
 # 原字体会有一定的显示问题，需要测试并修改字体
-define gui.text_font = "SourceHanSansLite.ttf"
+# 测试微软雅黑_常规（音符不能全部支持，但解决了一部分问题，决定修改音符并使用该字体）
+define gui.text_font = "msyh.ttc"
 
 ## 用于角色名称的字体。
 define gui.name_text_font = "SourceHanSansLite.ttf"
@@ -89,8 +90,18 @@ define gui.title_text_size = 75
 
 ## 标题和游戏菜单 #####################################################################
 
-## 用于标题菜单和游戏菜单的图像。
+# main_menu_background和game_menu_background的图像使用waifu2x放大，以测试waifu2x在GUI上是否可以实现
+
+## 用于标题菜单的图像。
+# gui.main_menu_background 定义的是一打开游戏主菜单显示的画面
+# Demo版我们选择使用原版一周目开始前的CG
+# 最终版应当能够根据周目切换CG，这个功能现在暂不实现
+# define gui.main_menu_background = "gui/main_menu.png"
 define gui.main_menu_background = "gui/main_menu.png"
+
+## 用于游戏菜单的图像。
+# gui.game_menu_background 定义的是 S&L 菜单显示的画面
+# Demo版我们选择使用原版一周目开始前的CG，通过PS修改将S&L&Config合成一张图片（基于Save页面）
 define gui.game_menu_background = "gui/game_menu.png"
 
 

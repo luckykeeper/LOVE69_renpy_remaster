@@ -1,9 +1,8 @@
-﻿# 项目自定义脚本
+﻿# GUI自定义脚本
 # Author:Luckykeeper
 # Blog：http://b.luckykeeper.site
 # 修订日期 2021年8月29日
 # 版本号 0.0.1 “LuckyGal”
-# 源文件名：options.rpy
 
 
 ## 基础 ##########################################################################
@@ -19,7 +18,7 @@ define config.name = _("LOVE69 汉化移植版 Demo ver0.1 “LuckyGal” ，由
 
 ## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## 游戏版本号。
@@ -145,8 +144,10 @@ define config.save_directory = "LOVE69RenpyRemaster"
 ## 图标 ##########################################################################
 ##
 ## 在任务栏或 Dock 上显示的图标。
+# ren'py给的默认图像的是png格式，使用ico问题也莫得问题
+# LOVE69_renpy_remaster 的ico文件来自love69.exe解包（内含4个ico，取最大的1.ico，并重命名为gui/window_icon.ico）
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "gui/window_icon.ico"
 
 
 ## 生成配置 ########################################################################
