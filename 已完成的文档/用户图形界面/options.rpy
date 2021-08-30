@@ -1,4 +1,4 @@
-﻿# GUI自定义脚本
+﻿# 项目自定义脚本
 # Author:Luckykeeper
 # Blog：http://b.luckykeeper.site
 # 修订日期 2021年8月29日
