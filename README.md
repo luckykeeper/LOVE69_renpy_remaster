@@ -1,7 +1,7 @@
 # LOVE69_renpy_remaster
 使用ren'py重制LOVEPOTION SIXTYNINE，并加以汉化和全平台适配
 
-<img src="images/项目组logo.png" alt="项目组logo" style="zoom: 10%;" />
+<img src="images/项目组logo_smallsize.png" alt="项目组logo"  />
 
 ## 🎉开坑宣告🎉
 
