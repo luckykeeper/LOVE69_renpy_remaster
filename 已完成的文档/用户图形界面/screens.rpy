@@ -1,9 +1,34 @@
-﻿################################################################################
+# --------------------------------
+# LOVE69_Renpy_Remaster_Project
+# 各种GUI设定的详细设置
+# Author:Luckykeeper
+# 版本 0.0.1
+# Blog：http://b.luckykeeper.site
+# 修订日期 2021年8月30日
+################################################################################
 ## 初始化
 ################################################################################
 
 init offset = -1
 
+################################################################################
+## 定义几个全局变量
+## 全局变量需要 init python in 命名空间，使用时引入
+    # init python:
+    #     import store.命名空间 as xxx
+### 以上需要在if外使用
+################################################################################
+### SideImage() 相关
+# 显示正常size的参数
+init python in sideimagesize:
+    SideImageXalign = 0.08
+    SideImageYalign = -29.35
+    SideImageZoom = 0.95
+
+# 针对大的 add SideImage() xalign 0.12 yalign 9.1 zoom 0.35 使用时调用以下参数
+# SideImageXalign = 0.0
+# SideImageYalign = 1.0
+# SideImageZoom = 0.0
 
 ################################################################################
 ## 样式
@@ -92,11 +117,15 @@ style frame:
 ##
 ## https://www.renpy.cn/doc/screen_special.html#say
 
+
+
 screen say(who, what):
     style_prefix "say"
 
     window:
         id "window"
+        # 在这里从命名空间导入变量，记得需要在if判断体前完成哦，不过不能超出window部分
+        $ import store.sideimagesize as sideimagesize
 
         if who is not None:
 
@@ -110,8 +139,14 @@ screen say(who, what):
 
     ## 如果有对话框头像，会将其显示在文本之上。请不要在手机界面下显示这个，因为
     ## 没有空间。
+    # 小头像的位置在这里调整 用zoom可以缩放图片
+    ### if not renpy.variant("small"):
+    ### add SideImage() xalign 0.0 yalign 1.0
+    ### 针对大的 add SideImage() xalign 0.12 yalign 9.1 zoom 0.35
+
     if not renpy.variant("small"):
-        add SideImage() xalign 0.0 yalign 1.0
+
+        add SideImage() xalign sideimagesize.SideImageXalign yalign sideimagesize.SideImageYalign zoom sideimagesize.SideImageZoom
 
 
 ## 通过 Character 对象使名称框可用于样式化。
