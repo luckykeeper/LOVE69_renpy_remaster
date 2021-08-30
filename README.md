@@ -29,6 +29,30 @@ Demo版实机开发界面_主菜单
 
 <img src="images/实机演示_Demo版带CG的主页面.PNG" alt="实机演示_Demo版带CG的主页面.PNG" style="zoom:20%;" />
 
+**跨平台测试**
+
+测试平台：中兴Axon 30 Ultra 5G / Android 11 / MyOS 11.0.22MR_A2022P
+
+安卓Demo实机运行页面_安装
+
+<img src="images/安卓Demo实机运行页面_安装.jpg" alt="安卓Demo安卓Demo实机运行页面_安装.jpg" style="zoom:20%;" />
+
+安卓Demo实机运行页面_项目组logo
+
+<img src="images/安卓Demo实机运行页面_项目组logo.jpg" alt="安卓Demo实机运行页面_项目组logo.jpg" style="zoom:20%;" />
+
+安卓Demo实机运行页面_主菜单
+
+<img src="images/安卓Demo实机运行页面_主菜单.jpg" alt="安卓Demo实机运行页面_主菜单.jpg" style="zoom:20%;" />
+
+安卓Demo实机运行页面_对话框实现
+
+<img src="images/安卓Demo实机运行页面_对话框实现.jpg" alt="安卓Demo实机运行页面_对话框实现.jpg" style="zoom:20%;" />
+
+安卓Demo实机运行页面_带CG的主页面
+
+<img src="images/安卓Demo实机运行页面_带CG的主页面.jpg" alt="安卓Demo实机运行页面_带CG的主页面.jpg" style="zoom:20%;" />
+
 ## 👏成员👏
 
 组长：Luckykeeper
