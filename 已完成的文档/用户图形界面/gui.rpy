@@ -1,4 +1,4 @@
-﻿# GUI自定义脚本
+# GUI自定义脚本
 # Author:Luckykeeper
 # Blog：http://b.luckykeeper.site
 # 修订日期 2021年8月30日
@@ -109,8 +109,8 @@ define gui.game_menu_background = "gui/game_menu.png"
 ##
 ## 这些变量控制对话框一次一行显示在屏幕上的方式。
 
-## 包含对话的文本框的高度。
-define gui.textbox_height = 278
+## 包含对话的文本框的高度。本作容易文本溢出，调高
+define gui.textbox_height = 350
 
 ## 文本框在屏幕上的垂直位置。0.0 是顶部，0.5 是正中，1.0 是底部。
 define gui.textbox_yalign = 1.0
@@ -118,8 +118,8 @@ define gui.textbox_yalign = 1.0
 
 ## 叙述角色名称相对文本框的位置。可以是从左侧或顶部起的整数像素，或设为“0.5”来放
 ## 置到正中。
-define gui.name_xpos = 360
-define gui.name_ypos = 0
+define gui.name_xpos = 30
+define gui.name_ypos = -30
 
 ## 角色名称的水平对齐方式。0.0 为左侧对齐，0.5 为居中显示，而 1.0 为右侧对齐。
 define gui.name_xalign = 0.0
@@ -129,7 +129,7 @@ define gui.namebox_width = None
 define gui.namebox_height = None
 
 ## 包含角色名称的框的边界尺寸，以左、上、右、下顺序排列。
-define gui.namebox_borders = Borders(5, 5, 5, 5)
+define gui.namebox_borders = Borders(80, 5, 80, 5)
 
 ## 若为True，则名称框的背景将被平铺；若为False，则将缩放名称框的背景。
 define gui.namebox_tile = False
@@ -137,7 +137,7 @@ define gui.namebox_tile = False
 
 ## 对话框相对于文本框的位置。可以是相对于文本框从左侧或顶部起的整数像素，或设
 ## 为“0.5”来放置到正中。
-define gui.dialogue_xpos = 402
+define gui.dialogue_xpos = 700
 define gui.dialogue_ypos = 75
 
 ## 对话文本的最大宽度（以像素为单位）。
