@@ -1,4 +1,4 @@
-﻿# Author:Luckykeeper
+# Author:Luckykeeper
 # Blog：http://b.luckykeeper.site
 # 脚本模块
 # 开坑日期 2021年8月28日
@@ -37,7 +37,12 @@
 # 一周目开始前 主题BGM：anonatsu_piano.ogg
 
 label start:
-    jump scene01
+# 游戏开始
+    stop music # 停止主菜单音乐
+    play sound "effect/start.ogg" # 播放开始音效
+    with fade # 主菜单到正式游戏的过场
+    pause 0.8
+    jump scene01 # 开始 scene01 的脚本
 
 # 一周目，共通线（一周目莫得选项）
 
@@ -46,4 +51,3 @@ label start:
 # Blog：http://b.luckykeeper.site
 # 开始日期 2021年8月28日
 # 版本：null（还未完成）
-
