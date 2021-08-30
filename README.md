@@ -13,6 +13,22 @@ Demo版实机开发界面_主菜单
 
 <img src="images/Demo版实机开发界面_主菜单.PNG" alt="Demo版实机开发界面_主菜单.PNG" style="zoom:20%;" />
 
+原对话框实现
+
+<img src="images/原对话框实现.PNG" alt="原对话框实现.PNG" style="zoom:20%;" />
+
+实机演示_Demo版对话框实现
+
+<img src="images/实机演示_Demo版对话框实现.PNG" alt="实机演示_Demo版对话框实现.PNG" style="zoom:20%;" />
+
+原带CG的主页面
+
+<img src="images/原带CG的主页面.PNG" alt="原带CG的主页面.PNG" style="zoom:20%;" />
+
+实机演示_Demo版带CG的主页面（waifu2x 720p->1080p）
+
+<img src="images/实机演示_Demo版带CG的主页面.PNG" alt="实机演示_Demo版带CG的主页面.PNG" style="zoom:20%;" />
+
 ## 👏成员👏
 
 组长：Luckykeeper
