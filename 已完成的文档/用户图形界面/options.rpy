@@ -1,7 +1,7 @@
-﻿# GUI自定义脚本
+# GUI自定义脚本
 # Author:Luckykeeper
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年8月29日
+# 修订日期 2021年8月30日
 # 版本号 0.0.1 “LuckyGal”
 
 
@@ -13,7 +13,7 @@
 ## 带有 _() 的字符串表示其可被翻译。
 
 # sence01 完成之后会做一个demo来验证可行性，下面是 demo 的暂定标题
-define config.name = _("LOVE69 汉化移植版 Demo ver0.1 “LuckyGal” ，由Luckykeeper和LOVE69_renpy_remaster项目组倾情奉献")
+define config.name = _("LOVEPOTION SIXTYNINE 汉化移植版 Demo ver0.1 “LuckyGal” ，由Luckykeeper和LOVE69_renpy_remaster项目组倾情奉献")
 
 
 ## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。
@@ -29,7 +29,7 @@ define config.version = "0.1"
 ## 放置在游戏“关于”屏幕的文本。将文本放在三个引号之间，并在段落之间留一个空行。
 
 define gui.about = _p("""
-LOVE69 汉化移植版 Demo ver0.1 “LuckyGal” ，由Luckykeeper和LOVE69_renpy_remaster项目组倾情奉献
+LOVEPOTION SIXTYNINE 汉化移植版 Demo ver0.1 “LuckyGal” ，由Luckykeeper和LOVE69_renpy_remaster项目组倾情奉献
 
 项目页面：https://github.com/luckykeeper/LOVE69_renpy_remaster
 
