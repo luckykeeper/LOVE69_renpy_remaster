@@ -4,7 +4,7 @@
 # 版本 0.0.4
 # Blog：http://b.luckykeeper.site
 # 开始日期 2021年8月28日
-# 修订日期 2021年8月30日
+# 修订日期 2021年9月1日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -43,6 +43,7 @@ image side 真冬 真冬_制服_基本_むーっ = "images/face/真冬/真冬_�
 image side 真冬 真冬_制服_基本_無表情 = "images/face/真冬/真冬_制服_基本_無表情.png"
 image side 真冬 真冬_制服_基本_見下し2 = "images/face/真冬/真冬_制服_基本_見下し2.png"
 image side 真冬 真冬_制服_基本_目閉じ_1 = "images/face/真冬/真冬_制服_基本_目閉じ_1.png"
+image side 真冬 真冬_制服_基本_ジト目 = "images/face/真冬/真冬_制服_基本_ジト目.png"
 
 
 
