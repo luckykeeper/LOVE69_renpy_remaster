@@ -61,7 +61,7 @@ Demo版实机开发界面_主菜单
 
 Demo版实机测试_GIF图
 
-可以简短的看下做完大概是什么样子，另外视频里面的“开裂”并不是waifu2x的锅，演示中用到的真冬的介绍动画是由146张不带alpha通道的jpg文件组成的，alpha通道是在另外几个不能正常打开的jpg文件里面，下面给出一个参考文件供各位大佬分析，如果您有办法能解决这个问题，欢迎加入项目组一起来搞事情![huaji](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/huaji.aqdzo604ncs.png)
+可以简短的看下做完大概是什么样子，另外视频里面的“开裂”并不是waifu2x的锅，下面演示中用到的真冬的介绍动画是由解包出来的146张不带alpha通道的jpg文件导到AE做的视频，作品原动画文件是由146张不带alpha通道的jpg文件加上另外几个不能正常打开的jpg文件（推测这几个文件是记录了alpha通道的信息），下面给出一个参考文件供各位大佬分析，如果您有办法能解决这个问题，欢迎加入项目组一起来搞事情![huaji](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/huaji.aqdzo604ncs.png)
 
 参考文件 链接：https://pan.baidu.com/s/1lOxy0fX3wEf6dyQNHydhDQ 提取码：qxqm
 
@@ -144,4 +144,4 @@ CG、BGM等素材的解包工作已全部完成，无需帮助
 - 项目相关文件解压密码为本页面网址（即 https://github.com/luckykeeper/LOVE69_renpy_remaster ）下载链接暂时取消
 
 - 出于各种原因，本次汉化移植并不会对“gkd”的内容进行汉化和移植
-- 本页面最后修改时间 2021年8月31日
+- 本页面最后修改时间 2021年9月1日
