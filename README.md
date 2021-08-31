@@ -59,6 +59,14 @@ Demo版实机开发界面_主菜单
 
 <img src="images/安卓Demo实机运行页面_带CG的主页面.jpg" alt="安卓Demo实机运行页面_带CG的主页面.jpg" style="zoom:20%;" />
 
+Demo版实机测试_GIF图
+
+可以简短的看下做完大概是什么样子，另外视频里面的“开裂”并不是waifu2x的锅，演示中用到的真冬的介绍动画是由146张不带alpha通道的jpg文件组成的，alpha通道是在另外几个不能正常打开的jpg文件里面，下面给出一个参考文件供各位大佬分析，如果您有办法能解决这个问题，欢迎加入项目组一起来搞事情![huaji](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/huaji.aqdzo604ncs.png)
+
+参考文件 链接：https://pan.baidu.com/s/1lOxy0fX3wEf6dyQNHydhDQ 提取码：qxqm
+
+<img src="images/Demo版实机测试_GIF图.gif" alt="Demo版实机测试_GIF图.gif" style="zoom:20%;" />
+
 ## 👏成员👏
 
 组长：Luckykeeper
@@ -111,7 +119,7 @@ CG、BGM等素材的解包工作已全部完成，无需帮助
 
 测试、校对：可以先把联系方式发送到 luckykeeper@luckykeeper.site ，完成后将会联系
 
-**急需**：动画的alpha通道分析（本作的动画是由一堆jpg构成的，在文件夹内有4个不能显示图像的jpg文件，00000000-3.jpg），希望有人来分析一下提取出alpha通道。若这个问题不能解决，移植时可能会放弃部分特效或不得不从其它地方提取部分特效进行替代
+**急需**：动画的alpha通道分析（本作的动画是由一堆jpg构成的，在文件夹内有4个不能显示图像的jpg文件，00000000-3.jpg），希望有人来分析一下提取出alpha通道。若这个问题不能解决，移植时可能会放弃部分特效或不得不从其它地方提取部分特效进行替代，具体情况请参见上方演示画面的gif图
 
 ### 找不到文件？
 
