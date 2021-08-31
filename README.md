@@ -35,7 +35,7 @@ Demo版实机开发界面_主菜单
 
 测试平台：中兴Axon 30 Ultra 5G / Android 11 / MyOS 11.0.22MR_A2022P
 
-初步确认可运行于新旧安卓手机（RAM>3G）X86安卓设备、模拟器及Chrome Book
+初步确认可运行于新旧安卓手机、X86安卓设备、模拟器及Chrome Book
 
 除上述平台外，预计还将会有iOS版（不过没开发者账户，估计⑧能有），Linux版和MacOS版，甚至WEB版！
 
