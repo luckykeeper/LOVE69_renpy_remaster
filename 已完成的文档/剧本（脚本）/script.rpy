@@ -8,7 +8,7 @@
 # Author:Luckykeeper
 # Blog：http://b.luckykeeper.site
 # 开始日期 2021年8月28日
-# 完成日期
+# 修订日期 2021年8月31日
 
 # 制作流程
 # ①导入全部文本+润色汉化，不带图像
@@ -39,7 +39,7 @@
 label start:
 # 游戏开始
     stop music # 停止主菜单音乐
-    play sound "effect/start.ogg" # 播放开始音效
+    play sound "voice/effect/start.ogg" # 播放开始音效
     with fade # 主菜单到正式游戏的过场
     pause 0.8
     jump scene01 # 开始 scene01 的脚本
