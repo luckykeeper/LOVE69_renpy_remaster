@@ -1,7 +1,7 @@
 # GUI自定义脚本
 # Author:Luckykeeper
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年8月30日
+# 修订日期 2021年8月31日
 # 版本号 0.0.1 “LuckyGal”
 # 源文件名：gui.rpy
 
@@ -60,14 +60,21 @@ define gui.interface_text_color = u'#ffffff'
 ## 用于游戏内文本的字体。
 # define gui.text_font = "SourceHanSansLite.ttf"
 # 原字体会有一定的显示问题，需要测试并修改字体
-# 测试微软雅黑_常规（音符不能全部支持，但解决了一部分问题，决定修改音符并使用该字体）
-define gui.text_font = "msyh.ttc"
+# 测试微软雅黑_常规（音符不能全部支持，但解决了一部分问题，不过音符不能正常显示）
+# define gui.text_font = "msyh.ttc"
+# 测试方正粗黑宋简体 字体非常可爱，但是也不能正常显示音符
+# define gui.text_font = "方正粗黑宋简体.ttf"
+# 测试Symbola.otf  参考资料：https://www.zhihu.com/question/61214405
+# 中文不能正常显示，弃
+# 测试咕咕咕的 Noto Sans Symbols 参考资料：https://www.google.cn/get/noto/ 并⑧行
+# 最终在这个网站上找到了这个字体 NotoSansCJKjp-Black.otf https://www.google.cn/get/noto/
+define gui.text_font ="NotoSansCJKjp-Black.otf"
 
 ## 用于角色名称的字体。
-define gui.name_text_font = "SourceHanSansLite.ttf"
+define gui.name_text_font = "NotoSansCJKjp-Black.otf"
 
 ## 用于游戏外文本的字体。
-define gui.interface_text_font = "SourceHanSansLite.ttf"
+define gui.interface_text_font = "NotoSansCJKjp-Black.otf"
 
 ## 普通对话文本的大小。
 define gui.text_size = 33
@@ -138,7 +145,7 @@ define gui.namebox_tile = False
 ## 对话框相对于文本框的位置。可以是相对于文本框从左侧或顶部起的整数像素，或设
 ## 为“0.5”来放置到正中。
 define gui.dialogue_xpos = 700
-define gui.dialogue_ypos = 75
+define gui.dialogue_ypos = 70
 
 ## 对话文本的最大宽度（以像素为单位）。
 define gui.dialogue_width = 1116
