@@ -215,7 +215,7 @@ label scene01:
 
     # 真冬 「肘を脇の下から離さぬ心構えで、や内角を狙い、えぐり込む様に打つべし」
     voice "voice/真冬/maf_a1_0018.ogg"
-    dong 真冬_制服_基本_目閉じ "要保持肘部不离腋下的姿态，瞄准辣个位置，像要钻进去一样打"
+    dong 真冬_制服_基本_目閉じ "要保持肘部不离腋下的姿态，瞄准辣个地方，像要钻进去一样打"
 
     # 莲 「個人的にそのジャブから打ってきて欲しかったもんだが…。寝起きの思春期男子には、些か冗談きついぜ…」
     lian "我个人并不想让你把那个刺拳打出来...对于刚起床的青春期男生来说，稍微有些开玩笑的感觉（L:绝对是的吧，会死人的）"
@@ -238,7 +238,7 @@ label scene01:
     lian "实际上就是什么都没有吧，你还穿着制服呢"
 
     # nil 「衝撃的な目覚ましではあったが、安心したら、早くも眠気が襲ってくる。」
-    "虽然让我震撼一整年的闹钟，但是安心之后，睡意又很快再次袭来了"
+    "虽然是让我震撼一整年的闹钟，但是安心之后，睡意又很快再次袭来了"
 
     # 莲 「じゃ、おやすみ真冬」
     lian "那么，真冬，欧呀斯密~"
@@ -848,18 +848,18 @@ label scene01:
 
     # 这里少了一句真冬的话，也需要把真冬语音往前提一句（回头把动作提一下就行，工作量不大）
     # 真冬 「むぐぐぐ......ガぷっ」
-    hide 真冬_制服_基本_本気2
-    show 真冬_制服_基本_見下し at love69_center
-    voice "voice/真冬/maf_a1_0067.ogg"
-    dong 真冬_制服_基本_見下し "咕奴奴奴...嘎呜！"
+    hide 真冬_制服_基本_むーっ
+    show 真冬_制服_基本_目閉じ at love69_center
+    voice "voice/真冬/maf_a1_0066.ogg"
+    dong 真冬_制服_基本_目閉じ "咕奴奴奴...嘎呜！"
 
     # 莲 「食べた！」
     lian "吃进去了！（L：莲君你再这么对待妹妹你信不信我把你名字改成辶艹车！）"
 
     # 真冬 「ぺっ！」
-    hide 真冬_制服_基本_むーっ
+    hide 真冬_制服_基本_目閉じ
     show 真冬_制服_基本_本気2 at love69_center
-    voice "voice/真冬/maf_a1_0066.ogg"
+    voice "voice/真冬/maf_a1_0067.ogg"
     dong 真冬_制服_基本_本気2 "呸！"
 
     # 莲 「ぐわぁー！」
@@ -868,17 +868,11 @@ label scene01:
     # nil 「......」
     "......"
 
-    # # 真冬 「ぺっ！」（这句是没有的）
-    # hide 真冬_制服_基本_本気2
-    # show 真冬_制服_基本_見下し at love69_center
-    # voice "voice/真冬/maf_a1_0067.ogg"
-    # dong 真冬_制服_基本_見下し "呸！"
-
     # 真冬 「はいお兄ちゃん。あーん」
-    hide 真冬_制服_基本_見下し
-    show 真冬_制服_基本_微笑み at love69_center
+    hide 真冬_制服_基本_本気2
+    show 真冬_制服_基本_にっこり at love69_center
     voice "voice/真冬/maf_a1_0068.ogg"
-    dong 真冬_制服_基本_微笑み "好了，欧尼酱。来，啊——呜"
+    dong 真冬_制服_基本_にっこり "好了，欧尼酱。来，啊——呜"
 
     # 莲 「あーん」
     lian "啊——呜"
@@ -891,8 +885,7 @@ label scene01:
 
     # nil 「......」
     # 提前hide真冬方便转场（与原作不同，又多了一个底层的，手动处理一下）
-    hide 真冬_制服_基本_本気2
-    hide 真冬_制服_基本_微笑み with dissolve
+    hide 真冬_制服_基本_にっこり with dissolve
     "......"
 
     # nil 「食事も終わり、普段よりも時間が大幅に余った俺たち二人は、梅昆布茶をすりながら、テレビを眺めていた。」
@@ -906,7 +899,7 @@ label scene01:
     "差不多是早上的新闻节目结束，综艺节目开始的时间了"
 
     # 真冬 「ずー…ぷはーっ」
-    show 真冬_制服_基本_まったり at love69_center
+    show 真冬_制服_基本_まったり at love69_center with dissolve
     voice "voice/真冬/maf_a1_0069.ogg"
     dong 真冬_制服_基本_まったり "Z...ZZ...ZZZ..."
 
@@ -951,6 +944,7 @@ label scene01:
     lian "这玩意儿怎么说都很可疑吧"
 
     # 真冬 「こーいうのは、楽しんだ物勝ちっすよ。でも、どこで売ってるか言ってなかったね…」
+    # 嘛呼嘛呼酱的表情难得莫得变化呢
     voice "voice/真冬/maf_a1_0073.ogg"
     dong "u1s1，这个广告真的非常有意思呢。不过，她似乎忘了说在哪里有卖这个的来着？"
 
@@ -958,10 +952,13 @@ label scene01:
     lian "真的想要吗"
 
     # 真冬 「えへ、ちょっとね」
+    hide 真冬_制服_基本_泣き
+    show 真冬_制服_基本_にっこり at love69_center
     voice "voice/真冬/maf_a1_0074.ogg"
-    dong "嘿嘿嘿，有一点吧"
+    dong 真冬_制服_基本_にっこり "嘿嘿嘿，有一点吧"
 
     ## 门铃声x1
+    play sound "voice/effect/05_玄関チャイム.ogg"
 
     # nil 「家のチャイムが来客を告げる。」
     "家里的门铃响了"
@@ -970,72 +967,149 @@ label scene01:
     lian "是客人啊"
 
     # 真冬 「そうだね」
+    hide 真冬_制服_基本_にっこり
+    show 真冬_制服_基本_無表情 at love69_center
     voice "voice/真冬/maf_a1_0075.ogg"
-    dong "是的吧"
+    dong 真冬_制服_基本_無表情 "是的吧"
 
     # 莲 「......」
     lian "......"
 
     # 真冬 「ずずー…」
+    hide 真冬_制服_基本_無表情
+    show 真冬_制服_基本_まったり at love69_center
     voice "voice/真冬/maf_a1_0076.ogg"
-    dong "Z...ZZ..."
+    dong 真冬_制服_基本_まったり "Z...ZZ..."
 
     ## 门铃声x2
+    # 这里需要涉及稍稍复杂一点的音频了
+    # play music "<from 5 to 15.5>waves.opus" 可以播放指定长度的音频
+    # play music "<loop 6.333>song.opus" 可以设置循环播放
+    # play audio [ "<silence .5>", "boom.opus" ] 可以指定音乐沉默时间
+    #
+    ## 付文档以供参考
+    # 节选播放
+    # Ren’Py支持节选播放音频文件。节选播放的语法是，在play语句的文件名之前，加上用英文尖括号<>包含的播放起始点。节选播放规范应该包含成对属性名和属性值，并用空格分隔。
+
+    # 属性值以秒为单位，集成在文件名前面的英文尖括号<>内。三种属性名分别为：
+
+    # from
+    # 指定播放文件的起始时间点。(默认值为0.0秒)
+    # to
+    # 指定播放文件的终止时间点。(默认值为文件结束。)
+    # loop
+    # 指定需要循环播放的文件起始和终止时间点。(默认的起始时间点为文件开头或 from 指定的时间点。)
+    ##### 文档参考结束
+    play sound "<to 0.5>voice/effect/05_玄関チャイム.ogg"
+    # 排队播放
+    queue sound "voice/effect/05_玄関チャイム.ogg"
 
     # 莲 「お客さんだな」
     lian "是客人啊"
 
     # 真冬 「あ、お兄ちゃん、『郵便配達は二度ベルを鳴らす』っていう映画みたことある？」
+    hide 真冬_制服_基本_まったり
+    show 真冬_制服_基本_無表情 at love69_center
     voice "voice/真冬/maf_a1_0077.ogg"
-    dong "啊，欧尼酱，你看过一部叫『邮差总按两次铃』的电影吗?（L：『邮差总按两次铃』（The Postman Always Rings Twice）是詹姆斯·凯恩的小说作品，曾入选20世纪百大英文小说。并在1981年被改编成电影）"
+    dong 真冬_制服_基本_無表情 "啊，欧尼酱，你看过一部叫『邮差总按两次铃』的电影吗?（L：『邮差总按两次铃』（The Postman Always Rings Twice）是詹姆斯·凯恩的小说作品，曾入选20世纪百大英文小说。并在1981年被改编成电影）"
 
     # 莲 「古い映画だな。名前は知ってるぐらいだ」
     lian "这是部老电影啊。我只听说过电影名字来着"
 
     # 真冬 「郵便屋さんかな」
+    hide 真冬_制服_基本_無表情
+    show 真冬_制服_基本_にっこり at love69_center
     voice "voice/真冬/maf_a1_0078.ogg"
-    dong "是邮递员吗？"
+    dong 真冬_制服_基本_にっこり "是邮递员吗？"
 
     # 莲 「お客さんだな」
     lian "不，我觉得不是"
 
-    ## 门铃声x5（4+1）
+    ## 门铃声x5（3+1）
+    play sound "<to 0.5>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.5>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.5>voice/effect/05_玄関チャイム.ogg"
+    queue sound "voice/effect/05_玄関チャイム.ogg"
 
     # 真冬 「あ、お兄ちゃん、梅昆布茶お代わり頼んでい？」
+    hide 真冬_制服_基本_にっこり
+    show 真冬_制服_基本_微笑み2 at love69_center
     voice "voice/真冬/maf_a1_0079.ogg"
-    dong "啊，欧尼酱，再给我来一杯梅昆布茶好吗？"
+    dong 真冬_制服_基本_微笑み2 "啊，欧尼酱，再给我来一杯梅昆布茶好吗？"
 
     # 莲 「そんな事いっても魔法瓶はお前の近くにあるじゃん」
     lian "u1s1，暖瓶就在你边上不是吗？倒是自己倒啊喂！"
 
     # 真冬 「お兄ちゃんに入れてもらったらきっと幸せになる」
+    hide 真冬_制服_基本_微笑み2
+    show 真冬_制服_基本_微笑み at love69_center
     voice "voice/真冬/maf_a1_0080.ogg"
-    dong "欧尼酱来倒的话，一定会是很幸福的味道吧~"
+    dong 真冬_制服_基本_微笑み "欧尼酱来倒的话，一定会是很幸福的味道吧~"
 
     # 莲 「...梅昆布茶の話だよな」
     lian "...是在说梅昆布茶吧"
 
     # 真冬 「他に何の話が？」
+    hide 真冬_制服_基本_微笑み
+    show 真冬_制服_基本_無表情 at love69_center
     voice "voice/真冬/maf_a1_0081.ogg"
-    dong "还有别的什么吗？"
+    dong 真冬_制服_基本_無表情 "还有别的什么吗？"
 
     # 莲 「いや…」
     lian "没..."
 
     ## 门铃声xn（雷达报警）
+    play sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    pause 0.7
+
+
 
     # 真冬 「ＴＡＲＧＥＴ」
+    hide 真冬_制服_基本_無表情
+    show 真冬_制服_基本_目閉じ at love69_center
     voice "voice/真冬/maf_a1_0082.ogg"
-    dong "ＴＡＲＧＥＴ（L：你已经被雷达锁定了，out！）"
+    dong 真冬_制服_基本_目閉じ "ＴＡＲＧＥＴ（L：你已经被雷达锁定了，out！）"
 
     # 莲 「やめとけ」
     lian "别说了（L：倒是去开门啊喂）"
 
     # 真冬 「え…」
+    hide 真冬_制服_基本_目閉じ
+    show 真冬_制服_基本_無表情 at love69_center
     voice "voice/真冬/maf_a1_0083.ogg"
-    dong "欸？"
+    dong 真冬_制服_基本_無表情 "欸？"
 
     ## 门铃声 三三七拍
+    play sound "<to 0.4>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.4>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.7>voice/effect/05_玄関チャイム.ogg"
+
+    queue sound "<to 0.4>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.4>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.7>voice/effect/05_玄関チャイム.ogg"
+
+    queue sound "<to 0.4>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.4>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.4>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.4>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.4>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.4>voice/effect/05_玄関チャイム.ogg"
+    queue sound "voice/effect/05_玄関チャイム.ogg"
+    pause 6.4
 
     # 莲 「三七拍子だな」
     lian "是三七拍啊"
