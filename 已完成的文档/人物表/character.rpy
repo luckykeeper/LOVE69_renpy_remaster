@@ -47,10 +47,13 @@ image side 真冬 真冬_制服_基本_目閉じ = "images/face/真冬/真冬_�
 image side 真冬 真冬_制服_基本_目閉じ_1 = "images/face/真冬/真冬_制服_基本_目閉じ_1.png"
 image side 真冬 真冬_制服_基本_泣き = "images/face/真冬/真冬_制服_基本_泣き.png" # 睁眼，含泪珠
 image side 真冬 真冬_制服_基本_泣き_1 = "images/face/真冬/真冬_制服_基本_泣き_1.png"
-image side 真冬 真冬_制服_基本_見下し = "images/face/真冬/真冬_制服_基本_見下し.png" # 睁眼，眉毛y=-x，嘴o
+image side 真冬 真冬_制服_基本_見下し = "images/face/真冬/真冬_制服_基本_見下し.png" # 闭眼，眉毛y=-x，嘴o
 image side 真冬 真冬_制服_基本_見下し2 = "images/face/真冬/真冬_制服_基本_見下し2.png"
 image side 真冬 真冬_制服_基本_にっこり = "images/face/真冬/真冬_制服_基本_にっこり.png" # 闭眼，微笑
 image side 真冬 真冬_制服_基本_にっこり_1 = "images/face/真冬/真冬_制服_基本_にっこり_1.png"
+image side 真冬 真冬_制服_基本_まったり = "images/face/真冬/真冬_制服_基本_まったり.png" # 闭眼，嘴“w”
+image side 真冬 真冬_制服_基本_ニタァ = "images/face/真冬/真冬_制服_基本_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢
+
 
 
 # 葛城莲 lian //主人公，工具人就不要加颜色了吧，不加颜色的统一强制指定白色（#ffffff）
