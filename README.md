@@ -1,14 +1,15 @@
 # LOVE69_renpy_remaster
 
-| 项目状况   |                                                              |
-| ---------- | ------------------------------------------------------------ |
-| 状态       | 进行中（Demo开发中）                                         |
-| star数     | ![star](https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster) |
-| fork数     | ![fork](https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster) |
-| issues数   | ![issues](https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster) |
-| 参与成员   | 1人（[Luckykeeper](https://github.com/luckykeeper)）         |
-| 项目地址   | https://github.com/luckykeeper/LOVE69_renpy_remaster         |
-| 项目组官网 | https://love69renpyremasterproject.github.io                 |
+| 项目状况           |                                                              |
+| ------------------ | ------------------------------------------------------------ |
+| 状态               | 进行中（Demo开发中）                                         |
+| star数             | ![star](https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster) |
+| fork数             | ![fork](https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster) |
+| issues数           | ![issues](https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster) |
+| 参与成员           | 1人（[Luckykeeper](https://github.com/luckykeeper)）         |
+| 项目地址           | https://github.com/luckykeeper/LOVE69_renpy_remaster         |
+| 项目组官网         | https://love69renpyremasterproject.github.io                 |
+| 项目组官网构建状态 | ![status](https://app.travis-ci.com/love69renpyremasterproject/love69renpyremasterproject.github.io.svg?branch=main&status=passed) |
 
 使用ren'py重制LOVEPOTION SIXTYNINE，并加以汉化和全平台适配
 
@@ -155,4 +156,4 @@ CG、BGM等素材的解包工作已全部完成，无需帮助
 - 项目相关文件解压密码为本页面网址（即 https://github.com/luckykeeper/LOVE69_renpy_remaster ）下载链接暂时取消
 
 - 出于各种原因，本次汉化移植并不会对“gkd”的内容进行汉化和移植
-- 本页面最后修改时间 2021年9月2日
+- 本页面最后修改时间 2021年9月3日
