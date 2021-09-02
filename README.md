@@ -1,4 +1,15 @@
 # LOVE69_renpy_remaster
+
+| 项目状况   |                                                              |
+| ---------- | ------------------------------------------------------------ |
+| 状态       | 进行中（Demo开发中）                                         |
+| star数     | ![star](https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster) |
+| fork数     | ![fork](https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster) |
+| issues数   | ![issues](https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster) |
+| 参与成员   | 1人（[Luckykeeper](https://github.com/luckykeeper)）         |
+| 项目地址   | https://github.com/luckykeeper/LOVE69_renpy_remaster         |
+| 项目组官网 | https://love69renpyremasterproject.github.io                 |
+
 使用ren'py重制LOVEPOTION SIXTYNINE，并加以汉化和全平台适配
 
 <img src="images/项目组logo_smallsize.png" alt="项目组logo"  />
