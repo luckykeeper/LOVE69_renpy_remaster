@@ -1,6 +1,6 @@
 # LOVE69_renpy_remaster
 
-| 项目状况           |                                                              |
+| 项目状况           | LOVE69 Ren’py Remaster Project                               |
 | ------------------ | ------------------------------------------------------------ |
 | 状态               | 进行中（Demo开发中）                                         |
 | star数             | ![star](https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster) |
@@ -81,17 +81,19 @@ Demo版实机测试_GIF图
 
 ## 👏成员👏
 
-组长：Luckykeeper
+组长：[Luckykeeper](https://github.com/luckykeeper)
 
-程序：Luckykeeper
+程序：[Luckykeeper](https://github.com/luckykeeper)
 
-翻译：Luckykeeper
+翻译：[Luckykeeper](https://github.com/luckykeeper)
 
-美工：Luckykeeper
+美工：[Luckykeeper](https://github.com/luckykeeper)
 
-校对：Luckykeeper
+校对：[Luckykeeper](https://github.com/luckykeeper)
 
-测试/润色：Luckykeeper
+测试/润色：[Luckykeeper](https://github.com/luckykeeper)
+
+项目组网站构建、维护：[Luckykeeper](https://github.com/luckykeeper)
 
 ## 🎂目标🎂
 
