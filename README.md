@@ -123,7 +123,7 @@ Demo版实机测试_GIF图
 
 需要的工作如下：
 
-日语翻译&纠错：在某个scene01完成后，提交PR或在本页[“issues”栏目下](https://github.com/luckykeeper/LOVE69_renpy_remaster/issues)留言
+日语翻译&纠错：在某个 scene 完成后，提交PR或在本页[“issues”栏目下](https://github.com/luckykeeper/LOVE69_renpy_remaster/issues)留言（推荐`issues`）
 
 Yu-ris的ybn文件解包：请将联系方式发送至 luckykeeper@luckykeeper.site （某些情况可能收不到邮件，如未及时回复请电脑访问我的[个人博客](http://b.luckykeeper.site)，在主页头像下方寻找我的联系方式）
 
