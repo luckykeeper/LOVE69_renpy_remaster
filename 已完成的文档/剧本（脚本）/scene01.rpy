@@ -7,6 +7,8 @@
 # Blog：http://b.luckykeeper.site
 # 修订日期 2021年9月5日
 
+
+
 label scene01:
 
     #######################################################################################################
@@ -54,6 +56,9 @@ label scene01:
         truecenter
         zoom 0.89
         xalign 1.1
+        yalign 0.5
+    # waifu2x 非标准大小（不是1920*1080的而是1920*1440分辨率的使用以下参数）
+    transform love69_bg1440:
         yalign 0.5
 
 
@@ -1147,7 +1152,7 @@ label scene01:
 
     ### 场景切换，莲客厅--->葛城家玄关
     image bg 玄関_昼 = "images/bg/玄関_昼.png.png"
-    scene 玄関_昼 with wipedown
+    scene 玄関_昼 at love69_bg1440 with wipedown
     # 2021年9月2日晚9：49，先做到这里，溜去整个项目官方网页出来
     # 2021年9月4凌晨 项目组官网肝完了，先去把scene01的文本工作完成，，从这里开始的文本需要做亿点动画，本作解包文件不能用，回头从kr引擎的gal里面抓点特效出来
     ### 人物：莲 心爱？？？ 心爱  真冬
@@ -2469,3 +2474,83 @@ label scene01:
     # CALL 动画 看了下，35张jpg图，阔以做动画
     # 音效：手机电话声
     # 2021年9月5日00点07分 收工去做CALL的动画，之后睡醒继续
+
+    # gif导入测试，并不支持gif，需要ps 导出序列帧
+    # 并不支持git，参考：https://www.renpy.cn/thread-441-1-1.html
+    # 正确的使用方法：https://www.renpy.cn/thread-242-1-1.html
+
+    ###################################################################################################
+    ## 参考实现
+    ###### 定义：动态序列帧图 ####
+# image Sign:
+
+#     ## 这里也可以，比如 按比例缩放此显示对象。
+#     # zoom 2 ## 放大2倍。
+
+#     "images/Dynamic/1.png"
+#     pause 0.2 # 暂停0.2秒
+#     "images/Dynamic/2.png"
+#     pause 0.2
+#     "images/Dynamic/3.png"
+#     pause 0.2
+#     "images/Dynamic/4.png"
+#     pause 0.2
+#     "images/Dynamic/5.png"
+#     pause 0.2
+#     "images/Dynamic/6.png"
+#     pause 0.2
+#     "images/Dynamic/1.png"
+#     pause 1 # 暂停1秒
+
+#     repeat # 循环
+
+# ###### 定义：变换(transform)效果 ####
+# transform hello_1:
+#     align (0.5, 0.5)
+#     linear 1 pos (0.5, 0.2) alpha 0.3
+#     linear 1 pos (0.5, 0.5) alpha 1.0
+#     repeat # 循环
+
+# transform hello_2:
+#     align (0.5, 1.0)
+#     linear 2.0 align (0.5, 1.0) knot (0.0, .33) knot (1.0, .66)
+#     pause 0.5 # 暂停1秒
+#     repeat # 循环
+
+# ###### 定义：界面（screen） ####
+# screen aaa:
+#     add "Sign" align (0.5,0)
+
+# screen bbb:
+#     add "Sign" at hello_1
+
+# screen ccc:
+#     add "Sign" at hello_2
+
+# # 游戏在此开始。
+# label start:
+
+#     "开始演示"
+
+#     show screen aaa
+#     "显示aaa"
+
+#     show screen bbb
+#     "显示bbb"
+
+#     show screen ccc
+#     "显示ccc"
+
+#     hide  screen aaa
+#     hide  screen bbb
+#     hide  screen ccc
+#     "演示完成"
+
+#     # 此处为游戏结尾。
+#     return
+
+# 参考实现结束
+###################################################################################################
+
+    show screen callscr
+    luckykeeper "gif导入测试，并不支持gif，需要ps 导出序列帧并定义动态序列帧图"
