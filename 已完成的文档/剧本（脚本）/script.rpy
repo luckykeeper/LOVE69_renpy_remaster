@@ -8,7 +8,7 @@
 # Author:Luckykeeper
 # Blog：http://b.luckykeeper.site
 # 开始日期 2021年8月28日
-# 修订日期 2021年8月31日
+# 修订日期 2021年9月5日
 
 # 制作流程
 # ①导入全部文本+润色汉化，不带图像
@@ -33,6 +33,134 @@
 # 开始日期 2021年8月28日
 # 主程序正式开始，现在只加入文本
 # 版本：null（还未完成）
+
+# 定义callgif
+image callgif:
+    "images/pac/call/call00000.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00001.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00002.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00003.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00004.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00005.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00006.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00007.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00008.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00009.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00010.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00011.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00012.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00013.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00014.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00015.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00016.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00017.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00018.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00019.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00020.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00021.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00022.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00023.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00024.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00025.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00026.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00027.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00028.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00029.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00030.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00031.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00032.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00033.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00034.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00035.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00036.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00037.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00038.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00039.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00040.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00041.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00042.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00043.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00044.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00045.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00046.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00047.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00048.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00049.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00050.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00051.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00052.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00053.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00054.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00055.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00056.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00057.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00058.png"
+    pause 0.0166666666666667
+    "images/pac/call/call00059.png"
+    pause 0.0166666666666667
+    repeat
+
+# ###### 定义：界面（screen） ####
+screen callscr:
+    add "callgif" align (0.5,0.5)
 
 # 一周目开始前 主题BGM：anonatsu_piano.ogg
 
