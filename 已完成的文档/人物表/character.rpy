@@ -4,7 +4,7 @@
 # 版本 0.0.4
 # Blog：http://b.luckykeeper.site
 # 开始日期 2021年8月28日
-# 修订日期 2021年9月2日
+# 修订日期 2021年9月5日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -76,7 +76,7 @@ define ye = Character('雾叶',color="#414141",image="霧葉")
 define pen = Character('花盆君',color="#659839",image="アシュリー_植木鉢")
 
 # 亚十礼 atri //和原版相比，移植版打算在人物名上加入颜色，亚十礼的颜色也是从头发上取哒~
-define pen = Character('亚十礼',color="#fcfafc",image="アシュリー")
+define atri = Character('亚十礼',color="#fcfafc",image="アシュリー")
 
 # 迈克尔 hat //和原版相比，移植版打算在人物名上加入颜色，帽子就要它本来的颜色就好啦~
 define hat = Character('迈克尔',color="#67435e",image="mj")
