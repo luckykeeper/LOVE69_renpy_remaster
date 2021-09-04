@@ -2210,3 +2210,10 @@ label scene01:
     # 真冬 「喜んで」
     voice "voice/真冬/maf_a1_0122.ogg"
     dong "乐意至极"
+
+    # 心爱 「わーい♪　もろたで工藤！」
+    # 参考资料：https://zhidao.baidu.com/question/1830513044301424420.html
+    # 参考资料：https://dic.nicovideo.jp/a/%E3%82%82%E3%82%8D%E3%81%9F%E3%81%A7%E5%B7%A5%E8%97%A4%21
+    # 参考了 WorldlineChanger 给出的翻译
+    voice "voice/心愛/cca_a1_0083.ogg"
+    ai "哇♪ 工藤，这次我赢定了！（L:もろたで工藤，出自《名侦探柯南里》的服部平次，是他的著名“FLAG”，L基本上没咋看过，并不是特别清楚呢）"
