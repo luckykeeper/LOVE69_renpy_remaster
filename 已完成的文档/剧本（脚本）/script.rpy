@@ -34,6 +34,7 @@
 # 主程序正式开始，现在只加入文本
 # 版本：null（还未完成）
 
+###### 定义：动态序列帧图 ####
 # 定义callgif
 image callgif:
     "images/pac/call/call00000.png"
@@ -158,7 +159,8 @@ image callgif:
     pause 0.0166666666666667
     repeat
 
-# ###### 定义：界面（screen） ####
+###### 定义：界面（screen） ####
+# align (0.5,0.5)阔以将其放在中间
 screen callscr:
     add "callgif" align (0.5,0.5)
 
