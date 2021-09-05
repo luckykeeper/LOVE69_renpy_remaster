@@ -62,6 +62,7 @@ define lian = Character('莲',color="#ffffff")
 
 # 麦克斯韦·里昂 lion //和原版相比，移植版打算在人物名上加入颜色，里昂的颜色是摘掉帽子之后在头顶上取的
 define lion = Character('里昂',color="#fff7bb",image="リオン")
+define ang = Character('少女',color="#fff7bb",image="リオン")
 
 # 月宫想瑠 liu //和原版相比，移植版打算在人物名上加入颜色，想瑠喵的颜色是SISTARS里面的CG里面取的
 define liu = Character('想瑠',color="#a4808c",image="想瑠")
