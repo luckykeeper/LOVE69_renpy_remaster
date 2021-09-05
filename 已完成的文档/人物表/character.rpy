@@ -18,7 +18,7 @@
 # 雾叶（和亚十礼的姓有待商榷，有想法的老哥快来） ye
 # 花盆君（植木鉢） pen
 # 亚十礼（发音ATRI,雾叶的姊妹）atri //暂定译名从近月2来，缩写atri因为高性能~
-# 迈克尔（帽子） hat //帽子就不要名字了
+# 迈克尔（帽子） mj //帽子就不要名字了（有名字，缩写mj，但是这里为了做区分就叫它帽子）|改，有的地方叫帽子，所以认识之前还是叫hat好了
 # 旁白君 bai
 # テしビ TV 最早在 sence01 葛城家客厅出现，不大确定是啥，应该是电视里面传来的声音，暂时管电视里面没立绘（包括后面的）的都叫TV好辽
 # 翻译君（我自己） Luckykeeper
@@ -78,8 +78,9 @@ define pen = Character('花盆君',color="#659839",image="アシュリー_植木
 # 亚十礼 atri //和原版相比，移植版打算在人物名上加入颜色，亚十礼的颜色也是从头发上取哒~
 define atri = Character('亚十礼',color="#fcfafc",image="アシュリー")
 
-# 迈克尔 hat //和原版相比，移植版打算在人物名上加入颜色，帽子就要它本来的颜色就好啦~
-define hat = Character('迈克尔',color="#67435e",image="mj")
+# 迈克尔 mj //和原版相比，移植版打算在人物名上加入颜色，帽子就要它本来的颜色就好啦~
+define hat = Character('帽子',color="#67435e",image="mj")
+define mj = Character('迈克尔',color="#67435e",image="mj")
 
 # 旁白君 bai 不加颜色的统一强制指定白色（#ffffff）
 define bai = Character('旁白君',color="#ffffff")
