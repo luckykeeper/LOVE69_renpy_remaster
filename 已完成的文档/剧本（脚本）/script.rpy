@@ -35,7 +35,7 @@
 # 版本：null（还未完成）
 
 ###### 定义：动态序列帧图 ####
-# 定义callgif
+# 定义callgif 即来电时的gif 屏幕中间一横线写 CALL
 image callgif:
     "images/pac/call/call00000.png"
     pause 0.0166666666666667
