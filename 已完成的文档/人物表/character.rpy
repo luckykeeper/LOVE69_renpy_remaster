@@ -50,6 +50,10 @@ define ai = Character("心爱",color="#ffc9be",image="心愛")
 image side 心愛 心愛_制服_基本_にっこり = "images/face/心愛/心愛_制服_基本_にっこり.png" # 闭眼，微笑
 image side 心愛 心愛_制服_基本_ジト目 = "images/face/心愛/心愛_制服_基本_ジト目.png" # 睁眼，嘴三角，眉平缓向中下
 image side 心愛 心愛_制服_基本_不機嫌 = "images/face/心愛/心愛_制服_基本_不機嫌.png" # 睁眼，嘴-(
+image side 心愛 心愛_制服_基本_もぐもぐ = "images/face/心愛/心愛_制服_基本_もぐもぐ.png" # 睁眼，嘴-(，两个粉椭圆
+image side 心愛 心愛_制服_基本_笑顔 = "images/face/心愛/心愛_制服_基本_笑顔.png" # 睁眼，嘴o
+image side 心愛 心愛_制服_基本_泣き= "images/face/心愛/心愛_制服_基本_泣き.png" # 睁眼，和真冬的表情很像呢
+image side 心愛 心愛_制服_基本_驚き= "images/face/心愛/心愛_制服_基本_泣き.png" # 睁眼，惊讶
 
 # 下面定义不知道是谁的时候的心爱
 # 知不道的人物使用发色称呼
@@ -60,7 +64,10 @@ define fen = Character("？？？",color="#ffc9be",image="粉")
 image side 粉 粉_制服_基本_にっこり = "images/face/粉/粉_制服_基本_にっこり.png" # 闭眼，微笑
 image side 粉 粉_制服_基本_ジト目 = "images/face/粉/粉_制服_基本_ジト目.png" # 睁眼，嘴三角，眉平缓向中下
 image side 粉 粉_制服_基本_不機嫌 = "images/face/粉/粉_制服_基本_不機嫌.png" # 睁眼，嘴-(
-
+image side 粉 粉_制服_基本_もぐもぐ = "images/face/粉/粉_制服_基本_もぐもぐ.png" # 睁眼，嘴-(，两个粉椭圆
+image side 粉 粉_制服_基本_笑顔 = "images/face/粉/粉_制服_基本_笑顔.png" # 睁眼，嘴o
+image side 粉 粉_制服_基本_泣き= "images/face/粉/粉_制服_基本_泣き.png" # 睁眼，和真冬的表情很像呢
+image side 粉 粉_制服_基本_驚き= "images/face/粉/粉_制服_基本_泣き.png" # 睁眼，惊讶
 
 ###############################################角色分割线###############################################
 
