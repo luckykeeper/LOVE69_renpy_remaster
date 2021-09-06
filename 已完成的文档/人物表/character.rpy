@@ -4,7 +4,7 @@
 # 版本 0.0.4
 # Blog：http://b.luckykeeper.site
 # 开始日期 2021年8月28日
-# 修订日期 2021年9月5日
+# 修订日期 2021年9月6日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -22,12 +22,47 @@
 # 旁白君 bai
 # テしビ TV 最早在 sence01 葛城家客厅出现，不大确定是啥，应该是电视里面传来的声音，暂时管电视里面没立绘（包括后面的）的都叫TV好辽
 # 翻译君（我自己） Luckykeeper
-# ？？？ unknown404 给不知道是谁的时候用
+# ？？？ unknown404 给不知道是谁的时候用 //根据实际开发情况决定弃用，在全部替换完成后注释define
 # nil 没人说话的旁白，不在脚本中定义名称
 # wsa 女学生A （Woman Student A）
 
+
+###########尝试定义可变名称，失败，测试带对话框头像的不能使用这种方式，名称可变，但是小头像无法显示
+###########解决方案：新建一个人物，每个有？？？的都需要一个，立绘也要单独建文件夹
+###########原因是可变名称只能指定名称一个属性，其它属性即使设置了也无效，而小头像是用tag去找图片的，不指定image属性就不能用tag找图片
+###########如果没有显示小头像的需求可参照下面的参考代码
+
+# init python in character:
+#     ai = "？？？"
+#
+# $ import store.character as character
+# define ai = Character("character.ai]",color="#ffc9be",image="心愛")
+# $ character.ai = "心爱"
+###########
+
 # 一条心爱 ai //和原版相比，移植版打算在人物名上加入颜色，心爱的颜色是场景切换的CG里从刘海儿中间上最长的那根毛上面取的
-define ai = Character('心爱',color="#ffc9be",image="心愛")
+
+define ai = Character("心爱",color="#ffc9be",image="心愛")
+
+# 定义心爱的立绘
+# 显示在画面中的
+
+image side 心愛 心愛_制服_基本_にっこり = "images/face/心愛/心愛_制服_基本_にっこり.png" # 闭眼，微笑
+image side 心愛 心愛_制服_基本_ジト目 = "images/face/心愛/心愛_制服_基本_ジト目.png" # 睁眼，嘴三角，眉平缓向中下
+image side 心愛 心愛_制服_基本_不機嫌 = "images/face/心愛/心愛_制服_基本_不機嫌.png" # 睁眼，嘴-(
+
+# 下面定义不知道是谁的时候的心爱
+# 知不道的人物使用发色称呼
+# 如：心爱——>粉
+# 文件应当取自 face 文件夹，但是stand有现成更清晰的，且参数已经调试完毕，所以用stand，stand没有的再进行特殊处理，为了和后面的waifu2x区分
+# 工程目录写为 face
+define fen = Character("？？？",color="#ffc9be",image="粉")
+image side 粉 粉_制服_基本_にっこり = "images/face/粉/粉_制服_基本_にっこり.png" # 闭眼，微笑
+image side 粉 粉_制服_基本_ジト目 = "images/face/粉/粉_制服_基本_ジト目.png" # 睁眼，嘴三角，眉平缓向中下
+image side 粉 粉_制服_基本_不機嫌 = "images/face/粉/粉_制服_基本_不機嫌.png" # 睁眼，嘴-(
+
+
+###############################################角色分割线###############################################
 
 # 葛城真冬 dong //和原版相比，移植版打算在人物名上加入颜色，真冬的颜色是场景切换的CG里从领带上面取的
 define dong = Character('真冬',color="#4da8c0",image="真冬")
@@ -93,7 +128,7 @@ define tv = Character('TV',color="#ffffff")
 define luckykeeper = Character('Luckykeeper',color="#ffc0cb")
 
 # ？？？ ??? 给不知道是谁的时候用 不加颜色的统一强制指定白色（#ffffff）
-define unknown404 = Character('？？？',color="#ffffff")
+define unknown404 = Character('？？？',color="#ffffff",image="unknown404")
 
 # wsa 女学生A （Woman Student A） 不加颜色的统一强制指定白色（#ffffff）
 define wsa = Character('女学生A',color="#ffffff")
