@@ -4,7 +4,7 @@
 # 版本 0.0.4
 # Blog：http://b.luckykeeper.site
 # 开始日期 2021年8月28日
-# 修订日期 2021年9月6日
+# 修订日期 2021年9月7日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -48,12 +48,19 @@ define ai = Character("心爱",color="#ffc9be",image="心愛")
 # 显示在画面中的
 
 image side 心愛 心愛_制服_基本_にっこり = "images/face/心愛/心愛_制服_基本_にっこり.png" # 闭眼，微笑
+image side 心愛 心愛_制服_おやつ_にっこり = "images/face/心愛/心愛_制服_おやつ_にっこり.png" # 闭眼，微笑，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_ジト目 = "images/face/心愛/心愛_制服_基本_ジト目.png" # 睁眼，嘴三角，眉平缓向中下
+image side 心愛 心愛_制服_おやつ_ジト目 = "images/face/心愛/心愛_制服_おやつ_ジト目.png" # 睁眼，嘴三角，眉平缓向中下，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_不機嫌 = "images/face/心愛/心愛_制服_基本_不機嫌.png" # 睁眼，嘴-(
+image side 心愛 心愛_制服_おやつ_不機嫌 = "images/face/心愛/心愛_制服_おやつ_不機嫌.png" # 睁眼，嘴-(，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_もぐもぐ = "images/face/心愛/心愛_制服_基本_もぐもぐ.png" # 睁眼，嘴-(，两个粉椭圆
 image side 心愛 心愛_制服_基本_笑顔 = "images/face/心愛/心愛_制服_基本_笑顔.png" # 睁眼，嘴o
+image side 心愛 心愛_制服_おやつ_笑顔 = "images/face/心愛/心愛_制服_おやつ_笑顔.png" # 睁眼，嘴o，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_泣き= "images/face/心愛/心愛_制服_基本_泣き.png" # 睁眼，和真冬的表情很像呢
 image side 心愛 心愛_制服_基本_驚き= "images/face/心愛/心愛_制服_基本_泣き.png" # 睁眼，惊讶
+image side 心愛 心愛_制服_基本_真顔 = "images/face/心愛/心愛_制服_基本_真顔.png" # 睁眼，嘴闭
+image side 心愛 心愛_制服_おやつ_無表情 = "images/face/心愛/心愛_制服_おやつ_無表情.png" # 字面意思，睁眼，嘴·，拿着奶糖苹果
+image side 心愛 心愛_制服_基本_きらきら = "images/face/心愛/心愛_制服_基本_きらきら.png" # 睁眼，嘴⚪三角，眼睛有小星星
 
 # 下面定义不知道是谁的时候的心爱
 # 知不道的人物使用发色称呼
@@ -67,7 +74,7 @@ image side 粉 粉_制服_基本_不機嫌 = "images/face/粉/粉_制服_基本_
 image side 粉 粉_制服_基本_もぐもぐ = "images/face/粉/粉_制服_基本_もぐもぐ.png" # 睁眼，嘴-(，两个粉椭圆
 image side 粉 粉_制服_基本_笑顔 = "images/face/粉/粉_制服_基本_笑顔.png" # 睁眼，嘴o
 image side 粉 粉_制服_基本_泣き= "images/face/粉/粉_制服_基本_泣き.png" # 睁眼，和真冬的表情很像呢
-image side 粉 粉_制服_基本_驚き= "images/face/粉/粉_制服_基本_泣き.png" # 睁眼，惊讶
+image side 粉 粉_制服_基本_驚き= "images/face/粉/粉_制服_基本_驚き.png" # 睁眼，惊讶
 
 ###############################################角色分割线###############################################
 
@@ -95,6 +102,7 @@ image side 真冬 真冬_制服_基本_見下し2 = "images/face/真冬/真冬_�
 image side 真冬 真冬_制服_基本_にっこり = "images/face/真冬/真冬_制服_基本_にっこり.png" # 闭眼，微笑
 image side 真冬 真冬_制服_基本_にっこり_1 = "images/face/真冬/真冬_制服_基本_にっこり_1.png"
 image side 真冬 真冬_制服_基本_まったり = "images/face/真冬/真冬_制服_基本_まったり.png" # 闭眼，嘴“w”
+image side 真冬 真冬_制服_基本_おやつ1 = "images/face/真冬/真冬_制服_基本_おやつ1.png" # 闭眼，嘴“w”，拿着奶糖苹果
 image side 真冬 真冬_制服_基本_ニタァ = "images/face/真冬/真冬_制服_基本_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢
 
 
