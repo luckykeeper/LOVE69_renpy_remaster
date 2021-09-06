@@ -4,7 +4,7 @@
 # Author:Luckykeeper
 # 版本 0.0.1
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年8月30日
+# 修订日期 2021年9月6日
 ################################################################################
 ## 初始化
 ################################################################################
@@ -19,11 +19,17 @@ init offset = -1
 ### 以上需要在if外使用
 ################################################################################
 ### SideImage() 相关
-# 显示正常size的参数
+# 显示初始size（真冬）的参数
+# 使用下面这样的语句阔以针对不同大小的入参人物分别调整
+#    $ sideimagesize.SideImageXalign = 0.0
+#    $ sideimagesize.SideImageYalign = -50
+#    $ sideimagesize.SideImageZoom = 0.5
+# 下面三个参数需要先给出初始值，通过持久化数据存储这些参数
 init python in sideimagesize:
-    SideImageXalign = 0.08
-    SideImageYalign = -29.35
-    SideImageZoom = 0.95
+     SideImageXalign = 0.08
+     SideImageYalign = -29.35
+     SideImageZoom = 0.95
+
 
 # 针对大的 add SideImage() xalign 0.12 yalign 9.1 zoom 0.35 使用时调用以下参数
 # SideImageXalign = 0.0
