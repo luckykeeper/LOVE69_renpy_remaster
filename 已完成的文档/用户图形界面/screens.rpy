@@ -4,7 +4,7 @@
 # Author:Luckykeeper
 # 版本 0.0.1
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年9月6日
+# 修订日期 2021年9月7日
 ################################################################################
 ## 初始化
 ################################################################################
@@ -140,7 +140,13 @@ screen say(who, what):
                 style "namebox"
                 text who id "who"
 
-        text what id "what"
+        # text what id "what"
+        # if renpy.is_seen(ever = True) and persistent.lightRead: 这句在移动端似乎不起作用？
+        # 已读未读文本不同颜色
+        if renpy.is_seen(ever = True):  # ever 为false时对本次运行起效，此处需要对过去所有阅读起效
+            text what id "what" color "#f9d198" # 标记颜色
+        else:
+            text what id "what" color "#FFFFFF" # 未读颜色
 
 
     ## 如果有对话框头像，会将其显示在文本之上。请不要在手机界面下显示这个，因为
