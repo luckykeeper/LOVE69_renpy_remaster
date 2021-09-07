@@ -4,7 +4,7 @@
 # 版本 0.0.4
 # Blog：http://b.luckykeeper.site
 # 开始日期 2021年8月28日
-# 修订日期 2021年9月7日
+# 修订日期 2021年9月8日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -54,13 +54,17 @@ image side 心愛 心愛_制服_おやつ_ジト目 = "images/face/心愛/心愛
 image side 心愛 心愛_制服_基本_不機嫌 = "images/face/心愛/心愛_制服_基本_不機嫌.png" # 睁眼，嘴-(
 image side 心愛 心愛_制服_おやつ_不機嫌 = "images/face/心愛/心愛_制服_おやつ_不機嫌.png" # 睁眼，嘴-(，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_もぐもぐ = "images/face/心愛/心愛_制服_基本_もぐもぐ.png" # 睁眼，嘴-(，两个粉椭圆
+image side 心愛 心愛_制服_おやつ_もぐもぐ = "images/face/心愛/心愛_制服_おやつ_もぐもぐ.png" # 睁眼，嘴-(，两个粉椭圆，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_笑顔 = "images/face/心愛/心愛_制服_基本_笑顔.png" # 睁眼，嘴o
 image side 心愛 心愛_制服_おやつ_笑顔 = "images/face/心愛/心愛_制服_おやつ_笑顔.png" # 睁眼，嘴o，拿着奶糖苹果
-image side 心愛 心愛_制服_基本_泣き= "images/face/心愛/心愛_制服_基本_泣き.png" # 睁眼，和真冬的表情很像呢
-image side 心愛 心愛_制服_基本_驚き= "images/face/心愛/心愛_制服_基本_泣き.png" # 睁眼，惊讶
+image side 心愛 心愛_制服_基本_泣き= "images/face/心愛/心愛_制服_基本_泣き.png" # 睁眼，含泪珠
+image side 心愛 心愛_制服_おやつ_泣き= "images/face/心愛/心愛_制服_おやつ_泣き.png" # 睁眼，含泪珠，拿着奶糖苹果
+image side 心愛 心愛_制服_基本_驚き= "images/face/心愛/心愛_制服_基本_驚き.png" # 睁眼，惊讶
 image side 心愛 心愛_制服_基本_真顔 = "images/face/心愛/心愛_制服_基本_真顔.png" # 睁眼，嘴闭
+image side 心愛 心愛_制服_おやつ_真顔 = "images/face/心愛/心愛_制服_おやつ_真顔.png" # 睁眼，嘴闭，拿着奶糖苹果
 image side 心愛 心愛_制服_おやつ_無表情 = "images/face/心愛/心愛_制服_おやつ_無表情.png" # 字面意思，睁眼，嘴·，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_きらきら = "images/face/心愛/心愛_制服_基本_きらきら.png" # 睁眼，嘴⚪三角，眼睛有小星星
+image side 心愛 心愛_制服_基本_ぶわー = "images/face/心愛/心愛_制服_基本_ぶわー.png" # 睁眼，很有标志性的哭
 
 # 下面定义不知道是谁的时候的心爱
 # 知不道的人物使用发色称呼
@@ -93,7 +97,7 @@ image side 真冬 真冬_制服_基本_本気2 = "images/face/真冬/真冬_制�
 image side 真冬 真冬_制服_基本_微笑み = "images/face/真冬/真冬_制服_基本_微笑み.png" # 字面意思
 image side 真冬 真冬_制服_基本_微笑み2 = "images/face/真冬/真冬_制服_基本_微笑み2.png" # 字面意思，嘴型近“o”
 
-image side 真冬 真冬_制服_基本_目閉じ = "images/face/真冬/真冬_制服_基本_目閉じ.png" # 闭眼微笑
+image side 真冬 真冬_制服_基本_目閉じ = "images/face/真冬/真冬_制服_基本_目閉じ.png" # 闭眼，嘴·
 image side 真冬 真冬_制服_基本_目閉じ_1 = "images/face/真冬/真冬_制服_基本_目閉じ_1.png"
 image side 真冬 真冬_制服_基本_泣き = "images/face/真冬/真冬_制服_基本_泣き.png" # 睁眼，含泪珠
 image side 真冬 真冬_制服_基本_泣き_1 = "images/face/真冬/真冬_制服_基本_泣き_1.png"
@@ -103,6 +107,8 @@ image side 真冬 真冬_制服_基本_にっこり = "images/face/真冬/真冬
 image side 真冬 真冬_制服_基本_にっこり_1 = "images/face/真冬/真冬_制服_基本_にっこり_1.png"
 image side 真冬 真冬_制服_基本_まったり = "images/face/真冬/真冬_制服_基本_まったり.png" # 闭眼，嘴“w”
 image side 真冬 真冬_制服_基本_おやつ1 = "images/face/真冬/真冬_制服_基本_おやつ1.png" # 闭眼，嘴“w”，拿着奶糖苹果
+image side 真冬 真冬_制服_基本_おやつ2 = "images/face/真冬/真冬_制服_基本_おやつ2.png" # 闭眼，嘴开口，“w”，是有点小坏的笑呢，拿着奶糖苹果
+image side 真冬 真冬_制服_基本_おやつ3 = "images/face/真冬/真冬_制服_基本_おやつ3.png" # 闭眼，嘴开口，椭圆，是有点小萌的笑呢，拿着奶糖苹果
 image side 真冬 真冬_制服_基本_ニタァ = "images/face/真冬/真冬_制服_基本_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢
 
 
