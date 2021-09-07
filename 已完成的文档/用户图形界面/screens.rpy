@@ -161,6 +161,34 @@ screen say(who, what):
         add SideImage() xalign sideimagesize.SideImageXalign yalign sideimagesize.SideImageYalign zoom sideimagesize.SideImageZoom
 
 
+# 定义 ctc ，就是一般 gal 里面提示“单击继续”的那个小箭头/符号
+
+screen ctc():
+    add "texticon" align (0.99,0.91)
+
+image texticon:
+    "gui/texticon/icon_01.png"
+    pause 0.1
+    "gui/texticon/icon_02.png"
+    pause 0.1
+    "gui/texticon/icon_03.png"
+    pause 0.1
+    "gui/texticon/icon_04.png"
+    pause 0.1
+    "gui/texticon/icon_05.png"
+    pause 0.1
+    "gui/texticon/icon_06.png"
+    pause 0.1
+    "gui/texticon/icon_07.png"
+    pause 0.1
+    "gui/texticon/icon_08.png"
+    pause 0.1
+    "gui/texticon/icon_09.png"
+    pause 0.1
+    "gui/texticon/icon_10.png"
+    pause 0.1
+    repeat
+
 ## 通过 Character 对象使名称框可用于样式化。
 init python:
     config.character_id_prefixes.append('namebox')
