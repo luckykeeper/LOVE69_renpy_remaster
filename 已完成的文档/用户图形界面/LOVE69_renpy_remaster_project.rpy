@@ -4,15 +4,20 @@
 # Author:Luckykeeper
 # 版本 0.0.4
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年8月30日
+# 修订日期 2021年9月8日
 
 # image pure_black = "#000"
 # 开场画面
 # $ renpy.pause(1, hard=True) 在每一个不想被跳过的scene、show和hide语句的下一行，都加上一句，就能阻止鼠标点击跳过
 # 务必注意文件命名不要重复，这里的图片不需要定义和导入，放在 images/splashscreen 即可直接食用
+# 这里的声音初步判断是由se里面的门的声音（07_ドア1～あける）+心爱的voice 实际填voice的时候应该能找到
 label splashscreen:
     # 同人logo
     show ロゴ at truecenter with Dissolve(1.0)
+    # 这里的开门声对了，但是人物声音是不对的，Demo版暂时使用这个音声占位，原版应该是心爱的语音，后面应该是能找到的，找到了再换上
+    play sound "voice/effect/07_ドア1～あける.ogg"
+    pause 1.0
+    voice "voice/真冬/maf_a1_0118.ogg"
     $ renpy.pause(1, hard=True)
     pause 1.0
     $ renpy.pause(1, hard=True)
