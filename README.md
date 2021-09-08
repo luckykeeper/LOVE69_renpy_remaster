@@ -2,7 +2,7 @@
 
 | 项目状况           | LOVE69 Ren’py Remaster Project                               |
 | ------------------ | ------------------------------------------------------------ |
-| 状态               | 进行中（Demo开发中）                                         |
+| 状态               | 进行中（Demo开发中）\|\| 要去处理下家里的一些事情 & 暂停大更新到2021.09.12 |
 | star数             | ![star](https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster) |
 | fork数             | ![fork](https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster) |
 | issues数           | ![issues](https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster) |
@@ -158,4 +158,4 @@ CG、BGM等素材的解包工作已全部完成，无需帮助
 - 项目相关文件解压密码为本页面网址（即 https://github.com/luckykeeper/LOVE69_renpy_remaster ）下载链接暂时取消
 
 - 出于各种原因，本次汉化移植并不会对“gkd”的内容（即 Hscene ）进行汉化和移植![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
-- 本页面最后修改时间 2021年9月4日
+- 本页面最后修改时间 2021年9月8日
