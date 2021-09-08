@@ -1,15 +1,16 @@
 # LOVE69_renpy_remaster
 
-| 项目状况           | LOVE69 Ren’py Remaster Project                               |
-| ------------------ | ------------------------------------------------------------ |
-| 状态               | 进行中（Demo开发中）\|\| 要去处理下家里的一些事情 & 暂停大更新到2021.09.12 |
-| star数             | ![star](https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster) |
-| fork数             | ![fork](https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster) |
-| issues数           | ![issues](https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster) |
-| 参与成员           | 1人（[Luckykeeper](https://github.com/luckykeeper)）         |
-| 项目地址           | https://github.com/luckykeeper/LOVE69_renpy_remaster         |
-| 项目组官网         | https://love69renpyremasterproject.github.io                 |
-| 项目组官网构建状态 | ![status](https://app.travis-ci.com/love69renpyremasterproject/love69renpyremasterproject.github.io.svg?branch=main&status=passed) |
+| 项目状况             | LOVE69 Ren’py Remaster Project                               |
+| -------------------- | ------------------------------------------------------------ |
+| 状态                 | 进行中（Demo版开发中）\|\| 准备返校 & 暂停大更新到2021.09.12 |
+| star数               | ![star](https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster) |
+| fork数               | ![fork](https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster) |
+| issues数             | ![issues](https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster) |
+| 项目组成员           | 1人（[Luckykeeper](https://github.com/luckykeeper)）         |
+| Contributors<br/>2人 | [WorldlineChanger](https://github.com/WorldlineChanger)（两处文本润色）；<br/>[Santa-Weaves](https://github.com/Santa-Weaves)（OP歌词润色）； |
+| 项目地址             | https://github.com/luckykeeper/LOVE69_renpy_remaster         |
+| 项目组官网           | https://love69renpyremasterproject.github.io                 |
+| 项目组官网构建状态   | ![status](https://app.travis-ci.com/love69renpyremasterproject/love69renpyremasterproject.github.io.svg?branch=main&status=passed) |
 
 使用ren'py重制LOVEPOTION SIXTYNINE，并加以汉化和全平台适配
 
@@ -17,7 +18,7 @@
 
 ## 🎉开坑宣告🎉
 
-推了好多年的Gal，也想自己做出一些贡献呢，最近正好推完了LOVEPOTION SIXTYNINE，文本难度不是很高，基本上都看懂了，又简单看了一下ren’py，似乎不是很难，所以打算开个坑，整个个人汉化，当然，如果能有其它组来做那是大欢迎啦~~但是感觉这么冷门的电波系作品应该没有哪个组来做汉化，所以我就这么打算开坑啦~~
+推了好多年的Gal，也想自己做出一些贡献呢，最近正好推完了LOVEPOTION SIXTYNINE，文本难度不是很高，基本上都看懂了，又简单看了一下ren’py，似乎不是很难，所以打算开个坑，整个个人汉化，当然，~~如果能有其它组来做那是大欢迎啦，但是感觉这么冷门的电波系作品应该没有哪个组来做汉化，所以我就这么打算开坑啦~~（2021.09.08_注：希望各位大大还是不要来抢坑了，我现在非常有信心做完的说![huaji](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/huaji.aqdzo604ncs.png))
 
 ### 实机开发运行界面
 
@@ -49,7 +50,7 @@ Demo版实机开发界面_主菜单
 
 初步确认可运行于新旧安卓手机、X86安卓设备、模拟器及Chrome Book
 
-除上述平台外，预计还将会有iOS版（不过没开发者账户，估计⑧能有），Linux版和MacOS版，甚至WEB版！
+除上述平台外，预计还将会有 iOS 版（不过没开发者账户，估计⑧能有），Linux版和MacOS版，甚至WEB版！
 
 安卓Demo实机运行页面_安装
 
@@ -113,7 +114,7 @@ Demo版实机测试_GIF图
 
 - 采用机翻+润色的方式进行，因为我是个日语渣，翻译初稿来自百度翻译+彩云小译的结果，润色通过听译+Yahoo参考等方式进行
 
-- 主要采用意译的方式，因为本来就是电波向作品，很多地方并不好直译
+- 主要采用意译的方式，因为本来就是电波系作品，很多地方并不好直译
 
 - 不会翻的地方使用 // 标出，希望老哥们帮帮忙（等上传scene01就能看到了，现在还在做…）
 
@@ -133,7 +134,7 @@ CG、BGM等素材的解包工作已全部完成，无需帮助
 
 测试、校对：可以先把联系方式发送到 luckykeeper@luckykeeper.site ，完成后将会联系
 
-动画的alpha通道分析（本作的动画是由一堆jpg构成的，在文件夹内有4个不能显示图像的jpg文件，00000000-3.jpg），希望有人来分析一下提取出alpha通道。若这个问题不能解决，移植时可能会放弃部分特效或不得不从其它地方提取部分特效进行替代，具体情况请参见上方演示画面的gif图
+动画的alpha通道分析（本作的动画是由一堆jpg构成的，在文件夹内有4个不能显示图像的jpg文件，00000000-3.jpg），希望有人来分析一下提取出alpha通道。若这个问题不能解决，移植时可能会放弃部分特效或不得不从其它地方提取部分特效进行替代，具体情况请参见上方演示画面的gif图（2021.09.08_注：这个问题不着急了，今天已经把ed的1457张jpg扣出来了，拿不到 alpha 通道，我就en扣！）
 
 ### 找不到文件？
 
@@ -154,7 +155,7 @@ CG、BGM等素材的解包工作已全部完成，无需帮助
 
 ## 😥其它事项😅
 
-- 项目可能因为学业原因无限期推迟（学业繁忙+是只鸽子😅）【所以有其他人想来汉化那是大欢迎，也欢迎使用本项目已经汉化好的文本和提取出的日语文本，不过如果用的话请加上我的名字（Luckykeeper）】{就不要着急催着填坑了哈}
+- 项目可能因为学业原因无限期推迟（学业繁忙+是只鸽子😅）~~【所以有其他人想来汉化那是大欢迎，也欢迎使用本项目已经汉化好的文本和提取出的日语文本，~~不过如果用的话请加上我的名字（Luckykeeper）】{就不要着急催着填坑了哈}【2021.09.08_注：做不完的可能性不大，目前还是非常顺利的，我非常有信心能把坑填完，烦请各位大大就不要抢坑了哈】
 - 项目相关文件解压密码为本页面网址（即 https://github.com/luckykeeper/LOVE69_renpy_remaster ）下载链接暂时取消
 
 - 出于各种原因，本次汉化移植并不会对“gkd”的内容（即 Hscene ）进行汉化和移植![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
