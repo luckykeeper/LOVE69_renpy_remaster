@@ -1947,7 +1947,7 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「！　…そ、そんなの有りか…兄妹の絆って…すげえな…」
-    # 突然发现的制作技巧
+    # 突然发现的制作技巧,在一个人说话的时候，可以操作其它人来着
     show 真冬_制服_基本_目閉じ:
         zoom 1.5
         xalign 0.5
@@ -1956,7 +1956,9 @@ label scene01:
         linear 0.0 xalign 0.76
         linear 0.3 xalign 0.13
     voice "voice/心愛/cca_a1_0050.ogg"
-    ai "！！！！！... ... 这、这种事真的存在吗... ... 兄妹之间的感情... ... 好厉害啊... ..."
+    hide 心愛_制服_おやつ_泣き
+    show 心愛_制服_おやつ_驚き at love69_right
+    ai 心愛_制服_おやつ_驚き "！！！！！... ... 这、这种事真的存在吗... ... 兄妹之间的感情... ... 好厉害啊... ..."
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1964,8 +1966,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「心愛ちゃんもすればいじゃない」
+    hide 真冬_制服_基本_目閉じ
+    show 真冬_制服_基本_ニタァ at love69_left
     voice "voice/真冬/maf_a1_0098.ogg"
-    dong "心爱你也可以这么做啊"
+    dong 真冬_制服_基本_ニタァ "心爱你也可以这么做啊"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1973,8 +1977,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「か、考えとく…う、うん…そうする…も、もしかして、そこから先は…したの？」
+    hide 心愛_制服_おやつ_驚き
+    show 心愛_制服_おやつ_泣き at love69_right
     voice "voice/心愛/cca_a1_0051.ogg"
-    ai "我、我想一想……嗯、嗯…这样做…难道，从那之后…做了吗"
+    ai 心愛_制服_おやつ_泣き "我、我想一下……嗯、嗯…这样做…难道，从那之后…做了吗"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1982,8 +1988,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「そこから先？」
+    hide 真冬_制服_基本_ニタァ
+    show 真冬_制服_基本_無表情 at love69_left
     voice "voice/真冬/maf_a1_0099.ogg"
-    dong "那之后？"
+    dong 真冬_制服_基本_無表情 "那之后？"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1991,8 +1999,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「なんでもないです忘れてください」
+    hide 心愛_制服_おやつ_泣き
+    show 心愛_制服_おやつ_真顔 at love69_right
     voice "voice/心愛/cca_a1_0052.ogg"
-    ai "啥也没有，忘了吧"
+    ai 心愛_制服_おやつ_真顔 "啥也没有，忘了吧"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -2000,8 +2010,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「嫌だと言ったら？」
+    hide 真冬_制服_基本_無表情
+    show 真冬_制服_基本_目閉じ at love69_left
     voice "voice/真冬/maf_a1_0100.ogg"
-    dong "如果我说不是这样呢?"
+    dong 真冬_制服_基本_目閉じ "如果我说不是这样呢?"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -2009,8 +2021,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「このカマ野郎が一人死ぬだけだ」
+    hide 心愛_制服_おやつ_真顔
+    show 心愛_制服_おやつ_無表情 at love69_right
     voice "voice/心愛/cca_a1_0053.ogg"
-    ai "这个混蛋一个人死了算了"
+    ai 心愛_制服_おやつ_無表情 "这个混蛋一个人死了算了"
 
     # 莲 「勝手に俺を巻き込むな！」
     lian "不要随便把我卷进来啊！"
@@ -2018,7 +2032,12 @@ label scene01:
     ### 场景切换
     ### 葛城家玄关-->通学路街道
     ### 人物：莲 心爱 真冬
-    ### BGM：sweet passion.ogg
+    ### BGM：sweet passion.ogg（没变）
+    # 没有类似的转场效果，稍稍改动一下
+    image bg 通学路c_朝 = "images/bg/通学路c_朝.png"
+    scene 通学路c_朝 at love69_bg1440 with slideright
+    show 心愛_制服_おやつ_もぐもぐ at love69_right with Dissolve(0.3)
+    show 真冬_制服_基本_にっこり at love69_left with Dissolve(0.3)
 
     # nil 「よく晴れた一日だ。」
     "晴朗的一天"
