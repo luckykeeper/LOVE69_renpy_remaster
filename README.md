@@ -157,6 +157,9 @@ CG、BGM等素材的解包工作已全部完成，无需帮助
 
 - 项目可能因为学业原因无限期推迟（学业繁忙+是只鸽子😅）~~【所以有其他人想来汉化那是大欢迎，也欢迎使用本项目已经汉化好的文本和提取出的日语文本，~~不过如果用的话请加上我的名字（Luckykeeper）】{就不要着急催着填坑了哈}【2021.09.08_注：做不完的可能性不大，目前还是非常顺利的，我非常有信心能把坑填完，烦请各位大大就不要抢坑了哈】
 - 项目相关文件解压密码为本页面网址（即 https://github.com/luckykeeper/LOVE69_renpy_remaster ）下载链接暂时取消
-
 - 出于各种原因，本次汉化移植并不会对“gkd”的内容（即 Hscene ）进行汉化和移植![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
-- 本页面最后修改时间 2021年9月8日
+- 本页面最后修改时间 2021年9月9日
+
+## Stargazers over time 
+
+[![Stargazers over time](https://starchart.cc/luckykeeper/LOVE69_renpy_remaster.svg)](https://starchart.cc/luckykeeper/LOVE69_renpy_remaster) 
