@@ -2,7 +2,7 @@
 
 | 项目状况             | LOVE69 Ren’py Remaster Project                               |
 | -------------------- | ------------------------------------------------------------ |
-| 状态                 | 进行中（Demo版开发中）\|\| 绝赞制作中 |
+| 状态                 | 进行中（Demo版开发中）                                       |
 | star数               | ![star](https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster) |
 | fork数               | ![fork](https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster) |
 | issues数             | ![issues](https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster) |
