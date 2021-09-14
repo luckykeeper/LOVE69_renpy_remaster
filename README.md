@@ -80,6 +80,10 @@ Demo版实机测试_GIF图
 
 <img src="images/Demo版实机测试_GIF图.gif" alt="Demo版实机测试_GIF图.gif" style="zoom:20%;" />
 
+Ubuntu Demo版实机运行页面
+
+<img src="images/Ubuntu实机运行页面.png" alt="Ubuntu实机运行页面.png" style="zoom:20%;" />
+
 ## 👏成员👏
 
 组长：[Luckykeeper](https://github.com/luckykeeper)
