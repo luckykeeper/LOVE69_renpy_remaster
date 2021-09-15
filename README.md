@@ -84,6 +84,14 @@ Ubuntu Demo版实机运行页面
 
 <img src="images/Ubuntu实机运行页面.png" alt="Ubuntu实机运行页面.png" style="zoom:20%;" />
 
+MacOS_Demo实机运行页面_主菜单
+
+<img src="images/MacOS_Demo实机运行页面_主菜单.png" alt="MacOS_Demo实机运行页面_主菜单.png" style="zoom:20%;" />
+
+MacOS_Demo实机运行页面_对话框
+
+<img src="images/MacOS_Demo实机运行页面_对话框.png" alt="MacOS_Demo实机运行页面_对话框.png" style="zoom:20%;" />
+
 ## 👏成员👏
 
 组长：[Luckykeeper](https://github.com/luckykeeper)
