@@ -1,13 +1,15 @@
-﻿# --------------------------------
+# --------------------------------
 # LOVE69_Renpy_Remaster_Project
 # scene01 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：WorldlineChanger（2句）
 # 版本 null
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年9月11日
+# 修订日期 2021年9月16日
 
-
+# 待修bug
+# # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右
+# 开场心爱的语音
 
 label scene01:
 
@@ -1320,7 +1322,7 @@ label scene01:
     fen 粉_制服_基本_泣き "今天的你真是比任何时候都暴躁呢，嘛呼嘛呼酱... 嗯? 咦? 你把头发剪了?（L：这里她把莲和真冬认混了233）"
 
     # 莲 「あ、ついでに下の毛もつるっつるだ。滑りが良くて最高だぜ」
-    lian "啊，顺便说一下下面的毛发也很光滑呢。滑溜溜的最好啦）"
+    lian "啊，顺便说一下下面的毛发也很光滑呢。滑溜溜的最好啦"
 
     # 心爱？？？ 「マジで？　今度みせ…ってえ！？　蓮くん！？　どうしたの！？　こんな朝に！」 附加：マジ驚き
     hide 心愛_制服_基本_泣き
@@ -2068,7 +2070,7 @@ label scene01:
     # 心爱 「ふ…ふわあ…それにしても、良い天気だね～…むぐむぐ…美味し…」附加：pac/もぐもぐ
     # 表情和上面一样
     voice "voice/心愛/cca_a1_0054.ogg"
-    ai "呼... 呼啊... 不管怎么说，天气真好啊... 嗯嗯嗯... 好吃..."
+    ai 心愛_制服_おやつ_もぐもぐ "呼... 呼啊... 不管怎么说，天气真好啊... 嗯嗯嗯... 好吃..."
 
     # 莲 「あ、絶好の煮卵日和だ」
     lian "嗯，是绝佳的煮蛋天气呢"
@@ -2081,7 +2083,7 @@ label scene01:
     # 真冬 「そうだね、帰りにドゥカティ買って帰ろう」
     # 这里真冬的表情也和上面一样
     voice "voice/真冬/maf_a1_0101.ogg"
-    dong "是啊，回去的路上买辆杜卡迪回去吧?（L：杜卡迪（Ducati Motor Holding S.p.A.）是一家意大利摩托车生产商，总部位于意大利的博洛尼亚。其产品由于卓越的性能以及意大利特色的设计而闻名。奥迪汽车在2012年4月收购了杜卡迪）"
+    dong 真冬_制服_基本_にっこり "是啊，回去的路上买辆杜卡迪回去吧?（L：杜卡迪（Ducati Motor Holding S.p.A.）是一家意大利摩托车生产商，总部位于意大利的博洛尼亚。其产品由于卓越的性能以及意大利特色的设计而闻名。奥迪汽车在2012年4月收购了杜卡迪）"
 
     # nil 「どこからか風鈴の音色が風に乗って耳に触れる。恐らくガラス製だろうか。優しい音色だ。」
     "随风传来的不知道是从哪里发出的风铃的声音触动了耳朵，可能是玻璃做的风铃吧，声音相当好听。"
@@ -2480,7 +2482,7 @@ label scene01:
     # 参考资料：https://ja.wikipedia.org/wiki/Yahoo!
     # 参考资料：https://ja.wikipedia.org/wiki/Yahoo!_JAPAN
     voice "voice/心愛/cca_a1_0068.ogg"
-    ai "Yahoo~ 早上好呀！（L:原文「やっほー！」やっほー！是雅虎名字的又来，Yahoo！是11区最大的搜索引擎，Yahoo！Japan 的运作方式与世界上其它的Yahoo不同，且账号不能通用）"
+    ai "Yahoo~ 早上好呀！（L:原文「やっほー！」やっほー！是雅虎名字的由来，Yahoo！是11区最大的搜索引擎，Yahoo！Japan 的运作方式与世界上其它的Yahoo不同，且账号不能通用）"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -3111,7 +3113,8 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「へー、じゃぁ、植木鉢くんのお友達のお店なんだねー！　こから近いの？」
-    voice "voice/心愛/cca_a1_0088.ogg"
+    # 0088和0089是真冬和心爱共同说的，因为实际只播放了真冬的音声，心爱的实际上没有使用，这里跳过0088和0089
+    voice "voice/心愛/cca_a1_0090.ogg"
     ai "啊，那么，这是花盆君的朋友的店啊！离这儿近吗？"
 
     # 花盆君 「私も一枚貰っていかな」
@@ -3150,7 +3153,7 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「はえ～…このパンケーキおいしそう…じゅるり…」
-    voice "voice/心愛/cca_a1_0089.ogg"
+    voice "voice/心愛/cca_a1_0091.ogg"
     ai "嗯... 这个煎饼看起来很好吃... 黏糊糊的..."
 
     # 花盆君 「！（こくこく）」
@@ -3175,7 +3178,7 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「んー？　飲んでみる？」
-    voice "voice/心愛/cca_a1_0090.ogg"
+    voice "voice/心愛/cca_a1_0092.ogg"
     ai "嗯? 要喝一杯吗?"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
@@ -3193,7 +3196,7 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「で、お昼ご飯こはどうだろう！」
-    voice "voice/心愛/cca_a1_0091.ogg"
+    voice "voice/心愛/cca_a1_0093.ogg"
     ai "那么，午饭怎么办呢?"
 
     # 莲 「お好きにどうぞお食事大臣」
@@ -3205,7 +3208,7 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「異論はないよ…あ、でもちょっと私、やる事あるから後で合流でも構わないかな」
-    voice "voice/真冬/maf_a1_0129.ogg"
+    voice "voice/真冬/maf_a1_0130.ogg"
     dong "我没有异议... 啊，不过我还有事要做，一会儿和你们会合可以吗?"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -3214,7 +3217,7 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「わ、私もほら…想瑠にゃんにジュースおごらなきゃだし…！」
-    voice "voice/心愛/cca_a1_0092.ogg"
+    voice "voice/心愛/cca_a1_0094.ogg"
     ai "哇，我也是... 我得请想瑠喵喝果汁... !"
 
     # 莲 「マジでおごるのか。聞いたことねぇぞ、教師にジュースおごる生徒って」
@@ -3226,7 +3229,7 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「男は約束を守るもんだ」
-    voice "voice/心愛/cca_a1_0093.ogg"
+    voice "voice/心愛/cca_a1_0095.ogg"
     ai "真男人说话算话"
 
     # 莲 「お前女だろ」
@@ -3238,7 +3241,7 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「男は約束を守るもんだ」
-    voice "voice/心愛/cca_a1_0094.ogg"
+    voice "voice/心愛/cca_a1_0096.ogg"
     ai "如果我说不是呢?"
 
     # 莲 「金玉掴んで確かめる」
@@ -3251,7 +3254,7 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「女です」
-    voice "voice/心愛/cca_a1_0095.ogg"
+    voice "voice/心愛/cca_a1_0097.ogg"
     ai "我是女的"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
@@ -3260,7 +3263,7 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「確かめさせてもらうよ。植木鉢くん抑えて」
-    voice "voice/真冬/maf_a1_0130.ogg"
+    voice "voice/真冬/maf_a1_0131.ogg"
     dong "也请让我确认一下。花盆君把她按住"
 
     # 花盆君 「…（こくこく）」
@@ -3272,7 +3275,7 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「えっ！？　なんで！？　ちょーっとま…あっ、んっ！あっ、こ、こらっ！　ぁ、ぁぅっ、ぱんつに手入れちゃだめー！」
-    voice "voice/心愛/cca_a1_0096.ogg"
+    voice "voice/心愛/cca_a1_0098.ogg"
     ai "啊! ? 为什么? ! ? 等一下... 啊，嗯! 啊，喂! 啊，啊，不，不要把手伸到那里去啊！"
 
     # nil 「......」
@@ -3284,7 +3287,7 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「誠に遺憾ながら女でした」
-    voice "voice/真冬/maf_a1_0131.ogg"
+    voice "voice/真冬/maf_a1_0132.ogg"
     dong "真的很遗憾，是女的"
 
     # 莲 「はい…」
@@ -3299,7 +3302,7 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「初めてだよ…他人にパンツの中まで手ぇ突っ込まれるなんざ…」
-    voice "voice/心愛/cca_a1_0097.ogg"
+    voice "voice/心愛/cca_a1_0099.ogg"
     ai "这是第一次…竟然被别人把手伸进胖次里…"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
@@ -3308,7 +3311,7 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「安心しろ…二度目はない」
-    voice "voice/真冬/maf_a1_0132.ogg"
+    voice "voice/真冬/maf_a1_0133.ogg"
     dong "放心吧…没有第二次了"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -3317,7 +3320,7 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「そ…そ、そ、それはいくらなんでも寂しすぎると思います！　た、多分！　もっと私の望む形で！　いつか！　あると！　信じてるから！」
-    voice "voice/心愛/cca_a1_0098.ogg"
+    voice "voice/心愛/cca_a1_0100.ogg"
     ai "我... ... 我觉得那太... ... 太寂寞了! 也、也许! 以我想要的方式! 总有一天! 因为我相信!"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
@@ -3326,7 +3329,11 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「チョップ」
-    voice "voice/真冬/maf_a1_0133.ogg"
+    # 这里连续两句都不是按照顺序来的
+    # 真冬的134接续的似乎是下面电话那里
+    # 这里的音声也不是按顺序来的，真冬你不按套路出牌！
+    # 这里暂时随便找个东西占位，后面找到了再补
+    voice "voice/真冬/maf_a1_0134.ogg"
     dong "我劈！"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -3335,7 +3342,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「コアァッ！」
-    voice "voice/心愛/cca_a1_0099.ogg"
+    # 这里的音声也不是按顺序来的，心爱你也不按套路出牌！
+    # 心爱的音声101后接续的似乎是一周目心爱线？
+    # 这里暂时随便找个东西占位，后面找到了再补
+    voice "voice/心愛/cca_a1_0101.ogg"
     ai "哇!"
 
     ### 场景切换 教室->学校门口
@@ -3412,7 +3422,8 @@ label scene01:
     # 对话框人物变成了电话里的那种，位置可能需要重新调整
     # 原文件在face下的 真冬_通話中 需要手动复制一下，另外，个头太小了，需要手动waifu2x处理一下（可能是2倍以上）
     # 真冬 『ちょっと用事が長引きそう。ご飯は想瑠にゃんにたかるから、心愛ちゃんと食べて！　お兄ちゃんごめんね』
-    voice "voice/真冬/maf_a1_0135.ogg"
+    # 奇怪音声接续 这里是134不是135
+    voice "voice/真冬/maf_a1_0134.ogg"
     dong "我这有点事情可能会拖很久。饭到时候和想瑠喵吃，你和心爱酱一起吃吧！欧尼酱对不起啦"
 
     # 莲 「それは一向に構わんが、何やらされてんの？」
