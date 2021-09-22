@@ -4,7 +4,7 @@
 # 版本 0.0.4
 # Blog：http://b.luckykeeper.site
 # 开始日期 2021年8月28日
-# 修订日期 2021年9月8日
+# 修订日期 2021年9月22日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -66,6 +66,7 @@ image side 心愛 心愛_制服_おやつ_真顔 = "images/face/心愛/心愛_�
 image side 心愛 心愛_制服_おやつ_無表情 = "images/face/心愛/心愛_制服_おやつ_無表情.png" # 字面意思，睁眼，嘴·，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_きらきら = "images/face/心愛/心愛_制服_基本_きらきら.png" # 睁眼，嘴⚪三角，眼睛有小星星
 image side 心愛 心愛_制服_基本_ぶわー = "images/face/心愛/心愛_制服_基本_ぶわー.png" # 睁眼，很有标志性的哭
+image side 心愛 心愛_制服_おやつ_ぶわー = "images/face/心愛/心愛_制服_おやつ_ぶわー.png" # 睁眼，很有标志性的哭，拿着奶糖苹果
 
 # 下面定义不知道是谁的时候的心爱
 # 知不道的人物使用发色称呼
@@ -111,7 +112,7 @@ image side 真冬 真冬_制服_基本_おやつ1 = "images/face/真冬/真冬_�
 image side 真冬 真冬_制服_基本_おやつ2 = "images/face/真冬/真冬_制服_基本_おやつ2.png" # 闭眼，嘴开口，“w”，是有点小坏的笑呢，拿着奶糖苹果
 image side 真冬 真冬_制服_基本_おやつ3 = "images/face/真冬/真冬_制服_基本_おやつ3.png" # 闭眼，嘴开口，椭圆，是有点小萌的笑呢，拿着奶糖苹果
 image side 真冬 真冬_制服_基本_ニタァ = "images/face/真冬/真冬_制服_基本_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢
-
+image side 真冬 真冬_制服_基本_居眠り = "images/face/真冬/真冬_制服_基本_ニタァ.png" # 闭眼，嘴开口，半圆，碎着辽~
 
 
 # 葛城莲 lian //主人公，工具人就不要加颜色了吧，不加颜色的统一强制指定白色（#ffffff）
@@ -131,7 +132,8 @@ define na = Character('瑠那',color="#a4808c",image="瑠那")
 define ye = Character('雾叶',color="#414141",image="霧葉")
 
 # 花盆君 pen //和原版相比，移植版打算在人物名上加入颜色，花盆君的颜色当然是健康的绿色啦~
-define pen = Character('花盆君',color="#659839",image="アシュリー_植木鉢")
+define pen = Character('花盆君',color="#659839",image="花盆君")
+image side 花盆君 花盆君_通常 = "images/face/花盆君/花盆君_通常.png" #花盆君
 
 # 亚十礼 atri //和原版相比，移植版打算在人物名上加入颜色，亚十礼的颜色也是从头发上取哒~
 define atri = Character('亚十礼',color="#fcfafc",image="アシュリー")
