@@ -5,7 +5,7 @@
 # 部分句子翻译协助：WorldlineChanger（2句）
 # 版本 null
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年9月22日
+# 修订日期 2021年9月26日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右
@@ -2552,7 +2552,13 @@ label scene01:
     # 莲 「うお、居たのか、植木鉢くんおっすおっす」
     lian "哦，原来你在这儿啊，花盆君"
 
+    # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.15
+    $ sideimagesize.SideImageYalign = 1.21
+    $ sideimagesize.SideImageZoom = 0.5
+
     # 花盆君 「…（こくり）」
+    show 花盆君_通常 at love69_huapen_center
     pen "......（嗯）"
 
     # nil 「巨大な植木鉢が音もなく俺の元に接近して、隣の席の椅子を引いて、ちょこんと座った。この植木鉢について説明しておかねばなるまい。」
@@ -2583,7 +2589,13 @@ label scene01:
     voice "voice/心愛/cca_a1_0069.ogg"
     ai "花盆君，要不要吃奶糖苹果呢？"
 
+    # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.15
+    $ sideimagesize.SideImageYalign = 1.21
+    $ sideimagesize.SideImageZoom = 0.5
+
     # 花盆君 「…（こくり）」
+    show 花盆君_通常 at love69_huapen_center
     pen "......（嗯）"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -2595,7 +2607,13 @@ label scene01:
     voice "voice/心愛/cca_a1_0070.ogg"
     ai "来，请用♪"
 
+    # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.15
+    $ sideimagesize.SideImageYalign = 1.21
+    $ sideimagesize.SideImageZoom = 0.5
+
     # 花盆君 「ぱくっ」
+    show 花盆君_通常 at love69_huapen_center
     pen "哈嗯！"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
@@ -3037,13 +3055,25 @@ label scene01:
     # 莲 「裏切り者～！」
     lian "你个叛徒！"
 
+    # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.15
+    $ sideimagesize.SideImageYalign = 1.21
+    $ sideimagesize.SideImageZoom = 0.5
+
     # 花盆君 「…（つんつん）」
+    show 花盆君_通常 at love69_huapen_center
     pen "......（戳戳）"
 
     # 莲 「植木鉢くん、うちくる？」
     lian "花盆君，来我家吧？"
 
+    # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.15
+    $ sideimagesize.SideImageYalign = 1.21
+    $ sideimagesize.SideImageZoom = 0.5
+
     # 花盆君 「…（ふりふり）」
+    show 花盆君_通常 at love69_huapen_center
     pen "......（摇摆）"
 
     # 莲 「だめか」
@@ -3087,7 +3117,13 @@ label scene01:
     # 莲 「ほらほら、遊んでないで飯いくぞ。っつーか放課後じゃん」
     lian "好了，别玩了，我们去吃饭吧，不是已经放学了吗"
 
+    # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.15
+    $ sideimagesize.SideImageYalign = 1.21
+    $ sideimagesize.SideImageZoom = 0.5
+
     # 花盆君 「…（ちょいちょい）」
+    show 花盆君_通常 at love69_huapen_center
     pen "......（再戳戳）"
 
     # nil 「未だに俺の隣の席に居座っていた植木鉢君が、１枚のビラを手渡してきた。」
@@ -3111,7 +3147,13 @@ label scene01:
     # 莲 「69th Street diner…随分と面妖な…うおっ！？」
     lian "69th Street diner......真是太奇怪了......哦哦？！"
 
+    # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.15
+    $ sideimagesize.SideImageYalign = 1.21
+    $ sideimagesize.SideImageZoom = 0.5
+
     # 花盆君 「！」
+    show 花盆君_通常 at love69_huapen_center
     pen "！"
 
     # nil 「植木鉢くんの繰り出すソバットをもろに食らって、俺は二歩ほどよろめき…」//协力请求
@@ -3155,7 +3197,13 @@ label scene01:
     voice "voice/心愛/cca_a1_0090.ogg"
     ai "啊，那么，这是花盆君的朋友的店啊！离这儿近吗？"
 
-    # 花盆君 「私も一枚貰っていかな」
+    # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.15
+    $ sideimagesize.SideImageYalign = 1.21
+    $ sideimagesize.SideImageZoom = 0.5
+
+    # 花盆君 「私も一枚貰っていかな」&& 又搞混了，回头到这里补下原文
+    show 花盆君_通常 at love69_huapen_center
     pen "......（摇动）"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
@@ -3170,7 +3218,13 @@ label scene01:
     # 莲 「すまん植木鉢くん、地図がいまいち読めないんだが」
     lian "对不起，花盆君，我完全看不懂地图（L:绝了，莲君你就是fw吧？）"
 
+    # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.15
+    $ sideimagesize.SideImageYalign = 1.21
+    $ sideimagesize.SideImageZoom = 0.5
+
     # 花盆君 「…（ちょいちょい）」
+    show 花盆君_通常 at love69_huapen_center
     pen "......（戳戳）"
 
     # nil 「植木鉢君が、チラシの右下に印刷されているＱＲコードを指差した。」
@@ -3194,8 +3248,14 @@ label scene01:
     voice "voice/心愛/cca_a1_0091.ogg"
     ai "嗯... 这个煎饼看起来很好吃... 黏糊糊的..."
 
+    # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.15
+    $ sideimagesize.SideImageYalign = 1.21
+    $ sideimagesize.SideImageZoom = 0.5
+
     # 花盆君 「！（こくこく）」
     # 花盆君少说两句话吧，全得查字典，老难翻了...
+    show 花盆君_通常 at love69_huapen_center
     pen "......（哗啦哗啦）"
 
     # 莲 「こいつはご親切にどうも」
@@ -3304,7 +3364,13 @@ label scene01:
     voice "voice/真冬/maf_a1_0131.ogg"
     dong "也请让我确认一下。花盆君把她按住"
 
+    # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.15
+    $ sideimagesize.SideImageYalign = 1.21
+    $ sideimagesize.SideImageZoom = 0.5
+
     # 花盆君 「…（こくこく）」
+    show 花盆君_通常 at love69_huapen_center
     pen "......（哗啦哗啦）"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -3331,7 +3397,13 @@ label scene01:
     # 莲 「はい…」
     lian "这不当然…"
 
+    # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.15
+    $ sideimagesize.SideImageYalign = 1.21
+    $ sideimagesize.SideImageZoom = 0.5
+
     # 花盆君 「…」
+    show 花盆君_通常 at love69_huapen_center
     pen "......"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -3359,7 +3431,7 @@ label scene01:
 
     # 心爱 「そ…そ、そ、それはいくらなんでも寂しすぎると思います！　た、多分！　もっと私の望む形で！　いつか！　あると！　信じてるから！」
     voice "voice/心愛/cca_a1_0100.ogg"
-    ai "我... ... 我觉得那太... ... 太寂寞了! 也、也许! 以我想要的方式! 总有一天! 因为我相信!"
+    ai "我... ... 我觉得那样的话太... ... 太寂寞了! 也、也许! 以我想要的方式! 总有一天! 因为我相信!"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
