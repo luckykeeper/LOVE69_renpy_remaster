@@ -5,7 +5,7 @@
 # 部分句子翻译协助：WorldlineChanger（2句）
 # 版本 null
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年10月1日
+# 修订日期 2021年10月2日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右
@@ -2548,6 +2548,7 @@ label scene01:
         zoom 0.89
         xalign 0.5
         yalign -18.0
+    voice "voice/アシュリー/ash_a1_0001.ogg"
     pen 花盆君_通常 "......"
 
     # 莲 「うお、居たのか、植木鉢くんおっすおっす」
@@ -2560,6 +2561,8 @@ label scene01:
 
     # 花盆君 「…（こくり）」
     show 花盆君_通常 at love69_huapen_center
+    # 花盆君和亚十礼用的资源都在一起，立绘我已经分开了，音声就不分了
+    voice "voice/アシュリー/ash_a1_0002.ogg"
     pen "......（嗯）"
 
     # nil 「巨大な植木鉢が音もなく俺の元に接近して、隣の席の椅子を引いて、ちょこんと座った。この植木鉢について説明しておかねばなるまい。」
@@ -2587,8 +2590,9 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「植木鉢くん、キャラメルアップルたべるー？」
+    show 心愛_制服_おやつ_笑顔 at love69_right with Dissolve(0.15)
     voice "voice/心愛/cca_a1_0069.ogg"
-    ai "花盆君，要不要吃奶糖苹果呢？"
+    ai 心愛_制服_おやつ_笑顔 "花盆君，奶糖苹果你要不要恰呢？"
 
     # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.15
@@ -2597,6 +2601,7 @@ label scene01:
 
     # 花盆君 「…（こくり）」
     show 花盆君_通常 at love69_huapen_center
+    voice "voice/アシュリー/ash_a1_0003.ogg"
     pen "......（嗯）"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -2605,8 +2610,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「はいどーぞ♪」
+    hide 心愛_制服_おやつ_笑顔
+    show 心愛_制服_おやつ_にっこり at love69_right
     voice "voice/心愛/cca_a1_0070.ogg"
-    ai "来，请用♪"
+    ai 心愛_制服_おやつ_にっこり "来，请用♪"
 
     # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.15
@@ -2615,6 +2622,7 @@ label scene01:
 
     # 花盆君 「ぱくっ」
     show 花盆君_通常 at love69_huapen_center
+    voice "voice/アシュリー/ash_a1_0004.ogg"
     pen "哈嗯！"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
@@ -2623,8 +2631,9 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「食べた」
+    show 真冬_制服_基本_無表情 at love69_left
     voice "voice/真冬/maf_a1_0114.ogg"
-    dong "吃掉了"
+    dong 真冬_制服_基本_無表情"吃掉了"
 
     # nil 「しかし、ただの植木鉢と侮るなかれ。去年の「全国学園対抗ユルキャラトーナメント」では怒濤のストレート優勝を成し遂げている。」
     "不要觉得花盆君就是个花盆哦。它可是在去年的「全国学园尤鲁查拉大奖赛」中取得了压倒性的胜利"
@@ -2655,17 +2664,40 @@ label scene01:
     ### 上课铃声
     ### 人物：莲 真冬 心爱 想瑠
     ### BGM：不变
+    play sound "voice/effect/学校チャイム.ogg"
+    hide 真冬_制服_基本_無表情 with Dissolve(0.15)
+    hide 心愛_制服_おやつ_にっこり with Dissolve(0.15)
+    hide 花盆君_通常 with Dissolve(0.15)
+    scene black
+    scene 教室_昼 at love69_bg1220 with wipeleft
+
 
     # nil 「予鈴が鳴り響く。それと同時に教室の前側の扉が開き、担任の教師が姿を現した。」
-    "预铃鸣响起。与此同时，教室的前门被班主任打开了"
+    "预备铃响起。与此同时，教室的前门被班主任打开了"
 
+    # 根据下面的参数定义想瑠喵位置的参数
+    transform love69_xiangliu_center:
+        zoom 1.5
+        xalign 0.41
+        yalign 0.07
+
+    # 来为想瑠喵设计对话框参数吧！
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    # && 这个还没做完
+    $ sideimagesize.SideImageXalign = -0.5
+    $ sideimagesize.SideImageYalign = -0.5
+    $ sideimagesize.SideImageZoom = 0.7
     # 想瑠 「せっかあいでえいちーばん」
+    # show 想瑠_スーツ_ニヤリ with Dissolve(0.15):
+    #     zoom 1.5
+    #     xalign 0.41
+    #     yalign 0.07
     voice "voice/想瑠/sol_a1_0001.ogg"
-    liu "世——界——第——一——的——"
+    liu 想瑠_スーツ_ニヤリ "世——界——第——一——的——"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.10
-    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageXalign = 0.1
+    $ sideimagesize.SideImageYalign = 0.1
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ハマーン様ァ！」
@@ -3063,6 +3095,7 @@ label scene01:
 
     # 花盆君 「…（つんつん）」
     show 花盆君_通常 at love69_huapen_center
+    voice "voice/アシュリー/ash_a1_0005.ogg"
     pen "......（戳戳）"
 
     # 莲 「植木鉢くん、うちくる？」
@@ -3075,6 +3108,7 @@ label scene01:
 
     # 花盆君 「…（ふりふり）」
     show 花盆君_通常 at love69_huapen_center
+    voice "voice/アシュリー/ash_a1_0006.ogg"
     pen "......（摇摆）"
 
     # 莲 「だめか」
@@ -3125,7 +3159,8 @@ label scene01:
 
     # 花盆君 「…（ちょいちょい）」
     show 花盆君_通常 at love69_huapen_center
-    pen "......（再戳戳）"
+    voice "voice/アシュリー/ash_a1_0007.ogg"
+    pen "......（戳戳）"
 
     # nil 「未だに俺の隣の席に居座っていた植木鉢君が、１枚のビラを手渡してきた。」
     "还坐在我旁边的花盆君，递来了一张传单"
@@ -3155,6 +3190,7 @@ label scene01:
 
     # 花盆君 「！」
     show 花盆君_通常 at love69_huapen_center
+    voice "voice/アシュリー/ash_a1_0008.ogg"
     pen "！"
 
     # nil 「植木鉢くんの繰り出すソバットをもろに食らって、俺は二歩ほどよろめき…」//协力请求
@@ -3205,6 +3241,7 @@ label scene01:
 
     # 花盆君 「......（こくこく）」
     show 花盆君_通常 at love69_huapen_center
+    voice "voice/アシュリー/ash_a1_0009.ogg"
     pen "......（摇动）"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
@@ -3226,6 +3263,7 @@ label scene01:
 
     # 花盆君 「…（ちょいちょい）」
     show 花盆君_通常 at love69_huapen_center
+    voice "voice/アシュリー/ash_a1_0010.ogg"
     pen "......（戳戳）"
 
     # nil 「植木鉢君が、チラシの右下に印刷されているＱＲコードを指差した。」
@@ -3257,6 +3295,7 @@ label scene01:
     # 花盆君 「！（こくこく）」
     # 花盆君少说两句话吧，全得查字典，老难翻了...
     show 花盆君_通常 at love69_huapen_center
+    voice "voice/アシュリー/ash_a1_0011.ogg"
     pen "......（哗啦哗啦）"
 
     # 莲 「こいつはご親切にどうも」
@@ -3372,6 +3411,7 @@ label scene01:
 
     # 花盆君 「…（こくこく）」
     show 花盆君_通常 at love69_huapen_center
+    voice "voice/アシュリー/ash_a1_0012.ogg"
     pen "......（哗啦哗啦）"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -3405,6 +3445,7 @@ label scene01:
 
     # 花盆君 「…」
     show 花盆君_通常 at love69_huapen_center
+    voice "voice/アシュリー/ash_a1_0013.ogg"
     pen "......"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -4331,6 +4372,11 @@ label scene01:
     # nil 「その気になれば、汗で若干透けたブラウスから覗くピンク色の下着を視認できる距離だ。」
     "如果你有这种想法的话，现在已经可以看到被汗水打湿的衬衫底下的粉色内衣了（L:莲君你好涩哟~）"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱  「む！　そ、その！　右手に握られているものは！」
     ai "嗯! 那、那个! 你右手里拿的是什么？！"
 
@@ -4342,6 +4388,11 @@ label scene01:
     # BGM 心爱变身！进入心爱的回合！
     # nil 「心愛が一度脚を止めて、俺の右手に握られている『何か』を視認したようだ。一瞬にして場の空気が変わったことを肌で感じる。」
     "心爱停下了脚步，似乎看到了握在我右手里的『那个东西』。我能感觉到气氛瞬间发生了变化"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ターゲット…ロック」
     ai "目标…锁定"
@@ -4358,6 +4409,11 @@ label scene01:
     # 心爱变身长动画
     # 受原作引擎封包限制，不能完全还原了呢，敬请谅解
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「目標との距離を確認。軌道計算終了。軌道修正後の誤差コンマ２ミリ以下に設定。姿勢制御スタビライザー…展開」
     ai "确认与目标的距离。轨道计算结束。设定为轨道修正后的误差2毫米以下。姿势控制稳定器…展开"
 
@@ -4366,8 +4422,18 @@ label scene01:
 
     # 心爱横条短动画（这里需要做成GIF）
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「リミッターをレベル１から７まで解放。対象の反撃を想定した機動シミュレーション完了。射出カウント…３ドライ…２ツヴァイ…１アインス」
     ai "释放1级至7级的限制器。假想目标反击的机动模拟完成。发射计数... ... 3（three）... ... 2（two）... ... 1（one）"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「……」
     ai "……"
@@ -4382,6 +4448,11 @@ label scene01:
 
     # nil 「俺も右脚を下げ、コーンの根本を握りしめる。」
     "我也降低了身体的重心，紧紧抓住了甜筒"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「目標を…駆逐するッ！！！」
     ai "把目标…驱逐出去！！！"
@@ -4407,6 +4478,11 @@ label scene01:
 
     # 心爱量子化！
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「こは…俺の距離だ！」
     ai "这是…我的距离！"
 
@@ -4420,6 +4496,11 @@ label scene01:
     # nil 「コーンの端を持ってアイスを、中空で縦に回転させてかわし、手首を捻って逆手持ちに切り替える。」
     "拿着甜筒的一端，让冰淇淋在空中纵向旋转，然后扭动手腕换成反手抓住了！"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「なっ！」
     ai "什么！"
 
@@ -4430,6 +4511,11 @@ label scene01:
 
     # nil 「どうせ心愛に奪われるだろうと覚悟した俺は、逆手持ちのま、心愛の口の中にアイスを突っ込んだ。」
     "我做好了冰淇淋会被心爱夺走的觉悟，于是我反手就是把冰淇淋塞进了心爱的嘴里！"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # BGM 停，音效：戳
     # 心爱 「むぐっ」
@@ -4444,6 +4530,11 @@ label scene01:
 
     # nil 「心愛の口には面白いようにコーンのアイスクリームが突き刺さっている。」
     "现在，心爱的嘴上看起来相当有趣，甜筒和冰淇淋一起扎了进去"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 觉醒心爱消失，通常心爱回归！
     # 心爱 「むぐ…むぐむぐ…あむ…むぐ…けほっ…むぐ」
@@ -4461,6 +4552,11 @@ label scene01:
     # nil 「そして、コーンが全て心愛の口内へと収納された。ちなみに、包み紙は吸引中にとってあげました」
     "最后，整个冰淇淋和甜筒全部都收纳到了心爱的嘴里面。顺便说一下，外面的包装纸是在心爱吸到嘴里面的过程中我给取下来的"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「むぐ…ごくっ…ぷしゅー…」
     ai "呜嗯…嗯嗯…嗝…"
 
@@ -4473,6 +4569,11 @@ label scene01:
     # nil 「支えを失った心愛の身体を両腕で支えながら、腕時計を確認する。」
     "用双臂支撑着心爱的身体，确认了一下手表"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「…ぷしゅー…」
     ai " ... 咻..."
 
@@ -4481,6 +4582,11 @@ label scene01:
 
     # 莲 「はい、ということでね、甘い物を見たら見境なくなる癖はそろそろ治そうか」
     lian "嗯，这样啊，只要看到甜食就看不见其它东西的习惯差不多可以治好了吧"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ふにゃー…」
     ai " 呼喵…"
@@ -4491,17 +4597,32 @@ label scene01:
     # nil 「ポンポンと、予想外に迅速にアイスを食べるハメになった心愛の頭を撫でる」
     "轻轻地，我抚摸着意料之外的速度吃掉了冰淇淋的心爱的头"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「ふにゃ…ふへ…ふへ…」
     ai " 呼喵…呵呵…嘿嘿…"
 
     # 莲 「あの…心愛さん…？」
     lian "那个……心爱桑…？"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「ふへ…これで…勝ったと思ったらぁ…大間違いだァ…」
     ai "嘿嘿…才这样就…以为赢了……就大错特错了……"
 
     # 莲 「再起動だと…バカな、あり得るのか…こんなことが…」
     lian "再启动的话……真傻啊，在这种情况下……怎么可能啊……"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ところがぎっちょん！」
     ai "别得意的太早了！(ところがぎっちょん！)（L:这句和刚才莲说的是一样的，出自机动战士高达00 第一季第12集《教义的尽头》13分42秒）"
@@ -4518,11 +4639,21 @@ label scene01:
     # 莲 「んむっ！？」
     lian "嗯！？"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「ちゅー…っ！」
     ai "啾——... !"
 
     # 莲 「う、奪われた…！　私の唇を！」
     lian "呜，被夺去了... ! 我的嘴唇！"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「にへ…親方の唇頂いたでやんす」
     ai "嘿嘿…你的嘴唇我就收下了"
@@ -4542,11 +4673,21 @@ label scene01:
     # nil 「ちょっと若干頭が混乱する。いってぇどういう事だ。」
     "一时间感觉头脑相当混乱，这是个啥子情况？！"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「おっとぉ…隙だらけでやんすなぁ…余所見してっとぉ…もう一発いきますよぉー？　心愛あたーっく！」
     ai "哎呀……真是漏洞百出啊……再不集中注意力的话…我会再来一次的哦~？心愛攻击（Attack）！"
 
     # 莲 「またれいまたれい！　しばしまたれい！」
     lian "等下…现在吗？…等等！这是啥情况？"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ぐぬ！　おとなしくしやがれー！」
     ai "咕奴奴！ 你给我老实点——"
@@ -4569,11 +4710,21 @@ label scene01:
     # nil 「こういうラブレボリューション的な事には結構慎重派のはずだったのだが…。」
     "对于这种非常激进的事情心爱应该是相当谨慎的来着... "
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「ぶにゃー」
     ai "呜喵——"
 
     # 莲 「一体どこにこんなパワーを隠し持って居たというのだ…！」
     lian "到底是在哪里隐藏着这样的力量呢…！"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「恋する乙女のぉおパワーはぁあインフィニティ！」
     ai "恋爱中的少女的抛瓦（power）啊！INFINITY（是∞的啊）！"
@@ -4596,11 +4747,21 @@ label scene01:
     # 莲 「あんの魔女っ娘め、なんつー危険な物を渡してくれたんだ！」
     lian "那个魔女的女儿，竟然把危险的东西给了我！"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「む！　今は私の事だけ考えてよだーりん！」
     ai "哼! 现在你只要想着我就行了！"
 
     # 莲 「てめぇもちったぁ目ぇ覚ませ！　後で恥ずかしくなるぞ！」
     lian "你也给我醒过来啊! 之后你绝对会尴尬的！"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「構わぬ。後で悔やむ事になっても、今この瞬間の幸せを噛みしめるのみ」
     ai "没关系。就算以后会后悔，现在也只能抓住这一瞬间的幸福"
@@ -4634,6 +4795,11 @@ label scene01:
     # nil 「なら、今は…受け流しておく事が最善なのだが…。」
     "那么，现在的话……放任不管应该最好的处理办法了…"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「あんまり抵抗すると頸動脈締めるぞおらァ…」
     ai "如果再抵抗的话，我会勒紧你的颈动脉的！（L:粉切黑啦！粉切黑啦！心爱要黑化了啊！）"
 
@@ -4646,11 +4812,21 @@ label scene01:
     # nil 「つまり、力尽くということだ。」
     "也就是说，现在要竭尽全力了"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「むー…そんなに嫌かね蓮くんはぁ～」
     ai "嗯姆……莲君真是让人讨厌啊~"
 
     # 莲 「いえ、嫌というわけでは…！」
     lian "没有没有，我并不是讨厌这种事情啊…！"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「じゃぁ、大人しくしなさいっつーの！」
     ai "那你就老实点好了! "
@@ -4669,6 +4845,11 @@ label scene01:
 
     # nil 「万事休す。完全に追い詰められた。」
     "完全被逼迫到了绝境，万事休矣万事休矣"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「さぁ…では…改めて…い・た・だ・き・ま～す」
     ai "那么…要上了……再一次的…我·要·开·动·了~哦"
@@ -4704,11 +4885,21 @@ label scene01:
     # 莲 「開幕下ネタかよ！」
     lian "开幕黄段子啊！"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「む！　なんだか美人さんが出てきたにゃ！　おう、私から蓮くんを奪うつもりなら、そうはいかないぞ！」
     ai "嗯！总觉得有个美女出来了喵！姆！如果打算从我这里夺走莲君的话，那行不通的哦！"
 
     # 雾叶？？？ 「あ、いや…異性にゃ興味ないんでご勝手にどうぞ」
     hei "啊，不……我对异性没兴趣，请随便用"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「わーい」
     ai "好耶！"
@@ -4728,6 +4919,11 @@ label scene01:
     # 莲 「遠からず近からずって所だな…！」&&协力请求
     lian "着实有点微妙呢"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「はいはーい蓮くん、お話してないでこっち向いてねー」
     ai "好了好了——莲君，话说完了就朝这边看吧"
 
@@ -4743,11 +4939,21 @@ label scene01:
     # nil 「女性はため息をついてから、つかつかと俺達の方へと近寄ってくる。」
     "女性叹了一口气，然后大步向我们走来。"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「む！　やはり私から蓮くんを奪うおつもりですな！？　そうはさせぬ！」
     ai "哼！果然你还是打算从我这里夺走莲君吧！？我不会让得逞的！"
 
     # 雾叶？？？ 「どうしてもと言ったら？」
     hei "如果我无论如何都要这么做呢? "
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「力尽くで奪ってみやがれ！」
     ai "用尽全力来抢抢看吧！"
@@ -4765,6 +4971,11 @@ label scene01:
 
     # 雾叶？？？ 「笑止」
     hei "笑止"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ぐふっ」
     ai "咕啊"
