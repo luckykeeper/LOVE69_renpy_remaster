@@ -5,7 +5,7 @@
 # 部分句子翻译协助：WorldlineChanger（2句）
 # 版本 null
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年10月2日
+# 修订日期 2021年10月3日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右
@@ -2683,15 +2683,15 @@ label scene01:
 
     # 来为想瑠喵设计对话框参数吧！
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
-    # && 这个还没做完
-    $ sideimagesize.SideImageXalign = -0.5
-    $ sideimagesize.SideImageYalign = -0.5
-    $ sideimagesize.SideImageZoom = 0.7
+    # 想瑠喵的参数是真难调，还没调好，明天继续
+    $ sideimagesize.SideImageXalign = 0.23
+    $ sideimagesize.SideImageYalign = 5.21
+    $ sideimagesize.SideImageZoom = 0.9
     # 想瑠 「せっかあいでえいちーばん」
-    # show 想瑠_スーツ_ニヤリ with Dissolve(0.15):
-    #     zoom 1.5
-    #     xalign 0.41
-    #     yalign 0.07
+    show 想瑠_スーツ_ニヤリ with Dissolve(0.15):
+        zoom 1.5
+        xalign 0.41
+        yalign 0.07
     voice "voice/想瑠/sol_a1_0001.ogg"
     liu 想瑠_スーツ_ニヤリ "世——界——第——一——的——"
 
