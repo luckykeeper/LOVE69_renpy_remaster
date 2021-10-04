@@ -55,6 +55,7 @@ image side 心愛 心愛_制服_基本_不機嫌 = "images/face/心愛/心愛_�
 image side 心愛 心愛_制服_おやつ_不機嫌 = "images/face/心愛/心愛_制服_おやつ_不機嫌.png" # 睁眼，嘴-(，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_もぐもぐ = "images/face/心愛/心愛_制服_基本_もぐもぐ.png" # 睁眼，嘴-(，两个粉椭圆
 image side 心愛 心愛_制服_おやつ_もぐもぐ = "images/face/心愛/心愛_制服_おやつ_もぐもぐ.png" # 睁眼，嘴-(，两个粉椭圆，拿着奶糖苹果
+image side 心愛 心愛_制服_基本_ニタァ = "images/face/心愛/心愛_制服_基本_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢，两个粉椭圆
 image side 心愛 心愛_制服_基本_笑顔 = "images/face/心愛/心愛_制服_基本_笑顔.png" # 睁眼，嘴o
 image side 心愛 心愛_制服_おやつ_笑顔 = "images/face/心愛/心愛_制服_おやつ_笑顔.png" # 睁眼，嘴o，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_泣き= "images/face/心愛/心愛_制服_基本_泣き.png" # 睁眼，含泪珠
@@ -64,6 +65,7 @@ image side 心愛 心愛_制服_おやつ_驚き = "images/face/心愛/心愛_�
 image side 心愛 心愛_制服_基本_真顔 = "images/face/心愛/心愛_制服_基本_真顔.png" # 睁眼，嘴闭
 image side 心愛 心愛_制服_おやつ_真顔 = "images/face/心愛/心愛_制服_おやつ_真顔.png" # 睁眼，嘴闭，拿着奶糖苹果
 image side 心愛 心愛_制服_おやつ_無表情 = "images/face/心愛/心愛_制服_おやつ_無表情.png" # 字面意思，睁眼，嘴·，拿着奶糖苹果
+image side 心愛 心愛_制服_基本_無表情 = "images/face/心愛/心愛_制服_基本_無表情.png" # 字面意思，睁眼，嘴·
 image side 心愛 心愛_制服_基本_きらきら = "images/face/心愛/心愛_制服_基本_きらきら.png" # 睁眼，嘴⚪三角，眼睛有小星星
 image side 心愛 心愛_制服_基本_ぶわー = "images/face/心愛/心愛_制服_基本_ぶわー.png" # 睁眼，很有标志性的哭
 image side 心愛 心愛_制服_おやつ_ぶわー = "images/face/心愛/心愛_制服_おやつ_ぶわー.png" # 睁眼，很有标志性的哭，拿着奶糖苹果
@@ -129,6 +131,9 @@ define liu = Character('想瑠',color="#a4808c",image="想瑠")
 # 文件应当取自 face 文件夹，但是stand有现成更清晰的，且参数已经调试完毕，所以用stand，stand没有的再进行特殊处理，为了和后面的waifu2x区分
 # 工程目录写为 face
 image side 想瑠 想瑠_スーツ_ニヤリ = "images/face/想瑠/想瑠_スーツ_ニヤリ.png" # 睁眼，嘴“w”，手撑头
+image side 想瑠 想瑠_スーツ_見下し = "images/face/想瑠/想瑠_スーツ_見下し.png" # 睁眼，嘴椭圆小开口，手撑头
+image side 想瑠 想瑠_スーツ_真顔 = "images/face/想瑠/想瑠_スーツ_真顔.png" # 睁眼，嘴点点，手撑头
+image side 想瑠 想瑠_スーツ_目閉じ = "images/face/想瑠/想瑠_スーツ_目閉じ.png" # 闭眼，嘴点点，手撑头
 
 # 月宫瑠那 na //和原版相比，移植版打算在人物名上加入颜色，瑠那的颜色是SISTARS里面的CG里面取的
 define na = Character('瑠那',color="#a4808c",image="瑠那")
