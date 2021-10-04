@@ -2703,9 +2703,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ハマーン様ァ！」
+    show 心愛_制服_基本_にっこり at love69_right with Dissolve(0.15)
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%9E%E3%83%BC%E3%83%B3%E3%83%BB%E3%82%AB%E3%83%BC%E3%83%B3
     voice "voice/心愛/cca_a1_0071.ogg"
-    ai "哈曼sama！（L:neta 哈曼·卡恩 是机动战士Z高达（1985年3月2日至1986年2月22日）里面的阿克西斯（Axis））"
+    ai 心愛_制服_基本_にっこり "哈曼sama！（L:neta 哈曼·卡恩 是机动战士Z高达（1985年3月2日至1986年2月22日）里面的阿克西斯（Axis））"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -2713,8 +2714,9 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「ばんざああああああああ！！」
+    show 真冬_制服_基本_ニタァ at love69_left with Dissolve(0.15)
     voice "voice/真冬/maf_a1_0115.ogg"
-    dong "板载！！"
+    dong 真冬_制服_基本_ニタァ "板载！！"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -2722,8 +2724,11 @@ label scene01:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「バッコオオオオオオオオン！」//迷
+    # 人物前后顺序会乱，大概是引擎问题，先不管
+    hide 想瑠_スーツ_ニヤリ
+    show 想瑠_スーツ_見下し at love69_xiangliu_center
     voice "voice/想瑠/sol_a1_0002.ogg"
-    liu "蝙蝠侠！（L:这里没看懂，感觉似乎是在玩谐音梗？）"
+    liu 想瑠_スーツ_見下し "蝙蝠侠！（L:这里没看懂，感觉似乎是在玩谐音梗？）"
 
     # 莲 「うるせぇなおい！」
     lian "吵死了！"
@@ -2735,8 +2740,10 @@ label scene01:
 
     # 想瑠 「はい。という こと で 皆さん わん ばん こ。パートタイム（兼职） ティーチャー（教师） の ぉお！」
     # 想瑠 「はい。ということで皆さんわんばんこ。パートタイムティーチャーのぉお！」//感觉翻的也不大对的样子
+    hide 想瑠_スーツ_見下し
+    show 想瑠_スーツ_ニヤリ at love69_xiangliu_center
     voice "voice/想瑠/sol_a1_0003.ogg"
-    liu "好，所以大家康起来都很精神呢。我就是大家的兼职教师"
+    liu 想瑠_スーツ_ニヤリ "好，所以大家康起来都很精神呢。我就是大家的兼职教师"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -2745,7 +2752,7 @@ label scene01:
 
     # 想瑠 「想瑠っにゃあんっでぇえっす！　…ん？　今聞き慣れない声が聞こえたぞぉ？」
     voice "voice/想瑠/sol_a1_0004.ogg"
-    liu "想瑠喵的说！嗯? 刚才听到一个陌生的声音哦?"
+    liu "想瑠喵的说！嗯? 刚才听到了一个陌生的声音呢?"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -2753,8 +2760,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「想瑠にゃん見て見て－！　今日は蓮君が早起きさんだよー！」附加：pac/喜び
+    hide 心愛_制服_基本_にっこり
+    show 心愛_制服_基本_笑顔 at love69_right
     voice "voice/心愛/cca_a1_0072.ogg"
-    ai "想瑠喵你看你看! 莲君今天有好好早起哦!"
+    ai 心愛_制服_基本_笑顔 "想瑠喵你看你看! 莲君今天有好好早起哦!"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -2762,8 +2771,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「どうやらそうらしい。こりゃ東京でオリンピックが開催されちまう」
+    hide 想瑠_スーツ_ニヤリ
+    show 想瑠_スーツ_見下し at love69_xiangliu_center
     voice "voice/想瑠/sol_a1_0005.ogg"
-    liu "绝了！看来这下东京要举办奥运会了（L:作品是13年，现在是21年8月底，雀食办了呢，想瑠喵神预言，懂辽，这招啊，是想瑠喵从局座那里偷学来的！）"
+    liu 想瑠_スーツ_見下し "绝了！看来这下东京要举办奥运会了（L:作品是13年，现在是21年8月底，雀食办了呢，想瑠喵神预言，懂辽，这招啊，是想瑠喵从局座那里偷学来的！）"
 
     # 莲 「俺が早起きしなくても開催されちまうよそいつは」
     lian "即使我不早起，东京奥运会也会举办的吧，总有一天一定会的"
@@ -2774,8 +2785,9 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「こでクイズ！　いつどこで、誰が、どうやって、蓮君を起こしたでしょーか！」
+    show 心愛_制服_基本_にっこり at love69_right
     voice "voice/心愛/cca_a1_0073.ogg"
-    ai "这里是猜谜时间! 什么时候、什么地点、谁、怎么把莲君叫醒的?"
+    ai 心愛_制服_基本_にっこり "这里是猜谜时间! 什么时候、什么地点、谁、怎么把莲君叫醒的?"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -2783,8 +2795,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「そのクイズ正解したら何か貰えます？」
+    hide 想瑠_スーツ_見下し
+    show 想瑠_スーツ_真顔 at love69_xiangliu_center
     voice "voice/想瑠/sol_a1_0006.ogg"
-    liu "如果我猜出来谜底的话，能得到什么奖品呢? "
+    liu 想瑠_スーツ_真顔 "如果我猜出来谜底的话，能得到什么奖品呢? "
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -2792,8 +2806,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ジュースをおごってやろう」
+    hide 心愛_制服_基本_にっこり
+    show 心愛_制服_基本_真顔 at love69_right
     voice "voice/心愛/cca_a1_0074.ogg"
-    ai "请你喝果汁吧"
+    ai 心愛_制服_基本_真顔 "请你喝果汁吧"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -2801,8 +2817,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「はい」
+    hide 想瑠_スーツ_真顔
+    show 想瑠_スーツ_見下し at love69_xiangliu_center
     voice "voice/想瑠/sol_a1_0007.ogg"
-    liu "好"
+    liu 想瑠_スーツ_見下し "好"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -2812,8 +2830,10 @@ label scene01:
     # 心爱 「はい小遊三さん」
     # 参考资料：https://ja.wikipedia.org/wiki/%E4%B8%89%E9%81%8A%E4%BA%AD%E5%B0%8F%E9%81%8A%E4%B8%89
     # 参考资料2：https://baike.baidu.com/item/%E8%90%BD%E8%AF%AD/2672550?fr=aladdin
+    hide 心愛_制服_基本_真顔
+    show 心愛_制服_基本_笑顔 at love69_right
     voice "voice/心愛/cca_a1_0075.ogg"
-    ai "请，小游三先生（L:三遊亭小遊三，1947年3月2日 - ，落语艺术协会参事，落语是日本的传统曲艺形式之一，形式类似单口相声，有点独角戏或者是单人小品的感觉）"
+    ai 心愛_制服_基本_笑顔 "请，小游三先生（L:三遊亭小遊三，1947年3月2日 - 至今 ，落语艺术协会参事，落语是日本的传统曲艺形式之一，形式类似单口相声，有点独角戏或者是单人小品的感觉）"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -2821,8 +2841,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「違う人がいです」
+    hide 想瑠_スーツ_見下し
+    show 想瑠_スーツ_真顔 at love69_xiangliu_center
     voice "voice/想瑠/sol_a1_0008.ogg"
-    liu "应该是另一个人来着"
+    liu 想瑠_スーツ_真顔 "应该是另一个人来着"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -2830,8 +2852,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「歌丸さん」
+    hide 真冬_制服_基本_ニタァ
+    show 真冬_制服_基本_無表情 at love69_left
     voice "voice/真冬/maf_a1_0116.ogg"
-    dong "是歌丸先生（L:桂歌丸，1936年〈昭和11年〉8月14日 - 2018年 〈平成30年〉7月2日，也是落语艺术家，落语艺术协会的会长）"
+    dong 真冬_制服_基本_無表情 "是歌丸先生（L:桂歌丸，1936年〈昭和11年〉8月14日 - 2018年 〈平成30年〉7月2日，也是落语艺术家，落语艺术协会的会长）"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -2839,8 +2863,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「よっしゃ」
+    hide 想瑠_スーツ_真顔
+    show 想瑠_スーツ_見下し at love69_xiangliu_center
     voice "voice/想瑠/sol_a1_0009.ogg"
-    liu "要上了哦"
+    liu 想瑠_スーツ_見下し "要上了哦"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -2848,8 +2874,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「今朝、双子の妹の真冬ちゃんが、お兄ちゃんのベッドの中で、添い寝かーらーの耳ペロ」
+    hide 想瑠_スーツ_見下し
+    show 想瑠_スーツ_真顔 at love69_xiangliu_center
     voice "voice/想瑠/sol_a1_0010.ogg"
-    liu "今天早上，双胞胎的妹妹真冬到欧尼酱的床上陪睡，然——后——就用耳pr的方法（叫醒了）"
+    liu 想瑠_スーツ_真顔 "今天早上，双胞胎的妹妹真冬到欧尼酱的床上陪睡，然——后——就用耳pr的方法（叫醒了）"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -2857,8 +2885,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「正解！」
+    hide 真冬_制服_基本_目閉じ
+    show 真冬_制服_基本_目閉じ at love69_left
     voice "voice/真冬/maf_a1_0117.ogg"
-    dong "正解！"
+    dong 真冬_制服_基本_目閉じ "正解！"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -2866,8 +2896,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「何でわかるんや」
+    hide 心愛_制服_基本_笑顔
+    show 心愛_制服_基本_無表情 at love69_right
     voice "voice/心愛/cca_a1_0076.ogg"
-    ai "你是怎么知道的？！"
+    ai 心愛_制服_基本_無表情 "你是怎么知道的？！"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -2876,7 +2908,7 @@ label scene01:
 
     # 想瑠 「そりゃな。図書館の『ねぼすけお兄ちゃんを持つ妹マニュアル』は私の私物だからよ。誰が借りてったか把握してるだけさ」
     voice "voice/想瑠/sol_a1_0011.ogg"
-    liu "那是当然。图书馆的那本『有哥哥的妹妹手册』是我的个人物品。我知道那本书是谁借走的"
+    liu "那是当然。图书馆的那本『有哥哥的妹妹指南』是我的个人物品。我知道那本书是谁借走的"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -2893,8 +2925,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「何とでも言うがい、勝負とは勝てばいのだよ…」
+    hide 想瑠_スーツ_真顔
+    show 想瑠_スーツ_目閉じ at love69_xiangliu_center
     voice "voice/想瑠/sol_a1_0012.ogg"
-    liu "怎么样都无所谓，只要能赢就行了... ..."
+    liu 想瑠_スーツ_目閉じ "怎么样都无所谓，只要能赢就行了... ..."
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -2903,8 +2937,10 @@ label scene01:
 
     # 心爱 「むぅ～！　いもんねー（真好呢，这里应该是反话） まふまふちゃんに（嘛呼嘛呼酱）、オイラ（我）も 読ま せ て もらう もん ねー（不会让你读的/得到想要的东西）！」
     # 心爱 「むぅ～！　いもんねーまふまふちゃんに、オイラも読ませてもらうもんねー！」//不大懂呢
+    hide 心愛_制服_基本_無表情
+    show 心愛_制服_基本_不機嫌 at love69_right
     voice "voice/心愛/cca_a1_0078.ogg"
-    ai "呜~呜~！真好呢，嘛呼嘛呼酱，我才不会看那本书的（L:我倒，不会翻了，胡言乱语ing...）"
+    ai 心愛_制服_基本_不機嫌 "呜~呜~！真好呢，嘛呼嘛呼酱，我才不会看那本书的（L:我倒，不会翻了，胡言乱语ing...）"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -2912,8 +2948,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「はいどうぞ」&&（直译是“请进”，和开场动画的并不一样，但是实在找不到的时候可以考虑用这个）
+    hide 真冬_制服_基本_目閉じ
+    show 真冬_制服_基本_微笑み2 at love69_left
     voice "voice/真冬/maf_a1_0118.ogg"
-    dong "来，请用"
+    dong 真冬_制服_基本_微笑み2 "来，请用"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -2921,8 +2959,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「わーい♪」
+    hide 心愛_制服_基本_不機嫌
+    show 心愛_制服_基本_にっこり at love69_right
     voice "voice/心愛/cca_a1_0079.ogg"
-    ai "好♪~"
+    ai 心愛_制服_基本_にっこり "好♪~"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -2931,8 +2971,10 @@ label scene01:
 
     # 想瑠 「さて、早速 です が おめでたい 報告 です。それ は 何 でしょ う か！　はい 葛城（兄）」
     # 想瑠 「さて、早速ですがおめでたい報告です。それは何でしょうか！　はい葛城（兄）」
+    hide 想瑠_スーツ_目閉じ
+    show 想瑠_スーツ_見下し at love69_xiangliu_center
     voice "voice/想瑠/sol_a1_0013.ogg"
-    liu "那么，速报速报，我有个可喜可贺的消息呢，那么，是什么呢！来，葛城（兄）（来猜猜看）"
+    liu 想瑠_スーツ_見下し "那么，速报速报，我有个可喜可贺的消息呢，那么，是什么呢！来，葛城（兄）（来猜猜看）"
 
     # 莲 「そのクイズ正解したら何か貰えます？」
     lian "这个问题答对了的话能得到什么吗？"
@@ -2958,8 +3000,10 @@ label scene01:
     # 想瑠 「とーころがどっこい、私は毎日絶好調だ。正解は、時給が850円から900円にあがったんだよーん」
     # 参考资料：https://jp.indeed.com/%E6%99%82%E7%B5%A6-850%E5%86%86%E9%96%A2%E9%80%A3%E3%81%AE%E6%B1%82%E4%BA%BA
     # 参考资料2：https://jp.indeed.com/viewjob?jk=efbed7f85c4e61b5&q=%E6%99%82%E7%B5%A6+850%E5%86%86&tk=1fect05ospq9b800&from=web&vjs=3
+    hide 想瑠_スーツ_見下し
+    show 想瑠_スーツ_ニヤリ at love69_xiangliu_center
     voice "voice/想瑠/sol_a1_0015.ogg"
-    liu "关于这个问题，我每天都状态绝佳呢。正确答案是我的时薪从850日元涨到了900日元（L:目前1日元=0.0588人民币，大概是从49块9涨到了52块9，是派遣社畜，啊不，还不如派遣社员（也就是临时工）（试用期時給1,000円），想瑠喵，惨）"
+    liu 想瑠_スーツ_ニヤリ "关于这个问题，我每天都状态绝佳呢。正确答案是我的时薪从850日元涨到了900日元（L:目前1日元=0.0588人民币，大概是从49块9涨到了52块9，是派遣社畜，啊不，还不如派遣社员（也就是临时工）（试用期時給1,000円），想瑠喵，惨）"
 
     # 工作承接心爱初登场部分（阔以参照上面的注释，在1150行左右），先来做文本
 
@@ -2973,9 +3017,12 @@ label scene01:
 
     # 想瑠 「ばーかばーか！クイズ外れた奴にはあげないよーだ。帰って家族とホットドッグ祭りするんだからね！」
     # 参考资料：https://yunamifactory.org/diary/5418
+    hide 想瑠_スーツ_ニヤリ
+    show 想瑠_スーツ_見下し at love69_xiangliu_center
     voice "voice/想瑠/sol_a1_0016.ogg"
-    liu "笨蛋——笨蛋! 猜错的人是不会有的——回家去和家人一起过热狗节吧！（L:ホットドッグ祭，热狗节。就是能买到各种各样热狗的节日啦，在久米島有这样的热狗节，YUNAMI FACTORY在20年主办了一次，本作发行的时候（13年）还没有这个节日呢）"
+    liu 想瑠_スーツ_見下し "笨蛋——笨蛋! 猜错的人是不会有的——回家去和家人一起过热狗节吧！（L:ホットドッグ祭，热狗节。就是能买到各种各样热狗的节日啦，在久米島有这样的热狗节，YUNAMI FACTORY在20年主办了一次，本作发行的时候（13年）还没有这个节日呢）"
 
+    play sound "voice/effect/01平手打ち1～パチン.ogg"
     # nil 「ボンッ！」 音效：砰！
     "砰！"
 
@@ -2988,8 +3035,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「「え…えろぃ…過激すぎたヨ…世の中の仲良し兄妹はこんな所までするの…」」
+    hide 心愛_制服_基本_にっこり
+    show 心愛_制服_基本_ジト目 at love69_right
     voice "voice/心愛/cca_a1_0080.ogg"
-    ai "嗯... 嗯... 太过激进了... 世间上的好兄妹居然会做到这种地步..."
+    ai 心愛_制服_基本_ジト目 "嗯... 嗯... 太过激进了... 世间上的好兄妹居然会做到这种地步..."
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -2997,8 +3046,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「まぁ…ある程度は」
+    hide 真冬_制服_基本_微笑み2
+    show 真冬_制服_基本_ジト目 at love69_left
     voice "voice/真冬/maf_a1_0119.ogg"
-    dong "嗯... 在某种程度上（会吧）"
+    dong 真冬_制服_基本_ジト目 "嗯... 在某种程度上（会吧）"
 
     # 莲 「え、そんなエロいの？　見せてくれ」
     lian "诶，是那种工口书吗？快让我也康康"
@@ -3009,8 +3060,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「だめだ」
+    hide 真冬_制服_基本_ジト目
+    show 真冬_制服_基本_見下し at love69_left
     voice "voice/真冬/maf_a1_0120.ogg"
-    dong "不行"
+    dong 真冬_制服_基本_見下し "不行"
 
     # 莲 「あい」
     lian "害"
@@ -3021,8 +3074,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「その本はあくまでも妹用だかんな。幼馴染み用の本もあるから、あとで借りにおいで」
+    hide 想瑠_スーツ_見下し
+    show 想瑠_スーツ_真顔 at love69_xiangliu_center
     voice "voice/想瑠/sol_a1_0017.ogg"
-    liu "毕竟那本书是给妹妹看的，还有专门给青梅竹马看的那种，心爱过会儿也来我这儿借吧（L:想瑠喵你作为班头平时都在做些什么啊喂！）"
+    liu 想瑠_スーツ_真顔 "毕竟那本书是给妹妹看的，还有专门给青梅竹马看的那种，心爱过会儿也来我这儿借吧（L:想瑠喵你作为班头平时都在做些什么啊喂！）"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -3030,8 +3085,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「う…うん…そうする…三角木馬…いや、だがしかし―」//感觉不大对劲
+    hide 心愛_制服_基本_ジト目
+    show 心愛_制服_基本_無表情 at love69_right
     voice "voice/心愛/cca_a1_0081.ogg"
-    ai "嗯... 嗯... 我会的... 三角木马（L:原文如此（三角木馬），就是你想的那种）... ... 不，不过（L:最后半句原文“いや、だがしかし―”，考虑到是13年的作品，应该不是粗点心战争）"
+    ai 心愛_制服_基本_無表情 "嗯... 嗯... 我会的... 三角木马（L:原文如此（三角木馬），就是你想的那种）... ... 不，不过（L:最后半句原文“いや、だがしかし―”，考虑到是13年的作品，应该不是粗点心战争）"
 
     # 莲 「一瞬、不穏なワードが聞こえたんだが…」
     lian "刚刚，我好像听到了不大妙的词呢…"
@@ -3078,8 +3135,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「（にこっ）」
+    hide 想瑠_スーツ_真顔
+    show 想瑠_スーツ_ニヤリ at love69_xiangliu_center
     voice "voice/想瑠/sol_a1_0018.ogg"
-    liu "(微笑)"
+    liu 想瑠_スーツ_ニヤリ "(微笑)"
 
     # nil 「俺の視線に気づいたのか、ウインクを投げかけてくる。」
     "是注意到我的视线了吗，想瑠喵向我眨了眨眼。"
@@ -3096,10 +3155,13 @@ label scene01:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「つーことで、夏休みも間近に迫って参りました！　今日から半日頑張って参りましょう！」
+    hide 想瑠_スーツ_ニヤリ
+    show 想瑠_スーツ_見下し at love69_xiangliu_center
     voice "voice/想瑠/sol_a1_0019.ogg"
-    liu "话说起来，暑假也快到了呢！从今天开始就只加油半天吧！"
+    liu 想瑠_スーツ_見下し "话说起来，暑假也快到了呢！从今天开始就只加油半天吧！"
 
     # 莲 「あれ？　今日から半日授業なの？」
+    hide 想瑠_スーツ_見下し with Dissolve(0.15)
     lian "咦？从今天开始只上半天课吗？"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -3117,8 +3179,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「そんな理由で起こしたら余裕で二度寝かますだろうね」//因为上面不对劲，这里就跟着不对劲吧
+    hide 真冬_制服_基本_見下し
+    show 真冬_制服_基本_無表情 at love69_left
     voice "voice/真冬/maf_a1_0121.ogg"
-    dong "如果和他说了的话，他绝对会从容不迫地再睡上两次的"
+    dong 真冬_制服_基本_無表情 "如果和他说了的话，他绝对会从容不迫地再睡上两次的"
 
     # 莲 「ありがとう真冬」
     lian "谢啦，真冬"
@@ -3129,8 +3193,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「どういたしまして」
+    hide 真冬_制服_基本_無表情
+    show 真冬_制服_基本_にっこり at love69_left
     voice "voice/真冬/maf_a1_0122.ogg"
-    dong "不客气"
+    dong 真冬_制服_基本_にっこり "不客气"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -3138,8 +3204,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ちなみに、どんな理由で起こされたの？」
+    hide 心愛_制服_基本_無表情
+    show 心愛_制服_基本_笑顔 at love69_right
     voice "voice/心愛/cca_a1_0083.ogg"
-    ai "顺便问一下，你因为什么原因起来的呢"
+    ai 心愛_制服_基本_笑顔 "顺便问一下，你是因为什么原因起来的呢"
 
     # 莲 「お兄ちゃんと朝ご飯食べたいって」
     lian "因为她想和哥哥一起吃早饭"
@@ -3150,8 +3218,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ま゛…なんて健気な…お兄さん、妹さんを僕に下さい」
+    hide 心愛_制服_基本_笑顔
+    show 心愛_制服_基本_きらきら at love69_right
     voice "voice/心愛/cca_a1_0084.ogg"
-    ai "真... 真厉害... 哥哥，请把妹妹给我"
+    ai 心愛_制服_基本_きらきら "真... 真厉害... 哥哥，请把妹妹让给我"
 
     # 莲 「だめだ」
     lian "不行"
@@ -3161,7 +3231,7 @@ label scene01:
     $ sideimagesize.SideImageYalign = -29.35
     $ sideimagesize.SideImageZoom = 0.95
 
-    # 真冬 「喜んで」
+    # 真冬 「喜んで」附加：pac/楽しい
     voice "voice/真冬/maf_a1_0123.ogg"
     dong "乐意至极"
 
@@ -3174,8 +3244,10 @@ label scene01:
     # 参考资料：https://zhidao.baidu.com/question/1830513044301424420.html
     # 参考资料：https://dic.nicovideo.jp/a/%E3%82%82%E3%82%8D%E3%81%9F%E3%81%A7%E5%B7%A5%E8%97%A4%21
     # 参考了 WorldlineChanger（https://github.com/WorldlineChanger） 给出的翻译
+    hide 心愛_制服_基本_きらきら
+    show 心愛_制服_基本_ニタァ at love69_right
     voice "voice/心愛/cca_a1_0085.ogg"
-    ai "哇♪ 工藤，这次我赢定了！（L&WorldlineChanger:もろたで工藤，出自《名侦探柯南里》的服部平次，是他的著名“FLAG”，L基本上没咋看过，并不是特别清楚呢）"
+    ai 心愛_制服_基本_ニタァ "哇♪ 工藤，这次我赢定了！（L&WorldlineChanger:もろたで工藤，出自《名侦探柯南里》的服部平次，是他的著名“FLAG”，L基本上没咋看过，并不是特别清楚呢）"
 
     # 莲 「裏切り者～！」
     lian "你个叛徒！"
@@ -3186,7 +3258,12 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.5
 
     # 花盆君 「…（つんつん）」
-    show 花盆君_通常 at love69_huapen_center
+    show 花盆君_通常:
+        zoom 0.89
+        xalign 0.5
+        yalign -18.0
+        linear 0.1 yalign 0.02
+        linear 0.1 yalign -18.5
     voice "voice/アシュリー/ash_a1_0005.ogg"
     pen "......（戳戳）"
 
@@ -3199,7 +3276,12 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.5
 
     # 花盆君 「…（ふりふり）」
-    show 花盆君_通常 at love69_huapen_center
+    show 花盆君_通常:
+        zoom 0.89
+        xalign 0.5
+        yalign -18.0
+        linear 0.1 yalign 0.02
+        linear 0.1 yalign -18.5
     voice "voice/アシュリー/ash_a1_0006.ogg"
     pen "......（摇摆）"
 
@@ -3207,12 +3289,20 @@ label scene01:
     lian "不行吗"
 
     # 场景切换，原地tp（转圈）
+    hide 真冬_制服_基本_にっこり with Dissolve(0.15)
+    hide 心愛_制服_基本_ニタァ with Dissolve(0.15)
+    hide 花盆君_通常 with Dissolve(0.15)
+    scene black
+    scene 教室_昼 at love69_bg1220 with dissolve
 
     # nil 「ちなみに授業中は寝てました。」
     "顺便说一下，我上课的时候睡着了（L:绝了，莲你是来学校干啥的啊）"
 
     # 场景切换，原地tp（转圈）
     # 下课铃声
+    play sound "voice/effect/学校チャイム.ogg"
+    scene black
+    scene 教室_昼 at love69_bg1220 with squares
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -3220,8 +3310,9 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ヒャッハァー！　飯だァー！」
+    show 心愛_制服_基本_にっこり at love69_right with Dissolve(0.15)
     voice "voice/心愛/cca_a1_0086.ogg"
-    ai "哈哈哈! 开饭啦!"
+    ai 心愛_制服_基本_にっこり "呀哈! 开饭啦!"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -3229,8 +3320,9 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「貴様にランチを食う資格はねぇ」
+    show 真冬_制服_基本_見下し at love69_left with Dissolve(0.15)
     voice "voice/真冬/maf_a1_0124.ogg"
-    dong "你这家伙莫得资格恰午饭"
+    dong 真冬_制服_基本_見下し "你这家伙莫得资格恰午饭"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -3238,8 +3330,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「なん…だと…」
+    hide 心愛_制服_基本_にっこり
+    show 心愛_制服_基本_無表情 at love69_right
     voice "voice/心愛/cca_a1_0087.ogg"
-    ai "什么？！"
+    ai 心愛_制服_基本_無表情 "什…么…？！"
 
     # 莲 「ほらほら、遊んでないで飯いくぞ。っつーか放課後じゃん」
     lian "好了，别玩了，我们去吃饭吧，不是已经放学了吗"
@@ -3250,7 +3344,12 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.5
 
     # 花盆君 「…（ちょいちょい）」
-    show 花盆君_通常 at love69_huapen_center
+    show 花盆君_通常:
+        zoom 0.89
+        xalign 0.5
+        yalign -18.0
+        linear 0.1 yalign 0.02
+        linear 0.1 yalign -18.5
     voice "voice/アシュリー/ash_a1_0007.ogg"
     pen "......（戳戳）"
 
@@ -3281,7 +3380,12 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.5
 
     # 花盆君 「！」
-    show 花盆君_通常 at love69_huapen_center
+    show 花盆君_通常:
+        zoom 0.89
+        xalign 0.5
+        yalign -18.0
+        linear 0.1 yalign 0.02
+        linear 0.1 yalign -18.5
     voice "voice/アシュリー/ash_a1_0008.ogg"
     pen "！"
 
@@ -3297,8 +3401,12 @@ label scene01:
     # 显示是真冬，实际是真冬和心爱
     # 真冬对应的voice里面是真冬和心爱两个人声音的合体呢，所以本作双人部分只需要引入显示名字的人物文件夹下的语音就好
     # 遵循原作，不再额外定义双人名称（而且 真冬&心爱 的形式颜色没想好怎么搞）
+    hide 真冬_制服_基本_見下し
+    hide 心愛_制服_基本_無表情
+    show 心愛_制服_基本_笑顔 at love69_right
+    show 真冬_制服_基本_ニタァ at love69_left
     voice "voice/真冬/maf_a1_0125.ogg"
-    dong "收到了!（L:本作两个人说话的时候都是只标一个人的名字，这里心爱也说了，应该能听得到，后面就不标注辽） "
+    dong 真冬_制服_基本_ニタァ"收到了!（L:本作两个人说话的时候都是只标一个人的名字，这里心爱也说了，应该能听得到，后面就不标注辽） "
 
     # 莲 「ぐわぁー！」
     lian "呀呀！"
@@ -3324,7 +3432,7 @@ label scene01:
     # 心爱 「へー、じゃぁ、植木鉢くんのお友達のお店なんだねー！　こから近いの？」
     # 0088和0089是真冬和心爱共同说的，因为实际只播放了真冬的音声，心爱的实际上没有使用，这里跳过0088和0089
     voice "voice/心愛/cca_a1_0090.ogg"
-    ai "啊，那么，这是花盆君的朋友的店啊！离这儿近吗？"
+    ai 心愛_制服_基本_笑顔 "啊，那么，这是花盆君的朋友的店啊！离这儿近吗？"
 
     # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.15
@@ -3332,7 +3440,12 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.5
 
     # 花盆君 「......（こくこく）」
-    show 花盆君_通常 at love69_huapen_center
+    show 花盆君_通常:
+        zoom 0.89
+        xalign 0.5
+        yalign -18.0
+        linear 0.1 yalign 0.02
+        linear 0.1 yalign -18.5
     voice "voice/アシュリー/ash_a1_0009.ogg"
     pen "......（摇动）"
 
@@ -3342,8 +3455,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「私も一枚貰っていかな」
+    hide 真冬_制服_基本_ニタァ
+    show 真冬_制服_基本_にっこり at love69_left
     voice "voice/真冬/maf_a1_0127.ogg"
-    dong "我也拿一张传单吧"
+    dong 真冬_制服_基本_にっこり "我也拿一张传单吧"
 
     # 莲 「すまん植木鉢くん、地図がいまいち読めないんだが」
     lian "对不起，花盆君，我完全看不懂地图（L:绝了，莲君你就是fw吧？）"
@@ -3354,7 +3469,12 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.5
 
     # 花盆君 「…（ちょいちょい）」
-    show 花盆君_通常 at love69_huapen_center
+    show 花盆君_通常:
+        zoom 0.89
+        xalign 0.5
+        yalign -18.0
+        linear 0.1 yalign 0.02
+        linear 0.1 yalign -18.5
     voice "voice/アシュリー/ash_a1_0010.ogg"
     pen "......（戳戳）"
 
@@ -3376,8 +3496,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「はえ～…このパンケーキおいしそう…じゅるり…」
+    hide 心愛_制服_基本_笑顔
+    show 心愛_制服_基本_きらきら at love69_right
     voice "voice/心愛/cca_a1_0091.ogg"
-    ai "嗯... 这个煎饼看起来很好吃... 黏糊糊的..."
+    ai 心愛_制服_基本_きらきら "嗯... 这个煎饼看起来很好吃... 黏糊糊的..."
 
     # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.15
@@ -3386,7 +3508,12 @@ label scene01:
 
     # 花盆君 「！（こくこく）」
     # 花盆君少说两句话吧，全得查字典，老难翻了...
-    show 花盆君_通常 at love69_huapen_center
+    show 花盆君_通常:
+        zoom 0.89
+        xalign 0.5
+        yalign -18.0
+        linear 0.1 yalign 0.02
+        linear 0.1 yalign -18.5
     voice "voice/アシュリー/ash_a1_0011.ogg"
     pen "......（哗啦哗啦）"
 
@@ -3399,8 +3526,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「お菓子ばっか食べてるから、唾液すら甘そうだよね」
+    hide 真冬_制服_基本_にっこり
+    show 真冬_制服_基本_見下し at love69_left
     voice "voice/真冬/maf_a1_0128.ogg"
-    dong "你这光吃点心，唾液都很甜呢"
+    dong 真冬_制服_基本_見下し "你这光吃点心，唾液都很甜呢"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -3408,8 +3537,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「んー？　飲んでみる？」
+    hide 心愛_制服_基本_きらきら
+    show 心愛_制服_基本_にっこり at love69_right
     voice "voice/心愛/cca_a1_0092.ogg"
-    ai "嗯? 要喝一杯吗?"
+    ai 心愛_制服_基本_にっこり "嗯? 要喝一杯吗?"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -3417,17 +3548,21 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「ガムシロップが切れた時にでもお願いします」
+    hide 真冬_制服_基本_見下し
+    show 真冬_制服_基本_ジト目 at love69_left
     voice "voice/真冬/maf_a1_0129.ogg"
-    dong "等你的糖浆用完了再说吧"
+    dong 真冬_制服_基本_ジト目 "请先把你的糖浆用完了再说吧"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
     $ sideimagesize.SideImageYalign = 15.72
     $ sideimagesize.SideImageZoom = 0.96
 
-    # 心爱 「で、お昼ご飯こはどうだろう！」
+    # 心爱 「で、お昼ご飯こはどうだろう！」附加：pac/喜
+    hide 心愛_制服_基本_にっこり
+    show 心愛_制服_基本_笑顔 at love69_right
     voice "voice/心愛/cca_a1_0093.ogg"
-    ai "那么，午饭怎么办呢?"
+    ai 心愛_制服_基本_笑顔 "那么，午饭怎么办呢?"
 
     # 莲 「お好きにどうぞお食事大臣」
     lian "要不就去那里吧，食事大臣"
@@ -3438,8 +3573,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「異論はないよ…あ、でもちょっと私、やる事あるから後で合流でも構わないかな」
+    hide 真冬_制服_基本_ジト目
+    show 真冬_制服_基本_無表情 at love69_left
     voice "voice/真冬/maf_a1_0130.ogg"
-    dong "我没有异议... 啊，不过我还有事要做，一会儿和你们会合可以吗?"
+    dong 真冬_制服_基本_無表情 "我没有异议... 啊，不过我还有事要做，一会儿和你们会合可以吗?"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -3447,8 +3584,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「わ、私もほら…想瑠にゃんにジュースおごらなきゃだし…！」
+    hide 心愛_制服_基本_笑顔
+    show 心愛_制服_基本_泣き at love69_right
     voice "voice/心愛/cca_a1_0094.ogg"
-    ai "哇，我也是... 我得请想瑠喵喝果汁... !"
+    ai 心愛_制服_基本_泣き "啊，我也是... 我得请想瑠喵喝果汁... !"
 
     # 莲 「マジでおごるのか。聞いたことねぇぞ、教師にジュースおごる生徒って」
     lian "真的要买吗。我从来没听说过让学生请客喝果汁的老师"
@@ -3459,8 +3598,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「男は約束を守るもんだ」
+    hide 心愛_制服_基本_泣き
+    show 心愛_制服_基本_真顔 at love69_right
     voice "voice/心愛/cca_a1_0095.ogg"
-    ai "真男人说话算话"
+    ai 心愛_制服_基本_真顔 "真男人说话算话"
 
     # 莲 「お前女だろ」
     lian "你是女的吧"
@@ -3470,9 +3611,11 @@ label scene01:
     $ sideimagesize.SideImageYalign = 15.72
     $ sideimagesize.SideImageZoom = 0.96
 
-    # 心爱 「男は約束を守るもんだ」
+    # 心爱 「違うと言ったら？」
+    hide 心愛_制服_基本_真顔
+    show 心愛_制服_基本_無表情 at love69_right
     voice "voice/心愛/cca_a1_0096.ogg"
-    ai "如果我说不是呢?"
+    ai 心愛_制服_基本_無表情 "如果我说不是呢?"
 
     # 莲 「金玉掴んで確かめる」
     # 参考资料:https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q14182093769?__ysp=6YeR546J5o60
@@ -3484,8 +3627,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「女です」
+    hide 心愛_制服_基本_無表情
+    show 心愛_制服_基本_ぶわー at love69_right
     voice "voice/心愛/cca_a1_0097.ogg"
-    ai "我是女的"
+    ai 心愛_制服_基本_ぶわー "我是女的"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -3493,8 +3638,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「確かめさせてもらうよ。植木鉢くん抑えて」
+    hide 真冬_制服_基本_無表情
+    show 真冬_制服_基本_ニタァ at love69_left
     voice "voice/真冬/maf_a1_0131.ogg"
-    dong "也请让我确认一下。花盆君把她按住"
+    dong 真冬_制服_基本_ニタァ "也请让我确认一下。花盆君把她按住"
 
     # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.15
@@ -3502,7 +3649,12 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.5
 
     # 花盆君 「…（こくこく）」
-    show 花盆君_通常 at love69_huapen_center
+    show 花盆君_通常:
+        zoom 0.89
+        xalign 0.5
+        yalign -18.0
+        linear 0.1 yalign 0.02
+        linear 0.1 yalign -18.5
     voice "voice/アシュリー/ash_a1_0012.ogg"
     pen "......（哗啦哗啦）"
 
@@ -3512,8 +3664,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「えっ！？　なんで！？　ちょーっとま…あっ、んっ！あっ、こ、こらっ！　ぁ、ぁぅっ、ぱんつに手入れちゃだめー！」
+    hide 心愛_制服_基本_ぶわー
+    show 心愛_制服_基本_驚き at love69_right
     voice "voice/心愛/cca_a1_0098.ogg"
-    ai "啊! ? 为什么? ! ? 等一下... 啊，嗯! 啊，喂! 啊，啊，不，不要把手伸到那里去啊！"
+    ai 心愛_制服_基本_驚き "啊! ? 为什么? ! ? 等一下... 啊，嗯! 啊，喂! 啊，啊，那个，不要把手伸到胖次那里去啊！"
 
     # nil 「......」
     "......"
@@ -3524,8 +3678,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「誠に遺憾ながら女でした」
+    hide 真冬_制服_基本_ニタァ
+    show 真冬_制服_基本_目閉じ at love69_left
     voice "voice/真冬/maf_a1_0132.ogg"
-    dong "真的很遗憾，是女的"
+    dong 真冬_制服_基本_目閉じ "真的很遗憾，是女的"
 
     # 莲 「はい…」
     lian "这不当然…"
@@ -3546,8 +3702,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「初めてだよ…他人にパンツの中まで手ぇ突っ込まれるなんざ…」
+    hide 心愛_制服_基本_驚き
+    show 心愛_制服_基本_ぶわー at love69_right
     voice "voice/心愛/cca_a1_0099.ogg"
-    ai "这是第一次…竟然被别人把手伸进胖次里…"
+    ai 心愛_制服_基本_ぶわー "这是第一次…竟然被别人把手伸进胖次里…"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -3555,8 +3713,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「安心しろ…二度目はない」
+    hide 真冬_制服_基本_目閉じ
+    show 真冬_制服_基本_無表情 at love69_left
     voice "voice/真冬/maf_a1_0133.ogg"
-    dong "放心吧…没有第二次了"
+    dong 真冬_制服_基本_無表情 "放心吧…没有第二次了"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -3564,8 +3724,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「そ…そ、そ、それはいくらなんでも寂しすぎると思います！　た、多分！　もっと私の望む形で！　いつか！　あると！　信じてるから！」
+    hide 心愛_制服_基本_ぶわー
+    show 心愛_制服_基本_泣き at love69_right
     voice "voice/心愛/cca_a1_0100.ogg"
-    ai "我... ... 我觉得那样的话太... ... 太寂寞了! 也、也许! 以我想要的方式! 总有一天! 因为我相信!"
+    ai 心愛_制服_基本_泣き "我... ... 我觉得那样的话太... ... 太寂寞了! 也、也许! 以我想要的方式! 总有一天! 因为我相信!"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -3577,7 +3739,10 @@ label scene01:
     # 真冬的134接续的似乎是下面电话那里
     # 这里的音声也不是按顺序来的，真冬你不按套路出牌！
     # 这里暂时随便找个东西占位，后面找到了再补
-    voice "voice/真冬/maf_a1_0134.ogg"
+    # 实在难找，来点歪招，后面找到再说
+    # voice "<to 0.16>voice/真冬/maf_a1_0134.ogg"
+    # 一句句听出来的，这个位置就离谱，这句和下面那句都离大谱
+    voice "voice/真冬/maf_a1_1314.ogg"
     dong "我劈！"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -3589,12 +3754,16 @@ label scene01:
     # 这里的音声也不是按顺序来的，心爱你也不按套路出牌！
     # 心爱的音声101后接续的似乎是一周目心爱线？
     # 这里暂时随便找个东西占位，后面找到了再补
-    voice "voice/心愛/cca_a1_0101.ogg"
+    # voice "voice/心愛/cca_a1_0100.ogg"
+    # 一句句听出来的，这个位置就离谱
+    voice "voice/心愛/cca_a1_1640.ogg"
     ai "哇!"
 
     ### 场景切换 教室->学校门口
     # 人物： 莲 装在电话里的真冬（这里L在neta Age of Empire 2 帝国时代2战役里面耶路撒冷战役“装在桶里的皇帝”，等项目肝完了来和翻译君联机打红警3好吗？）
     # BGM不变
+    image bg 校門_昼 = "images/bg/校門_昼.png"
+    scene 校門_昼 at love69_bg1440 with wiperight
 
     # nil 「と、いうことで。一旦、真冬と心愛とは別行動をとり、一足先に例の飲食店に向かいます。」
     "就是这样，暂且，与真冬和心爱分开行动，先行前往那个饮食店"
