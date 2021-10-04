@@ -5,7 +5,7 @@
 # 部分句子翻译协助：WorldlineChanger（2句）
 # 版本 null
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年10月3日
+# 修订日期 2021年10月4日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右
@@ -2683,10 +2683,12 @@ label scene01:
 
     # 来为想瑠喵设计对话框参数吧！
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
-    # 想瑠喵的参数是真难调，还没调好，明天继续
-    $ sideimagesize.SideImageXalign = 0.23
-    $ sideimagesize.SideImageYalign = 5.21
-    $ sideimagesize.SideImageZoom = 0.9
+    # 想瑠喵的参数是真的难调，还没调好，没调出来的第一天过去了
+    # 第二天：我人傻了，忘记定义想瑠喵在对话框里面的图片了，绝了，绝对是最近肝多了，加上有点感冒，人不正常了，太离谱了，我居然因为这个卡了一天半
+    # 和原版的位置稍有偏差呢，不过应该不是很影响
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
     # 想瑠 「せっかあいでえいちーばん」
     show 想瑠_スーツ_ニヤリ with Dissolve(0.15):
         zoom 1.5
@@ -2696,14 +2698,14 @@ label scene01:
     liu 想瑠_スーツ_ニヤリ "世——界——第——一——的——"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.1
-    $ sideimagesize.SideImageYalign = 0.1
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ハマーン様ァ！」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%9E%E3%83%BC%E3%83%B3%E3%83%BB%E3%82%AB%E3%83%BC%E3%83%B3
     voice "voice/心愛/cca_a1_0071.ogg"
-    ai "哈曼sama！（L:neta 哈曼·卡恩 机动战士Z高达（1985年3月2日至1986年2月22日）的阿克西斯（Axis））"
+    ai "哈曼sama！（L:neta 哈曼·卡恩 是机动战士Z高达（1985年3月2日至1986年2月22日）里面的阿克西斯（Axis））"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -2714,6 +2716,11 @@ label scene01:
     voice "voice/真冬/maf_a1_0115.ogg"
     dong "板载！！"
 
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
+
     # 想瑠 「バッコオオオオオオオオン！」//迷
     voice "voice/想瑠/sol_a1_0002.ogg"
     liu "蝙蝠侠！（L:这里没看懂，感觉似乎是在玩谐音梗？）"
@@ -2721,10 +2728,20 @@ label scene01:
     # 莲 「うるせぇなおい！」
     lian "吵死了！"
 
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
+
     # 想瑠 「はい。という こと で 皆さん わん ばん こ。パートタイム（兼职） ティーチャー（教师） の ぉお！」
     # 想瑠 「はい。ということで皆さんわんばんこ。パートタイムティーチャーのぉお！」//感觉翻的也不大对的样子
     voice "voice/想瑠/sol_a1_0003.ogg"
     liu "好，所以大家康起来都很精神呢。我就是大家的兼职教师"
+
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「想瑠っにゃあんっでぇえっす！　…ん？　今聞き慣れない声が聞こえたぞぉ？」
     voice "voice/想瑠/sol_a1_0004.ogg"
@@ -2738,6 +2755,11 @@ label scene01:
     # 心爱 「想瑠にゃん見て見て－！　今日は蓮君が早起きさんだよー！」附加：pac/喜び
     voice "voice/心愛/cca_a1_0072.ogg"
     ai "想瑠喵你看你看! 莲君今天有好好早起哦!"
+
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「どうやらそうらしい。こりゃ東京でオリンピックが開催されちまう」
     voice "voice/想瑠/sol_a1_0005.ogg"
@@ -2755,6 +2777,11 @@ label scene01:
     voice "voice/心愛/cca_a1_0073.ogg"
     ai "这里是猜谜时间! 什么时候、什么地点、谁、怎么把莲君叫醒的?"
 
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
+
     # 想瑠 「そのクイズ正解したら何か貰えます？」
     voice "voice/想瑠/sol_a1_0006.ogg"
     liu "如果我猜出来谜底的话，能得到什么奖品呢? "
@@ -2767,6 +2794,11 @@ label scene01:
     # 心爱 「ジュースをおごってやろう」
     voice "voice/心愛/cca_a1_0074.ogg"
     ai "请你喝果汁吧"
+
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「はい」
     voice "voice/想瑠/sol_a1_0007.ogg"
@@ -2783,6 +2815,11 @@ label scene01:
     voice "voice/心愛/cca_a1_0075.ogg"
     ai "请，小游三先生（L:三遊亭小遊三，1947年3月2日 - ，落语艺术协会参事，落语是日本的传统曲艺形式之一，形式类似单口相声，有点独角戏或者是单人小品的感觉）"
 
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
+
     # 想瑠 「違う人がいです」
     voice "voice/想瑠/sol_a1_0008.ogg"
     liu "应该是另一个人来着"
@@ -2796,9 +2833,19 @@ label scene01:
     voice "voice/真冬/maf_a1_0116.ogg"
     dong "是歌丸先生（L:桂歌丸，1936年〈昭和11年〉8月14日 - 2018年 〈平成30年〉7月2日，也是落语艺术家，落语艺术协会的会长）"
 
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
+
     # 想瑠 「よっしゃ」
     voice "voice/想瑠/sol_a1_0009.ogg"
     liu "要上了哦"
+
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「今朝、双子の妹の真冬ちゃんが、お兄ちゃんのベッドの中で、添い寝かーらーの耳ペロ」
     voice "voice/想瑠/sol_a1_0010.ogg"
@@ -2822,6 +2869,11 @@ label scene01:
     voice "voice/心愛/cca_a1_0076.ogg"
     ai "你是怎么知道的？！"
 
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
+
     # 想瑠 「そりゃな。図書館の『ねぼすけお兄ちゃんを持つ妹マニュアル』は私の私物だからよ。誰が借りてったか把握してるだけさ」
     voice "voice/想瑠/sol_a1_0011.ogg"
     liu "那是当然。图书馆的那本『有哥哥的妹妹手册』是我的个人物品。我知道那本书是谁借走的"
@@ -2834,6 +2886,11 @@ label scene01:
     # 心爱 「卑怯者～！」
     voice "voice/心愛/cca_a1_0077.ogg"
     ai "你这是作弊~！"
+
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「何とでも言うがい、勝負とは勝てばいのだよ…」
     voice "voice/想瑠/sol_a1_0012.ogg"
@@ -2867,6 +2924,11 @@ label scene01:
     voice "voice/心愛/cca_a1_0079.ogg"
     ai "好♪~"
 
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
+
     # 想瑠 「さて、早速 です が おめでたい 報告 です。それ は 何 でしょ う か！　はい 葛城（兄）」
     # 想瑠 「さて、早速ですがおめでたい報告です。それは何でしょうか！　はい葛城（兄）」
     voice "voice/想瑠/sol_a1_0013.ogg"
@@ -2875,6 +2937,11 @@ label scene01:
     # 莲 「そのクイズ正解したら何か貰えます？」
     lian "这个问题答对了的话能得到什么吗？"
 
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
+
     # 想瑠 「ジュースをおごってやろう」
     voice "voice/想瑠/sol_a1_0014.ogg"
     liu "我请你喝果汁（L:这里想瑠喵和心爱上面说的话一字不差「ジュースをおごってやろう」）"
@@ -2882,6 +2949,11 @@ label scene01:
     # 莲 「一週間ぶりの お通じ（便通のこと）」
     # 莲 「一週間ぶりのお通じ」
     lian "时隔一周，便秘的问题终于解决了"
+
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「とーころがどっこい、私は毎日絶好調だ。正解は、時給が850円から900円にあがったんだよーん」
     # 参考资料：https://jp.indeed.com/%E6%99%82%E7%B5%A6-850%E5%86%86%E9%96%A2%E9%80%A3%E3%81%AE%E6%B1%82%E4%BA%BA
@@ -2893,6 +2965,11 @@ label scene01:
 
     # 莲 「じゃぁジュースの一本ぐらい余裕っすね、ごちそうさまっす」
     lian "那么给我一瓶果汁就够了，谢谢您的款待"
+
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「ばーかばーか！クイズ外れた奴にはあげないよーだ。帰って家族とホットドッグ祭りするんだからね！」
     # 参考资料：https://yunamifactory.org/diary/5418
@@ -2937,6 +3014,11 @@ label scene01:
 
     # 莲 「あい」
     lian "害"
+
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「その本はあくまでも妹用だかんな。幼馴染み用の本もあるから、あとで借りにおいで」
     voice "voice/想瑠/sol_a1_0017.ogg"
@@ -2990,6 +3072,11 @@ label scene01:
     # nil 「目の前の二人からもフォーカスを外して、目標点はそのまで、フォーカスを担任に合わせる。」
     "把焦点从眼前的两个人身上移开，移向她们两个前面的班主任。"
 
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
+
     # 想瑠 「（にこっ）」
     voice "voice/想瑠/sol_a1_0018.ogg"
     liu "(微笑)"
@@ -3002,6 +3089,11 @@ label scene01:
 
     # nil 「あとで聞いてみよう。覚えてたら。」
     "如果稍后还记得这个事儿的话，就去问一下吧"
+
+    # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.01
+    $ sideimagesize.SideImageYalign = -1.65
+    $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「つーことで、夏休みも間近に迫って参りました！　今日から半日頑張って参りましょう！」
     voice "voice/想瑠/sol_a1_0019.ogg"
