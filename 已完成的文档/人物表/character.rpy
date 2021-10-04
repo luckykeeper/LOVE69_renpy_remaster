@@ -4,7 +4,7 @@
 # 版本 0.0.4
 # Blog：http://b.luckykeeper.site
 # 开始日期 2021年8月28日
-# 修订日期 2021年10月1日
+# 修订日期 2021年10月4日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -124,6 +124,11 @@ define ang = Character('少女',color="#fff7bb",image="リオン")
 
 # 月宫想瑠 liu //和原版相比，移植版打算在人物名上加入颜色，想瑠喵的颜色是SISTARS里面的CG里面取的
 define liu = Character('想瑠',color="#a4808c",image="想瑠")
+
+# 定义显示在对话框中的小人物头像
+# 文件应当取自 face 文件夹，但是stand有现成更清晰的，且参数已经调试完毕，所以用stand，stand没有的再进行特殊处理，为了和后面的waifu2x区分
+# 工程目录写为 face
+image side 想瑠 想瑠_スーツ_ニヤリ = "images/face/想瑠/想瑠_スーツ_ニヤリ.png" # 睁眼，嘴“w”，手撑头
 
 # 月宫瑠那 na //和原版相比，移植版打算在人物名上加入颜色，瑠那的颜色是SISTARS里面的CG里面取的
 define na = Character('瑠那',color="#a4808c",image="瑠那")
