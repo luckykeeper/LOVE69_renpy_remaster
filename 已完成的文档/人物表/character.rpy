@@ -4,7 +4,7 @@
 # 版本 0.0.4
 # Blog：http://b.luckykeeper.site
 # 开始日期 2021年8月28日
-# 修订日期 2021年10月4日
+# 修订日期 2021年10月5日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -116,13 +116,54 @@ image side 真冬 真冬_制服_基本_おやつ3 = "images/face/真冬/真冬_�
 image side 真冬 真冬_制服_基本_ニタァ = "images/face/真冬/真冬_制服_基本_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢
 image side 真冬 真冬_制服_基本_居眠り = "images/face/真冬/真冬_制服_基本_ニタァ.png" # 闭眼，嘴开口，半圆，碎着辽~
 
+image side 真冬 真冬_通話中 = "images/face/真冬/真冬_通話中.png" # 装在携带里面的真冬
+
 
 # 葛城莲 lian //主人公，工具人就不要加颜色了吧，不加颜色的统一强制指定白色（#ffffff）
 define lian = Character('莲',color="#ffffff")
 
 # 里昂·麦克斯韦 lion //和原版相比，移植版打算在人物名上加入颜色，里昂的颜色是摘掉帽子之后在头顶上取的
 define lion = Character('里昂',color="#fff7bb",image="リオン")
-define ang = Character('少女',color="#fff7bb",image="リオン")
+
+# 定义里昂的立绘
+# 显示在画面中的
+
+image side リオン リオン_帽子無し_杖_微笑み = "images/face/リオン/リオン_帽子無し_杖_微笑み.png" # 睁眼，没帽子，拿杖，微笑
+image side リオン リオン_基本_杖_微笑み = "images/face/リオン/リオン_基本_杖_微笑み.png" # 睁眼，有帽子，拿杖，微笑
+image side リオン リオン_帽子無し_杖なし_微笑み = "images/face/リオン/リオン_帽子無し_杖なし_微笑み.png" # 睁眼，没帽子，没杖，微笑
+image side リオン リオン_基本_杖_にっこり = "images/face/リオン/リオン_基本_杖_にっこり.png" # 闭眼，有帽子，拿杖，微笑
+image side リオン リオン_帽子無し_杖_ジト目 = "images/face/リオン/リオン_帽子無し_杖_ジト目.png" # 睁眼，没帽子，拿杖，皱眉，嘴倒三角
+image side リオン リオン_基本_杖_ジト目 = "images/face/リオン/リオン_基本_杖_ジト目.png" # 睁眼，有帽子，拿杖，皱眉，嘴倒三角
+image side リオン リオン_帽子無し_杖_ニタァ = "images/face/リオン/リオン_帽子無し_杖_ニタァ.png" # 睁眼，没帽子，拿杖，皱眉，嘴半圆，是有点小坏的笑呢
+image side リオン リオン_基本_杖_ニタァ = "images/face/リオン/リオン_基本_杖_ニタァ.png" # 睁眼，有帽子，拿杖，皱眉，嘴半圆，是有点小坏的笑呢
+image side リオン リオン_帽子無し_杖_驚き = "images/face/リオン/リオン_帽子無し_杖_ニタァ.png" # 睁眼，没帽子，拿杖，惊讶
+image side リオン リオン_基本_杖_驚き = "images/face/リオン/リオン_基本_杖_驚き.png" # 睁眼，有帽子，拿杖，惊讶
+image side リオン リオン_帽子無し_杖_悲しい = "images/face/リオン/リオン_帽子無し_杖_悲しい.png" # 睁眼，没帽子，拿杖，悲，嘴小开口
+image side リオン リオン_基本_杖_悲しい = "images/face/リオン/リオン_基本_杖_悲しい.png" # 睁眼，有帽子，拿杖，悲，嘴小开口
+image side リオン リオン_基本_杖_無表情 = "images/face/リオン/リオン_基本_杖_無表情.png" # 睁眼，有帽子，拿杖，莫得感情
+image side リオン リオン_基本_杖_見下し = "images/face/リオン/リオン_基本_杖_見下し.png" # 睁眼，有帽子，拿杖，嘴三角圆
+image side リオン リオン_基本_杖_ぶわー = "images/face/リオン/リオン_基本_杖_ぶわー.png" # 睁眼，有帽子，拿杖，是和心爱一样标志性的哭呢
+
+# 下面定义不知道是谁的时候的里昂
+# 知不道的人物使用发色称呼
+# 如：里昂——>黄
+# 文件应当取自 face 文件夹，但是stand有现成更清晰的，且参数已经调试完毕，所以用stand，stand没有的再进行特殊处理，为了和后面的waifu2x区分
+# 工程目录写为 face
+define ang = Character('少女',color="#fff7bb",image="黄")
+image side 黄 黄_帽子無し_杖_微笑み = "images/face/黄/黄_帽子無し_杖_微笑み.png" # 睁眼，没帽子，拿杖，微笑
+image side 黄 黄_基本_杖_微笑み = "images/face/黄/黄_基本_杖_微笑み.png" # 睁眼，有帽子，拿杖，微笑
+image side 黄 黄_帽子無し_杖なし_微笑み = "images/face/黄/黄_帽子無し_杖なし_微笑み.png" # 睁眼，没帽子，没杖，微笑
+image side 黄 黄_基本_杖_にっこり = "images/face/黄/黄_基本_杖_にっこり.png" # 闭眼，有帽子，拿杖，微笑
+image side 黄 黄_帽子無し_杖_ジト目 = "images/face/黄/黄_帽子無し_杖_ジト目.png" # 睁眼，没帽子，拿杖，皱眉，嘴倒三角
+image side 黄 黄_基本_杖_ジト目 = "images/face/黄/黄_基本_杖_ジト目.png" # 睁眼，有帽子，拿杖，皱眉，嘴倒三角
+image side 黄 黄_帽子無し_杖_ニタァ = "images/face/黄/黄_帽子無し_杖_ニタァ.png" # 睁眼，没帽子，拿杖，皱眉，嘴半圆，是有点小坏的笑呢
+image side 黄 黄_基本_杖_ニタァ = "images/face/黄/黄_基本_杖_ニタァ.png" # 睁眼，有帽子，拿杖，皱眉，嘴半圆，是有点小坏的笑呢
+image side 黄 黄_帽子無し_杖_驚き = "images/face/黄/黄_帽子無し_杖_ニタァ.png" # 睁眼，没帽子，拿杖，惊讶
+image side 黄 黄_基本_杖_驚き = "images/face/黄/黄_基本_杖_驚き.png" # 睁眼，有帽子，拿杖，惊讶
+image side 黄 黄_帽子無し_杖_悲しい = "images/face/黄/黄_帽子無し_杖_悲しい.png" # 睁眼，没帽子，拿杖，悲，嘴小开口
+image side 黄 黄_基本_杖_無表情 = "images/face/黄/黄_基本_杖_無表情.png" # 睁眼，有帽子，拿杖，莫得感情
+image side 黄 黄_基本_杖_見下し = "images/face/黄/黄_基本_杖_見下し.png" # 睁眼，有帽子，拿杖，嘴三角圆
+image side 黄 黄_基本_杖_ぶわー = "images/face/黄/黄_基本_杖_ぶわー.png" # 睁眼，有帽子，拿杖，是和心爱一样标志性的哭呢
 
 # 月宫想瑠 liu //和原版相比，移植版打算在人物名上加入颜色，想瑠喵的颜色是SISTARS里面的CG里面取的
 define liu = Character('想瑠',color="#a4808c",image="想瑠")
@@ -147,14 +188,17 @@ define hei = Character("？？？",color="#414141",image="黑")
 
 # 花盆君 pen //和原版相比，移植版打算在人物名上加入颜色，花盆君的颜色当然是健康的绿色啦~
 define pen = Character('花盆君',color="#659839",image="花盆君")
-image side 花盆君 花盆君_通常 = "images/face/花盆君/花盆君_通常.png" #花盆君
+image side 花盆君 花盆君_通常 = "images/face/花盆君/花盆君_通常.png" # 花盆君
 
 # 亚十礼 atri //和原版相比，移植版打算在人物名上加入颜色，亚十礼的颜色也是从头发上取哒~
 define atri = Character('亚十礼',color="#fcfafc",image="アシュリー")
 
 # 迈克尔 mj //和原版相比，移植版打算在人物名上加入颜色，帽子就要它本来的颜色就好啦~
-define hat = Character('帽子',color="#67435e",image="mj")
-define mj = Character('MJ',color="#67435e",image="mj")
+define hat = Character('帽子',color="#67435e",image="帽子")
+define mj = Character('MJ',color="#67435e",image="MJ")
+
+image side 帽子 帽子_通常 = "images/face/帽子/帽子_通常.png" # 帽子？？？
+image side MJ MJ_通常 = "images/face/MJ/MJ_通常.png" # MJ
 
 # 旁白君 bai 不加颜色的统一强制指定白色（#ffffff）
 define bai = Character('旁白君',color="#ffffff")
