@@ -12,6 +12,20 @@
 | 项目组官网           | https://love69renpyremasterproject.github.io                 |
 | 项目组官网构建状态   | ![status](https://app.travis-ci.com/love69renpyremasterproject/love69renpyremasterproject.github.io.svg?branch=main&status=passed) |
 
+------
+
+2021年10月6日
+
+今天有个好消息和坏消息
+
+坏消息是存项目那块垃圾机械盘炸了
+
+好消息是我应该有备份能救回来
+
+且等我两天，救救数据
+
+------
+
 使用ren'py重制LOVEPOTION SIXTYNINE，并加以汉化和全平台适配
 
 <img src="images/项目组logo_smallsize.png" alt="项目组logo"  />
