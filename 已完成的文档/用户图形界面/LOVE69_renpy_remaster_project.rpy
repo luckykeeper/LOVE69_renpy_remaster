@@ -4,7 +4,7 @@
 # Author:Luckykeeper
 # 版本 0.1.0
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年10月5日
+# 修订日期 2021年10月7日
 
 # image pure_black = "#000"
 # 开场画面
@@ -19,8 +19,8 @@ label splashscreen:
     play sound "voice/effect/07_ドア1～あける.ogg"
     pause 1.0
     voice "voice/心愛/cca_a1_0331.ogg"
-    $ renpy.pause(1, hard=True)
-    pause 1.0
+    $ renpy.pause(1.5, hard=True)
+    pause 1.5
     $ renpy.pause(1, hard=True)
     hide ロゴ with Dissolve(1.0)
     $ renpy.pause(1, hard=True)
