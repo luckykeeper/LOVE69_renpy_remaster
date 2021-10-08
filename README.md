@@ -12,24 +12,6 @@
 | 项目组官网           | https://love69renpyremasterproject.github.io                 |
 | 项目组官网构建状态   | ![status](https://app.travis-ci.com/love69renpyremasterproject/love69renpyremasterproject.github.io.svg?branch=main&status=passed) |
 
-------
-
-2021年10月6日
-
-今天有个好消息和坏消息
-
-~~坏消息是存项目那块垃圾机械盘炸了~~
-
-好消息是我应该有备份能救回来
-
-且等我两天，救救数据
-
-2021年10月7日更新
-
-项目数据全部救回！大家也要做及时备份重要数据的好孩子哦！
-
-------
-
 使用ren'py重制LOVEPOTION SIXTYNINE，并加以汉化和全平台适配
 
 <img src="images/项目组logo_smallsize.png" alt="项目组logo"  />
@@ -188,7 +170,7 @@ CG、BGM等素材的解包工作已全部完成，无需帮助
 - 项目可能因为学业原因无限期推迟（学业繁忙+是只鸽子😅）~~【所以有其他人想来汉化那是大欢迎，也欢迎使用本项目已经汉化好的文本和提取出的日语文本~~，不过如果用的话请加上我的名字（Luckykeeper）】{就不要着急催着填坑了哈}【2021.09.08_注：做不完的可能性不大，目前还是非常顺利的，我非常有信心能把坑填完，烦请各位大大就不要抢坑了哈】
 - 项目相关文件解压密码为本页面网址（即 https://github.com/luckykeeper/LOVE69_renpy_remaster ）下载链接暂时取消
 - 出于各种原因，本次汉化移植并不会对“gkd”的内容（即 Hscene ）进行汉化和移植![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
-- 本页面最后修改时间 2021年10月7日
+- 本页面最后修改时间 2021年10月8日
 
 ## Stargazers over time 
 
