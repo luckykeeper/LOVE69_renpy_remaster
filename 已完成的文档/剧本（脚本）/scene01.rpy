@@ -3,9 +3,9 @@
 # scene01 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：WorldlineChanger（2句）
-# 版本 null
+# 版本 0.1.0
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年10月8日
+# 修订日期 2021年10月9日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右<-2021年10月5日 搞定！
@@ -175,7 +175,7 @@ label scene01:
     #    pause 0.005
     # 还是做视频好，没有视频，就en做！
     # 第一个视频诞生了！ 虽然⑧大行，但是能用！
-    $ renpy.movie_cutscene("video/真冬カットイン.webm")
+    $ renpy.movie_cutscene("video/真冬カットイン.webm",stop_music=False)
     # 尝试导入了下png，16G内存瞬间爆满
     # 当图片多（多于100张）的时候一定不能这样做
     # 虽然BGM会中断，但是起码电脑不会卡爆
@@ -1352,7 +1352,7 @@ label scene01:
     ai 心愛_制服_基本_真顔 "还是不必了吧"
 
     ### 心爱介绍小动画：pac/心愛カットイン
-    $ renpy.movie_cutscene("video/心愛カットイン.webm")
+    $ renpy.movie_cutscene("video/心愛カットイン.webm",stop_music=False)
 
     # nil 「未だにドアを掴んで映画のシャイニングみたいに、隙間から顔を覗かせている少女の名は「一条　心愛」」
     "现在还抓着门，像电视里面演的害羞女孩子一样的，从缝隙中露出脸的是叫做「一条 心爱」的少女"
@@ -4091,7 +4091,7 @@ label scene01:
     # 里昂介绍小动画
     # 这里的音效是真难找，搁这搞分布式对象存储呢？！我看快要比 ceph / minio 行了都！
     play sound "voice/その他/高らかな歓声.ogg"
-    $ renpy.movie_cutscene("video/リオンカットイン.webm")
+    $ renpy.movie_cutscene("video/リオンカットイン.webm",stop_music=False)
 
     # nil 「続いて、高らかな黄色い歓声と共に、ロングコートのような、ローブのような服をはためかせた少女が、」//黄色い歓声？怪
     # nil 「ふわりと槍と帽子の元へと舞い降りた。」这里翻成一句比较合适呢
@@ -4972,38 +4972,51 @@ label scene01:
 
     # 心爱变身长动画
     # 受原作引擎封包限制，不能完全还原了呢，敬请谅解
+    $ renpy.movie_cutscene("video/心愛覚醒_長.webm",stop_music=False)
 
-    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.10
-    $ sideimagesize.SideImageYalign = 15.72
-    $ sideimagesize.SideImageZoom = 0.96
+
+    # 这个语句是针对心爱觉醒设计的参数，能够调整觉醒的心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.04
+    $ sideimagesize.SideImageYalign = 23.8
+    $ sideimagesize.SideImageZoom = 0.55
+
+    show 心愛_トランザム at love69_xinai_center with Dissolve(0.4):
+        yalign 0.053
+        xalign 0.43
 
     # 心爱 「目標との距離を確認。軌道計算終了。軌道修正後の誤差コンマ２ミリ以下に設定。姿勢制御スタビライザー…展開」
     voice "voice/心愛/cca_a1_0105.ogg"
-    ai "确认与目标的距离。轨道计算结束。设定为轨道修正后的误差2毫米以下。姿势控制稳定器…展开"
+    ai 心愛_トランザム "确认与目标的距离。轨道计算结束。设定为轨道修正后的误差2毫米以下。姿势控制稳定器…展开"
 
     # nil 「目を閉じて、何やらぶつぶつと独り言を唱え始める。ツーサイドアップの髪型が、羽根のように変形し、展開していく（ように見える）」
     "心爱闭上眼睛，开始吟唱，两边的头发向上飘起来，像羽毛一样变形、展开(看起来是这么回事)"
 
     # 心爱横条短动画（这里需要做成GIF）
+    # 149张估计还是要卡，做动画吧
+    $renpy.movie_cutscene("video/心愛覚醒カットイン.webm",stop_music=False)
 
-    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.10
-    $ sideimagesize.SideImageYalign = 15.72
-    $ sideimagesize.SideImageZoom = 0.96
+    # 这个语句是针对心爱觉醒设计的参数，能够调整觉醒的心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.04
+    $ sideimagesize.SideImageYalign = 23.8
+    $ sideimagesize.SideImageZoom = 0.55
 
     # 心爱 「リミッターをレベル１から７まで解放。対象の反撃を想定した機動シミュレーション完了。射出カウント…３ドライ…２ツヴァイ…１アインス」
     voice "voice/心愛/cca_a1_0106.ogg"
-    ai "释放1级至7级的限制器。假想目标反击的机动模拟完成。发射计数... ... 3（three）... ... 2（two）... ... 1（one）"
+    ai 心愛_トランザム "释放1级至7级的限制器。假想目标反击的机动模拟完成。发射计数... ... 3（three）... ... 2（two）... ... 1（one）"
 
-    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.10
-    $ sideimagesize.SideImageYalign = 15.72
-    $ sideimagesize.SideImageZoom = 0.96
+    # 这个语句是针对心爱觉醒设计的参数，能够调整觉醒的心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.04
+    $ sideimagesize.SideImageYalign = 23.8
+    $ sideimagesize.SideImageZoom = 0.55
 
     # 心爱 「……」
     voice "voice/心愛/cca_a1_0107.ogg"
     ai "……"
+    hide 心愛_トランザム
+    show 心愛_トランザム at love69_xinai_center:
+        yalign 0.053
+        xalign 0.43
+        linear 0.5 yalign -0.029
 
     # 心爱稍下蹲
 
@@ -5016,16 +5029,22 @@ label scene01:
     # nil 「俺も右脚を下げ、コーンの根本を握りしめる。」
     "我也降低了身体的重心，紧紧抓住了甜筒"
 
-    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.10
-    $ sideimagesize.SideImageYalign = 15.72
-    $ sideimagesize.SideImageZoom = 0.96
+    # 这个语句是针对心爱觉醒设计的参数，能够调整觉醒的心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.04
+    $ sideimagesize.SideImageYalign = 23.8
+    $ sideimagesize.SideImageZoom = 0.55
 
     # 心爱 「目標を…駆逐するッ！！！」
     voice "voice/心愛/cca_a1_0108.ogg"
     ai "把目标…驱逐出去！！！"
 
     # 心爱在屏幕上放大，淡出
+    # 淡出没法做，做个放大到可视范围外
+    hide 心愛_トランザム
+    show 心愛_トランザム at love69_xinai_center:
+        yalign 0.053
+        xalign 0.43
+        linear 0.3 zoom 50.0
     # nil 「怒濤と共に心愛が俺の方へ突進してくる。」
     "随着怒涛的袭来，心爱向我的方向冲刺"
 
@@ -5034,10 +5053,16 @@ label scene01:
     # 番在这里：https://www.bilibili.com/bangumi/play/ep35138?b 这句话在13分42秒
     lian "别得意的太早了！(ところがぎっちょん！)（L:这句出自机动战士高达00 第一季第12集《教义的尽头》13分42秒，是阿里·阿尔·萨谢斯的台词，我专门去康了一下）"
 
+    # 偷空hide一下，打枪的不要，偷偷的删掉
+    hide 心愛_トランザム
     # nil 「心愛が跳ねて、右腕を伸ばす。」
     "心爱跳起来，伸出右臂"
 
     # 心爱从屏幕右边闪现！
+    # CropMove和hpunch似乎不能连用呢，抛弃hpench
+    show 心愛_トランザム at love69_xinai_center with CropMove(0.15,mode="wipeleft"):
+        yalign 0.053
+        xalign 0.43
     # nil 「差しのばされた右腕を払いのける。」
     "用伸出来的右臂向我袭来！"
 
@@ -5045,15 +5070,21 @@ label scene01:
     "但是"
 
     # 心爱量子化！
+    # hide 心愛_トランザム
+    # $renpy.movie_cutscene("video/クアンタム心愛.webm",stop_music=False)
 
-    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.10
-    $ sideimagesize.SideImageYalign = 15.72
-    $ sideimagesize.SideImageZoom = 0.96
+    # 这个语句是针对心爱觉醒设计的参数，能够调整觉醒的心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.04
+    $ sideimagesize.SideImageYalign = 23.8
+    $ sideimagesize.SideImageZoom = 0.55
 
     # 心爱 「こは…俺の距離だ！」
     voice "voice/心愛/cca_a1_0109.ogg"
     ai "这是…我的距离！"
+
+    # 根据引擎特性和剧情，做到这里比较好
+    hide 心愛_トランザム
+    $renpy.movie_cutscene("video/クアンタム心愛.webm",stop_music=False)
 
     # 莲 「量子化だと！？」
     lian "这是……量子化？！"
@@ -5065,16 +5096,21 @@ label scene01:
     # nil 「コーンの端を持ってアイスを、中空で縦に回転させてかわし、手首を捻って逆手持ちに切り替える。」
     "拿着甜筒的一端，让冰淇淋在空中纵向旋转，然后扭动手腕换成反手抓住了！"
 
-    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.10
-    $ sideimagesize.SideImageYalign = 15.72
-    $ sideimagesize.SideImageZoom = 0.96
+    # 这个语句是针对心爱觉醒设计的参数，能够调整觉醒的心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.04
+    $ sideimagesize.SideImageYalign = 23.8
+    $ sideimagesize.SideImageZoom = 0.55
 
     # 心爱 「なっ！」
     voice "voice/心愛/cca_a1_0110.ogg"
     ai "什么！"
 
     # 心爱，量子化逆再生！
+    $renpy.movie_cutscene("video/量子化心愛逆再生.webm",stop_music=False)
+    # 心爱背景的粉红色气场没找到呢，先就这样吧
+    show 心愛_トランザム at love69_xinai_center:
+        yalign 0.053
+        xalign 0.43
 
     # 莲 「食らえ！」
     lian "给我恰！"
@@ -5082,12 +5118,22 @@ label scene01:
     # nil 「どうせ心愛に奪われるだろうと覚悟した俺は、逆手持ちのま、心愛の口の中にアイスを突っ込んだ。」
     "我做好了冰淇淋会被心爱夺走的觉悟，于是我反手就是把冰淇淋塞进了心爱的嘴里！"
 
-    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.10
-    $ sideimagesize.SideImageYalign = 15.72
-    $ sideimagesize.SideImageZoom = 0.96
+    # 这个语句是针对心爱觉醒设计的参数，能够调整觉醒的心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = -0.04
+    $ sideimagesize.SideImageYalign = 23.8
+    $ sideimagesize.SideImageZoom = 0.55
 
     # BGM 停，音效：戳
+    stop music
+    play sound "voice/effect/17_フヒ.ogg"
+    # 发色增强好像也没法做，做个动画吧
+    hide 心愛_トランザム
+    show 心愛_トランザム at love69_xinai_center:
+        yalign 0.053
+        xalign 0.43
+        linear 0.15 yalign -0.001
+        linear 0.15 yalign 0.053
+
     # 心爱 「むぐっ」
     voice "voice/心愛/cca_a1_0111.ogg"
     ai "唔！"
@@ -5108,9 +5154,11 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 觉醒心爱消失，通常心爱回归！
+    hide 心愛_トランザム with Dissolve(0.1)
+    show 心愛_制服_基本_もぐもぐ at love69_xinai_center with Dissolve(0.1)
     # 心爱 「むぐ…むぐむぐ…あむ…むぐ…けほっ…むぐ」
     voice "voice/心愛/cca_a1_0112.ogg"
-    ai "嗯...唔唔...呜啊..."
+    ai "嗯...唔唔...呜啊...哈啊...嗯"
 
     # 莲 「死して尚食らうというのか」
     lian "即使死了也还是要吃吗？"
@@ -5202,8 +5250,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ところがぎっちょん！」
+    hide 心愛_制服_基本_もぐもぐ
+    show 心愛_制服_基本_真顔 at love69_xinai_center
     voice "voice/心愛/cca_a1_0118.ogg"
-    ai "别得意的太早了！(ところがぎっちょん！)（L:这句和刚才莲说的是一样的，出自机动战士高达00 第一季第12集《教义的尽头》13分42秒）"
+    ai 心愛_制服_基本_真顔 "别得意的太早了！(ところがぎっちょん！)（L:这句和刚才莲说的是一样的，出自机动战士高达00 第一季第12集《教义的尽头》13分42秒）"
 
     # nil 「がばっ」
     "啪!"
@@ -5223,8 +5273,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ちゅー…っ！」
+    hide 心愛_制服_基本_真顔
+    show 心愛_制服_基本_キス at love69_xinai_center
     voice "voice/心愛/cca_a1_0119.ogg"
-    ai "啾——... !"
+    ai 心愛_制服_基本_キス "啾——... !"
 
     # 莲 「う、奪われた…！　私の唇を！」
     lian "呜，被夺去了... ! 我的嘴唇！"
@@ -5235,8 +5287,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「にへ…親方の唇頂いたでやんす」
+    hide 心愛_制服_基本_キス
+    show 心愛_制服_基本_笑顔1 at love69_xinai_center
     voice "voice/心愛/cca_a1_0120.ogg"
-    ai "嘿嘿…你的嘴唇我就收下了"
+    ai 心愛_制服_基本_笑顔1 "嘿嘿…你的嘴唇我就收下了"
 
     # 莲 「お、おう…この展開は…予想していなかった…」
     lian "这，这…这种展开…真是预想之外…"
@@ -5259,8 +5313,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「おっとぉ…隙だらけでやんすなぁ…余所見してっとぉ…もう一発いきますよぉー？　心愛あたーっく！」
+    hide 心愛_制服_基本_笑顔1
+    show 心愛_制服_基本_ニタァ at love69_xinai_center
     voice "voice/心愛/cca_a1_0121.ogg"
-    ai "哎呀……真是漏洞百出啊……再不集中注意力的话…我会再来一次的哦~？心愛攻击（Attack）！"
+    ai 心愛_制服_基本_ニタァ "哎呀……真是漏洞百出啊……再不集中注意力的话…我会再来一次的哦~？心愛攻击（Attack）！"
 
     # 莲 「またれいまたれい！　しばしまたれい！」
     lian "等下…现在吗？…等等！这是啥情况？"
@@ -5270,9 +5326,11 @@ label scene01:
     $ sideimagesize.SideImageYalign = 15.72
     $ sideimagesize.SideImageZoom = 0.96
 
-    # 心爱 「ぐぬ！　おとなしくしやがれー！」
+    # 心爱 「ぐぬぬぬ！　おとなしくしやがれー！」
+    hide 心愛_制服_基本_ニタァ
+    show 心愛_制服_基本_不機嫌1 at love69_xinai_center
     voice "voice/心愛/cca_a1_0122.ogg"
-    ai "咕奴奴！ 你给我老实点——"
+    ai 心愛_制服_基本_不機嫌1 "咕奴奴！ 你给我老实点——"
 
     # nil 「俺に身体を密着させたま、残り少ない俺の唇を奪おうとする心愛君。」
     "心爱的身体紧贴着我，想要夺走我所剩无几的嘴唇"
@@ -5298,8 +5356,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ぶにゃー」
+    hide 心愛_制服_基本_不機嫌1
+    show 心愛_制服_基本_にっこり1 at love69_xinai_center
     voice "voice/心愛/cca_a1_0123.ogg"
-    ai "呜喵——"
+    ai 心愛_制服_基本_にっこり1 "呜喵——"
 
     # 莲 「一体どこにこんなパワーを隠し持って居たというのだ…！」
     lian "到底是在哪里隐藏着这样的力量呢…！"
@@ -5310,8 +5370,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「恋する乙女のぉおパワーはぁあインフィニティ！」
+    hide 心愛_制服_基本_にっこり1
+    show 心愛_制服_基本_真顔1 at love69_xinai_center
     voice "voice/心愛/cca_a1_0124.ogg"
-    ai "恋爱中的少女的抛瓦（power）啊！INFINITY（是∞的啊）！"
+    ai 心愛_制服_基本_真顔1 "恋爱中的少女的抛瓦（power）啊！INFINITY（是∞的啊）！"
 
     # 莲 「わかったわかった。大胆告白はとりあえず聞かなかった事にするから、落ち着けっつーの！」
     lian "我知道了我知道了。但是先别着急大胆告白，你先冷静下来！"
@@ -5337,8 +5399,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「む！　今は私の事だけ考えてよだーりん！」
+    hide 心愛_制服_基本_真顔1
+    show 心愛_制服_基本_不機嫌1 at love69_xinai_center
     voice "voice/心愛/cca_a1_0125.ogg"
-    ai "哼! 现在你只要想着我就行了！"
+    ai 心愛_制服_基本_不機嫌1 "哼! 现在达令你只要想着我就行了！"
 
     # 莲 「てめぇもちったぁ目ぇ覚ませ！　後で恥ずかしくなるぞ！」
     lian "你也给我醒过来啊! 之后你绝对会尴尬的！"
@@ -5349,8 +5413,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「構わぬ。後で悔やむ事になっても、今この瞬間の幸せを噛みしめるのみ」
+    hide 心愛_制服_基本_不機嫌1
+    show 心愛_制服_基本_真顔1 at love69_xinai_center
     voice "voice/心愛/cca_a1_0126.ogg"
-    ai "没关系。就算以后会后悔，现在也只能抓住这一瞬间的幸福"
+    ai 心愛_制服_基本_真顔1 "没关系。就算以后会后悔，现在也只能抓住这一瞬间的幸福"
 
     # 莲 「覚悟を決めてんじゃねぇよ！」
     lian "你还没有做好觉悟呢！"
@@ -5387,8 +5453,10 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「あんまり抵抗すると頸動脈締めるぞおらァ…」
+    hide 心愛_制服_基本_真顔1
+    show 心愛_制服_基本_不機嫌1 at love69_xinai_center
     voice "voice/心愛/cca_a1_0127.ogg"
-    ai "如果再抵抗的话，我会勒紧你的颈动脉的！（L:粉切黑啦！粉切黑啦！心爱要黑化了啊！）"
+    ai 心愛_制服_基本_不機嫌1 "如果再抵抗的话，我会勒紧你的颈动脉的！（L:粉切黑啦！粉切黑啦！心爱要黑化了啊！）"
 
     # 莲 「ひい！　く、くるしい！　死んじゃう！」
     lian "呃啊！痛、痛啊！我要gg了啊！"
@@ -5441,15 +5509,44 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「さぁ…では…改めて…い・た・だ・き・ま～す」
+    hide 心愛_制服_基本_不機嫌1
+    show 心愛_制服_基本_にっこり1 at love69_xinai_center
     voice "voice/心愛/cca_a1_0130.ogg"
-    ai "那么…要上了……再一次的…我·要·开·动·了~哦"
+    ai 心愛_制服_基本_にっこり1 "那么…要上了……再一次的…我·要·开·动·了~哦"
 
     # 莲 「だ、誰か助けてぇ！」
     lian "谁来救救我啊！"
 
     # 雾叶初登场！
     # 雾叶？？？ 「張り紙でもしておいたほうがよさそうですね…当店は壁ドンを禁止しております…と…おんやまぁ」
-    hei "好像还是贴上告示比较好呢…本店禁止壁咚…嗨呀"
+    # hide 心愛_制服_基本_にっこり1
+    # 根据下面的参数来定义心爱和雾叶的参数吧
+    transform love69_xinai_left:
+        zoom 1.5
+        xalign 0.53
+        yalign -0.09
+        xalign 0.155
+    transform love69_wuye_right:
+        zoom 1.5
+        xalign 0.93
+        yalign 0.015
+    show 心愛_制服_基本_にっこり1:
+        zoom 1.5
+        xalign 0.53
+        yalign -0.09
+        linear 0.3 xalign 0.155
+    show 黑_私服_無表情 with Dissolve(0.15):
+        zoom 1.5
+        xalign 0.93
+        yalign 0.015
+
+    # 来设计雾叶在对话框里的头像参数吧！
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+    voice "voice/霧葉/krh_a1_0001.ogg"
+    hei 黑_私服_無表情 "好像还是贴上告示比较好呢…本店禁止壁咚…嗨呀"
 
     # nil 「カランコロンカラ～ン」
     "叮当叮当♪~"
@@ -5469,8 +5566,16 @@ label scene01:
     # nil 「そう、先ほど植木鉢くんに貰ったチラシのお店らしい。運が良かった。他人でもないし、一つ賭けてみるか。」
     "对！好像是刚才在花盆君那里拿到传单的那家店的人。运气真好。边上也没有别人了，干脆赌一把吧"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 雾叶？？？ 「えーとえーと…二名様でよろしかったでしょうか。それと…おちんぽはお吸いになられますか？」
-    hei "诶多诶多……两位客人是吗？还有……请问要吸欧金棒吗？"
+    hide 黑_私服_無表情
+    show 黑_私服_ニヤリ at love69_wuye_right
+    voice "voice/霧葉/krh_a1_0002.ogg"
+    hei 黑_私服_ニヤリ "诶多诶多……两位客人是吗？还有……请问要吸欧金棒吗？"
 
     # 莲 「開幕下ネタかよ！」
     lian "开幕黄段子啊！"
@@ -5481,11 +5586,21 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「む！　なんだか美人さんが出てきたにゃ！　おう、私から蓮くんを奪うつもりなら、そうはいかないぞ！」
+    hide 心愛_制服_基本_にっこり1
+    show 心愛_制服_基本_不機嫌1 at love69_xinai_left
     voice "voice/心愛/cca_a1_0131.ogg"
-    ai "嗯！总觉得有个美女出来了喵！姆！如果打算从我这里夺走莲君的话，那行不通的哦！"
+    ai 心愛_制服_基本_不機嫌1 "嗯！总觉得有个美女出来了喵！姆！如果打算从我这里夺走莲君的话，那是行不通的哦！"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 雾叶？？？ 「あ、いや…異性にゃ興味ないんでご勝手にどうぞ」
-    hei "啊，不……我对异性没兴趣，请随便用"
+    hide 黑_私服_ニヤリ
+    show 黑_私服_無表情 at love69_wuye_right
+    voice "voice/霧葉/krh_a1_0003.ogg"
+    hei 黑_私服_無表情 "啊，不……我对异性没兴趣，请随便用"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -5493,20 +5608,38 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「わーい」
+    hide 心愛_制服_基本_不機嫌1
+    show 心愛_制服_基本_にっこり1 at love69_xinai_left
     voice "voice/心愛/cca_a1_0132.ogg"
-    ai "好耶！"
+    ai 心愛_制服_基本_にっこり1 "好耶！"
 
     # 莲 「待って待ってお姉さん！　もし手が空いてるなら、この状況をなんとかしてくれないか！」
     lian "等一下，等一下姐姐！如果有空的话，能不能想想办法处理一下这个情况？"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 雾叶？？？ 「修羅場はごめんですけど…」
-    hei "如果是修罗场的话抱歉（L:这里是说她对男人莫得性趣(doge)）"
+    hide 黑_私服_無表情
+    show 黑_私服_不満 at love69_wuye_right
+    voice "voice/霧葉/krh_a1_0004.ogg"
+    hei 黑_私服_不満 "如果是修罗场的话抱歉（L:这里是说她对男人莫得性趣(doge)）"
 
     # 莲 「力尽くでひっぺがえすとかさ！」
     lian "用尽全力把她推倒！"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 雾叶？？？ 「はぁ…なんとなく状況はわかりました。俺は女は殴れねぇってやつですね」
-    hei "啊……我总算明白了情况。但是我是个不能打女人的家伙啊"
+    hide 黑_私服_不満
+    show 黑_私服_無表情 at love69_wuye_right
+    voice "voice/霧葉/krh_a1_0005.ogg"
+    hei 黑_私服_無表情 "啊……我总算明白了情况。但是我是个不能打女人的家伙啊"
 
     # 莲 「遠からず近からずって所だな…！」&&协力请求
     lian "着实有点微妙呢"
@@ -5520,14 +5653,30 @@ label scene01:
     voice "voice/心愛/cca_a1_0133.ogg"
     ai "好了好了——莲君，话说完了就朝这边看吧"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 雾叶？？？ 「いじゃないですか、グイグイ系の彼女って。まぁただ、店先での性行為はご遠慮願いたいですが…」
-    hei "这不是很好吗? 有个肉食系的女朋友。不过，请不要在店门口ghs哦... ..."
+    hide 黑_私服_無表情
+    show 黑_私服_ニヤリ at love69_wuye_right
+    voice "voice/霧葉/krh_a1_0006.ogg"
+    hei 黑_私服_ニヤリ "这不是很好吗? 有个肉食系的女朋友。不过，请不要在店门口ghs哦... ..."
 
     # 莲 「そうならないためにもお力添えを願いたい」
     lian "为了不变成你说的那个样子，希望你能来帮下忙"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 雾叶？？？ 「わかりました。今回だけはサービスしときましょう」
-    hei "我明白了，这次我会为您服务（service）的"
+    hide 黑_私服_ニヤリ
+    show 黑_私服_目閉じ at love69_wuye_right
+    voice "voice/霧葉/krh_a1_0007.ogg"
+    hei 黑_私服_目閉じ "我明白了，这次我会为您服务（service）的"
 
     # nil 「女性はため息をついてから、つかつかと俺達の方へと近寄ってくる。」
     "女性叹了一口气，然后大步向我们走来。"
@@ -5538,11 +5687,21 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「む！　やはり私から蓮くんを奪うおつもりですな！？　そうはさせぬ！」
+    hide 心愛_制服_基本_にっこり1
+    show 心愛_制服_基本_不機嫌1 at love69_xinai_left
     voice "voice/心愛/cca_a1_0134.ogg"
-    ai "哼！果然你还是打算从我这里夺走莲君吧！？我不会让得逞的！"
+    ai 心愛_制服_基本_不機嫌1 "哼！果然你还是打算从我这里夺走莲君吧！？我不会让得逞的！"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 雾叶？？？ 「どうしてもと言ったら？」
-    hei "如果我无论如何都要这么做呢? "
+    hide 黑_私服_目閉じ
+    show 黑_私服_ニヤリ at love69_wuye_right
+    voice "voice/霧葉/krh_a1_0008.ogg"
+    hei 黑_私服_ニヤリ "如果我无论如何都要这么做呢? "
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -5553,18 +5712,45 @@ label scene01:
     voice "voice/心愛/cca_a1_0135.ogg"
     ai "用尽全力来抢抢看吧！"
 
-    # 雾叶？？？ 「ではその方向で」
-    hei "那么就按那个方向来发展吧"
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
-    # nil 「女性はそっと、心愛の心愛に近づいた。」&&心愛の心愛 有点迷
+    # 雾叶？？？ 「ではその方向で」
+    hide 黑_私服_ニヤリ
+    show 黑_私服_目閉じ at love69_wuye_right
+    voice "voice/霧葉/krh_a1_0009.ogg"
+    hei 黑_私服_目閉じ "那么就按那个方向来发展吧"
+
+    # nil 「女性はそっと、心愛の心愛に近づいた。」&&"心愛の心愛" 有点迷
+    hide 黑_私服_目閉じ
+    show 黑_私服_目閉じ:
+        zoom 1.5
+        xalign 0.93
+        yalign 0.015
+        linear 0.3 xalign 0.254
     "女人轻轻地走近心爱的位置"
 
     # nil 「そして。」
     "然后"
 
     # 心爱被店老板暴打.avi？？？
+    $renpy.movie_cutscene("video/店獄殺.webm")
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 雾叶？？？ 「笑止」
+    hide 黑_私服_目閉じ
+    show 黑_私服_ニヤリ:
+        zoom 1.5
+        xalign 0.93
+        yalign 0.015
+        linear 0.0 xalign 0.254
+    voice "voice/霧葉/krh_a1_0010.ogg"
     hei "笑止"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -5573,10 +5759,20 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ぐふっ」
+    # 原版这里心爱拿着奶糖苹果，按照上下文是不应该有的，我们认为是Bug，修正！
+    hide 心愛_制服_基本_不機嫌1
+    show 心愛_制服_基本_ぐるぐる:
+        zoom 1.5
+        xalign 0.53
+        yalign -0.09
+        xalign 0.155
+        linear 0.3 yalign -2.09
     voice "voice/心愛/cca_a1_0136.ogg"
-    ai "咕啊"
+    ai 心愛_制服_基本_ぐるぐる "咕啊"
 
     # 莲 「容赦なしかよ」
+    # 然后悄悄hide心爱
+    hide 心愛_制服_基本_ぐるぐる
     lian "毫不留情的吗"
 
     # nil 「女性のノーモーションのボディブロー？を食らい、心愛は今度こそ、完全に沈黙した。」
@@ -5585,25 +5781,131 @@ label scene01:
     # nil 「気絶した心愛の身体を女性は抱き留める。」
     "女性抱着已经昏厥的心爱的身体"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 雾叶？？？ 「「安心してください、峰打ちです」」
     # 参考资料：https://ja.wikipedia.org/wiki/%E5%B3%B0%E6%89%93%E3%81%A1
-    hei "请放心，我这是峰打"
+    # 这里对话框也没有头像，修正！
+    # 雾叶到了中间，写个参数
+    show 黑_私服_ニヤリ:
+        zoom 1.5
+        xalign 0.93
+        yalign 0.015
+        linear 0.0 xalign 0.254
+        linear 0.3 xalign 0.52
+
+    transform love69_wuye_center:
+        zoom 1.5
+        xalign 0.93
+        yalign 0.015
+        xalign 0.254
+        xalign 0.52
+
+    voice "voice/霧葉/krh_a1_0011.ogg"
+    hei 黑_私服_ニヤリ "请放心，我这是峰打"
 
     # 莲 「峰打ちってなんすか」
     lian "峰打是啥？？？（L:峰打是用日本剑背上的脊（剑背）击打对手，来击败而不杀死对手，通常会导致挫伤，骨折等伤害）"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 雾叶？？？ 「で、二名様でよろしいですね？　お姫様は寝かせておきますから、顔でも洗ってきたらどうですか？　汗、かいてるみたいですよ」
-    hei "那么，两位客人对吧？公主的话会让她睡着的，你去洗个脸怎么样？看上去出了不少汗的样子"
+    hide 黑_私服_ニヤリ
+    show 黑_私服_目閉じ at love69_wuye_center
+    voice "voice/霧葉/krh_a1_0012.ogg"
+    hei 黑_私服_目閉じ "那么，两位客人对吧？公主的话会让她睡着的，你去洗个脸怎么样？看上去出了不少汗的样子"
 
     # 莲 「あ、あ…じゃぁお言葉に甘えて」
     lian "啊，嗯…那就承蒙你的好意了"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 雾叶？？？ 「You are wellcome♪」
-    hei "You are wellcome♪"
+    hide 黑_私服_目閉じ
+    show 黑_私服_ニヤリ at love69_wuye_center
+    voice "voice/霧葉/krh_a1_0013.ogg"
+    hei 黑_私服_ニヤリ "You are wellcome♪"
 
     # nil 「促されるま、俺はダイナー式のレストランの店内へと案内されるのであった。」
     "在她的催促下，我被带进了一家diner式餐厅的店内"
 
+    play sound "voice/effect/moosehead honk (stinger).ogg"
+    image bg アイキャッチ心愛＆真冬 = "images/bg/アイキャッチ心愛＆真冬.png"
+    scene アイキャッチ心愛＆真冬 with wiperight
+    pause 1.0
+
     # scene01 结束啦！！！
     # 过场： アイキャッチ心愛＆真冬
     # Demo部分文本结束
+
+    # -----------------------------------------------------------------
+    # Demo 版限定内容 起始
+    # By Luckykeeper 2021年10月9日 19点47分
+    # 后面的版本需要注释掉
+
+    scene リビングa_昼 at truecenter with wiperight
+    play music bgmfive
+
+    # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.08
+    $ sideimagesize.SideImageYalign = -29.35
+    $ sideimagesize.SideImageZoom = 0.95
+
+    show 真冬_制服_基本_おやつ3 at love69_left with Dissolve(0.15)
+    dong 真冬_制服_基本_おやつ3 "Demo版的部分到这里就结束啦！各位看官，您觉得如何呢？"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
+    show 心愛_制服_おやつ_笑顔 at love69_right with Dissolve(0.15)
+    ai 心愛_制服_おやつ_笑顔 "不出意外的话，下次再见到大家就是在正式版了呢"
+
+    # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.08
+    $ sideimagesize.SideImageYalign = -29.35
+    $ sideimagesize.SideImageZoom = 0.95
+
+    show 真冬_制服_基本_おやつ3 at love69_left
+    dong "如果您遇到了Bug，请您移步到我们项目的 Github 页面进行反馈"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
+    show 心愛_制服_おやつ_笑顔 at love69_right with Dissolve(0.15)
+    ai "如果您对翻译、程序等方面有修改建议，也欢迎到我们项目的 Github 页面进行反馈"
+
+    luckykeeper "我们项目的开源地址是 https://github.com/luckykeeper/LOVE69_renpy_remaster ，文件夹内（电脑版）也有相关说明，我会尽力让各位早日见到正式版的，也希望大家能抽出一点点时间去Github上给我们一个Star作为支持"
+
+    luckykeeper "你们的Star（Star是不要钱的哦）是我们前进最好的动力，感谢各位的陪伴，让我们正式版再见！项目组全体成员祝大家生活愉快，工作顺利！"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
+    ai "Ren'py相关问题，催更，Galgame交流，翻译问题也都可以到项目的 Github 页面( Issues 区)和我们交流哦！"
+
+    # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.08
+    $ sideimagesize.SideImageYalign = -29.35
+    $ sideimagesize.SideImageZoom = 0.95
+
+    dong "米娜桑，再会！记得常来康康我们哦！"
+
+    scene black with Dissolve(1.0)
+
+    # Demo 版限定内容 结束
+    # -----------------------------------------------------------------
