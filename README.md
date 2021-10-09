@@ -6,7 +6,7 @@
 | star数               | ![star](https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster) |
 | fork数               | ![fork](https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster) |
 | issues数             | ![issues](https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster) |
-| 项目组成员           | 1人（[Luckykeeper](https://github.com/luckykeeper)）         |
+| 项目组成员           | 3人（[Luckykeeper](https://github.com/luckykeeper)，[WorldlineChanger](https://github.com/WorldlineChanger)，[Santa-Weaves](https://github.com/Santa-Weaves)） |
 | Contributors<br/>2人 | [WorldlineChanger](https://github.com/WorldlineChanger)（两处文本润色）；<br/>[Santa-Weaves](https://github.com/Santa-Weaves)（OP歌词润色）； |
 | 项目地址             | https://github.com/luckykeeper/LOVE69_renpy_remaster         |
 | 项目组官网           | https://love69renpyremasterproject.github.io                 |
@@ -104,7 +104,7 @@ MacOS_Demo实机运行页面_对话框
 
 校对：[Luckykeeper](https://github.com/luckykeeper)
 
-测试/润色：[Luckykeeper](https://github.com/luckykeeper)
+测试/润色：[Luckykeeper](https://github.com/luckykeeper)，[WorldlineChanger](https://github.com/WorldlineChanger)，[Santa-Weaves](https://github.com/Santa-Weaves)
 
 项目组网站构建、维护：[Luckykeeper](https://github.com/luckykeeper)
 
