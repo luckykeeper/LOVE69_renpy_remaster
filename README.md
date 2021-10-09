@@ -2,7 +2,7 @@
 
 | 项目状况             | LOVE69 Ren’py Remaster Project                               |
 | -------------------- | ------------------------------------------------------------ |
-| 状态                 | 进行中（Demo版开发中）<br/>Scene 01（Demo）部分文本内容翻译完成（2021年10月1日<br/>Demo 版制作完成，开始内部测试（2021年10月9日） |
+| 状态                 | 进行中（Demo版开发中）<br/>Scene 01（Demo）部分文本内容翻译完成（2021年10月1日）<br/>Demo 版制作完成，开始内部测试（2021年10月9日） |
 | star数               | ![star](https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster) |
 | fork数               | ![fork](https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster) |
 | issues数             | ![issues](https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster) |
