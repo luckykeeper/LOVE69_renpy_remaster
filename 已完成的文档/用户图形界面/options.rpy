@@ -1,7 +1,7 @@
 # GUI自定义脚本
 # Author:Luckykeeper
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年8月31日
+# 修订日期 2021年9月7日
 # 版本号 0.0.1 “LuckyGal”
 
 
@@ -25,15 +25,29 @@ define gui.show_name = False
 
 define config.version = "0.1"
 
-
 ## 放置在游戏“关于”屏幕的文本。将文本放在三个引号之间，并在段落之间留一个空行。
 
+# Demo 版的说明
 define gui.about = _p("""
+本版为Demo版的内部测试版，请不要随意分发！！！
+
 LOVEPOTION SIXTYNINE 汉化移植版 Demo ver0.1 “LuckyGal” ，由Luckykeeper和LOVE69_Renpy_Remaster项目组倾情奉献
 
 项目页面：https://github.com/luckykeeper/LOVE69_renpy_remaster
 
-其它内容后面再写
+项目组官网：https://love69renpyremasterproject.github.io/
+
+希望各位看官老爷到我们的项目页面给我们一个Star，秋梨膏，你们的Star是我做下去的动力！Star摩多摩多，动力摩多摩多！
+
+2021年10月9日 20点10分 Demo 版基本完成，转入测试阶段
+
+Demo 版小感言
+
+Luckykeeper：今天是项目开始的第42天，没想到能这么快从完全0基础到现在的地步呢，我从这个项目里面学到了非常多的东西，也感谢陪伴我一起做Demo版的WorldlineChanger和Santa-Weaves，虽然你们做的不多，但是没有你们的参与，大家也看不到现在的这个东西。总之，期待和各位在正式版再度见面！
+
+WorldlineChanger：
+
+Santa-Weaves：
 """)
 
 
@@ -181,6 +195,30 @@ init python:
 
     # build.classify('game/**.png', 'archive')
     # build.classify('game/**.jpg', 'archive')
+
+    # 将数据打包起来
+    ## 脚本
+    build.classify("game/scripts/**", "scripts")
+    build.archive("scripts", "all")
+
+    ## 图像
+    build.classify("game/images/**", "images")
+    build.archive("images", "all")
+    ## 音频
+    build.classify("game/bgm/**", "bgm")
+    build.classify("game/voice/**", "voice")
+    build.archive("bgm", "all")
+    build.archive("voice", "all")
+    ## 视频
+    build.classify("game/video/**", "video")
+    build.archive("video", "all")
+    ## GUI
+    build.classify("game/gui/**", "gui")
+    build.archive("gui", "all")
+    # 字体
+    build.classify('game/**.ttf', 'font')
+    build.classify('game/**.otf', 'font')
+    build.archive("font", "all")
 
     ## 匹配为文档模式的文件会在 Mac 应用生成中重复出现，所以它们同时出现在 app
     ## 和 zip 文件中。
