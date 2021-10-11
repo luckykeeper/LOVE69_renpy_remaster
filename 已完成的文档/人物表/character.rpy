@@ -4,7 +4,7 @@
 # 版本 0.1.0
 # Blog：http://b.luckykeeper.site
 # 开始日期 2021年8月28日
-# 修订日期 2021年10月9日
+# 修订日期 2021年10月11日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -121,7 +121,8 @@ image side 真冬 真冬_制服_基本_おやつ1 = "images/face/真冬/真冬_�
 image side 真冬 真冬_制服_基本_おやつ2 = "images/face/真冬/真冬_制服_基本_おやつ2.png" # 闭眼，嘴开口，“w”，是有点小坏的笑呢，拿着奶糖苹果
 image side 真冬 真冬_制服_基本_おやつ3 = "images/face/真冬/真冬_制服_基本_おやつ3.png" # 闭眼，嘴开口，椭圆，是有点小萌的笑呢，拿着奶糖苹果
 image side 真冬 真冬_制服_基本_ニタァ = "images/face/真冬/真冬_制服_基本_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢
-image side 真冬 真冬_制服_基本_居眠り = "images/face/真冬/真冬_制服_基本_ニタァ.png" # 闭眼，嘴开口，半圆，碎着辽~
+# https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 04
+image side 真冬 真冬_制服_基本_居眠り = "images/face/真冬/真冬_制服_基本_居眠り.png" # 闭眼，嘴开口，半圆，碎着辽~
 
 image side 真冬 真冬_通話中 = "images/face/真冬/真冬_通話中.png" # 装在携带里面的真冬
 

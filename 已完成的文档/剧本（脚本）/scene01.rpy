@@ -5,7 +5,7 @@
 # 部分句子翻译协助：WorldlineChanger（2句）
 # 版本 0.1.0
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年10月10日
+# 修订日期 2021年10月11日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右<-2021年10月5日 搞定！
@@ -88,6 +88,8 @@ label scene01:
     lian "闭嘴"
 
     # 真冬 「はう」
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 01
+    play sound "voice/effect/なぐる2～ドンッ.ogg"
     voice "voice/真冬/maf_a1_0002.ogg"
     dong 真冬_制服_基本_泣き "哈呜"
 
@@ -107,6 +109,8 @@ label scene01:
     lian "拜托，你很烦耶"
 
     # 真冬 「はう」
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 01
+    play sound "voice/effect/なぐる2～ドンッ.ogg"
     voice "voice/真冬/maf_a1_0006.ogg"
     dong 真冬_制服_基本_泣き "哈呜"
 
@@ -133,7 +137,8 @@ label scene01:
     # 切入背景图片 mcg01_1_2
     # Demo waifu2x 测试
     image bg mcg01_1_2 = "images/bg/mcg01_1_2.png"
-    scene bg mcg01_1_2
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 02
+    scene bg mcg01_1_2 with vpunch
     # 莲 「おひょぉおう！？」
     lian "哦哦哦哦哦？！！！"
 
@@ -2181,10 +2186,11 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「飴ちゃん二本目いただきまーす♪」附加：pac/きらきら
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 03
     hide 心愛_制服_おやつ_笑顔
-    show 心愛_制服_おやつ_笑顔 at love69_right
+    show 心愛_制服_おやつ_にっこり at love69_right
     voice "voice/心愛/cca_a1_0057.ogg"
-    ai 心愛_制服_おやつ_笑顔 "我要恰第二个点心啦!"
+    ai 心愛_制服_おやつ_にっこり "我要恰第二个点心啦!"
 
     # nil 「つ…と頬を流れる汗を、裾でぬぐう。これからもっと暑くなるのか…と考えると、少しだけ気怠い。」
     "我用衣服下摆擦拭脸颊上流淌的汗水。一想到今后会更热...就不大想动了"
@@ -2198,6 +2204,8 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「すー…すー…くかーっ…」
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 04
+    # 其实是人物表有个地方定义错了
     hide 真冬_制服_基本_ジト目
     show 真冬_制服_基本_居眠り at love69_left
     voice "voice/真冬/maf_a1_0106.ogg"
@@ -2216,8 +2224,9 @@ label scene01:
     # 参考资料2：WorldlineChanger【https://worldline.top 的站长】提供的描述
     # 综合参考资料1和2 ポリバルーン 应该是【吹跑胶】阔以用这个关键词在某宝上搜索到类似产品，各大学校门口有售
     # 感觉 WorldlineChanger 的描述，味道还是蛮香的，但是请务必注意这个东西绝对不要恰哦，绝对哦，约好了哦~
-    # hide 心愛_制服_おやつ_笑顔 表情是由于的不用写了，不过这里附加的pac莫得了
-    # show 心愛_制服_おやつ_笑顔 at love69_right
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 03
+    hide 心愛_制服_おやつ_にっこり
+    show 心愛_制服_おやつ_笑顔 at love69_right
     voice "voice/心愛/cca_a1_0058.ogg"
     ai 心愛_制服_おやつ_笑顔 "我要吹一个泡泡胶气球!（L&WorldlineChanger：原文「ポリバルーン」，某宝搜索【吹跑胶】就知道是什么了，国内各大中小学校门口有售，味道还是蛮香的，但是请务必注意这个东西绝对不要恰哦，绝对哦，约好了哦~）"
 
@@ -2560,8 +2569,14 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.5
 
     # 花盆君 「…（こくり）」
-    show 花盆君_通常 at love69_huapen_center
+    show 花盆君_通常:
+        zoom 0.89
+        xalign 0.5
+        yalign -18.0
+        linear 0.1 yalign 0.02
+        linear 0.1 yalign -18.5
     # 花盆君和亚十礼用的资源都在一起，立绘我已经分开了，音声就不分了
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 05
     voice "voice/アシュリー/ash_a1_0002.ogg"
     pen "......（嗯）"
 
@@ -2600,7 +2615,13 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.5
 
     # 花盆君 「…（こくり）」
-    show 花盆君_通常 at love69_huapen_center
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 05
+    show 花盆君_通常:
+        zoom 0.89
+        xalign 0.5
+        yalign -18.0
+        linear 0.1 yalign 0.02
+        linear 0.1 yalign -18.5
     voice "voice/アシュリー/ash_a1_0003.ogg"
     pen "......（嗯）"
 
@@ -2621,7 +2642,13 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.5
 
     # 花盆君 「ぱくっ」
-    show 花盆君_通常 at love69_huapen_center
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 05
+    show 花盆君_通常:
+        zoom 0.89
+        xalign 0.5
+        yalign -18.0
+        linear 0.1 yalign 0.02
+        linear 0.1 yalign -18.5
     voice "voice/アシュリー/ash_a1_0004.ogg"
     pen "哈嗯！"
 
@@ -3330,10 +3357,11 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「なん…だと…」
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 06
     hide 心愛_制服_基本_にっこり
-    show 心愛_制服_基本_無表情 at love69_right
+    show 心愛_制服_基本_真顔 at love69_right
     voice "voice/心愛/cca_a1_0087.ogg"
-    ai 心愛_制服_基本_無表情 "什…么…？！"
+    ai 心愛_制服_基本_真顔 "什…么…？！"
 
     # 莲 「ほらほら、遊んでないで飯いくぞ。っつーか放課後じゃん」
     lian "好了，别玩了，我们去吃饭吧，不是已经放学了吗"
@@ -3402,7 +3430,7 @@ label scene01:
     # 真冬对应的voice里面是真冬和心爱两个人声音的合体呢，所以本作双人部分只需要引入显示名字的人物文件夹下的语音就好
     # 遵循原作，不再额外定义双人名称（而且 真冬&心爱 的形式颜色没想好怎么搞）
     hide 真冬_制服_基本_見下し
-    hide 心愛_制服_基本_無表情
+    hide 心愛_制服_基本_真顔
     show 心愛_制服_基本_笑顔 at love69_right
     show 真冬_制服_基本_ニタァ at love69_left
     voice "voice/真冬/maf_a1_0125.ogg"
@@ -3936,8 +3964,9 @@ label scene01:
     # nil 「俺は受け身をとりながら、その物体を掴む。」
     "我本能地抓住了那个物体"
 
-    # nil 「なんだね一体…」
-    "到底是什么啊…"
+    # 莲 「なんだね一体…」
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 07
+    lian "到底是什么啊…"
 
     # 定义MJ的位置，让它能正确显示
     transform love69_mj_center:
@@ -4045,7 +4074,8 @@ label scene01:
     "那把像是长枪一样的东西威力惊人，连用沥青做成的地面被它贯穿，以着弹点为中心，地面上裂缝不断扩大。"
 
     # 莲 「おいおいまじかよ、マジで槍が降って来るとはな…こりゃボーナス入っちゃう感じ？」
-    lian "莲：“阿巴阿巴阿巴，这真的吗，今天真的下枪了…这是要发奖金的感觉吗？（L:剧情提醒，今天莲君到班的时候女同学说太稀奇了，今天是不是会下鱼来着）"
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 08
+    lian "阿巴阿巴阿巴，这真的吗，今天真的下枪了…这是要发奖金的感觉吗？（L:剧情提醒，今天莲君到班的时候女同学说太稀奇了，今天是不是会下鱼来着）"
 
     # nil 「注・パチンコの話です。」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%91%E3%83%81%E3%83%B3%E3%82%B3
@@ -4682,10 +4712,11 @@ label scene01:
     lian "沿着这条道一直走，有我就读的学校（L:到二仙桥，走成华大道(doge)）。如果在那附近的话，饿了的学生不是会很乐意买吗"
 
     # 里昂 「おー！　なるほどそれは確かに！　わかった！　じゃぁ行ってみるよ！　ありがとう、蓮くん！　なんか、初対面なのにこんなに優しくしてくれてさ！　お話にも付き合ってくれるし！」
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 09
     hide リオン_基本_杖_驚き
-    show リオン_基本_杖_嬉しい at love69_lion_center
+    show リオン_基本_杖_にっこり at love69_lion_center
     voice "voice/リオン/ron_a1_0063.ogg"
-    lion リオン_基本_杖_嬉しい "哇！原来如此，雀食是肿么肥事儿呢！我知道了！那我这就去康康！谢谢你，莲！明明是第一次见面，却对我这么温柔！还陪我说了这么长时间的话呢！"
+    lion リオン_基本_杖_にっこり "哇！原来如此，雀食是肿么肥事儿呢！我知道了！那我这就去康康！谢谢你，莲！明明是第一次见面，却对我这么温柔！还陪我说了这么长时间的话呢！"
 
     # 莲 「あ、あ…いや、気にするなよ。俺も暇なだけだ」
     lian "啊，没事的，别在意。正好我这会儿也是闲着"
@@ -4709,7 +4740,7 @@ label scene01:
     $ sideimagesize.SideImageYalign = -7.32
     $ sideimagesize.SideImageZoom = 1.0
     # 里昂 「What's a...」
-    hide リオン_基本_杖_嬉しい
+    hide リオン_基本_杖_にっこり
     show リオン_基本_杖_無表情 at love69_lion_center
     voice "voice/リオン/ron_a1_0064.ogg"
     lion リオン_基本_杖_無表情 "What's a..."
