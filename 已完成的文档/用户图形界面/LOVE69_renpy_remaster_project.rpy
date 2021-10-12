@@ -4,7 +4,7 @@
 # Author:Luckykeeper
 # 版本 0.1.0
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年10月7日
+# 修订日期 2021年10月12日
 
 # image pure_black = "#000"
 # 开场画面
@@ -25,14 +25,6 @@ label splashscreen:
     hide ロゴ with Dissolve(1.0)
     $ renpy.pause(1, hard=True)
 
-    # # Warning 后面会做，要修图，记得一定要加上癫痫提醒，里面很多地方闪来闪去，不然会死人的！
-    # show coution at truecenter with Dissolve(1.0)
-    # $ renpy.pause(1, hard=True)
-    # pause 1.0
-    # $ renpy.pause(1, hard=True)
-    # hide coution with Dissolve(1.0)
-    # $ renpy.pause(1, hard=True)
-
     # LOVE69_Renpy_Remaster_Project
     show pureblack at truecenter
     show love69renpyremasterproject at truecenter with Dissolve(1.0)
@@ -41,6 +33,17 @@ label splashscreen:
     $ renpy.pause(1, hard=True)
     hide love69renpyremasterproject with Dissolve(1.0)
     hide pureblack
+    $ renpy.pause(1, hard=True)
+
+    # Warning 后面会做，要修图，记得一定要加上癫痫提醒，里面很多地方闪来闪去，不然会死人的！
+    show white:
+        zoom 2.0
+    show caution with Dissolve(1.0):
+        zoom 0.24
+    $ renpy.pause(10, hard=True)
+    pause 10.0
+    $ renpy.pause(10, hard=True)
+    hide caution with Dissolve(1.0)
     $ renpy.pause(1, hard=True)
 
 # 主菜单之前
