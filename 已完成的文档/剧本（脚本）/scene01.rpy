@@ -5,7 +5,7 @@
 # 部分句子翻译协助：WorldlineChanger（2句）
 # 版本 0.1.0
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年10月11日
+# 修订日期 2021年10月13日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右<-2021年10月5日 搞定！
@@ -942,8 +942,8 @@ label scene01:
     # 在我说话的时候提前让真冬变下表情，不过先让她等会儿
     hide 真冬_制服_基本_まったり
     show 真冬_制服_基本_ニタァ at love69_center
-    # Luckykeeper 来自翻译君的消息
-    luckykeeper "上面这个小视频，是love69（冰淇淋）的广告（CM），最终会做简单翻译，但是目前还没有...不过大意应该能看懂吧，我是看懂辽"
+    # Luckykeeper 来自翻译君的消息 2021年10月12日 翻译完成！
+    # luckykeeper "上面这个小视频，是love69（冰淇淋）的广告（CM），最终会做简单翻译，但是目前还没有...不过大意应该能看懂吧，我是看懂辽"
 
 
     # 真冬 「お兄ちゃん私これ欲しい」
@@ -5922,6 +5922,8 @@ label scene01:
     luckykeeper "我们项目的开源地址是 https://github.com/luckykeeper/LOVE69_renpy_remaster ，文件夹内（电脑版）也有相关说明，我会尽力让各位早日见到正式版的，也希望大家能抽出一点点时间去Github上给我们一个Star作为支持"
 
     luckykeeper "你们的Star（Star是不要钱的哦）是我们前进最好的动力，感谢各位的陪伴，让我们正式版再见！项目组全体成员祝大家生活愉快，工作顺利！"
+
+    luckykeeper "另外，在游戏的“game”目录下，有个“Demo版发行Readme”文件，里面有好康的，如果还没看的话稍后记得去康一下哦！"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
