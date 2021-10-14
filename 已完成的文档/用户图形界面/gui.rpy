@@ -1,8 +1,8 @@
 # GUI自定义脚本
 # Author:Luckykeeper
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年8月31日
-# 版本号 0.0.1 “LuckyGal”
+# 修订日期 2021年10月14日
+# 版本号 0.1.0 “LuckyGal”
 # 源文件名：gui.rpy
 
 ## “init offset”语句可使此文件中的初始化语句在任何其他文件中的“init”语句之前运
