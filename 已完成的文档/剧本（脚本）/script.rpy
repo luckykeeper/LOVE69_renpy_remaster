@@ -8,7 +8,8 @@
 # Author:Luckykeeper
 # Blog：http://b.luckykeeper.site
 # 开始日期 2021年8月28日
-# 修订日期 2021年9月6日
+# 修订日期 2021年10月15日
+# 版本 0.1.0
 
 # 制作流程
 # ①导入全部文本+润色汉化，不带图像
@@ -16,6 +17,7 @@
 # ③为op加上嵌入字幕（ass，然后嵌入），参考十月翻译组版本；为里面的视频加字幕
 # ④完成视觉资源的waifu2x，从720p放大到2K
 #（主流手机屏幕和大多数设备的情况，大小和质量的均衡点（偏质量）根据之前的测试，视频插帧效果不好，所以只放大）
+# 二测，只有op的效果不好，除 op 外都做60帧
 # ⑤导入图像和视频，对照程序逆向出特效，以及音频（音频不需要进行处理）
 # ⑥制作GUI
 # ⑦打包发布
@@ -34,9 +36,19 @@
 # 主程序正式开始，现在只加入文本
 # 版本：null（还未完成）
 
+###### 定义：周目数 ######
+# 周目相关持久化变量
+# 默认：一周目
+# Demo 版预定义周目数为一便于与后续版本继承
+default persistent.playthrough = 1
 
+# 输出周目数到log
+init python:
+    def log_playthrough():
+        renpy.save_persistent()
+        renpy.log("当前的周目数: %s" % persistent.playthrough)
 
-###### 定义：动态序列帧图 ####
+###### 定义：动态序列帧图 ######
 # 定义的脚本非常多，手动打是不可能的（callgif是我手动打的），请活用excel生成脚本
 # 注意前面是tab不是4个空格
 # 参考学习资料：https://zhidao.baidu.com/question/396252272874502485.html
@@ -45,6 +57,9 @@
 # 经测试，使用替换功能是最简单的，前面先打一个空格，然后用替换功能，tab从vscode里面复制
 # 发现我确实是不会用office，怪不得计算机二级office没过呢（2333）
 # 感谢 WorldlineChanger 的提醒
+
+# 来自 Luckykeeper 的提醒：
+# callscr （60张图）基本上达到了机械硬盘读取文件的瓶颈，再做大了会非常卡顿，多的一定要做视频来放
 
 # 定义真冬介绍小动画
 # 不做了，参考scene01的166行
@@ -774,8 +789,10 @@ screen callscr:
 # 一周目开始前 主题BGM：anonatsu_piano.ogg
 
 label start:
+    $ log_playthrough()
+
 # 游戏开始
-    stop music # 停止主菜单音乐
+    stop music fadeout 2.0 # 停止主菜单音乐
     play sound "voice/effect/start.ogg" # 播放开始音效
     with fade # 主菜单到正式游戏的过场
     pause 0.8

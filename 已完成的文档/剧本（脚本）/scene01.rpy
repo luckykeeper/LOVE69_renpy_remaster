@@ -5,7 +5,7 @@
 # 部分句子翻译协助：WorldlineChanger（2句）
 # 版本 0.1.0
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年10月13日
+# 修订日期 2021年10月15日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右<-2021年10月5日 搞定！
@@ -149,7 +149,7 @@ label scene01:
     "突然感觉晴天霹雳似的，我的身体一下就从床上跳了起来"
 
     ## BGM引入：honky tonk saloon (pad)
-    play music "bgm/bgm13.ogg"
+    play music "bgm/bgm13.ogg" fadein 2.0
 
     # 真冬 「ぐーてんたーく？　マイブラザー」 //ぐーてんたーく听上去好像德语，懂的老哥翻一下
     image bg mcg01_1_1 = "images/bg/mcg01_1_1.png"
@@ -1196,7 +1196,7 @@ label scene01:
 
     ### 开门声 心爱登场，bgm切换
     ### honky tonk saloon (pad).ogg 14 --> sweet passion.ogg 28
-    play music "bgm/bgm28.ogg"
+    play music "bgm/bgm28.ogg" fadeout 1.0 fadein 1.0
 
     # 心爱？？？ 「わーい！　おっはよー！　まふまふー！　迎えにきましたよーん♪」
     # 参见 character.rpy 心爱？？？ 的代号是 fen
@@ -1240,7 +1240,7 @@ label scene01:
     fen 粉_制服_基本_不機嫌 "话说不是有人在吗！快把门打开！我再也不会推销宗教用的碑石啦！"
 
     ### 开门声 心爱再次登场 附加表情：pac/喜び
-    play music "bgm/bgm28.ogg"
+    play music "bgm/bgm28.ogg" fadein 1.0
     play sound "voice/effect/07_ドア1～あける.ogg"
 
     # 心爱？？？ 「おっはよー！　真冬ちゃーん！　迎えにきたよー！」
@@ -1271,7 +1271,7 @@ label scene01:
     fen 粉_制服_基本_不機嫌 "哈啊！开门啊！！ 开门呐喂！！！"
 
     ### 开门 心爱登场 开门声 BGM 开  附加表情：pac/喜び
-    play music "bgm/bgm28.ogg"
+    play music "bgm/bgm28.ogg" fadein 1.0
     play sound "voice/effect/07_ドア1～あける.ogg"
 
     # 心爱？？？ 「わーい！　おっはよー！　まっふまふちゃーん迎えにきーましたよー！　あ、それと、梅昆布茶ごちそうさまでした、ぺこり」
@@ -1323,7 +1323,7 @@ label scene01:
 
     #BGM再开
     # 心爱？？？ 「今日はいつになく風当たり強いねまふまふちゃ…ん？　あれ？　髪切った？」
-    play music "bgm/bgm28.ogg"
+    play music "bgm/bgm28.ogg" fadein 1.0
     hide 心愛_制服_基本_ジト目
     show 心愛_制服_基本_泣き at love69_center
     voice "voice/心愛/cca_a1_0018.ogg"
@@ -4084,7 +4084,7 @@ label scene01:
     # BGM 出现（有歌词）一股中东味儿的那个就是
     # 尝试用编号引入 BGM 康康
     # 大成功！
-    play music bgmforty
+    play music bgmforty fadein 4.0
     # 里昂初登场
     # 来给里昂设计参数吧
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
@@ -4236,10 +4236,10 @@ label scene01:
     ### 场景切换
     # BGM：英文歌-->里昂主题曲
     # 地点：商业街（没变）
-    stop music
+    # stop music
     scene black
     scene 通学路c_昼 at love69_bg1440 with wipeleft
-    play music bgmtwentyfour
+    play music bgmtwentyfour fadeout 0.8 fadein 1.0
     show 黄_基本_杖_微笑み at love69_lion_center with Dissolve(0.15)
 
     # 里昂？？？ 「えーと…とりあえず、うちのMJを捕まえてくれてありがとうございます」
@@ -4924,7 +4924,7 @@ label scene01:
         yalign -0.09
 
     # 心爱 「れ——ーんくううううん」附加：喜
-    play music bgmtwentyeight
+    play music bgmtwentyeight fadein 1.0
     show 心愛_制服_基本_にっこり with Dissolve(0.15):
         zoom 1.5
         xalign 0.53
@@ -4977,7 +4977,7 @@ label scene01:
     lian "你小子，果然注意到这个了吗？"
 
     # BGM 心爱变身！进入心爱的回合！
-    play music bgmtwentyfive
+    play music bgmtwentyfive fadein 1.0
     # nil 「心愛が一度脚を止めて、俺の右手に握られている『何か』を視認したようだ。一瞬にして場の空気が変わったことを肌で感じる。」
     "心爱停下了脚步，似乎看到了握在我右手里的『那个东西』。我能感觉到气氛瞬间发生了变化"
 
@@ -5873,7 +5873,7 @@ label scene01:
     play sound "voice/effect/moosehead honk (stinger).ogg"
     image bg アイキャッチ心愛＆真冬 = "images/bg/アイキャッチ心愛＆真冬.png"
     scene アイキャッチ心愛＆真冬 with wiperight
-    pause 1.0
+    $ renpy.pause(1.5, hard=True)
 
     # scene01 结束啦！！！
     # 过场： アイキャッチ心愛＆真冬
@@ -5885,7 +5885,7 @@ label scene01:
     # 后面的版本需要注释掉
 
     scene リビングa_昼 at truecenter with wiperight
-    play music bgmfive
+    play music bgmfive fadein 1.0
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
