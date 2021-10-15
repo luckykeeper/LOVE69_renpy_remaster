@@ -1,7 +1,7 @@
 # GUI自定义脚本
 # Author:Luckykeeper
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年10月14日
+# 修订日期 2021年10月15日
 # 版本号 0.1.0 “LuckyGal”
 
 
@@ -13,7 +13,7 @@
 ## 带有 _() 的字符串表示其可被翻译。
 
 # sence01 完成之后会做一个demo来验证可行性，下面是 demo 的暂定标题
-define config.name = _("LOVEPOTION SIXTYNINE 汉化移植版 Demo ver0.1 “LuckyGal” ，由Luckykeeper和LOVE69_Renpy_Remaster项目组倾情奉献")
+define config.name = _("LOVEPOTION SIXTYNINE 汉化移植版 Demo ver0.1 “LuckyGal” ，由Luckykeeper和LOVE69 Ren'py Remaster Project倾情奉献")
 
 
 ## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。
@@ -29,8 +29,6 @@ define config.version = "0.1"
 
 # Demo 版的说明
 define gui.about = _p("""
-本版为Demo版的内部测试版，请不要随意分发！！！
-
 LOVEPOTION SIXTYNINE 汉化移植版 Demo ver0.1 “LuckyGal” ，由Luckykeeper和LOVE69_Renpy_Remaster项目组倾情奉献
 
 项目页面：https://github.com/luckykeeper/LOVE69_renpy_remaster
@@ -39,7 +37,21 @@ LOVEPOTION SIXTYNINE 汉化移植版 Demo ver0.1 “LuckyGal” ，由Luckykeepe
 
 希望各位看官老爷到我们的项目页面给我们一个Star，秋梨膏，你们的Star是我做下去的动力！Star摩多摩多，动力摩多摩多！
 
-2021年10月9日 20点10分 Demo 版基本完成，转入测试阶段
+Demo版制作成员
+
+组长：Luckykeeper
+
+程序：Luckykeeper
+
+翻译：Luckykeeper
+
+美工：Luckykeeper
+
+校对：Luckykeeper
+
+测试/润色：Luckykeeper，WorldlineChanger，Santa-Weaves
+
+项目组网站构建、维护：Luckykeeper
 
 Demo 版小感言
 
@@ -96,12 +108,12 @@ define config.intra_transition = dissolve
 
 ## 载入游戏后使用的转场。
 
-define config.after_load_transition = None
+define config.after_load_transition = dissolve
 
 
 ## 在游戏结束之后进入主菜单时使用的转场。
 
-define config.end_game_transition = None
+define config.end_game_transition = dissolve
 
 
 ## 用于控制在游戏开始标签不存在时转场的变量。作为替代，在显示初始化场景后使用

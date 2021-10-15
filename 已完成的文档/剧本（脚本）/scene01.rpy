@@ -5939,7 +5939,8 @@ label scene01:
 
     dong "米娜桑，再会！记得常来康康我们哦！"
 
-    scene black with Dissolve(1.0)
+    stop music fadeout 3.0
+    scene black with Dissolve(3.0)
 
     # Demo 版限定内容 结束
     # -----------------------------------------------------------------
