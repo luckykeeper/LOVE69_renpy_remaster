@@ -92,6 +92,20 @@ MacOS_Demo实机运行页面_对话框
 
 <img src="images/MacOS_Demo实机运行页面_对话框.png" alt="MacOS_Demo实机运行页面_对话框.png" style="zoom:20%;" />
 
+WEB版 Demo实机运行页面
+
+​	WEB页面已经上传了，想尝鲜的话可以前往[WEB版_Demo服务器](https://love69demo.luckykeeper.site/)（服务器在莫斯科，推荐在北京时间早上这样的低峰期访问，其它时段可能会遇到无法访问，速度缓慢等问题）
+
+​	需要注意的是，WEB版是 Ren‘py 的实验性功能，实际体验并不是很好，很多音声、音效等等都不能正常加载，如果遇到页面/人物马赛克，这是因为对应的资源还没下载下来，可以通过反复按鼠标右键来让它重新加载，另外，WEB版与其它版本的内容并不同步，当前的WEB版更新时间为：2021年10月15日
+
+​	有条件的话还是去玩电脑/手机版（2021年10月24号会发布）吧
+
+<img src="images/WEB版测试（生产环境）.png" alt="WEB版Demo实机运行页面1" style="zoom:20%;" />
+
+<img src="images/WEB版测试（生产环境2）.png" alt="WEB版Demo实机运行页面2" style="zoom:20%;" />
+
+<img src="images/WEB版测试.png" alt="WEB版Demo实机运行页面3" style="zoom:20%;" />
+
 ## 👏成员👏
 
 组长：[Luckykeeper](https://github.com/luckykeeper)
@@ -170,7 +184,7 @@ CG、BGM等素材的解包工作已全部完成，无需帮助
 - 项目可能因为学业原因无限期推迟（学业繁忙+是只鸽子😅）~~【所以有其他人想来汉化那是大欢迎，也欢迎使用本项目已经汉化好的文本和提取出的日语文本~~，不过如果用的话请加上我的名字（Luckykeeper）】{就不要着急催着填坑了哈}【2021.09.08_注：做不完的可能性不大，目前还是非常顺利的，我非常有信心能把坑填完，烦请各位大大就不要抢坑了哈】
 - 项目相关文件解压密码为本页面网址（即 https://github.com/luckykeeper/LOVE69_renpy_remaster ）下载链接暂时取消
 - 出于各种原因，本次汉化移植并不会对“gkd”的内容（即 Hscene ）进行汉化和移植![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
-- 本页面最后修改时间 2021年10月9日
+- 本页面最后修改时间 2021年10月16日
 
 ## Stargazers over time 
 
