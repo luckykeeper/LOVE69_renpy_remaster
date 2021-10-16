@@ -106,7 +106,7 @@ WEB版 Demo实机运行页面
 
 <img src="images/WEB版测试（生产环境2）.png" alt="WEB版Demo实机运行页面2" style="zoom:20%;" />
 
-<img src="images/WEB版测试.png" alt="WEB版Demo实机运行页面3" style="zoom:20%;" />
+<img src="images/WEB版测试.PNG" alt="WEB版Demo实机运行页面3" style="zoom:20%;" />
 
 ## 👏成员👏
 
