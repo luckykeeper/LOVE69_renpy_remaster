@@ -1,10 +1,10 @@
-# --------------------------------
+﻿# --------------------------------
 # LOVE69_Renpy_Remaster_Project
 # 各种GUI设定的详细设置
 # Author:Luckykeeper
 # 版本 0.1.0
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年10月14日
+# 修订日期 2021年10月26日
 ################################################################################
 ## 初始化
 ################################################################################
@@ -26,9 +26,10 @@ init offset = -1
 #    $ sideimagesize.SideImageZoom = 0.5
 # 下面三个参数需要先给出初始值，通过持久化数据存储这些参数
 init python in sideimagesize:
-     SideImageXalign = 0.08
-     SideImageYalign = -29.35
-     SideImageZoom = 0.95
+    # 这里的缩放莫名其妙多了一格，不知道为啥，姑且删掉
+    SideImageXalign = 0.08
+    SideImageYalign = -29.35
+    SideImageZoom = 0.95
 
 
 # 针对大的 add SideImage() xalign 0.12 yalign 9.1 zoom 0.35 使用时调用以下参数
@@ -131,6 +132,9 @@ screen say(who, what):
     window:
         id "window"
         # 在这里从命名空间导入变量，记得需要在if判断体前完成哦，不过不能超出window部分
+        # 2021年10月26日 下面这句居然开始报warning（store.sideimagesize，去store就好，但是跑不起来）了，但是store不能去，去了就炸
+        # 开发使用Ren'py7.4.6，此时官网最新版为7.4.10，怀疑是新版改了些什么东西
+        # 暂时不考虑升级最新版，但是由于这版在Win11视频解码存在问题，最终做完之后考虑上下最新版
         $ import store.sideimagesize as sideimagesize
 
         if who is not None:

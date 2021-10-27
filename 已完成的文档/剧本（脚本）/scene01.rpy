@@ -1,16 +1,18 @@
-# --------------------------------
+﻿# --------------------------------
 # LOVE69_Renpy_Remaster_Project
 # scene01 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：WorldlineChanger（2句）
 # 版本 0.1.0
 # Blog：http://b.luckykeeper.site
-# 修订日期 2021年10月15日
+# 项目组网站：https://love69renpyremasterproject.github.io/
+# 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
+# 修订日期 2021年10月26日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右<-2021年10月5日 搞定！
 # 开场心爱的语音<-2021年10月5日 搞定！
-# （不是bug！）标有^^^的参考资料发布的时候要记得上传项目组官网
+# （不是bug！）标有^^^的参考资料发布的时候要记得上传项目组官网<-2021年10月23日已传
 
 label scene01:
 
@@ -88,7 +90,7 @@ label scene01:
     lian "闭嘴"
 
     # 真冬 「はう」
-    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 01
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 01  
     play sound "voice/effect/なぐる2～ドンッ.ogg"
     voice "voice/真冬/maf_a1_0002.ogg"
     dong 真冬_制服_基本_泣き "哈呜"
@@ -109,7 +111,7 @@ label scene01:
     lian "拜托，你很烦耶"
 
     # 真冬 「はう」
-    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 01
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 01  
     play sound "voice/effect/なぐる2～ドンッ.ogg"
     voice "voice/真冬/maf_a1_0006.ogg"
     dong 真冬_制服_基本_泣き "哈呜"
@@ -2697,7 +2699,7 @@ label scene01:
     hide 花盆君_通常 with Dissolve(0.15)
     scene black
     scene 教室_昼 at love69_bg1220 with wipeleft
-
+    
 
     # nil 「予鈴が鳴り響く。それと同時に教室の前側の扉が開き、担任の教師が姿を現した。」
     "预备铃响起。与此同时，教室的前门被班主任打开了"
@@ -4241,7 +4243,7 @@ label scene01:
     scene 通学路c_昼 at love69_bg1440 with wipeleft
     play music bgmtwentyfour fadeout 0.8 fadein 1.0
     show 黄_基本_杖_微笑み at love69_lion_center with Dissolve(0.15)
-
+    
     # 里昂？？？ 「えーと…とりあえず、うちのMJを捕まえてくれてありがとうございます」
     voice "voice/リオン/ron_a1_0027.ogg"
     ang "嗯……总之，谢谢你帮我抓住了我家的MJ"
@@ -4300,7 +4302,7 @@ label scene01:
     # 莲 「ドク」
     # 参考资料：https://ja.wikipedia.org/wiki/ドク
     lian "Doc"
-
+    
     # 翻译君的豆知识时间两连击！
     luckykeeper "「ドク(Doc)」是1996年10月17日- 12月19日在富士电视台连续播出的电视剧，大概讲的是长濑雪在去越南旅行时遇到了越南青年ドク。回到日本后，在语言学校担任日语教师的长濑雪与ドク重逢"
 
@@ -4931,7 +4933,7 @@ label scene01:
         yalign -0.09
     voice "voice/心愛/cca_a1_0101.ogg"
     ai 心愛_制服_基本_にっこり "莲——君——！"
-
+        
     # 莲 「んお？」
     lian "嗯？"
 
@@ -5005,7 +5007,7 @@ label scene01:
     # 心爱变身长动画
     # 受原作引擎封包限制，不能完全还原了呢，敬请谅解
     $ renpy.movie_cutscene("video/心愛覚醒_長.webm",stop_music=False)
-
+    
 
     # 这个语句是针对心爱觉醒设计的参数，能够调整觉醒的心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.04
@@ -5089,7 +5091,7 @@ label scene01:
     hide 心愛_トランザム
     # nil 「心愛が跳ねて、右腕を伸ばす。」
     "心爱跳起来，伸出右臂"
-
+    
     # 心爱从屏幕右边闪现！
     # CropMove和hpunch似乎不能连用呢，抛弃hpench
     show 心愛_トランザム at love69_xinai_center with CropMove(0.15,mode="wipeleft"):
@@ -5109,7 +5111,7 @@ label scene01:
     $ sideimagesize.SideImageXalign = -0.04
     $ sideimagesize.SideImageYalign = 23.8
     $ sideimagesize.SideImageZoom = 0.55
-
+        
     # 心爱 「こは…俺の距離だ！」
     voice "voice/心愛/cca_a1_0109.ogg"
     ai "这是…我的距离！"
@@ -5143,7 +5145,7 @@ label scene01:
     show 心愛_トランザム at love69_xinai_center:
         yalign 0.053
         xalign 0.43
-
+    
     # 莲 「食らえ！」
     lian "给我恰！"
 
@@ -5165,7 +5167,7 @@ label scene01:
         xalign 0.43
         linear 0.15 yalign -0.001
         linear 0.15 yalign 0.053
-
+    
     # 心爱 「むぐっ」
     voice "voice/心愛/cca_a1_0111.ogg"
     ai "唔！"
@@ -5828,7 +5830,7 @@ label scene01:
         yalign 0.015
         linear 0.0 xalign 0.254
         linear 0.3 xalign 0.52
-
+    
     transform love69_wuye_center:
         zoom 1.5
         xalign 0.93
@@ -5877,70 +5879,75 @@ label scene01:
 
     # scene01 结束啦！！！
     # 过场： アイキャッチ心愛＆真冬
-    # Demo部分文本结束
+    # Demo部分文本结束 
 
-    # -----------------------------------------------------------------
-    # Demo 版限定内容 起始
-    # By Luckykeeper 2021年10月9日 19点47分
-    # 后面的版本需要注释掉
+    # 可能需要在这里做个持久化变量，用于Gallery
 
-    scene リビングa_昼 at truecenter with wiperight
-    play music bgmfive fadein 1.0
+    # scene01 结束，跳转到scene02
+    jump scene02
 
-    # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.08
-    $ sideimagesize.SideImageYalign = -29.35
-    $ sideimagesize.SideImageZoom = 0.95
+    # # -----------------------------------------------------------------
+    # # Demo 版限定内容 起始
+    # # By Luckykeeper 2021年10月9日 19点47分
+    # # 后面的版本需要注释掉
 
-    show 真冬_制服_基本_おやつ3 at love69_left with Dissolve(0.15)
-    dong 真冬_制服_基本_おやつ3 "Demo版的部分到这里就结束啦！各位看官，您觉得如何呢？"
+    # scene リビングa_昼 at truecenter with wiperight
+    # play music bgmfive fadein 1.0
 
-    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.10
-    $ sideimagesize.SideImageYalign = 15.72
-    $ sideimagesize.SideImageZoom = 0.96
+    # # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
+    # $ sideimagesize.SideImageXalign = 0.08
+    # $ sideimagesize.SideImageYalign = -29.35
+    # $ sideimagesize.SideImageZoom = 0.95
 
-    show 心愛_制服_おやつ_笑顔 at love69_right with Dissolve(0.15)
-    ai 心愛_制服_おやつ_笑顔 "不出意外的话，下次再见到大家就是在正式版了呢"
+    # show 真冬_制服_基本_おやつ3 at love69_left with Dissolve(0.15)
+    # dong 真冬_制服_基本_おやつ3 "Demo版的部分到这里就结束啦！各位看官，您觉得如何呢？"
 
-    # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.08
-    $ sideimagesize.SideImageYalign = -29.35
-    $ sideimagesize.SideImageZoom = 0.95
+    # # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    # $ sideimagesize.SideImageXalign = 0.10
+    # $ sideimagesize.SideImageYalign = 15.72
+    # $ sideimagesize.SideImageZoom = 0.96
 
-    show 真冬_制服_基本_おやつ3 at love69_left
-    dong "如果您遇到了Bug，请您移步到我们项目的 Github 页面进行反馈"
+    # show 心愛_制服_おやつ_笑顔 at love69_right with Dissolve(0.15)
+    # ai 心愛_制服_おやつ_笑顔 "不出意外的话，下次再见到大家就是在正式版了呢"
 
-    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.10
-    $ sideimagesize.SideImageYalign = 15.72
-    $ sideimagesize.SideImageZoom = 0.96
+    # # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
+    # $ sideimagesize.SideImageXalign = 0.08
+    # $ sideimagesize.SideImageYalign = -29.35
+    # $ sideimagesize.SideImageZoom = 0.95
 
-    show 心愛_制服_おやつ_笑顔 at love69_right with Dissolve(0.15)
-    ai "如果您对翻译、程序等方面有修改建议，也欢迎到我们项目的 Github 页面进行反馈"
+    # show 真冬_制服_基本_おやつ3 at love69_left
+    # dong "如果您遇到了Bug，请您移步到我们项目的 Github 页面进行反馈"
 
-    luckykeeper "我们项目的开源地址是 https://github.com/luckykeeper/LOVE69_renpy_remaster ，文件夹内（电脑版）也有相关说明，我会尽力让各位早日见到正式版的，也希望大家能抽出一点点时间去Github上给我们一个Star作为支持"
+    # # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    # $ sideimagesize.SideImageXalign = 0.10
+    # $ sideimagesize.SideImageYalign = 15.72
+    # $ sideimagesize.SideImageZoom = 0.96
 
-    luckykeeper "你们的Star（Star是不要钱的哦）是我们前进最好的动力，感谢各位的陪伴，让我们正式版再见！项目组全体成员祝大家生活愉快，工作顺利！"
+    # show 心愛_制服_おやつ_笑顔 at love69_right with Dissolve(0.15)
+    # ai "如果您对翻译、程序等方面有修改建议，也欢迎到我们项目的 Github 页面进行反馈"
 
-    luckykeeper "另外，在游戏的“game”目录下，有个“Demo版发行Readme”文件，里面有好康的，如果还没看的话稍后记得去康一下哦！"
+    # luckykeeper "我们项目的开源地址是 https://github.com/luckykeeper/LOVE69_renpy_remaster ，文件夹内（电脑版）也有相关说明，我会尽力让各位早日见到正式版的，也希望大家能抽出一点点时间去Github上给我们一个Star作为支持"
 
-    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.10
-    $ sideimagesize.SideImageYalign = 15.72
-    $ sideimagesize.SideImageZoom = 0.96
+    # luckykeeper "你们的Star（Star是不要钱的哦）是我们前进最好的动力，感谢各位的陪伴，让我们正式版再见！项目组全体成员祝大家生活愉快，工作顺利！"
 
-    ai "Ren'py相关问题，催更，Galgame交流，翻译问题也都可以到项目的 Github 页面( Issues 区)和我们交流哦！"
+    # luckykeeper "另外，在游戏的“game”目录下，有个“Demo版发行Readme”文件，里面有好康的，如果还没看的话稍后记得去康一下哦！"
 
-    # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.08
-    $ sideimagesize.SideImageYalign = -29.35
-    $ sideimagesize.SideImageZoom = 0.95
+    # # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    # $ sideimagesize.SideImageXalign = 0.10
+    # $ sideimagesize.SideImageYalign = 15.72
+    # $ sideimagesize.SideImageZoom = 0.96
 
-    dong "米娜桑，再会！记得常来康康我们哦！"
+    # ai "Ren'py相关问题，催更，Galgame交流，翻译问题也都可以到项目的 Github 页面( Issues 区)和我们交流哦！"
 
-    stop music fadeout 3.0
-    scene black with Dissolve(3.0)
+    # # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
+    # $ sideimagesize.SideImageXalign = 0.08
+    # $ sideimagesize.SideImageYalign = -29.35
+    # $ sideimagesize.SideImageZoom = 0.95
 
-    # Demo 版限定内容 结束
-    # -----------------------------------------------------------------
+    # dong "米娜桑，再会！记得常来康康我们哦！"
+
+    # stop music fadeout 3.0
+    # scene black with Dissolve(3.0)
+
+    # # Demo 版限定内容 结束
+    # # -----------------------------------------------------------------
