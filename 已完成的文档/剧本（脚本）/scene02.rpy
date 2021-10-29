@@ -7,7 +7,7 @@
 # Blog：http://b.luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2021年10月26日
+# 修订日期 2021年10月29日
 
 # 当前流程：整理生肉文本，翻译并润色
 
@@ -18,7 +18,7 @@ label scene02:
     # BGM：雾叶店内的音乐（嘤语的）
     image bg 霧葉ちゃんのお店 = "images/bg/霧葉ちゃんのお店.png"
     scene 霧葉ちゃんのお店 with wiperight
-    
+
     # nil 「案内された店内は、アメリカンダイナーの名に恥じない、クラシックでアメリカ風の装飾で、」
     "进入店内，映入眼帘的是经典的美式装饰，雀食和传单上宣传的美式餐厅的名号很匹配呢"
 
@@ -202,5 +202,8 @@ label scene02:
 
     # 店长 「こは第三惑星ジェネシス、君はEDFの惑星探査員で地質学者の『エレナ・ユン・グラード』だ」
     # 第三惑星ジェネシス 参考资料：https://ja.wikipedia.org/wiki/猿の惑星:_創世記
-    # EDFの惑星 参考资料：
-    dinerowner "这是创世纪第三行星，你是行星探查员，地质学家的『艾莉娜・尤恩・格拉德』"
+    # EDFの惑星 参考资料：https://ja.wikipedia.org/wiki/宇宙戦艦ヤマト
+    # 『エレナ・ユン・グラード』 不知道是什么梗？
+    dinerowner "这是创世纪第三行星，你是地球防卫军行星探查员，地质学家的『艾莉娜・尤恩・格拉德』"
+
+    luckykeeper "又到豆知识时间啦!创世纪第三行星（第三惑星ジェネシス）是猩球崛起（猿の惑星: 創世記）的梗，地球防卫军行星探查员（EDFの惑星探査員）推测是『宇宙战舰大和号』的梗，人名实在没看出来是哪里的"
