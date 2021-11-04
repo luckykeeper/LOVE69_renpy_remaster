@@ -7,7 +7,7 @@
 # Blog：http://b.luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2021年11月3日
+# 修订日期 2021年11月4日
 
 # 当前流程：整理生肉文本，翻译并润色
 
@@ -669,3 +669,8 @@ label scene02:
 
     # nil 「アイスクリーム屋にて」
     "在冰淇淋店"
+
+    # nil 「ほら、お前の大好きなコールドストーンだぞ」
+    # コール:call
+    # 参考视频：https://www.bilibili.com/video/av711502425/
+    "你看，是你最喜欢的冷石冰淇淋（L:就是在冷石板上炒出来的冰淇淋，简单来说，就是“炒冰淇淋”）"
