@@ -2,7 +2,7 @@
 # LOVE69_Renpy_Remaster_Project
 # scene02 的脚本（剧本）
 # Author:Luckykeeper
-# 部分句子翻译协助：
+# 部分句子翻译协助：WorldlineChanger（一处豆知识）
 # 版本 null
 # Blog：http://b.luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
@@ -869,3 +869,17 @@ label scene02:
     # 参考资料：https://dictionary.goo.ne.jp/word/%E5%BC%A5_%28%E3%81%84%E3%82%84%29/#jn-15196
     # 中文参考资料：http://wenda.tianya.cn/question/0040c2ae69072d88?sort=t
     lian "就这样吧"
+
+    # 场景切换
+    # 购物街->るなちー的店
+    # 人物：心爱 莲
+    # BGM变 有点怪的 像RPG游戏里面的那种
+
+    # nil 「街の片隅にある変なお店にて。・るなちーのお店」
+    # 参考资料：https://seesaawiki.jp/theunusualskyblock/d/%CD%D1%B8%EC%B2%F2%C0%E2#content_1_9_27
+    # 参考资料：https://seesaawiki.jp/theunusualskyblock/d/%c6%c3%bc%ec%a5%e2%a5%f3%a5%b9%a5%bf%a1%bc#
+    # 整合包参考资料：https://skyblock.jp
+    "在街道角落里的奇怪的店・るなちー的店"
+
+    # 是W的豆知识时间哟~
+    luckykeeper "这回是WorldlineChanger的豆知识时间哦！るなちー是skyblock的mc整合包里面的狂气之瞳的爱称，攻击带有多种debuff，不是很好对付"
