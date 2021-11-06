@@ -882,4 +882,8 @@ label scene02:
     "在街道角落里的奇怪的店・るなちー的店"
 
     # 是W的豆知识时间哟~
-    luckykeeper "这回是WorldlineChanger的豆知识时间哦！るなちー是skyblock的mc整合包里面的狂气之瞳的爱称，攻击带有多种debuff，不是很好对付"
+    luckykeeper "这回是WorldlineChanger的豆知识时间哦！るなちー是the unusual skyblock的mc整合包里面的狂气之瞳的爱称，攻击带有多种debuff，不是很好对付"
+
+    # 翻译君的豆知识时间哒~
+    # 参考资料：https://twitter.com/lunachi_bot
+    luckykeeper "接着是L的豆知识时间，最开始我和W都是向这mc的方向想的，不过问了10多个人都不知道，于是换了个思路到twitter搜了一下，发现本作的前作月宮瑠那的宣传账号用的是这个名字るなちー_bot（@Lunachi_bot）从时间上面考虑，我个人认为这一说更加合理。所以，你作作者到底是从哪儿搞来的阴间梗啊？！"
