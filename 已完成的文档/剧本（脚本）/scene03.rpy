@@ -3,7 +3,7 @@
 # scene02 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 null
+# 版本 0.1.0
 # Blog：http://b.luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
@@ -13,8 +13,8 @@
 
 label scene03:
     # scene03 开始
-    # 地点：
-    # 人物：
+    # 地点：街道
+    # 人物：心爱 莲
     # BGM：
 
     # scene03 场景1 【和心爱的归家路】 开始
@@ -925,7 +925,7 @@ label scene03:
     # 统计一下跳过的心爱音声数量方便后续制作
     # 跳过（要删除）的心爱音声数量->太多了统计不出来了
 
-    luckykeeper "根据项目组安排，我们不翻译Hscene，请各位积极支持正版，自行购买正版欣赏，还请各位谅解"
+    luckykeeper "根据项目组安排，我们不会翻译 Hscene 里的内容，请各位积极支持正版，自行购买正版欣赏，还请各位谅解"
 
     # scene03 场景3 【心爱的心跳留宿】 结束
     # scene03 结束
