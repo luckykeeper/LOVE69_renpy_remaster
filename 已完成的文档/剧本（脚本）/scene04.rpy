@@ -7,7 +7,7 @@
 # Blog：http://b.luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2021年11月17日
+# 修订日期 2021年11月18日
 
 # 当前流程：整理生肉文本，翻译并润色
 
@@ -977,3 +977,11 @@ label scene04:
 
     # nil 「遠くに行ってはいないのでしょうけど、少し寂しくなりました。」
     "虽然知道你没去很远的地方，但是有点寂寞了呢"
+
+    # 场景切换
+    # 葛城家外->葛城家客厅
+    # 人物：真冬（真冬视角）
+    # BGM：
+
+    # 真冬 「ただいまー」
+    dong "我回来了~"
