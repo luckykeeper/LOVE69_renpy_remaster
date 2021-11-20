@@ -1,13 +1,13 @@
 # --------------------------------
 # LOVE69_Renpy_Remaster_Project
-# scene02 的脚本（剧本）
+# scene03 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
 # 版本 0.1.0
 # Blog：http://b.luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2021年11月8日
+# 修订日期 2021年11月20日
 
 # 当前流程：整理生肉文本，翻译并润色
 
