@@ -7,7 +7,7 @@
 # Blog：http://b.luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2021年11月22日
+# 修订日期 2021年11月23日
 
 # 当前流程：整理生肉文本，翻译并润色
 
@@ -582,3 +582,6 @@ label scene05:
 
     # 莲 「このアイスさ、食べてから、なんか変わったことはないか？」
     lian "这个冰淇淋，你恰了以后，感觉有什么变化吗？"
+
+    # 真冬 「んー…んー？」
+    dong "嗯—…嗯——？"
