@@ -7,7 +7,7 @@
 # Blog：http://b.luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2021年11月23日
+# 修订日期 2021年11月24日
 
 # 当前流程：整理生肉文本，翻译并润色
 
@@ -585,3 +585,9 @@ label scene05:
 
     # 真冬 「んー…んー？」
     dong "嗯—…嗯——？"
+
+    # 莲 「なんだ、その…エッチな気分になったりとか」
+    lian "什么啊，那、那个……有没有想涩、涩涩的感觉之类的"
+
+    # 真冬 「エッチな気分になってるのはお兄ちゃんだと思うけど…」
+    dong "我觉得有H的感觉的是欧尼酱的说"
