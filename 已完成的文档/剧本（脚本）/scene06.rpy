@@ -7,7 +7,7 @@
 # Blog：http://b.luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2021年12月5日
+# 修订日期 2021年12月6日
 
 # 当前流程：整理生肉文本，翻译并润色
 
@@ -581,3 +581,18 @@ label scene06:
 
     # 真冬 「これはモッコリ」
     dong "这个很搞笑"
+
+    # 莲 「うるせえ」
+    lian "闭嘴"
+
+    # 真冬 「まぁ、ポカリとおかゆですよ」
+    # 参考资料：https://zh.wikipedia.org/wiki/%E5%AF%B6%E7%A4%A6%E5%8A%9B%E6%B0%B4%E7%89%B9
+    # 参考资料：https://www.wikiwand.com/ja/%E3%81%8A%E3%81%8B%E3%82%86
+    # 参考资料：https://ja.wikipedia.org/wiki/%E7%B2%A5
+    dong "嘛，这回是宝矿力和粥哦（L:宝矿力水特，简称宝矿力，是日本大冢制药株式会社于1980年研发的一种运动饮料）"
+
+    # 真冬 「ふー……ふー……ふー……よし…はい、あーん」
+    dong "呼……呼……呼……好啦…来，啊—嗯"
+
+    # 莲 「あーん」
+    lian "啊—嗯"
