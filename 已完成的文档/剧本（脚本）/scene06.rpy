@@ -7,7 +7,7 @@
 # Blog：http://b.luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2021年12月6日
+# 修订日期 2021年12月7日
 
 # 当前流程：整理生肉文本，翻译并润色
 
@@ -596,3 +596,12 @@ label scene06:
 
     # 莲 「あーん」
     lian "啊—嗯"
+
+    # nil 「真冬が、れんげにおかゆを乗せて、俺の口へと運んでくれる。」
+    "真冬把粥放在勺子上，再送到我的嘴里"
+
+    # nil 「絶妙な熱加減まで調節されたおかゆが、風邪で消化器官の衰えた俺の内臓に染みこんでいく。」
+    "被加热到绝妙的温度的粥，渗透到因感冒而导致消化器官衰弱的我的内脏里"
+
+    # 真冬 「美味しい？」
+    dong "好吃吗？"
