@@ -7,7 +7,7 @@
 # Blog：http://b.luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2021年12月10日
+# 修订日期 2021年12月11日
 
 # 当前流程：整理生肉文本，翻译并润色
 
@@ -662,3 +662,18 @@ label scene06:
     # 真冬 「はいはいテイク２いきますよー…ん…くっ…」
     # テイク２参考资料：https://ja.wikipedia.org/wiki/Take2
     dong "好的好的，我们去Take2…嗯…呜…（L:Take2是11区的喜剧二人组的组合名字，1994年成立，由東貴博和深沢邦之组成，都是男的）"
+
+    # 真冬 「ん…ちゅっ…ん…っ…」
+    dong "嗯…啊……嗯…嗯……"
+
+    # 莲 「…んっ…」
+    lian "…嗯…"
+
+    # 真冬 「んぅ…んふっ…ぷはっ…はい、よくできました」
+    dong "咕呜……嗯……呼……好，做得很好"
+
+    # 莲 「ぜぇ…はぁ…まったく、病人には不健康な事をしやがるじゃないか…」
+    lian "呼…哈…真是的，你这可是让病人不健康的事啊……"
+
+    # 真冬 「…？」
+    dong "……？"
