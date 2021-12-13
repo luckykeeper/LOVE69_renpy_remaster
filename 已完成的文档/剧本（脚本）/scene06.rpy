@@ -7,7 +7,7 @@
 # Blog：http://b.luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2021年12月12日
+# 修订日期 2021年12月13日
 
 # 当前流程：整理生肉文本，翻译并润色
 
@@ -757,3 +757,6 @@ label scene06:
     # 莲 「今日なんかやたらジト目向けてこない！？割とその目、俺にとっちゃジャベリンなんですが！」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%99%E3%83%AA%E3%83%B3
     lian "你今天怎么老是盯着我看! ?或者说，我感觉你的眼神就像Javelin一样（L:Javelin，指标枪，运动会上掷的那个）"
+
+    # 真冬 「ばーか」
+    dong "笨—蛋"
