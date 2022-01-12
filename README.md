@@ -2,7 +2,7 @@
 
 | 项目状况             | LOVE69 Ren’py Remaster Project                               |
 | -------------------- | ------------------------------------------------------------ |
-| 项目进度             | 状态：进行中（正式版开发中）<br/>Scene 01（Demo）部分文本内容翻译完成（2021年10月1日）<br/>Demo 版制作完成，开始内部测试（2021年10月9日）<br/>Demo 版发行（2021年10月24日）【[下载地址](https://github.com/luckykeeper/LOVE69_renpy_remaster/releases/tag/0.1.0)】<br/>Scene 02 翻译完成（2021年11月6日）<br/>Scene 03 翻译完成（2021年11月8日）<br/>Scene 04 翻译完成（2021年11月20日）<br/>Scene 05 翻译完成（2021年11月27日）<br/>Scene 06 翻译完成（2022年1月1日）<br/>GitHub Star 破十（2022年1月4日）<br/>Scene 07 翻译完成（2022年1月4日）<br/>Scene 08 翻译完成（2022年1月5日）<br/>Scene 09 翻译完成（2022年1月8日）<br/>Scene 10 翻译完成（2022年1月9日）<br/>Scene 11 翻译完成（2022年1月10日）<br/>Scene 12 翻译完成（2022年1月11日） |
+| 项目进度             | 状态：进行中（正式版开发中）<br/>Scene 01（Demo）部分文本内容翻译完成（2021年10月1日）<br/>Demo 版制作完成，开始内部测试（2021年10月9日）<br/>Demo 版发行（2021年10月24日）【[下载地址](https://github.com/luckykeeper/LOVE69_renpy_remaster/releases/tag/0.1.0)】<br/>Scene 02 翻译完成（2021年11月6日）<br/>Scene 03 翻译完成（2021年11月8日）<br/>Scene 04 翻译完成（2021年11月20日）<br/>Scene 05 翻译完成（2021年11月27日）<br/>Scene 06 翻译完成（2022年1月1日）<br/>GitHub Star 破十（2022年1月4日）<br/>Scene 07 翻译完成（2022年1月4日）<br/>Scene 08 翻译完成（2022年1月5日）<br/>Scene 09 翻译完成（2022年1月8日）<br/>Scene 10 翻译完成（2022年1月9日）<br/>Scene 11 翻译完成（2022年1月10日）<br/>Scene 12 翻译完成（2022年1月11日）<br/>Scene 13 翻译完成（2022年1月12日） |
 | star数               | ![star](https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster) |
 | fork数               | ![fork](https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster) |
 | issues数             | ![issues](https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster) |
@@ -188,7 +188,7 @@ CG、BGM等素材的解包工作已全部完成，无需帮助
 - 项目可能因为学业原因无限期推迟（学业繁忙+是只鸽子😅）~~【所以有其他人想来汉化那是大欢迎，也欢迎使用本项目已经汉化好的文本和提取出的日语文本~~，不过如果用的话请加上我的名字（Luckykeeper）】{就不要着急催着填坑了哈}【2021.09.08_注：做不完的可能性不大，目前还是非常顺利的，我非常有信心能把坑填完，烦请各位大大就不要抢坑了哈】
 - 项目相关文件解压密码为本页面网址（即 https://github.com/luckykeeper/LOVE69_renpy_remaster ）下载链接暂时取消
 - 出于各种原因，本次汉化移植并不会对“gkd”的内容（即 Hscene ）进行汉化和移植![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
-- 本页面最后修改时间 2022年1月11日
+- 本页面最后修改时间 2022年1月12日
 
 ## Stargazers over time 
 
