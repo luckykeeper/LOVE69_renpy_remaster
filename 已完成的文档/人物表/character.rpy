@@ -1,10 +1,13 @@
 # --------------------------------
-# 人物名称定义
+# LOVE69_Renpy_Remaster_Project
+# 人物名称定义（人物表）
 # Author:Luckykeeper
-# 版本 0.1.0
-# Blog：http://b.luckykeeper.site
+# 版本 0.2
+# Blog：http://luckykeeper.site
+# 项目组网站：https://love69renpyremasterproject.github.io/
+# 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月28日
-# 修订日期 2021年10月11日
+# 修订日期 2022年1月13日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -17,7 +20,7 @@
 # 月宫瑠那 na
 # 雾叶（和亚十礼的姓有待商榷，有想法的老哥快来） ye
 # 花盆君（植木鉢） pen
-# 亚十礼（发音ATRI,雾叶的姊妹）atri //暂定译名从近月2来，缩写atri因为高性能~
+# 亚十礼（发音ATRI,雾叶的姐姐）atri //暂定译名从近月2来，缩写atri因为高性能~
 # 迈克尔（帽子） mj //帽子就不要名字了（有名字，缩写mj，但是这里为了做区分就叫它帽子）|改，有的地方叫帽子，所以认识之前还是叫hat好了
 # 旁白君 bai
 # テしビ TV 最早在 sence01 葛城家客厅出现，不大确定是啥，应该是电视里面传来的声音，暂时管电视里面没立绘（包括后面的）的都叫TV好辽

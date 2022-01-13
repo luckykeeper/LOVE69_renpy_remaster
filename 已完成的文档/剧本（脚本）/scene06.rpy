@@ -3,11 +3,11 @@
 # scene06 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 null
-# Blog：http://b.luckykeeper.site
+# 版本 0.2
+# Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月1日
+# 修订日期 2022年1月13日
 
 # 当前流程：整理生肉文本，翻译并润色
 
@@ -842,7 +842,7 @@ label scene06:
     # 真冬 「うん…♪」
     dong "嗯…♪"
 
-    # 真冬 HSence 02 Skip~
+    # 真冬 HScene 02 Skip~
 
     # scene06 场景1 【这个莲君就是逊啦，这就病了？】 结束
 

@@ -3,11 +3,11 @@
 # scene02 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：WorldlineChanger（一处豆知识）
-# 版本 0.1.0
-# Blog：http://b.luckykeeper.site
+# 版本 0.2
+# Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2021年11月6日
+# 修订日期 2022年1月13日
 
 # 当前流程：整理生肉文本，翻译并润色
 
@@ -538,8 +538,9 @@ label scene02:
 
     # 心爱 「もしくはハワイ。出雲大社とソープファクトリーに行きたい」
     # 参考资料：https://ja.wikipedia.org/wiki/出雲大社
+    # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%AF%E3%82%A4%E5%87%BA%E9%9B%B2%E5%A4%A7%E7%A4%BE
     # 参考资料：https://www.nakutemo-hawaii.com/northshore-soap-factory/
-    ai "或者是夏威夷。我想去出云大社和肥皂工厂（L:出云大社是位于日本岛根县出云市大社町的神社，以“结良缘”闻名，这里是供奉结缘之神大国主命；肥皂工厂指夏威夷的北岸肥皂厂（North Shore Soap Factory））"
+    ai "或者是夏威夷。我想去出云大社和肥皂工厂（L:出云大社是位于日本岛根县出云市大社町的神社，以“结良缘”闻名，这里是供奉结缘之神大国主命，夏威夷的云市大社是它的分社，也被称为出云大社夏威夷分社；肥皂工厂指夏威夷的北岸肥皂厂（North Shore Soap Factory））"
 
     # 莲 「それは夏休みな」
     lian "那是暑假的事情吧"
@@ -1314,4 +1315,5 @@ label scene02:
     # 过场：心爱
 
     # scene02 结束，跳转到scene03
+
     jump scene03

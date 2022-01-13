@@ -1,8 +1,11 @@
 # --------------------------------
+# LOVE69_Renpy_Remaster_Project
 # BGM列表定义
 # Author:Luckykeeper
-# 版本 0.1.0 “LuckyGal”
-# Blog：http://b.luckykeeper.site
+# 版本 0.2
+# Blog：http://luckykeeper.site
+# 项目组网站：https://love69renpyremasterproject.github.io/
+# 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月30日
 # 完成日期 2021年8月30日
 

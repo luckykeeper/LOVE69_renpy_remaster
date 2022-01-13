@@ -1,15 +1,16 @@
-﻿# Author:Luckykeeper
-# Blog：http://b.luckykeeper.site
-# 脚本模块
+# --------------------------------
+# LOVE69_Renpy_Remaster_Project
+# 主脚本模块（脚本入口）
+# Author:Luckykeeper
+# 版本 0.2
+# Blog：http://luckykeeper.site
+# 项目组网站：https://love69renpyremasterproject.github.io/
+# 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开坑日期 2021年8月28日
+# 修订日期 2022年1月13日
 
 #----------------------------------------------------------------
 # 主程序开始
-# Author:Luckykeeper
-# Blog：http://b.luckykeeper.site
-# 开始日期 2021年8月28日
-# 修订日期 2021年10月15日
-# 版本 0.1.0
 
 # 制作流程
 # ①导入全部文本+润色汉化，不带图像
@@ -23,7 +24,7 @@
 # ⑦打包发布
 
 # 翻译原则
-# a、采用机翻+润色的方式进行，因为我是个日语渣，翻译初稿来自百度为主+彩云小译为辅的结果
+# a、采用机翻+润色的方式进行，因为我是个日语渣，翻译初稿来自百度为主+彩云小译为辅的结果，部分结果来自DeepL
 # b、主体采用意译的方式，因为本来就是电波向作品，很多地方并不好直译
 # c、不会翻的地方使用 // 标出，希望老哥们帮帮忙
 # d、翻译力图在尽量准确的同时最大程度的让文字变得有趣，希望让本作受到更多人的喜爱
@@ -31,7 +32,9 @@
 
 # 流程 ①
 # Author:Luckykeeper
-# Blog：http://b.luckykeeper.site
+# Blog：http://luckykeeper.site
+# 项目组网站：https://love69renpyremasterproject.github.io/
+# 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月28日
 # 主程序正式开始，现在只加入文本
 # 版本：null（还未完成）
@@ -798,10 +801,5 @@ label start:
     pause 0.8
     jump scene01 # 开始 scene01 的脚本
 
-# 一周目，共通线（一周目莫得选项）
-
-# sence01
-# Author:Luckykeeper
-# Blog：http://b.luckykeeper.site
-# 开始日期 2021年8月28日
-# 版本：null（还未完成）
+# 主程序入口脚本结束！
+#######################################################################

@@ -3,11 +3,11 @@
 # scene12 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 null
+# 版本 0.2
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月11日
+# 修订日期 2022年1月13日
 
 # 当前流程：整理生肉文本，翻译并润色
 
@@ -17,7 +17,7 @@ label scene12:
     # scene12 场景1 【心爱和真冬的秘密时间！】 开始
 
     # 地点：真冬卧室
-    # 人物：真冬
+    # 人物：真冬 心爱
     # BGM：无
 
     # nil 「真冬です。」
@@ -366,8 +366,12 @@ label scene12:
 
     # HScene 开始了一点但没有完全开始，Skip~
 
+    # 心爱&真冬 HScene 02（百合） Skip~
+
     # scene12 场景1 【心爱和真冬的秘密时间！】 结束
 
     # Scene12 结束！
 
     # 过场：心爱（常服），没有BGM，会加一个的
+
+    jump scene13
