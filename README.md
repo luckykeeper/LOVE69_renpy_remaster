@@ -2,7 +2,7 @@
 <h2 align="center">LOVE69 Ren’py Remaster Project</h2>
 <h3 align="center">使用 Ren'Py 重制 LOVEPOTION SIXTYNINE ，并加以汉化和全平台移植</h3>
 
-<p align="center">![star](https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster)![fork](https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster)![issues](https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster)![status](https://app.travis-ci.com/love69renpyremasterproject/love69renpyremasterproject.github.io.svg?branch=main&status=passed)</p>
+<p align="center"><img src=https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster>  <img src=https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster>  <img src=https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster>  <img src=https://app.travis-ci.com/love69renpyremasterproject/love69renpyremasterproject.github.io.svg?branch=main&status=passed></p>
 
 ------
 
