@@ -24,19 +24,11 @@
 # 导航
 
 - [大事记](#大事记)
-
 - [目标](#目标)
-
 - [实机开发画面展示](#实机开发画面展示)
-
 - [贡献及源码食用指北](#贡献及源码食用指北)
-
 - [开源声明](#开源声明)
-
 - [其它事项](其它事项)
-
-- [Stargazers over time](#Stargazers over time )
-
 - [项目组网站 (点击将离开本页)](https://love69renpyremasterproject.github.io/)
 
 # 大事记
