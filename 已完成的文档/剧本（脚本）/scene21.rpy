@@ -3,7 +3,7 @@
 # scene21 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 null
+# 版本 0.3 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
@@ -62,7 +62,7 @@ label scene21:
     lian "可能是肠道扭曲引起的。听说一边仰着头，一边按摩肚子好像会比较好，每天早上都这么做"
 
     # 里昂 「わかった、やってみる。…なんか話が変な方向に…」
-    lion "知道了，我试试看。……话题朝着奇怪的方向……"
+    lion "知道了，我试试看……话题朝着奇怪的方向……"
 
     # 莲 「まぁいだろ、行くぞ」
     lian "不管了，先出发吧"
@@ -1247,7 +1247,7 @@ label scene21:
     # nil 「その後、俺とリオンがエッチしまくったおかげで、材料は沢山作れました。」
     "那之后，多亏了我和里昂的H，做了很多出来"
 
-    # scene20 场景1 【梦想的第一战】 结束
+    # scene21 场景1 【梦想的第一战】 结束
 
     # 离全部翻译完成只剩最后 1 个 Scene ！
 

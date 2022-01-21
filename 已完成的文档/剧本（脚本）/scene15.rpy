@@ -3,11 +3,11 @@
 # scene15 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.2
+# 版本 0.3 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月13日
+# 修订日期 2022年1月21日
 
 #   本脚本为一周目的最后一幕，从Scene16开始就是二周目内容了
 
@@ -152,6 +152,8 @@ label scene15:
     ai_dong "『哇——咿！』"
 
     # scene15 场景1 【一周目_尾声】 结束！
+
+    # 一周目结局 【你们都是我的翅膀】达成！二周目内容开放！
 
     # Scene15 结束！！！
 

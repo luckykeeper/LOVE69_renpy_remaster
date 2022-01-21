@@ -2,11 +2,11 @@
 # LOVE69_Renpy_Remaster_Project
 # 各种GUI设定的详细设置
 # Author:Luckykeeper
-# 版本 0.2
+# 版本 0.3 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月13日
+# 修订日期 2022年1月21日
 ################################################################################
 ## 初始化
 ################################################################################

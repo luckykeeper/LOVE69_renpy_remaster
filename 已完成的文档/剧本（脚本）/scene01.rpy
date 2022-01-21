@@ -3,11 +3,11 @@
 # scene01 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：WorldlineChanger（2句）
-# 版本 0.2
+# 版本 0.3 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月13日
+# 修订日期 2022年1月21日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右<-2021年10月5日 搞定！
@@ -4832,6 +4832,13 @@ label scene01:
     # 这里就是一二周目的分歧点
     #   选择自己恰即进入一周目剧情，不需要加额外的东西
     #   选择让里昂恰即进入二周目剧情
+    #   必须完成一周目之后才能出现并进行选择
+
+    # 选择肢 「自分で食うか。」
+    # "留着自己吃吧"->进入一周目翅膀线
+
+    # 选择肢 「リオンに食べさせる。」
+    # "给里昂吃"->进入二周目里昂线
 
     # nil 「よし、自分で食うか。」
     "好耶，就留着自己吃吧"
@@ -5827,7 +5834,7 @@ label scene01:
     $ sideimagesize.SideImageYalign = -4.05
     $ sideimagesize.SideImageZoom = 1.0
 
-    # 雾叶？？？ 「「安心してください、峰打ちです」」
+    # 雾叶？？？ 「安心してください、峰打ちです」
     # 参考资料：https://ja.wikipedia.org/wiki/%E5%B3%B0%E6%89%93%E3%81%A1
     # 这里对话框也没有头像，修正！
     # 雾叶到了中间，写个参数

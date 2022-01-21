@@ -5,8 +5,8 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月13日
-# 版本号 0.2
+# 修订日期 2022年1月21日
+# 版本号 0.3 "LuckyDev"
 # 源文件名：gui.rpy
 
 ## “init offset”语句可使此文件中的初始化语句在任何其他文件中的“init”语句之前运

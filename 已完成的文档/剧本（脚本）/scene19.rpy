@@ -3,11 +3,11 @@
 # scene19 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 null
+# 版本 0.3 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月19日
+# 修订日期 2022年1月21日
 
 # 当前流程：整理生肉文本，翻译并润色
 
@@ -2148,6 +2148,8 @@ label scene19:
 
     # 离全部翻译完成只剩 3 个 Scene ！
 
-    #  过场：里昂（常服）
+    # 过场：里昂（常服）
 
     # Scene19 结束！
+
+    jump scene20
