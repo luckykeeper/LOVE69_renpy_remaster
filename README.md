@@ -14,7 +14,7 @@
 
 通过本项目，可以
 
-- [x] 通过游玩汉化版的作品，感受 LOVEPOTION SIXTYNINE 的魅力（目前 Demo 版已经完成，一周目已经翻译完成）【[下载戳这里](https://github.com/luckykeeper/LOVE69_renpy_remaster/releases/tag/0.1.0)，建议优先选择国内节点】
+- [x] 通过游玩汉化版的作品，感受 LOVEPOTION SIXTYNINE 的魅力（目前 Demo 版已经完成，翻译已经全部完成，正在重构GUI）【[下载戳这里](https://github.com/luckykeeper/LOVE69_renpy_remaster/releases/tag/0.1.0)，建议优先选择国内节点】
 - [x] 通过阅读源码，了解如何制作 Galgame ，抛砖引玉，吸引更多对 Gal 汉化感兴趣的人来参与进来
 - [x] 作为 Ren'Py 入门的学习资料，学习 Ren'Py 的基础知识， Ren'Py 不仅仅可以做 Gal ，做卡牌、RPG、电子相册，只要你有想象力都可以做！
 - [x] ……
@@ -254,7 +254,7 @@ WEB版 Demo实机运行页面
 
 - 出于各种原因，本次汉化移植并不会对“gkd”的内容（即 Hscene ）进行汉化和移植，各位绅士还请谅解，请积极考虑购买正版支持原作团队![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
 
-- 本页面最后修改时间 2022年1月21日
+- 本页面最后修改时间 2022年1月22日
 
 - 本页是 V2 版的 Readme ，第一版 Readme 考古戳[这里](./README_old.md)
 
