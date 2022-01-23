@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月23日
+# 修订日期 2022年1月24日
 ################################################################################
 ## 初始化
 ################################################################################
@@ -456,6 +456,7 @@ screen main_menu():
             idle "gui/main_menu/btn_start_base.png"
             hover "gui/main_menu/btn_start_onMouse.png"
             selected_hover "gui/main_menu/btn_start_onClick.png"
+            hover_sound "voice/effect/メニュー決定音.ogg"
             action Start()
 
     # Load btn 的 vbox
@@ -472,6 +473,7 @@ screen main_menu():
             idle "gui/main_menu/btn_load_base.png"
             hover "gui/main_menu/btn_load_onMouse.png"
             selected_hover "gui/main_menu/btn_load_onClick.png"
+            hover_sound "voice/effect/メニュー決定音.ogg"
             action ShowMenu("game_load")
 
 
@@ -518,6 +520,7 @@ screen main_menu():
                 idle "gui/main_menu/btn_qload_base.png"
                 hover "gui/main_menu/btn_qload_onMouse.png"
                 selected_hover "gui/main_menu/btn_qload_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
                 action [FileLoad(name=l_f_name, confirm=True, page=l_f_page)]
                 # action [FileLoad(name=renpy.newest_slot(regexp=None).split('-',1)[0], confirm=True, page=renpy.newest_slot(regexp=None).split('-',1)[1])]
 
@@ -535,6 +538,7 @@ screen main_menu():
             idle "gui/main_menu/btn_config_base.png"
             hover "gui/main_menu/btn_config_onMouse.png"
             selected_hover "gui/main_menu/btn_config_onClick.png"
+            hover_sound "voice/effect/メニュー決定音.ogg"
             action ShowMenu("preferences")
 
     # Extra btn 的 vbox
@@ -554,6 +558,7 @@ screen main_menu():
                 idle "gui/main_menu/btn_extra_base.png"
                 hover "gui/main_menu/btn_extra_onMouse.png"
                 selected_hover "gui/main_menu/btn_extra_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
                 action ShowMenu("main_menu_2")
 
     # Project btn 的 vbox
@@ -572,6 +577,7 @@ screen main_menu():
             idle "gui/main_menu/btn_project_base.png"
             hover "gui/main_menu/btn_project_onMouse.png"
             selected_hover "gui/main_menu/btn_project_onClick.png"
+            hover_sound "voice/effect/メニュー決定音.ogg"
             action ShowMenu("about")
 
     # End btn 的 vbox
@@ -588,6 +594,7 @@ screen main_menu():
             idle "gui/main_menu/btn_end_base.png"
             hover "gui/main_menu/btn_end_onMouse.png"
             selected_hover "gui/main_menu/btn_end_onClick.png"
+            hover_sound "voice/effect/メニュー決定音.ogg"
             action Quit(confirm=True)
 
 ##################################################################################
@@ -611,6 +618,7 @@ screen main_menu_2():
                 idle "gui/main_menu/btn_cgmode_base.png"
                 hover "gui/main_menu/btn_cgmode_onMouse.png"
                 selected_hover "gui/main_menu/btn_cgmode_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
                 action ShowMenu("about")
 
         # Replay
@@ -619,6 +627,7 @@ screen main_menu_2():
                 idle "gui/main_menu/btn_replaymode_base.png"
                 hover "gui/main_menu/btn_replaymode_onMouse.png"
                 selected_hover "gui/main_menu/btn_replaymode_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
                 action ShowMenu("about")
 
         # Music
@@ -627,6 +636,7 @@ screen main_menu_2():
                 idle "gui/main_menu/btn_bgmmode_base.png"
                 hover "gui/main_menu/btn_bgmmode_onMouse.png"
                 selected_hover "gui/main_menu/btn_bgmmode_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
                 action ShowMenu("about")
 
         # ExtraGames
@@ -635,6 +645,7 @@ screen main_menu_2():
                 idle "gui/main_menu/btn_exgame_base.png"
                 hover "gui/main_menu/btn_exgame_onMouse.png"
                 selected_hover "gui/main_menu/btn_exgame_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
                 action ShowMenu("about")
 
         # Back
@@ -643,6 +654,7 @@ screen main_menu_2():
                 idle "gui/main_menu/btn_omakeback_base.png"
                 hover "gui/main_menu/btn_omakeback_onMouse.png"
                 selected_hover "gui/main_menu/btn_omakeback_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
                 # 这里不能用 MainMenu() ，只能用 ShowMenu 来返回
                 action ShowMenu("main_menu")
 
@@ -652,6 +664,7 @@ screen main_menu_2():
                 idle "gui/main_menu/btn_end_base.png"
                 hover "gui/main_menu/btn_end_onMouse.png"
                 selected_hover "gui/main_menu/btn_end_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
                 action Quit(confirm=True)
 
 
@@ -1286,6 +1299,12 @@ screen game_load():
 default persistent.hwVideo = False
 define config.hw_video = persistent.hwVideo
 
+########################
+# 提升性能，用内存缓存提升加载速度
+# 使用内存缓存（默认开启）
+default persistent.useCache = True
+define config.cache_surfaces = persistent.useCache
+
 screen preferences():
 
     tag menu
@@ -1321,9 +1340,11 @@ screen preferences():
 
                 vbox:
                     style_prefix "check"
-                    label _("实验选项，切换需重启")
-                    textbutton _("使用软解") action [SetVariable("persistent.hwVideo",False),renpy.save_persistent()]
-                    textbutton _("使用硬解") action [SetVariable("persistent.hwVideo",True),renpy.save_persistent()]
+                    label _("实验选项，详见帮助部分说明")
+                    textbutton _("使用软解（稳定）") action [SetVariable("persistent.hwVideo",False),renpy.save_persistent()]
+                    textbutton _("使用硬解（更快）") action [SetVariable("persistent.hwVideo",True),renpy.save_persistent()]
+                    textbutton _("使用内存缓存（更快）") action [SetVariable("persistent.useCache",True),renpy.save_persistent()]
+                    textbutton _("直接从硬盘读取（低内存）") action [SetVariable("persistent.useCache",False),renpy.save_persistent()]
                 ## 可以在此处添加类型为“radio_pref”或“check_pref”的其他“vbox”，
                 ## 以添加其他创建者定义的首选项设置。
 
@@ -1607,11 +1628,11 @@ screen help():
         style_prefix "help"
 
         vbox:
-            spacing 23
+            spacing 30
 
             hbox:
 
-                textbutton _("键盘") action SetScreenVariable("device", "keyboard")
+                textbutton _("键盘和设置帮助") action SetScreenVariable("device", "keyboard")
                 textbutton _("鼠标") action SetScreenVariable("device", "mouse")
 
                 if GamepadExists():
@@ -1620,6 +1641,8 @@ screen help():
                 # 在这里加上豆知识速查，第一次游玩提示一次有这个东西，然后不再提示
                 # textbutton _("豆知识速查") action ShowMenu("douKnowledge")
                 # 这里偷个懒，用和鼠标键盘类似的方式引入
+                # textbutton _("设置帮助") action SetScreenVariable("device", "settingHelp")
+
                 textbutton _("豆知识速查") action SetScreenVariable("device", "douKnowledge")
 
             if device == "keyboard":
@@ -1630,6 +1653,10 @@ screen help():
                 use gamepad_help
             elif 1==1:
                 use douKnowledge
+            # elif 1==1:
+                # use settingHelp
+
+
 
 
 screen keyboard_help():
@@ -1681,6 +1708,30 @@ screen keyboard_help():
     hbox:
         label "Delete"
         text _("在存、读档界面可以删除存档")
+
+    hbox:
+        label _("实验选项")
+        text _("对设置中实验选项进行说明，注意更改实验选项必须重启游戏，否则可能不会生效")
+
+    hbox:
+        label _("使用软解")
+        text _("默认选项，调用软件解码器对媒体进行解码，非常稳定但是耗费性能，对低端设备不友好")
+
+    hbox:
+        label _("使用硬解")
+        text _("调用硬件解码器对媒体进行解码，速度快且高效，前提需要设备支持（程序的媒体文件有主要有png、webm、ogg三种，请确保您的设备支持），可能会导致一些问题，如遇到视频拉伸，无法正常播放等问题，请切换会软件解码器，如果你的设备不属于低性能设备，强烈建议使用软件解码器")
+
+    hbox:
+        label _("使用内存缓存")
+        text _("默认选项，素材文件预缓存至内存再从内存调用，运行速度大幅提升，对低内存设备不友好，但是只需要有1.2G以上空闲内存或开启了虚拟内存（一般系统都是默认开启的）就可以放心选择此项")
+
+    hbox:
+        label _("直接从硬盘读取")
+        text _("程序直接从硬盘读取素材文件，只使用必要的内存，对硬盘性能要求高，但是内存开销较小，适合低内存设备，但是若硬盘读取性能不佳时可能会发生卡顿现象")
+
+    hbox:
+        label _("其它")
+        text _("由于原作BGM声音过大，建议将BGM音量调小以获得更好游戏体验")
 
 
 screen mouse_help():
@@ -1735,12 +1786,42 @@ screen gamepad_help():
 
     textbutton _("校准") action GamepadCalibrate()
 
+
+    # 设置帮助
+    # 移至键盘部分
+# screen settingHelp():
+
+    # hbox:
+    #     label _("实验选项")
+    #     text _("对设置中实验选项进行说明，注意更改实验选项必须重启游戏，否则可能不会生效")
+
+    # hbox:
+    #     label _("使用软解")
+    #     text _("默认选项，调用软件解码器对媒体进行解码，非常稳定但是耗费性能，对低端设备不友好")
+
+    # hbox:
+    #     label _("使用硬解")
+    #     text _("调用硬件解码器对媒体进行解码，速度快且高效，前提需要设备支持（程序的媒体文件有主要有png、webm、ogg三种，请确保您的设备支持），可能会导致一些问题，如遇到视频拉伸，无法正常播放等问题，请切换会软件解码器，如果你的设备不属于低性能设备，强烈建议使用软件解码器")
+
+    # hbox:
+    #     label _("使用内存缓存")
+    #     text _("默认选项，素材文件预缓存至内存再从内存调用，运行速度大幅提升，对低内存设备不友好")
+
+    # hbox:
+    #     label _("直接从硬盘读取")
+    #     text _("程序直接从硬盘读取素材文件，只使用必要的内存，对硬盘性能要求高，但是内存开销较小")
+
+    # hbox:
+    #     label _("其它")
+    #     text _("由于原作BGM声音过大，建议将BGM音量调小以获得更好游戏体验")
+
     # 豆知识
 screen douKnowledge():
 
     hbox:
         label _("豆知识1")
-        text _("内容")
+        text _("内容在这里")
+
 
 
 style help_button is gui_button
@@ -2175,3 +2256,8 @@ init python:
         l_f_name = latest_file_str.split('-',1)[1] #槽位名
     except:
         print("淦！移动端你又又又出错了！！")
+
+    if persistent.useCache:
+        config.image_cache_size_mb = 1024
+    else:
+        config.image_cache_size_mb = 150

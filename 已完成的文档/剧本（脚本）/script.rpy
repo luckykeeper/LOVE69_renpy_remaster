@@ -2,12 +2,12 @@
 # LOVE69_Renpy_Remaster_Project
 # 主脚本模块（脚本入口）
 # Author:Luckykeeper
-# 版本 0.3 "LuckyDev"
+# 版本 0.4 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开坑日期 2021年8月28日
-# 修订日期 2022年2月21日
+# 修订日期 2022年2月24日
 
 #----------------------------------------------------------------
 # 主程序开始
@@ -28,7 +28,7 @@
 # b、主体采用意译的方式，因为本来就是电波向作品，很多地方并不好直译
 # c、不会翻的地方使用 // 标出，希望老哥们帮帮忙
 # d、翻译力图在尽量准确的同时最大程度的让文字变得有趣，希望让本作受到更多人的喜爱
-# e、第一次做翻译，也是第一次用ren'py，活整的不好还请带伙见谅
+# e、第一次做翻译，也是第一次用 Ren'py ，活整的不好还请带伙见谅
 
 # 流程 ①
 # Author:Luckykeeper
@@ -45,11 +45,28 @@
 # Demo 版预定义周目数为一便于与后续版本继承
 default persistent.playthrough = 1
 
-# 输出周目数到log
+# 一二周目变量预定义
+default persistent.one = False
+default persistent.two = False
+
+# 判断是否进行过游戏
+default persistent.gameStarted = False
+
+# 周目处理函数
 init python:
-    def log_playthrough():
+    def check_playthrough():
+        # 一周目完成后，才能进二周目
+        if(persistent.playthrough == 1 and persistent.one):
+            persistent.playthrough = 2
+
+# 保存并输出周目数到log
+
         renpy.save_persistent()
-        renpy.log("当前的周目数: %s" % persistent.playthrough)
+        renpy.log((persistent.one, persistent.two))
+        renpy.log("当前周目数: %s" % persistent.playthrough)
+
+
+
 
 ###### 定义：动态序列帧图 ######
 # 定义的脚本非常多，手动打是不可能的（callgif是我手动打的），请活用excel生成脚本
@@ -792,13 +809,17 @@ screen callscr:
 # 一周目开始前 主题BGM：anonatsu_piano.ogg
 
 label start:
-    $ log_playthrough()
+
+
 
 # 游戏开始
     stop music fadeout 2.0 # 停止主菜单音乐
     play sound "voice/effect/start.ogg" # 播放开始音效
     with fade # 主菜单到正式游戏的过场
     pause 0.8
+    # $ persistent.one = True # 调试用
+    $ persistent.gameStarted = True
+    $ check_playthrough()
     jump scene01 # 开始 scene01 的脚本
 
 # 主程序入口脚本结束！

@@ -5,7 +5,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月23日
+# 修订日期 2022年1月24日
 # 版本号 0.4 "LuckyDev"
 
 
@@ -143,8 +143,8 @@ define config.window = "auto"
 
 ## 用于显示和隐藏对话框窗口的转场
 
-define config.window_show_transition = Dissolve(.2)
-define config.window_hide_transition = Dissolve(.2)
+define config.window_show_transition = Dissolve(.5)
+define config.window_hide_transition = Dissolve(.5)
 
 
 ## 默认设置 ########################################################################
@@ -171,7 +171,7 @@ default preferences.afm_time = 15
 ##
 ## 该命令一般不应变更，若要变更，应为有效字符串而不是表达式。
 
-define config.save_directory = "LOVE69RenpyRemaster"
+define config.save_directory = "LOVE69RenpyRemaster-SaveData"
 # define config.save_directory = "LOVE69RenpyRemaster-1630134793"
 
 
@@ -182,7 +182,6 @@ define config.save_directory = "LOVE69RenpyRemaster"
 # LOVE69_renpy_remaster 的ico文件来自love69.exe解包（内含4个ico，取最大的1.ico，并重命名为gui/window_icon.ico）
 
 define config.window_icon = "gui/window_icon.ico"
-
 
 ## 生成配置 ########################################################################
 ##
