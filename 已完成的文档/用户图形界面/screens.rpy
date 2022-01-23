@@ -2,16 +2,19 @@
 # LOVE69_Renpy_Remaster_Project
 # 各种GUI设定的详细设置
 # Author:Luckykeeper
-# 版本 0.3 "LuckyDev"
+# 版本 0.4 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月21日
+# 修订日期 2022年1月23日
 ################################################################################
 ## 初始化
 ################################################################################
 
 init offset = -1
+
+
+
 
 ################################################################################
 ## 定义几个全局变量
@@ -126,7 +129,9 @@ style frame:
 ##
 ## https://www.renpy.cn/doc/screen_special.html#say
 
-
+# 设置音频不中断
+## https://renpy.cn/doc/preferences.html?highlight=preference#var-preferences.voice_sustain
+default preferences.voice_sustain = True
 
 screen say(who, what):
     style_prefix "say"
@@ -331,7 +336,8 @@ screen quick_menu():
             textbutton _("历史") action ShowMenu('history')
             textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("自动") action Preference("auto-forward", "toggle")
-            textbutton _("保存") action ShowMenu('save')
+            textbutton _("保存") action ShowMenu("game_save")
+            textbutton _("读取") action ShowMenu("game_load")
             textbutton _("快存") action QuickSave()
             textbutton _("快读") action QuickLoad()
             textbutton _("设置") action ShowMenu('preferences')
@@ -379,9 +385,9 @@ screen navigation():
 
             textbutton _("历史") action ShowMenu("history")
 
-            textbutton _("保存") action ShowMenu("save")
+            # textbutton _("保存") action ShowMenu("game_save")
 
-        textbutton _("读取游戏") action ShowMenu("load")
+        # textbutton _("读取游戏") action ShowMenu("game_load")
 
         textbutton _("设置") action ShowMenu("preferences")
 
@@ -395,10 +401,11 @@ screen navigation():
 
         textbutton _("关于") action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        # if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        # if renpy.variant("pc") or (renpy.variant("web") and renpy.variant("mobile")):
 
             ## “帮助”对移动设备来说并非必需或相关。
-            textbutton _("帮助") action ShowMenu("help")
+        textbutton _("帮助") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
@@ -423,30 +430,258 @@ style navigation_button_text:
 ##
 ## https://www.renpy.cn/doc/screen_special.html#main-menu
 
+# 新 Main_Menu ，采用图片 Button 进行引导
 screen main_menu():
 
-    ## 此语句可确保替换掉任何其他菜单界面。
+    ## tag menu 的作用是来清其它界面，确保不被覆盖
     tag menu
 
-    add gui.main_menu_background
+    # 也可以直接引入一张图片
+    add "gui/main_menu/main_menu_1.png"
 
-    ## 此空框可使标题菜单变暗。
-    frame:
-        style "main_menu_frame"
+    # 因为按钮大小不一，单独定制位置
+    # Start btn 的 vbox
+    vbox:
+        # 定位
+        ## xalign 1.0->在最左边
+        ## yalign 0->在最上面
+        xalign 1.0
+        yalign 0
 
-    ## “use”语句将其他的界面包含进此界面。标题界面的实际内容在导航界面中。
-    use navigation
+        imagebutton:
+            # Start btn 放大到 1080p 对应的大小是 380x193 px ，稍稍大几个像素方便定位
+            ## idle 初始状态
+            ## hover 鼠标放在上面的状态
+            ## selected_hover 按下 btn 的状态
+            idle "gui/main_menu/btn_start_base.png"
+            hover "gui/main_menu/btn_start_onMouse.png"
+            selected_hover "gui/main_menu/btn_start_onClick.png"
+            action Start()
 
-    if gui.show_name:
+    # Load btn 的 vbox
+    vbox:
+        # 定位
+        xalign 0.891
+        yalign 0.25
 
-        vbox:
-            style "main_menu_vbox"
+        imagebutton:
+            # Load btn 放大到 1080p 对应的大小是 191x304 px ，稍稍大几个像素方便定位
+            ## idle 初始状态
+            ## hover 鼠标放在上面的状态
+            ## selected_hover 按下 btn 的状态
+            idle "gui/main_menu/btn_load_base.png"
+            hover "gui/main_menu/btn_load_onMouse.png"
+            selected_hover "gui/main_menu/btn_load_onClick.png"
+            action ShowMenu("game_load")
 
-            text "[config.name!t]":
-                style "main_menu_title"
 
-            text "[config.version]":
-                style "main_menu_version"
+# Q.Load 功能
+    # # 手机端第一次会报错，但是功能正常
+    # ## https://www.renpy.cn/thread-843-1-1.html
+    # $ latest_file = renpy.newest_slot(regexp=None)
+    # $ latest_file_str = str(latest_file)
+
+    # # 测试：防止移动端抛出错误
+    # # AttributeError: 'NoneType' object has no attribute 'split'
+    # ## https://www.cnblogs.com/shijieli/p/10791247.html
+    # # $ latest_file = latest_file.encode("utf-8")
+
+    # # 仍然出错，继续尝试
+    # # 'NoneType' object has no attribute 'encoding'
+    # ## https://www.cnblogs.com/wxvirus/p/14774838.html
+    # # $ latest_file = latest_file.encode("utf8")
+
+    # $ l_f_page = latest_file_str.split('-',1)[0] #所在页 #auto-1表示自动存档页第一位
+    # $ l_f_name = latest_file_str.split('-',1)[1] #槽位名
+
+    # 用 try 防止抛出错误
+
+    $ latest_file = renpy.newest_slot(regexp=None)
+    default l_f_page = "auto"
+    default l_f_name = "1"
+
+# 似乎不影响运行，用 try 来跑，转最下
+
+
+
+    # Q.Load btn 的 vbox
+    vbox:
+        # 定位
+        xalign 1.0
+        yalign 0.25
+        if persistent.gameStarted: # 防止没有开始游戏就去点击导致的出错
+            imagebutton:
+                # Q.Load btn 放大到 1080p 对应的大小是 191x304 px ，稍稍大几个像素方便定位
+                ## idle 初始状态
+                ## hover 鼠标放在上面的状态
+                ## selected_hover 按下 btn 的状态
+                idle "gui/main_menu/btn_qload_base.png"
+                hover "gui/main_menu/btn_qload_onMouse.png"
+                selected_hover "gui/main_menu/btn_qload_onClick.png"
+                action [FileLoad(name=l_f_name, confirm=True, page=l_f_page)]
+                # action [FileLoad(name=renpy.newest_slot(regexp=None).split('-',1)[0], confirm=True, page=renpy.newest_slot(regexp=None).split('-',1)[1])]
+
+    # Config btn 的 vbox
+    vbox:
+        # 定位
+        xalign 1.0
+        yalign 0.64
+
+        imagebutton:
+            # Config btn 放大到 1080p 对应的大小是 191x304 px ，稍稍大几个像素方便定位
+            ## idle 初始状态
+            ## hover 鼠标放在上面的状态
+            ## selected_hover 按下 btn 的状态
+            idle "gui/main_menu/btn_config_base.png"
+            hover "gui/main_menu/btn_config_onMouse.png"
+            selected_hover "gui/main_menu/btn_config_onClick.png"
+            action ShowMenu("preferences")
+
+    # Extra btn 的 vbox
+    ## Extra 涉及到周目，由可变的 btn 组成，根据周目变量变化
+    ## Extra 功能待做
+    vbox:
+        # 定位
+        xalign 0.891
+        yalign 0.64
+        if persistent.one: # 一周目完成之后可以进入 Extra
+        # if 1==1: # 调试用
+            imagebutton:
+                # Extra btn 放大到 1080p 对应的大小是 191x304 px ，稍稍大几个像素方便定位
+                ## idle 初始状态
+                ## hover 鼠标放在上面的状态
+                ## selected_hover 按下 btn 的状态
+                idle "gui/main_menu/btn_extra_base.png"
+                hover "gui/main_menu/btn_extra_onMouse.png"
+                selected_hover "gui/main_menu/btn_extra_onClick.png"
+                action ShowMenu("main_menu_2")
+
+    # Project btn 的 vbox
+    # 官方 Website 莫得了，所以这里就换 Project 的 Website 好了
+    # 这个页面还没做，先跳转about页面
+    vbox:
+        # 定位
+        xalign 1.0
+        yalign 0.87
+
+        imagebutton:
+            # End btn 放大到 1080p 对应的大小是 381x125 px ，稍稍大几个像素方便定位
+            ## idle 初始状态
+            ## hover 鼠标放在上面的状态
+            ## selected_hover 按下 btn 的状态
+            idle "gui/main_menu/btn_project_base.png"
+            hover "gui/main_menu/btn_project_onMouse.png"
+            selected_hover "gui/main_menu/btn_project_onClick.png"
+            action ShowMenu("about")
+
+    # End btn 的 vbox
+    vbox:
+        # 定位
+        xalign 1.0
+        yalign 1.0
+
+        imagebutton:
+            # End btn 放大到 1080p 对应的大小是 381x125 px ，稍稍大几个像素方便定位
+            ## idle 初始状态
+            ## hover 鼠标放在上面的状态
+            ## selected_hover 按下 btn 的状态
+            idle "gui/main_menu/btn_end_base.png"
+            hover "gui/main_menu/btn_end_onMouse.png"
+            selected_hover "gui/main_menu/btn_end_onClick.png"
+            action Quit(confirm=True)
+
+##################################################################################
+# main_menu_2
+screen main_menu_2():
+
+    ## tag menu 的作用是来清其它界面，确保不被覆盖
+    tag menu
+
+    # 引入图片
+    add "gui/main_menu/main_menu_2.png"
+
+    vbox:
+        # 尝试统一定位
+        # 可以通过以下方法来排列图标，比上面的方法更好，处理图片时按比例缩放到指定宽度即可
+        xalign 1.0
+        yalign 0
+        # Gallery
+        hbox:
+            imagebutton:
+                idle "gui/main_menu/btn_cgmode_base.png"
+                hover "gui/main_menu/btn_cgmode_onMouse.png"
+                selected_hover "gui/main_menu/btn_cgmode_onClick.png"
+                action ShowMenu("about")
+
+        # Replay
+        hbox:
+            imagebutton:
+                idle "gui/main_menu/btn_replaymode_base.png"
+                hover "gui/main_menu/btn_replaymode_onMouse.png"
+                selected_hover "gui/main_menu/btn_replaymode_onClick.png"
+                action ShowMenu("about")
+
+        # Music
+        hbox:
+            imagebutton:
+                idle "gui/main_menu/btn_bgmmode_base.png"
+                hover "gui/main_menu/btn_bgmmode_onMouse.png"
+                selected_hover "gui/main_menu/btn_bgmmode_onClick.png"
+                action ShowMenu("about")
+
+        # ExtraGames
+        hbox:
+            imagebutton:
+                idle "gui/main_menu/btn_exgame_base.png"
+                hover "gui/main_menu/btn_exgame_onMouse.png"
+                selected_hover "gui/main_menu/btn_exgame_onClick.png"
+                action ShowMenu("about")
+
+        # Back
+        hbox:
+            imagebutton:
+                idle "gui/main_menu/btn_omakeback_base.png"
+                hover "gui/main_menu/btn_omakeback_onMouse.png"
+                selected_hover "gui/main_menu/btn_omakeback_onClick.png"
+                # 这里不能用 MainMenu() ，只能用 ShowMenu 来返回
+                action ShowMenu("main_menu")
+
+        # Exit
+        hbox:
+            imagebutton:
+                idle "gui/main_menu/btn_end_base.png"
+                hover "gui/main_menu/btn_end_onMouse.png"
+                selected_hover "gui/main_menu/btn_end_onClick.png"
+                action Quit(confirm=True)
+
+
+
+
+# 以下是初始 Main_Menu 备份
+# screen main_menu():
+
+#     ## 此语句可确保替换掉任何其他菜单界面。
+#     tag menu
+
+#     add gui.main_menu_background
+
+#     ## 此空框可使标题菜单变暗。
+#     frame:
+#         style "main_menu_frame"
+
+#     ## “use”语句将其他的界面包含进此界面。标题界面的实际内容在导航界面中。
+#     use navigation
+
+#     if gui.show_name:
+
+#         vbox:
+#             style "main_menu_vbox"
+
+#             text "[config.name!t]":
+#                 style "main_menu_title"
+
+#             text "[config.version]":
+#                 style "main_menu_version"
 
 
 style main_menu_frame is empty
@@ -486,6 +721,7 @@ style main_menu_version:
 ## “scroll”参数可以是“None”，也可以是“viewport”或“vpgrid”。当此界面与一个或多个
 ## 子菜单同时使用时，这些子菜单将被转移（放置）在其中。
 
+# 新 Game_Menu （还没有开始改动捏）
 screen game_menu(title, scroll=None, yinitial=0.0):
 
     style_prefix "game_menu"
@@ -551,6 +787,73 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
+
+# 以下是初始 Game_Menu 备份
+# screen game_menu(title, scroll=None, yinitial=0.0):
+
+#     style_prefix "game_menu"
+
+#     if main_menu:
+#         add gui.main_menu_background
+#     else:
+#         add gui.game_menu_background
+
+#     frame:
+#         style "game_menu_outer_frame"
+
+#         hbox:
+
+#             ## 导航部分的预留空间。
+#             frame:
+#                 style "game_menu_navigation_frame"
+
+#             frame:
+#                 style "game_menu_content_frame"
+
+#                 if scroll == "viewport":
+
+#                     viewport:
+#                         yinitial yinitial
+#                         scrollbars "vertical"
+#                         mousewheel True
+#                         draggable True
+#                         pagekeys True
+
+#                         side_yfill True
+
+#                         vbox:
+#                             transclude
+
+#                 elif scroll == "vpgrid":
+
+#                     vpgrid:
+#                         cols 1
+#                         yinitial yinitial
+
+#                         scrollbars "vertical"
+#                         mousewheel True
+#                         draggable True
+#                         pagekeys True
+
+#                         side_yfill True
+
+#                         transclude
+
+#                 else:
+
+#                     transclude
+
+#     use navigation
+
+#     textbutton _("返回"):
+#         style "return_button"
+
+#         action Return()
+
+#     label title
+
+#     if main_menu:
+#         key "game_menu" action ShowMenu("main_menu")
 
 
 style game_menu_outer_frame is empty
@@ -623,14 +926,14 @@ screen about():
 
         vbox:
 
-            label "[config.name!t]"
-            text _("版本 [config.version!t]\n")
+            # label "[config.name!t]"
+            # text _("版本 [config.version!t]\n")
 
             ## “gui.about”通常在 options.rpy 中设置。
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("引擎：{a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only]\n\n[renpy.license!t]")
+            text _("Ren'Py引擎版本： [renpy.version_only]")
 
 
 style about_label is gui_label
@@ -653,19 +956,20 @@ screen save():
 
     tag menu
 
-    use file_slots(_("保存"))
+    use file_slots(_("Save"))
+
 
 
 screen load():
 
     tag menu
 
-    use file_slots(_("读取游戏"))
+    use file_slots(_("Load"))
 
 
 screen file_slots(title):
 
-    default page_name_value = FilePageNameInputValue(pattern=_("第 {} 页"), auto=_("自动存档"), quick=_("快速存档"))
+    default page_name_value = FilePageNameInputValue(pattern=_("第 {} 页"), auto=_("AutoSave"), quick=_("QuickSave"))
 
     use game_menu(title):
 
@@ -770,11 +1074,217 @@ style slot_button_text:
     properties gui.button_text_properties("slot_button")
 
 
+
+### 魔改存读档界面
+
+screen game_save():
+
+    tag menu
+
+    add "gui/saveload/back_save.png"
+
+    default page_name_value = FilePageNameInputValue(pattern=_("第 {} 页"), auto=_("AutoSave"), quick=_("QuickSave"))
+
+    fixed:
+
+        ## 此语句确保输入控件在任意按钮执行前可以获取“enter”事件。
+        order_reverse True
+
+        ## 页面名称，可以通过单击按钮进行编辑。
+        button:
+            style "page_label"
+
+            key_events True
+            xalign 0.5
+            action page_name_value.Toggle()
+
+            input:
+                style "page_label_text"
+                value page_name_value
+
+        ## 存档位网格。
+        grid gui.file_slot_cols gui.file_slot_rows:
+            style_prefix "slot"
+
+            xalign 0.5
+            yalign 0.5
+
+            spacing gui.slot_spacing
+
+            for i in range(gui.file_slot_cols * gui.file_slot_rows):
+
+                $ slot = i + 1
+
+                button:
+                    action FileSave(slot)
+
+                    has vbox
+
+                    add FileScreenshot(slot) xalign 0.5
+
+                    text FileTime(slot, format=_("{#file_time}%Y-%m-%d %H:%M"), empty=_("莫得存档")):
+                        style "slot_time_text"
+
+                    text FileSaveName(slot):
+                        style "slot_name_text"
+
+                    key "save_delete" action FileDelete(slot)
+
+        ## 用于访问其他页面的按钮。
+        hbox:
+            style_prefix "page"
+
+            xalign 0.5
+            yalign 1.0
+
+            spacing gui.page_spacing
+
+            textbutton _("<") action FilePagePrevious()
+
+            if config.has_autosave:
+                textbutton _("{#auto_page}A") action FilePage("auto")
+
+            if config.has_quicksave:
+                textbutton _("{#quick_page}Q") action FilePage("quick")
+
+            ## “range(1, 10)”给出 1 到 9 之间的数字。
+            for page in range(1, 21):
+                textbutton "[page]" action FilePage(page)
+
+            textbutton _(">") action FilePageNext()
+
+        vbox:
+            xalign 0.90
+            yalign 0.95
+
+            imagebutton:
+                idle "gui/saveload/btn_back_base.png"
+                hover "gui/saveload/btn_back_onMouse.png"
+                selected_hover "gui/saveload/btn_back_onClick.png"
+                action Return()
+
+        vbox:
+            xalign 0.95
+            yalign 0.90
+
+            imagebutton:
+                idle "gui/saveload/btn_title_base.png"
+                hover "gui/saveload/btn_title_onMouse.png"
+                selected_hover "gui/saveload/btn_title_onClick.png"
+                action MainMenu()
+
+
+screen game_load():
+
+    tag menu
+
+    add "gui/saveload/back_load.png"
+
+    default page_name_value = FilePageNameInputValue(pattern=_("第 {} 页"), auto=_("AutoSave"), quick=_("QuickSave"))
+
+    fixed:
+
+        ## 此语句确保输入控件在任意按钮执行前可以获取“enter”事件。
+        order_reverse True
+
+        ## 页面名称，可以通过单击按钮进行编辑。
+        button:
+            style "page_label"
+
+            key_events True
+            xalign 0.5
+            action page_name_value.Toggle()
+
+            input:
+                style "page_label_text"
+                value page_name_value
+
+        ## 存档位网格。
+        grid gui.file_slot_cols gui.file_slot_rows:
+            style_prefix "slot"
+
+            xalign 0.5
+            yalign 0.5
+
+            spacing gui.slot_spacing
+
+            for i in range(gui.file_slot_cols * gui.file_slot_rows):
+
+                $ slot = i + 1
+
+                button:
+                    action FileLoad(slot)
+
+                    has vbox
+
+                    add FileScreenshot(slot) xalign 0.5
+
+                    text FileTime(slot, format=_("{#file_time}%Y-%m-%d %H:%M"), empty=_("莫得存档")):
+                        style "slot_time_text"
+
+                    text FileSaveName(slot):
+                        style "slot_name_text"
+
+                    key "save_delete" action FileDelete(slot)
+
+
+        ## 用于访问其他页面的按钮。
+        hbox:
+            style_prefix "page"
+
+            xalign 0.5
+            yalign 1.0
+
+            spacing gui.page_spacing
+
+            textbutton _("<") action FilePagePrevious()
+
+            if config.has_autosave:
+                textbutton _("{#auto_page}A") action FilePage("auto")
+
+            if config.has_quicksave:
+                textbutton _("{#quick_page}Q") action FilePage("quick")
+
+            ## “range(1, 10)”给出 1 到 9 之间的数字。
+            for page in range(1, 21):
+                textbutton "[page]" action FilePage(page)
+
+            textbutton _(">") action FilePageNext()
+
+        vbox:
+            xalign 0.90
+            yalign 0.95
+
+            imagebutton:
+                idle "gui/saveload/btn_back_base.png"
+                hover "gui/saveload/btn_back_onMouse.png"
+                selected_hover "gui/saveload/btn_back_onClick.png"
+                action Return()
+
+        vbox:
+            xalign 0.95
+            yalign 0.90
+
+            imagebutton:
+                idle "gui/saveload/btn_title_base.png"
+                hover "gui/saveload/btn_title_onMouse.png"
+                selected_hover "gui/saveload/btn_title_onClick.png"
+                action MainMenu()
+
+
+
+
 ## 设置界面 ########################################################################
 ##
 ## 设置界面允许玩家配置游戏以更好地适应自己的习惯。
 ##
 ## https://www.renpy.cn/doc/screen_special.html#preferences
+
+# 使用硬解
+# https://www.renpy.cn/doc/config.html?highlight=config%20hw_video#var-config.hw_video
+
+default persistent.hwVideo = False
+define config.hw_video = persistent.hwVideo
 
 screen preferences():
 
@@ -809,6 +1319,11 @@ screen preferences():
                     textbutton _("选项后继续") action Preference("after choices", "toggle")
                     textbutton _("忽略转场") action InvertSelected(Preference("transitions", "toggle"))
 
+                vbox:
+                    style_prefix "check"
+                    label _("实验选项，切换需重启")
+                    textbutton _("使用软解") action [SetVariable("persistent.hwVideo",False),renpy.save_persistent()]
+                    textbutton _("使用硬解") action [SetVariable("persistent.hwVideo",True),renpy.save_persistent()]
                 ## 可以在此处添加类型为“radio_pref”或“check_pref”的其他“vbox”，
                 ## 以添加其他创建者定义的首选项设置。
 
@@ -974,11 +1489,60 @@ screen history():
                             text_color h.who_args["color"]
 
                 $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
-                text what:
+                # 历史记录跳跃
+                ## https://www.renpy.cn/thread-221-1-1.html
+                textbutton what:
+
                     substitute False
+                    style "history_text"
+                    action Confirm("要跳转到该处吗？", yes=RollbackToIdentifier(h.rollback_identifier), no=None, confirm_selected=False),
 
         if not _history_list:
             label _("尚无对话历史记录。")
+
+# 旧 history 存档
+# screen history():
+
+#     tag menu
+
+#     ## 避免预缓存此界面，因为它可能非常大。
+#     predict False
+
+#     use game_menu(_("历史"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0):
+
+#         style_prefix "history"
+
+#         for h in _history_list:
+
+#             window:
+
+#                 ## 此语句可确保如果“history_height”为“None”的话仍可正常显示条
+#                 ## 目。
+#                 has fixed:
+#                     yfit True
+
+#                 if h.who:
+
+#                     label h.who:
+#                         style "history_name"
+#                         substitute False
+
+#                         ## 若角色颜色已设置，则从“Character”对象中读取颜色到叙述
+#                         ## 人文本中。
+#                         if "color" in h.who_args:
+#                             text_color h.who_args["color"]
+
+#                 $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
+#                 # 历史记录跳跃
+#                 ## https://www.renpy.cn/thread-221-1-1.html
+#                 textbutton what:
+
+#                     substitute False
+#                     style "history_text"
+#                     action Confirm("要跳转到该处吗？", yes=RollbackToIdentifier(h.rollback_identifier), no=None, confirm_selected=False),
+
+#         if not _history_list:
+#             label _("尚无对话历史记录。")
 
 
 ## 此语句决定了允许在历史记录界面上显示哪些标签。
@@ -1053,12 +1617,19 @@ screen help():
                 if GamepadExists():
                     textbutton _("手柄") action SetScreenVariable("device", "gamepad")
 
+                # 在这里加上豆知识速查，第一次游玩提示一次有这个东西，然后不再提示
+                # textbutton _("豆知识速查") action ShowMenu("douKnowledge")
+                # 这里偷个懒，用和鼠标键盘类似的方式引入
+                textbutton _("豆知识速查") action SetScreenVariable("device", "douKnowledge")
+
             if device == "keyboard":
                 use keyboard_help
             elif device == "mouse":
                 use mouse_help
             elif device == "gamepad":
                 use gamepad_help
+            elif 1==1:
+                use douKnowledge
 
 
 screen keyboard_help():
@@ -1105,7 +1676,11 @@ screen keyboard_help():
 
     hbox:
         label "V"
-        text _("切换辅助{a=https://www.renpy.org/l/voicing}自动朗读{/a}。")
+        text _("切换辅助自动朗读。")
+
+    hbox:
+        label "Delete"
+        text _("在存、读档界面可以删除存档")
 
 
 screen mouse_help():
@@ -1159,6 +1734,13 @@ screen gamepad_help():
         text _("隐藏用户界面。")
 
     textbutton _("校准") action GamepadCalibrate()
+
+    # 豆知识
+screen douKnowledge():
+
+    hbox:
+        label _("豆知识1")
+        text _("内容")
 
 
 style help_button is gui_button
@@ -1484,10 +2066,21 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
+            # textbutton _("回退") action Rollback()
+            # textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
+            # textbutton _("自动") action Preference("auto-forward", "toggle")
+            # textbutton _("菜单") action ShowMenu()
+
+            # 由于存读档入口调整，调整按钮于其它平台一致
             textbutton _("回退") action Rollback()
+            textbutton _("历史") action ShowMenu('history')
             textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("自动") action Preference("auto-forward", "toggle")
-            textbutton _("菜单") action ShowMenu()
+            textbutton _("保存") action ShowMenu("game_save")
+            textbutton _("读取") action ShowMenu("game_load")
+            textbutton _("快存") action QuickSave()
+            textbutton _("快读") action QuickLoad()
+            textbutton _("设置") action ShowMenu('preferences')
 
 
 style window:
@@ -1569,3 +2162,16 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+
+# 由于修改了存读档界面，需要调整存储区变量的默认行为，这个变量要在SplashScreen之后再加载，不能 init python -1，必须使用普通的写法让它在后面加载
+# https://www.renpy.cn/doc/store_variables.html?highlight=game_menu_screen#var-_game_menu_screen
+init python:
+    _game_menu_screen = "history"
+
+# 自动存档功能，用 try 防止抛出错误，该错误属于 Warning ，不影响运行
+    try:
+        l_f_page = latest_file_str.split('-',1)[0] #所在页 #auto-1表示自动存档页第一位
+        l_f_name = latest_file_str.split('-',1)[1] #槽位名
+    except:
+        print("淦！移动端你又又又出错了！！")

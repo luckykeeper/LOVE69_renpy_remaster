@@ -5,8 +5,8 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月21日
-# 版本号 0.3 "LuckyDev"
+# 修订日期 2022年1月23日
+# 版本号 0.4 "LuckyDev"
 # 源文件名：gui.rpy
 
 ## “init offset”语句可使此文件中的初始化语句在任何其他文件中的“init”语句之前运
@@ -235,8 +235,8 @@ define gui.choice_button_text_insensitive_color = "#444444"
 ## gui/button 中的图像文件，就像其他类型的按钮一样。
 
 ## 存档位按钮。
-define gui.slot_button_width = 414
-define gui.slot_button_height = 309
+define gui.slot_button_width = 318
+define gui.slot_button_height = 237
 define gui.slot_button_borders = Borders(15, 15, 15, 15)
 define gui.slot_button_text_size = 21
 define gui.slot_button_text_xalign = 0.5
@@ -245,11 +245,13 @@ define gui.slot_button_text_selected_idle_color = gui.selected_color
 define gui.slot_button_text_selected_hover_color = gui.hover_color
 
 ## 存档所用缩略图的宽度和高度。
-define config.thumbnail_width = 384
-define config.thumbnail_height = 216
+# define config.thumbnail_width = 384
+# define config.thumbnail_height = 216
+define config.thumbnail_width = 288
+define config.thumbnail_height = 162
 
 ## 存档网格中的列数和行数。
-define gui.file_slot_cols = 3
+define gui.file_slot_cols = 5
 define gui.file_slot_rows = 2
 
 
@@ -302,7 +304,7 @@ define gui.confirm_frame_borders = Borders(60, 60, 60, 60)
 define gui.skip_frame_borders = Borders(24, 8, 75, 8)
 
 ## 用作通知界面部分的框架。
-define gui.notify_frame_borders = Borders(24, 8, 60, 8)
+define gui.notify_frame_borders = Borders(24, 8, 40, 8)
 
 ## 框架背景是否应平铺？
 define gui.frame_tile = False
@@ -407,6 +409,12 @@ define gui.nvl_button_xalign = 0.0
 ## www.renpy.org/doc/html/style_properties.html#style-property-language
 
 define gui.language = "unicode"
+
+
+########
+# 音频测试 sample
+define config.sample_sound = "voice/effect/07_ドア1～あける.ogg"
+define config.sample_voice = "voice/心愛/cca_a1_0331.ogg"
 
 
 ################################################################################

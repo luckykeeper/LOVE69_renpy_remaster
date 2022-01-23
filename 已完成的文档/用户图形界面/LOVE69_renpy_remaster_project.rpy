@@ -2,11 +2,11 @@
 # LOVE69_Renpy_Remaster_Project
 # 开场动画设定脚本
 # Author:Luckykeeper
-# 版本 0.3 "LuckyDev"
+# 版本 0.4 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月21日
+# 修订日期 2022年1月23日
 
 # image pure_black = "#000"
 # 开场画面
@@ -39,19 +39,23 @@ label splashscreen:
 
     # Warning 后面会做，要修图，记得一定要加上癫痫提醒，里面很多地方闪来闪去，不然会死人的！
     # 已经做了
-    show white:
-        zoom 2.0
-    show caution with Dissolve(1.0):
-        zoom 0.24
-    $ renpy.pause(10, hard=True)
-    pause 10.0
-    $ renpy.pause(10, hard=True)
+    # show white:
+    #     zoom 2.0
+
+        # caution 画面，开发时注释
+    # show caution with Dissolve(1.0):
+    #     zoom 0.24
+    # $ renpy.pause(10, hard=True)
+    # pause 10.0
+    # $ renpy.pause(10, hard=True)
     # 关于 caution 画面的小说明
     # 有的人可能会觉得 caution 画面显示时间太长了（10s），而且用鼠标还没有办法跳过（其实我也这么觉得，后面可能会取消吧）
     # 如果你恰巧看到了这里，其实这个画面看过一次之后是可以像对话一样用 Ctrl 键来C过去的（doge）
     # 不过移动端就没有 Ctrl 键了，嘛，开始之前去稍微活动一下不是也挺好的嘛（doge）
+
     hide caution with Dissolve(1.0)
     $ renpy.pause(1, hard=True)
+
 
 # 主菜单之前
 
