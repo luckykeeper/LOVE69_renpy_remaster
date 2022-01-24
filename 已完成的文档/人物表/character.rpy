@@ -7,7 +7,7 @@
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月28日
-# 修订日期 2022年1月21日
+# 修订日期 2022年1月25日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -194,6 +194,25 @@ define na = Character('瑠那',color="#a4808c",image="瑠那")
 
 # 雾叶 ye //和原版相比，移植版打算在人物名上加入颜色，雾叶的颜色是从皮带上十字的中央取的
 define ye = Character('雾叶',color="#414141",image="霧葉")
+
+# 雾叶在本作更多的时候叫店长
+# 好久没写了差点忘记了，还排了半天Bug
+# 定义人物头像的时候必须写tag
+# image side 店长 店长_私服_本気 = "images/face/店长/店长_私服_本気.png"
+# 店长 店长_私服_本気 前面的店长是tag，不可省略
+# 后面的 店长_私服_本気 是调用的图片
+define dinerowner = Character('店长',color="#414141",image="店长")
+image side 店长 店长_私服_目閉じ = "images/face/店长/店长_私服_目閉じ.png" # 闭眼，嘴微张，手撑头
+image side 店长 店长_私服_目閉じ_1 = "images/face/店长/店长_私服_目閉じ_1.png" # 闭眼，嘴微张，手撑头
+image side 店长 店长_私服_微笑み = "images/face/店长/店长_私服_微笑み.png" # 睁眼，微笑，闭嘴，手撑头
+image side 店长 店长_私服_微笑み_1 = "images/face/店长/店长_私服_微笑み_1.png" # 睁眼，微笑，闭嘴，手撑头，脸红
+image side 店长 店长_私服_本気 = "images/face/店长/店长_私服_本気.png" # 睁眼，嘴o，手撑头
+image side 店长 店长_私服_ニヤリ = "images/face/店长/店长_私服_ニヤリ.png" # 睁眼，手撑头，是有点小坏的笑呢
+image side 店长 店长_私服_ニヤリ_1 = "images/face/店长/店长_私服_ニヤリ_1.png" # 睁眼，手撑头，是有点小坏的笑呢，脸红
+image side 店长 店长_私服_無表情 = "images/face/店长/店长_私服_無表情.png" # 睁眼，手撑头，闭嘴，莫得感情
+image side 店长 店长_私服_ジト目 = "images/face/店长/店长_私服_ジト目.png" # 睁眼，手撑头，嘴椭圆，一脸正经
+
+
 # 下面定义不知道是谁的时候的雾叶
 # 知不道的人物使用发色称呼
 # 如：雾叶——>黑
