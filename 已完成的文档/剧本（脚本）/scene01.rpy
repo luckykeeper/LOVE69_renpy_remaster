@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月24日
+# 修订日期 2022年1月25日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右<-2021年10月5日 搞定！
@@ -140,6 +140,15 @@ label scene01:
     # Demo waifu2x 测试
     image bg mcg01_1_2 = "images/bg/mcg01_1_2.png"
     # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 02
+    # scene bg mcg01_1_2  with ImageDissolve("images/tr/ysr007.png", 0.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
+    # scene bg mcg01_1_2  with ComposeTransition(ImageDissolve("images/tr/ysr007.png", 0.3, ramplen=8, reverse=True, alpha=True, time_warp=None),before=None,after=vpunch)
+    # MultipleTransition([
+    #     black,
+    #     ImageDissolve("images/tr/ysr007.png", 0.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
+    #     mcg01_1_2,Pause(0.5),
+    #     mcg01_1_2,vpunch,
+    #     True])
+    scene bg mcg01_1_2 with ComposeTransition(ImageDissolve("images/tr/ysr007.png", 0.3, ramplen=8, reverse=True, alpha=True, time_warp=None),before=None,after=Pause(0.3))
     scene bg mcg01_1_2 with vpunch
     # 莲 「おひょぉおう！？」
     lian "哦哦哦哦哦？！！！"
@@ -571,13 +580,14 @@ label scene01:
 
     ### 切换场景，莲卧室--->葛城家客厅
     # 原作是百叶窗效果，这里使用wipedown做类似替换
+    # 2022年1月24日，已经按百叶窗效果做完
     # 摸索1920*1440的参数
     # 1920*1440无需处理，加上 at truecenter 即可
     # bgm honky tonk saloon (pad) 13--> honky tonk saloon (theme) 14
     # 使用fadeout 1.0 fadein 1.0用于旧音乐的淡出和新音乐的淡入 建议时间设置2s更加自然
     play music "bgm/bgm14.ogg" fadeout 2.0 fadein 2.0
     image bg リビングa_昼 = "images/bg/リビングa_昼.png"
-    scene リビングa_昼 at truecenter with wipedown
+    scene リビングa_昼 at truecenter with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
 
     ### 人物：莲 真冬 TV *Luckykeeper
 
@@ -973,7 +983,7 @@ label scene01:
     # 参考资料：https://www.douban.com/group/topic/30667396/
     # 相同场景转场，先加一层black，再做转场，不加的话就不会正常显示正常转场
     scene black
-    scene リビングa_昼 at truecenter with blinds
+    scene リビングa_昼 at truecenter with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
     "吃完饭，比平时多出了很多时间的我们两个人，一边喝着梅昆布茶，一边看着电视（L：昆布，就是海带，昆布茶，就是海带茶。梅昆布茶谐音是高兴的意思，能讨个好口彩，不过据说味道像汤一样而且并不好喝）"
 
     # nil 「そろそろ朝のニュース番組から、ワイドショーへと切り替わる時間だ。」
@@ -1166,7 +1176,13 @@ label scene01:
     queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
     queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
     queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
-    pause 0.7
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    queue sound "<to 0.05>voice/effect/05_玄関チャイム.ogg"
+    pause 1.15
 
 
 
@@ -1229,7 +1245,7 @@ label scene01:
     hide 真冬_制服_基本_微笑み
 
     # 莲 「よかろう。ただし野球ゲームで勝ったらだ。しかもお前はベッカムしか使えない」
-    lian "“好吧。但是如果在棒球游戏中获胜的话。而且你只能使用贝克汉姆（L：原文雀食是棒球，就是如此乱入，游戏的话应该是neta FIFA系列）"
+    lian "好吧。但是如果在棒球游戏中获胜的话。而且你只能使用贝克汉姆（L：原文雀食是棒球，就是如此乱入，游戏的话应该是neta FIFA系列）"
 
     # 莲 「ベッカムは野球でも強いのか…」
     lian "贝克汉姆在棒球方面也很强吗..."
@@ -1242,7 +1258,7 @@ label scene01:
 
     ### 场景切换，莲客厅--->葛城家玄关
     image bg 玄関_昼 = "images/bg/玄関_昼.png.png"
-    scene 玄関_昼 at love69_bg1440 with wipedown
+    scene 玄関_昼 at love69_bg1440 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
     # 2021年9月2日晚9：49，先做到这里，溜去整个项目官方网页出来
     # 2021年9月4凌晨 项目组官网肝完了，先去把scene01的文本工作完成，，从这里开始的文本需要做亿点动画，本作解包文件不能用，回头从kr引擎的gal里面抓点特效出来
     ### 人物：莲 心爱？？？ 心爱  真冬
@@ -2163,7 +2179,7 @@ label scene01:
     ### BGM：sweet passion.ogg（没变）
     # 没有类似的转场效果，稍稍改动一下
     image bg 通学路c_朝 = "images/bg/通学路c_朝.png"
-    scene 通学路c_朝 at love69_bg1440 with slideright
+    scene 通学路c_朝 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
     show 心愛_制服_おやつ_もぐもぐ at love69_right with Dissolve(0.3)
     show 真冬_制服_基本_にっこり at love69_left with Dissolve(0.3)
 
@@ -2502,7 +2518,7 @@ label scene01:
     ### 人物：莲 心爱 真冬
     # 和前面一样，转场效果不能还原，咱又来挑了一个
     image bg 校門_朝 = "images/bg/校門_朝.png"
-    scene 校門_朝 at love69_bg1440 with squares
+    scene 校門_朝 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
 
     # nil 「と、言うことで学園につきました。我らが通う「私立歌越学園」の校門はいつみても、校門って感じがして好きだ。」
     "就这样，我们说着玩着就到了学校。我们所就读的「私立歌越学园」的校门无论何时都让人感觉是校门的感觉，我很喜欢（L:这不是废话嘛233）"
@@ -2619,7 +2635,7 @@ label scene01:
     ### BGM不变
     # 1220 的也需要改位置
     image bg 教室_昼 = "images/bg/教室_昼.png"
-    scene 教室_昼 at love69_bg1220 with wipedown
+    scene 教室_昼 at love69_bg1220 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
     # nil 「始業のチャイムが鳴る凡そ１０分前に教室にたどり着く。俺からすれば凄まじい快挙と言えよう。」
     "我们在上课铃响起的大约10分钟前到达教室，在我看来这可是惊人的壮举"
 
@@ -2838,7 +2854,7 @@ label scene01:
     hide 心愛_制服_おやつ_にっこり with Dissolve(0.15)
     hide 花盆君_通常 with Dissolve(0.15)
     scene black
-    scene 教室_昼 at love69_bg1220 with wipeleft
+    scene 教室_昼 at love69_bg1220 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
 
 
     # nil 「予鈴が鳴り響く。それと同時に教室の前側の扉が開き、担任の教師が姿を現した。」
@@ -3497,7 +3513,7 @@ label scene01:
     hide 心愛_制服_基本_ニタァ with Dissolve(0.15)
     hide 花盆君_通常 with Dissolve(0.15)
     scene black
-    scene 教室_昼 at love69_bg1220 with dissolve
+    scene 教室_昼 at love69_bg1220 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
 
     # nil 「ちなみに授業中は寝てました。」
     "顺便说一下，我上课的时候睡着了（L:绝了，莲你是来学校干啥的啊）"
@@ -3506,7 +3522,7 @@ label scene01:
     # 下课铃声
     play sound "voice/effect/学校チャイム.ogg"
     scene black
-    scene 教室_昼 at love69_bg1220 with squares
+    scene 教室_昼 at love69_bg1220 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -3993,7 +4009,7 @@ label scene01:
     # 人物： 莲 装在电话里的真冬（这里L在neta Age of Empire 2 帝国时代2战役里面耶路撒冷战役“装在桶里的皇帝”，等项目肝完了来和翻译君联机打红警3好吗？）
     # BGM不变
     image bg 校門_昼 = "images/bg/校門_昼.png"
-    scene 校門_昼 at love69_bg1440 with wiperight
+    scene 校門_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
 
     # nil 「と、いうことで。一旦、真冬と心愛とは別行動をとり、一足先に例の飲食店に向かいます。」
     "就这样，暂且与真冬和心爱分开行动，先行前往那个餐厅"
@@ -4106,7 +4122,7 @@ label scene01:
 
     play sound "voice/effect/18_携帯電話操作音1.ogg"
     image bg 通学路c_昼 = "images/bg/通学路c_昼.png"
-    scene 通学路c_昼 at love69_bg1440 with slideleft
+    scene 通学路c_昼 at love69_bg1440 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
 
     # 电话挂断声
     # 场景切换：学校门口->通学路街道
@@ -4441,7 +4457,7 @@ label scene01:
     # 地点：商业街（没变）
     # stop music
     scene black
-    scene 通学路c_昼 at love69_bg1440 with wipeleft
+    scene 通学路c_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
     play music bgmtwentyfour fadeout 0.8 fadein 1.0
     show 黄_基本_杖_微笑み at love69_lion_center with Dissolve(0.15)
 
@@ -4527,9 +4543,9 @@ label scene01:
     # voice "voice/その他/mjf_a1_0012.ogg" 并没有12
     mj MJ_通常 "............"
 
-    # 过渡动画，小sence不变
+    # 过渡动画，小scene不变
     scene black
-    scene 通学路c_昼 at love69_bg1440 with wipeup
+    scene 通学路c_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
 
     # nil 「とりあえず立ち話もアレなんで、近くにあったベンチに座る。」
     "因为站着说话也腰疼，所以就坐在了附近的长椅上"
@@ -4792,7 +4808,7 @@ label scene01:
     # 原地TP
     # 场景，BGM 均不变
     scene black
-    scene 通学路c_昼 at love69_bg1440 with wipeup
+    scene 通学路c_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
 
     # 里昂 「という事で、アイス屋さんを開きたいので日本にやってきました」
     show リオン_基本_杖_嬉しい at love69_lion_center with Dissolve(0.15)
@@ -6151,10 +6167,16 @@ label scene01:
     # nil 「促されるま、俺はダイナー式のレストランの店内へと案内されるのであった。」
     "在她的催促下，我被带进了一家diner式餐厅的店内"
 
+    # 隐藏 quick_menu
+    $ quick_menu = False
+
     play sound "voice/effect/moosehead honk (stinger).ogg"
     image bg アイキャッチ心愛＆真冬 = "images/bg/アイキャッチ心愛＆真冬.png"
+    # hide screen quick_menu
     scene アイキャッチ心愛＆真冬 with wiperight
+
     $ renpy.pause(1.5, hard=True)
+
 
     # scene01 结束啦！！！
     # 过场： アイキャッチ心愛＆真冬
