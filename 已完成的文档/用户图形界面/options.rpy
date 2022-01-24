@@ -5,7 +5,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月24日
+# 修订日期 2022年1月25日
 # 版本号 0.4 "LuckyDev"
 
 
@@ -36,7 +36,7 @@ define config.version = "0.4"
 
 # Demo 版的说明
 define gui.about = _p("""
-LOVEPOTION SIXTYNINE 汉化移植版 内部测试版 ver0.4 “LuckyDev” ，由 Luckykeeper 和 LOVE69_Renpy_Remaster 项目组倾情奉献
+LOVEPOTION SIXTYNINE 汉化移植版 内部测试版 ver0.4 “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献
 
 项目页面：https://github.com/luckykeeper/LOVE69_renpy_remaster
 
@@ -75,7 +75,7 @@ Santa-Weaves：很荣幸能参加进项目里，希望Luckykeeper能把这份热
 ## 在生成的发布版中，可执行文件和目录所使用的短名称。此处必须是仅 ASCII 字符，并
 ## 且不得包含空格、冒号和分号。
 
-define build.name = "LOVE69renpyDemo0.1"
+define build.name = "LOVE69RenPyRemasterProject"
 
 
 ## 音效和音乐 #######################################################################
@@ -92,6 +92,7 @@ define config.has_voice = True
 
 # define config.sample_sound = "sample-sound.ogg"
 # define config.sample_voice = "sample-voice.ogg"
+# 这个写到Screen了
 
 
 ## 将以下语句取消注释就可以设置标题界面播放的背景音乐文件。此文件将在整个游戏中
@@ -109,6 +110,9 @@ define config.main_menu_music = bgmeight
 define config.enter_transition = dissolve
 define config.exit_transition = dissolve
 
+## 各小头像之间的转场
+# define config.side_image_same_transform = dissolve
+# define config.side_image_change_transform =  dissolve
 
 ## 各个游戏菜单之间的转场。
 
@@ -163,7 +167,7 @@ default preferences.afm_time = 15
 ##
 ## 控制 Ren'Py 为此游戏放置存档的，基于平台的特定目录。存档文件将放置在：
 ##
-## Windows：%APPDATA\RenPy\<config.save_directory>
+## Windows：%APPDATA%\RenPy\<config.save_directory>
 ##
 ## Macintosh：$HOME/Library/RenPy/<config.save_directory>
 ##
@@ -171,8 +175,14 @@ default preferences.afm_time = 15
 ##
 ## 该命令一般不应变更，若要变更，应为有效字符串而不是表达式。
 
-define config.save_directory = "LOVE69RenpyRemaster-SaveData"
-# define config.save_directory = "LOVE69RenpyRemaster-1630134793"
+# 正式发行版存档文件夹
+# define config.save_directory = "LOVE69RenpyRemaster-Release-ver1.0-SaveData"
+
+# 开发版存档文件夹
+define config.save_directory = "LOVE69RenpyRemaster-Dev-SaveData"
+
+# Demo 版存档文件夹
+# define config.save_directory = "LOVE69RenpyRemaster"
 
 
 ## 图标 ##########################################################################

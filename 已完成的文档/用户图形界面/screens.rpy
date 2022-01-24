@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月24日
+# 修订日期 2022年1月25日
 ################################################################################
 ## 初始化
 ################################################################################
@@ -35,7 +35,6 @@ init python in sideimagesize:
     SideImageXalign = 0.08
     SideImageYalign = -29.35
     SideImageZoom = 0.95
-
 
 # 针对大的 add SideImage() xalign 0.12 yalign 9.1 zoom 0.35 使用时调用以下参数
 # SideImageXalign = 0.0
@@ -320,9 +319,11 @@ style choice_button_text is default:
 ## 快捷菜单显示于游戏内，以便于访问游戏外的菜单。
 
 screen quick_menu():
-
+    # Ren'Py 提供了更改zorder的方法
+    ## https://www.renpy.cn/doc/displaying_images.html?highlight=zorder#renpy.change_zorder
     ## 确保该菜单出现在其他界面之上，
     zorder 100
+
 
     if quick_menu:
 
@@ -332,15 +333,78 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
-            textbutton _("回退") action Rollback()
-            textbutton _("历史") action ShowMenu('history')
-            textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("自动") action Preference("auto-forward", "toggle")
-            textbutton _("保存") action ShowMenu("game_save")
-            textbutton _("读取") action ShowMenu("game_load")
-            textbutton _("快存") action QuickSave()
-            textbutton _("快读") action QuickLoad()
-            textbutton _("设置") action ShowMenu('preferences')
+            # 旧 quick_menu 之 textbutton
+            # # textbutton _("回退") action Rollback()
+            # # textbutton _("历史") action ShowMenu('history')
+            # textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
+            # textbutton _("自动") action Preference("auto-forward", "toggle")
+            # textbutton _("保存") action ShowMenu("game_save")
+            # textbutton _("读取") action ShowMenu("game_load")
+            # textbutton _("快存") action QuickSave()
+            # textbutton _("快读") action QuickLoad()
+            # textbutton _("设置") action ShowMenu('preferences')
+
+            # 新 quick_menu 之 image button
+            ## 对 btn 的顺序进行微调
+
+            # 存档
+            imagebutton:
+                idle "gui/quick_menu/btn_save_base.png"
+                hover "gui/quick_menu/btn_save_onMouse.png"
+                selected_hover "gui/quick_menu/btn_save_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
+                action ShowMenu("game_save")
+
+            # 读档
+            imagebutton:
+                idle "gui/quick_menu/btn_load_base.png"
+                hover "gui/quick_menu/btn_load_onMouse.png"
+                selected_hover "gui/quick_menu/btn_load_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
+                action ShowMenu("game_load")
+
+            # Q.Save
+            imagebutton:
+                idle "gui/quick_menu/btn_qsave_base.png"
+                hover "gui/quick_menu/btn_qsave_onMouse.png"
+                selected_hover "gui/quick_menu/btn_qsave_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
+                action QuickSave()
+
+            # Q.Load
+            imagebutton:
+                idle "gui/quick_menu/btn_qload_base.png"
+                hover "gui/quick_menu/btn_qload_onMouse.png"
+                selected_hover "gui/quick_menu/btn_qload_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
+                action QuickLoad()
+
+            # 快进
+            ## 快进和自动属于要保存状态的按钮，多一个 selected_idle 特性
+            imagebutton:
+                idle "gui/quick_menu/btn_skip_base.png"
+                hover "gui/quick_menu/btn_skip_onMouse.png"
+                selected_hover "gui/quick_menu/btn_skip_onClick.png"
+                selected_idle "gui/quick_menu/btn_skip_Clicked.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
+                action Skip() alternate Skip(fast=True, confirm=True)
+
+            # 自动
+            imagebutton:
+                idle "gui/quick_menu/btn_auto_base.png"
+                hover "gui/quick_menu/btn_auto_onMouse.png"
+                selected_hover "gui/quick_menu/btn_auto_onClick.png"
+                selected_idle "gui/quick_menu/btn_auto_Clicked.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
+                action Preference("auto-forward", "toggle")
+
+            # 设置
+            imagebutton:
+                idle "gui/quick_menu/btn_config_base.png"
+                hover "gui/quick_menu/btn_config_onMouse.png"
+                selected_hover "gui/quick_menu/btn_config_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
+                action ShowMenu('preferences')
 
 
 ## 此语句确保只要玩家没有明确隐藏界面，就会在游戏中显示“quick_menu”界面。
@@ -1340,13 +1404,27 @@ screen preferences():
 
                 vbox:
                     style_prefix "check"
-                    label _("实验选项，详见帮助部分说明")
-                    textbutton _("使用软解（稳定）") action [SetVariable("persistent.hwVideo",False),renpy.save_persistent()]
-                    textbutton _("使用硬解（更快）") action [SetVariable("persistent.hwVideo",True),renpy.save_persistent()]
-                    textbutton _("使用内存缓存（更快）") action [SetVariable("persistent.useCache",True),renpy.save_persistent()]
-                    textbutton _("直接从硬盘读取（低内存）") action [SetVariable("persistent.useCache",False),renpy.save_persistent()]
+                    label _("实验选项，详见悬停在选项后左下方说明，修改之后重启生效")
+                    textbutton _("使用软解（稳定）") :
+                        action [SetVariable("persistent.hwVideo",False),renpy.save_persistent()]
+                        tooltip "默认选项，调用软件解码器对媒体进行解码，非常稳定但是耗费性能，对低端设备不友好"
+                    textbutton _("使用硬解（更快）") :
+                        action [SetVariable("persistent.hwVideo",True),renpy.save_persistent()]
+                        tooltip "调用硬件解码器对媒体进行解码，速度快且高效，前提需要设备支持（程序的媒体文件有主要有png、webm、ogg三种，请确保您的设备支持），可能会导致一些问题，如遇到视频拉伸，无法正常播放等问题，请切换会软件解码器，如果你的设备不属于低性能设备，强烈建议使用软件解码器"
+                    textbutton _("使用内存缓存（更快）"):
+                        action [SetVariable("persistent.useCache",True),renpy.save_persistent()]
+                        tooltip "默认选项，素材文件预缓存至内存再从内存调用，运行速度大幅提升，对低内存设备不友好，但是只需要有1.2G以上空闲内存或开启了虚拟内存（一般系统都是默认开启的）就可以放心选择此项"
+                    textbutton _("直接从硬盘读取（低内存）") :
+                        action [SetVariable("persistent.useCache",False),renpy.save_persistent()]
+                        tooltip "程序直接从硬盘读取素材文件，只使用必要的内存，对硬盘性能要求高，但是内存开销较小，适合低内存设备，但是若硬盘读取性能不佳时可能会发生卡顿现象"
                 ## 可以在此处添加类型为“radio_pref”或“check_pref”的其他“vbox”，
                 ## 以添加其他创建者定义的首选项设置。
+
+            # https://www.renpy.cn/doc/screen_actions.html?highlight=gettooltip#tooltips
+                $ tooltip = GetTooltip()
+
+            if tooltip:
+                text "[tooltip]"
 
             null height (4 * gui.pref_spacing)
 
@@ -1371,6 +1449,7 @@ screen preferences():
 
                         hbox:
                             bar value Preference("music volume")
+
 
                     if config.has_sound:
 
@@ -1709,29 +1788,29 @@ screen keyboard_help():
         label "Delete"
         text _("在存、读档界面可以删除存档")
 
-    hbox:
-        label _("实验选项")
-        text _("对设置中实验选项进行说明，注意更改实验选项必须重启游戏，否则可能不会生效")
+    # hbox:
+    #     label _("实验选项")
+    #     text _("对设置中实验选项进行说明，注意更改实验选项必须重启游戏，否则可能不会生效")
+
+    # hbox:
+    #     label _("使用软解")
+    #     text _("默认选项，调用软件解码器对媒体进行解码，非常稳定但是耗费性能，对低端设备不友好")
+
+    # hbox:
+    #     label _("使用硬解")
+    #     text _("调用硬件解码器对媒体进行解码，速度快且高效，前提需要设备支持（程序的媒体文件有主要有png、webm、ogg三种，请确保您的设备支持），可能会导致一些问题，如遇到视频拉伸，无法正常播放等问题，请切换会软件解码器，如果你的设备不属于低性能设备，强烈建议使用软件解码器")
+
+    # hbox:
+    #     label _("使用内存缓存")
+    #     text _("默认选项，素材文件预缓存至内存再从内存调用，运行速度大幅提升，对低内存设备不友好，但是只需要有1.2G以上空闲内存或开启了虚拟内存（一般系统都是默认开启的）就可以放心选择此项")
+
+    # hbox:
+    #     label _("直接从硬盘读取")
+    #     text _("程序直接从硬盘读取素材文件，只使用必要的内存，对硬盘性能要求高，但是内存开销较小，适合低内存设备，但是若硬盘读取性能不佳时可能会发生卡顿现象")
 
     hbox:
-        label _("使用软解")
-        text _("默认选项，调用软件解码器对媒体进行解码，非常稳定但是耗费性能，对低端设备不友好")
-
-    hbox:
-        label _("使用硬解")
-        text _("调用硬件解码器对媒体进行解码，速度快且高效，前提需要设备支持（程序的媒体文件有主要有png、webm、ogg三种，请确保您的设备支持），可能会导致一些问题，如遇到视频拉伸，无法正常播放等问题，请切换会软件解码器，如果你的设备不属于低性能设备，强烈建议使用软件解码器")
-
-    hbox:
-        label _("使用内存缓存")
-        text _("默认选项，素材文件预缓存至内存再从内存调用，运行速度大幅提升，对低内存设备不友好，但是只需要有1.2G以上空闲内存或开启了虚拟内存（一般系统都是默认开启的）就可以放心选择此项")
-
-    hbox:
-        label _("直接从硬盘读取")
-        text _("程序直接从硬盘读取素材文件，只使用必要的内存，对硬盘性能要求高，但是内存开销较小，适合低内存设备，但是若硬盘读取性能不佳时可能会发生卡顿现象")
-
-    hbox:
-        label _("其它")
-        text _("由于原作BGM声音过大，建议将BGM音量调小以获得更好游戏体验")
+        label _("音量设置")
+        text _("由于原作BGM声音过大，建议将BGM音量调小，音效音量适中，以获得更好游戏体验")
 
 
 screen mouse_help():
@@ -1749,7 +1828,7 @@ screen mouse_help():
         text _("访问游戏菜单。")
 
     hbox:
-        label _("鼠标滚轮上\n点击回退操作区")
+        label _("鼠标滚轮上")
         text _("回退至先前的对话。")
 
     hbox:
@@ -2152,17 +2231,79 @@ screen quick_menu():
             # textbutton _("自动") action Preference("auto-forward", "toggle")
             # textbutton _("菜单") action ShowMenu()
 
-            # 由于存读档入口调整，调整按钮于其它平台一致
-            textbutton _("回退") action Rollback()
-            textbutton _("历史") action ShowMenu('history')
-            textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("自动") action Preference("auto-forward", "toggle")
-            textbutton _("保存") action ShowMenu("game_save")
-            textbutton _("读取") action ShowMenu("game_load")
-            textbutton _("快存") action QuickSave()
-            textbutton _("快读") action QuickLoad()
-            textbutton _("设置") action ShowMenu('preferences')
+            # 由于存读档入口调整，调整按钮与其它平台一致
+            # 旧 quick_menu 之 textbutton
+            # # textbutton _("回退") action Rollback()
+            # # textbutton _("历史") action ShowMenu('history')
+            # textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
+            # textbutton _("自动") action Preference("auto-forward", "toggle")
+            # textbutton _("保存") action ShowMenu("game_save")
+            # textbutton _("读取") action ShowMenu("game_load")
+            # textbutton _("快存") action QuickSave()
+            # textbutton _("快读") action QuickLoad()
+            # textbutton _("设置") action ShowMenu('preferences')
 
+            # 新 quick_menu 之 image button
+            ## 对 btn 的顺序进行微调
+
+            # 存档
+            imagebutton:
+                idle "gui/quick_menu/btn_save_base.png"
+                hover "gui/quick_menu/btn_save_onMouse.png"
+                selected_hover "gui/quick_menu/btn_save_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
+                action ShowMenu("game_save")
+
+            # 读档
+            imagebutton:
+                idle "gui/quick_menu/btn_load_base.png"
+                hover "gui/quick_menu/btn_load_onMouse.png"
+                selected_hover "gui/quick_menu/btn_load_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
+                action ShowMenu("game_load")
+
+            # Q.Save
+            imagebutton:
+                idle "gui/quick_menu/btn_qsave_base.png"
+                hover "gui/quick_menu/btn_qsave_onMouse.png"
+                selected_hover "gui/quick_menu/btn_qsave_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
+                action QuickSave()
+
+            # Q.Load
+            imagebutton:
+                idle "gui/quick_menu/btn_qload_base.png"
+                hover "gui/quick_menu/btn_qload_onMouse.png"
+                selected_hover "gui/quick_menu/btn_qload_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
+                action QuickLoad()
+
+            # 快进
+            ## 快进和自动属于要保存状态的按钮，多一个 selected_idle 特性
+            imagebutton:
+                idle "gui/quick_menu/btn_skip_base.png"
+                hover "gui/quick_menu/btn_skip_onMouse.png"
+                selected_hover "gui/quick_menu/btn_skip_onClick.png"
+                selected_idle "gui/quick_menu/btn_skip_Clicked.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
+                action Skip() alternate Skip(fast=True, confirm=True)
+
+            # 自动
+            imagebutton:
+                idle "gui/quick_menu/btn_auto_base.png"
+                hover "gui/quick_menu/btn_auto_onMouse.png"
+                selected_hover "gui/quick_menu/btn_auto_onClick.png"
+                selected_idle "gui/quick_menu/btn_auto_Clicked.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
+                action Preference("auto-forward", "toggle")
+
+            # 设置
+            imagebutton:
+                idle "gui/quick_menu/btn_config_base.png"
+                hover "gui/quick_menu/btn_config_onMouse.png"
+                selected_hover "gui/quick_menu/btn_config_onClick.png"
+                hover_sound "voice/effect/メニュー決定音.ogg"
+                action ShowMenu('preferences')
 
 style window:
     variant "small"
