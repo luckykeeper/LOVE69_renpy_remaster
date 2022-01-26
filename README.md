@@ -264,15 +264,21 @@ WEB版 Demo实机运行页面
 
 - 出于各种原因，本次汉化移植并不会对“gkd”的内容（即 Hscene ）进行汉化和移植，各位绅士还请谅解，请积极考虑购买正版支持原作团队![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
 
-- 本页面最后修改时间 2022年1月25日
+- 本页面最后修改时间 2022年1月26日
 
 - 本页是 V2 版的 Readme ，第一版 Readme 考古戳[这里](./README_old.md)
 
 - 项目组联系邮箱：love69renpyremasterproject@luckykeeper.site （邮箱有可能会炸，建议优先发Issues）
 
-- 欢迎来围观本人其它开源项目，求 Star~
+- 欢迎来围观本人开源项目，求 Star~
 
+  > 【本项目相关】
+  >
   > https://github.com/love69renpyremasterproject/love69renpyremasterproject.github.io <-本项目的网站
+  >
+  > https://github.com/LOVE69-Renpy-Remaster-Project/EatCocoa <-项目组给带伙准备的小游戏，[戳这里去玩](https://eatcocoa.luckykeeper.site:44443/)，请使用Edge、Chrome等主流浏览器，手机和电脑均可~~，欢迎大家来卷(doge)~~
+  >
+  > 【其它项目】
   >
   > https://github.com/luckykeeper/docker_plumemo <-个人博客的容器镜像
 
