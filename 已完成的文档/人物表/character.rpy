@@ -2,12 +2,12 @@
 # LOVE69_Renpy_Remaster_Project
 # 人物名称定义（人物表）
 # Author:Luckykeeper
-# 版本 0.3 "LuckyDev"
+# 版本 0.4 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月28日
-# 修订日期 2022年1月25日
+# 修订日期 2022年1月27日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -50,35 +50,67 @@ define ai = Character("心爱",color="#ffc9be",image="心愛")
 # 定义心爱的立绘
 # 显示在画面中的
 
+# 常服_普通系列
 image side 心愛 心愛_制服_基本_にっこり = "images/face/心愛/心愛_制服_基本_にっこり.png" # 闭眼，微笑
 image side 心愛 心愛_制服_基本_にっこり1 = "images/face/心愛/心愛_制服_基本_にっこり1.png" # 闭眼，微笑，脸红
-image side 心愛 心愛_制服_おやつ_にっこり = "images/face/心愛/心愛_制服_おやつ_にっこり.png" # 闭眼，微笑，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_ジト目 = "images/face/心愛/心愛_制服_基本_ジト目.png" # 睁眼，嘴三角，眉平缓向中下
-image side 心愛 心愛_制服_おやつ_ジト目 = "images/face/心愛/心愛_制服_おやつ_ジト目.png" # 睁眼，嘴三角，眉平缓向中下，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_不機嫌 = "images/face/心愛/心愛_制服_基本_不機嫌.png" # 睁眼，嘴-(
 image side 心愛 心愛_制服_基本_不機嫌1 = "images/face/心愛/心愛_制服_基本_不機嫌1.png" # 睁眼，嘴-(，脸红
-image side 心愛 心愛_制服_おやつ_不機嫌 = "images/face/心愛/心愛_制服_おやつ_不機嫌.png" # 睁眼，嘴-(，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_もぐもぐ = "images/face/心愛/心愛_制服_基本_もぐもぐ.png" # 闭眼，嘴-(，两个粉椭圆
-image side 心愛 心愛_制服_おやつ_もぐもぐ = "images/face/心愛/心愛_制服_おやつ_もぐもぐ.png" # 睁眼，嘴-(，两个粉椭圆，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_ニタァ = "images/face/心愛/心愛_制服_基本_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢，两个粉椭圆
 image side 心愛 心愛_制服_基本_笑顔 = "images/face/心愛/心愛_制服_基本_笑顔.png" # 睁眼，嘴o
 image side 心愛 心愛_制服_基本_笑顔1 = "images/face/心愛/心愛_制服_基本_笑顔1.png" # 睁眼，嘴o，脸红
-image side 心愛 心愛_制服_おやつ_笑顔 = "images/face/心愛/心愛_制服_おやつ_笑顔.png" # 睁眼，嘴o，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_泣き= "images/face/心愛/心愛_制服_基本_泣き.png" # 睁眼，含泪珠
-image side 心愛 心愛_制服_おやつ_泣き= "images/face/心愛/心愛_制服_おやつ_泣き.png" # 睁眼，含泪珠，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_驚き = "images/face/心愛/心愛_制服_基本_驚き.png" # 睁眼，惊讶
-image side 心愛 心愛_制服_おやつ_驚き = "images/face/心愛/心愛_制服_おやつ_驚き.png" # 睁眼，惊讶，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_真顔 = "images/face/心愛/心愛_制服_基本_真顔.png" # 睁眼，嘴闭
 image side 心愛 心愛_制服_基本_真顔1 = "images/face/心愛/心愛_制服_基本_真顔1.png" # 睁眼，嘴闭，脸红
-image side 心愛 心愛_制服_おやつ_真顔 = "images/face/心愛/心愛_制服_おやつ_真顔.png" # 睁眼，嘴闭，拿着奶糖苹果
-image side 心愛 心愛_制服_おやつ_無表情 = "images/face/心愛/心愛_制服_おやつ_無表情.png" # 字面意思，睁眼，嘴·，拿着奶糖苹果
 image side 心愛 心愛_制服_基本_無表情 = "images/face/心愛/心愛_制服_基本_無表情.png" # 字面意思，睁眼，嘴·
-image side 心愛 心愛_制服_基本_きらきら = "images/face/心愛/心愛_制服_基本_きらきら.png" # 睁眼，嘴⚪三角，眼睛有小星星
-image side 心愛 心愛_制服_基本_ぶわー = "images/face/心愛/心愛_制服_基本_ぶわー.png" # 睁眼，很有标志性的哭
-image side 心愛 心愛_制服_おやつ_ぶわー = "images/face/心愛/心愛_制服_おやつ_ぶわー.png" # 睁眼，很有标志性的哭，拿着奶糖苹果
-image side 心愛 心愛_トランザム = "images/face/心愛/心愛_トランザム.png" # 全身变红，心爱真·觉醒！
+image side 心愛 心愛_制服_基本_きらきら = "images/face/心愛/心愛_制服_基本_きらきら.png" # 睁眼，嘴⚪三角，眼睛有小星星，这属于是馋哭了
+image side 心愛 心愛_制服_基本_ぶわー = "images/face/心愛/心愛_制服_基本_ぶわー.png" # 闭眼，很有标志性的哭
 image side 心愛 心愛_制服_基本_キス = "images/face/心愛/心愛_制服_基本_キス.png" # 闭眼，脸红，kiss准备
 image side 心愛 心愛_制服_基本_ぐるぐる = "images/face/心愛/心愛_制服_基本_ぐるぐる.png" # （被打）晕了
+image side 心愛 心愛_制服_基本_嬉しい = "images/face/心愛/心愛_制服_基本_嬉しい.png" # 康起来很喜感的笑
+image side 心愛 心愛_制服_基本_嬉しい1 = "images/face/心愛/心愛_制服_基本_嬉しい1.png" # 康起来很喜感的笑，脸红
+image side 心愛 心愛_制服_基本_微笑み = "images/face/心愛/心愛_制服_基本_微笑み.png" # 睁眼，微笑
+image side 心愛 心愛_制服_基本_微笑み1 = "images/face/心愛/心愛_制服_基本_微笑み1.png" # 睁眼，微笑，脸红
+image side 心愛 心愛_制服_基本_ぐるぐる = "images/face/心愛/心愛_制服_基本_ぐるぐる.png" # 眼睛咕哩咕噜转圈圈
+image side 心愛 心愛_制服_基本_覚醒02 = "images/face/心愛/心愛_制服_基本_覚醒02.png" # 心爱觉醒，眼睛变成蛇的样子，眼睛微眯
+
+# 常服_奶糖苹果系列
+image side 心愛 心愛_制服_おやつ_にっこり = "images/face/心愛/心愛_制服_おやつ_にっこり.png" # 闭眼，微笑，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_ジト目 = "images/face/心愛/心愛_制服_おやつ_ジト目.png" # 睁眼，嘴三角，眉平缓向中下，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_ジト目1 = "images/face/心愛/心愛_制服_おやつ_ジト目1.png" # 睁眼，嘴三角，眉平缓向中下，脸红，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_不機嫌 = "images/face/心愛/心愛_制服_おやつ_不機嫌.png" # 睁眼，嘴-(，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_不機嫌1 = "images/face/心愛/心愛_制服_おやつ_不機嫌1.png" # 睁眼，嘴-(，脸红，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_もぐもぐ = "images/face/心愛/心愛_制服_おやつ_もぐもぐ.png" # 睁眼，嘴-(，两个粉椭圆，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_笑顔 = "images/face/心愛/心愛_制服_おやつ_笑顔.png" # 睁眼，嘴o，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_笑顔1 = "images/face/心愛/心愛_制服_おやつ_笑顔1.png" # 睁眼，嘴o，脸红，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_泣き= "images/face/心愛/心愛_制服_おやつ_泣き.png" # 睁眼，含泪珠，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_泣き1= "images/face/心愛/心愛_制服_おやつ_泣き1.png" # 睁眼，含泪珠，脸红，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_驚き = "images/face/心愛/心愛_制服_おやつ_驚き.png" # 睁眼，惊讶，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_真顔 = "images/face/心愛/心愛_制服_おやつ_真顔.png" # 睁眼，嘴闭，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_真顔1 = "images/face/心愛/心愛_制服_おやつ_真顔1.png" # 睁眼，嘴闭，脸红，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_無表情 = "images/face/心愛/心愛_制服_おやつ_無表情.png" # 字面意思，睁眼，嘴·，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_無表情1 = "images/face/心愛/心愛_制服_おやつ_無表情1.png" # 字面意思，睁眼，嘴·，脸红，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_ぶわー = "images/face/心愛/心愛_制服_おやつ_ぶわー.png" # 闭眼，很有标志性的哭，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_嬉しい = "images/face/心愛/心愛_制服_おやつ_嬉しい.png" # 康起来很喜感的笑，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_嬉しい1 = "images/face/心愛/心愛_制服_おやつ_嬉しい1.png" # 康起来很喜感的笑，脸红，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_微笑み = "images/face/心愛/心愛_制服_おやつ_微笑み.png" # 睁眼，微笑，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_微笑み1 = "images/face/心愛/心愛_制服_おやつ_微笑み1.png" # 睁眼，微笑，脸红，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_ジト目1 = "images/face/心愛/心愛_制服_おやつ_ジト目1.png" # 睁眼，嘴三角，眉平缓向中下，拿着奶糖苹果
+image side 心愛 心愛_制服_おやつ_キス = "images/face/心愛/心愛_制服_おやつ_キス.png" # 闭眼，脸红，kiss准备，拿着奶糖苹果
+
+# 大_常服_奶糖苹果系列
+image side 心愛 心愛_大_制服_おやつ_キス = "images/face/心愛/心愛_大_制服_おやつ_キス.png" # 大，闭眼，脸红，kiss准备，拿着奶糖苹果
+image side 心愛 心愛_大_制服_おやつ_不機嫌1 = "images/face/心愛/心愛_大_制服_おやつ_不機嫌1.png" # 大，睁眼，嘴-(，脸红，拿着奶糖苹果
+
+# 大_常服_普通系列
+image side 心愛 心愛_大_制服_基本_にっこり1 = "images/face/心愛/心愛_大_制服_基本_にっこり1.png" # 大，闭眼，微笑
+image side 心愛 心愛_大_制服_基本_きらきら = "images/face/心愛/心愛_大_制服_基本_きらきら.png" # 睁眼，嘴⚪三角，眼睛有小星星，这属于是馋哭了
+
+# 其它
+image side 心愛 心愛_トランザム = "images/face/心愛/心愛_トランザム.png" # 全身变红，心爱真·觉醒！
+image side 心愛 心愛_ラフ = "images/face/心愛/心愛_ラフ.png" # 粗线条描绘的心爱酱
 
 # 下面定义不知道是谁的时候的心爱
 # 知不道的人物使用发色称呼
@@ -250,6 +282,9 @@ define unknown404 = Character('？？？',color="#ffffff",image="unknown404")
 
 # wsa 女学生A （Woman Student A） 不加颜色的统一强制指定白色（#ffffff）
 define wsa = Character('女学生A',color="#ffffff")
+
+# bear 熊 （Woman Student A） 不加颜色的统一强制指定白色（#ffffff）
+define bear = Character('熊',color="#ffffff")
 
 # 人物名称定义结束
 # ---------------------------------------------
