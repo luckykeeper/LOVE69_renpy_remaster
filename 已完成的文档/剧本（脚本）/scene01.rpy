@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月25日
+# 修订日期 2022年1月27日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右<-2021年10月5日 搞定！
@@ -6173,7 +6173,8 @@ label scene01:
     play sound "voice/effect/moosehead honk (stinger).ogg"
     image bg アイキャッチ心愛＆真冬 = "images/bg/アイキャッチ心愛＆真冬.png"
     # hide screen quick_menu
-    scene アイキャッチ心愛＆真冬 with wiperight
+    scene black
+    scene アイキャッチ心愛＆真冬 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=False, alpha=True, time_warp=None)
 
     $ renpy.pause(1.5, hard=True)
 
