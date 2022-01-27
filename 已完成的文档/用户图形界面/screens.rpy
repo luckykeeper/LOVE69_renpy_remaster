@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月25日
+# 修订日期 2022年1月27日
 ################################################################################
 ## 初始化
 ################################################################################
@@ -441,9 +441,10 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
+        # 功能已被新Main_Menu取代
         if main_menu:
-
-            textbutton _("开始游戏") action Start()
+            pass
+            # textbutton _("开始游戏") action Start()
 
         else:
 
