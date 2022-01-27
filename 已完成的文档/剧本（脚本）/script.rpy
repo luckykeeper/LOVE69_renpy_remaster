@@ -7,7 +7,7 @@
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开坑日期 2021年8月28日
-# 修订日期 2022年2月24日
+# 修订日期 2022年1月27日
 
 #----------------------------------------------------------------
 # 主程序开始
