@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月27日
+# 修订日期 2022年1月28日
 
 # 当前流程：编写脚本AIO Process
 
@@ -306,7 +306,7 @@ label scene02:
     # 才发现这个，在这里试试
     # 哈！还真可以，再回去返工Scene01
     scene black
-    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -323,7 +323,7 @@ label scene02:
 
     # 原地tp
     scene black
-    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -742,7 +742,7 @@ label scene02:
 
     # 原地tp
     scene black
-    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -815,7 +815,7 @@ label scene02:
 
     # 原地tp
     scene black
-    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 心爱 「ぷはー！大変美味しゅう御座いました！ぺこり」
     show 心愛_制服_基本_もぐもぐ at love69_xinai_left with dissolve
@@ -1077,7 +1077,7 @@ label scene02:
 
     play music bgmsixteen fadeout 0.8 fadein 1.0
     scene black
-    scene ボウリング場 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene ボウリング場 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # nil 「ボウリング場にて。」
     "在保龄球场"
@@ -1201,7 +1201,7 @@ label scene02:
     # 人物：心爱 莲
 
     scene black
-    scene チョコレートファクトリー with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene チョコレートファクトリー with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # nil 「ショッピングセンターにて。」
     "在购物中心"
@@ -1256,7 +1256,7 @@ label scene02:
     # BGM不变
 
     scene black
-    scene コールドストーン with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene コールドストーン with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # nil 「アイスクリーム屋にて」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%89%E3%83%BB%E3%82%B9%E3%83%88%E3%83%BC%E3%83%B3%E3%83%BB%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%AA%E3%83%BC
@@ -1335,7 +1335,7 @@ label scene02:
     # BGM不变
 
     scene black
-    scene 寿司屋 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 寿司屋 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # nil 「寿司屋にて」
     "在寿司店"
@@ -1362,7 +1362,7 @@ label scene02:
     # BGM不变
 
     scene black
-    scene ゲームセンター with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene ゲームセンター with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # nil 「ゲームセンターにて」
     "在游戏厅"
@@ -1440,7 +1440,7 @@ label scene02:
     # BGM不变
 
     scene black
-    scene ハンズ with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene ハンズ with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # nil 「ハンズにて」
     "在HANDS"
@@ -1556,7 +1556,7 @@ label scene02:
     # 人物：心爱 莲
 
     scene black
-    scene 繁華街_昼 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 繁華街_昼 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1604,7 +1604,7 @@ label scene02:
     # BGM变 有点怪的 像RPG游戏里面的那种
 
     scene black
-    scene るなちーの店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene るなちーの店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     play music bgmeighteen fadeout 0.8 fadein 1.0
 
@@ -1657,7 +1657,7 @@ label scene02:
     # BGM变 不是原先那个，换新的嘤文歌辽 In peace (our destiny) (ft. Snowflake, Dennis Legree, NickyMcCoy, Andreas Jaeger)
 
     scene black
-    scene 繁華街_夕 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 繁華街_夕 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     play music bgmnine fadeout 0.8 fadein 1.0
 
@@ -1745,7 +1745,7 @@ label scene02:
 
     # 原地tp
     scene black
-    scene 繁華街_夕 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 繁華街_夕 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 心爱 「リニアモーターカーは名古屋、品川間を凡そ40分で行き来できます」
     show 心愛_ラフ at love69_xinai_center with dissolve
@@ -1761,7 +1761,7 @@ label scene02:
 
     # 原地tp
     scene black
-    scene 繁華街_夕 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 繁華街_夕 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 心爱 「ただいま」
     show 心愛_制服_基本_微笑み at love69_xinai_center with dissolve
@@ -1773,7 +1773,7 @@ label scene02:
 
     # 原地tp
     scene black
-    scene 繁華街_夕 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 繁華街_夕 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 心爱 「蓮くん蓮くん」
     show 心愛_制服_基本_にっこり at love69_xinai_center with dissolve
@@ -1846,7 +1846,7 @@ label scene02:
     # BGM变 Harmony（鸿蒙也叫这个呢） Harmony (ft. Snowflake)
 
     scene black
-    scene 公園_夕 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 公園_夕 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     play music bgmseven fadeout 0.8 fadein 1.0
 
@@ -2247,6 +2247,7 @@ label scene02:
 
     play sound "voice/effect/moosehead honk (stinger).ogg"
     image bg アイキャッチ心愛 = "images/bg/アイキャッチ心愛.png"
+    play music bgmthirtysix fadeout 4.0 fadein 4.0 # 针对这里BGM的特点需要把 Scene03 的BGM提前到 Scene02 脚本的尾巴这里写，并增大 fadeout/in 的间隔
     scene black
     scene アイキャッチ心愛 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
 

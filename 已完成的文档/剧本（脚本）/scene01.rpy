@@ -7,12 +7,15 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月27日
+# 修订日期 2022年1月28日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右<-2021年10月5日 搞定！
 # 开场心爱的语音<-2021年10月5日 搞定！
 # （不是bug！）标有^^^的参考资料发布的时候要记得上传项目组官网<-2021年10月23日已传
+# 2022年1月28日
+# 百叶窗效果是否做了 scene black 需要注意一下
+# ysr006 的，可能 black 也有 scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None) ，需要注意一下
 
 label scene01:
 
@@ -983,7 +986,7 @@ label scene01:
     # 参考资料：https://www.douban.com/group/topic/30667396/
     # 相同场景转场，先加一层black，再做转场，不加的话就不会正常显示正常转场
     scene black
-    scene リビングa_昼 at truecenter with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene リビングa_昼 at truecenter with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     "吃完饭，比平时多出了很多时间的我们两个人，一边喝着梅昆布茶，一边看着电视（L：昆布，就是海带，昆布茶，就是海带茶。梅昆布茶谐音是高兴的意思，能讨个好口彩，不过据说味道像汤一样而且并不好喝）"
 
     # nil 「そろそろ朝のニュース番組から、ワイドショーへと切り替わる時間だ。」
@@ -2179,7 +2182,7 @@ label scene01:
     ### BGM：sweet passion.ogg（没变）
     # 没有类似的转场效果，稍稍改动一下
     image bg 通学路c_朝 = "images/bg/通学路c_朝.png"
-    scene 通学路c_朝 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 通学路c_朝 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     show 心愛_制服_おやつ_もぐもぐ at love69_right with Dissolve(0.3)
     show 真冬_制服_基本_にっこり at love69_left with Dissolve(0.3)
 
@@ -2518,7 +2521,7 @@ label scene01:
     ### 人物：莲 心爱 真冬
     # 和前面一样，转场效果不能还原，咱又来挑了一个
     image bg 校門_朝 = "images/bg/校門_朝.png"
-    scene 校門_朝 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 校門_朝 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # nil 「と、言うことで学園につきました。我らが通う「私立歌越学園」の校門はいつみても、校門って感じがして好きだ。」
     "就这样，我们说着玩着就到了学校。我们所就读的「私立歌越学园」的校门无论何时都让人感觉是校门的感觉，我很喜欢（L:这不是废话嘛233）"
@@ -2854,7 +2857,7 @@ label scene01:
     hide 心愛_制服_おやつ_にっこり with Dissolve(0.15)
     hide 花盆君_通常 with Dissolve(0.15)
     scene black
-    scene 教室_昼 at love69_bg1220 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 教室_昼 at love69_bg1220 with ImageDissolve("images/tr/ysr006.png", 0.64, ramplen=8, reverse=False, alpha=True, time_warp=None)
 
 
     # nil 「予鈴が鳴り響く。それと同時に教室の前側の扉が開き、担任の教師が姿を現した。」
@@ -3513,7 +3516,7 @@ label scene01:
     hide 心愛_制服_基本_ニタァ with Dissolve(0.15)
     hide 花盆君_通常 with Dissolve(0.15)
     scene black
-    scene 教室_昼 at love69_bg1220 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 教室_昼 at love69_bg1220 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # nil 「ちなみに授業中は寝てました。」
     "顺便说一下，我上课的时候睡着了（L:绝了，莲你是来学校干啥的啊）"
@@ -3522,7 +3525,7 @@ label scene01:
     # 下课铃声
     play sound "voice/effect/学校チャイム.ogg"
     scene black
-    scene 教室_昼 at love69_bg1220 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 教室_昼 at love69_bg1220 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -4009,7 +4012,7 @@ label scene01:
     # 人物： 莲 装在电话里的真冬（这里L在neta Age of Empire 2 帝国时代2战役里面耶路撒冷战役“装在桶里的皇帝”，等项目肝完了来和翻译君联机打红警3好吗？）
     # BGM不变
     image bg 校門_昼 = "images/bg/校門_昼.png"
-    scene 校門_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 校門_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # nil 「と、いうことで。一旦、真冬と心愛とは別行動をとり、一足先に例の飲食店に向かいます。」
     "就这样，暂且与真冬和心爱分开行动，先行前往那个餐厅"
@@ -4090,35 +4093,35 @@ label scene01:
     # show 真冬_通話中 测试是否能读取
     # 这里应该是午饭不是晚饭，修正一下翻译
     voice "voice/真冬/maf_a1_0134.ogg"
-    dong 真冬_通話中 "我这有点事情可能会拖很久。午饭到时候和想瑠喵吃，你和心爱酱一起吃吧！欧尼酱对不起啦"
+    dong 真冬_通話中 "『我这有点事情可能会拖很久。午饭到时候和想瑠喵吃，你和心爱酱一起吃吧！欧尼酱对不起啦』"
 
     # 莲 「それは一向に構わんが、何やらされてんの？」
     lian "完全没关系的说，你在那儿做什么呢？"
 
     # 真冬 『温泉掘るためのボーリング調査だよ』
     voice "voice/真冬/maf_a1_0135.ogg"
-    dong "挖掘温泉的调查"
+    dong "『挖掘温泉的调查』"
 
     # 莲 「なんだそういうことか。了解。気にするなよ、心愛と二人で食ってるわ。迎えに行ったほうがいか？」
     lian "原来如此。了解~ 别担心，我和心爱两个人一起去吃。你那边结束之后，到时候需要去接你吗？"
 
     # 真冬 『ん。帰るの遅くなるっぽい。想瑠にゃんに車出してもらうから大丈夫』
     voice "voice/真冬/maf_a1_0136.ogg"
-    dong "emmm... 好像得比较晚回去了。想瑠喵会开车送我回来的，不要紧"
+    dong "『emmm... 好像得比较晚回去了。想瑠喵会开车送我回来的，不要紧』"
 
     # 莲 「わかった。じゃぁ家でな」
     lian "了解，那我到时候就在家等你吧"
 
     # 真冬 『はーい。あ、そだ、言い忘れてた。ドライアイス増やしといたけど、受け取ってもらえた？』
     voice "voice/真冬/maf_a1_0137.ogg"
-    dong "好——的。哦，对了，我忘了告诉你，我在你的鞋柜里面又加了点干冰，你收到了吗?"
+    dong "『好——的。哦，对了，我忘了告诉你，我在你的鞋柜里面又加了点干冰，你收到了吗?』"
 
     # 莲 「あ俺も言い忘れた。頂いたドライアイスはしっかり返しといたから。ついでに水もかけといた」
     lian "啊，我也忘记说了。我收到的干冰已经好好地还给你了，顺便还往里面浇了水"
 
     # 真冬 『…覚えとくよ』
     voice "voice/真冬/maf_a1_0138.ogg"
-    dong "......我会记住的"
+    dong "『......我会记住的』"
 
     play sound "voice/effect/18_携帯電話操作音1.ogg"
     image bg 通学路c_昼 = "images/bg/通学路c_昼.png"
@@ -4457,7 +4460,7 @@ label scene01:
     # 地点：商业街（没变）
     # stop music
     scene black
-    scene 通学路c_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 通学路c_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     play music bgmtwentyfour fadeout 0.8 fadein 1.0
     show 黄_基本_杖_微笑み at love69_lion_center with Dissolve(0.15)
 
@@ -4545,7 +4548,7 @@ label scene01:
 
     # 过渡动画，小scene不变
     scene black
-    scene 通学路c_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 通学路c_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # nil 「とりあえず立ち話もアレなんで、近くにあったベンチに座る。」
     "因为站着说话也腰疼，所以就坐在了附近的长椅上"
@@ -4808,7 +4811,7 @@ label scene01:
     # 原地TP
     # 场景，BGM 均不变
     scene black
-    scene 通学路c_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=8, reverse=False, alpha=True, time_warp=None)
+    scene 通学路c_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 里昂 「という事で、アイス屋さんを開きたいので日本にやってきました」
     show リオン_基本_杖_嬉しい at love69_lion_center with Dissolve(0.15)
