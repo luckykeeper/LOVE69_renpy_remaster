@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月27日
+# 修订日期 2022年1月28日
 ################################################################################
 ## 初始化
 ################################################################################
@@ -48,6 +48,8 @@ init python in sideimagesize:
 style default:
     properties gui.text_properties()
     language gui.language
+    # 全部字体描边，增强可读性
+    outlines [(1, "#0c65c9", 1, 1)]
 
 style input:
     properties gui.text_properties("input", accent=True)
@@ -141,7 +143,9 @@ screen say(who, what):
         # 2021年10月26日 下面这句居然开始报warning（store.sideimagesize，去store就好，但是跑不起来）了，但是store不能去，去了就炸
         # 开发使用Ren'py7.4.6，此时官网最新版为7.4.10，怀疑是新版改了些什么东西
         # 暂时不考虑升级最新版，但是由于这版在Win11视频解码存在问题，最终做完之后考虑上下最新版
-        $ import store.sideimagesize as sideimagesize
+        # 2022年1月28日 报warning 的问题应该是IDE插件的锅，现在没有了
+        # 而解码实际上没有问题，应该只是W的电脑太菜了解不动2K
+        $ import store.sideimagesize as sideimagesize104
 
         if who is not None:
 
@@ -153,6 +157,9 @@ screen say(who, what):
         # text what id "what"
         # if renpy.is_seen(ever = True) and persistent.lightRead: 这句在移动端似乎不起作用？
         # 已读未读文本不同颜色
+
+        # 增加描边
+        # https://www.renpy.cn/thread-278-1-1.html
         if renpy.is_seen(ever = True):  # ever 为false时对本次运行起效，此处需要对过去所有阅读起效
             text what id "what" color "#f9d198" # 标记颜色
         else:
