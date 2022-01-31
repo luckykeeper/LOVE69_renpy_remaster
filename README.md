@@ -1,8 +1,8 @@
 <p align="center"><a href="https://love69renpyremasterproject.github.io/"><img src="images/项目组logo_smallsize.png" alt="项目组logo" style="zoom:50%;" /></a></p>
-<h2 align="center">LOVE69 Ren’py Remaster Project</h2>
+<h2 align="center">LOVE69 Ren’Py Remaster Project</h2>
 <h3 align="center">使用 Ren'Py 重制 LOVEPOTION SIXTYNINE ，并加以汉化和全平台移植</h3>
 
-<p align="center"><img src=https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster>  <img src=https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster>  <img src=https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster>  <img src=https://app.travis-ci.com/love69renpyremasterproject/love69renpyremasterproject.github.io.svg?branch=main&status=passed></p>
+<p align="center"><img src=https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster>  <img src=https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster>  <img src=https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster>  <img src=https://app.travis-ci.com/love69renpyremasterproject/love69renpyremasterproject.github.io.svg?branch=main&status=passed><a href="https://github.com/luckykeeper/LOVE69_renpy_remaster/releases"><img src="https://img.shields.io/github/v/release/luckykeeper/LOVE69_renpy_remaster?include_prereleases"></a><a href="https://github.com/LOVE69-Renpy-Remaster-Project/Doc"><img src="https://img.shields.io/badge/%E6%96%87%E6%A1%A3-%E6%88%B3%E8%BF%99%E9%87%8C-brightgreen.svg"></a><a href="https://eatcocoa.luckykeeper.site:44443/"><img src="https://img.shields.io/badge/%E5%B0%8F%E6%B8%B8%E6%88%8F-%E6%88%B3%E8%BF%99%E9%87%8C-blue.svg"></a></p>
 
 ------
 
@@ -10,7 +10,7 @@
 
 [前往导航](#导航)
 
-[Ren'py](https://github.com/renpy/renpy) 是一款功能十分强大而又简单易学的视觉小说引擎（Visual Novel Engine），本项目使用 Ren'Py 对 Steroider 社的 LOVEPOTION SIXTYNINE 【作品介绍 [2DFAN](https://galge.fun/subjects/2854) [Bangumi](http://bangumi.tv/subject/89145) [VNDB](https://vndb.org/v14082)】进行高清重制、汉化、以及全平台移植，所有成果全部开源，欢迎 Star！更多 Star ，更多动力！
+[Ren'Py](https://github.com/renpy/renpy) 是一款功能十分强大而又简单易学的视觉小说引擎（Visual Novel Engine），本项目使用 Ren'Py 对 Steroider 社的 LOVEPOTION SIXTYNINE 【作品介绍 [2DFAN](https://galge.fun/subjects/2854) [Bangumi](http://bangumi.tv/subject/89145) [VNDB](https://vndb.org/v14082)】进行高清重制、汉化、以及全平台移植，所有成果全部开源，欢迎 Star！更多 Star ，更多动力！
 
 通过本项目，可以
 
@@ -264,7 +264,7 @@ WEB版 Demo实机运行页面
 
 - 出于各种原因，本次汉化移植并不会对“gkd”的内容（即 Hscene ）进行汉化和移植，各位绅士还请谅解，请积极考虑购买正版支持原作团队![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
 
-- 本页面最后修改时间 2022年1月28日
+- 本页面最后修改时间 2022年2月1日
 
 - 本页是 V2 版的 Readme ，第一版 Readme 考古戳[这里](./README_old.md)
 
@@ -274,9 +274,11 @@ WEB版 Demo实机运行页面
 
   > 【本项目相关】
   >
-  > https://github.com/love69renpyremasterproject/love69renpyremasterproject.github.io <-本项目的网站
+  > https://github.com/love69renpyremasterproject/love69renpyremasterproject.github.io <- 本项目的网站
   >
-  > https://github.com/LOVE69-Renpy-Remaster-Project/EatCocoa <-项目组给带伙准备的小游戏，[戳这里去玩](https://eatcocoa.luckykeeper.site:44443/)，请使用Edge、Chrome等主流浏览器，手机和电脑均可~~，欢迎大家来卷(doge)~~
+  > https://github.com/LOVE69-Renpy-Remaster-Project/EatCocoa <- 项目组给带伙准备的小游戏，[戳这里去玩](https://eatcocoa.luckykeeper.site:44443/)，请使用Edge、Chrome等主流浏览器，手机和电脑均可~~，欢迎大家来卷(doge)~~
+  >
+  > https://github.com/LOVE69-Renpy-Remaster-Project/Doc <- 正在施工的项目文档
   >
   > 【其它项目】
   >
