@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月31日
+# 修订日期 2022年2月2日
 
 # 当前流程：编写脚本AIO Process
 
@@ -18,7 +18,7 @@ label scene04:
     # BGM：bgm28
 
     image bg sdcg01a = "images/bg/sdcg01a.png"
-    scene sdcg01a  at love69_bg1440 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
+    scene sdcg01a  at love69_bg1440 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
 
     # 显示 quick_menu
     $ quick_menu = True
@@ -718,7 +718,8 @@ label scene04:
     # 里昂 「アイスー！　アイスはいりませんかぁー！」
     # 73-203 跳过
     # 本来应该是从204开始的，可是204-207文件直接就不存在……
-    voice "voice/リオン/ron_a1_0072.ogg"
+    # 208-416 跳过
+    voice "voice/リオン/ron_a1_0417a.ogg"
     ang 黄_基本_杖_微笑み "冰淇淋！ 要来点冰淇淋吗"
 
     # nil 「少し離れた場所で、アイスを売る屋台の声が聞こえる。」
@@ -764,7 +765,9 @@ label scene04:
     "这样想着，回过神来发现自己被已经吸引到了冰淇淋摊前"
 
     # 里昂 「はいはーい！　お買い上げありがとうございます！　そしてお幸せに！やっぱりこの場所取りは正解だったみたいだね！」
-    lion "好的好的！谢谢惠顾！祝您幸福！果然选择这个地方是正确的！"
+    show 黄_基本_杖_にっこり at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0417b.ogg"
+    ang 黄_基本_杖_にっこり "好的好的！谢谢惠顾！祝您幸福！果然选择这个地方是正确的！"
 
     # 莲 「おや…アンタは…」
     lian "哎呀…你是……"
@@ -776,7 +779,10 @@ label scene04:
     "在我面前的一对学生cp买好了两个冰淇淋，让开了前面的道路，果然，前几天送给我那个冰淇淋的少女正在摆摊"
 
     # 里昂 「やっほー！　蓮君じゃーん！　また会えたねー！　嬉しいよ！」
-    lion "哇! 是莲君! 又见面了! 太高兴啦!"
+    show リオン_基本_杖_微笑み at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0418.ogg"
+    lion リオン_基本_杖_微笑み "哇! 这不是莲君嘛! 又见面了! 太高兴啦!"
+    hide 黄_基本_杖_にっこり
 
     # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.1
@@ -785,7 +791,8 @@ label scene04:
 
     # 原作没有小头像，这里为了凸显MJ在说话，就加上吧
     # MJ 「よう、マザーファッカー。この間は世話になったな」
-    mj MJ_通常 "嘿，妈的法克，上次多亏你照顾了"
+    voice "voice/その他/mjf_a1_0034.ogg"
+    mj MJ_通常 "哟，妈的法克，上次多亏你照顾了"
 
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.09
@@ -793,7 +800,10 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂 「こらこらマイコ－！　蓮君に対してその口の利き方は良くないな！」
-    lion "喂喂，迈克尔！对莲君这样说话可不好啊！"
+    show リオン_基本_杖_ジト目 at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0419.ogg"
+    lion リオン_基本_杖_ジト目 "喂喂，迈克尔！对莲君这样说话可不好啊！"
+    hide リオン_基本_杖_微笑み
 
     # 莲 「おっす。なんだか繁盛してるようだな。ていうかお前、素だとそんなしゃべり方なのかよ」
     lian "哦，看起来生意兴隆啊。话说回来，你原来就是这么说话的"
@@ -805,6 +815,7 @@ label scene04:
 
     # MJ 「あの時はヤクやって覚えちゃいねぇ！てめぇがあの時ちょっかいださなきゃ、今頃ガテンボーイズ達とドカタ＝レイヴの真っ最中だったというのにな！」
     # ドカタ：土方 レイヴ：RAVE ガテンボーイズ：GANT &&翻得很不行，协力请求
+    voice "voice/その他/mjf_a1_0035.ogg"
     mj MJ_通常 "我不记得我当时嗑了什么药!你那时不多管闲事的话，我现在正在和那些GANT BOY（L:neta GANT，总部位于瑞典斯德哥尔摩的国际服装品牌，于1949年在美国创立）玩泥巴呢!"
 
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
@@ -813,7 +824,10 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂 「MJ。静かにしないと施設に返すよ？」
-    lion "MJ，要是不安静的话就送回设施吧？"
+    show リオン_基本_杖_無表情 at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0420.ogg"
+    lion リオン_基本_杖_無表情 "MJ，要是不安静的话就送回设施吧？"
+    hide リオン_基本_杖_ジト目
 
     # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.1
@@ -821,6 +835,7 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # MJ 「っ！　そ、それだけはご勘弁を！　あんな所に返されたらタマ潰れちまうよ…」
+    voice "voice/その他/mjf_a1_0036.ogg"
     mj MJ_通常 "啊! 饶了我吧! 如果我被送回那个地方，我的蛋蛋会碎的..."
 
     # nil 「リオンの頭の上の帽子は小刻みに震えながら静かになった。」
@@ -832,7 +847,10 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂 「えへー！　蓮君に言われたとおり、このポイントに店を設置してみたのだ！あ！　ちゃんと自治体と当局の許可は受けてるし、衛生検査も通ってるよ！」
-    lion "欸嘿嘿! 我照着莲君说的，在这个地方设立了摊位! 啊! 我已经得到了地方政府和当局的许可，卫生检查也通过了哟!"
+    show リオン_基本_杖_にっこり at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0421.ogg"
+    lion リオン_基本_杖_にっこり "欸嘿嘿! 我照着莲君说的，在这个地方设立了摊位! 啊! 我已经得到了地方政府和当局的许可，卫生检查也通过了哟!"
+    hide リオン_基本_杖_無表情
 
     # 莲 「ほう、そいつはおめでたいな。繁盛してるかい？」
     lian "哦，那真是可喜可贺啊。生意兴隆吗"
@@ -843,7 +861,10 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂 「おかげ様でホックホクですよー！　いやぁ…一日三食の生活ってのはぁ…いね…」
-    lion "客人是“霍克霍克”地源源不断呢！哎呀，一天三餐的生活真是……不容易啊…"
+    show リオン_基本_杖_微笑み at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0422.ogg"
+    lion リオン_基本_杖_微笑み "客人是“霍克霍克”地源源不断呢！哎呀，一天三餐的生活真是……不容易啊…"
+    hide リオン_基本_杖_にっこり
 
     # 莲 「そこまで貧乏だったのかよ…」
     lian "你那么穷的嘛…"
@@ -854,13 +875,19 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂 「いや、ソシャゲに重課金しちまいまして」
-    lion "不是，是我在社交网络游戏氪金太厉害了（L:你们氪金都不手软的嘛，在翻译君写下这句话的头一天听说W为了胡桃氪了300多...）"
+    show リオン_基本_杖_悲しい at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0423.ogg"
+    lion リオン_基本_杖_悲しい "不是，是我在社交网络游戏氪金太厉害了（L:你们氪金都不手软的嘛，在翻译君写下这句话的头一天听说W为了胡桃氪了300多...）"
+    hide リオン_基本_杖_微笑み
 
     # 莲 「ダメじゃないか」
     lian "这可⑧行啊……"
 
     # 里昂 「だ、だってだって仕方ないじゃんかよぉ！　スタミナ回復するまで待ってられないもの！」
-    lion "可、可是可是没办法啊! 恢复体力太慢了没法儿等啊!"
+    show リオン_基本_杖_見下し at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0424.ogg"
+    lion リオン_基本_杖_見下し "可、可是可是没办法啊! 恢复体力太慢了没法儿等啊!"
+    hide リオン_基本_杖_悲しい
 
     # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.1
@@ -868,6 +895,7 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # MJ 「こっちに来てから寝ても覚めてもタッチパネルばっかしごいてやがるんだぜこのお嬢さん。他にしごくもんねぇのかよってな…俺が現役だった頃は、しごきながらしゃぶってたりも―もごっ」&协力请求
+    voice "voice/その他/mjf_a1_0037.ogg"
     mj MJ_通常 "自从我们来到这里，你就一直盯着触摸屏，小姐啊，我不知道你还有没有其他的事情可以做...我在现役的时候，还可以——"
 
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
@@ -876,7 +904,10 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂 「三度目は言わないよ。黙れマイケル」
-    lion "我不会再说第三遍了。闭嘴，迈克尔"
+    show リオン_基本_杖_ジト目 at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0425.ogg"
+    lion リオン_基本_杖_ジト目 "我不会再说第三遍了。闭嘴，迈克尔"
+    hide リオン_基本_杖_見下し
 
     # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.1
@@ -884,6 +915,7 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # MJ 「は…はい…」
+    voice "voice/その他/mjf_a1_0038.ogg"
     mj MJ_通常 "啊…是…"
 
     # 莲 「なんつーか…そいつと暮らすのは大変そうだな…おっと」
@@ -895,7 +927,10 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂 「はいはーい！　いらっしゃいませ！」
-    lion "好的——好的！欢迎光临！"
+    show リオン_基本_杖_にっこり at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0426.ogg"
+    lion リオン_基本_杖_にっこり "好的——好的！欢迎光临！"
+    hide リオン_基本_杖_ジト目
 
     # nil 「またしても、男女一組のペアが客として屋台に訪れた。邪魔しちゃ悪いので、少し屋台から離れて、ベンチに座って屋台の様子を眺める。」
     "又有一对男女来到摊位。因为不想打扰到生意，所以我离开小摊，坐在长椅上观察小摊的情况"
@@ -910,13 +945,19 @@ label scene04:
     "我从长椅上站了起来，在自动贩卖机买了瓶装可乐，打开瓶盖，靠近了正在用衣袖擦拭额头汗水的里昂"
 
     # 里昂 「ふいー…いくら制服とはいえ、あっついねぇ…どーも」
-    lion "呼...就算是制服，这也太热...谢谢"
+    show リオン_基本_杖_悲しい at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0427.ogg"
+    lion リオン_基本_杖_悲しい "呼欸...就算是制服，这也太热了...谢谢"
+    hide リオン_基本_杖_にっこり
 
     # 莲 「ほれ、お疲れさん」
     lian "给，辛苦了"
 
     # 里昂 「はにゃ！　わー！　ありがとーう！」
-    lion "呼喵！哇！谢谢！"
+    show リオン_基本_杖_微笑み at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0428.ogg"
+    lion リオン_基本_杖_微笑み "呼喵！哇！谢谢！"
+    hide リオン_基本_杖_悲しい
 
     # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.1
@@ -924,6 +965,7 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # MJ 「俺のは無いのか」
+    voice "voice/その他/mjf_a1_0039.ogg"
     mj MJ_通常 "没有我的吗？"
 
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
@@ -932,7 +974,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂 「空き瓶でよければ突っ込んであげるよ」
-    lion "如果空瓶可以的话，我就给你塞进去"
+    voice "voice/リオン/ron_a1_0429.ogg"
+    lion リオン_基本_杖_微笑み "如果空瓶可以的话，我就给你塞进去"
 
     # 莲 「しかも太い方をな」
     lian "而且是粗的那边"
@@ -943,6 +986,7 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # MJ 「Ass hole！！」
+    voice "voice/その他/mjf_a1_0040.ogg"
     mj MJ_通常 "Ass hole！！"
 
     # nil 「こは外人の笑い声でお願いします。」
@@ -957,19 +1001,28 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂 「ごく…ごく…ぷはーっ！　かー！　うまい！　仕事終わり…ってわけじゃないけど、一息ついた時の瓶のコーラは最高だね！」
-    lion "咕噜…咕噜…嗯…哇咿！超好喝！工作结……虽然工作还没结束，但休息的时候来瓶可乐真是太棒了！"
+    show リオン_基本_杖_にっこり at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0430.ogg"
+    lion リオン_基本_杖_にっこり "咕噜…咕噜…嗯…哇咿！超好喝！工作结……虽然工作还没结束，但休息的时候来瓶可乐真是太棒了！"
+    hide リオン_基本_杖_微笑み
 
     # 莲 「おう、喜んでくれたなら何よりだ」
     lian "嗯，如果你高兴的话，那比什么都好"
 
     # 里昂 「にゃはー、その言葉、言い慣れてるっていうイントネーションだね！」
-    lion "呀哈哈，这句话，是说惯了的语调呢！"
+    show リオン_基本_杖_微笑み at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0431.ogg"
+    lion リオン_基本_杖_微笑み "呀哈哈，这句话，是说惯了的语调呢！"
+    hide リオン_基本_杖_にっこり
 
     # 莲 「そうか？」
     lian "是吗？"
 
     # 里昂 「うんうん！　自分の幸せよりも、他人の幸せを優先しちゃうタイプでしょ、君ぃ」
-    lion "嗯！你呀，是那种比起自己的幸福，更优先考虑他人幸福的类型吧"
+    show リオン_基本_杖_にっこり at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0432.ogg"
+    lion リオン_基本_杖_にっこり "嗯！你呀，是那种比起自己的幸福，更优先考虑他人幸福的类型吧"
+    hide リオン_基本_杖_微笑み
 
     # 莲 「言われてみればそうかもしれないな」
     lian "这么说来也许是这样呢"
@@ -981,19 +1034,26 @@ label scene04:
     "趁着身体前倾的时候，不由自主地将视线投向胸前。果然... 比起心爱和真冬..."
 
     # 里昂 「どこを見ているんだねまったくー」
-    lion "在看哪里啊，你这家伙"
+    show リオン_基本_杖_見下し at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0433.ogg"
+    lion リオン_基本_杖_見下し "在看哪里啊，你这家伙"
+    hide リオン_基本_杖_にっこり
 
     # 莲 「そういえばその服ノーブラか」
     lian "说起来啊，你那件衣服是No-bra吗？"
 
     # 里昂 「ばっ…！　そ、そーいうことは気づいてもノータッチでいこうよ！　ついでにノーブラじゃないから！　見せられないのが非常に残念ですがね！」
-    lion "呃…！那、那个，即使注意到了这点也不要触碰哦！顺便说一下，我才不是No-bra呢！不能让你看到真是很遗憾呢！"
+    show リオン_基本_杖_驚き at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0434.ogg"
+    lion リオン_基本_杖_驚き "呃…！那、那个，即使注意到了这点也不要触碰哦！顺便说一下，我才不是No-bra呢！不能让你看到真是很遗憾呢！"
+    hide リオン_基本_杖_見下し
 
     # 莲 「ていうか、おっぱいでかいよな」
     lian "话说，欧派好大啊（L:莲你都有心爱了怎么还能这样呢！）"
 
     # 里昂 「なんだねいきなり！？　突然おっぱいばっかり褒めやがって…男って奴は…どこの国でも一緒かい…」
-    lion "什么嘛，突然间！？突然一个劲地夸奖我的欧派……男人…不管在哪个国家都一样啊…"
+    voice "voice/リオン/ron_a1_0435.ogg"
+    lion リオン_基本_杖_驚き "什么嘛，突然间！？突然一个劲地夸奖我的欧派……男人…不管在哪个国家都一样啊…"
 
     # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.1
@@ -1001,6 +1061,7 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # MJ 「リオンは尻も良いぞ」
+    voice "voice/その他/mjf_a1_0041.ogg"
     mj MJ_通常 "里昂的屁股也很好哦"
 
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
@@ -1009,19 +1070,28 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂 「黙れマイケル」
-    lion "闭嘴迈克尔"
+    show リオン_基本_杖_見下し at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0436.ogg"
+    lion リオン_基本_杖_見下し "闭嘴迈克尔"
+    hide リオン_基本_杖_驚き
 
     # 莲 「美味しそうな食べ物があったら、つい目線を向けてしまうのが人間ってやつだろ？」
     lian "如果有看起来很好吃的食物的话，不知不觉就会把视线转向那边，这就是人类吧？"
 
     # 里昂 「はいはい、お褒め頂きありがとうございます。つっても、好きな人いるんでしょー？」
-    lion "好的好的，谢谢您的夸奖。你也有喜欢的人吧？（L:原作这里也是没有配音...）"
+    # （L:原作这里也是没有配音...）
+    show リオン_基本_杖_微笑み at love69_lion_center with dissolve
+    # voice "voice/リオン/ron_a1_0437.ogg"
+    lion リオン_基本_杖_微笑み "好的好的，谢谢您的夸奖。你也有喜欢的人吧？（L:原作这里没有配音...）"
+    hide リオン_基本_杖_見下し
 
     # 莲 「あ、あ…その事についてなんだが…」
     lian "那，那个…关于那件事…"
 
     # 里昂 「おう、恋バナかね？　どーんとお姉さんに相談してきなさい！」
-    lion "哦，是恋爱话题吗？请务必和姐姐商量一下！（L:原作这里也是没有配音...）"
+    # （L:原作这里也是没有配音...）
+    # voice "voice/リオン/ron_a1_0438.ogg"
+    lion リオン_基本_杖_微笑み "哦，是恋爱话题吗？请务必和姐姐商量一下！（L:原作这里也是没有配音...）"
 
     # nil 「その事…？　まぁいや。」
     "那件事…？算了吧"
@@ -1030,13 +1100,15 @@ label scene04:
     lian "之前收到的冰淇淋…怎么说呢…效果确实很好"
 
     # 里昂 「おう！　それは良かったにゃ！　ご覧頂いた通り、なかなか、独り身の子が訪れなくてねー！　実はあのアイスは、蓮くんだけにしか渡してないのだよ！」
-    lion "哇！那太好了喵！正如你所看到的那样，我这里没有什么单身的孩子过来呢！其实那个冰淇淋只给了莲君一个人哦！"
+    voice "voice/リオン/ron_a1_0439.ogg"
+    lion リオン_基本_杖_微笑み "哇！那太好了喵！正如你所看到的那样，我这里没有什么单身的孩子过来呢！其实那个冰淇淋只给了莲君一个人哦！"
 
     # 莲 「効果はあったんだが…ちょっと、強すぎじゃないか？」
     lian "虽然有效果，但是这个效果实在是有点太强了吧？"
 
     # 里昂 「ほう…差し支えなければ、詳しく聞かせてくれないかな」
-    lion "哦......如果你不介意的话，能告诉我详细情况吗?"
+    voice "voice/リオン/ron_a1_0440.ogg"
+    lion リオン_基本_杖_微笑み "哦......如果你不介意的话，能告诉我详细情况吗?"
 
     # nil 「一瞬にして、リオンの目付きが変わる。普段の猫のような無邪気な笑顔ではなく、自分の仕事と真剣に向き合う職人の目だ。」
     "一瞬间，里昂的眼神改变了。不是平时的像猫那样天真无邪的笑容，而是认真对待自己工作的工匠的眼神"
@@ -1045,7 +1117,10 @@ label scene04:
     "我有点不好意思把事情全部都说出来，但这是为了里昂的工作..."
 
     # 里昂 「あ、大丈夫。安心して。無理に聞こうとは思わないから」
-    lion "啊，没关系的。放心吧，我不会强迫你说出来的"
+    show リオン_基本_杖_にっこり at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0441.ogg"
+    lion リオン_基本_杖_にっこり "啊，没关系的。放心吧，我不会强迫你说出来的"
+    hide リオン_基本_杖_微笑み
 
     # nil 「俺が話すのを躊躇っていると、リオンは表情を和らげて、にっこりと笑った。」
     "当我犹豫要不要说出来的时候，里昂表情缓和了，莞尔一笑"
@@ -1054,7 +1129,14 @@ label scene04:
     lian "不，我会告诉你的，就是有点不好意思…"
 
     # 里昂 「にゃは、ありがとう！」
-    lion "呀哈哈，谢谢！"
+    show リオン_基本_杖_にっこり:
+        zoom 1.5
+        yalign 0.07
+        xalign 0.5
+        linear 0.15 yalign 0.14
+        linear 0.15 yalign 0.07
+    voice "voice/リオン/ron_a1_0442.ogg"
+    lion リオン_基本_杖_にっこり "呀哈哈，谢谢！"
 
     # nil 「実際、心愛との一日は、どこまでがアイスの効果だったかは定かではないので、とりあえず一日を通して（身体を重ねた事についても）話した。」
     "事实上，在与心爱的一天里，我并不确定到底有多少是冰激凌的效果，所以我暂且把一整天的事情都讲了出来（包括身体重叠的事情)"
@@ -1066,25 +1148,35 @@ label scene04:
     lian "嗯，就是这样的感觉。当然，从那之后我和心爱的关系变好了，但这并不是问题的关键……"
 
     # 里昂 「ふむー…名前はラブポーションだけど…エロい効果があるようには設計してないんだけどなぁ…」
-    lion "嗯...虽然名字叫“Lovepotion”（L:potion是“药水”的意思），但是没有设计成具有 H 效果的啊..."
+    show リオン_基本_杖_悲しい at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0443.ogg"
+    lion リオン_基本_杖_悲しい "嗯...虽然名字叫“Lovepotion”（L:potion是“药水”的意思），但是没有设计成具有 H 效果的啊..."
+    hide リオン_基本_杖_にっこり
 
     # 莲 「結果的に、俺と心愛の仲は良くなってるし、感謝はしているよ。ありがとう」
     lian "从结果来看，我和心爱的关系变好了，谢谢你"
 
     # 里昂 「おう、そう言って貰えると嬉しいよ！　そだ、ちょっとまってね」
-    lion "哦，听到你这么说我就很高兴了！对了，稍等一下哦"
+    show リオン_基本_杖_微笑み at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0444.ogg"
+    lion リオン_基本_杖_微笑み "哦，听到你这么说我就很高兴了！对了，稍等一下哦"
+    hide リオン_基本_杖_悲しい
 
     # nil 「リオンは屋台の下からクーラーボックスを取り出すと、蓋をあけてカップのアイスを取り出した。」
     "里昂从摊位下面拿出冷藏箱，打开盖子，拿出了一杯冰淇淋"
 
     # 里昂 「中身は同じだけど、カップのサンプルがあるんだけど、もう一回試してみる？」
-    lion "虽然里面的东西是一样的，但是这个是装在杯子里面的样品，要再试一次吗？"
+    voice "voice/リオン/ron_a1_0445.ogg"
+    lion リオン_基本_杖_微笑み "虽然里面的东西是一样的，但是这个是装在杯子里面的样品，要再试一次吗？"
 
     # 莲 「え？　そんな何度も貰っちゃっていの？　貴重な試作品じゃないのか」
     lian "诶？要再次送给我吗？这不是很贵重的样品吗？"
 
     # 里昂 「いやいや、むしろ、蓮くんぐらいしか渡す人いなくてさ！エロい効果があるならあるで…夜のお楽しみに使ってくれてもいんだぜー？」
-    lion "不不不，不如说，只有像莲这样的人才能交给你！如果有色情效果的话……也可以作为晚上的乐趣来使用吧？"
+    show リオン_基本_杖_にっこり at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0446.ogg"
+    lion リオン_基本_杖_にっこり "不不不，不如说，只有像莲这样的人才能交给你！如果有色情效果的话……也可以作为晚上的乐趣来使用吧？"
+    hide リオン_基本_杖_微笑み
 
     # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.1
@@ -1092,6 +1184,7 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # MJ 「抜かずの６９発。なんつってな」
+    voice "voice/その他/mjf_a1_0042.ogg"
     mj MJ_通常 "「不拔的69发」，怎么说呢"
 
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
@@ -1100,13 +1193,19 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂 「黙れマイケル」
-    lion "闭嘴迈克尔"
+    show リオン_基本_杖_見下し at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0447.ogg"
+    lion リオン_基本_杖_見下し "闭嘴迈克尔"
+    hide リオン_基本_杖_にっこり
 
     # 莲 「本来の目的とは違うような気がするが…まぁ、考えておくよ」
     lian "我觉得和本来的目的不大一样……算了，我会考虑的"
 
     # 里昂 「Oh Yeah！しばらくこら辺にお店出してるだろうから、効果があったら教えてね！」
-    lion "Oh Yeah！我暂时在这附近开店，如果有效果的话请来告诉我！"
+    show リオン_基本_杖_微笑み at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0448.ogg"
+    lion リオン_基本_杖_微笑み "Oh Yeah！我暂时在这附近开店，如果有效果的话请来告诉我！"
+    hide リオン_基本_杖_見下し
 
     # nil 「奥手な心愛にはちょうどいかもしれない。むしろ、真冬に食べさせても…。」
     "对于晚熟的心爱也许正合适。不过，让真冬吃也…"
@@ -1118,13 +1217,19 @@ label scene04:
     "我从里昂那里，一边接过防止融化用的干冰（好像是够30分钟的量），一边不由自主地提出了这样的一个问题"
 
     # 里昂 「む？　あるよー。　効果はともかく、美味しくないといけないからね！」
-    lion "嗯？有的哦。不管效果如何，必须要好吃才行啊！"
+    show リオン_基本_杖_にっこり at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0449.ogg"
+    lion リオン_基本_杖_にっこり "嗯？有的哦。不管效果如何，必须要好吃才行啊！"
+    hide リオン_基本_杖_微笑み
 
     # 莲 「で、別にエロい効果は…」
     lian "那么，有工口的效果吗…"
 
     # 里昂 「そ、それを聞いちゃうかなー…ちょ、ちょーっと恥ずかしいなー！」
-    lion "要，要问这个问题吗……有、有点不好意思啊——！"
+    show リオン_基本_杖_悲しい at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0450.ogg"
+    lion リオン_基本_杖_悲しい "要，要问这个问题吗……有、有点不好意思啊——！"
+    hide リオン_基本_杖_にっこり
 
     # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.1
@@ -1132,6 +1237,7 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # MJ 「むぎゅっ…！　まだ何も言ってねぇだろ―もご！」
+    voice "voice/その他/mjf_a1_0043.ogg"
     mj MJ_通常 "喂喂……!我还什么都没说呢!"
 
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
@@ -1139,51 +1245,73 @@ label scene04:
     $ sideimagesize.SideImageYalign = -7.32
     $ sideimagesize.SideImageZoom = 1.0
 
-    # 里昂 「リオンは凄まじいスピードで、帽子の頭を抑えた。」
-    lion "里昂以惊人的速度压住了帽子的头"
+    # nil 「リオンは凄まじいスピードで、帽子の頭を抑えた。」
+    "里昂以惊人的速度压住了帽子的头"
 
     # 莲 「俺も恥ずかしい話をしたんだし、そこは引き替えという事で」
     lian "刚刚我也说了很不好意思的话，那么作为交换..."
 
     # 里昂 「それは俗に言う『決して断れない申し出』って奴だね…！」
-    lion "这就是俗话所说的『绝对无法拒绝的提议』吧…！"
+    show リオン_基本_杖_微笑み at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0451.ogg"
+    lion リオン_基本_杖_微笑み "这就是俗话所说的『绝对无法拒绝的提议』吧…！"
+    hide リオン_基本_杖_悲しい
 
     # 莲 「ゴットファーザー好きなのか？」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%83%E3%83%89%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B6%E3%83%BC_(%E6%98%A0%E7%94%BB)
     lian "你喜欢『教父』吗？（L:是一部1972年的美国帮派电影，根据马里奥·普佐的同名畅销小说改编，一共三集。被称为『教父三部曲』，长年占据在互联网电影数据库（IMDb）的史上最佳250部电影名单前列）"
 
     # 里昂 「１だけ見たよ。ふむー…。うぅ…誰にも言わない…？」
-    lion "我只看了1。嗯……那个、不要告诉其他人哦…？"
+    show リオン_基本_杖_悲しい at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0452.ogg"
+    lion リオン_基本_杖_悲しい "我只看了1。嗯……那个、不要告诉其他人哦…？"
+    hide リオン_基本_杖_微笑み
 
     # 莲 「まぁ、そりゃ言う相手もいねぇしな」
     lian "嘛，也没有可以说的对象啊"
 
     # 里昂 「じゃぁ…ごくり…」
-    lion "那...再来一点..."
+    show リオン_基本_杖_ジト目 at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0453.ogg"
+    lion リオン_基本_杖_ジト目 "那...再来一点..."
+    hide リオン_基本_杖_悲しい
 
-    # 莲 「リオンが息を呑む。恥ずかしがっているリオンも新鮮だ。見ているこっちも、少しドキドキしてしまう。」
-    lian "里昂屏住呼吸。害羞的里昂也让我觉得很新鲜。看得我的心也稍微有点七上八下了"
+    # nil 「リオンが息を呑む。恥ずかしがっているリオンも新鮮だ。見ているこっちも、少しドキドキしてしまう。」
+    "里昂屏住呼吸。害羞的里昂也让我觉得很新鲜。看得我的心也稍微有点七上八下了"
 
     # 里昂 「まぁ、何も起こらなかったよ」
-    lion "嘛，什么都没发生吧"
+    show リオン_基本_杖_にっこり at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0454.ogg"
+    lion リオン_基本_杖_にっこり "嘛，什么都没发生吧"
+    hide リオン_基本_杖_ジト目
 
     # 莲 「なら引っ張るなよ！　ドキドキしたこっちがバカみてぇじゃねぇか！」
     lian "那就别扯着我啊喂！心跳加速的我真是笨蛋！"
 
     # 里昂 「ハッハァー！　おねーさんをからかおうなんて１０年早いんだぜー！」
-    lion "哈哈哈！要捉弄姐姐我你还早10年呢！"
+    show リオン_基本_杖_微笑み at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0455.ogg"
+    lion リオン_基本_杖_微笑み "哈哈！要捉弄姐姐我你还早10年呢！"
+    hide リオン_基本_杖_にっこり
 
     # 莲 「まぁ、効果があったらあったで、その時点で直してるか」
     lian "嘛，如果真的有这样效果的话，到时候再改好了（L:这两句话没看懂，感觉是和『教父』这个电影有关，但是我没看过。所以附原文「まぁ、効果があったらあったで、その時点で直してるか」）"
 
     # 里昂 「いんや、それはそれで、その方向で売り出してると思うよボロ儲けだね…じゅるり」
-    lion "没有，我觉得他们正朝着这个方向发展，赚得盆满钵满（「いんや、それはそれで、その方向で売り出してると思うよボロ儲けだね…じゅるり」，会的大哥大姐快去Gayhub提issues让我爬！）"
+    show  リオン_基本_杖_にっこり at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0456.ogg"
+    # lion リオン_基本_杖_にっこり "嗯，我觉得他们正朝着这个方向发展，赚得盆满钵满……吸溜（「いんや、それはそれで、その方向で売り出してると思うよボロ儲けだね…じゅるり」，会的大哥大姐快去Gayhub提issues让我爬！）"
+    lion リオン_基本_杖_にっこり "嗯，我觉得如果朝着这个方向开发，说不定能赚得盆满钵满呢……吸溜（「いんや、それはそれで、その方向で売り出してると思うよボロ儲けだね…じゅるり」，会的大哥大姐快去Gayhub提issues让我爬！）"
+    hide リオン_基本_杖_微笑み
 
     # 莲 「リオンの身に何も起こらないっていうのは、要するに、恋してる相手が居ないってことか…」
     lian "里昂的身上什么都没有发生，也就是说，没有恋爱的对象吗…"
 
     # 里昂 「ヘイカモォン！　ちょっと言い過ぎだよ君ぃー！その質問については黙秘権を行使させてもらいまーす」
-    lion "哼！你这就说得有点过分了！关于这个问题我要行使沉默权"
+    show リオン_基本_杖_微笑み at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0457.ogg"
+    lion リオン_基本_杖_微笑み "哼！你这就说得有点过分了！关于这个问题我要行使沉默权"
+    hide リオン_基本_杖_にっこり
 
     # 莲 「黙秘する時点で答えは出てるんだぜ」
     lian "当你沉默的时候答案就出来了"
@@ -1194,6 +1322,7 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # MJ 「正解！」
+    voice "voice/その他/mjf_a1_0044.ogg"
     mj MJ_通常 "正解！"
 
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
@@ -1202,25 +1331,37 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂 「黙れマイケル」
-    lion "闭嘴迈克尔"
+    show リオン_基本_杖_ジト目 at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0458.ogg"
+    lion リオン_基本_杖_ジト目 "闭嘴迈克尔"
+    hide リオン_基本_杖_微笑み
 
     # 莲 「可愛いなリオン」
     lian "里昂真可爱"
 
     # 里昂 「うるせーうるせー！　もー！　君は優しいけど、少し意地悪だね…」
-    lion "无路赛——无路赛——！哼！你人很好，但是有点坏心眼…"
+    show リオン_基本_杖_ニタァ at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0459.ogg"
+    lion リオン_基本_杖_ニタァ "无路赛——无路赛——！哼！你人很好，但是有点坏心眼…"
+    hide リオン_基本_杖_ジト目
 
     # 莲 「人を無駄にドキらせた仕返しっつーことで一つ」
     lian "这是让我白白心动的报复"
 
     # 里昂 「好きな人いるんだから、他の女の子にドキドキしちゃだめだぞ！そういう悪い子は、めっめっだぞ！」
-    lion "因为有喜欢的人，所以不能对其他女孩子心动！这样的坏孩子可⑧行啊！"
+    show リオン_基本_杖_ジト目 at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0460.ogg"
+    lion リオン_基本_杖_ジト目 "因为有喜欢的人了，所以不能对其他女孩子心动！这样的坏孩子可⑧行啊！"
+    hide リオン_基本_杖_ニタァ
 
     # 莲 「へいへい、すんません。ともあれ、またサンプルをありがとう。有効活用させて貰うよ」
     lian "好的，对不起。不管怎样，还是谢谢你的样品，我会好好利用的"
 
     # 里昂 「おっす！　寄り道しちゃだめだよー？」
-    lion "押忍！（L:是空手道、剑道、柔道等武术界人士之间使用的一种打招呼方式）可不要绕道哦？"
+    show リオン_基本_杖_微笑み at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0461.ogg"
+    lion リオン_基本_杖_微笑み "押忍！（L:是空手道、剑道、柔道等武术界人士之间使用的一种打招呼方式）可不要绕道哦？"
+    hide リオン_基本_杖_ジト目
 
     # 莲 「気をつけるよ」
     lian "我会注意的"
@@ -1229,22 +1370,29 @@ label scene04:
     "里昂再次向前弯腰指着我"
 
     # 里昂 「あ、言い忘れた。お話を聞かせてくれてありがとう。また会えて嬉しかったよ」
-    lion "啊，我忘记说了，谢谢你告诉我你的故事。很高兴再次见到你"
+    voice "voice/リオン/ron_a1_0462.ogg"
+    lion リオン_基本_杖_微笑み "啊，我忘记说了，谢谢你告诉我你的故事。很高兴再次见到你"
 
     # 莲 「そうか。喜んで貰えたならなにより」
     lian "这样啊，如果能让你高兴的话就太好了"
 
     # 里昂 「あはっ！　ほら、また言った！」
-    lion "哈哈，看，你又说这种话了"
+    show リオン_基本_杖_にっこり at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0463.ogg"
+    lion リオン_基本_杖_にっこり "哈哈，看，你又说这种话了"
+    hide リオン_基本_杖_微笑み
 
     # 莲 「どうやら、確かに口癖らしいな…」
     lian "看来，确实是口头禅啊…"
 
     # 里昂 「それがきっと、君の良さってやつだね！　じゃあね、蓮くん！」
-    lion "那一定是你的优点吧！再见，莲君！"
+    show リオン_基本_杖_微笑み at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0464.ogg"
+    lion リオン_基本_杖_微笑み "那一定是你的优点吧！再见，莲君！"
+    hide リオン_基本_杖_にっこり
 
-    # 里昂 「またな」
-    lion "再见"
+    # 莲 「またな」
+    lian "再见"
 
     # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.1
@@ -1252,6 +1400,7 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # MJ 「あばよ。Mr優男サン。もし望むなら、ケツを可愛がってやってもいぜ」
+    voice "voice/その他/mjf_a1_0045.ogg"
     mj MJ_通常 "再见，Mr.帅哥桑。如果你愿意的话，我可以疼爱你的屁股哟"
 
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
@@ -1260,23 +1409,31 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂 「黙れマイケル」
-    lion "闭嘴迈克尔（L:这里原作也没有音声的样子，拉跨了）"
+    # （L:这里原作也没有音声的样子，拉跨了）
+    # voice "voice/リオン/ron_a1_0458.ogg"
+    # voice "voice/リオン/ron_a1_0447.ogg"
+    voice "voice/リオン/ron_a1_0436.ogg"
+    lion リオン_基本_杖_微笑み "闭嘴迈克尔"
 
-    # nil 「リオンとに別れを告げて、アイスの屋台を後にする。」
-    "和里昂告别后，我离开了冰激凌摊"
+    # nil 「リオンとMJに別れを告げて、アイスの屋台を後にする。」
+    "和里昂还有MJ告别后，我离开了冰激凌摊"
 
     # nil 「俺が去ると同時に、またアイス屋台には客足が戻りはじめた。」
     "我走的同时，又有客人来到了冰激凌摊"
 
-    # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.1
-    $ sideimagesize.SideImageYalign = 0.78
+    # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.09
+    $ sideimagesize.SideImageYalign = -7.32
     $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂 「あーあ…嘘、ついちゃったなー…でも、仕方ないよ…こうでもしないと、こに来た目的が達成できないもんね…」
-    lion "啊—啊......我撒谎了呢...不过，也没办法呢...不这样的话，来这里的目的就达不到了..."
+    show リオン_基本_杖_悲しい at love69_lion_center with dissolve
+    voice "voice/リオン/ron_a1_0465.ogg"
+    lion リオン_基本_杖_悲しい "啊—啊......我撒谎了呢...不过，也没办法呢...不这样的话，来这里的目的就达不到了..."
+    hide リオン_基本_杖_微笑み
 
     # MJ 「今更何いってやがる…元よりてめェが始めた事だろうが」
+    voice "voice/その他/mjf_a1_0046.ogg"
     mj MJ_通常 "事到如今还说什么呢……这件事本来就是你挑起来的吧"
 
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
@@ -1285,7 +1442,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂 「うん。だから、もう大丈夫…大丈夫だから…」
-    lion "嗯，所以已经没关系了…没关系的说…"
+    voice "voice/リオン/ron_a1_0466.ogg"
+    lion リオン_基本_杖_悲しい "嗯，所以已经没关系了…没关系的说…"
 
     # 场景切换
     # scene04 场景2 【和里昂的再次相遇】 结束
@@ -1293,6 +1451,10 @@ label scene04:
     # 地点：街道->葛城家客厅
     # 人物：莲
     # BGM不变
+
+    image bg リビングa_夕 = "images/bg/リビングa_夕.png"
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene リビングa_夕 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 莲 「ただいまー」
     lian "我回来啦——"
@@ -1323,6 +1485,9 @@ label scene04:
     # 人物：莲
     # BGM不变
 
+    image bg 自宅_夕 = "images/bg/自宅_夕.png"
+    scene 自宅_夕 at love69_bg1440 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
+
     # nil 「下駄箱の上段からシステムのヘルメットを取り出して、制服のま外に出る。」
     "从鞋柜的上层取出 System 的头盔（L:这里neta宝马的System头盔系列，按照作品发售时间，应该是System6，现在的价格大概是5810元软妹币），穿着制服走了出去"
 
@@ -1350,7 +1515,12 @@ label scene04:
     # 场景切换
     # 葛城家外->天空
     # 人物：真冬（真冬视角） 想瑠喵
-    # BGM：英文歌 平缓
+    # BGM：英文歌 平缓 Music Through Love (ft. Admiral Bob)
+
+    play music bgmnineteen fadein 4.0 fadeout 4.0
+    image bg 空_夕a = "images/bg/空_夕a.png"
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene 空_夕a at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1359,7 +1529,8 @@ label scene04:
 
     # 真冬 「ヒロシです」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%92%E3%83%AD%E3%82%B7
-    dong "我是ヒロシ（L:这个人本名齊藤健一，11区喜剧演员、Youtuber）"
+    voice "voice/真冬/maf_a1_0208.ogg"
+    dong 真冬_制服_基本_無表情 "我是ヒロシ（L:这个人本名齊藤健一，11区喜剧演员、Youtuber）"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -1367,10 +1538,17 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「懐かしいなそれ…」
-    liu "好怀念啊…"
+    voice "voice/想瑠/sol_a1_0098.ogg"
+    liu 想瑠_スーツ_見下し "好怀念啊，那个…"
 
-    # nil 「ネタが古かったとです。真冬です。想瑠にゃん先生の車に乗って我が家へと向かっています。調査も大詰め。」
-    "这个段子已经过时了。真冬坐着想瑠喵的车回家。调查也接近尾声了"
+    # nil 「ネタが古かったとです。」
+    "这个段子已经过时了"
+
+    # nil 「真冬です。」
+    "现在是真冬视角"
+
+    # nil 「想瑠にゃん先生の車に乗って我が家へと向かっています。調査も大詰め。」
+    "调查已经接近尾声了，坐着想瑠喵的车回家"
 
     # nil 「順調に進めば、冬には温泉施設が学園の敷地内に作れるということで、今から冬が楽しみです。」
     "如果一切顺利的话，到了冬天，学园内就可以建起来温泉了，所以现在就开始期待着冬天的到来了捏"
@@ -1388,7 +1566,8 @@ label scene04:
     "想瑠的车是一辆双座敞篷车，敞开的车顶吹来的风让我们的头发随风飘动"
 
     # 真冬 「まふまふ……」
-    dong "嘛呼嘛……"
+    voice "voice/真冬/maf_a1_0209.ogg"
+    dong 真冬_制服_基本_まったり "嘛呼嘛……"
 
     # nil 「お土産に貰ったアイスクリーム味の宇宙食を食べながら、私は流れてくるラジオの音楽に耳を傾けています。」
     "我一边吃着作为礼物收到的冰淇淋味道的太空餐，一边听着收音机里传来的歌声"
@@ -1399,7 +1578,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「で、この後、大好きなお兄ちゃんにどんなアプローチをするんだい？」
-    liu "呐，接下来你打算怎样接近你daisuki的欧尼酱捏?"
+    voice "voice/想瑠/sol_a1_0099.ogg"
+    liu 想瑠_スーツ_ニヤリ "呐，接下来，你打算怎样接近你daisuki的欧尼酱捏?"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1407,7 +1587,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「っ！　…ごくっ…まふ。いきなりだね」
-    dong "咕! ...咕...哇哈…嘛呼...真是突然啊"
+    voice "voice/真冬/maf_a1_0210.ogg"
+    dong 真冬_制服_基本_ジト目 "咕! ...咕...哇哈…嘛呼...真是突然啊"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -1415,7 +1596,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「あは、そりゃー気になるじゃないか。生徒の恋路を手助けするのもまた仕事のうちさー」
-    liu "哈哈哈，你不是挺在意吗？帮助学生恋爱也是工作的一部分呢"
+    voice "voice/想瑠/sol_a1_0100.ogg"
+    liu 想瑠_スーツ_ニヤリ "哈哈哈，你不是挺在意吗？帮助学生恋爱也是工作的一部分呢"
 
     # nil 「想瑠にゃんに、私の気持ちは見抜かれていました。なので、ちょいちょい、自分はどうすべきかを相談しています。」
     "想瑠喵看穿了我的心情。所以，稍微和她商量一下自己应该怎么做吧"
@@ -1426,7 +1608,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「んー…特にコレといって決めてはないけど…。お兄ちゃんが喜ぶ事をしてあげてらなーって思ってるよ」
-    dong "emmm……虽然我还没有什么特别的想法……但是我会做让欧尼酱开心的事情的说"
+    voice "voice/真冬/maf_a1_0211.ogg"
+    dong 真冬_制服_基本_微笑み "emmm……虽然我还没有什么特别的想法……但是我会做让欧尼酱开心的事情的说"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -1434,7 +1617,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「献身的なのは結構だが、自分から歩み寄らんと得るものも得られんぞ」
-    liu "献身固然是好的，但是如果不主动接近，最终也得不到什么"
+    voice "voice/想瑠/sol_a1_0101.ogg"
+    liu 想瑠_スーツ_真顔2 "献身固然是好的，但是如果不主动接近，最终也得不到什么"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1442,7 +1626,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「うん。わかってはいるけど…今の関係を変えるのが怖いっていうか…。今更、兄妹だからとか、そういう事を言うつもりはないけど」
-    dong "嗯，我知道的，但是...或者说是害怕改变现在的关系...事到如今，我也不想说什么是兄妹之类的话了"
+    voice "voice/真冬/maf_a1_0212.ogg"
+    dong 真冬_制服_基本_泣き "嗯，我知道的，但是...或者说是害怕改变现在的关系...事到如今，我也不想说什么是兄妹之类的话了"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -1450,7 +1635,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「まぁ…その言い分はわからんでもない。兄妹だと複雑だよな…」
-    liu "嘛，这个理由也不难理解。兄妹的话雀实是很复杂啊…"
+    voice "voice/想瑠/sol_a1_0102.ogg"
+    liu 想瑠_スーツ_悲しみ "嘛，这个理由也不难理解。兄妹的话雀实是很复杂啊…"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1458,7 +1644,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「似たような経験が…？」
-    dong "有类似的经验吗？（L:参考本作前作，这里不多剧透，虽然我没推完但是有点头猪，有兴趣的话可以考虑去推一下）"
+    voice "voice/真冬/maf_a1_0213.ogg"
+    dong 真冬_制服_基本_無表情 "有类似的经验吗？（L:参考本作前作，这里不多剧透，虽然我还没推完但是有点头猪，有兴趣的话可以考虑去推一下）"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -1466,7 +1653,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「それは秘密。君が欲しい物を手に入れたら、その時にでも教えてあげるよ」
-    liu "这个秘密哦。等你得到想要的东西，到时候我再告诉你"
+    voice "voice/想瑠/sol_a1_0103.ogg"
+    liu 想瑠_スーツ_ニヤリ "这个是秘密哦。等你得到想要的东西，到时候我再告诉你"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1474,7 +1662,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「楽しみにしておく。そのためにも、動かなきゃ…かー」
-    dong "我很期待。为了这个，必须要行动起来"
+    voice "voice/真冬/maf_a1_0214.ogg"
+    dong 真冬_制服_基本_微笑み "我很期待。为了这个，必须要行动起来……呢——"
 
     # nil 「想瑠にゃんは、「ふっ」と微笑んでラジオのボリュームを上げました。」
     "想瑠喵笑着「呼」地提高了收音机的音量"
@@ -1491,10 +1680,13 @@ label scene04:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「あ、そだ、想瑠にゃん。ちょっと寄って欲しい所があるんだ」
-    dong "啊，对了，想瑠喵。我有个地方想让你带我去"
+    voice "voice/真冬/maf_a1_0215.ogg"
+    dong 真冬_制服_基本_無表情 "啊，对了，想瑠喵。我有个地方想让你带我去"
 
     # 原地tp
     # BGM不变
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene 空_夕a at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -1502,7 +1694,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「しっかし君のお兄ちゃんはまた妙なモノに…」
-    liu "话说你的哥哥又变成了奇怪的样子…"
+    voice "voice/想瑠/sol_a1_0104.ogg"
+    liu 想瑠_スーツ_悲しみ "话说你的哥哥又变成了奇怪的样子…"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1510,7 +1703,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「うん。でも、お肌つやつやしてたから、良い傾向だと思う」
-    dong "嗯。但是，因为皮肤变光滑了，所以我觉得这是好的倾向呢"
+    voice "voice/真冬/maf_a1_0216.ogg"
+    dong 真冬_制服_基本_微笑み "嗯。但是，因为皮肤变光滑了，所以我觉得这是好的倾向呢"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -1519,7 +1713,8 @@ label scene04:
 
     # 想瑠 「ついでにデトックスにでも連れてってやるとい」
     # 参考资料：https://www.adpkd.jp/yomoyama/vol08_04.html # 太有趣了
-    liu "顺便带他去排个毒吧"
+    voice "voice/想瑠/sol_a1_0105.ogg"
+    liu 想瑠_スーツ_ニヤリ "顺便带他去排个毒吧"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1528,7 +1723,8 @@ label scene04:
 
     # 真冬 「そんな事したら、多分お兄ちゃんが全部おしっことして出ちゃう」
     # 参考资料：https://zh.wikipedia.org/wiki/%E8%A7%A3%E6%AF%92
-    dong "那样的话，大概哥哥会全部作为尿尿出来（L:这里说的是新陈代谢排毒法，就是利用人体自身的新陈代谢来排毒，通过药物、食物加快新陈代谢，比如恰个西瓜）"
+    voice "voice/真冬/maf_a1_0217.ogg"
+    dong 真冬_制服_基本_無表情 "那样的话，大概哥哥会全部作为尿尿出来（L:这里说的是新陈代谢排毒法，就是利用人体自身的新陈代谢来排毒，通过药物、食物加快新陈代谢，比如恰个西瓜）"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -1536,7 +1732,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「ははは、そうかもな」
-    liu "哈哈哈，也许是这样吧"
+    voice "voice/想瑠/sol_a1_0106.ogg"
+    liu 想瑠_スーツ_にっこり "哈哈哈，也许是这样吧"
 
     # nil 「コラーゲン中毒のお兄ちゃんのために、お土産を買いました。」
     "我给胶原蛋白上瘾的哥哥买了特产"
@@ -1550,7 +1747,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「ほい到着。忘れ物は金目の物だけにしておいてくれよ」
-    liu "差不多到了。要忘东西的话就留下值钱的东西吧"
+    voice "voice/想瑠/sol_a1_0107.ogg"
+    liu 想瑠_スーツ_ほほえみ "欸——到了。要忘东西的话就留下值钱的东西吧"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1558,7 +1756,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「じゃぁこの宇宙食の袋おいてくね」
-    dong "那么把这个太空食品的袋子放在这里吧"
+    voice "voice/真冬/maf_a1_0218.ogg"
+    dong 真冬_制服_基本_無表情 "那么把这个太空食品的袋子放在这里吧"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -1566,7 +1765,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「わあい燃えないゴミ。想瑠にゃん燃えないゴミ大好き！　ってならねぇからな、ゴミは持ち帰れよ」
-    liu "哇，不可燃垃圾。想瑠喵最喜欢不可燃垃圾了! 把垃圾带回去吧"
+    voice "voice/想瑠/sol_a1_0108.ogg"
+    liu 想瑠_スーツ_ニヤリ "哇，不可燃垃圾。想瑠喵最喜欢不可燃垃圾了! 把垃圾带回去吧"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1574,7 +1774,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「じゃぁ貴様を持ち帰ってやろうか」
-    dong "那就把你带回去吧"
+    voice "voice/真冬/maf_a1_0219.ogg"
+    dong "那就把你这家伙带回去吧"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -1582,7 +1783,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「女性を誘う台詞にしてはワイルド過ぎるよ…しかもゴミ扱いじゃねぇか私…」
-    liu "对于邀请女性的台词来说太狂野了......而且还把我当垃圾看待......"
+    voice "voice/想瑠/sol_a1_0109.ogg"
+    liu 想瑠_スーツ_ぶわ "对于邀请女性的台词来说太狂野了......而且还把我当垃圾看待......"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1590,7 +1792,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「くすっ。想瑠にゃん、送ってくれてありがとね」
-    dong "嘿嘿，想瑠喵，谢谢你送我"
+    voice "voice/真冬/maf_a1_0220.ogg"
+    dong 真冬_制服_基本_微笑み "嘿嘿，想瑠喵，谢谢你送我"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -1598,7 +1801,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「お安い御用でさぁ。じゃ、お兄ちゃんとお幸せにな」
-    liu "小事一桩，祝你和欧尼酱幸福"
+    voice "voice/想瑠/sol_a1_0110.ogg"
+    liu 想瑠_スーツ_ほほえみ "小事一桩，祝你和欧尼酱幸福"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1606,7 +1810,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「うん。頑張る」
-    dong "嗯，我会努力的"
+    voice "voice/真冬/maf_a1_0221.ogg"
+    dong 真冬_制服_基本_微笑み "嗯，我会努力的"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -1614,7 +1819,8 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「想いは言葉にしなきゃ相手に伝わらないぜ？　アディオスセニョリータ」
-    liu "如果不把想法用语言表达出来的话，是无法传达给对方的，再见，小姐（ADIOS SENORITA，L:是西班牙语）"
+    voice "voice/想瑠/sol_a1_0111.ogg"
+    liu 想瑠_スーツ_ニヤリ "如果不把想法用语言表达出来的话，是无法传达给对方的哦？再见，小姐（L:Adiós Senorita，西班牙语）"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1622,12 +1828,14 @@ label scene04:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「アディオス、アミーゴ」
-    dong "再见，伙计（ADIOS AMIGOS，L:也是西班牙语）"
+    voice "voice/真冬/maf_a1_0222.ogg"
+    dong 真冬_制服_基本_微笑み "再见，伙计（L:Adiós Amigos，也是西班牙语）"
 
     # 场景切换
     # 天空->葛城家外
     # 人物：真冬（真冬视角）
     # BGM：无
+    scene 自宅_夕 at love69_bg1440 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
 
     # nil 「玄関先で想瑠にゃんを見送ります。」
     "在玄关目送想瑠喵"
@@ -1641,7 +1849,9 @@ label scene04:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「（出かけてるのかな…）」
-    dong "（是出去了吗…）"
+    show 真冬_制服_基本_無表情 at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0223.ogg"
+    dong 真冬_制服_基本_無表情 "（是出去了吗…）"
 
     # nil 「遠くに行ってはいないのでしょうけど、少し寂しくなりました。」
     "虽然知道你没去很远的地方，但是有点寂寞了呢"
@@ -1649,7 +1859,11 @@ label scene04:
     # 场景切换
     # 葛城家外->葛城家客厅
     # 人物：真冬（真冬视角）
-    # BGM：
+    # BGM：bgmtwentyfour
+
+    play music bgmtwentyfour fadeout 3.0 fadein 0.8
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene リビングa_夕 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1657,7 +1871,9 @@ label scene04:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「ただいまー」
-    dong "我回来了~"
+    show 真冬_制服_基本_微笑み at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0224.ogg"
+    dong 真冬_制服_基本_微笑み "我回来了~"
 
     # nil 「遠くに行ってはいないのでしょうけど、少し寂しくなりました。」
     "果然，哥哥没有在家"
@@ -1677,7 +1893,10 @@ label scene04:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「だがしかし、暑い」
-    dong "但是，很热捏"
+    show 真冬_制服_基本_無表情 at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0225.ogg"
+    dong 真冬_制服_基本_無表情 "但是真的是，很热捏"
+    hide 真冬_制服_基本_微笑み
 
     # nil 「換気扇は回っていましたが、暑いものは暑いのです。」
     "虽然换气扇在旋转，但是现在该是很热的时候所以还是非常热捏"
@@ -1686,16 +1905,24 @@ label scene04:
     "因为只有我一个人在家，开空调无论是从环保的角度还是电费的角度来看都是不大好，所以还是想办法忍耐一下吧"
 
     # 真冬 「と、いうこーとーで…せいっ」
-    dong "那、这么说来的话…嘿！"
+    show 真冬_制服_基本_目閉じ at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0226.ogg"
+    dong 真冬_制服_基本_目閉じ "那、这么说来的话…嘿！"
+    hide 真冬_制服_基本_無表情
 
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_center with dissolve
     # nil 「制服を脱いで下着姿になりました。」
     "脱下制服穿上了内衣"
+    hide 真冬_制服_基本_目閉じ
 
     # nil 「そして、ブラを外して、洗濯物が折りたまれてる所から、お兄ちゃんのＹシャツを失敬しました。」
     "然后我脱下胸罩，从叠衣服的地方搞来了欧尼酱的衬衫"
 
     # 真冬 「くんくん…うん、お兄ちゃんの匂い…」
-    dong "嗅嗅…嗯，欧尼酱的味道……"
+    show 真冬_裸yシャツ_パンツ_まったり at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0227.ogg"
+    dong 真冬_裸yシャツ_パンツ_まったり "嗅嗅…嗯，欧尼酱的味道……"
+    hide 真冬_裸yシャツ_パンツ_無表情
 
     # nil 「最初は単に「楽だから」という理由で、去年あたりからこっそりお兄ちゃんのＹシャツを借りてたのですが。」
     "最初只是因为「穿起来很轻松舒适」的原因，从去年开始偷偷地穿起了欧尼酱的衬衫"
@@ -1713,13 +1940,15 @@ label scene04:
     "说到思考的事，大概就是关于心爱酱的脸颊的触感吧，还有关于欧尼酱的事情"
 
     # 真冬 「心愛ちゃん…まふ」
-    dong "心爱酱……嘛呼"
+    voice "voice/真冬/maf_a1_0228.ogg"
+    dong 真冬_裸yシャツ_パンツ_まったり "心爱酱……嘛呼"
 
     # nil 「自分のほっぺたを両手で押して、（E）・ω・（ヾ）こんな感じになってみます。」
     "用双手按压自己的脸蛋，（E）・ω・（ヾ）试着变成这样的感觉"
 
     # 真冬 「まふまふまふまふ」
-    dong "嘛呼嘛呼嘛呼嘛~"
+    voice "voice/真冬/maf_a1_0229.ogg"
+    dong 真冬_裸yシャツ_パンツ_まったり "嘛呼嘛呼嘛呼嘛~"
 
     # nil 「私は何をやっているのでしょうか。」
     "我在做什么捏"
@@ -1728,7 +1957,10 @@ label scene04:
     "不过，在这件事上我的发现是，当按压脸颊的时候，确实会发出「嘛呼」的声音。下次也在欧尼酱身上试试吧"
 
     # 真冬 「良い触り心地でした」
-    dong "触感很好捏"
+    show 真冬_裸yシャツ_パンツ_目閉じ at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0230.ogg"
+    dong 真冬_裸yシャツ_パンツ_目閉じ "触感很好捏"
+    hide 真冬_裸yシャツ_パンツ_まったり
 
     # nil 「お兄ちゃんに向ける感情とは少し路線が違いますが、心愛ちゃんに対しても、一線を越えた感情を抱いているようです。」
     "虽然和对欧尼酱的感情路线有点不同，但是我对心爱酱也有着超越界限的感情"
@@ -1743,7 +1975,10 @@ label scene04:
     "想更多地…摸摸…"
 
     # 真冬 「私、その気があるのかな…まぁ、いけど」
-    dong "我是不是有这个意思呢……嘛，不管了"
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0231.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "我是不是有这个意思呢……嘛，不管了"
+    hide 真冬_裸yシャツ_パンツ_目閉じ
 
     # nil 「心愛ちゃんは、一線を越えても許してくれそう。」
     "心爱酱的话，即使越过了界线，也会原谅我的吧"
@@ -1752,7 +1987,10 @@ label scene04:
     "天啊"
 
     # 真冬 「まったく罪作りな季節ですね…夏ってやつは」
-    dong "真是个造孽的季节啊…夏天这家伙"
+    show 真冬_裸yシャツ_パンツ_微笑み at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0232.ogg"
+    dong 真冬_裸yシャツ_パンツ_微笑み "真是个造孽的季节啊…夏天这家伙"
+    hide 真冬_裸yシャツ_パンツ_無表情
 
     # nil 「いつか、心愛ちゃんを襲ってみようかと思います。」
     "我想，总有一天，会袭击心爱酱的吧"
@@ -1761,7 +1999,10 @@ label scene04:
     "那么，欧尼酱"
 
     # 真冬 「むー…どうすればいのかなー…」
-    dong "emmm——…该怎么办才好呢……"
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0233.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "emmm——…该怎么办才好呢……"
+    hide 真冬_裸yシャツ_パンツ_微笑み
 
     # nil 「携帯電話を取りだして、前みたいに着信を連射してやろうかと思い立ちましたが、やっとの思いで我慢します。」
     "我想把手机拿出来，像之前那样不停地打电话过去，但最后还是忍住了"
@@ -1770,7 +2011,10 @@ label scene04:
     "然后，取而代之，通过app发送电子邮件给心爱酱"
 
     # 真冬 「ぶち犯したい…と」
-    dong "想强暴..."
+    show 真冬_裸yシャツ_パンツ_目閉じ at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0234.ogg"
+    dong 真冬_裸yシャツ_パンツ_目閉じ "想强暴..."
+    hide 真冬_裸yシャツ_パンツ_無表情
 
     # nil 「すると、一瞬で『既読』マークがついて、返信が来ました。」
     "然后，一瞬间就有了『已读』标记，我收到了回复"
@@ -1779,7 +2023,10 @@ label scene04:
     "『真的吗?』"
 
     # 真冬 「うん」
-    dong "嗯"
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0235.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "嗯"
+    hide 真冬_裸yシャツ_パンツ_目閉じ
 
     # nil 「『はい』」
     "『彳亍』"
@@ -1800,7 +2047,10 @@ label scene04:
     "但是，即使是现在，我觉得欧尼酱耳朵的触感还残留在舌头上"
 
     # 真冬 「押し倒してくれてもいのに」
-    dong "明明可以推倒我的"
+    show 真冬_裸yシャツ_パンツ_目閉じ at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0236.ogg"
+    dong 真冬_裸yシャツ_パンツ_目閉じ "明明可以推倒我的"
+    hide 真冬_裸yシャツ_パンツ_無表情
 
     # nil 「ぼそっと本音が口からこぼれます。」
     "悄悄地说出真心话"
@@ -1820,16 +2070,28 @@ label scene04:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「『想いは言葉にしなきゃ相手に伝わらないぜ？』」
-    liu "『如果不把想法用语言表达出来的话，是无法传达给对方的哦』"
+    voice "voice/想瑠/sol_a1_0112.ogg"
+    liu 想瑠_スーツ_ニヤリ "『如果不把想法用语言表达出来的话，是无法传达给对方的哦』"
+
+    # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.08
+    $ sideimagesize.SideImageYalign = -29.35
+    $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「ごもっともですよ、先生」
-    dong "你说得对，老师"
+    show 真冬_裸yシャツ_パンツ_微笑み at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0237.ogg"
+    dong 真冬_裸yシャツ_パンツ_微笑み "你说得对，老师"
+    hide 真冬_裸yシャツ_パンツ_目閉じ
 
     # nil 「別れ際の台詞をフラッシュバック。伝えれば、きっと…。」
     "脑海闪回和想瑠再见时候的话。如果能够传达的话，一定…"
 
     # 真冬 「まふ」
-    dong "嘛呼……"
+    show 真冬_裸yシャツ_パンツ_まったり at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0238.ogg"
+    dong 真冬_裸yシャツ_パンツ_まったり "嘛呼……"
+    hide 真冬_裸yシャツ_パンツ_微笑み
 
     # nil 「真冬です。」
     "现在是真冬视角"
@@ -1841,12 +2103,19 @@ label scene04:
     "蝉的声音，渐渐淡出"
 
     # 真冬 「…すー…すー…まふ…」
-    dong "…哈—…哈—…嘛呼…"
+    show 真冬_裸yシャツ_パンツ_居眠り at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0239.ogg"
+    dong 真冬_裸yシャツ_パンツ_居眠り "…哈—…哈—…嘛呼…"
+    hide 真冬_裸yシャツ_パンツ_まったり
 
     # 原地tp（真冬睡了一觉）
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene リビングa_夕 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 真冬 「…あう…喉かわいた…」
-    dong "…啊…口渴了…"
+    show 真冬_裸yシャツ_パンツ_目閉じ at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0240.ogg"
+    dong 真冬_裸yシャツ_パンツ_目閉じ "…啊…口渴了…"
 
     # nil 「起きました。」
     "醒了过来"
@@ -1871,13 +2140,19 @@ label scene04:
     "试着打开冷冻室开始寻找"
 
     # 真冬 「おや、こいつは…」
-    dong "哦呀，这个是…"
+    show 真冬_裸yシャツ_パンツ_ジト目 at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0241.ogg"
+    dong 真冬_裸yシャツ_パンツ_ジト目 "哦呀，这个是…"
+    hide 真冬_裸yシャツ_パンツ_目閉じ
 
     # nil 「有りました。見たことのない銘柄ですが、カップに入ったアイスクリームです。」
     "有了。虽然是没见过的牌子，但它是杯装的冰淇淋"
 
     # 真冬 「らぶぽーしょん…しくすてぃないん…」
-    dong "LOVEPOTION……SIXTYNINE……"
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0242.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情"LOVEPOTION……SIXTYNINE……"
+    hide 真冬_裸yシャツ_パンツ_ジト目
 
     # nil 「蓋のロゴには、そう書いてあります。」
     "盖子的标志上是这样写的"
@@ -1886,7 +2161,10 @@ label scene04:
     "肯定，是欧尼酱的东西吧"
 
     # 真冬 「我慢我慢…」
-    dong "忍耐忍耐…"
+    show 真冬_裸yシャツ_パンツ_目閉じ at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0243.ogg"
+    dong 真冬_裸yシャツ_パンツ_目閉じ "忍耐忍耐…"
+    hide 真冬_裸yシャツ_パンツ_無表情
 
     # nil 「その誘惑は圧倒的でした。」
     "但是诱惑是压倒性的"
@@ -1907,7 +2185,10 @@ label scene04:
     "在这样激烈的空战展开的大约1分钟后，我的脑海中浮现出了一个想法"
 
     # 真冬 「食べた後、急いでもっと高いアイスを買ってくれば良いかな…」
-    dong "吃完之后，马上去买更贵的冰淇淋就好了…"
+    show 真冬_裸yシャツ_パンツ_まったり at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0244.ogg"
+    dong 真冬_裸yシャツ_パンツ_まったり "吃完之后，马上去买更贵的冰淇淋就好了…"
+    hide 真冬_裸yシャツ_パンツ_目閉じ
 
     # nil 「それなら、最初から高いアイスを買いに行けよ。っていう意見もあるとは思いますが、アイスを買いに行く活力があれば行っています。」
     "“那就一开始就去买更贵的冰淇淋啊喂！”我知道有人会这么说，但如果我还有活力去买冰淇淋，我会去的"
@@ -1917,7 +2198,10 @@ label scene04:
     "在边缘政策的压力下（L:原文“瀬戸際まで迫った交渉は”，边缘政策是指在冷战时期用来形容一个近乎要发动战争的情况，也就是到达战争边缘，从而说服对方屈服的一种战略术语），比起理性，身体的冲动获得了胜利"
 
     # 真冬 「お兄ちゃんごめん。そして、頂きます」
-    dong "欧尼酱对不起，然后，我要恰了"
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0245.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "欧尼酱对不起，然后，我要恰了"
+    hide 真冬_裸yシャツ_パンツ_まったり
 
     # nil 「食べると決意したからには、急いで食べてしまわねばなりません。」
     "既然决定要吃，就得赶快吃完"
@@ -1926,19 +2210,28 @@ label scene04:
     "从餐具盒中取出勺子，打开盖子，一口气恰了一大勺"
 
     # 真冬 「まふ…ん…あ、美味し…」
-    dong "嘛呼…嗯…啊，好吃…"
+    show 真冬_裸yシャツ_パンツ_まったり at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0246.ogg"
+    dong 真冬_裸yシャツ_パンツ_まったり "嘛呼…嗯…啊，好吃…"
+    hide 真冬_裸yシャツ_パンツ_無表情
 
     # nil 「あまりのおいしさに感動しました。それと同時に、何か、とても温かい気持ちが胸の中に膨らんでいきます。」
     "我被它的美味感动了。与此同时，某种非常温暖的感觉在我心中膨胀起来"
 
     # 真冬 「あれ…？　ドキドキする…」
-    dong "啊咧……？dokidoki的……"
+    show 真冬_裸yシャツ_パンツ_微笑み at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0247.ogg"
+    dong 真冬_裸yシャツ_パンツ_微笑み "啊咧……？dokidoki的……"
+    hide 真冬_裸yシャツ_パンツ_まったり
 
     # nil 「鼓動が高鳴っていくのを感じます。でも、不愉快な感じではなく。とても、優しくて温かい。」
     "我感觉到了心跳的声音。但是，不是不愉快的感觉。非常温柔温暖"
 
     # 真冬 「んむ…あむ」
-    dong "嗯…啊"
+    show 真冬_裸yシャツ_パンツ_まったり at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0248.ogg"
+    dong 真冬_裸yシャツ_パンツ_まったり "嗯…啊"
+    hide 真冬_裸yシャツ_パンツ_微笑み
 
     # nil 「ゆっくり食べたいという気持ちもありましたが、スプーンは矢継ぎ早にアイスクリームを私の口に運んでいきます。」
     "虽然也有着想要慢慢吃的心情，但是勺子一个接一个不停地把冰淇淋送到嘴里"
@@ -1953,14 +2246,23 @@ label scene04:
     "吃完冰淇淋的瞬间"
 
     # 真冬 「あいらぶゆー…だよ、お兄ちゃん」
-    dong "I love you哦—…欧尼酱"
+    show 真冬_裸yシャツ_パンツ_微笑み2 at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0249.ogg"
+    dong 真冬_裸yシャツ_パンツ_微笑み2 "I love you哦—…欧尼酱"
+    hide 真冬_裸yシャツ_パンツ_まったり
 
     # nil 「そんな言葉が口から零れました。」
     "这样的话从嘴里说出来了"
 
     # 同时：摩托车刹车音
+    play sound "voice/effect/15_ブレーキ2.ogg"
+    pause 2.0
+
     # 真冬 「げ」
-    dong "额"
+    show 真冬_裸yシャツ_パンツ_見下し at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0250.ogg"
+    dong 真冬_裸yシャツ_パンツ_見下し "额"
+    hide 真冬_裸yシャツ_パンツ_微笑み2
 
     # nil 「聞き慣れた排気音が聞こえてきます。お兄ちゃんのご帰宅です。」
     "听到已经听惯了的排气声，是欧尼酱回来了"
@@ -1969,7 +2271,10 @@ label scene04:
     "在感到高兴的同时，也有着计策失败的焦虑"
 
     # 真冬 「えーと…えーとえーと…」
-    dong "那—个…那个那个…"
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0251.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "那—个…那个那个…"
+    hide 真冬_裸yシャツ_パンツ_見下し
 
     # nil 「とりあえず、アイスの空容器の蓋を閉めて冷凍室にしまうと、急いで玄関に向かいます。」
     "我先把空的冰淇淋杯的盖子盖上，放进冷冻室，然后快速走向玄关"
@@ -1984,7 +2289,10 @@ label scene04:
     "我想接近欧尼酱"
 
     # 真冬 「あ、服…いや、もう。なんとかなるっしょ」
-    dong "啊，衣服...不，已经没事了，总会有办法的"
+    show 真冬_裸yシャツ_パンツ_目閉じ at love69_center with dissolve
+    voice "voice/真冬/maf_a1_0252.ogg"
+    dong 真冬_裸yシャツ_パンツ_目閉じ "啊，衣服...不，已经没事了，总会有办法的"
+    hide 真冬_裸yシャツ_パンツ_無表情
 
     # nil 「着替え忘れた私のその服装は、流石にちょっと恥ずかしかったのですが…。」
     "忘记换衣服了，穿着这身衣服总觉得有点不好意思..."
@@ -1999,5 +2307,16 @@ label scene04:
     # Scene04 结束！
 
     # 过场：真冬（校服）
+
+    # 隐藏 quick_menu
+    $ quick_menu = False
+
+    play sound "voice/effect/moosehead honk (stinger).ogg"
+    play music bgmfifty fadeout 4.0 fadein 4.0 # 针对这里BGM的特点需要把 Scene04 的BGM提前到 Scene03 脚本的尾巴这里写，并增大 fadeout/in 的间隔
+    image bg アイキャッチ真冬 = "images/bg/アイキャッチ真冬.png"
+    scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
+    scene アイキャッチ真冬 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
+
+    $ renpy.pause(1.5, hard=True)
 
     jump scene05

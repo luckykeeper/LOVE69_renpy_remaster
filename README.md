@@ -37,7 +37,7 @@
 
 | 项目状况         | LOVE69 Ren’py Remaster Project                               |
 | ---------------- | ------------------------------------------------------------ |
-| 进度             | 状态：进行中（正式版开发中）<br/>Scene 01（Demo）部分文本内容翻译完成（2021年10月1日）<br/>Demo 版制作完成，开始内部测试（2021年10月9日）<br/>Demo 版发行（2021年10月24日）【[下载地址](https://github.com/luckykeeper/LOVE69_renpy_remaster/releases/tag/0.1.0)】<br/>Scene 02 翻译完成（2021年11月6日）<br/>Scene 03 翻译完成（2021年11月8日）<br/>Scene 04 翻译完成（2021年11月20日）<br/>Scene 05 翻译完成（2021年11月27日）<br/>Scene 06 翻译完成（2022年1月1日）<br/>GitHub Star 破十（2022年1月4日）<br/>Scene 07 翻译完成（2022年1月4日）<br/>Scene 08 翻译完成（2022年1月5日）<br/>Scene 09 翻译完成（2022年1月8日）<br/>Scene 10 翻译完成（2022年1月9日）<br/>Scene 11 翻译完成（2022年1月10日）<br/>Scene 12 翻译完成（2022年1月11日）<br/>Scene 13 翻译完成（2022年1月12日）<br/>Scene 14 翻译完成&Scene 15 翻译完成&一周目翻译完成&版本号调整至0.2（2022年1月13日）<br/>Scene 16 翻译完成（2022年1月16日）<br/>Scene 17 翻译完成（2022年1月17日）<br/>Scene 18 翻译完成（2022年1月19日）<br/>Scene 19 翻译完成（2022年1月20日）<br/>Scene 20-22 翻译完成&一周目翻译完成&版本号调整至0.3（2022年1月21日）<br/>新版UI重构&测试基本完成&版本号调整至0.4（2022年1月23日）<br/>重构 Scene 01 动画脚本，增加各种效果，提升还原度（2022年1月24-25日）<br/>Scene 02 制作完成（2022年1月27日）<br/>Scene 03 制作完成（2022年1月28日） |
+| 进度             | 状态：进行中（正式版开发中）<br/>Scene 01（Demo）部分文本内容翻译完成（2021年10月1日）<br/>Demo 版制作完成，开始内部测试（2021年10月9日）<br/>Demo 版发行（2021年10月24日）【[下载地址](https://github.com/luckykeeper/LOVE69_renpy_remaster/releases/tag/0.1.0)】<br/>Scene 02 翻译完成（2021年11月6日）<br/>Scene 03 翻译完成（2021年11月8日）<br/>Scene 04 翻译完成（2021年11月20日）<br/>Scene 05 翻译完成（2021年11月27日）<br/>Scene 06 翻译完成（2022年1月1日）<br/>GitHub Star 破十（2022年1月4日）<br/>Scene 07 翻译完成（2022年1月4日）<br/>Scene 08 翻译完成（2022年1月5日）<br/>Scene 09 翻译完成（2022年1月8日）<br/>Scene 10 翻译完成（2022年1月9日）<br/>Scene 11 翻译完成（2022年1月10日）<br/>Scene 12 翻译完成（2022年1月11日）<br/>Scene 13 翻译完成（2022年1月12日）<br/>Scene 14 翻译完成&Scene 15 翻译完成&一周目翻译完成&版本号调整至0.2（2022年1月13日）<br/>Scene 16 翻译完成（2022年1月16日）<br/>Scene 17 翻译完成（2022年1月17日）<br/>Scene 18 翻译完成（2022年1月19日）<br/>Scene 19 翻译完成（2022年1月20日）<br/>Scene 20-22 翻译完成&一周目翻译完成&版本号调整至0.3（2022年1月21日）<br/>新版UI重构&测试基本完成&版本号调整至0.4（2022年1月23日）<br/>重构 Scene 01 动画脚本，增加各种效果，提升还原度（2022年1月24-25日）<br/>Scene 02 制作完成（2022年1月27日）<br/>Scene 03 制作完成（2022年1月28日）<br/>Scene 04 制作完成（2022年2月2日） |
 | 项目组成员       | 3人（[Luckykeeper](https://github.com/luckykeeper)，[WorldlineChanger](https://github.com/WorldlineChanger)，[Santa-Weaves](https://github.com/Santa-Weaves)） |
 | 看看组里谁在摸鱼 | [戳这里](https://github.com/luckykeeper/LOVE69_renpy_remaster/graphs/contributors) |
 | Contributors     | （欢迎踊跃参与）                                             |
@@ -264,7 +264,7 @@ WEB版 Demo实机运行页面
 
 - 出于各种原因，本次汉化移植并不会对“gkd”的内容（即 Hscene ）进行汉化和移植，各位绅士还请谅解，请积极考虑购买正版支持原作团队![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
 
-- 本页面最后修改时间 2022年2月1日
+- 本页面最后修改时间 2022年2月2日
 
 - 本页是 V2 版的 Readme ，第一版 Readme 考古戳[这里](./README_old.md)
 
