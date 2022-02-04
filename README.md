@@ -19,7 +19,9 @@
 - [x] 作为 Ren'Py 入门的学习资料，学习 Ren'Py 的基础知识， Ren'Py 不仅仅可以做 Gal ，做卡牌、RPG、电子相册，只要你有想象力都可以做！
 - [x] ……
 
-欢迎讨论、聊天、提问、凑热闹、翻译纠正、提改进建议等……请移步 Issues ：[看已有条目](https://github.com/luckykeeper/LOVE69_renpy_remaster/issues) ； [发新贴](https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/new)
+欢迎讨论、聊天、提问、凑热闹、翻译纠正、提改进建议等……请移步 Issues ：[看已有条目](https://github.com/luckykeeper/LOVE69_renpy_remaster/issues) ；
+
+Discussions 讨论区已开放，非Bug/翻译/脚本/程序问题请前往[这里](https://github.com/luckykeeper/LOVE69_renpy_remaster/discussions)交流
 
 # 导航
 
