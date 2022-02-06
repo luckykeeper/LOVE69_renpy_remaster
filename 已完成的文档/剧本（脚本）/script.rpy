@@ -7,7 +7,7 @@
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开坑日期 2021年8月28日
-# 修订日期 2022年1月27日
+# 修订日期 2022年2月7日
 
 #----------------------------------------------------------------
 # 主程序开始
@@ -26,18 +26,17 @@
 # 翻译原则
 # a、采用机翻+润色的方式进行，因为我是个日语渣，翻译初稿来自百度为主+彩云小译为辅的结果，部分结果来自DeepL
 # b、主体采用意译的方式，因为本来就是电波向作品，很多地方并不好直译
-# c、不会翻的地方使用 // 标出，希望老哥们帮帮忙
+# c、不会翻的地方使用 && 标出，希望老哥们帮帮忙
 # d、翻译力图在尽量准确的同时最大程度的让文字变得有趣，希望让本作受到更多人的喜爱
-# e、第一次做翻译，也是第一次用 Ren'py ，活整的不好还请带伙见谅
+# e、第一次做翻译，也是第一次用 Ren'Py ，活整的不好还请带伙见谅
 
-# 流程 ①
+# 流程 编写脚本AIO Process
 # Author:Luckykeeper
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月28日
-# 主程序正式开始，现在只加入文本
-# 版本：null（还未完成）
+# 主程序正式开始
 
 ###### 定义：周目数 ######
 # 周目相关持久化变量
@@ -798,10 +797,192 @@ image callgif:
     pause 0.0166666666666667
     repeat
 
+#######################################################################################
+# 定义Let's Rock! 动画
+image letsrock:
+    "images/pac/LETSROCK/00000004.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000005.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000006.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000007.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000008.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000009.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000010.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000011.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000012.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000013.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000014.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000015.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000016.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000017.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000018.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000019.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000020.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000021.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000022.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000023.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000024.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000025.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000026.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000027.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000028.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000029.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000030.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000031.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000032.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000033.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000034.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000035.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000036.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000037.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000038.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000039.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000040.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000041.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000042.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000043.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000044.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000045.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000046.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000047.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000048.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000049.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000050.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000051.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000052.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000053.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000054.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000055.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000056.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000057.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000058.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000059.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000060.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000061.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000062.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000063.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000064.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000065.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000066.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000067.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000068.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000069.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000070.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000071.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000072.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000073.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000074.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000075.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000076.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000077.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000078.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000079.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000080.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000081.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000082.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000083.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000084.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000085.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000086.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000087.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000088.jpg"
+    pause 0.0166666666666667
+    "images/pac/LETSROCK/00000089.jpg"
+    pause 0.0166666666666667
+
+
 ###### 定义：界面（screen） ####
 # align (0.5,0.5)阔以将其放在中间
 screen callscr:
     add "callgif" align (0.5,0.5)
+
+screen letsrockscr:
+    add "letsrock" align (0.5,0.5)
+
+
 # 真冬介绍动画不做了，参考scene01的166行
 # screen dongintroscr:
 #     add "dongintro" align (0.5,0.5)
