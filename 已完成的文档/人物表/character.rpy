@@ -7,7 +7,7 @@
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月28日
-# 修订日期 2022年2月2日
+# 修订日期 2022年2月7日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -116,11 +116,13 @@ image side 心愛 心愛_大_制服_基本_泣き= "images/face/心愛/心愛_�
 image side 心愛 心愛_大_制服_基本_もぐもぐ = "images/face/心愛/心愛_大_制服_基本_もぐもぐ.png" # 大，闭眼，嘴-(，两个粉椭圆
 image side 心愛 心愛_大_制服_基本_ニタァ = "images/face/心愛/心愛_大_制服_基本_ニタァ.png" # 大，睁眼，嘴开口，“w”，是有点小坏的笑呢，两个粉椭圆
 image side 心愛 心愛_大_制服_基本_驚き = "images/face/心愛/心愛_大_制服_基本_驚き.png" # 大，睁眼，惊讶
+image side 心愛 心愛_大_制服_基本_笑顔 = "images/face/心愛/心愛_大_制服_基本_笑顔.png" # 大，睁眼，嘴o
 
 # 其它
 image side 心愛 心愛_トランザム = "images/face/心愛/心愛_トランザム.png" # 全身变红，心爱真·觉醒！
 image side 心愛 心愛_ラフ = "images/face/心愛/心愛_ラフ.png" # 粗线条描绘的心爱酱
 image side 心愛 心愛_制服_基本_覚醒 = "images/face/心愛/心愛_制服_基本_覚醒.png" # 基于无表情，眼睛深红
+image side 心愛 心愛_制服_基本_覚醒01 = "images/face/心愛/心愛_制服_基本_覚醒01.png" # 基于真顔，眼睛深红
 
 # 下面定义不知道是谁的时候的心爱
 # 知不道的人物使用发色称呼
@@ -146,6 +148,8 @@ define dong = Character('真冬',color="#4da8c0",image="真冬")
 # 定义显示在对话框中的小人物头像
 # 文件应当取自 face 文件夹，但是stand有现成更清晰的，且参数已经调试完毕，所以用stand，stand没有的再进行特殊处理，为了和后面的waifu2x区分
 # 工程目录写为 face
+
+# 常服系列
 image side 真冬 真冬_制服_基本_無表情 = "images/face/真冬/真冬_制服_基本_無表情.png" # 字面意思，睁眼，嘴·
 image side 真冬 真冬_制服_基本_むーっ = "images/face/真冬/真冬_制服_基本_むーっ.png" # 闭眼，撅嘴，眉毛y=-x（斜下45度）
 image side 真冬 真冬_制服_基本_ジト目 = "images/face/真冬/真冬_制服_基本_ジト目.png" # 睁眼，嘴三角，眉上凸
@@ -167,6 +171,7 @@ image side 真冬 真冬_制服_基本_おやつ3 = "images/face/真冬/真冬_�
 image side 真冬 真冬_制服_基本_ニタァ = "images/face/真冬/真冬_制服_基本_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢
 # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 04
 image side 真冬 真冬_制服_基本_居眠り = "images/face/真冬/真冬_制服_基本_居眠り.png" # 闭眼，嘴开口，半圆，碎着辽~
+image side 真冬 真冬_制服_基本_キス = "images/face/真冬/真冬_制服_基本_キス.png" # kiss准备
 
 # 裸y衬衫系列
 image side 真冬 真冬_裸yシャツ_パンツ_無表情 = "images/face/真冬/真冬_裸yシャツ_パンツ_無表情.png" # 字面意思，睁眼，嘴·
@@ -177,10 +182,55 @@ image side 真冬 真冬_裸yシャツ_パンツ_居眠り = "images/face/真冬
 image side 真冬 真冬_裸yシャツ_パンツ_ジト目 = "images/face/真冬/真冬_裸yシャツ_パンツ_ジト目.png" # 睁眼，嘴三角，眉上凸
 image side 真冬 真冬_裸yシャツ_パンツ_微笑み2 = "images/face/真冬/真冬_裸yシャツ_パンツ_微笑み2.png" # 字面意思，嘴型近“o”
 image side 真冬 真冬_裸yシャツ_パンツ_見下し = "images/face/真冬/真冬_裸yシャツ_パンツ_見下し.png" # 闭眼，眉毛y=-x，嘴o
+image side 真冬 真冬_裸yシャツ_パンツ_むーっ = "images/face/真冬/真冬_裸yシャツ_パンツ_むーっ.png" # 闭眼，撅嘴，眉毛y=-x（斜下45度）
+image side 真冬 真冬_裸yシャツ_基本_見下し3 = "images/face/真冬/真冬_裸yシャツ_基本_見下し3.png" # 睁眼，生气，嘴-，眉毛y=-x（斜下45度）
+image side 真冬 真冬_裸yシャツ_パンツ_泣き = "images/face/真冬/真冬_裸yシャツ_パンツ_泣き.png" # 睁眼，含泪珠
+
+# 大_常服
+image side 真冬 真冬_大_制服_基本_キス = "images/face/真冬/真冬_大_制服_基本_キス.png" # 大，kiss准备
+image side 真冬 真冬_大_制服_基本_微笑み = "images/face/真冬/真冬_大_制服_基本_微笑み.png" # 大，字面意思
+
+# 私服系列
+image side 真冬 真冬_私服_基本_まったり = "images/face/真冬/真冬_私服_基本_まったり.png" # 闭眼，嘴“w”，嘛呼嘛呼
+image side 真冬 真冬_私服_基本_無表情 = "images/face/真冬/真冬_私服_基本_無表情.png" # 字面意思，睁眼，嘴·
+image side 真冬 真冬_私服_基本_微笑み = "images/face/真冬/真冬_私服_基本_微笑み.png" # 字面意思
+image side 真冬 真冬_私服_基本_目閉じ = "images/face/真冬/真冬_私服_基本_目閉じ.png" # 闭眼，嘴·
+image side 真冬 真冬_私服_基本_ジト目 = "images/face/真冬/真冬_私服_基本_ジト目.png" # 睁眼，嘴三角，眉上凸
+image side 真冬 真冬_私服_基本_キス = "images/face/真冬/真冬_私服_基本_キス.png" # kiss准备
+
+# 大_私服
+image side 真冬 真冬_大_私服_基本_キス = "images/face/真冬/真冬_大_私服_基本_キス.png" # 大，kiss准备
+image side 真冬 真冬_大_私服_基本_ジト目 = "images/face/真冬/真冬_大_私服_基本_ジト目.png" # 大，睁眼，嘴三角，眉上凸
+image side 真冬 真冬_大_私服_基本_微笑み = "images/face/真冬/真冬_大_私服_基本_微笑み.png" # 大，字面意思
+image side 真冬 真冬_大_私服_基本_目閉じ = "images/face/真冬/真冬_大_私服_基本_目閉じ.png" # 闭眼，嘴·
 
 # 其它
 image side 真冬 真冬_通話中 = "images/face/真冬/真冬_通話中.png" # 装在携带里面的真冬
 
+# 心爱&真冬 心爱和真冬共同出现，以为头像是真冬的所以用真冬的颜色
+define ai_dong =  Character('心爱&真冬',color="#4da8c0",image="真冬")
+
+# 常服系列
+image side 真冬 真冬_制服_基本_無表情 = "images/face/真冬/真冬_制服_基本_無表情.png" # 字面意思，睁眼，嘴·
+image side 真冬 真冬_制服_基本_むーっ = "images/face/真冬/真冬_制服_基本_むーっ.png" # 闭眼，撅嘴，眉毛y=-x（斜下45度）
+image side 真冬 真冬_制服_基本_ジト目 = "images/face/真冬/真冬_制服_基本_ジト目.png" # 睁眼，嘴三角，眉上凸
+image side 真冬 真冬_制服_基本_本気2 = "images/face/真冬/真冬_制服_基本_本気2.png" # 眼睁大，眉毛y=-x，嘴o
+image side 真冬 真冬_制服_基本_微笑み = "images/face/真冬/真冬_制服_基本_微笑み.png" # 字面意思
+image side 真冬 真冬_制服_基本_微笑み2 = "images/face/真冬/真冬_制服_基本_微笑み2.png" # 字面意思，嘴型近“o”
+image side 真冬 真冬_制服_基本_目閉じ = "images/face/真冬/真冬_制服_基本_目閉じ.png" # 闭眼，嘴·
+image side 真冬 真冬_制服_基本_目閉じ_1 = "images/face/真冬/真冬_制服_基本_目閉じ_1.png"
+image side 真冬 真冬_制服_基本_泣き = "images/face/真冬/真冬_制服_基本_泣き.png" # 睁眼，含泪珠
+image side 真冬 真冬_制服_基本_泣き_1 = "images/face/真冬/真冬_制服_基本_泣き_1.png"
+image side 真冬 真冬_制服_基本_見下し = "images/face/真冬/真冬_制服_基本_見下し.png" # 闭眼，眉毛y=-x，嘴o
+image side 真冬 真冬_制服_基本_見下し2 = "images/face/真冬/真冬_制服_基本_見下し2.png"
+image side 真冬 真冬_制服_基本_にっこり = "images/face/真冬/真冬_制服_基本_にっこり.png" # 闭眼，微笑
+image side 真冬 真冬_制服_基本_にっこり_1 = "images/face/真冬/真冬_制服_基本_にっこり_1.png"
+image side 真冬 真冬_制服_基本_まったり = "images/face/真冬/真冬_制服_基本_まったり.png" # 闭眼，嘴“w”，嘛呼嘛呼
+image side 真冬 真冬_制服_基本_おやつ1 = "images/face/真冬/真冬_制服_基本_おやつ1.png" # 闭眼，嘴“w”，拿着奶糖苹果
+image side 真冬 真冬_制服_基本_おやつ2 = "images/face/真冬/真冬_制服_基本_おやつ2.png" # 闭眼，嘴开口，“w”，是有点小坏的笑呢，拿着奶糖苹果
+image side 真冬 真冬_制服_基本_おやつ3 = "images/face/真冬/真冬_制服_基本_おやつ3.png" # 闭眼，嘴开口，椭圆，是有点小萌的笑呢，拿着奶糖苹果
+image side 真冬 真冬_制服_基本_ニタァ = "images/face/真冬/真冬_制服_基本_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢
+image side 真冬 真冬_制服_基本_居眠り = "images/face/真冬/真冬_制服_基本_居眠り.png" # 闭眼，嘴开口，半圆，碎着辽~
 
 # 葛城莲 lian //主人公，工具人就不要加颜色了吧，不加颜色的统一强制指定白色（#ffffff）
 define lian = Character('莲',color="#ffffff")
