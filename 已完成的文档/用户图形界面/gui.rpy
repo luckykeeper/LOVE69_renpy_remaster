@@ -5,7 +5,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月23日
+# 修订日期 2022年2月6日
 # 版本号 0.4 "LuckyDev"
 # 源文件名：gui.rpy
 
@@ -129,7 +129,10 @@ define gui.textbox_yalign = 1.0
 
 ## 叙述角色名称相对文本框的位置。可以是从左侧或顶部起的整数像素，或设为“0.5”来放
 ## 置到正中。
-define gui.name_xpos = 30
+
+## 向左微调文本框位置以便完整显示如 “心爱&真冬” 这样的长名称
+# define gui.name_xpos = 30
+define gui.name_xpos = 0
 define gui.name_ypos = -30
 
 ## 角色名称的水平对齐方式。0.0 为左侧对齐，0.5 为居中显示，而 1.0 为右侧对齐。
