@@ -3,13 +3,13 @@
 # scene07 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.3 "LuckyDev"
+# 版本 0.4 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月21日
+# 修订日期 2022年2月8日
 
-# 当前流程：整理生肉文本，翻译并润色
+# 当前流程：编写脚本AIO Process
 
 label scene07:
     # scene07 开始
@@ -20,14 +20,53 @@ label scene07:
     # 人物：心爱 店长（雾叶） 莲
     # BGM：雾叶店内的音乐（嘤语的）
 
+    scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
+    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
+
+    # 显示 quick_menu
+    $ quick_menu = True
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「ごく……ごく……ごく……」
-    ai "唔……咕…咕……"
+    # 没有跳过
+    show 心愛_制服_基本_もぐもぐ at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0721.ogg"
+    ai 心愛_制服_基本_もぐもぐ "唔……咕…咕……"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
+    # 定义雾叶在左的参数
+    transform love69_wuye_left:
+        zoom 1.5
+        xalign 0.11
+        yalign 0.015
 
     # 店长 「ぷっ…くすくすくす…」
-    dinerowner "咳…哈哈哈~"
+    # 56-115 跳过
+    show 店长_私服_不満_1 at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0116.ogg"
+    dinerowner 店长_私服_不満_1 "咳…哈哈哈~"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ごく…ごく…ぷはー」
+    voice "voice/心愛/cca_a1_0722.ogg"
     ai "咕…咕……哇啊"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「くすくすくすくす…」
     dinerowner "嘿嘿…啊哈哈~"
@@ -50,20 +89,53 @@ label scene07:
     # 原文是アイスコア是冰芯的意思（就是北极圈科学家挖出来用于考古的那个），根据原文括号里面的意思，应该是冰淇淋苏打（フロート/ice cream float/ice cream soda）
     "我收到了店主精心制作的冰淇淋苏打(冰块上放着软雪糕的饮料)"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「…はぁう～…これ、美味しいね、てんちょーさん！」
+    voice "voice/心愛/cca_a1_0723.ogg"
     ai "……哈呜…这个真是好喝呢、店长桑！"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「そ、それは…よ、よかったですね…ありがと…く、く…」
     dinerowner "这、这样啊……啊，真是太好了…谢谢……诶嘿嘿嘿~"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「…ねぇ、さっきからなんでそんな必死に笑いを堪えてるの？」
+    voice "voice/心愛/cca_a1_0724.ogg"
     ai "……呐，刚才你为啥那么拼命地憋笑呢？"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「え、え？　そ、そんなことは…な、ないです…よ？　ぷーくすくす」
     dinerowner "啊、诶？那个、没有这样的事……没、没嘿嘿"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「いや、あからさまに笑いを堪えてる顔だよそれ。もしかして、私の顔になんかついてる？　目と鼻と口以外で」
+    voice "voice/心愛/cca_a1_0725.ogg"
     ai "不，你这明显是憋笑的脸。难道我的脸上有什么东西吗？除了眼睛、鼻子和嘴巴以外"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「いえいえ、特には、なに…もっ…！　くすくすくす…」
     dinerowner "没没没，没什么，什么都每的嗦…！嘿嘿嘿嘿……"
@@ -77,14 +149,31 @@ label scene07:
     # nil 「水を注いでる最中も、私の事を横目で見ている。」
     "在倒水的时候，也在斜眼看着我"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「じー…まぁいけど」
+    voice "voice/心愛/cca_a1_0726.ogg"
     ai "盯——……嘛，算了"
 
     # 心爱 「……ごく……ごく……ごく……」
+    voice "voice/心愛/cca_a1_0727.ogg"
     ai "……咕……咕…咕……"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「ぶふっ」
     dinerowner "噗噗"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ちょっと！？　店長さん大丈夫！？」
     ai "等等！？店长你没事吧！？"
@@ -95,32 +184,82 @@ label scene07:
     # nil 「タイミングからみて、このコアに何か仕掛けが…。」
     "从这个时机上来看，我感觉这个冰芯里面藏了什么诡计"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「え、え、ちょっと思わず吹きだしただけです…ぜぇーはぁー…くすくす」
     dinerowner "那、那个，我只是忍不住笑了起来……哈——啊——哈——啊嘿嘿"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「あー！　もしかしてぇー、このコアに何か入れたでしょ！真冬ちゃんもこの前勝手に私のジュースにシリカゲル入れるしさー！」
     ai "啊!也许你在这个里面放了什么东西! 前几天，真冬酱还擅自地在我的果汁里放了硅胶!"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「死んじやいますよそれ……ふう……やつと、おちつ……ふつ……あははははははははははは。もーだめだーちくしょー、もう耐え切れない、あは」
     dinerowner "差点死掉了，这个……真是不行啊，呵呵哈哈哈哈哈哈哈，我已经受不了了，岂可修！啊哈哈哈哈，我已经受不鸟了，哈哈哈哈哈"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「変な薬でもやってるのかよ」
     ai "你嗑了什么奇怪的药吗?!"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「だって、だって…くすっ、心愛が…コアを…くすくすくすくす。共食いかよっ！　って…ぷーくすくすくす」
     dinerowner "可是，可是…呃哈哈，心爱（cocoa）……核心（core，刚刚说的饮料里面的冰核，ice core）…啊哈哈。一起吃了下去！（L:这里是谐音梗，心爱和核心这两个词的读音很相似）"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「…そんなツボに入る事でもないやろ」
     ai "那也不至于这样吧"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「あははははははは…ひー…イヒヒヒヒヒ」
     dinerowner "啊哈哈哈哈哈哈哈……欸嘿……嘿嘿嘿嘿嘿"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「……ごく…ごく…ぷはー」
     ai "……咕…咕"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「ぶふっ…あははははははははははは、やめてくださいほんと！マジでツボなんですから…あははははははは！」
     dinerowner "啊哈，哈哈哈噗哈哈哈哈哈哈哈，请不要这样做真的！这里真的是个笑穴…啊哈哈哈哈哈哈哈！"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「…そっか」
     ai "……是吗？"
@@ -130,14 +269,34 @@ label scene07:
 
     # 原地tp
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「ふう…こ一年で一番笑いました」
     dinerowner "啊哈… 这是一年来我笑得最开心的一次"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「幸せな事は良い事だと思うよ」
     ai "如果感觉幸福的话我觉得是好事呢"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「沢山笑わせてもらったので、お代は良いですよ。もう一杯いきます？」
     dinerowner "因为让我笑了不少，给你免去不少费用。所以，要再来一杯吗？"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「すぐタダにしちゃうよね…経営は大丈夫なの？」
     ai "马上就要免费了吧…这样经营没问题吗？"
@@ -145,8 +304,19 @@ label scene07:
     # 心爱 「新作出たもんね…そのせいで、蓮くんが部屋から三日間でてこなくなっちゃって、真冬ちゃんと二人でドア開けて引っ張り出した記憶あるよ」
     ai "因为出了新作品……所以，我记得莲在房间里呆了三天没出来了，我和真冬两个人开门把他拉出去了"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「ドアの前で△ボタン押したんですね。やっぱMove your ass hole！とでも言ったんですか？」
-    dinerowner "你在门前按了"△"按钮，对吗？ 我就知道! Move your ass hole！你有说过吗？"
+    # L:这里的引号之前是错的，所以报错了，要用中文引号
+    dinerowner "你在门前按了“△”按钮，对吗？ 我就知道! Move your ass hole！你有说过吗？"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「現実とゲームの操作を混同してるよ店長さん！」
     ai "你把现实和游戏操作搞混了，店长桑! "
@@ -169,8 +339,18 @@ label scene07:
     # nil 「店の隅では、店長曰く「米軍からの払い下げ」のジュークボックスが、古びた音を奏でている。」
     "在店铺的角落里，一台据经店长说是「从美国军队传下来的」点唱机正在发出陈旧的声音"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「…あれ？」
     ai "…咦？"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「ん？」
     dinerowner "嗯？"
@@ -178,23 +358,58 @@ label scene07:
     # nil 「私は前回来た時には明かになかったものに気づき、カウンター席を降りた。」
     "我注意到了上次来的时候没有的东西，于是走下了吧台"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「ピアノなんてあったっけ？」
     ai "有钢琴的嘛？"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「あ、それ最近貰ったんですよ。友達の家にあったやつなんですけど、要らないっていうのでせっかくなので頂いてきちゃいました」
     dinerowner "啊，那个是最近收到的。虽然是朋友家里的，但是因为他不需要所以好不容易才收到的"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「店長さん弾けるの？」
     ai "店长你会弹吗？"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「いや、私は楽器の類は全然。強いて言えば、『女』ぐらいですかね？　まともに鳴らせるのは」
     dinerowner "不，我完全不喜欢乐器之类的。硬要说的话，只有『女』这种乐器吧？能让我好好『演奏』的"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「それはさぞかし良い声で鳴くんでしょうね、貴方」
     ai "它的叫声一定很好听吧，亲爱的?"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「試してみますか？」
     dinerowner "要试试吗？"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「機会があればね」
     ai "如果有机会的话?"
@@ -203,17 +418,42 @@ label scene07:
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E3%83%94%E3%82%A2%E3%83%8E
     "我打开grand piano（大钢琴/三角钢琴）的盖子，演奏Do、Re、Mi、Fa、Sol、La、Si"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「昨日あたり、そのピアノをくれた友達がメンテナンスしたので、一応音はしっかり鳴るはずですが…」
     dinerowner "昨天的时候，那个给我钢琴的朋友保养过了，所以应该会好好地响起来…"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「うん、調律はされてるみたい」
     ai "嗯，好像调过音了"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「弾けるんですか？」
     dinerowner "你会弹吗? "
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「ちょっとね。好きって言ってくれた人がいるから、練習したの」
     ai "有点吧。有人说喜欢，所以我就练习了一下"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「この前の…彼ですか」
     dinerowner "是上次的…他吗？"
@@ -259,6 +499,11 @@ label scene07:
     # nil 「でも…。」
     "但是…"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「（まふまふちゃん…）」
     ai "（嘛呼嘛呼酱……）"
 
@@ -292,32 +537,82 @@ label scene07:
     # nil 「ぱちぱちぱちぱち　と一人分の拍手が響き渡る。」
     "劈里啪啦地响起一个人的掌声"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「お上手ですね」
     dinerowner "弹的真好呢"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ありがと。でも、久しぶりだったから、所々ミスしちゃったけどね」
     ai "谢谢啦。不过，因为好久没弹过了，有些地方出了差错"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「ミスの原因は、果たして久しぶりだったからだけですかね？」
     dinerowner "失误的原因，果然只是因为很久没弹了吧？"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「へ？」
     ai "欸？！"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「いやー、音楽の事はわかりませんけど、音色から、なんだか、悩みでもあるよーな、そんなニュアンスを感じましたよ」
     dinerowner "不，虽然我不知道音乐的事情，但是从音色上，总觉得有种烦恼的感觉"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「あはー…んー、ちょっとね、ピアノ弾いてると、色々思い出しちゃうよね」
     ai "啊哈哈哈…嗯，有点呢，在弹钢琴的时候，会想起很多事情呢"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「彼の事ですか？」
     dinerowner "是关于他的事情吗？"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「半分正解」
     ai "对了一半"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「ふーむ。私で良ければ聞きますよ？　あ、それと、演奏料としてどうぞ」&（配音感觉少了半句，？后面的没有）
     dinerowner "嗯，如果你不介意的话，可以和我说说。啊，还有，作为演奏费"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ありがとう、てんちょーさん」
     ai "谢谢你，店长桑"
@@ -325,23 +620,58 @@ label scene07:
     # nil 「店長さんは微笑みながら、もう一杯私にアイスコアを振る舞ってくれた。」
     "店长一边微笑着，一边又拿来一杯冰淇淋苏打给我"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「ぷっ…くすくすくす…あは。やっぱりダメだわらっちまうあは」
     dinerowner "噗...噗...啊哈哈哈哈哈哈哈。果然还是不行，笑死人了啊哈哈哈哈"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「だめだ耐えろ」
     ai "不行，忍一下！"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「ぐっ…」
     dinerowner "咕…"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「…よし」
     ai "……好"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「ぷっ」
     dinerowner "噗"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「…」
     ai "……"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「で？　何をお悩みなんです？」
     dinerowner "所以……你在烦恼什么呢？"
@@ -355,17 +685,42 @@ label scene07:
     # nil 「ジュークボックスも、ピアノも音楽を奏でない。降りしきる雨音だけが、店内の静寂を彩っていた。」
     "点唱机和钢琴都不再发出声音。只有淅淅沥沥的雨声，点缀着店内的寂静"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「「んー、贅沢な悩みなのかな、あんまり人に相談するような事じゃないよ」」
     ai "嗯——是不是有点奢侈的烦恼啊，没什么好和别人商量的呢"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「悩みに、贅沢もへったくれもあるんですかね？」
     dinerowner "烦恼也是有奢侈和无聊的烦恼吧？"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「そういうもんかな？　客観的に見て、全ては順調に進んでるはずだし…」
     ai "就是这样吗？客观地看，一切都是在顺利进行……"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「恋愛は客観じゃなくて、主観ですよ。心が満たされてないから、苦しいんですよ」
     dinerowner "恋爱不是客观的，而是主观的。因为心灵上没有满足，所以很痛苦吧"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「うーん…」
     ai "嗯……"
@@ -376,8 +731,18 @@ label scene07:
     # nil 「店長さんは微笑みを崩さないで、まっすぐに私の瞳を見つめている。」
     "店长微笑着，一直盯着我的眼睛"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「こんな事は良くない…なんて思っているのに、心が求めてしまう場合、どうすればいと思う？」
     ai "这样的事情不太好…明明这么想，心里却在寻求，你觉得应该怎么办那味？"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「そうですねー。私の経験から言わせて貰うと、自分の心には素直に従った方が良いですよ」
     dinerowner "是啊。以我的经验来看，还是顺从自己的内心比较好"
@@ -385,14 +750,34 @@ label scene07:
     # 店长 「素直になりきれずに、相手を傷付けてしまうなんて、かっこ悪いじゃないですか」
     dinerowner "不能坦诚相待，却伤害了对方，这不是很不酷吗?"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「店長さんにもそんな過去が？」
     ai "店长也有过这样的过去吗？"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「それは、悩みが解消された時にでも教えてあげますよ」
     dinerowner "这点的话，在你烦恼消除的时候会告诉你的"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「うーん。自分が求める事で、悪い方向に転がったら…って考えちゃうんだよね」&（这里配音也是少半句）
     ai "“嗯……如果因为自己的追求，而使事情朝着不好的方向发展的话……会这么想吧"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「その気持ちの根源が、好きという気持ちならば…。きっと、良い方に転ぶはずです」
     dinerowner "如果这种心情的根源是喜欢......那就一定会向好的方向发展"
@@ -403,17 +788,42 @@ label scene07:
     # 店长 「人を好きになるって、素敵な事じゃないですか」
     dinerowner "喜欢上一个人，不是很美妙吗?"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「確かに…。好きになる事ができて、私は、幸せだよ。それは、絶対なんだ」
     ai "确实…能喜欢上他，我很幸福。那是绝对的"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「なら、例えどんな事があっても自分の気持ちを曲げず、突き進むのみです。応援していますよ、心愛ちゃん」
     dinerowner "那么，不管发生什么事情，都不要改变自己的心情，勇往直前。我会支持你的，心爱酱"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「う、うん。あ、ありがとう。てんちょーさん、少しだけ、自分のすべき事がわかってきた気がするよ！」
     ai "嗯，嗯！啊，谢谢你，店长桑，我觉得我稍微明白了自己该做的事"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「Holy Hallelujah！その意気です。今ならきっと、素敵な曲が弾けるんじゃないでしょうか」
     dinerowner "Holy Hallelujah！就是这个意思。现在的话一定能弹出很棒的曲子吧"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「そだね！じゃぁ…今の気分に合う一曲、弾いてみるね」
     ai "是啊！那我就弹奏一首符合现在心情的曲子吧"
@@ -421,8 +831,18 @@ label scene07:
     # nil 「私はもう一度、ピアノに向かって座り、蓋を開いた。」
     "我再一次面向钢琴坐下，打开了钢琴的盖子"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「Let's get smokoin' party!!」
     ai "Let's get smokoin' party!!"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「Bring It on!」
     dinerowner "Bring It on!"
@@ -463,6 +883,11 @@ label scene07:
     # nil 「ならば…私から…。」
     "那么……由我来…"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「（どんな事が、あっても…！）」
     ai "（无论发生什么事情…！）"
 
@@ -473,8 +898,18 @@ label scene07:
     # 莲 「ぬわあん濡れたもおん。　シャツがもうビショビショだよ…」
     lian "全身都湿透了，连衬衫都已经湿透了..."
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「おや、こいつは…」
     dinerowner "哦呀，这家伙…"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ぶぇ！？」
     ai "呜欸！？"
@@ -504,6 +939,11 @@ label scene07:
     # nil 「不幸にも、散歩中に豪雨に見舞われた俺は雨宿りする場所を探し求めていたが、全く見つからず、ようやくこにたどり着いた。」
     "不幸的是，在散步的时候遭遇了暴雨，我一直在寻找避雨的地方，但是完全找不到，就这样慢慢地走到了这里"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「や、いらっしゃい。二名様でよろしかったですか？」
     dinerowner "呀，欢迎光临。是两位客人对吗？"
 
@@ -531,6 +971,11 @@ label scene07:
     # nil 「すると、どうにも見慣れたシルエットがこちらに目線を向けていた。」
     "这时，一个非常熟悉的轮廓正朝着这边看"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱闪现
 
     # 心爱 「や、やっほー、蓮くん」
@@ -538,6 +983,11 @@ label scene07:
 
     # 莲 「こんな所で出会うとは…。よう、心愛。しかし…先客がいるとは、繁盛したもんだなこも」（生异形啊，你们哥俩。 ~~快进到萨日朗~~）
     lian "没想到会在这种地方相遇……哟，心爱。不过说起来……已经有客人在了，生意不戳啊"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「お陰様で。さてさて、びしょ濡れのまんまじゃ風邪引きますよ。奥にシャワーあるんで浴びてきたらどうですか？」
     dinerowner "托您的福。那么，湿淋淋的话可是会感冒的哦。里面有淋浴，去洗个澡怎么样？"
@@ -551,11 +1001,21 @@ label scene07:
     # 莲 「わかった。じゃぁタオル無しで浴びるわ」
     lian "知道了。那我就不用毛巾洗了"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「だ、だめだよ蓮くん！　風邪治ったばっかなんだからさ！」
     ai "不、不可以的莲君！我感冒才刚好的呢！"
 
     # 莲 「うお、いつになく正論だな！？という事だ、店長さん、タオルも出来ればタダで貸してくれないか」
     lian "哦，这么说的话比你之前说的更有道理一些呢! ? 店长，如果可以的话，毛巾也可以免费借给我吗"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「100円をケチる男はモテませんよ？」
     dinerowner "吝啬100日元的男人可不受欢迎哦？"
@@ -569,14 +1029,29 @@ label scene07:
     # 莲 「さんきゅーこあ」
     lian "那3Q啦~"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「おういぇす！まったくお大事にしなきゃダメなんだぞほんとはー」
     ai "Oh Yes！真的是，一定要照顾好自己啊"
 
     # 莲 「へいへい。今度から折りたみ傘は持ち歩きますよ」
     lian "嘿嘿，下次我会带好折叠伞再出门的"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「それとコンドームもね」
     dinerowner "也请带好避孕套哦"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「それは大丈夫」
     ai "这个的话没关系"
@@ -590,11 +1065,21 @@ label scene07:
     # 莲 「覗くなよ？」
     lian "不要偷看哦？"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「マに習いませんでした？　寝言は寝て言えって」
     dinerowner "没有和妈妈学过吗？梦话要在睡觉的时候说哦"
 
     # 莲 「俺がマから習ったのは、フロントホックは片手で外せという事だけだ…」
     lian "我从妈妈那里学到的唯一一件事，就是用一只手解开前面的扣子..."
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「じー」
     ai "盯——"
@@ -625,6 +1110,11 @@ label scene07:
     # 心爱 「外付けハードディスクとか？」
     ai "外置的Hard Disk之类的？"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「２４段変速ロードレーサーとか」
     dinerowner "24级变速公路自行车什么的上面？"
 
@@ -632,6 +1122,11 @@ label scene07:
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%9E%E3%83%84%E3%83%8A%E3%82%BD
     # 搜到了有趣的东西捏：https://www.zhihu.com/question/274326256/answer/374965288
     lian "转基因的缟纲麻上面（L:原产不明，有印度和北非说，在日本用来做调味料，做天妇罗之类的，其种子有强心作用，部分动物吃了会中毒而死，目前没有人类中毒的记录，在药理上有一定抑制高血压的作用）"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「何でも言えばいってもんじゃねぇぞ…」
     ai "不能什么都说啊..."
@@ -670,11 +1165,21 @@ label scene07:
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%93%E3%83%BC%E3%83%88%E3%81%9F%E3%81%91%E3%81%97
     "因为上面这么写着，所以一定是迷上了北野武先生吧（L:北野武，1947年1月18日－，是日本搞笑艺人，身兼电影导演、演员、电视节目主持人，东京都足立区岛根出身，其与田森、明石家秋刀鱼并称为日本搞笑艺人三巨头）"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「ごく……ごく……ごく……」
     ai "唔……咕…咕……"
 
     # 莲 「な、なぁ…心愛」
     lian "呐，呐…心爱"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ごく…ぷはー。はーい、なんでしょう」
     ai "唔……呼啊——嗯？怎么啦"
@@ -688,8 +1193,18 @@ label scene07:
     # 莲 「共食いだろ。お前がコア飲んだら」
     lian "你这是同类相食吧，喝了冰核的话（L:还是刚才的谐音梗，饮料的冰核(ice core的core）和心爱(cocoa)）"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「ぶふっ」
     dinerowner "噗噗"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「だからー！　そのネタ引っ張り起こさないの！　さっきそれで大変な思いしたんだから！」
     ai "所以啊！不要把那个段子提起来啊！刚才我就觉得很牙白了！"
@@ -697,8 +1212,18 @@ label scene07:
     # 莲 「大変な思いってなんだね」
     lian "那真是很辛苦呢"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「せっかく、我慢してたのに…く、く…あは！」
     dinerowner "好不容易忍住了……哈哈、啊哈哈哈哈"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「これ」
     ai "这个"
@@ -711,11 +1236,21 @@ label scene07:
     # 莲 「で」
     lian "呐"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「はい」
     dinerowner "嗯？"
 
     # 莲 「さっき突っ込み忘れたけど、なんでピアノなんかあるんだ？前来た時なかったぞ」
     lian "刚才忘记吐槽了，为什么这里会有钢琴呢？上次来的时候记得没有来着"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「友達から貰ったんだってさ」
     ai "听说是从朋友那里得到的"
@@ -732,14 +1267,29 @@ label scene07:
     # 心爱 「試してみる？」
     ai "你要试试吗？"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「全部心愛ちゃんが答えちゃいましたね…しかも余計な所まで。あと男性はお断りします」
     dinerowner "全部都是由心爱酱回答的呢……而且还有点多余了，我拒绝男性……"
 
     # 莲 「心愛」
     lian "心爱"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「らじゃ」
     ai "收到！"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「え…」
     dinerowner "欸……"
@@ -749,20 +1299,45 @@ label scene07:
     # 莲 「そうか、さっきは演奏中に邪魔しちまったな」
     lian "是吗，刚才在演奏中打扰了"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「うん。まさか蓮くんが現れるなんて思ってなくて、ビックリしただけだよー」
     ai "没有没有，我没想到莲君会出现，只是吓了一跳而已"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「噂をすればなんとや―モゴッ！」
     dinerowner "说曹操曹操到呢!"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「あーあーきこえなーい！」
     ai "啊ー啊ー我听不到!"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「もご、モゴゴゴゴッ！　もごごごごご！」
     dinerowner "嘿、嘿嘿嘿嘿!@#$%^&*"
 
     # 莲 「あの、心愛ちゃん」
     lian "那个，心爱酱"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「なんでしょう蓮くん！」
     ai "怎么啦莲君"
@@ -773,6 +1348,11 @@ label scene07:
     # 心爱 「あっ」
     ai "啊"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「ぶはぁっ！　本格的に口封じするつもりですか…」
     dinerowner "哇啊！你真的打算封口吗…"
 
@@ -780,6 +1360,11 @@ label scene07:
 
     # 莲 「しっかし…心愛がピアノを弾くなんて久しぶりだよな…」
     lian "啊说起来……心爱好久没弹过钢琴了捏……"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「そだねー。ついつい白熱しちゃったよ」
     ai "是啊，不知不觉就有点上头了呢"
@@ -795,14 +1380,29 @@ label scene07:
     # 参考资料：https://www.zhihu.com/question/22301553
     lian "月光（L:鬼束ちひろ - 月光，说的是这首，YTB上面有，阔以去听一下，歌手鬼束千寻是神秘派歌姬，整首歌的歌词比较压抑和诡异，不过旋律还是可以的）"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「店の空気が暗くなるんでダメです」
     dinerowner "店里的气氛会变暗的所以不行"
 
     # 莲 「ぶええ」
     lian "呜欸欸"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「ぶええ」
     ai "呜欸欸"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「…泣かれてもダメです。他の曲にしてください」
     dinerowner "……哭也不行，请换成别的曲子"
@@ -820,6 +1420,11 @@ label scene07:
 
     # nil 「心愛は先ほどとは打って変わって、緊張した様子でピアノの前に座っている。肩もこちこちだ。」
     "心爱与刚才截然不同，紧张地坐在钢琴前，肩膀也很僵硬"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「えー…こほん。う゛～蓮くんに見られてると思うと緊張するよぉ…」
     ai "呃…这个，嗯~一想到被莲君看到就很紧张啊…"
@@ -885,6 +1490,11 @@ label scene07:
 
     # nil 「心愛の演奏を聞いていると、なんだかよくわからないが、心温かい気持ちになれる。」
     "听着心爱的演奏，虽然不太清楚为什么，但是总感觉很温暖"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「ふ、優しい顔になってますよ」
     dinerowner "欸嘿嘿，表情看起来很温柔呢"
@@ -958,6 +1568,11 @@ label scene07:
     # nil 「二人分の拍手と俺の歓声が、店内に響き渡る。」
     "两个人的掌声和我的欢呼声响彻店内"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「えへ…ご静聴ありがとうございました…」
     ai "嗯…感谢您的聆听……"
 
@@ -990,15 +1605,35 @@ label scene07:
     # nil 「くかー…」
     "呼——……"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「寝ちゃった」
     dinerowner "睡着了"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ね、てんちょーさん…もしかして…これ…」
     ai "喂，店长桑…难道说…这个是……"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「あっ。二杯目、普通のリキュール使っちゃいましたね…」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%AA%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AB
     dinerowner "啊，第二杯，用的是普通的利口酒呢…（L:利口酒是一种使用蒸馏酒为原料的酒精饮料，以水果、坚果、草药、香料、花朵以及奶油增强酒水风味，在装瓶前通常会添加蔗糖或甜味剂，大多数利口酒的酒精浓度比烈酒低，在15-30%，但有的利口酒的酒精浓度也高达55%）"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「もー！　蓮君はお酒めっちゃ弱いんだよー！　初詣の御神酒ですら寝ちゃうのに！」
     ai "啊——！莲君的酒力太弱了！明明连喝新年参拜的御神酒都睡着了！"
@@ -1011,22 +1646,47 @@ label scene07:
 
     # 原地tp
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「雨、止みましたね」
     dinerowner "雨、停下来了呢"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「でも、蓮君寝てるし…もうちょっと居て良い？」
     ai "但是，莲君睡着了…可以再呆一会儿吗？"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「ごゆっくりどうぞ」
     dinerowner "请慢用"
 
     # 原地tp
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「あむ」
     ai "哈姆"
 
     # 莲 「はうあ！」
     lian "哈啊！"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「あ、起きた」
     dinerowner "啊，起来了"
@@ -1037,8 +1697,18 @@ label scene07:
     # 店长 「耳ペロが寝坊助さんにこんなに効果があるとは…」
     dinerowner "没想到耳朵pr对睡懒觉的人有这么大的效果…"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「はあぅ～…ハズカシカッターヨ…」
     ai "哈呜~~……好羞耻的说……"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「よしよし」
     dinerowner "好啦好啦"
@@ -1055,14 +1725,29 @@ label scene07:
     # nil 「というか、なんかテーブルの上にバールのようなものとか、ドリルとか色々置いてある。」
     "怎么说呢，桌子上放着一些撬棍啊，钻头之类的东西"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「ラストオーダーの時間ですよ」
     dinerowner "到了最后点餐的时间了"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ほんと何しても起きないよね蓮くん…舐める以外で」
     ai "真的无论做什么都不会起来啊莲君……除了舔之外"
 
     # 莲 「んあ…え、何、そんな寝てたの俺」
     lian "嗯…啊，什么，我睡得那么香啊"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「うん。さっき、まふまふちゃんから電話来て、夕飯どうするの？　って言ってたから、店長さんが電話とって、お兄ちゃん、酒飲んで寝てるよって言ったんで、そしたら―」
     ai "嗯。刚才嘛呼嘛呼酱打电话来，问晚饭怎么办，店长在电话里说哥哥喝了酒在睡觉，然后——"
@@ -1073,11 +1758,21 @@ label scene07:
     # 莲 「だろ」
     lian "果然"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「おー流石真冬ちゃんのお兄ちゃん！」
     ai "哇~不愧是真冬的哥哥！"
 
     # 莲 「あ、そっか。心愛も一緒って言ってないのか」
     lian "啊，这样啊。没有说心爱也在一起吗？"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「あ、そうですね。私が電話とっちゃったので」
     dinerowner "啊，是啊，是我接的电话"
@@ -1097,6 +1792,11 @@ label scene07:
     # 莲 「いつのまに…抜け目ないな、あんたも真冬も」
     # 参考资料：https://www.weblio.jp/content/%E6%8A%9C%E3%81%91%E7%9B%AE%E3%81%8C%E3%81%AA%E3%81%84
     lian "你什么时候…和真冬都这么聪明啊"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「私は！」
     ai "我也是！"
@@ -1134,6 +1834,11 @@ label scene07:
     # 莲 「だから、身体のあちこちいてぇのか…」
     lian "所以，现在身体各处才……"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「ちなみに一人二回ずついきました」
     dinerowner "顺便说一下，每人都揍了两次"
 
@@ -1149,11 +1854,21 @@ label scene07:
     # 店长 「かしこまりました」
     dinerowner "遵命"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「私は！」
     ai "我也要！"
 
     # 莲 「おいおい３００グラムのステーキなんぞ食えるのか」
     lian "喂，你能吃下３００克的牛排吗？"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「はい。少々お待ち下さい」
     dinerowner "好的，请稍等"
@@ -1163,6 +1878,11 @@ label scene07:
 
     # 原地tp
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「ぺろりんちょしました。グリルされた牛の肩ロースに…ほんのりとジャックダニエル風味がまた…良いですね！」&&协力请求
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E3%83%80%E3%83%8B%E3%82%A8%E3%83%AB
     ai "吃了不少东西呢。烤好的牛肩里脊…再加上一点杰克丹尼酒…真不错呢！（L:原版字就缺了一半，剩下的内容应该是「这个，Jack Daniel，fxxk！」。杰克丹尼（Jack Daniel's）是著名的美国威士忌品牌）"
@@ -1170,14 +1890,29 @@ label scene07:
     # 莲 「俺まだ半分も食いきってねえぞ！？」
     lian "我还没吃完一半呢！？"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「そば湯置いときますね」
     dinerowner "我去弄点儿荞麦汤"
 
     # 莲 「何に使うねん」
     lian "拿来干啥子咧"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「えー、今日は長々と一日ありがとうございました、ぺこり」
     ai "嗯——今天谢谢大家这么长时间的照顾，真是太好了呢"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「いえいえ、私も楽しかったですし、また来て下さいね。こんどは真冬ちゃんも一緒に」
     dinerowner "不不不，我也玩的很开心，请下次再来，下次也和真冬一起带过来哦"
@@ -1197,11 +1932,21 @@ label scene07:
     # 莲 「お、ありがとう。心愛。全部食べるなよ」
     lian "哦，谢谢。心爱。不要全部吃完哦"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「う、うん。蓮くんの分まで我慢しとく」
     ai "嗯，嗯，连同莲君的分也要忍耐下来呢"
 
     # 莲 「俺にも食わせろ！」
     lian "我的那份别给我吃啊！"
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「二人分しか入ってないですよ？」
     dinerowner "里面只放了两人份哦？"
@@ -1209,14 +1954,29 @@ label scene07:
     # 莲 「悪鬼め～！」
     lian "魔鬼~！"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「じゃぁ、半分こしよう！　…とでもこの私が言うと思ったか？」
     ai "那么，一人一半吧！…你以为我会这么说吗？"
 
     # 莲 「それは心配に及ばない、期待してねぇ」
     lian "这不用担心，我不指望"
 
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 店长 「あは、さてさて、仲良く気をつけて帰って下さいね？」
     dinerowner "啊哈哈，那么，回去的时候要好好注意哦？"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「はーい！　ばいばーい！」
     ai "好——~bye——bye！"
@@ -1232,6 +1992,11 @@ label scene07:
     # 地点： 雾叶小店->通学路街道（夜）
     # 人物： 心爱 莲
     # BGM： 无
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ふあーすっかり夜になっちゃったねー」
     ai "呼啊，已经完全到晚上了呢"
