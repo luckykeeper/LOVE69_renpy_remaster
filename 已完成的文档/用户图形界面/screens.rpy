@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月28日
+# 修订日期 2022年2月9日
 ################################################################################
 ## 初始化
 ################################################################################
@@ -2404,7 +2404,12 @@ init python:
         l_f_page = latest_file_str.split('-',1)[0] #所在页 #auto-1表示自动存档页第一位
         l_f_name = latest_file_str.split('-',1)[1] #槽位名
     except:
-        print("淦！移动端你又又又出错了！！")
+        print("Powered By Luckykeeper and LOVE69 Ren'Py Remaster Project")
+        print("Luckykeeper's Blog: https://luckykeeper.site/")
+        print("GitHub: https://github.com/luckykeeper/LOVE69_renpy_remaster")
+        print("Gitee: https://gitee.com/luckykeeper/LOVE69_renpy_remaster")
+        print("Offical Website: https://love69renpyremasterproject.github.io/")
+        print("你Star了嘛？还没的话快去到GitHub或者Gitee给我们个Star呗！")
 
     if persistent.useCache:
         config.image_cache_size_mb = 1024
