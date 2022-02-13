@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年2月9日
+# 修订日期 2022年2月13日
 ################################################################################
 ## 初始化
 ################################################################################
@@ -2400,18 +2400,23 @@ init python:
     _game_menu_screen = "history"
 
 # 自动存档功能，用 try 防止抛出错误，该错误属于 Warning ，不影响运行
+# 这个 Warning 是由于 Python2 自身的一个问题导致的
+# except 的内容会在控制台（Release看不到）和 Linux 版（在终端能看到）输出
     try:
         l_f_page = latest_file_str.split('-',1)[0] #所在页 #auto-1表示自动存档页第一位
         l_f_name = latest_file_str.split('-',1)[1] #槽位名
     except:
         print("Powered By Luckykeeper and LOVE69 Ren'Py Remaster Project")
         print("Luckykeeper's Blog: https://luckykeeper.site/")
+        print("Offical Website: https://love69renpyremasterproject.github.io/")
         print("GitHub: https://github.com/luckykeeper/LOVE69_renpy_remaster")
         print("Gitee: https://gitee.com/luckykeeper/LOVE69_renpy_remaster")
-        print("Offical Website: https://love69renpyremasterproject.github.io/")
-        print("你Star了嘛？还没的话快去到GitHub或者Gitee给我们个Star呗！")
+        print("GitLab: https://gitlab.com/luckykeeper/LOVE69_renpy_remaster")
+        print("你 Star 了嘛？还没的话快去到 GitHub 或者 Gitee 或者 GitLab 给我们个 Star 呗！")
 
     if persistent.useCache:
+        # 这里指定是否使用内存的设置，设置成使用会设置最大 1G 的内存
+        # 设置成不使用会设置最大 150M 的内存（比默认小，保证大部分脚本流畅运行）
         config.image_cache_size_mb = 1024
     else:
         config.image_cache_size_mb = 150
