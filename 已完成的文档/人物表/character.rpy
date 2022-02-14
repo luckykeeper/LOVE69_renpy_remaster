@@ -7,7 +7,7 @@
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月28日
-# 修订日期 2022年2月7日
+# 修订日期 2022年2月15日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -314,12 +314,14 @@ image side 店长 店长_私服_目閉じ = "images/face/店长/店长_私服_�
 image side 店长 店长_私服_目閉じ_1 = "images/face/店长/店长_私服_目閉じ_1.png" # 闭眼，嘴微张，手撑头
 image side 店长 店长_私服_微笑み = "images/face/店长/店长_私服_微笑み.png" # 睁眼，微笑，闭嘴，手撑头
 image side 店长 店长_私服_微笑み_1 = "images/face/店长/店长_私服_微笑み_1.png" # 睁眼，微笑，闭嘴，手撑头，脸红
+image side 店长 店长_私服_にっこり = "images/face/店长/店长_私服_にっこり.png" # 闭眼，微笑，手撑头
 image side 店长 店长_私服_本気 = "images/face/店长/店长_私服_本気.png" # 睁眼，嘴o，手撑头
 image side 店长 店长_私服_ニヤリ = "images/face/店长/店长_私服_ニヤリ.png" # 睁眼，手撑头，是有点小坏的笑呢
 image side 店长 店长_私服_ニヤリ_1 = "images/face/店长/店长_私服_ニヤリ_1.png" # 睁眼，手撑头，是有点小坏的笑呢，脸红
 image side 店长 店长_私服_無表情 = "images/face/店长/店长_私服_無表情.png" # 睁眼，手撑头，闭嘴，莫得感情
 image side 店长 店长_私服_ジト目 = "images/face/店长/店长_私服_ジト目.png" # 睁眼，手撑头，嘴椭圆，一脸正经
-
+image side 店长 店长_私服_不満_1 = "images/face/店长/店长_私服_不満_1.png" # 睁眼，手撑头，闭嘴，不高兴，脸红
+image side 店长 店长_私服_不満 = "images/face/店长/店长_私服_不満.png" # 睁眼，手撑头，闭嘴，不高兴
 
 # 下面定义不知道是谁的时候的雾叶
 # 知不道的人物使用发色称呼
