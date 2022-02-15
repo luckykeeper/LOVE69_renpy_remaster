@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年2月13日
+# 修订日期 2022年2月15日
 ################################################################################
 ## 初始化
 ################################################################################
@@ -359,7 +359,8 @@ screen quick_menu():
                 idle "gui/quick_menu/btn_save_base.png"
                 hover "gui/quick_menu/btn_save_onMouse.png"
                 selected_hover "gui/quick_menu/btn_save_onClick.png"
-                hover_sound "voice/effect/メニュー決定音.ogg"
+                hover_sound "voice/effect/マウス乗せ音.ogg"
+                activate_sound "voice/effect/メニュー決定音.ogg"
                 action ShowMenu("game_save")
 
             # 读档
@@ -367,7 +368,8 @@ screen quick_menu():
                 idle "gui/quick_menu/btn_load_base.png"
                 hover "gui/quick_menu/btn_load_onMouse.png"
                 selected_hover "gui/quick_menu/btn_load_onClick.png"
-                hover_sound "voice/effect/メニュー決定音.ogg"
+                hover_sound "voice/effect/マウス乗せ音.ogg"
+                activate_sound "voice/effect/メニュー決定音.ogg"
                 action ShowMenu("game_load")
 
             # Q.Save
@@ -375,7 +377,8 @@ screen quick_menu():
                 idle "gui/quick_menu/btn_qsave_base.png"
                 hover "gui/quick_menu/btn_qsave_onMouse.png"
                 selected_hover "gui/quick_menu/btn_qsave_onClick.png"
-                hover_sound "voice/effect/メニュー決定音.ogg"
+                hover_sound "voice/effect/マウス乗せ音.ogg"
+                activate_sound "voice/effect/メニュー決定音.ogg"
                 action QuickSave()
 
             # Q.Load
@@ -383,7 +386,8 @@ screen quick_menu():
                 idle "gui/quick_menu/btn_qload_base.png"
                 hover "gui/quick_menu/btn_qload_onMouse.png"
                 selected_hover "gui/quick_menu/btn_qload_onClick.png"
-                hover_sound "voice/effect/メニュー決定音.ogg"
+                hover_sound "voice/effect/マウス乗せ音.ogg"
+                activate_sound "voice/effect/メニュー決定音.ogg"
                 action QuickLoad()
 
             # 快进
@@ -393,7 +397,8 @@ screen quick_menu():
                 hover "gui/quick_menu/btn_skip_onMouse.png"
                 selected_hover "gui/quick_menu/btn_skip_onClick.png"
                 selected_idle "gui/quick_menu/btn_skip_Clicked.png"
-                hover_sound "voice/effect/メニュー決定音.ogg"
+                hover_sound "voice/effect/マウス乗せ音.ogg"
+                activate_sound "voice/effect/メニュー決定音.ogg"
                 action Skip() alternate Skip(fast=True, confirm=True)
 
             # 自动
@@ -402,7 +407,8 @@ screen quick_menu():
                 hover "gui/quick_menu/btn_auto_onMouse.png"
                 selected_hover "gui/quick_menu/btn_auto_onClick.png"
                 selected_idle "gui/quick_menu/btn_auto_Clicked.png"
-                hover_sound "voice/effect/メニュー決定音.ogg"
+                hover_sound "voice/effect/マウス乗せ音.ogg"
+                activate_sound "voice/effect/メニュー決定音.ogg"
                 action Preference("auto-forward", "toggle")
 
             # 设置
@@ -410,7 +416,8 @@ screen quick_menu():
                 idle "gui/quick_menu/btn_config_base.png"
                 hover "gui/quick_menu/btn_config_onMouse.png"
                 selected_hover "gui/quick_menu/btn_config_onClick.png"
-                hover_sound "voice/effect/メニュー決定音.ogg"
+                hover_sound "voice/effect/マウス乗せ音.ogg"
+                activate_sound "voice/effect/メニュー決定音.ogg"
                 action ShowMenu('preferences')
 
 
@@ -528,7 +535,8 @@ screen main_menu():
             idle "gui/main_menu/btn_start_base.png"
             hover "gui/main_menu/btn_start_onMouse.png"
             selected_hover "gui/main_menu/btn_start_onClick.png"
-            hover_sound "voice/effect/メニュー決定音.ogg"
+            hover_sound "voice/effect/マウス乗せ音.ogg"
+            activate_sound "voice/effect/メニュー決定音.ogg"
             action Start()
 
     # Load btn 的 vbox
@@ -545,7 +553,8 @@ screen main_menu():
             idle "gui/main_menu/btn_load_base.png"
             hover "gui/main_menu/btn_load_onMouse.png"
             selected_hover "gui/main_menu/btn_load_onClick.png"
-            hover_sound "voice/effect/メニュー決定音.ogg"
+            hover_sound "voice/effect/マウス乗せ音.ogg"
+            activate_sound "voice/effect/メニュー決定音.ogg"
             action ShowMenu("game_load")
 
 
@@ -592,7 +601,8 @@ screen main_menu():
                 idle "gui/main_menu/btn_qload_base.png"
                 hover "gui/main_menu/btn_qload_onMouse.png"
                 selected_hover "gui/main_menu/btn_qload_onClick.png"
-                hover_sound "voice/effect/メニュー決定音.ogg"
+                hover_sound "voice/effect/マウス乗せ音.ogg"
+                activate_sound "voice/effect/メニュー決定音.ogg"
                 action [FileLoad(name=l_f_name, confirm=True, page=l_f_page)]
                 # action [FileLoad(name=renpy.newest_slot(regexp=None).split('-',1)[0], confirm=True, page=renpy.newest_slot(regexp=None).split('-',1)[1])]
 
@@ -610,7 +620,8 @@ screen main_menu():
             idle "gui/main_menu/btn_config_base.png"
             hover "gui/main_menu/btn_config_onMouse.png"
             selected_hover "gui/main_menu/btn_config_onClick.png"
-            hover_sound "voice/effect/メニュー決定音.ogg"
+            hover_sound "voice/effect/マウス乗せ音.ogg"
+            activate_sound "voice/effect/メニュー決定音.ogg"
             action ShowMenu("preferences")
 
     # Extra btn 的 vbox
@@ -630,7 +641,8 @@ screen main_menu():
                 idle "gui/main_menu/btn_extra_base.png"
                 hover "gui/main_menu/btn_extra_onMouse.png"
                 selected_hover "gui/main_menu/btn_extra_onClick.png"
-                hover_sound "voice/effect/メニュー決定音.ogg"
+                hover_sound "voice/effect/マウス乗せ音.ogg"
+                activate_sound "voice/effect/メニュー決定音.ogg"
                 action ShowMenu("main_menu_2")
 
     # Project btn 的 vbox
@@ -649,7 +661,8 @@ screen main_menu():
             idle "gui/main_menu/btn_project_base.png"
             hover "gui/main_menu/btn_project_onMouse.png"
             selected_hover "gui/main_menu/btn_project_onClick.png"
-            hover_sound "voice/effect/メニュー決定音.ogg"
+            hover_sound "voice/effect/マウス乗せ音.ogg"
+            activate_sound "voice/effect/メニュー決定音.ogg"
             action ShowMenu("about")
 
     # End btn 的 vbox
@@ -666,7 +679,8 @@ screen main_menu():
             idle "gui/main_menu/btn_end_base.png"
             hover "gui/main_menu/btn_end_onMouse.png"
             selected_hover "gui/main_menu/btn_end_onClick.png"
-            hover_sound "voice/effect/メニュー決定音.ogg"
+            hover_sound "voice/effect/マウス乗せ音.ogg"
+            activate_sound "voice/effect/メニュー決定音.ogg"
             action Quit(confirm=True)
 
 ##################################################################################
@@ -690,7 +704,8 @@ screen main_menu_2():
                 idle "gui/main_menu/btn_cgmode_base.png"
                 hover "gui/main_menu/btn_cgmode_onMouse.png"
                 selected_hover "gui/main_menu/btn_cgmode_onClick.png"
-                hover_sound "voice/effect/メニュー決定音.ogg"
+                hover_sound "voice/effect/マウス乗せ音.ogg"
+                activate_sound "voice/effect/メニュー決定音.ogg"
                 action ShowMenu("about")
 
         # Replay
@@ -699,7 +714,8 @@ screen main_menu_2():
                 idle "gui/main_menu/btn_replaymode_base.png"
                 hover "gui/main_menu/btn_replaymode_onMouse.png"
                 selected_hover "gui/main_menu/btn_replaymode_onClick.png"
-                hover_sound "voice/effect/メニュー決定音.ogg"
+                hover_sound "voice/effect/マウス乗せ音.ogg"
+                activate_sound "voice/effect/メニュー決定音.ogg"
                 action ShowMenu("about")
 
         # Music
@@ -708,7 +724,8 @@ screen main_menu_2():
                 idle "gui/main_menu/btn_bgmmode_base.png"
                 hover "gui/main_menu/btn_bgmmode_onMouse.png"
                 selected_hover "gui/main_menu/btn_bgmmode_onClick.png"
-                hover_sound "voice/effect/メニュー決定音.ogg"
+                hover_sound "voice/effect/マウス乗せ音.ogg"
+                activate_sound "voice/effect/メニュー決定音.ogg"
                 action ShowMenu("about")
 
         # ExtraGames
@@ -717,7 +734,8 @@ screen main_menu_2():
                 idle "gui/main_menu/btn_exgame_base.png"
                 hover "gui/main_menu/btn_exgame_onMouse.png"
                 selected_hover "gui/main_menu/btn_exgame_onClick.png"
-                hover_sound "voice/effect/メニュー決定音.ogg"
+                hover_sound "voice/effect/マウス乗せ音.ogg"
+                activate_sound "voice/effect/メニュー決定音.ogg"
                 action ShowMenu("about")
 
         # Back
@@ -726,7 +744,8 @@ screen main_menu_2():
                 idle "gui/main_menu/btn_omakeback_base.png"
                 hover "gui/main_menu/btn_omakeback_onMouse.png"
                 selected_hover "gui/main_menu/btn_omakeback_onClick.png"
-                hover_sound "voice/effect/メニュー決定音.ogg"
+                hover_sound "voice/effect/マウス乗せ音.ogg"
+                activate_sound "voice/effect/メニュー決定音.ogg"
                 # 这里不能用 MainMenu() ，只能用 ShowMenu 来返回
                 action ShowMenu("main_menu")
 
@@ -736,7 +755,8 @@ screen main_menu_2():
                 idle "gui/main_menu/btn_end_base.png"
                 hover "gui/main_menu/btn_end_onMouse.png"
                 selected_hover "gui/main_menu/btn_end_onClick.png"
-                hover_sound "voice/effect/メニュー決定音.ogg"
+                hover_sound "voice/effect/マウス乗せ音.ogg"
+                activate_sound "voice/effect/メニュー決定音.ogg"
                 action Quit(confirm=True)
 
 
