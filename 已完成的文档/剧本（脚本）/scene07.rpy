@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年2月15日
+# 修订日期 2022年2月16日
 
 # 当前流程：编写脚本AIO Process
 
@@ -321,7 +321,7 @@ label scene07:
 
     # 原地tp
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
-    scene 霧葉ちゃんのお店 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1091,7 +1091,8 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「おや、こいつは…」
-    dinerowner "哦呀，这家伙…"
+    voice "voice/霧葉/krh_a1_0159.ogg"
+    dinerowner 店长_私服_目閉じ "哦呀，这家伙…"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1099,15 +1100,21 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ぶぇ！？」
-    ai "呜欸！？"
+    voice "voice/心愛/cca_a1_0765.ogg"
+    ai 心愛_制服_基本_驚き "呜欸！？"
 
     # nil 「私は聞き慣れた声を耳にして、つい思わず演奏を止めてしまった。」
     "我听到了耳熟的声音，不由自主地停止了演奏"
+
+    stop music fadeout 2.0
 
     # scene07 场景1 【心爱酱的烦恼与时隔许久的演奏】 结束
     # scene07 场景2 【说曹操曹操到】 开始
     # 场景切回店内
     # BGM切回店内英文歌
+
+    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
+    play music bgmfifteen fadein 4.0
 
     # nil 「やれやれ厄介な雨だ。」
     "哎呀，真是场麻烦的雨"
@@ -1115,8 +1122,8 @@ label scene07:
     # nil 「夏はそんなに嫌いじゃないが、夜、狙ったかのように耳元で飛び回るモスキート野郎と、」
     "我并不那么讨厌夏天，但是晚上，总是有像是瞄准了什么似的混蛋在耳边飞来飞去"
 
-    # nil 「終戦から年も経っているというのに、ゲリラ戦を仕掛けてくるこの豪雨だけは好きになれない。」
-    "虽然战争结束已经好多年了，但我还是不喜欢发起游击战的这场暴雨"
+    # nil 「終戦から60年も経っているというのに、ゲリラ戦を仕掛けてくるこの豪雨だけは好きになれない。」
+    "虽然战争结束已经超过60年了，但我还是不喜欢发起游击战的这场暴雨（L:作品是13年的，1945年8月15日日本宣布投降，并于9月2日在美国最后一艘战列舰密苏里号甲板上签署《降伏文书》，这也意味着第二次世界大战正式宣告结束）"
 
     # nil 「お隣の赤い国では雲にミサイルを打ち込んで無理矢理晴れにしてた事もあるらしいが…。」
     # 参考资料：https://sports.yahoo.co.jp/column/detail/200808140015-spnavi
@@ -1132,13 +1139,18 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「や、いらっしゃい。二名様でよろしかったですか？」
-    dinerowner "呀，欢迎光临。是两位客人对吗？"
+    show 店长_私服_微笑み at love69_wuye_center with dissolve
+    voice "voice/霧葉/krh_a1_0160.ogg"
+    dinerowner 店长_私服_微笑み "呀，欢迎光临。是两位客人对吗？"
 
     # 莲 「おいおい背後霊でも見えちまってるのか？夏だからって怪談するにはちょっと時間が早すぎるぜ、アンタ」
     lian "喂喂，你是不是看到了背后的幽灵? 现在是夏天，所以讲鬼故事有点太早了，店长桑"
 
     # 店长 「いやいや、見えてないのは貴方だけですよ。よく周りを見渡してみたらどうですか？」
-    dinerowner "不不不，看不见的只有你哦。仔细好好看看周围如何？"
+    show 店长_私服_目閉じ at love69_wuye_center with dissolve
+    voice "voice/霧葉/krh_a1_0161.ogg"
+    dinerowner 店长_私服_目閉じ "不不不，看不见的只有你哦。仔细好好看看周围如何？"
+    hide 店长_私服_微笑み
 
     # 莲 「まじかよ」
     lian "讲真？！"
@@ -1147,7 +1159,10 @@ label scene07:
     "我焦急地回头看了看背后。但是，那里什么都没有，甚至连人站在身后的空间都没有"
 
     # 店长 「こっちですよ」
-    dinerowner "在这边哦"
+    show 店长_私服_微笑み at love69_wuye_center with dissolve
+    voice "voice/霧葉/krh_a1_0162.ogg"
+    dinerowner 店长_私服_微笑み "在这边哦"
+    hide 店长_私服_目閉じ
 
     # nil 「店主の女性は、ニヤりと笑いながら、別の方向を指差している。」
     "店长一边笑着一边指向别的方向"
@@ -1164,9 +1179,17 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱闪现
+    hide 店长_私服_微笑み
+    show 店长_私服_微笑み:
+        zoom 1.5
+        yalign 0.015
+        xalign 0.52
+        linear 0.3 xalign 0.11
 
     # 心爱 「や、やっほー、蓮くん」
-    ai "呀，Yahoo~，莲君"
+    show 心愛_制服_基本_泣き at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0766.ogg"
+    ai 心愛_制服_基本_泣き "呀，Yahoo~，莲君"
 
     # 莲 「こんな所で出会うとは…。よう、心愛。しかし…先客がいるとは、繁盛したもんだなこも」（生异形啊，你们哥俩。 ~~快进到萨日朗~~）
     lian "没想到会在这种地方相遇……哟，心爱。不过说起来……已经有客人在了，生意不戳啊"
@@ -1177,13 +1200,19 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「お陰様で。さてさて、びしょ濡れのまんまじゃ風邪引きますよ。奥にシャワーあるんで浴びてきたらどうですか？」
-    dinerowner "托您的福。那么，湿淋淋的话可是会感冒的哦。里面有淋浴，去洗个澡怎么样？"
+    show 店长_私服_目閉じ at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0163.ogg"
+    dinerowner 店长_私服_目閉じ "托您的福。那么，湿淋淋的话可是会感冒的哦。里面有淋浴，去洗个澡怎么样？"
+    hide 店长_私服_微笑み
 
     # 莲 「シャワーまでついてるのかよこの店は…」
     lian "这家店连淋浴都有的吗…"
 
     # 店长 「ただしタオルはレンタル100円です」
-    dinerowner "但是毛巾要100日元来租（L:100日元换成软妹币就是6块多点，这作的两个前作但是“100日元系列”的，正正好好只要100日元，有能力的话可以去支持一下）"
+    show 店长_私服_ニヤリ at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0164.ogg"
+    dinerowner 店长_私服_ニヤリ "但是毛巾要100日元来租（L:100日元换成软妹币就是6块多点，说起来，这作的两个前作是“100日元系列”的，正正好好只要100日元，有能力的话可以去支持一下）"
+    hide 店长_私服_目閉じ
 
     # 莲 「わかった。じゃぁタオル無しで浴びるわ」
     lian "知道了。那我就不用毛巾洗了"
@@ -1194,10 +1223,14 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「だ、だめだよ蓮くん！　風邪治ったばっかなんだからさ！」
-    ai "不、不可以的莲君！我感冒才刚好的呢！"
+    show 心愛_制服_基本_驚き at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0767.ogg"
+    ai 心愛_制服_基本_驚き "不、不可以的莲君！我感冒才刚好的呢！"
+    hide 心愛_制服_基本_泣き
 
     # 莲 「うお、いつになく正論だな！？という事だ、店長さん、タオルも出来ればタダで貸してくれないか」
-    lian "哦，这么说的话比你之前说的更有道理一些呢! ? 店长，如果可以的话，毛巾也可以免费借给我吗"
+    # lian "哦，这么说的话比你之前说的更有道理一些呢! ? 店长，如果可以的话，毛巾也可以免费借给我吗"
+    lian "哦，这么说的话比你之前说的更有说服力一些呢! ? 店长，如果可以的话，毛巾也可以免费借给我吗"
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1205,13 +1238,19 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「100円をケチる男はモテませんよ？」
-    dinerowner "吝啬100日元的男人可不受欢迎哦？"
+    show 店长_私服_目閉じ at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0165.ogg"
+    dinerowner 店长_私服_目閉じ "吝啬100日元的男人可不受欢迎哦？"
+    hide 店长_私服_ニヤリ
 
     # 莲 「100円あればゲーム一本買える時代なんだよ…」
     lian "现在是只要有100日元就能买一个游戏的时代哦（L:这里说的就是本作的前作S.I.S.T.A.R.S: Kiss of Trinity和Color of White）"
 
     # 店长 「まぁいでしょう、蓮くんの体調管理委員会からの指導により、タオルもご自由にどうぞ」
-    dinerowner "嘛，算了吧，在莲君健康管理委员会的指导下，毛巾也请自由使用"
+    show 店长_私服_微笑み at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0166.ogg"
+    dinerowner 店长_私服_微笑み "嘛，算了吧，在莲君健康管理委员会的指导下，毛巾也请自由使用"
+    hide 店长_私服_目閉じ
 
     # 莲 「さんきゅーこあ」
     lian "那3Q啦~"
@@ -1222,7 +1261,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「おういぇす！まったくお大事にしなきゃダメなんだぞほんとはー」
-    ai "Oh Yes！真的是，一定要照顾好自己啊"
+    show 心愛_制服_基本_嬉しい at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0768.ogg"
+    ai 心愛_制服_基本_嬉しい "Oh Yes！真的是，一定要照顾好自己啊"
+    hide 心愛_制服_基本_驚き
 
     # 莲 「へいへい。今度から折りたみ傘は持ち歩きますよ」
     lian "嘿嘿，下次我会带好折叠伞再出门的"
@@ -1233,7 +1275,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「それとコンドームもね」
-    dinerowner "也请带好避孕套哦"
+    show 店长_私服_ニヤリ at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0167.ogg"
+    dinerowner 店长_私服_ニヤリ "也请带好避孕套哦"
+    hide 店长_私服_微笑み
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1241,7 +1286,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「それは大丈夫」
-    ai "这个的话没关系"
+    show 心愛_制服_基本_真顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0769.ogg"
+    ai 心愛_制服_基本_真顔 "这个的话没关系"
+    hide 心愛_制服_基本_嬉しい
 
     # 莲 「なんでお前が答えるんだよ。まぁ持ってるけど」
     lian "为啥你要回答呢。嘛，我还真带着呢233"
@@ -1258,7 +1306,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「マに習いませんでした？　寝言は寝て言えって」
-    dinerowner "没有和妈妈学过吗？梦话要在睡觉的时候说哦"
+    show 店长_私服_不満 at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0168.ogg"
+    dinerowner 店长_私服_不満 "没有和妈妈学过吗？梦话要在睡觉的时候说哦"
+    hide 店长_私服_ニヤリ
 
     # 莲 「俺がマから習ったのは、フロントホックは片手で外せという事だけだ…」
     lian "我从妈妈那里学到的唯一一件事，就是用一只手解开前面的扣子..."
@@ -1269,12 +1320,17 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「じー」
-    ai "盯——"
+    show 心愛_制服_基本_ジト目 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0770.ogg"
+    ai 心愛_制服_基本_ジト目 "盯——"
+    hide 心愛_制服_基本_真顔
 
     # 莲 「いやん」
     lian "别呀"
 
     # 原地tp
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # nil 「シャツがビショビショだったので、お店特製のＴシャツを買いました（1200円）」
     "因为衬衫是双排扣的，所以买了件店里特制的T恤（1200日元）（L:应该是单手没给解开2333）"
@@ -1282,20 +1338,37 @@ label scene07:
     # nil 「あと心愛ちゃんにキーホルダーも買ってあげました（600円）」
     "还给心爱酱买了条钥匙链（600日元）"
 
-    # nil 「タオルはケチるのに…」
-    "借毛巾的时候明明很小气…"
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
-    # nil 「デザインが気に入った」
-    "因为设计的挺不戳的"
+    # 店长 「タオルはケチるのに…」
+    show 店长_私服_不満 at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0169.ogg"
+    dinerowner 店长_私服_不満 "借毛巾的时候明明很小气…"
+
+    # 莲 「デザインが気に入った」
+    lian "因为设计的挺不戳的"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「わーい♪早速穴あき包丁につけるね！」
-    ai "哇——咿♪马上把它放在有洞的菜刀上吧!"
+    show 心愛_制服_基本_笑顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0771.ogg"
+    ai 心愛_制服_基本_笑顔 "哇——咿♪马上把它放在有洞的菜刀上吧!"
 
     # 莲 「あの穴、別にアクセをつける穴じゃねぇけどな…。切れなくなるから、他の物につけなさい」
     lian "那个洞，并不是用来装装饰品的洞…因为会切不了菜，所以请挂在别的东西上吧"
 
     # 心爱 「外付けハードディスクとか？」
-    ai "外置的Hard Disk之类的？"
+    show 心愛_制服_基本_真顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0772.ogg"
+    ai 心愛_制服_基本_真顔 "外置的Hard Disk之类的？"
+    hide 心愛_制服_基本_笑顔
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1303,7 +1376,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「２４段変速ロードレーサーとか」
-    dinerowner "24级变速公路自行车什么的上面？"
+    show 店长_私服_無表情 at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0170.ogg"
+    dinerowner 店长_私服_無表情 "24级变速公路自行车什么的上面？"
+    hide 店长_私服_不満
 
     # 莲 「遺伝子組み換えモロヘイアとかな」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%9E%E3%83%84%E3%83%8A%E3%82%BD
@@ -1316,11 +1392,15 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「何でも言えばいってもんじゃねぇぞ…」
-    ai "不能什么都说啊..."
+    show 心愛_制服_基本_不機嫌 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0773.ogg"
+    ai 心愛_制服_基本_不機嫌 "不能什么都说啊..."
+    hide 心愛_制服_基本_真顔
 
     # 莲&店长 「すんません」
     # 要记得去人物表加人物，头像是店长的
-    lian_and_dinerowner "对不起"
+    voice "voice/霧葉/krh_a1_0171.ogg"
+    lian_and_dinerowner 店长_私服_無表情 "对不起"
 
     # nil 議論の結果『有機ＥＬディスプレイ』にくっつける事にきまりました。
     # 参考资料：https://www.weblio.jp/content/%E6%9C%89%E6%A9%9FEL%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4
@@ -1358,7 +1438,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ごく……ごく……ごく……」
-    ai "唔……咕…咕……"
+    show 心愛_制服_基本_もぐもぐ at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0774.ogg"
+    ai 心愛_制服_基本_もぐもぐ "唔……咕…咕……"
+    hide 心愛_制服_基本_不機嫌
 
     # 莲 「な、なぁ…心愛」
     lian "呐，呐…心爱"
@@ -1369,13 +1452,19 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ごく…ぷはー。はーい、なんでしょう」
-    ai "唔……呼啊——嗯？怎么啦"
+    show 心愛_制服_基本_笑顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0775.ogg"
+    ai 心愛_制服_基本_笑顔 "唔……呼啊——嗯？怎么啦"
+    hide 心愛_制服_基本_もぐもぐ
 
     # 莲 「一つ言っていか？」
     lian "我能说个事吗"
 
     # 心爱 「うんうん、なーに？」
-    ai "嗯嗯，是什么捏"
+    show 心愛_制服_基本_嬉しい at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0776.ogg"
+    ai 心愛_制服_基本_嬉しい "嗯嗯，是什么捏"
+    hide 心愛_制服_基本_笑顔
 
     # 莲 「共食いだろ。お前がコア飲んだら」
     lian "你这是同类相食吧，喝了冰核的话（L:还是刚才的谐音梗，饮料的冰核(ice core的core）和心爱(cocoa)）"
@@ -1386,7 +1475,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「ぶふっ」
-    dinerowner "噗噗"
+    show 店长_私服_不満_1 at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0172.ogg"
+    dinerowner 店长_私服_不満_1 "噗噗"
+    hide 店长_私服_無表情
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1394,7 +1486,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「だからー！　そのネタ引っ張り起こさないの！　さっきそれで大変な思いしたんだから！」
-    ai "所以啊！不要把那个段子提起来啊！刚才我就觉得很牙白了！"
+    show 心愛_制服_基本_不機嫌 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0777.ogg"
+    ai 心愛_制服_基本_不機嫌 "所以啊！不要把那个段子提起来啊！刚才我就觉得很牙白了！"
+    hide 心愛_制服_基本_嬉しい
 
     # 莲 「大変な思いってなんだね」
     lian "那真是很辛苦呢"
@@ -1405,7 +1500,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「せっかく、我慢してたのに…く、く…あは！」
-    dinerowner "好不容易忍住了……哈哈、啊哈哈哈哈"
+    show 店长_私服_微笑み_1 at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0173.ogg"
+    dinerowner 店长_私服_微笑み_1 "好不容易忍住了……哈哈、啊哈哈哈哈"
+    hide 店长_私服_不満_1
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1413,12 +1511,17 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「これ」
-    ai "这个"
+    show 心愛_制服_基本_真顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0778.ogg"
+    ai 心愛_制服_基本_真顔 "这个"
+    hide 心愛_制服_基本_不機嫌
 
     # 莲 「ごめん」
     lian "对不起"
 
     # 原地tp
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 莲 「で」
     lian "呐"
@@ -1429,7 +1532,9 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「はい」
-    dinerowner "嗯？"
+    show 店长_私服_無表情 at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0174.ogg"
+    dinerowner 店长_私服_無表情 "嗯？"
 
     # 莲 「さっき突っ込み忘れたけど、なんでピアノなんかあるんだ？前来た時なかったぞ」
     lian "刚才忘记吐槽了，为什么这里会有钢琴呢？上次来的时候记得没有来着"
@@ -1440,19 +1545,25 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「友達から貰ったんだってさ」
-    ai "听说是从朋友那里得到的"
+    show 心愛_制服_基本_嬉しい at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0779.ogg"
+    ai 心愛_制服_基本_嬉しい "听说是从朋友那里得到的"
 
     # 莲 「へー。店長、弾けんの？」
     lian "啊~店长，你不弹弹嘛？"
 
     # 心爱 「いや、店長さんは楽器類は扱えないんだって。強いて言えば、『女』ならい音奏でられるってさ』
-    ai "不，店长不擅长乐器。硬要说的话，她会演奏出『女人』风格的音乐"
+    voice "voice/心愛/cca_a1_0780.ogg"
+    ai 心愛_制服_基本_嬉しい "不，店长不擅长乐器。硬要说的话，她会演奏出『女人』风格的音乐"
 
     # 莲 「それじゃさぞかし良い声で鳴くんでしょうね貴方」
     lian "那你一定会用很好的声音叫出来吧"
 
     # 心爱 「試してみる？」
-    ai "你要试试吗？"
+    show 心愛_制服_基本_真顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0781.ogg"
+    ai 心愛_制服_基本_真顔 "你要试试吗？"
+    hide 心愛_制服_基本_嬉しい
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1460,7 +1571,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「全部心愛ちゃんが答えちゃいましたね…しかも余計な所まで。あと男性はお断りします」
-    dinerowner "全部都是由心爱酱回答的呢……而且还有点多余了，我拒绝男性……"
+    show 店长_私服_目閉じ at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0175.ogg"
+    dinerowner 店长_私服_目閉じ "全部都是由心爱酱回答的呢……而且还有点多余了，还有我拒绝男性……"
+    hide 店长_私服_無表情
 
     # 莲 「心愛」
     lian "心爱"
@@ -1471,7 +1585,9 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「らじゃ」
-    ai "收到！"
+    show 心愛_制服_基本_嬉しい at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0782.ogg"
+    ai 心愛_制服_基本_嬉しい "收到！"
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1479,9 +1595,14 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「え…」
-    dinerowner "欸……"
+    show 店长_私服_微笑み at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0176.ogg"
+    dinerowner 店长_私服_微笑み "欸……"
+    hide 店长_私服_目閉じ
 
     # 原地tp
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 莲 「そうか、さっきは演奏中に邪魔しちまったな」
     lian "是吗，刚才在演奏中打扰了"
@@ -1492,7 +1613,9 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「うん。まさか蓮くんが現れるなんて思ってなくて、ビックリしただけだよー」
-    ai "没有没有，我没想到莲君会出现，只是吓了一跳而已"
+    show 心愛_制服_基本_嬉しい at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0783.ogg"
+    ai 心愛_制服_基本_嬉しい "没有没有，我没想到莲君会出现，只是吓了一跳而已"
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1500,7 +1623,9 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「噂をすればなんとや―モゴッ！」
-    dinerowner "说曹操曹操到呢!"
+    show 店长_私服_本気 at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0177.ogg"
+    dinerowner 店长_私服_本気 "说曹操曹操——呜唔!"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1508,7 +1633,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「あーあーきこえなーい！」
-    ai "啊ー啊ー我听不到!"
+    show 心愛_制服_基本_不機嫌 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0784.ogg"
+    ai 心愛_制服_基本_不機嫌 "啊ー啊ー我听不到!"
+    hide 心愛_制服_基本_嬉しい
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1516,7 +1644,9 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「もご、モゴゴゴゴッ！　もごごごごご！」
-    dinerowner "嘿、嘿嘿嘿嘿!@#$%^&*"
+    voice "voice/霧葉/krh_a1_0178.ogg"
+    # %&^ 不支持，阔以用日语中的符号代替
+    dinerowner 店长_私服_本気 "！＠＃＄％＾＆＊＊＆＾％＄＃＠！"
 
     # 莲 「あの、心愛ちゃん」
     lian "那个，心爱酱"
@@ -1527,13 +1657,19 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「なんでしょう蓮くん！」
-    ai "怎么啦莲君"
+    show 心愛_制服_基本_笑顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0785.ogg"
+    ai 心愛_制服_基本_笑顔 "怎么啦莲君"
+    hide 心愛_制服_基本_不機嫌
 
     # 莲 「口と鼻を押さえるのはやめてあげなさい。店長さん苦しそうだから」
     lian "别再捂着嘴和鼻子了，店长看起来很痛苦的样子"
 
     # 心爱 「あっ」
-    ai "啊"
+    show 心愛_制服_基本_驚き at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0786.ogg"
+    ai 心愛_制服_基本_驚き "啊"
+    hide 心愛_制服_基本_笑顔
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1541,9 +1677,12 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「ぶはぁっ！　本格的に口封じするつもりですか…」
-    dinerowner "哇啊！你真的打算封口吗…"
+    voice "voice/霧葉/krh_a1_0179.ogg"
+    dinerowner 店长_私服_本気 "哇啊！你真的打算封口吗…"
 
     # 原地tp
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 莲 「しっかし…心愛がピアノを弾くなんて久しぶりだよな…」
     lian "啊说起来……心爱好久没弹过钢琴了捏……"
@@ -1554,13 +1693,18 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「そだねー。ついつい白熱しちゃったよ」
-    ai "是啊，不知不觉就有点上头了呢"
+    show 心愛_制服_基本_嬉しい at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0787.ogg"
+    ai 心愛_制服_基本_嬉しい "是啊，不知不觉就有点上头了呢"
 
     # 莲 「リクエストしてもいか？」
     lian "我可以点个歌吗？"
 
     # 心爱 「えっ！？　い、いけど…？」
-    ai "欸！？倒是可以的说……？"
+    show 心愛_制服_基本_驚き at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0788.ogg"
+    ai 心愛_制服_基本_驚き "欸！？倒是可以的说……？"
+    hide 心愛_制服_基本_嬉しい
 
     # 莲 「月光で」
     # 应该是这首：https://www.youtube.com/watch?v=iyw6-KVmgow
@@ -1573,7 +1717,9 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「店の空気が暗くなるんでダメです」
-    dinerowner "店里的气氛会变暗的所以不行"
+    show 店长_私服_不満 at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0180.ogg"
+    dinerowner 店长_私服_不満 "店里的气氛会变暗的所以不行"
 
     # 莲 「ぶええ」
     lian "呜欸欸"
@@ -1584,7 +1730,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ぶええ」
-    ai "呜欸欸"
+    show 心愛_制服_基本_ぶわー at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0789.ogg"
+    ai 心愛_制服_基本_ぶわー "呜欸欸"
+    hide 心愛_制服_基本_驚き
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1592,12 +1741,17 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「…泣かれてもダメです。他の曲にしてください」
-    dinerowner "……哭也不行，请换成别的曲子"
+    show 店长_私服_微笑み at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0181.ogg"
+    dinerowner 店长_私服_微笑み "……哭也不行，请换成别的曲子"
+    hide 店长_私服_不満
 
     # 莲 「じゃぁ…」
     lian "那么…"
 
     # 场景切换：心爱弹琴
+    image bg ccg01_4_2 = "images/ev/ccg01_4_2.png"
+    scene ccg01_4_2 with dissolve
 
     # nil 「ということで、さっきは心愛の演奏を邪魔してしまったので、改めて、心愛ちゃんにピアノを弾いて貰う事にしました。」
     "因此，刚才打扰了心爱的演奏，所以决定让心爱酱再此演奏起来"
@@ -1614,22 +1768,26 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「えー…こほん。う゛～蓮くんに見られてると思うと緊張するよぉ…」
-    ai "呃…这个，嗯~一想到被莲君看到就很紧张啊…"
+    voice "voice/心愛/cca_a1_0790.ogg"
+    ai 心愛_制服_基本_泣き "呃…咳咳，嗯~一想到被莲君看到就很紧张啊…"
 
     # 莲 「でも嬉しいよ、俺、なんかわかんねぇけどお前のピアノ好きだからな」
     lian "但是我很高兴，虽然我不知道为什么，但是我喜欢你的钢琴"
 
     # 心爱 「だ、だからー！　そーいう事言わないの！　恥ずかしいから！」
-    ai "所、所以——! 不要这么说! 因为太害羞了!"
+    voice "voice/心愛/cca_a1_0791.ogg"
+    ai 心愛_制服_基本_不機嫌 "所、所以——! 不要这么说! 因为太害羞了!"
 
     # 莲 「は。なんか、小さかった頃の発表会を思い出すよ。あの頃のお前、ピアノ弾くの嫌がってたよな。何で好きになったんだっけ」
     lian "那个，总觉得，我想起了小时候的发表会。那个时候的你，讨厌弹钢琴吧。现在为什么会喜欢上呢？"
 
     # 心爱 「（それは君が今さっき言った台詞を、その時も言ったからでしょうが～！）」
-    ai "（那是因为你刚才说的台词啊，那个时候也说了吧～！）"
+    voice "voice/心愛/cca_a1_0792.ogg"
+    ai 心愛_制服_基本_不機嫌 "（那是因为你刚才说的台词啊，那个时候也说了吧～！）"
 
     # 心爱 「と、とにかく、弾きますからね！」
-    ai "总之，我会弹的！"
+    voice "voice/心愛/cca_a1_0793.ogg"
+    ai 心愛_制服_基本_不機嫌 "总之，我会弹的！"
 
     # 莲 「おう」
     lian "请"
@@ -1637,8 +1795,11 @@ label scene07:
     # nil 「心愛は深呼吸して、鍵盤を叩き始める。」
     "心爱深吸一口气，开始敲击键盘"
 
+    scene ccg01_2_1 with dissolve
+    play music bgmfortytwo fadein 2.0 fadeout 1.0
+
     # 心爱闭眼，音乐是开场的变奏曲，超好听的！！！
-    # 暂时不更了，听会心爱酱的钢琴
+    # 暂时不更了，听会儿心爱酱的钢琴
     # nil 「アップテンポなポップスを心愛は弾き始めた。こんな曲も弾けたのか…。」
     "心爱开始弹奏快节奏的流行音乐。原来你也会弹这样的曲子...（L:这个歌是本作作曲/作词的cittan*的あの夏まで…(new)背景音乐的变奏，原歌曲也非常好听，本项目Demo版中结尾用的就是原歌）"
 
@@ -1684,19 +1845,22 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「ふ、優しい顔になってますよ」
-    dinerowner "欸嘿嘿，表情看起来很温柔呢"
+    voice "voice/霧葉/krh_a1_0182.ogg"
+    dinerowner 店长_私服_微笑み "欸嘿嘿，表情看起来很温柔呢"
 
     # 莲 「あ…あ…色々、思い出しちまってな」
     lian "啊…啊…各种各样的事情，我都想起来了"
 
     # 店长 「良い思い出ですか？」
-    dinerowner "是美好的回忆吗？"
+    voice "voice/霧葉/krh_a1_0183.ogg"
+    dinerowner 店长_私服_微笑み "是美好的回忆吗？"
 
     # 莲 「うむ。　しかし、これ美味いな…もう一杯くれないか」
     lian "嗯，不过，这个很好喝啊……再给我一杯吧"
 
     # 店长 「かしこまりました」
-    dinerowner "遵命"
+    voice "voice/霧葉/krh_a1_0184.ogg"
+    dinerowner 店长_私服_微笑み "遵命"
 
     # nil 「演奏に合わせて、店長がシェイカーを振る。妙に様になってるのが悔しい。」
     "随着音乐的演奏，店长挥舞着振动器（Shakers），我很后悔自己变得这么奇怪"
@@ -1726,7 +1890,8 @@ label scene07:
     "就在不久之前，我居然还在和真冬做那样的事情...连我自己都觉得很丢脸"
 
     # 店长 「お待たせ致しました。スカイダイビングです」
-    dinerowner "让您久等了，这是 Sky Diving （一种鸡尾酒）"
+    voice "voice/霧葉/krh_a1_0185.ogg"
+    dinerowner 店长_私服_にっこり "让您久等了，这是 Sky Diving （L:是一种鸡尾酒）"
 
     # 莲 「あ、ありがとう」
     lian "啊，谢谢啦"
@@ -1746,6 +1911,9 @@ label scene07:
     # nil 「飲み干したのは逆効果だったか、より、俺の心はヒートアップしてしまった。」
     "也许是适得其反吧，我的心情更加激动了"
 
+    stop music fadeout 4.0
+    scene ccg01_3_2 with dissolve
+
     # nil 「心愛が最後の一小節を弾き終えた。」
     "心爱弹完了最后一小节"
 
@@ -1761,9 +1929,12 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「えへ…ご静聴ありがとうございました…」
-    ai "嗯…感谢您的聆听……"
+    voice "voice/心愛/cca_a1_0794.ogg"
+    ai 心愛_制服_基本_嬉しい "嗯…感谢您的聆听……"
 
     # 场景切回店内
+    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
+    play music bgmfifteen fadein 4.0
 
     # nil 「発表会のように、心愛は椅子から立ち上がりぺこりとお辞儀した。ほんのり、頬を赤くしている。」
     "就像发布会一样，心爱从椅子上站起来深深鞠了一躬。她的脸颊微微泛红"
@@ -1798,7 +1969,9 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「寝ちゃった」
-    dinerowner "睡着了"
+    show 店长_私服_無表情 at love69_wuye_right with dissolve
+    voice "voice/霧葉/krh_a1_0186.ogg"
+    dinerowner 店长_私服_無表情 "睡着了"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1806,7 +1979,9 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ね、てんちょーさん…もしかして…これ…」
-    ai "喂，店长桑…难道说…这个是……"
+    show 心愛_制服_基本_ジト目 at love69_xinai_left with dissolve
+    voice "voice/心愛/cca_a1_0795.ogg"
+    ai 心愛_制服_基本_ジト目 "喂，店长桑…难道说…这个是……"
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1815,7 +1990,10 @@ label scene07:
 
     # 店长 「あっ。二杯目、普通のリキュール使っちゃいましたね…」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%AA%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AB
-    dinerowner "啊，第二杯，用的是普通的利口酒呢…（L:利口酒是一种使用蒸馏酒为原料的酒精饮料，以水果、坚果、草药、香料、花朵以及奶油增强酒水风味，在装瓶前通常会添加蔗糖或甜味剂，大多数利口酒的酒精浓度比烈酒低，在15-30%，但有的利口酒的酒精浓度也高达55%）"
+    show 店长_私服_不満 at love69_wuye_right with dissolve
+    voice "voice/霧葉/krh_a1_0187.ogg"
+    dinerowner 店长_私服_不満 "啊，第二杯，用的是普通的利口酒呢…（L:利口酒是一种使用蒸馏酒为原料的酒精饮料，以水果、坚果、草药、香料、花朵以及奶油增强酒水风味，在装瓶前通常会添加蔗糖或甜味剂，大多数利口酒的酒精浓度比烈酒低，在15-30％，但有的利口酒的酒精浓度也高达55％）"
+    hide 店长_私服_無表情
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1823,15 +2001,22 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「もー！　蓮君はお酒めっちゃ弱いんだよー！　初詣の御神酒ですら寝ちゃうのに！」
-    ai "啊——！莲君的酒力太弱了！明明连喝新年参拜的御神酒都睡着了！"
+    show 心愛_制服_基本_驚き at love69_xinai_left with dissolve
+    voice "voice/心愛/cca_a1_0796.ogg"
+    ai 心愛_制服_基本_驚き "啊——！莲君的酒力太弱了！明明连喝新年参拜的御神酒都睡着了！"
 
     # 心爱 「あうあうあー。蓮くーん、起きて～！　ぺちぺちぺちぺちぺち」
-    ai "啊呜啊呜啊——莲君，快起来~！啪唧啪唧啪唧啪唧！"
+    show 心愛_制服_基本_ぶわー at love69_xinai_left with dissolve
+    voice "voice/心愛/cca_a1_0797.ogg"
+    ai 心愛_制服_基本_ぶわー "啊呜啊呜啊——莲君，快起来~！啪唧啪唧啪唧啪唧！"
+    hide 心愛_制服_基本_驚き
 
     # nil 「くかー…」
     "呃……"
 
     # 原地tp
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1839,7 +2024,9 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「雨、止みましたね」
-    dinerowner "雨、停下来了呢"
+    show 店长_私服_無表情 at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0188.ogg"
+    dinerowner 店长_私服_無表情 "雨、停下来了呢"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1847,7 +2034,9 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「でも、蓮君寝てるし…もうちょっと居て良い？」
-    ai "但是，莲君睡着了…可以再呆一会儿吗？"
+    show 心愛_制服_基本_泣き at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0798.ogg"
+    ai 心愛_制服_基本_泣き "但是，莲君睡着了…可以再呆一会儿吗？"
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1855,9 +2044,14 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「ごゆっくりどうぞ」
-    dinerowner "请慢用"
+    show 店长_私服_微笑み at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0189.ogg"
+    dinerowner 店长_私服_微笑み "请慢用"
+    hide 店长_私服_無表情
 
     # 原地tp
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1865,7 +2059,9 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「あむ」
-    ai "哈姆"
+    show 心愛_制服_基本_もぐもぐ at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0799.ogg"
+    ai 心愛_制服_基本_もぐもぐ "哈姆"
 
     # 莲 「はうあ！」
     lian "哈啊！"
@@ -1876,13 +2072,18 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「あ、起きた」
-    dinerowner "啊，起来了"
+    show 店长_私服_無表情 at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0190.ogg"
+    dinerowner 店长_私服_無表情 "啊，起来了"
 
     # nil 「耳たぶに生暖かい湿った感覚を感じて俺は一気に意識を覚醒させた。」
     "我感觉到耳垂有一种温暖而湿润的感觉，意识一下子清醒了起来"
 
     # 店长 「耳ペロが寝坊助さんにこんなに効果があるとは…」
-    dinerowner "没想到耳朵pr对睡懒觉的人有这么大的效果…"
+    show 店长_私服_目閉じ at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0191.ogg"
+    dinerowner 店长_私服_目閉じ "没想到耳朵pr对睡懒觉的人有这么大的效果…"
+    hide 店长_私服_無表情
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1890,7 +2091,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「はあぅ～…ハズカシカッターヨ…」
-    ai "哈呜~~……好羞耻的说……"
+    show 心愛_制服_基本_泣き at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0800.ogg"
+    ai 心愛_制服_基本_泣き "哈呜~~……好羞耻的说……"
+    hide 心愛_制服_基本_もぐもぐ
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1898,7 +2102,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「よしよし」
-    dinerowner "好啦好啦"
+    show 店长_私服_微笑み at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0192.ogg"
+    dinerowner 店长_私服_微笑み "好啦好啦"
+    hide 店长_私服_目閉じ
 
     # 莲 「真冬に習った技をつかったな貴様…」
     lian "你这招是从真冬那儿学的吧……"
@@ -1918,7 +2125,8 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「ラストオーダーの時間ですよ」
-    dinerowner "到了最后点餐的时间了"
+    voice "voice/霧葉/krh_a1_0193.ogg"
+    dinerowner 店长_私服_微笑み "到了最后点餐的时间了"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1926,7 +2134,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ほんと何しても起きないよね蓮くん…舐める以外で」
-    ai "真的无论做什么都不会起来啊莲君……除了舔之外"
+    show 心愛_制服_基本_不機嫌 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0801.ogg"
+    ai 心愛_制服_基本_不機嫌 "真的无论做什么都不会起来啊莲君……除了舔之外"
+    hide 心愛_制服_基本_泣き
 
     # 莲 「んあ…え、何、そんな寝てたの俺」
     lian "嗯…啊，什么，我睡得那么香啊"
@@ -1937,9 +2148,13 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「うん。さっき、まふまふちゃんから電話来て、夕飯どうするの？　って言ってたから、店長さんが電話とって、お兄ちゃん、酒飲んで寝てるよって言ったんで、そしたら―」
-    ai "嗯。刚才嘛呼嘛呼酱打电话来，问晚饭怎么办，店长在电话里说哥哥喝了酒在睡觉，然后——"
+    show 心愛_制服_基本_嬉しい at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0802.ogg"
+    ai 心愛_制服_基本_嬉しい "嗯。刚才嘛呼嘛呼酱打电话来，问晚饭怎么办，店长在电话里说哥哥喝了酒在睡觉，然后——"
+    hide 心愛_制服_基本_不機嫌
 
     # nil 「『二回ほどぶん殴って、それでも起きなかったら、夕飯は食べてきてって伝えといて』」
+    # 这里应该放真冬（电话）或者是心爱的，但是原作就是放的旁白
     "『把他暴打两顿，即使那样也不起来的话，就告诉他吃完晚饭再回来』"
 
     # 莲 「だろ」
@@ -1951,7 +2166,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「おー流石真冬ちゃんのお兄ちゃん！」
-    ai "哇~不愧是真冬的哥哥！"
+    show 心愛_制服_基本_笑顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0803.ogg"
+    ai 心愛_制服_基本_笑顔 "哇~不愧是真冬酱的欧尼酱！"
+    hide 心愛_制服_基本_嬉しい
 
     # 莲 「あ、そっか。心愛も一緒って言ってないのか」
     lian "啊，这样啊。没有说心爱也在一起吗？"
@@ -1962,19 +2180,26 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「あ、そうですね。私が電話とっちゃったので」
-    dinerowner "啊，是啊，是我接的电话"
+    show 店长_私服_無表情 at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0194.ogg"
+    dinerowner 店长_私服_無表情 "啊，是啊，是我接的电话"
+    hide 店长_私服_微笑み
 
     # 莲 「あちゃー…真冬怒らせちゃったかな」
     lian "哎呀——……我是不是惹真冬生气了"
 
     # 店长 「んー…『お兄ちゃんにお酒飲まさないでね』って穏やかに言ってましたから、怒ってる要素ではありませんでしたね」
-    dinerowner "啊…因为她很平静地说『别让欧尼酱喝酒啊』，所以并不是生气的样子"
+    voice "voice/霧葉/krh_a1_0195.ogg"
+    dinerowner 店长_私服_無表情 "啊…因为她很平静地说『别让欧尼酱喝酒啊』，所以并不是生气的样子"
 
     # 莲 「あれ？　ていうか、アンタ真冬と知り合いなの？」
     lian "咦？话说，你认识真冬吗？"
 
     # 店长 「え、まぁ」
-    dinerowner "嗯，是啊"
+    show 店长_私服_微笑み at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0196.ogg"
+    dinerowner 店长_私服_微笑み "嗯，是啊"
+    hide 店长_私服_無表情
 
     # 莲 「いつのまに…抜け目ないな、あんたも真冬も」
     # 参考资料：https://www.weblio.jp/content/%E6%8A%9C%E3%81%91%E7%9B%AE%E3%81%8C%E3%81%AA%E3%81%84
@@ -1986,37 +2211,55 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「私は！」
-    ai "我也是！"
+    show 心愛_制服_基本_驚き at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0804.ogg"
+    ai 心愛_制服_基本_驚き "我呢！"
+    hide 心愛_制服_基本_笑顔
 
     # 莲 「どっちかっというと抜けてる方だな…」
     lian "你康起来就是个脱线的人啊……"
 
     # 心爱 「ぐぬぬ…」
-    ai "咕奴奴奴……"
+    show 心愛_制服_基本_不機嫌 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0805.ogg"
+    ai 心愛_制服_基本_不機嫌 "咕奴奴奴……"
+    hide 心愛_制服_基本_驚き
 
     # 莲 「じゃぁ、なんだ、心愛は夕飯食べたの？」
     lian "那个，那什么，心爱吃晚饭了吗？"
 
     # 心爱 「あ、いや、蓮君を待っていようかと思いまして」
-    ai "啊，还没，我想等莲君"
+    show 心愛_制服_基本_嬉しい at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0806.ogg"
+    ai 心愛_制服_基本_嬉しい "啊，还没，我想等莲君"
+    hide 心愛_制服_基本_不機嫌
 
     # 莲 「あじゃぁ、それまで店長さんに遊んでもらったのか。よかったなーよーしよしよしよしよし」
-    lian "那么，在这之前陪你玩了? 太好了呢!来摸摸摸摸摸摸！"
+    lian "那么，在这之前店长陪你玩了? 太好了呢!来摸摸摸摸摸摸！"
 
     # 心爱 「わーい、なでなでされちゃっ…ってバカにしてるでしょ！寝ぼけやがって…酔っぱらいが…」
-    ai "哇——咿！被摸摸头啦……喂，你在瞧不起我吧！睡眼惺忪…一个醉鬼……"
+    show 心愛_制服_基本_不機嫌 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0807.ogg"
+    ai 心愛_制服_基本_不機嫌 "哇——咿！被摸摸头啦……喂，你在瞧不起我吧！睡眼惺忪…一个醉鬼……"
+    hide 心愛_制服_基本_嬉しい
 
     # 莲 「唐突に口悪くなるよなお前」
     lian "你这就有点口无遮拦了啊"
 
     # 心爱 「で、せっかくなら晩ご飯こで食べちゃおうって思ったんだけど、蓮君全然起きないので、最後の手段をとりました」
-    ai "于是，好不容易来一起吃一次晚饭，莲君却完全不起来，所以采取了最后的手段"
+    show 心愛_制服_基本_嬉しい at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0808.ogg"
+    ai 心愛_制服_基本_嬉しい "于是，好不容易来一起吃一次晚饭，莲君却完全不起来，所以采取了最后的手段"
+    hide 心愛_制服_基本_不機嫌
 
     # 莲 「あーそうか。それは悪い事したな…ありがとう、心愛。ついでに、このテーブルに置いてある鈍器の数々は？」
     lian "啊，是这样啊，那真是太糟糕了，谢谢你，心爱。顺便问一下，这张桌子上放着的一堆钝器是什么？"
 
     # 心爱 「真冬ちゃんが二回ほどぶん殴れつったから…」
-    ai "因为真冬酱要让我们胖揍两顿来着……"
+    show 心愛_制服_基本_泣き at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0809.ogg"
+    ai 心愛_制服_基本_泣き "因为真冬酱让我们胖揍两顿来着……"
+    hide 心愛_制服_基本_嬉しい
 
     # 莲 「だから、身体のあちこちいてぇのか…」
     lian "所以，现在身体各处才……"
@@ -2027,19 +2270,26 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「ちなみに一人二回ずついきました」
-    dinerowner "顺便说一下，每人都揍了两次"
+    voice "voice/霧葉/krh_a1_0197.ogg"
+    dinerowner 店长_私服_微笑み "顺便说一下，每人都揍了两次"
 
     # 莲 「永眠しちゃうよ！？」
     lian "我会永眠的！？"
 
     # 店长 「それでお客様。ご注文は？」
-    dinerowner "那么客人。您要点些什么？"
+    show 店长_私服_無表情 at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0198.ogg"
+    dinerowner 店长_私服_無表情 "那么客人。您要点些什么？"
+    hide 店长_私服_微笑み
 
     # 莲 「じゃぁこの、シカゴブルズステーキって奴で」
     lian "那么，这个叫芝加哥烤牛排的家伙"
 
     # 店长 「かしこまりました」
-    dinerowner "遵命"
+    show 店长_私服_にっこり at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0199.ogg"
+    dinerowner 店长_私服_にっこり "遵命"
+    hide 店长_私服_無表情
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -2047,7 +2297,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「私は！」
-    ai "我也要！"
+    show 心愛_制服_基本_笑顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0810.ogg"
+    ai 心愛_制服_基本_笑顔 "我也要！"
+    hide  心愛_制服_基本_泣き
 
     # 莲 「おいおい３００グラムのステーキなんぞ食えるのか」
     lian "喂，你能吃下３００克的牛排吗？"
@@ -2058,12 +2311,17 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「はい。少々お待ち下さい」
-    dinerowner "好的，请稍等"
+    show 店长_私服_微笑み at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0200.ogg"
+    dinerowner 店长_私服_微笑み "好的，请稍等"
+    hide 店长_私服_にっこり
 
     # 莲 「もうなんでも有りだなこの店。」
     lian "这家店什么都有"
 
     # 原地tp
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -2072,7 +2330,9 @@ label scene07:
 
     # 心爱 「ぺろりんちょしました。グリルされた牛の肩ロースに…ほんのりとジャックダニエル風味がまた…良いですね！」&&协力请求
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E3%83%80%E3%83%8B%E3%82%A8%E3%83%AB
-    ai "吃了不少东西呢。烤好的牛肩里脊…再加上一点杰克丹尼酒…真不错呢！（L:原版字就缺了一半，剩下的内容应该是「这个，Jack Daniel，fxxk！」。杰克丹尼（Jack Daniel's）是著名的美国威士忌品牌）"
+    show 心愛_制服_基本_ペコちゃん at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0811.ogg"
+    ai 心愛_制服_基本_ペコちゃん "吃了不少东西呢。烤好的牛肩里脊…再加上一点杰克丹尼酒…真不错呢！（L:原版字就缺了一半，剩下的内容应该是「这个，Jack Daniel，fxxk！」。杰克丹尼（Jack Daniel's）是著名的美国威士忌品牌）"
 
     # 莲 「俺まだ半分も食いきってねえぞ！？」
     lian "我还没吃完一半呢！？"
@@ -2083,10 +2343,16 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「そば湯置いときますね」
-    dinerowner "我去弄点儿荞麦汤"
+    show 店长_私服_無表情 at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0201.ogg"
+    dinerowner 店长_私服_無表情 "我去弄点儿荞麦汤"
 
     # 莲 「何に使うねん」
     lian "拿来干啥子咧"
+
+    # 原地tp
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -2094,7 +2360,9 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「えー、今日は長々と一日ありがとうございました、ぺこり」
-    ai "嗯——今天谢谢大家这么长时间的照顾，真是太好了呢"
+    show 心愛_制服_基本_嬉しい at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0812.ogg"
+    ai 心愛_制服_基本_嬉しい "嗯——今天谢谢大家这么长时间的照顾，真是太好了呢"
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -2102,19 +2370,27 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「いえいえ、私も楽しかったですし、また来て下さいね。こんどは真冬ちゃんも一緒に」
-    dinerowner "不不不，我也玩的很开心，请下次再来，下次也和真冬一起带过来哦"
+    show 店长_私服_微笑み at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0202.ogg"
+    dinerowner 店长_私服_微笑み "不不不，我也玩的很开心，请下次再来，下次也和真冬一起带过来哦"
 
     # 莲 「そうさせてもらうよ、ありがとう店長さん」
     lian "我会的，谢谢你，店长"
 
     # 店长 「あっ。ちょっと待って下さいね。お土産を渡しますよ」
-    dinerowner "啊，请稍等，我把特产给你"
+    show 店长_私服_目閉じ at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0203.ogg"
+    dinerowner 店长_私服_目閉じ "啊，请稍等，我把特产给你"
+    hide 店长_私服_微笑み
 
     # nil 「店長は一度店の奥に消えて、手提げの紙箱を持って現れた。」
     "店长消失在店里，拿着一个纸盒出来了"
 
     # 店长 「これお土産のケーキです。真冬ちゃんにも食べさせてあげてくださいね」
-    dinerowner "这是特产蛋糕，请拿回去给真冬恰吧"
+    show 店长_私服_にっこり at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0204.ogg"
+    dinerowner 店长_私服_にっこり "这是特产蛋糕，请拿回去给真冬恰吧"
+    hide 店长_私服_目閉じ
 
     # 莲 「お、ありがとう。心愛。全部食べるなよ」
     lian "哦，谢谢。心爱。不要全部吃完哦"
@@ -2125,7 +2401,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「う、うん。蓮くんの分まで我慢しとく」
-    ai "嗯，嗯，连同莲君的分也要忍耐下来呢"
+    show 心愛_制服_基本_泣き at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0813.ogg"
+    ai 心愛_制服_基本_泣き "嗯，嗯，连同莲君的份也要忍耐下来呢"
+    hide 心愛_制服_基本_嬉しい
 
     # 莲 「俺にも食わせろ！」
     lian "我的那份别给我吃啊！"
@@ -2136,7 +2415,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「二人分しか入ってないですよ？」
-    dinerowner "里面只放了两人份哦？"
+    show 店长_私服_微笑み at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0205.ogg"
+    dinerowner 店长_私服_微笑み "里面只放了两人份哦？"
+    hide 店长_私服_にっこり
 
     # 莲 「悪鬼め～！」
     lian "魔鬼~！"
@@ -2147,7 +2429,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「じゃぁ、半分こしよう！　…とでもこの私が言うと思ったか？」
-    ai "那么，一人一半吧！…你以为我会这么说吗？"
+    show 心愛_制服_基本_真顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0814.ogg"
+    ai 心愛_制服_基本_真顔 "那么，一人一半吧！…你以为我会这么说吗？"
+    hide 心愛_制服_基本_泣き
 
     # 莲 「それは心配に及ばない、期待してねぇ」
     lian "这不用担心，我不指望"
@@ -2158,7 +2443,10 @@ label scene07:
     $ sideimagesize.SideImageZoom = 1.0
 
     # 店长 「あは、さてさて、仲良く気をつけて帰って下さいね？」
-    dinerowner "啊哈哈，那么，回去的时候要好好注意哦？"
+    show 店长_私服_にっこり at love69_wuye_left with dissolve
+    voice "voice/霧葉/krh_a1_0206.ogg"
+    dinerowner 店长_私服_にっこり "啊哈哈，那么，回去的时候要好好注意哦？"
+    hide 店长_私服_微笑み
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -2166,19 +2454,26 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「はーい！　ばいばーい！」
-    ai "好——~bye——bye！"
+    show 心愛_制服_基本_笑顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_0815.ogg"
+    ai 心愛_制服_基本_笑顔 "好——~bye——bye！"
+    hide 心愛_制服_基本_真顔
 
     # nil 「CLOSEの札のかったドアの前で、心愛と並んでお辞儀をする。」
-    "在挂着“CLOSE”牌的门前，和心爱并排和店主辞别"
+    "在挂着“CLOSE”牌的门前，和心爱并排向店主辞别"
 
     # nil 「店主の女性は俺達に微笑み返して、閉店作業のとりかるため、店の奥へと消えていった。」
     "女店主对我们报以微笑，然后消失在店里，准备打烊"
+
+    stop music fadeout 4.0
 
     # scene07 场景2 【说曹操曹操到】 结束
     # scene07 场景3 【和心爱的回家路】 开始
     # 地点： 雾叶小店->通学路街道（夜）
     # 人物： 心爱 莲
     # BGM： 无
+    image bg 通学路c_夜 = "images/bg/通学路c_夜.png"
+    scene 通学路c_夜 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -2186,69 +2481,89 @@ label scene07:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ふあーすっかり夜になっちゃったねー」
-    ai "呼啊，已经完全到晚上了呢"
+    show 心愛_制服_基本_嬉しい at love69_xinai_center with dissolve
+    voice "voice/心愛/cca_a1_0816.ogg"
+    ai 心愛_制服_基本_嬉しい "呼啊，已经完全到晚上了呢"
 
     # 莲 「いやーほんと、待たせてすまなかった」
     lian "哎呀，真的是呢，对不起让你久等了"
 
     # 心爱 「いのいの。さんざん楽しませてもらったしね！」
-    ai "没事的，我玩得很开心呢！"
+    voice "voice/心愛/cca_a1_0817.ogg"
+    ai 心愛_制服_基本_嬉しい "没事的没事的，我玩得很开心呢！"
 
     # 莲 「んあ？　貴様、無防備な俺に何かしやがりましたか」
     lian "嗯？你对毫无防备的我做了什么吗？"
 
     # 心爱 「ひみつー！　にやにや」
-    ai "是秘密！嘻嘻"
+    show 心愛_制服_基本_微笑み at love69_xinai_center with dissolve
+    voice "voice/心愛/cca_a1_0818.ogg"
+    ai 心愛_制服_基本_微笑み "是秘密！嘻嘻"
+    hide 心愛_制服_基本_嬉しい
 
     # 莲 「ならば力尽くでも」
     lian "那么就算我尽全部力气也可以吧"
 
     # 心爱 「ホンゲェー！あ、ほらほら蓮君見て見て！」
-    ai "疼呀！啊，那里哪里莲君快看快看"
+    show 心愛_制服_基本_ポカーン at love69_xinai_center with dissolve
+    voice "voice/心愛/cca_a1_0819.ogg"
+    ai 心愛_制服_基本_ポカーン "疼呀！啊，那里那里莲君快看快看"
+    hide 心愛_制服_基本_微笑み
 
     # 莲 「その手は乗らぬ」
     lian "我不会上当的"
 
     # 心爱 「いから！」
-    ai "好 了 啦！"
+    show 心愛_制服_基本_不機嫌 at love69_xinai_center with dissolve
+    voice "voice/心愛/cca_a1_0820.ogg"
+    ai 心愛_制服_基本_不機嫌 "好 了 啦！"
+    hide 心愛_制服_基本_ポカーン
 
     # 莲 「ん？」
     lian "嗯？"
 
     # 画面切换到天空
+    image bg 天の川 = "images/bg/天の川.png"
+    scene 天の川 at love69_bg1440 with dissolve
 
     # 心爱 「星がこんなに出てるなんて珍しいね！」
-    ai "星星出来这么多真是少见啊！"
+    voice "voice/心愛/cca_a1_0821.ogg"
+    ai 心愛_制服_基本_嬉しい "星星出来这么多真是少见啊！"
 
     # 莲 「おー。そうだな、雨で排気ガスとかが洗い流されたんかな」
     lian "哦。是啊，是不是因为下雨把灰尘都洗掉了呢？"
 
     # 心爱 「あ！！」
-    ai "哦！！"
+    voice "voice/心愛/cca_a1_0822.ogg"
+    ai 心愛_制服_基本_驚き "哦！！"
 
     # 莲 「どうした？」
     lian "怎么了？"
 
     # 心爱 「蓮君みてなかった！？」
-    ai "莲君你没看到吗！？"
+    voice "voice/心愛/cca_a1_0823.ogg"
+    ai 心愛_制服_基本_泣き "莲君你没看到吗！？"
 
     # 莲 「何を？」
     lian "啥？"
 
     # 心爱 「流れ星だよー！　すっごいすっごい！」
-    ai "是流星啊！好厉害好厉害！"
+    voice "voice/心愛/cca_a1_0824.ogg"
+    ai 心愛_制服_基本_笑顔 "是流星啊！好厉害好厉害！"
 
     # 莲 「まじかよ。もう一回流れないかな。そしたら願い事すんのにな」
     lian "真的吗？那能不能再来一次？这样我就能许愿了"
 
     # 心爱 「何を？」
-    ai "你说什么？"
+    voice "voice/心愛/cca_a1_0825.ogg"
+    ai 心愛_制服_基本_真顔 "你说什么？"
 
     # 莲 「んー秘密」
     lian "嗯——秘密"
 
     # 心爱 「ならば力尽くでも！」
-    ai "那我也尽全部力气吧！"
+    voice "voice/心愛/cca_a1_0826.ogg"
+    ai 心愛_制服_基本_真顔 "那我也尽全部力气吧！"
 
     # 莲 「ホンゲェー！」
     lian "啊呀！"
@@ -2257,65 +2572,76 @@ label scene07:
     lian "啊！"
 
     # 心爱 「その手は乗らぬ！」
-    ai "我不会上当的!"
+    voice "voice/心愛/cca_a1_0827.ogg"
+    ai 心愛_制服_基本_真顔 "我不会上当的!"
 
     # 莲 「ちゃうちゃう！　もう一発流れ星流れたんだって！」
     lian "不是！又有一颗流星已经划过去了！"
 
     # 心爱 「え、マジで！？　もー！　余計な事しよってからに！罰として、願い事を言いなさい」
-    ai "啊，真的！？真是的！别多管闲事了！作为惩罚，请说出你的愿望"
+    voice "voice/心愛/cca_a1_0828.ogg"
+    ai 心愛_制服_基本_不機嫌 "啊，真的！？真是的！别多管闲事了！作为惩罚，请说出你的愿望"
 
     # 莲 「えー。じゃぁその後お前の願い事も教えてくれよ」
     lian "嗯——那之后也告诉我你的愿望吧"
 
     # 心爱 「だめだ」
-    ai "不行"
+    voice "voice/心愛/cca_a1_0829.ogg"
+    ai 心愛_制服_基本_真顔 "不行"
 
     # 莲 「もう一度言ってみろ」
     lian "你再说一遍"
 
     # 心爱 「だめだ」
-    ai "不行"
+    voice "voice/心愛/cca_a1_0830.ogg"
+    ai 心愛_制服_基本_真顔 "不行"
 
     # 莲 「なんでや」
     lian "为什么呢？"
 
     # 心爱 「なんでも」
-    ai "不为什么"
+    voice "voice/心愛/cca_a1_0831.ogg"
+    ai 心愛_制服_基本_無表情 "不为什么"
 
     # 莲 「じゃぁ俺も言わない」
     lian "那我也不说了"
 
     # 莲&心爱 「あ」
     # 也要记得去人物表加人
-    lian_ai "哦"
+    voice "voice/心愛/cca_a1_0832.ogg"
+    lian_ai 心愛_制服_基本_驚き "哦"
 
     # 莲 「（どうか、もっと真冬と心愛が幸せになれますように）」
     lian "（请一定要让真冬和心爱变得更加幸福）"
 
     # 心爱 「（どうか、もっと蓮くんと真冬ちゃんが幸せになれますように）」
-    ai "（请一定要让莲君和真冬酱更加幸福）"
+    voice "voice/心愛/cca_a1_0833.ogg"
+    ai 心愛_制服_基本_にっこり "（请一定要让莲君和真冬酱更加幸福）"
 
     # 莲 「願えたか？」
     lian "许愿了吗？"
 
     # 心爱 「なんとか」
-    ai "勉强吧"
+    voice "voice/心愛/cca_a1_0834.ogg"
+    ai 心愛_制服_基本_真顔 "勉强吧"
 
     # 莲&心爱 「『なぁ（ねぇ）』」
+    # 没有配音
     lian_ai "『呐（那个）』"
 
     # 莲 「お先にどうぞ」
     lian "你先说吧"
 
     # 心爱 「蓮くんからどうぞ」
-    ai "莲君先说吧"
+    voice "voice/心愛/cca_a1_0835.ogg"
+    ai 心愛_制服_基本_真顔 "莲君先说吧"
 
     # 莲 「レディファーストだ」
     lian "女士优先"
 
     # 心爱 「やだー」
-    ai "亚哒——"
+    voice "voice/心愛/cca_a1_0836.ogg"
+    ai 心愛_制服_基本_不機嫌 "亚哒——"
 
     # 莲 「むー」
     lian "那么"
@@ -2331,13 +2657,15 @@ label scene07:
     lian "今天啊，我家，要来吗？"
 
     # 心爱 「…うんっ」
-    ai "…嗯"
+    voice "voice/心愛/cca_a1_0837.ogg"
+    ai 心愛_制服_基本_にっこり "…嗯"
 
     # nil 「恥ずかしくなって、もう一度二人で夜空を見上げる。」
     "感到害羞，两个人再次仰望夜空"
 
     # 心爱 「いこっか」
-    ai "出发吧"
+    voice "voice/心愛/cca_a1_0838.ogg"
+    ai 心愛_制服_基本_笑顔 "出发吧"
 
     # 莲 「そうだな」
     lian "是啊"
@@ -2356,71 +2684,110 @@ label scene07:
     "虽然脚开始慢慢地前进，但视线回到前面似乎还需要一些时间"
 
     # 画面切回街道
+    scene 通学路c_夜 at love69_bg1440 with dissolve
 
-    # 心爱 「あ、ケーキちゃんと個入ってるじゃん」
-    ai "啊，里面不是有个蛋糕吗?"
+    # 心爱 「あ、ケーキちゃんと3個入ってるじゃん」
+    show 心愛_制服_基本_嬉しい at love69_xinai_center with dissolve
+    voice "voice/心愛/cca_a1_0839.ogg"
+    ai 心愛_制服_基本_嬉しい "啊，里面不是有3个蛋糕吗?"
 
     # 莲 「で、お前は何を言おうとしたの」
     lian "那么，你想说什么捏？"
 
     # 心爱 「ん？　なにが？　さっきの？」
-    ai "嗯？什么？刚才那个？"
+    show 心愛_制服_基本_驚き at love69_xinai_center with dissolve
+    voice "voice/心愛/cca_a1_0840.ogg"
+    ai 心愛_制服_基本_驚き "嗯？什么？刚才那个？"
+    hide 心愛_制服_基本_嬉しい
 
     # 莲 「うん」
     lian "嗯"
 
     # 心爱 「秘密」
-    ai "秘密"
+    show 心愛_制服_基本_にっこり at love69_xinai_center with dissolve
+    voice "voice/心愛/cca_a1_0841.ogg"
+    ai 心愛_制服_基本_にっこり "秘密"
+    hide 心愛_制服_基本_驚き
 
     # 莲 「3回目はだめだ」
     lian "第三次也不行吗"
 
     # 心爱 「むー」
-    ai "嗯——"
+    show 心愛_制服_基本_不機嫌 at love69_xinai_center with dissolve
+    voice "voice/心愛/cca_a1_0842.ogg"
+    ai 心愛_制服_基本_不機嫌 "嗯——"
+    hide 心愛_制服_基本_にっこり
 
     # 心爱 「…」
-    ai "……"
+    show 心愛_制服_基本_真顔 at love69_xinai_center with dissolve
+    voice "voice/心愛/cca_a1_0843.ogg"
+    ai 心愛_制服_基本_真顔 "……"
+    hide 心愛_制服_基本_不機嫌
 
     # 心爱 「笑わない？」
-    ai "不会笑吗？"
+    show 心愛_制服_基本_不機嫌 at love69_xinai_center with dissolve
+    voice "voice/心愛/cca_a1_0844.ogg"
+    ai 心愛_制服_基本_不機嫌 "不会笑吗？"
+    hide 心愛_制服_基本_真顔
 
     # 莲 「多分」
     lian "大概"
 
     # 心爱 「多分じゃやだ！」
-    ai "不要大概！"
+    voice "voice/心愛/cca_a1_0845.ogg"
+    ai 心愛_制服_基本_不機嫌 "不要大概！"
 
     # 莲 「じゃぁ笑わない」
     lian "那我就不笑了"
 
     # 心爱 「じゃあ言う」
-    ai "那么我说了"
+    show 心愛_制服_基本_真顔 at love69_xinai_center with dissolve
+    voice "voice/心愛/cca_a1_0846.ogg"
+    ai 心愛_制服_基本_真顔 "那么我说了"
+    hide 心愛_制服_基本_不機嫌
 
     # 心爱 「…」
-    ai "……"
+    voice "voice/心愛/cca_a1_0847.ogg"
+    ai 心愛_制服_基本_真顔 "……"
 
     # 莲 「…」
     lian "……"
 
     # 心爱 「今日、家、行って良い…？　って」
-    ai "今天、你家、可以……去…吗？"
+    show 心愛_制服_基本_泣き at love69_xinai_center with dissolve
+    voice "voice/心愛/cca_a1_0848.ogg"
+    ai 心愛_制服_基本_泣き "今天、你家、可以……去…吗？"
+    hide 心愛_制服_基本_真顔
 
     # 莲 「ぷっ」
     lian "噗"
 
     # 心爱 「貴っ様ァア！　やはりケーキは私が食らいつくしてやるからな！」
-    ai "你这混蛋！果然我要把蛋糕全部吃光！"
+    show 心愛_制服_基本_真顔 at love69_xinai_center with dissolve
+    voice "voice/心愛/cca_a1_0849.ogg"
+    ai 心愛_制服_基本_真顔 "你这混蛋！果然我要把蛋糕全部吃光！"
+    hide 心愛_制服_基本_泣き
 
     # 莲 「ホンゲェー！」
     lian "真是的！"
 
-    # nil 「ちなみに心愛ちゃんは誘惑に耐えきれず、家につくまえにケーキをマジで個平らげました。」
-    "顺便一提，心爱酱经不住诱惑，在到家之前真的吃掉了一块蛋糕"
+    # nil 「ちなみに心愛ちゃんは誘惑に耐えきれず、家につくまえにケーキをマジで2個平らげました。」
+    "顺便一提，心爱酱经不住诱惑，在到家之前真的吃掉了两块蛋糕"
 
     # scene07 场景3 【和心爱的回家路】 结束
     # scene07 结束！
     # 今天Star过10，果然动力超强！一天肝了100多行，直接结束scene07，好耶！
 
     # 过场：心爱（常服）
+
+    # 隐藏 quick_menu
+    $ quick_menu = False
+
+    play sound "voice/effect/moosehead honk (stinger).ogg"
+
+    scene black
+    scene アイキャッチ心愛 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
+
+    $ renpy.pause(1.5, hard=True)
 
     jump scene08
