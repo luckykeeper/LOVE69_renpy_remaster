@@ -123,6 +123,11 @@ image side 心愛 心愛_トランザム = "images/face/心愛/心愛_トラン�
 image side 心愛 心愛_ラフ = "images/face/心愛/心愛_ラフ.png" # 粗线条描绘的心爱酱
 image side 心愛 心愛_制服_基本_覚醒 = "images/face/心愛/心愛_制服_基本_覚醒.png" # 基于无表情，眼睛深红
 image side 心愛 心愛_制服_基本_覚醒01 = "images/face/心愛/心愛_制服_基本_覚醒01.png" # 基于真顔，眼睛深红
+image side 心愛 心愛_制服_基本_ペコちゃん = "images/face/心愛/心愛_制服_基本_ペコちゃん.png" # 心爱奇奇怪怪的表情，有点像小丑的感觉
+image side 心愛 心愛_制服_基本_ポカーン = "images/face/心愛/心愛_制服_基本_ポカーン.png" # 心爱翻白眼了
+
+# 没有表情，所以不指定 image
+define lian_ai = Character("莲&心爱",color="#ffc9be",image="心愛")
 
 # 下面定义不知道是谁的时候的心爱
 # 知不道的人物使用发色称呼
@@ -208,6 +213,7 @@ image side 真冬 真冬_大_私服_基本_目閉じ = "images/face/真冬/真�
 image side 真冬 真冬_通話中 = "images/face/真冬/真冬_通話中.png" # 装在携带里面的真冬
 
 # 心爱&真冬 心爱和真冬共同出现，以为头像是真冬的所以用真冬的颜色
+##　只需要指定　image="真冬"　，不需要单独指定表情了
 define ai_dong =  Character('心爱&真冬',color="#4da8c0",image="真冬")
 
 # 常服系列
@@ -322,6 +328,7 @@ image side 店长 店长_私服_無表情 = "images/face/店长/店长_私服_�
 image side 店长 店长_私服_ジト目 = "images/face/店长/店长_私服_ジト目.png" # 睁眼，手撑头，嘴椭圆，一脸正经
 image side 店长 店长_私服_不満_1 = "images/face/店长/店长_私服_不満_1.png" # 睁眼，手撑头，闭嘴，不高兴，脸红
 image side 店长 店长_私服_不満 = "images/face/店长/店长_私服_不満.png" # 睁眼，手撑头，闭嘴，不高兴
+image side 店长 店长_私服_本気 = "images/face/店长/店长_私服_本気.png" # 睁眼，手撑头，嘴张大
 
 # 下面定义不知道是谁的时候的雾叶
 # 知不道的人物使用发色称呼
@@ -363,6 +370,9 @@ define wsa = Character('女学生A',color="#ffffff")
 
 # bear 熊 （Woman Student A） 不加颜色的统一强制指定白色（#ffffff）
 define bear = Character('熊',color="#ffffff")
+
+# 莲&店长
+define lian_and_dinerowner = Character('莲&店长',color="#414141",image="店长")
 
 # 人物名称定义结束
 # ---------------------------------------------
