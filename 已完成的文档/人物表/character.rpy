@@ -7,7 +7,7 @@
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月28日
-# 修订日期 2022年2月15日
+# 修订日期 2022年2月17日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -76,6 +76,7 @@ image side 心愛 心愛_制服_基本_微笑み1 = "images/face/心愛/心愛_�
 image side 心愛 心愛_制服_基本_ぐるぐる = "images/face/心愛/心愛_制服_基本_ぐるぐる.png" # 眼睛咕哩咕噜转圈圈
 image side 心愛 心愛_制服_基本_覚醒02 = "images/face/心愛/心愛_制服_基本_覚醒02.png" # 心爱觉醒，眼睛变成蛇的样子，眼睛微眯
 image side 心愛 心愛_制服_基本_まふまふ = "images/face/心愛/心愛_制服_基本_まふまふ.png" # 基于笑顔，闭眼，两个粉椭圆
+image side 心愛 心愛_制服_基本_ポカーン = "images/face/心愛/心愛_制服_基本_ポカーン.png" # 心爱翻白眼了
 
 # 常服_奶糖苹果系列
 image side 心愛 心愛_制服_おやつ_にっこり = "images/face/心愛/心愛_制服_おやつ_にっこり.png" # 闭眼，微笑，拿着奶糖苹果
@@ -118,13 +119,21 @@ image side 心愛 心愛_大_制服_基本_ニタァ = "images/face/心愛/心�
 image side 心愛 心愛_大_制服_基本_驚き = "images/face/心愛/心愛_大_制服_基本_驚き.png" # 大，睁眼，惊讶
 image side 心愛 心愛_大_制服_基本_笑顔 = "images/face/心愛/心愛_大_制服_基本_笑顔.png" # 大，睁眼，嘴o
 
+# 水着系列
+# image side 心愛 心愛_水着_基本_ポカーン = "images/face/心愛/心愛_水着_基本_ポカーン.png" # 心爱翻白眼了
+
+# 下着系列
+image side 心愛 心愛_下着_基本_ポカーン = "images/face/心愛/心愛_下着_基本_ポカーン.png" # 心爱翻白眼了
+image side 心愛 心愛_下着_基本_まふまふ = "images/face/心愛/心愛_下着_基本_まふまふ.png" # 基于笑顔，闭眼，两个粉椭圆
+image side 心愛 心愛_下着_基本_驚き = "images/face/心愛/心愛_下着_基本_驚き.png" # 睁眼，惊讶
+
 # 其它
 image side 心愛 心愛_トランザム = "images/face/心愛/心愛_トランザム.png" # 全身变红，心爱真·觉醒！
 image side 心愛 心愛_ラフ = "images/face/心愛/心愛_ラフ.png" # 粗线条描绘的心爱酱
 image side 心愛 心愛_制服_基本_覚醒 = "images/face/心愛/心愛_制服_基本_覚醒.png" # 基于无表情，眼睛深红
 image side 心愛 心愛_制服_基本_覚醒01 = "images/face/心愛/心愛_制服_基本_覚醒01.png" # 基于真顔，眼睛深红
+image side 心愛 心愛_下着_基本_覚醒3 = "images/face/心愛/心愛_下着_基本_覚醒3.png" # 基于真顔，眼睛深红，需要注意和别的很像，睫毛是"-""
 image side 心愛 心愛_制服_基本_ペコちゃん = "images/face/心愛/心愛_制服_基本_ペコちゃん.png" # 心爱奇奇怪怪的表情，有点像小丑的感觉
-image side 心愛 心愛_制服_基本_ポカーン = "images/face/心愛/心愛_制服_基本_ポカーン.png" # 心爱翻白眼了
 
 # 没有表情，所以不指定 image
 define lian_ai = Character("莲&心爱",color="#ffc9be",image="心愛")
@@ -167,6 +176,7 @@ image side 真冬 真冬_制服_基本_泣き = "images/face/真冬/真冬_制�
 image side 真冬 真冬_制服_基本_泣き_1 = "images/face/真冬/真冬_制服_基本_泣き_1.png"
 image side 真冬 真冬_制服_基本_見下し = "images/face/真冬/真冬_制服_基本_見下し.png" # 闭眼，眉毛y=-x，嘴o
 image side 真冬 真冬_制服_基本_見下し2 = "images/face/真冬/真冬_制服_基本_見下し2.png"
+image side 真冬 真冬_制服_基本_見下し3 = "images/face/真冬/真冬_制服_基本_見下し3.png" # 眼睁大，眉毛y=-x，嘴-，非常生气
 image side 真冬 真冬_制服_基本_にっこり = "images/face/真冬/真冬_制服_基本_にっこり.png" # 闭眼，微笑
 image side 真冬 真冬_制服_基本_にっこり_1 = "images/face/真冬/真冬_制服_基本_にっこり_1.png"
 image side 真冬 真冬_制服_基本_まったり = "images/face/真冬/真冬_制服_基本_まったり.png" # 闭眼，嘴“w”，嘛呼嘛呼
@@ -177,6 +187,7 @@ image side 真冬 真冬_制服_基本_ニタァ = "images/face/真冬/真冬_�
 # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 04
 image side 真冬 真冬_制服_基本_居眠り = "images/face/真冬/真冬_制服_基本_居眠り.png" # 闭眼，嘴开口，半圆，碎着辽~
 image side 真冬 真冬_制服_基本_キス = "images/face/真冬/真冬_制服_基本_キス.png" # kiss准备
+image side 真冬 真冬_制服_基本_号泣 = "images/face/真冬/真冬_制服_基本_号泣.png" # 闭眼，嘴开口，圆，嚎啕大哭
 
 # 裸y衬衫系列
 image side 真冬 真冬_裸yシャツ_パンツ_無表情 = "images/face/真冬/真冬_裸yシャツ_パンツ_無表情.png" # 字面意思，睁眼，嘴·
@@ -247,6 +258,7 @@ define lion = Character('里昂',color="#fff7bb",image="リオン")
 # 定义里昂的立绘
 # 显示在画面中的
 
+# 常服系列
 image side リオン リオン_帽子無し_杖_微笑み = "images/face/リオン/リオン_帽子無し_杖_微笑み.png" # 睁眼，没帽子，拿杖，微笑
 image side リオン リオン_基本_杖_微笑み = "images/face/リオン/リオン_基本_杖_微笑み.png" # 睁眼，有帽子，拿杖，微笑
 image side リオン リオン_帽子無し_杖なし_微笑み = "images/face/リオン/リオン_帽子無し_杖なし_微笑み.png" # 睁眼，没帽子，没杖，微笑
@@ -264,6 +276,9 @@ image side リオン リオン_基本_杖_悲しい2 = "images/face/リオン/�
 image side リオン リオン_基本_杖_無表情 = "images/face/リオン/リオン_基本_杖_無表情.png" # 睁眼，有帽子，拿杖，莫得感情
 image side リオン リオン_基本_杖_見下し = "images/face/リオン/リオン_基本_杖_見下し.png" # 睁眼，有帽子，拿杖，嘴三角圆
 image side リオン リオン_基本_杖_ぶわー = "images/face/リオン/リオン_基本_杖_ぶわー.png" # 睁眼，有帽子，拿杖，是和心爱一样标志性的哭呢
+
+# 私服系列
+image side リオン リオン_私服_基本_ジト目 = "images/face/リオン/リオン_私服_基本_ジト目.png" # 睁眼，没帽子，没拿杖，皱眉，嘴倒三角
 
 # 下面定义不知道是谁的时候的里昂
 # 知不道的人物使用发色称呼
@@ -357,7 +372,7 @@ image side MJ MJ_通常 = "images/face/MJ/MJ_通常.png" # MJ
 define bai = Character('旁白君',color="#ffffff")
 
 # テしビ tv 不加颜色的统一强制指定白色（#ffffff）
-define tv = Character('TV',color="#ffffff")
+define tv = Character('TV',color="#ffffff",image="リオン")
 
 # 翻译君（我自己） Luckykeeper 用于写长段注释，图标从QQ头像来（要圆的）//译者君的颜色是从个人博客的favion图案里面来哒，和心爱的颜色很像哦~
 define luckykeeper = Character('Luckykeeper',color="#ffc0cb")
