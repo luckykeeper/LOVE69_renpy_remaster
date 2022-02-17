@@ -5,7 +5,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年2月6日
+# 修订日期 2022年2月18日
 # 版本号 0.4 "LuckyDev"
 # 源文件名：gui.rpy
 
@@ -416,8 +416,8 @@ define gui.language = "unicode"
 
 ########
 # 音频测试 sample
-define config.sample_sound = "voice/effect/07_ドア1～あける.ogg"
-define config.sample_voice = "voice/心愛/cca_a1_0331.ogg"
+define config.sample_sound = "voice/effect/05_玄関チャイム.ogg"
+define config.sample_voice = "voice/心愛/cca_a1_1136.ogg"
 
 
 ################################################################################
