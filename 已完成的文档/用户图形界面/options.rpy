@@ -5,7 +5,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月25日
+# 修订日期 2022年2月18日
 # 版本号 0.4 "LuckyDev"
 
 
@@ -92,7 +92,7 @@ define config.has_voice = True
 
 # define config.sample_sound = "sample-sound.ogg"
 # define config.sample_voice = "sample-voice.ogg"
-# 这个写到Screen了
+# 这个写到gui了
 
 
 ## 将以下语句取消注释就可以设置标题界面播放的背景音乐文件。此文件将在整个游戏中
