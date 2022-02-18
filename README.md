@@ -2,7 +2,7 @@
 <h2 align="center">LOVE69 Ren’Py Remaster Project</h2>
 <h3 align="center">使用 Ren'Py 重制 LOVEPOTION SIXTYNINE ，并加以汉化和全平台移植</h3>
 
-<p align="center"><img src=https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster>  <img src=https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster>  <img src=https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster> <a href="https://www.codacy.com/gh/luckykeeper/LOVE69_renpy_remaster/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=luckykeeper/LOVE69_renpy_remaster&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/384c6954686c45ab968865348461f267"/></a><img src="https://img.shields.io/badge/Ren'Py%E7%89%88%E6%9C%AC-7.4.6-blue.svg">  <img src=https://app.travis-ci.com/love69renpyremasterproject/love69renpyremasterproject.github.io.svg?branch=main&status=passed><a href="https://github.com/luckykeeper/LOVE69_renpy_remaster/releases"><img src="https://img.shields.io/github/v/release/luckykeeper/LOVE69_renpy_remaster?include_prereleases"></a><a href="https://github.com/LOVE69-Renpy-Remaster-Project/Doc"><img src="https://img.shields.io/badge/%E6%96%87%E6%A1%A3-%E6%88%B3%E8%BF%99%E9%87%8C-brightgreen.svg"></a><a href="https://eatcocoa.luckykeeper.site:44443/"><img src="https://img.shields.io/badge/%E5%B0%8F%E6%B8%B8%E6%88%8F-%E6%88%B3%E8%BF%99%E9%87%8C-blue.svg"></a><a href="https://love69renpyremasterproject.github.io/"><img src="https://img.shields.io/badge/%E9%A1%B9%E7%9B%AE%E7%BB%84%E5%AE%98%E7%BD%91-%E6%88%B3%E8%BF%99%E9%87%8C-brightgreen.svg"></a></p>
+<p align="center"><img src=https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster>  <img src=https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster>  <img src=https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster> <a href="https://www.codacy.com/gh/luckykeeper/LOVE69_renpy_remaster/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=luckykeeper/LOVE69_renpy_remaster&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/384c6954686c45ab968865348461f267"/></a><img src="https://img.shields.io/badge/Ren'Py%E7%89%88%E6%9C%AC-7.4.6-blue.svg">  <img src=https://app.travis-ci.com/love69renpyremasterproject/love69renpyremasterproject.github.io.svg?branch=main&status=passed><a href="https://github.com/luckykeeper/LOVE69_renpy_remaster/releases"><img src="https://img.shields.io/github/v/release/luckykeeper/LOVE69_renpy_remaster?include_prereleases"></a><a href="https://love69-renpy-remaster-project.github.io/Doc/"><img src="https://img.shields.io/badge/%E6%96%87%E6%A1%A3-%E6%88%B3%E8%BF%99%E9%87%8C-brightgreen.svg"></a><a href="https://eatcocoa.luckykeeper.site:44443/"><img src="https://img.shields.io/badge/%E5%B0%8F%E6%B8%B8%E6%88%8F-%E6%88%B3%E8%BF%99%E9%87%8C-blue.svg"></a><a href="https://love69renpyremasterproject.github.io/"><img src="https://img.shields.io/badge/%E9%A1%B9%E7%9B%AE%E7%BB%84%E5%AE%98%E7%BD%91-%E6%88%B3%E8%BF%99%E9%87%8C-brightgreen.svg"></a></p>
 
 ------
 
@@ -266,7 +266,7 @@ WEB版 Demo实机运行页面
 
 - 出于各种原因，本次汉化移植并不会对“gkd”的内容（即 Hscene ）进行汉化和移植，各位绅士还请谅解，请积极考虑购买正版支持原作团队![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
 
-- 本页面最后修改时间 2022年2月18日
+- 本页面最后修改时间 2022年2月19日
 
 - 本页是 V2 版的 Readme ，第一版 Readme 考古戳[这里](./README_old.md)
 
