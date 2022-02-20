@@ -6,9 +6,11 @@ on:
       - main
 
 jobs:
-  build:
-    runs-on: ubuntu-20.04
+  run:
+    runs-on: ubuntu-latest
     steps:
+    - name: Checkout source codes
+      uses: actions/checkout@v1
 
     - name: 自动同步代码到 Gitee
       uses: Yikun/hub-mirror-action@master
@@ -19,3 +21,4 @@ jobs:
         dst_token:  ${{ secrets.GITEE_TOKEN }}
         static_list: "LOVE69_renpy_remaster"
         debug: true
+        force_update: true
