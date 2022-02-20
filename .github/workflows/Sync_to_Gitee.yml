@@ -15,8 +15,8 @@ jobs:
     - name: 自动同步代码到 Gitee
       uses: Yikun/hub-mirror-action@master
       with:
-        src: github.com/luckykeeper
-        dst: gitee.com/luckykeeper
+        src: github/luckykeeper
+        dst: gitee/luckykeeper
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token:  ${{ secrets.GITEE_TOKEN }}
         static_list: "LOVE69_renpy_remaster"
