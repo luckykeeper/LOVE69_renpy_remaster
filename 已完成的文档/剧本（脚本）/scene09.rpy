@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年2月18日
+# 修订日期 2022年2月22日
 
 # 当前流程：编写脚本AIO Process
 
@@ -3729,7 +3729,9 @@ label scene09:
     # voice "voice/真冬/maf_a1_0866.ogg"
     ## 跳过了，没有按顺序来，整个大概听了一边，感觉心爱的1691，1715，1216最像，真冬那边没有发现
     # 选1216
-    voice "voice/心愛/cca_a1_1216.ogg"
+    # 太淦了，就不在心爱文件夹里面，离谱！
+    # voice "voice/心愛/cca_a1_1216.ogg"
+    voice "voice/その他/ex2_a1_0001.ogg"
     dong_ai 心愛_制服_基本_ぐるぐる "『啊！』"
 
     # nil 「その突如、真冬と心愛は一歩身を引いて、俺から距離を取った。」
@@ -4644,7 +4646,9 @@ label scene09:
     ##### https://github.com/charlesconnell/AudioCompare
     ## 这里不知道为啥，没有正常显示头像捏
     ### 是 image 写错了，注意简繁体
-    voice "voice/s9_4383（は、ぁうっ…ば、ばかぁっ…）.ogg"
+    # voice "voice/s9_4383（は、ぁうっ…ば、ばかぁっ…）.ogg"
+    # 找到了，原作又在乱放文件了
+    voice "voice/その他/ex2_a1_0002.ogg"
     dong_ai 心愛_制服_基本_不機嫌 "哈、啊啊啊……笨、笨蛋……"
     hide 心愛_制服_基本_笑顔
 
@@ -4715,7 +4719,9 @@ label scene09:
     # 坏了，这个也跳过了
     # voice "voice/真冬/maf_a1_0906.ogg"
     # voice "voice/心愛/cca_a1_1184.ogg"
-    voice "voice/dash.ogg"
+    # voice "voice/dash.ogg"
+    # 找到了，原作又在乱放文件了
+    voice "voice/その他/ex2_a1_0003.ogg"
     dong_ai 心愛_制服_基本_笑顔 "dash！"
 
     # 莲 「まじすか！　っておい！　容赦なしかよ！」
