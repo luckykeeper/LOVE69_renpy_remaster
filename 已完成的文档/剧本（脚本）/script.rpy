@@ -7,7 +7,7 @@
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开坑日期 2021年8月28日
-# 修订日期 2022年2月18日
+# 修订日期 2022年2月28日
 
 #----------------------------------------------------------------
 # 主程序开始
@@ -974,7 +974,7 @@ image letsrock:
     pause 0.0166666666666667
 
 #######################################################################################
-# 定义STAFF 动画
+# 定义 STAFF 动画
 image staff:
     "images/pac/staff/00000001.png"
     pause 0.0166666666666667
@@ -3891,6 +3891,150 @@ image staff:
     "images/pac/staff/00001457.png"
     pause 0.0166666666666667
 
+#######################################################################################
+# 定义紙吹雪动画
+image papersnow:
+    "images/pac/紙吹雪/00000001.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000002.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000003.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000004.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000005.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000006.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000007.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000008.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000009.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000010.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000011.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000012.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000013.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000014.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000015.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000016.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000017.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000018.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000019.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000020.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000021.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000022.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000023.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000024.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000025.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000026.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000027.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000028.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000029.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000030.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000031.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000032.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000033.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000034.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000035.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000036.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000037.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000038.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000039.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000040.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000041.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000042.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000043.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000044.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000045.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000046.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000047.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000048.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000049.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000050.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000051.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000052.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000053.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000054.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000055.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000056.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000057.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000058.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000059.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000060.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000061.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000062.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000063.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000064.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000065.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000066.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000067.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000068.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000069.png"
+    pause 0.0166666666666667
+    "images/pac/紙吹雪/00000070.png"
+    pause 0.0166666666666667
+
 ###### 定义：界面（screen） ####
 # align (0.5,0.5)阔以将其放在中间
 screen callscr:
@@ -3901,6 +4045,9 @@ screen letsrockscr:
 
 screen staff:
     add "staff" align (0.5,0.5)
+
+screen papersnow:
+    add "papersnow" align (0.5,0.5)
 
 
 # 真冬介绍动画不做了，参考scene01的166行
