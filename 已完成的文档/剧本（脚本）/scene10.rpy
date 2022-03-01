@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年2月28日
+# 修订日期 2022年3月1日
 
 # 当前流程：编写脚本AIO Process
 
@@ -398,6 +398,12 @@ label scene10:
 
     # 特效：纸吹雪，不好实现考虑直接做成视频
     # 音效：放炮
+
+    # 通过下面的写法可以同时让多个图像 dissolve
+    show 心愛_yシャツ_パンツ有り_笑顔 at love69_right
+    show 真冬_裸yシャツ_パンツ_微笑み at love69_left
+    with dissolve
+
     play sound "voice/effect/22_クラッカー.ogg"
     show screen papersnow
 
@@ -407,10 +413,13 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 真冬&心爱 「『おかえりなさい！　彼氏くん！』」
-    dong_ai "欢迎回来！男朋友！"
+    voice "voice/真冬/maf_a1_0916.ogg"
+    dong_ai 心愛_yシャツ_パンツ有り_笑顔 "欢迎回来！男朋友！"
 
     # 莲 「お、おう…」
     lian "啊，嗯……"
+
+    hide screen papersnow
 
     # nil 「扉をあけると…裸Ｙシャツ姿の真冬と心愛が笑顔で並んでいた。」
     # L:前面所有的裸Ｙシャツ全部统一翻译裸Ｙ衬衫好了，应该从字面意义上就能看懂
@@ -425,7 +434,8 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「えーと、ご飯にするー？」
-    ai "那个，要吃饭吗？"
+    voice "voice/心愛/cca_a1_1198.ogg"
+    ai 心愛_yシャツ_パンツ有り_笑顔 "那个，要吃饭吗？"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -433,20 +443,26 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「お風呂にするー？」
-    dong "去洗澡吗？"
+    voice "voice/真冬/maf_a1_0917.ogg"
+    dong 真冬_裸yシャツ_パンツ_微笑み "去洗澡吗？"
 
     # 心爱&真冬 「『そーれーとーもー？』」
-    ai_dong "『还——是——说——要——？』"
+    voice "voice/真冬/maf_a1_0918.ogg"
+    ai_dong 真冬_裸yシャツ_パンツ_微笑み "『还——是——说——要——？』"
 
     # 心爱&真冬 「『わたしたちにする？』」
-    ai_dong "『吃掉我们呢？』"
+    voice "voice/真冬/maf_a1_0919.ogg"
+    ai_dong 真冬_裸yシャツ_パンツ_微笑み "『吃掉我们呢？』"
 
     # 莲 「飯だな」
     lian "吃饭吧"
 
     # 真冬 「リテイク！」
     # 参考资料：https://www.esp.ac.jp/epv/glossary/09_02.html
-    dong "Retake！（L:声优业界用语，指重新录制或重新拍摄）"
+    show 真冬_裸yシャツ_基本_見下し3 at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0920.ogg"
+    dong 真冬_裸yシャツ_基本_見下し3 "Retake！（L:声优业界用语，指重新录制或重新拍摄）"
+    hide 真冬_裸yシャツ_パンツ_微笑み
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -454,7 +470,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「はいテイク２はいりまーす！」
-    ai "好，准备好Take 2（L:这里不是前面提到的喜剧二人组テイク２，是重来第二次的意思，常见于拍戏）"
+    show 心愛_yシャツ_パンツ有り_真顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1201.ogg"
+    ai 心愛_yシャツ_パンツ有り_真顔 "好，准备好Take 2（L:这里不是前面提到的喜剧二人组テイク２，是重来第二次的意思，常见于拍戏）"
+    hide 心愛_yシャツ_パンツ有り_笑顔
 
     # 莲 「え…」
     lian "诶…"
