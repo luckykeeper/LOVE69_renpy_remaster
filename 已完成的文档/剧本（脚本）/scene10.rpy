@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月1日
+# 修订日期 2022年3月2日
 
 # 当前流程：编写脚本AIO Process
 
@@ -475,11 +475,13 @@ label scene10:
     ai 心愛_yシャツ_パンツ有り_真顔 "好，准备好Take 2（L:这里不是前面提到的喜剧二人组テイク２，是重来第二次的意思，常见于拍戏）"
     hide 心愛_yシャツ_パンツ有り_笑顔
 
-    # 莲 「え…」
+    # 莲 「ええ…」
     lian "诶…"
 
     # 场景切换：葛城家玄关->葛城家门口
     # 时间切换到最开始
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene 自宅_夕 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 莲 「すいません送ってもらっちゃって」
     lian "抱歉让你送我回来了"
@@ -518,12 +520,15 @@ label scene10:
     "我又按了一次门铃"
 
     # 叮咚x1
+    play sound "voice/effect/05_玄関チャイム.ogg"
 
     # nil 「ガチャンと鍵があけられたので、ドアを開ける。」
     "门锁砰的一声转动，我打开了门"
 
     # 开门声
     # 场景切换：葛城家门口->葛城家玄关
+    play sound "voice/effect/07_ドア1～あける.ogg"
+    scene 玄関_夕 at love69_bg1440 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=64, reverse=True, alpha=True, time_warp=None)
 
     # 莲 「ただいまー」
     lian "我回来啦——"
@@ -540,8 +545,8 @@ label scene10:
     # nil 「そして…」
     "然后…"
 
-    # 莲 「うおあっ！」
-    lian "呜啊！"
+    # 莲 「うおあっ！！」
+    lian "呜啊！！"
 
     # nil 「ヒュンッ！」
     "咻——！"
@@ -568,7 +573,9 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「かわしたのでテイク３入りまーす」
-    dong "因为被躲开了，所以现在开始Take 3——！"
+    show 真冬_裸yシャツ_基本_見下し3 at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0921.ogg"
+    dong 真冬_裸yシャツ_基本_見下し3 "因为被躲开了，所以现在开始Take 3——！"
 
     # 莲 「もうやめてくれ！」
     lian "放过我吧！"
@@ -579,7 +586,9 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「食らえ！」
-    ai "给我恰！"
+    show 心愛_yシャツ_パンツ有り_笑顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1202.ogg"
+    ai 心愛_yシャツ_パンツ有り_笑顔 "给我恰！"
 
     # 莲 「ぐふっ」
     lian "嘎呜"
@@ -587,6 +596,8 @@ label scene10:
     # scene10 场景1 【按捺不住激动心情飞回家的莲君】 结束
     # scene10 场景2 【果然还是要先恰饭再洗澡，最后才是……】 开始
     # 场景切换：葛城家玄关->葛城家客厅
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=True, alpha=True, time_warp=None)
+    scene リビングa_夜 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=True, alpha=True, time_warp=None)
 
     # nil 「結局ご飯になりました。」
     "结果还是先去吃了饭"
@@ -600,7 +611,9 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「興が冷める事をしちゃだめだよお兄ちゃんこの野郎」
-    dong "别做让人扫兴的事哦，欧尼酱你这个混蛋"
+    show 真冬_裸yシャツ_基本_見下し3 at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0922.ogg"
+    dong 真冬_裸yシャツ_基本_見下し3 "别做让人扫兴的事哦，欧尼酱你这个混蛋"
 
     # 莲 「面目ない」
     # 参考资料：https://www.weblio.jp/content/%E9%9D%A2%E7%9B%AE%E3%81%AA%E3%81%84
@@ -613,7 +626,9 @@ label scene10:
 
     # 心爱 「もぐもぐもぐもぐ。やっぱり福島の米はうめぇな！」
     # https://www.pref.fukushima.lg.jp/site/portal-zhc/ 惊了，这个语言选项有点多
-    ai "咕呜咕呜咕呜咕呜。果然还是福岛的米好吃啊！（L:这里应该是指福岛县，核电站是2011年的事，本作是2013年的，根据农林水产省提供的统计数据(2009)，福岛县出产948亿日元的大米(日本第五)，福岛市第一产业占日本第一）"
+    show 心愛_yシャツ_パンツ有り_もぐもぐ at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1203.ogg"
+    ai 心愛_yシャツ_パンツ有り_もぐもぐ "咕呜咕呜咕呜咕呜。果然还是福岛的米好吃啊！（L:这里应该是指福岛县，核电站是2011年的事，本作是2013年的，根据农林水产省提供的统计数据(2009)，福岛县出产948亿日元的大米(日本第五)，福岛市第一产业占日本第一）"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -622,7 +637,10 @@ label scene10:
 
     # 真冬 「ほら、気仙沼のマグロとカツオだよ」
     # 参考资料：https://ja.wikipedia.org/wiki/%E6%B0%97%E4%BB%99%E6%B2%BC%E5%B8%82
-    dong "来，是气仙沼的金枪鱼和鲣鱼（L:气仙沼市，位于日本宫城县东北端，以盛产鱼翅而闻名）"
+    show 真冬_裸yシャツ_パンツ_微笑み at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0923.ogg"
+    dong 真冬_裸yシャツ_パンツ_微笑み "来，是气仙沼的金枪鱼和鲣鱼（L:气仙沼市，位于日本宫城县东北端，以盛产鱼翅而闻名）"
+    hide 真冬_裸yシャツ_基本_見下し3
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -630,14 +648,20 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「わあい！」
-    ai "哇咿！"
+    show 心愛_yシャツ_パンツ有り_きらきら at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1204.ogg"
+    ai 心愛_yシャツ_パンツ有り_きらきら "哇咿！"
+    hide 心愛_yシャツ_パンツ有り_もぐもぐ
 
     # 莲 「そういえば、心愛は東北出身だっけか」
     lian "这么说来，心爱好像是出身东北的人吧？"
 
     # 心爱 「生まれも育ちもみちのくでやんす！」
     # 参考资料：https://ja.wikipedia.org/wiki/%E6%9D%B1%E5%8C%97%E5%9C%B0%E6%96%B9
-    ai "出生和成长都在东北地区！（L:东北地方是日本本州岛上的一个地区，因位于本州的东北部而得名，前面提到的福岛县、气仙沼市、宫城县都属于东北地区）"
+    show 心愛_yシャツ_パンツ有り_にっこり at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1205.ogg"
+    ai 心愛_yシャツ_パンツ有り_にっこり "出生和成长都在东北地区！（L:东北地方是日本本州岛上的一个地区，因位于本州的东北部而得名，前面提到的福岛县、气仙沼市、宫城县都属于东北地区）"
+    hide 心愛_yシャツ_パンツ有り_きらきら
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -645,10 +669,16 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「育ちも…？　あれ？」
-    dong "成长也是…？啊咧？"
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0924.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "成长也是…？啊咧？"
+    hide 真冬_裸yシャツ_パンツ_微笑み
 
     # 心爱 「それ以上は禁忌に触れる事になるから聞かない方がい…」
-    ai "在此之上还有触及禁忌的事所以还是不要问比较好…"
+    show 心愛_yシャツ_パンツ有り_真顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1206.ogg"
+    ai 心愛_yシャツ_パンツ有り_真顔 "在此之上还有触及禁忌的事所以还是不要问比较好…"
+    hide 心愛_yシャツ_パンツ有り_にっこり
 
     # 莲 「わかりました」
     lian "我知道了"
@@ -659,7 +689,8 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「もう一度言ってみろ」
-    dong "你再说一遍"
+    voice "voice/真冬/maf_a1_0925.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "你再说一遍"
 
     # 莲 「わかりました」
     lian "我知道了"
@@ -670,9 +701,14 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「よし」
-    ai "好"
+    show 心愛_yシャツ_パンツ有り_無表情 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1207.ogg"
+    ai 心愛_yシャツ_パンツ有り_無表情 "好"
+    hide 心愛_yシャツ_パンツ有り_真顔
 
     # 原地tp
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene リビングa_夜 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 莲 「裸エプロンじゃないのか？」
     lian "这不是裸体围裙嘛？"
@@ -683,7 +719,9 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「蓮くんそっちのが好きだったの？」
-    ai "莲君喜欢那边的人吗？"
+    show 心愛_yシャツ_パンツ有り_無表情 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1208.ogg"
+    ai 心愛_yシャツ_パンツ有り_無表情 "莲君是喜欢那边的人吗？"
 
     # 莲 「いや…そういうわけでもないが」
     lian "不……也不是那么回事"
@@ -694,7 +732,9 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「それはお嫁さんがする事じゃないの？」
-    dong "那不是新娘该做的事吗？"
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0926.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "那不是新娘该做的事吗？"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -702,7 +742,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「そだね。お嫁さんになったらしてあげるよ」
-    ai "是啊，等嫁给你的时候就这样做吧"
+    show 心愛_yシャツ_パンツ有り_笑顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1209.ogg"
+    ai 心愛_yシャツ_パンツ有り_笑顔 "是啊，等嫁给你的时候就这样做吧"
+    hide 心愛_yシャツ_パンツ有り_無表情
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -710,7 +753,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「うん。今は恋人だもんね。こーいう、恋人ならではの楽しみは、ゆっくり一つずつ消化していこ？」
-    dong "嗯。现在是恋人呢。这种，只有恋人才有的乐趣，慢慢地一个一个地消化吧？"
+    show 真冬_裸yシャツ_パンツ_微笑み at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0927.ogg"
+    dong 真冬_裸yシャツ_パンツ_微笑み "嗯。现在是恋人呢。这种，只有恋人才有的乐趣，慢慢地一个一个地消化吧？"
+    hide 真冬_裸yシャツ_パンツ_無表情
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -718,14 +764,20 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「あー！」
-    ai "啊——！"
+    show 心愛_yシャツ_パンツ有り_驚き at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1210.ogg"
+    ai 心愛_yシャツ_パンツ有り_驚き "啊——！"
+    hide 心愛_yシャツ_パンツ有り_笑顔
 
     # 莲 「なんだ藪から棒に」
     # 参考资料：https://kotobank.jp/word/%E8%97%AA%E3%81%8B%E3%82%89%E6%A3%92-648950
     lian "什么啊，从灌木丛中伸出一根棍子（L:这个谚语是说言行、故事突兀，让人摸不到头脑，或者也可以说突然被别人吓着了，这个说法在前面Scene01的时候莲也这么说过）"
 
     # 心爱 「まふまふちゃん！　お嫁さんだけど！！　どっちがお嫁さんになればいの！？」
-    ai "嘛呼嘛呼酱！要成为新娘的话！！谁成为新娘比较好呢！？"
+    show 心愛_yシャツ_パンツ有り_ぐるぐる at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1211.ogg"
+    ai 心愛_yシャツ_パンツ有り_ぐるぐる "嘛呼嘛呼酱！要成为新娘的话！！谁成为新娘比较好呢！？"
+    hide 心愛_yシャツ_パンツ有り_驚き
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -733,7 +785,8 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「心愛ちゃんでしょ？　籍は心愛ちゃんが入れて貰って、三人で一緒に住めばいんじゃない？」
-    dong "应该是心爱酱吧？让心爱酱入籍，然后三个人一起住在一起吧？"
+    voice "voice/真冬/maf_a1_0928.ogg"
+    dong 真冬_裸yシャツ_パンツ_微笑み "应该是心爱酱吧？让心爱酱入籍，然后三个人一起住在一起吧？"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -741,7 +794,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「すんなりいった！？　え、で、でも、それでいの？」
-    ai "似乎很容易的样子啊！？啊、但、但是，这样好吗？"
+    show 心愛_yシャツ_パンツ有り_驚き at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1212.ogg"
+    ai 心愛_yシャツ_パンツ有り_驚き "似乎很容易的样子啊！？啊、但、但是，这样好吗？"
+    hide 心愛_yシャツ_パンツ有り_ぐるぐる
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -749,7 +805,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「いもなにも。私は妹だから、結婚しなくても一緒に住んでもおかしくないもの」
-    dong "有什么不好的。我是他的一抹多，所以就算不结婚，住在一起也没什么奇怪的"
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0929.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "有什么不好的。我是他的一抹多，所以就算不结婚，住在一起也没什么奇怪的"
+    hide 真冬_裸yシャツ_パンツ_微笑み
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -757,7 +816,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「結婚式はどうするのさー！」
-    ai "那结婚典礼怎么办啊！"
+    show 心愛_yシャツ_パンツ有り_ぐるぐる at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1213.ogg"
+    ai 心愛_yシャツ_パンツ有り_ぐるぐる "那结婚典礼该怎么办啊！"
+    hide 心愛_yシャツ_パンツ有り_驚き
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -765,7 +827,8 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「どうとでもなるんじゃないかな？」
-    dong "我想这其实并不重要？"
+    voice "voice/真冬/maf_a1_0930.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "我想这其实并不重要？"
 
     # 莲 「はい先生」
     lian "欸，老师！"
@@ -776,7 +839,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「はい彼氏くん」
-    ai "嗯？男朋友"
+    show 心愛_yシャツ_パンツ有り_不機嫌 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1214.ogg"
+    ai 心愛_yシャツ_パンツ有り_不機嫌 "嗯？男朋友"
+    hide 心愛_yシャツ_パンツ有り_ぐるぐる
 
     # 莲 「結婚についてなんだが…」
     lian "关于结婚……"
@@ -787,7 +853,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「無粋な事は聞かない事だよお兄ちゃん」
-    dong "不要问无礼的问题哦欧尼酱"
+    show 真冬_裸yシャツ_パンツ_目閉じ at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0931.ogg"
+    dong 真冬_裸yシャツ_パンツ_目閉じ "不要问无礼的问题哦欧尼酱"
+    hide 真冬_裸yシャツ_パンツ_無表情
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -795,7 +864,8 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「そだよー。私達はもう、ずっと一緒に居るって決めてるんだからさ」
-    ai "就是啊，我们已经决定要永远在一起了"
+    voice "voice/心愛/cca_a1_1215.ogg"
+    ai 心愛_yシャツ_パンツ有り_不機嫌 "就是啊，我们已经决定要永远在一起了"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -803,13 +873,23 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「ね。喧嘩した時は、また仲直りしていこ？」
-    dong "呐，吵架的时候，也要和好吧？"
+    show 真冬_裸yシャツ_パンツ_微笑み at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0932.ogg"
+    dong 真冬_裸yシャツ_パンツ_微笑み "呐，吵架的时候，也要和好吧？"
+    hide 真冬_裸yシャツ_パンツ_目閉じ
 
     # 莲 「待て待てそういう事じゃない。夏休み、ハワイいくんだろ？　式場探そうぜ。その方が、色々めんどい事も避けれるだろ」
     lian "等等，不是这样的。暑假不是要去夏威夷吗? 我们去那边找婚礼场地吧，这样就可以避免很多麻烦呢"
 
     # 心爱&真冬 「『！！』」
-    ai_dong "『！！』"
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_left
+    show 心愛_yシャツ_パンツ有り_驚き at love69_right
+    with dissolve
+
+    voice "voice/真冬/maf_a1_0933.ogg"
+    ai_dong 真冬_裸yシャツ_パンツ_無表情 "『！！』"
+    hide 真冬_裸yシャツ_パンツ_微笑み
+    hide 心愛_yシャツ_パンツ有り_不機嫌
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -817,7 +897,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「…お、お兄ちゃん」
-    dong "……欧、欧尼酱"
+    show 真冬_裸yシャツ_パンツ_目閉じ at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0934.ogg"
+    dong 真冬_裸yシャツ_パンツ_目閉じ "……欧、欧尼酱"
+    hide 真冬_裸yシャツ_パンツ_無表情
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -825,7 +908,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「蓮君…にへ」
-    ai "莲君…欸嘿嘿"
+    show 心愛_yシャツ_パンツ有り_笑顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1217.ogg"
+    ai 心愛_yシャツ_パンツ有り_笑顔 "莲君…欸嘿嘿"
+    hide 心愛_yシャツ_パンツ有り_驚き
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -833,7 +919,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「ハワイで結婚式…かぁ…トロピカルジュース飲み放題…」
-    dong "在夏威夷举行婚礼…啊…热带果汁无限畅饮……"
+    show 真冬_裸yシャツ_パンツ_まったり at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0935.ogg"
+    dong 真冬_裸yシャツ_パンツ_まったり "在夏威夷举行婚礼…啊…热带果汁无限畅饮……"
+    hide 真冬_裸yシャツ_パンツ_目閉じ
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -841,12 +930,17 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「パイナポウも食べ放題だ…」
-    ai "菠萝也可以随便吃…"
+    show 心愛_yシャツ_パンツ有り_真顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1218.ogg"
+    ai 心愛_yシャツ_パンツ有り_真顔 "菠萝也可以随便吃…"
+    hide 心愛_yシャツ_パンツ有り_笑顔
 
     # 莲 「どこに引っかってんだよ」
     lian "你俩这是跑哪儿去了？"
 
     # 画面切换：葛城家客厅（黄昏）
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=True, alpha=True, time_warp=None)
+    scene リビングa_夕 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=True, alpha=True, time_warp=None)
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -854,7 +948,9 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「はーい。じゃぁ、そういう事で。またね」
-    dong "好——那就这样吧。再见"
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0936.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "好——那就这样吧。再见"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -862,7 +958,9 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「何の電話してたの？」
-    ai "你在打什么电话？"
+    show 心愛_yシャツ_パンツ有り_笑顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1219.ogg"
+    ai 心愛_yシャツ_パンツ有り_笑顔 "你在打什么电话呢？"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -870,7 +968,8 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「ん、お母さんとお父さんに、心愛ちゃんとお兄ちゃんと結婚するよ。って言ってきた」
-    dong "嗯，我跟妈妈和爸爸说，我要和心爱酱还有欧尼酱结婚了哦"
+    voice "voice/真冬/maf_a1_0937.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "嗯，我跟妈妈和爸爸说，我要和心爱酱还有欧尼酱结婚了哦"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -878,7 +977,9 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ぶぇー！　そんな直球で聞いちゃって大丈夫なの！？」
-    ai "呜欸——！这么直球的问题真的没关系嘛！？"
+    show 心愛_yシャツ_パンツ有り_驚き at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1220.ogg"
+    ai 心愛_yシャツ_パンツ有り_驚き "呜欸——！这么直球的问题真的没关系嘛！？"
 
     # 莲 「で、何て言ってた？」
     lian "那，他们怎么说的？"
@@ -889,7 +990,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「あいよー。式にはちゃんと心愛ちゃんの両親も呼ぶんだぞ…だってさ」
-    dong "好啊——婚礼上也要邀请心爱酱的父母呢……这样的"
+    show 真冬_裸yシャツ_パンツ_微笑み at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0938.ogg"
+    dong 真冬_裸yシャツ_パンツ_微笑み "好啊——婚礼上也要邀请心爱酱的父母呢……这样的"
+    hide 真冬_裸yシャツ_パンツ_無表情
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -897,30 +1001,41 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「かっる！　ええ、蓮君はともかく、真冬ちゃんのパに、娘さんは貰います！　って言わなきゃ！」
-    ai "好棒！欸~，莲君姑且不论，我得对真冬酱的爸爸说「你的女儿我要了」！"
+    voice "voice/心愛/cca_a1_1221.ogg"
+    ai 心愛_yシャツ_パンツ有り_驚き "好棒！欸~，莲君姑且不论，我得对真冬酱的爸爸说「你的女儿我要了」！"
 
     # 莲 「俺の事も気に掛けてくれよ！」
     lian "为什么我的事情就一笔带过了啊！"
 
     # 心爱 「あ、パとマの許可はとってるから大丈夫だよ」
-    ai "啊，我已经得到爸妈的许可了，所以不要紧的哟"
+    show 心愛_yシャツ_パンツ有り_不機嫌 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1222.ogg"
+    ai 心愛_yシャツ_パンツ有り_不機嫌 "啊，我已经得到爸妈的许可了，所以不要紧的哟"
+    hide 心愛_yシャツ_パンツ有り_驚き
 
     # 莲 「ご両親にご挨拶はさせてはくれんのか…」
     lian "不和我的父母打招呼吗……"
 
     # 心爱 「さっき電話したら『今更何言ってんだよ』って言われた」
-    ai "刚才打电话的时候，那边说『事到如今还说什么』"
+    show 心愛_yシャツ_パンツ有り_真顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1223.ogg"
+    ai 心愛_yシャツ_パンツ有り_真顔 "刚才打电话的时候，那边说『事到如今还说什么』"
+    hide 心愛_yシャツ_パンツ有り_不機嫌
 
     # 莲 「そっすか…」
     lian "是吗…"
 
     # 画面切回晚上
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=True, alpha=True, time_warp=None)
+    scene リビングa_夜 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=True, alpha=True, time_warp=None)
 
     # 莲 「ごちそうさまでした」
     lian "多谢款待"
 
     # 心爱 「ごちそーさまでした」
-    ai "多谢款待"
+    show 心愛_yシャツ_パンツ有り_にっこり at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1224.ogg"
+    ai 心愛_yシャツ_パンツ有り_にっこり "多谢款待"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -928,7 +1043,9 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「お粗末様でした」
-    dong "粗茶淡饭不成敬意"
+    show 真冬_裸yシャツ_パンツ_目閉じ at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0939.ogg"
+    dong 真冬_裸yシャツ_パンツ_目閉じ "粗茶淡饭不成敬意"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -936,7 +1053,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ありがとう東北地方！」
-    ai "感谢东北地区！"
+    show 心愛_yシャツ_パンツ有り_笑顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1225.ogg"
+    ai 心愛_yシャツ_パンツ有り_笑顔 "感谢东北地区！"
+    hide 心愛_yシャツ_パンツ有り_にっこり
 
     # nil 「3人で共同で食器を片付ける。なんだか、三人の距離が今まで以上で最も近づいているような気がして嬉しくなる。」
     "3个人一起收拾餐具。总觉得三个人的距离比以往任何时候都更接近，很开心"
@@ -950,29 +1070,31 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「んー？　なーにボーっとしてるのさ！　もう、何も我慢しなくていんだからね？」
-    ai "嗯？你为什么在发呆呢！已经什么都不需要不忍耐了吧？"
+    show 心愛_yシャツ_パンツ有り_真顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1226.ogg"
+    ai 心愛_yシャツ_パンツ有り_真顔 "嗯？你为什么在发呆呢！已经什么都不需要不忍耐了吧？"
+    hide 心愛_yシャツ_パンツ有り_笑顔
 
     # 莲 「いや…この生活が、これから続くのかーと思うとな…しみじみとな」
     lian "没有没有……只是一想到今后的生活也会这样持续下去…我就感概万千"
-
-    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
-    $ sideimagesize.SideImageXalign = 0.10
-    $ sideimagesize.SideImageYalign = 15.72
-    $ sideimagesize.SideImageZoom = 0.96
-
-    # 心爱 「まーた考え事ですか。私達のお尻とかに見とれてくれてたほうが、恥ずい思いした甲斐があるんだけどなー」
-    ai "真的是这样的想法吗？要是被我们的屁股看得入迷的话，倒是觉得不好意思才有意义吧"
-
-    # 莲 「いやこれが、結構…来てるんですよ？」
-    lian "不，这个、确实……要来吗？"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
     $ sideimagesize.SideImageYalign = -29.35
     $ sideimagesize.SideImageZoom = 0.95
 
+    # 真冬 「まーた考え事ですか。私達のお尻とかに見とれてくれてたほうが、恥ずい思いした甲斐があるんだけどなー」
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0940.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "真的是这样的想法吗？要是被我们的屁股看得入迷的话，倒是觉得不好意思才有意义吧"
+    hide 真冬_裸yシャツ_パンツ_目閉じ
+
+    # 莲 「いやこれが、結構…来てるんですよ？」
+    lian "不，这个、确实……要来吗？"
+
     # 真冬 「わっ」
-    dong "哇！"
+    voice "voice/真冬/maf_a1_0941.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "哇！"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -980,7 +1102,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「きゃっ」
-    ai "呀！"
+    show 心愛_yシャツ_パンツ有り_驚き at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1227.ogg"
+    ai 心愛_yシャツ_パンツ有り_驚き "呀！"
+    hide 心愛_yシャツ_パンツ有り_真顔
 
     # nil 「台所に並んで作業する、二人の間に入って肩を抱き寄せる。」
     "走到正在厨房干活的两个人中间，抱住她们的肩膀"
@@ -989,7 +1114,10 @@ label scene10:
     lian "可以吻你们吗？"
 
     # 心爱 「むー…」
-    ai "真是的——……"
+    show 心愛_yシャツ_パンツ有り_無表情 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1228.ogg"
+    ai 心愛_yシャツ_パンツ有り_無表情 "真是的——……"
+    hide 心愛_yシャツ_パンツ有り_驚き
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -997,7 +1125,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「ん…」
-    dong "嗯……"
+    show 真冬_裸yシャツ_パンツ_目閉じ at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0942.ogg"
+    dong 真冬_裸yシャツ_パンツ_目閉じ "嗯……"
+    hide 真冬_裸yシャツ_パンツ_無表情
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1005,7 +1136,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「やっぱだめ！」
-    ai "还是不行！"
+    show 心愛_yシャツ_パンツ有り_笑顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1229.ogg"
+    ai 心愛_yシャツ_パンツ有り_笑顔 "还是不行！"
+    hide 心愛_yシャツ_パンツ有り_無表情
 
     # 莲 「ぶへぇ！　何故だ！」
     lian "蛤！为啥啊！"
@@ -1016,7 +1150,8 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「歯磨きしてから！」
-    ai "刷完牙再说！"
+    voice "voice/心愛/cca_a1_1230.ogg"
+    ai 心愛_yシャツ_パンツ有り_笑顔 "刷完牙再说！"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1024,7 +1159,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「じゃぁお先にお兄ちゃんとチューしちゃうね？　はい、お兄ちゃん。ちゅー」
-    dong "那我就先来和欧尼酱亲一下吧？来，欧尼酱，啾——（L:这里真冬的CV也少说了一段捏）"
+    show 真冬_裸yシャツ_パンツ_キス at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0943.ogg"
+    dong 真冬_裸yシャツ_パンツ_キス "那我就先来和欧尼酱亲一下吧？来，欧尼酱，啾——（L:这里真冬的CV也少说了一段捏）"
+    hide 真冬_裸yシャツ_パンツ_目閉じ
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1032,7 +1170,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「させるかー！」
-    ai "岂能让你得逞！"
+    show 心愛_yシャツ_パンツ有り_驚き at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1231.ogg"
+    ai 心愛_yシャツ_パンツ有り_驚き "岂能让你得逞！"
+    hide 心愛_yシャツ_パンツ有り_笑顔
 
     # 莲 「ぐわぁー！」
     lian "呜哇！"
@@ -1046,7 +1187,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ちゅー」
-    ai "啾——"
+    show 心愛_yシャツ_パンツ有り_キス at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1232.ogg"
+    ai 心愛_yシャツ_パンツ有り_キス "啾——"
+    hide 心愛_yシャツ_パンツ有り_驚き
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1054,12 +1198,15 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「ちゅー」
-    dong "啾——（L:这里原作就莫得配音）"
+    voice "voice/真冬/maf_a1_0944.ogg"
+    dong 真冬_裸yシャツ_パンツ_キス "啾——（L:这里原作就莫得配音）"
 
     # 莲 「滅茶苦茶だろお前ら」
     lian "你们这都是搞啥呢？"
 
     # 原地tp
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene リビングa_夜 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1067,7 +1214,9 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「なんでこの家はチョコ味の歯磨き粉がないのよさ」
-    ai "为什么这个家没有巧克力味的牙膏呢？"
+    show 心愛_yシャツ_パンツ有り_不機嫌 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1233.ogg"
+    ai 心愛_yシャツ_パンツ有り_不機嫌 "为什么这个家没有巧克力味的牙膏呢？"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1075,7 +1224,9 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「練りワサビならあるよ」
-    dong "芥末酱的话倒是有的"
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0945.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "芥末酱的话倒是有的"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1083,7 +1234,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「歯磨き粉ですらないじゃないかよぉ！」
-    ai "甚至连牙膏都没有啊！"
+    show 心愛_yシャツ_パンツ有り_驚き at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1234.ogg"
+    ai 心愛_yシャツ_パンツ有り_驚き "甚至连牙膏都没有啊！"
+    hide 心愛_yシャツ_パンツ有り_不機嫌
 
     # 莲 「俺のだ」
     lian "那是我的"
@@ -1094,12 +1248,19 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「し、死ぬぞあんた…」
-    ai "你、你会死的……"
+    show 心愛_yシャツ_パンツ有り_真顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1235.ogg"
+    ai 心愛_yシャツ_パンツ有り_真顔 "你、你会死的……"
+    hide 心愛_yシャツ_パンツ有り_驚き
 
     # 原地tp
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene リビングa_夜 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 心爱 「歯を磨きまんた」
-    ai "我刷完牙了"
+    show 心愛_yシャツ_パンツ有り_にっこり at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1236.ogg"
+    ai 心愛_yシャツ_パンツ有り_にっこり "我刷完牙了"
 
     # nil 「歯を磨きまんた。」
     "刷过了牙"
@@ -1113,7 +1274,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「お風呂ー！　と思ったけど…せっかくの裸Ｙシャツが…もったいないね…」
-    ai "去洗澡！本来是这么想的……难得的裸Ｙ衬衫……太可惜了……"
+    show 心愛_yシャツ_パンツ有り_真顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1237.ogg"
+    ai 心愛_yシャツ_パンツ有り_真顔 "去洗澡！本来是这么想的……难得的裸Ｙ衬衫……太可惜了……"
+    hide 心愛_yシャツ_パンツ有り_にっこり
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1121,7 +1285,9 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「終わってから入ればいんじゃないの？　三人でさ」
-    dong "等结束之后再进去不好吗？三个人一起"
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0946.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "等结束之后再进去不好吗？三个人一起"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1129,10 +1295,19 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「あ、その手があったか！」
-    ai "啊、原来还有这招！"
+    hide 心愛_yシャツ_パンツ有り_真顔
+    show 心愛_yシャツ_パンツ有り_笑顔:
+        zoom 1.5
+        xalign 0.89
+        yalign -0.09
+        linear 0.15 yalign 0.02
+        linear 0.15 yalign -0.09
+    voice "voice/心愛/cca_a1_1238.ogg"
+    ai 心愛_yシャツ_パンツ有り_笑顔 "啊、原来还有这招！"
 
     # 莲 「三人で背中とか流し合えばいんじゃないのか？」
-    lian "三个人互相搓背不好嘛？"
+    # lian "三个人互相搓背不好嘛？"
+    lian "三个人互相搓背不香嘛？"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1140,7 +1315,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「ついでにエッチもね？」
-    dong "顺便一说H也是吧？"
+    show 真冬_裸yシャツ_パンツ_ニタァ at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0947.ogg"
+    dong 真冬_裸yシャツ_パンツ_ニタァ "顺便一说H也是吧？"
+    hide 真冬_裸yシャツ_パンツ_無表情
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1148,7 +1326,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「きゅぅ～…いきなり刺激的すぎます…お風呂はゆっくり入りましょう…」
-    ai "Q~……！突然太刺激辽……等洗澡的时候慢慢仔细洗洗吧…"
+    show 心愛_yシャツ_パンツ有り_ぐるぐる at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1239.ogg"
+    ai 心愛_yシャツ_パンツ有り_ぐるぐる "Q~……！突然太刺激辽……等洗澡的时候慢慢仔细洗洗吧…"
+    hide 心愛_yシャツ_パンツ有り_笑顔
 
     # 莲 「お前の価値観がわかんねぇよ」
     lian "我搞不懂你的价值观"
@@ -1159,7 +1340,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「だって…ぬるぬるプレイじゃん…」&&（L:有点没搞懂，应该是弄的到处都是得好好收拾吧，不然只能是咕噜咕噜玩水？好像说不大过去）
-    ai "Q~因为…不是会弄得到处都是嘛…"
+    show 心愛_yシャツ_パンツ有り_不機嫌 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1240.ogg"
+    ai 心愛_yシャツ_パンツ有り_不機嫌 "因为…不是会弄得到处都是嘛…"
+    hide 心愛_yシャツ_パンツ有り_ぐるぐる
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1167,7 +1351,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「そこまでは考えてなかったかな…言われてみれば確かにそうだけど」
-    dong "没考虑到这一点呢…说起来确实是这样"
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0948.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "没考虑到这一点呢…说起来确实是这样"
+    hide 真冬_裸yシャツ_パンツ_ニタァ
 
     # nil 「結局、三人でお風呂に入る事にはなりましたが、その時どうなったかは…ご想像にお任せます。」
     "最后，三个人决定先一起洗澡，那个时候发生了什么样的事情呢？那就任凭你想象了"
@@ -1187,7 +1374,8 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「はーい。…ごくり。緊張する…初めてじゃないのに…」
-    ai "好——有点紧张……明明不是第一次了……"
+    voice "voice/心愛/cca_a1_1241.ogg"
+    ai 心愛_yシャツ_パンツ有り_不機嫌 "好——有点紧张……明明不是第一次了……"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1195,7 +1383,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「ね…。今まで一番緊張するかも…。あはっ、すっごいテンパってる私」
-    dong "呐……可能是到现在为止最紧张的…欸嘿嘿，我的心情好紧张"
+    show 真冬_裸yシャツ_パンツ_微笑み at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0949.ogg"
+    dong 真冬_裸yシャツ_パンツ_微笑み "呐……可能是到现在为止最紧张的…欸嘿嘿，我的心情好紧张"
+    hide 真冬_裸yシャツ_パンツ_無表情
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1203,7 +1394,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「上手にできるかな…」
-    ai "能做得很好吗……"
+    show 心愛_yシャツ_パンツ有り_ポカーン at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1242.ogg"
+    ai 心愛_yシャツ_パンツ有り_ポカーン "能做得很好吗……"
+    hide 心愛_yシャツ_パンツ有り_不機嫌
 
     # 莲 「心配ない。俺も緊張してる」
     lian "别担心，我也很紧张"
@@ -1221,6 +1415,7 @@ label scene10:
     "我也是男人，只有做好觉悟"
 
     # 画面切换：葛城家客厅->葛城家二楼走廊
+    scene 自宅二階廊下_夜 at love69_bg1440 with dissolve
 
     # nil 「そうこうしてるうちに、部屋の前にたどり着く。」
     "就这样，我们来到了房间前面"
@@ -1234,7 +1429,9 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「…はい」
-    ai "……是啊"
+    show 心愛_yシャツ_パンツ有り_真顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1243.ogg"
+    ai 心愛_yシャツ_パンツ有り_真顔 "……是啊"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1242,7 +1439,9 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「なんか…いつもと違う風景に見える…ね…」
-    dong "总觉得…看起来和平时不一样…呢…"
+    show 真冬_裸yシャツ_パンツ_微笑み at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0950.ogg"
+    dong 真冬_裸yシャツ_パンツ_微笑み "总觉得…看起来和平时不一样…呢…"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1250,7 +1449,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「このドアを開けたら…もう後戻りはできない世界にいくのですね…私達は」
-    ai "一旦打开这扇门……就再也回不到原先的世界了……我们几个"
+    show 心愛_yシャツ_パンツ有り_無表情 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1244.ogg"
+    ai 心愛_yシャツ_パンツ有り_無表情 "一旦打开这扇门……就再也回不到原先的世界了……我们几个"
+    hide 心愛_yシャツ_パンツ有り_真顔
 
     # 莲 「準備の程はよろしいですか？」
     lian "准备的怎么样了？"
@@ -1261,7 +1463,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「私は…うん、大丈夫…だと、思う。心愛ちゃんは？」
-    dong "我觉得…嗯，没问题。心爱酱呢？"
+    show 真冬_裸yシャツ_パンツ_無表情 at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0951.ogg"
+    dong 真冬_裸yシャツ_パンツ_無表情 "我觉得…嗯，没问题……吧。心爱酱呢？"
+    hide 真冬_裸yシャツ_パンツ_微笑み
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1270,7 +1475,10 @@ label scene10:
 
     # 心爱 「だ、大丈夫だ、問題ない…」
     # L:来康这个：https://www.bilibili.com/video/BV1U7411Z7cP?p=1
-    ai "大、大丈夫萌大奶"
+    show 心愛_yシャツ_パンツ有り_真顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1245.ogg"
+    ai 心愛_yシャツ_パンツ有り_真顔 "大、大丈夫萌大奶"
+    hide 心愛_yシャツ_パンツ有り_無表情
 
     # 莲 「じゃぁ…」
     lian "那么…"
@@ -1290,7 +1498,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ん…ちゅぅ…」
-    ai "嗯…啾……"
+    show 心愛_yシャツ_パンツ有り_キス at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1246.ogg"
+    ai 心愛_yシャツ_パンツ有り_キス "嗯…啾……"
+    hide 心愛_yシャツ_パンツ有り_真顔
 
     # 莲 「次は…真冬」
     lian "接下来是…真冬"
@@ -1301,7 +1512,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「はぁい…んっ…」
-    dong "好……嗯…"
+    show 真冬_裸yシャツ_パンツ_キス at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0952.ogg"
+    dong 真冬_裸yシャツ_パンツ_キス "好……嗯…"
+    hide 真冬_裸yシャツ_パンツ_無表情
 
     # 莲 「で、二人」
     lian "那么，两个人"
@@ -1312,7 +1526,8 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「まふゆちゃ…んっ…」
-    ai "真冬酱……嗯……"
+    voice "voice/心愛/cca_a1_1247.ogg"
+    ai 心愛_yシャツ_パンツ有り_キス "真冬酱……嗯……"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1320,7 +1535,8 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「こあちゃ…んっ…」
-    dong "心爱酱……嗯……"
+    voice "voice/真冬/maf_a1_0953.ogg"
+    dong 真冬_裸yシャツ_パンツ_キス "心爱酱……嗯……"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1328,7 +1544,10 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「あとは…」
-    ai "还有……"
+    show 心愛_yシャツ_パンツ有り_真顔 at love69_right with dissolve
+    voice "voice/心愛/cca_a1_1248.ogg"
+    ai 心愛_yシャツ_パンツ有り_真顔 "还有……"
+    hide 心愛_yシャツ_パンツ有り_キス
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1336,10 +1555,17 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「お兄ちゃん…」
-    dong "欧尼酱……"
+    show 真冬_裸yシャツ_パンツ_微笑み at love69_left with dissolve
+    voice "voice/真冬/maf_a1_0954.ogg"
+    dong 真冬_裸yシャツ_パンツ_微笑み "欧尼酱……"
+    hide 真冬_裸yシャツ_パンツ_キス
 
     # 心爱&真冬 「『…ちゅぅっ』」
-    ai_dong "『……啾』"
+    show 真冬_裸yシャツ_パンツ_キス at love69_left
+    show 心愛_yシャツ_パンツ有り_キス at love69_right
+    with dissolve
+    voice "voice/真冬/maf_a1_0955.ogg"
+    ai_dong 真冬_裸yシャツ_パンツ_キス  "『……啾』"
 
     # nil 「三人で唇を触れあわせる、初めてのキス。」
     "三个人的嘴唇互相碰触，这是三个人第一次接吻"
@@ -1350,7 +1576,8 @@ label scene10:
     $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「はぁー…」
-    ai "哈啊——……"
+    voice "voice/心愛/cca_a1_1250.ogg"
+    ai 心愛_yシャツ_パンツ有り_キス "哈啊——……"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
