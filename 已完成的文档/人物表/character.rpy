@@ -7,7 +7,7 @@
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月28日
-# 修订日期 2022年2月28日
+# 修订日期 2022年3月2日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -135,6 +135,12 @@ image side 心愛 心愛_yシャツ_パンツ有り_不機嫌 = "images/face/心
 image side 心愛 心愛_yシャツ_パンツ有り_笑顔 = "images/face/心愛/心愛_yシャツ_パンツ有り_笑顔.png" # 睁眼，嘴o
 image side 心愛 心愛_yシャツ_パンツ有り_まふまふ = "images/face/心愛/心愛_yシャツ_パンツ有り_まふまふ.png" # 基于笑顔，闭眼，两个粉椭圆
 image side 心愛 心愛_yシャツ_パンツ有り_もぐもぐ = "images/face/心愛/心愛_yシャツ_パンツ有り_もぐもぐ.png" # 闭眼，嘴-(，两个粉椭圆
+image side 心愛 心愛_yシャツ_パンツ有り_きらきら = "images/face/心愛/心愛_yシャツ_パンツ有り_きらきら.png" # 睁眼，嘴⚪三角，眼睛有小星星，这属于是馋哭了
+image side 心愛 心愛_yシャツ_パンツ有り_にっこり = "images/face/心愛/心愛_yシャツ_パンツ有り_にっこり.png" # 闭眼，微笑
+image side 心愛 心愛_yシャツ_パンツ有り_無表情 = "images/face/心愛/心愛_yシャツ_パンツ有り_無表情.png" # 字面意思，睁眼，嘴·
+image side 心愛 心愛_yシャツ_パンツ有り_ぐるぐる = "images/face/心愛/心愛_yシャツ_パンツ有り_ぐるぐる.png" # 眼睛咕哩咕噜转圈圈
+image side 心愛 心愛_yシャツ_パンツ有り_キス = "images/face/心愛/心愛_yシャツ_パンツ有り_キス.png" # 闭眼，脸红，kiss准备
+image side 心愛 心愛_yシャツ_パンツ有り_ポカーン = "images/face/心愛/心愛_yシャツ_パンツ有り_ポカーン.png" # 心爱翻白眼了
 
 # 其它
 image side 心愛 心愛_トランザム = "images/face/心愛/心愛_トランザム.png" # 全身变红，心爱真·觉醒！
@@ -222,6 +228,8 @@ image side 真冬 真冬_裸yシャツ_パンツ_むーっ = "images/face/真冬
 image side 真冬 真冬_裸yシャツ_基本_見下し3 = "images/face/真冬/真冬_裸yシャツ_基本_見下し3.png" # 睁眼，生气，嘴-，眉毛y=-x（斜下45度）
 image side 真冬 真冬_裸yシャツ_パンツ_泣き = "images/face/真冬/真冬_裸yシャツ_パンツ_泣き.png" # 睁眼，含泪珠
 image side 真冬 真冬_裸yシャツ_パンツ_本気 = "images/face/真冬/真冬_裸yシャツ_パンツ_本気.png" # 眼睁大，眉毛y=-x,嘴闭
+image side 真冬 真冬_裸yシャツ_パンツ_キス = "images/face/真冬/真冬_裸yシャツ_パンツ_キス.png" # kiss准备
+image side 真冬 真冬_裸yシャツ_パンツ_ニタァ = "images/face/真冬/真冬_裸yシャツ_パンツ_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢
 
 # 大_常服
 image side 真冬 真冬_大_制服_基本_キス = "images/face/真冬/真冬_大_制服_基本_キス.png" # 大，kiss准备
