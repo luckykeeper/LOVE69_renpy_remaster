@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年2月22日
+# 修订日期 2022年3月3日
 
 # 当前流程：编写脚本AIO Process
 
@@ -589,6 +589,11 @@ label scene09:
         xalign 0.808
         yalign -18.0
 
+    # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.15
+    $ sideimagesize.SideImageYalign = 1.21
+    $ sideimagesize.SideImageZoom = 0.5
+
     # 花盆君 「…」
     show 花盆君_通常 at love69_huapen_right with dissolve
     voice "voice/アシュリー/ash_a1_0034.ogg"
@@ -598,14 +603,29 @@ label scene09:
     # 莲 「……」
     lian "……"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「……」
     show 心愛_制服_基本_泣き at love69_xinai_left with dissolve
     voice "voice/心愛/cca_a1_1067.ogg"
     ai 心愛_制服_基本_泣き "……"
 
+    # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.15
+    $ sideimagesize.SideImageYalign = 1.21
+    $ sideimagesize.SideImageZoom = 0.5
+
     # 花盆君 「…（ふりふり）」
     voice "voice/アシュリー/ash_a1_0035.ogg"
     pen 花盆君_通常 "......（摇摆摇摆）"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「想瑠にゃん来ないから自習だってさ」
     voice "voice/心愛/cca_a1_1068.ogg"
@@ -791,10 +811,20 @@ label scene09:
     voice "voice/心愛/cca_a1_1072.ogg"
     ai 心愛_制服_基本_泣き "嘛呼嘛呼酱我好想见你啊——"
 
+    # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.15
+    $ sideimagesize.SideImageYalign = 1.21
+    $ sideimagesize.SideImageZoom = 0.5
+
     # 花盆君 「…（ふるふる）」
     show 花盆君_通常 at love69_huapen_right with dissolve
     voice "voice/アシュリー/ash_a1_0036.ogg"
     pen 花盆君_通常 "......（颤抖颤抖）"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「ねー、植木鉢くんも真冬ちゃんいなくて寂しいもんねー」
     voice "voice/心愛/cca_a1_1073.ogg"
@@ -820,6 +850,11 @@ label scene09:
     voice "voice/心愛/cca_a1_1075.ogg"
     ai 心愛_制服_基本_泣き "嗯……"
 
+    # 这个语句是针对花盆君设计的参数，能够调整花盆君在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.15
+    $ sideimagesize.SideImageYalign = 1.21
+    $ sideimagesize.SideImageZoom = 0.5
+
     # 花盆君 「…（じー）」
     voice "voice/アシュリー/ash_a1_0037.ogg"
     pen 花盆君_通常 "......（哈——）"
@@ -830,6 +865,11 @@ label scene09:
     # 原地tp
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene 教室_昼 at love69_bg1220 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「はー！　ごめん！　蓮くん！　今日バイトあるの忘れてた！　一緒に帰れないや…」
     show 心愛_制服_基本_驚き at love69_xinai_center with dissolve
