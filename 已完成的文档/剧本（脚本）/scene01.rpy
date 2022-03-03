@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月28日
+# 修订日期 2022年3月3日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右<-2021年10月5日 搞定！
@@ -1871,7 +1871,7 @@ label scene01:
     hide 心愛_制服_基本_ぶわー
     show 心愛_制服_基本_不機嫌:
         zoom 1.5
-        xalign 0.89
+        xalign 0.8918
         yalign -0.09
         linear 0.15 yalign 0.02
         linear 0.15 yalign -0.09
@@ -2110,7 +2110,7 @@ label scene01:
     # hide 真冬_制服_基本_目閉じ
     show 真冬_制服_基本_ニタァ at love69_left with dissolve
     voice "voice/真冬/maf_a1_0098.ogg"
-    dong 真冬_制服_基本_ニタァ "心爱你也可以这么做啊"
+    dong 真冬_制服_基本_ニタァ "心爱酱你也可以这么做啊"
     hide 真冬_制服_基本_目閉じ
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -4984,7 +4984,7 @@ label scene01:
     $ sideimagesize.SideImageYalign = 0.78
     $ sideimagesize.SideImageZoom = 1.0
     # MJ 「ヴイイイイイイ！　ヴイイイイイイ！」
-    voice "voice/その他/mjf_a1_0001.ogg"
+    voice "voice/その他/mjf_a1_0014.ogg"
     mj MJ_通常 "呜欸欸欸欸欸欸欸——"
 
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
@@ -5739,7 +5739,7 @@ label scene01:
     lian "你还没有做好觉悟呢！"
 
     # nil 「厄介だ。ただでさえ、幾分裂した性格をお持ちの心愛ちゃんが、怪しいお薬でハイになると、こうも扱いづらいとは。」
-    "麻烦了。本来就有点分裂性格的心爱，如果因为奇怪的药物而兴奋起来，居然会这么难对付。"
+    "麻烦了。本来就有点分裂性格的心爱酱，如果因为奇怪的药物而兴奋起来，居然会这么难对付。"
 
     # nil 「とはいえ、あまり露骨に拒否を続けるのも、心愛に可哀想である。」
     "话虽如此，如果过于露骨地拒绝，那样的话对心爱也是很可怜的呢"
