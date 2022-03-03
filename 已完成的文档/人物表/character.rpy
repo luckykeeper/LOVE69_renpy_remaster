@@ -7,7 +7,7 @@
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月28日
-# 修订日期 2022年3月2日
+# 修订日期 2022年3月3日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -142,6 +142,17 @@ image side 心愛 心愛_yシャツ_パンツ有り_ぐるぐる = "images/face/
 image side 心愛 心愛_yシャツ_パンツ有り_キス = "images/face/心愛/心愛_yシャツ_パンツ有り_キス.png" # 闭眼，脸红，kiss准备
 image side 心愛 心愛_yシャツ_パンツ有り_ポカーン = "images/face/心愛/心愛_yシャツ_パンツ有り_ポカーン.png" # 心爱翻白眼了
 
+# 私服系列
+image side 心愛 心愛_私服_基本_笑顔 = "images/face/心愛/心愛_私服_基本_笑顔.png" # 睁眼，嘴o
+image side 心愛 心愛_私服_基本_泣き= "images/face/心愛/心愛_私服_基本_泣き.png" # 睁眼，含泪珠
+image side 心愛 心愛_私服_基本_嬉しい = "images/face/心愛/心愛_私服_基本_嬉しい.png" # 康起来很喜感的笑
+image side 心愛 心愛_私服_基本_真顔 = "images/face/心愛/心愛_私服_基本_真顔.png" # 睁眼，嘴闭
+image side 心愛 心愛_私服_基本_きらきら = "images/face/心愛/心愛_私服_基本_きらきら.png" # 睁眼，嘴⚪三角，眼睛有小星星，这属于是馋哭了
+image side 心愛 心愛_私服_基本_ぶわー = "images/face/心愛/心愛_私服_基本_ぶわー.png" # 闭眼，很有标志性的哭
+
+# 下着（内衣）系列
+image side 心愛 心愛_下着_基本_キス = "images/face/心愛/心愛_下着_基本_キス.png" # 闭眼，脸红，kiss准备
+
 # 其它
 image side 心愛 心愛_トランザム = "images/face/心愛/心愛_トランザム.png" # 全身变红，心爱真·觉醒！
 image side 心愛 心愛_ラフ = "images/face/心愛/心愛_ラフ.png" # 粗线条描绘的心爱酱
@@ -242,6 +253,7 @@ image side 真冬 真冬_私服_基本_微笑み = "images/face/真冬/真冬_�
 image side 真冬 真冬_私服_基本_目閉じ = "images/face/真冬/真冬_私服_基本_目閉じ.png" # 闭眼，嘴·
 image side 真冬 真冬_私服_基本_ジト目 = "images/face/真冬/真冬_私服_基本_ジト目.png" # 睁眼，嘴三角，眉上凸
 image side 真冬 真冬_私服_基本_キス = "images/face/真冬/真冬_私服_基本_キス.png" # kiss准备
+image side 真冬 真冬_私服_基本_嬉しい = "images/face/真冬/真冬_私服_基本_嬉しい.png" # # 康起来很喜感的笑
 
 # 大_私服
 image side 真冬 真冬_大_私服_基本_キス = "images/face/真冬/真冬_大_私服_基本_キス.png" # 大，kiss准备
@@ -249,12 +261,20 @@ image side 真冬 真冬_大_私服_基本_ジト目 = "images/face/真冬/真�
 image side 真冬 真冬_大_私服_基本_微笑み = "images/face/真冬/真冬_大_私服_基本_微笑み.png" # 大，字面意思
 image side 真冬 真冬_大_私服_基本_目閉じ = "images/face/真冬/真冬_大_私服_基本_目閉じ.png" # 闭眼，嘴·
 
+# 下着（内衣）系列
+image side 真冬 真冬_下着_基本_キス = "images/face/真冬/真冬_下着_基本_キス.png" # 闭眼，脸红，kiss准备
+image side 真冬 真冬_下着_基本_微笑み = "images/face/真冬/真冬_下着_基本_微笑み.png" # 字面意思
+image side 真冬 真冬_下着_基本_微笑み_1 = "images/face/真冬/真冬_下着_基本_微笑み_1.png" # 字面意思，脸红
+
 # 其它
 image side 真冬 真冬_通話中 = "images/face/真冬/真冬_通話中.png" # 装在携带里面的真冬
 
 # 心爱&真冬 心爱和真冬共同出现，以为头像是真冬的所以用真冬的颜色
 ##　只需要指定　image="真冬"　，不需要单独指定表情了
 define ai_dong =  Character('心爱&真冬',color="#4da8c0",image="真冬")
+
+# 三人 （（莲）心爱真冬想瑠）
+define lianaidong =  Character('三人',color="#4da8c0",image="真冬")
 
 # 葛城莲 lian //主人公，工具人就不要加颜色了吧，不加颜色的统一强制指定白色（#ffffff）
 define lian = Character('莲',color="#ffffff")
@@ -328,6 +348,11 @@ image side 想瑠 想瑠_スーツ_ほほえみ = "images/face/想瑠/想瑠_ス
 image side 想瑠 想瑠_スーツ_ぶわ = "images/face/想瑠/想瑠_スーツ_ぶわ.png" # 是和心爱一样标志性的哭
 image side 想瑠 想瑠_スーツ_中指 = "images/face/想瑠/想瑠_スーツ_中指.png" # 中指
 
+# 想瑠 in hotdog?!
+define hotdog = Character('热狗',color="#a4808c",image="想瑠")
+image side 想瑠 想瑠_hot_ニヤリ = "images/face/想瑠/想瑠_hot_ニヤリ.png" # 睁眼，嘴“w”，手撑头，两个粉椭圆
+image side 想瑠 想瑠_hot_見下し = "images/face/想瑠/想瑠_hot_見下し.png" # 睁眼，嘴椭圆小开口，手撑头
+image side 想瑠 想瑠_hot_驚き = "images/face/想瑠/想瑠_hot_驚き.png" # 睁眼，震惊
 # 月宫瑠那 na //和原版相比，移植版打算在人物名上加入颜色，瑠那的颜色是SISTARS里面的CG里面取的
 define na = Character('瑠那',color="#a4808c",image="瑠那")
 
