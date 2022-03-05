@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月3日
+# 修订日期 2022年3月5日
 
 # 当前流程：编写脚本AIO Process
 
@@ -2171,7 +2171,7 @@ label scene10:
     ai_dong 真冬_私服_基本_微笑み "『…啾♪最喜欢♪』"
 
     # 进OP！
-    # $ renpy.movie_cutscene("video/CMムービー.webm")
+    $ renpy.movie_cutscene("video/Love69_OP.webm")
 
     scene 遊園地_商店街
 
