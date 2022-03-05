@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月4日
+# 修订日期 2022年3月5日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1868,5 +1868,7 @@ label scene11:
     stop music fadeout 4.0
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
     scene アイキャッチ心愛 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
+
+    $ renpy.pause(1.5, hard=True)
 
     jump scene12
