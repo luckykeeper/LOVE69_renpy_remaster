@@ -3,13 +3,13 @@
 # scene14 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.3 "LuckyDev"
+# 版本 0.4 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月21日
+# 修订日期 2022年3月6日
 
-# 当前流程：整理生肉文本，翻译并润色
+# 当前流程：编写脚本AIO Process
 
 label scene14:
     # scene14 开始
@@ -20,17 +20,35 @@ label scene14:
     # 人物：心爱 真冬 莲
     # BGM：无
 
+    scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
+
+    # 显示 quick_menu
+    $ quick_menu = True
+
     # nil 「ホテルにチェックイン完了。」
     "酒店入住完毕"
 
     # 莲 「さて、では、まずはお部屋の内装についてご紹介を―」
     lian "然后，那么，，首先介绍一下房间的内部装修吧"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「どうりゃあ！！！！」
-    ai "怎么样！！！！"
+    # 没有跳过
+    voice "voice/心愛/cca_a1_1762.ogg"
+    ai 心愛_水着_基本_ニタァ "怎么样！！！！"
+
+    # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.08
+    $ sideimagesize.SideImageYalign = -29.35
+    $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「だっしゃぁあ！！！」
-    dong "哒呷！！！"
+    voice "voice/真冬/maf_a1_1416.ogg"
+    dong 真冬_水着_基本_ニタァ "哒呷！！！"
 
     # 莲 「やっぱりかあ！！！！」
     lian "果然会这样啊！！！！"
@@ -41,11 +59,23 @@ label scene14:
     # nil 「もう少し大切に扱えよなぁ！フィアンセをよぉ！」
     "稍微好好珍惜对待一下啊！我的未婚妻们啊！"
 
+    # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.08
+    $ sideimagesize.SideImageYalign = -29.35
+    $ sideimagesize.SideImageZoom = 0.95
+
     # 真冬 「心愛ちゃん、脚抑えて。私頭いくから」
-    dong "心爱酱，把脚压住，我去脑袋那边"
+    voice "voice/真冬/maf_a1_1417.ogg"
+    dong 真冬_水着_基本_ニタァ "心爱酱，把脚压住，我去脑袋那边"
+
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
 
     # 心爱 「おっけー！　ほいでは、彼氏くん、失礼しますよ」
-    ai "OK——！那么，男朋友，稍微失礼一下啦"
+    voice "voice/心愛/cca_a1_1763.ogg"
+    ai 心愛_水着_基本_ニタァ "OK——！那么，男朋友，稍微失礼一下啦"
 
     # 莲 「なんだ、今日はいやに積極的じゃないか…」
     lian "什么嘛，今天不是很积极吗…"
@@ -66,5 +96,15 @@ label scene14:
     # Scene14 结束！
 
     # 过场： 心爱&真冬（常服）
+    ## 稍微改改
+    image bg アイキャッチ心愛＆真冬水着 = "images/bg/アイキャッチ心愛＆真冬水着.png"
+
+    $ quick_menu = False
+
+    play sound "voice/effect/moosehead honk (stinger).ogg"
+    # scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
+    scene アイキャッチ心愛＆真冬水着 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
+
+    $ renpy.pause(1.5, hard=True)
 
     jump scene15
