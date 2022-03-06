@@ -69,7 +69,7 @@ image side 心愛 心愛_制服_基本_無表情 = "images/face/心愛/心愛_�
 image side 心愛 心愛_制服_基本_きらきら = "images/face/心愛/心愛_制服_基本_きらきら.png" # 睁眼，嘴⚪三角，眼睛有小星星，这属于是馋哭了
 image side 心愛 心愛_制服_基本_ぶわー = "images/face/心愛/心愛_制服_基本_ぶわー.png" # 闭眼，很有标志性的哭
 image side 心愛 心愛_制服_基本_キス = "images/face/心愛/心愛_制服_基本_キス.png" # 闭眼，脸红，kiss准备
-image side 心愛 心愛_制服_基本_ぐるぐる = "images/face/心愛/心愛_制服_基本_ぐるぐる.png" # （被打）晕了
+# image side 心愛 心愛_制服_基本_ぐるぐる = "images/face/心愛/心愛_制服_基本_ぐるぐる.png" # （被打）晕了
 image side 心愛 心愛_制服_基本_嬉しい = "images/face/心愛/心愛_制服_基本_嬉しい.png" # 康起来很喜感的笑
 image side 心愛 心愛_制服_基本_嬉しい1 = "images/face/心愛/心愛_制服_基本_嬉しい1.png" # 康起来很喜感的笑，脸红
 image side 心愛 心愛_制服_基本_微笑み = "images/face/心愛/心愛_制服_基本_微笑み.png" # 睁眼，微笑
@@ -138,6 +138,7 @@ image side 心愛 心愛_水着_基本_きらきら = "images/face/心愛/心愛
 image side 心愛 心愛_水着_基本_号泣 = "images/face/心愛/心愛_水着_基本_号泣.png" # 闭眼，嚎啕大哭，含泪珠，脸红
 image side 心愛 心愛_水着_基本_微笑み = "images/face/心愛/心愛_水着_基本_微笑み.png" # 睁眼，微笑
 image side 心愛 心愛_水着_基本_まふまふ = "images/face/心愛/心愛_水着_基本_まふまふ.png" # 基于笑顔，闭眼，两个粉椭圆
+image side 心愛 心愛_水着_基本_ニタァ = "images/face/心愛/心愛_水着_基本_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢，两个粉椭圆
 
 # 水着_奶糖苹果系列
 image side 心愛 心愛_水着_おやつ_もぐもぐ = "images/face/心愛/心愛_水着_おやつ_もぐもぐ.png" # 闭眼，嘴-(，两个粉椭圆，嘛呼嘛呼
@@ -318,12 +319,14 @@ image side 真冬 真冬_水着_基本_号泣 = "images/face/真冬/真冬_水�
 image side 真冬 真冬_水着_基本_嬉しい = "images/face/真冬/真冬_水着_基本_嬉しい.png" # # 康起来很喜感的笑
 image side 真冬 真冬_水着_基本_本気 = "images/face/真冬/真冬_水着_基本_本気.png" # 眼睁大，眉毛y=-x,嘴闭
 image side 真冬 真冬_水着_基本_にっこり = "images/face/真冬/真冬_水着_基本_にっこり.png" # 闭眼，微笑
+image side 真冬 真冬_水着_基本_ニタァ = "images/face/真冬/真冬_水着_基本_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢
 
 # 水着_奶糖苹果系列
 image side 真冬 真冬_水着_基本_おやつ = "images/face/真冬/真冬_水着_基本_おやつ.png" # 拿着奶糖苹果，嘛呼嘛呼
 
 # 其它
 image side 真冬 真冬_通話中 = "images/face/真冬/真冬_通話中.png" # 装在携带里面的真冬
+image side 真冬 真冬_制服_中指_見下し_1 = "images/face/真冬/真冬_制服_中指_見下し_1.png"
 
 # 心爱&真冬 心爱和真冬共同出现，以为头像是真冬的所以用真冬的颜色
 ##　只需要指定　image="真冬"　，不需要单独指定表情了
@@ -367,6 +370,8 @@ image side リオン リオン_帽子無し_杖_悲しい = "images/face/リオ�
 
 # 私服系列
 image side リオン リオン_私服_基本_ジト目 = "images/face/リオン/リオン_私服_基本_ジト目.png" # 睁眼，没帽子，没拿杖，皱眉，嘴倒三角
+image side リオン リオン_私服_基本_にっこり = "images/face/リオン/リオン_私服_基本_にっこり.png" # 闭眼，有帽子，拿杖，微笑
+
 
 # アイス屋（冰淇淋店）（里昂）
 define icecreamroom = Character('冰淇淋店',color="#fff7bb",image="リオン")
@@ -487,6 +492,9 @@ define unknown404 = Character('？？？',color="#ffffff",image="unknown404")
 
 # wsa 女学生A （Woman Student A） 不加颜色的统一强制指定白色（#ffffff）
 define wsa = Character('女学生A',color="#ffffff")
+
+# wsa 女学生B （Woman Student B） 不加颜色的统一强制指定白色（#ffffff）
+define wsb = Character('女学生B',color="#ffffff")
 
 # bear 熊 （Woman Student A） 不加颜色的统一强制指定白色（#ffffff）
 define bear = Character('熊',color="#ffffff")
