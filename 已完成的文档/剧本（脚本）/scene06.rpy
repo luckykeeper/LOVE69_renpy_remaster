@@ -3,11 +3,11 @@
 # scene06 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：WorldlineChanger（关于真冬哼的一句歌曲）
-# 版本 0.4 "LuckyDev"
+# 版本 0.5 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年2月7日
+# 修订日期 2022年3月7日
 
 # 当前流程：编写脚本AIO Process
 
@@ -762,7 +762,7 @@ label scene06:
 
     # 真冬 「～♪」
     voice "voice/真冬/maf_a1_0576.ogg"
-    dong 真冬_私服_基本_まったり "～♪（L:我没听出来……这里W说“印象里叫迷雾森林，国内改编过好多，但疑似名字不对，scarsong和halloween theme是和它同类的，纪录片老演员了”）"
+    dong 真冬_私服_基本_まったり "～♪（L:我没听出来……这里W说“印象里叫迷雾森林，国内改编过好多，但疑似名字不对，scarsong和halloween theme是和它同类的，纪录片老演员了”，后来W又仔细听了一下，是X档案(X Files Theme)）"
 
     # nil 「これは…なんだかとても不安になる曲だ…。ぶっちゃけ怖い。」
     "这是…总觉得是非常不安的曲子…真可怕"
@@ -1567,7 +1567,7 @@ label scene06:
     play music bgmfifteen fadeout 4.0 fadein 4.0 # 针对这里BGM的特点需要把 Scene07 的BGM提前到 Scene06 脚本的尾巴这里写，并增大 fadeout/in 的间隔
     scene black
     scene アイキャッチ心愛 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
-
+ 
     $ renpy.pause(1.5, hard=True)
 
     jump scene07

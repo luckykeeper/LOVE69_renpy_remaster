@@ -3,13 +3,13 @@
 # scene22 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.3 "LuckyDev"
+# 版本 0.5 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月21日
+# 修订日期 2022年3月7日
 
-# 当前流程：整理生肉文本，翻译并润色
+# 当前流程：编写脚本AIO Process
 
 label scene22:
     # scene22 开始
@@ -830,7 +830,7 @@ label scene22:
     # scene22 场景2 【二周目_尾声】 结束
 
     # 离全部翻译完成！
-
+    
     # 画面回到主菜单！
 
     # Scene22 结束！

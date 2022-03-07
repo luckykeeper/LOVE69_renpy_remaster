@@ -2,12 +2,12 @@
 # LOVE69_Renpy_Remaster_Project
 # 人物名称定义（人物表）
 # Author:Luckykeeper
-# 版本 0.4 "LuckyDev"
+# 版本 0.5 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月28日
-# 修订日期 2022年3月6日
+# 修订日期 2022年3月7日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -233,7 +233,7 @@ define dong = Character('真冬',color="#4da8c0",image="真冬")
 
 # 定义显示在对话框中的小人物头像
 # 文件应当取自 face 文件夹，但是stand有现成更清晰的，且参数已经调试完毕，所以用stand，stand没有的再进行特殊处理，为了和后面的waifu2x区分
-# 工程目录写为 face
+# 工程目录写为 face 
 
 # 常服_普通系列
 image side 真冬 真冬_制服_基本_無表情 = "images/face/真冬/真冬_制服_基本_無表情.png" # 字面意思，睁眼，嘴·
@@ -402,7 +402,7 @@ define liu = Character('想瑠',color="#a4808c",image="想瑠")
 
 # 定义显示在对话框中的小人物头像
 # 文件应当取自 face 文件夹，但是stand有现成更清晰的，且参数已经调试完毕，所以用stand，stand没有的再进行特殊处理，为了和后面的waifu2x区分
-# 工程目录写为 face
+# 工程目录写为 face 
 image side 想瑠 想瑠_スーツ_ニヤリ = "images/face/想瑠/想瑠_スーツ_ニヤリ.png" # 睁眼，嘴“w”，手撑头，两个粉椭圆
 image side 想瑠 想瑠_スーツ_見下し = "images/face/想瑠/想瑠_スーツ_見下し.png" # 睁眼，嘴椭圆小开口，手撑头
 image side 想瑠 想瑠_スーツ_真顔 = "images/face/想瑠/想瑠_スーツ_真顔.png" # 睁眼，嘴点点，手撑头

@@ -3,11 +3,11 @@
 # scene08 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.4 "LuckyDev"
+# 版本 0.5 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年2月17日
+# 修订日期 2022年3月7日
 
 # 当前流程：编写脚本AIO Process
 
@@ -359,7 +359,7 @@ label scene08:
     ai 心愛_制服_基本_不機嫌 "呜欸欸~……怎么说呢，没想到洗发水的瓶子里面竟然装了护发素……"
 
     # 莲 「だから言ったじゃねぇか…」
-    lian "所以我不是说了嘛…"
+    lian "所以我不是说过了嘛…"
 
     # 心爱 「お？　ジャストタイミング？」
     show 心愛_制服_基本_嬉しい at love69_xinai_center with dissolve
@@ -506,7 +506,7 @@ label scene08:
 
     # 莲 「させるか！」
     lian "怎能让你得逞！"
-
+    
     # 心爱 「ぶへぇっ」
     show 心愛_制服_基本_ポカーン at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0884.ogg"
@@ -867,7 +867,7 @@ label scene08:
 
     scene black
     scene アイキャッチ心愛 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
-
+ 
     $ renpy.pause(1.5, hard=True)
 
     jump scene09

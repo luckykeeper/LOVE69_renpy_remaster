@@ -3,11 +3,11 @@
 # scene15 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.4 "LuckyDev"
+# 版本 0.5 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月6日
+# 修订日期 2022年3月7日
 
 #   本脚本为一周目的最后一幕，从Scene16开始就是二周目内容了
 
@@ -48,7 +48,7 @@ label scene15:
     # 真冬 「…うん」
     show 真冬_制服_基本_ジト目 at love69_left with dissolve
     voice "voice/真冬/maf_a1_1496.ogg"
-    dong 真冬_制服_基本_ジト目 "…嗯"
+    dong 真冬_制服_基本_ジト目 "…嗯" 
 
     # 莲 「何絶望した顔してんだよ」
     lian "为啥摆出这么绝望的表情啊"
@@ -314,6 +314,22 @@ label scene15:
     # 一周目内容，结束！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
 
     # 过场：（提示：在物语的序章，新的选择肢出现了！）
+    image bg ルート解禁 = "images/bg/ルート解禁.png"
+    scene ルート解禁 with dissolve
+
+    # 一周目完成，设置一周目变量为已经完成
+    $ persistent.one = True
+    $ persistent.playthrough == 1
+    $ check_playthrough()
+
+    # 创建 one.luckykeeper ，详见 gui.rpy 开头 和 options.rpy 主菜单音乐部分
+    ## 注意这里只能使用 Python2 来写，尝试过 flie.write 无法使用
+    init python:
+        file = open('one.luckykeeper','w')
+        file.write('This File is Automatically Created By Luckykeeper,you have playthrough one end!')
+        file.close()
+    $ renpy.pause(3.0, hard=True)
+
 
     # 一周目结束之后的变化
     #   开场BGM变为OP

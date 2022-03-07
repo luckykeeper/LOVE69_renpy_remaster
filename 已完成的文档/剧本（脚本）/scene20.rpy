@@ -3,13 +3,13 @@
 # scene20 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.3 "LuckyDev"
+# 版本 0.5 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月21日
+# 修订日期 2022年3月7日
 
-# 当前流程：整理生肉文本，翻译并润色
+# 当前流程：编写脚本AIO Process
 
 label scene20:
     # scene20 开始
@@ -331,7 +331,7 @@ label scene20:
     # scene20 场景1 【心跳不已的第一次】 结束
 
     # 离全部翻译完成只剩 2 个 Scene ！
-
+    
     # 过场：里昂（常服）
 
     # Scene20 结束！

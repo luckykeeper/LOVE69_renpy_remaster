@@ -3,11 +3,11 @@
 # scene12 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.4 "LuckyDev"
+# 版本 0.5 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月5日
+# 修订日期 2022年3月7日
 
 # 当前流程：编写脚本AIO Process
 
@@ -296,7 +296,7 @@ label scene12:
     # nil 「無言のまにらめっこ開始です。」
     "开始无言地盯着对方"
 
-    # L:这里文本框被遮住了，，显示人物是(nil)空，但是又显示的小对话框的头像，这里就由我来合理处理一下~
+    # L:这里文本框被遮住了，显示人物是(nil)空，但是又显示的小对话框的头像，这里就由我来合理处理一下~
 
     # 心爱&真冬 「『…』」
     show 心愛_制服_基本_笑顔 at love69_right

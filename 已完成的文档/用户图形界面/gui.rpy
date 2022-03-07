@@ -1,23 +1,39 @@
-# --------------------------------
+﻿# --------------------------------
 # LOVE69_Renpy_Remaster_Project
 # GUI自定义脚本
+# 版本 0.5 "LuckyDev"
 # Author:Luckykeeper
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 修订日期 2022年2月18日
-# 版本号 0.4 "LuckyDev"
+# 修订日期 2022年3月7日
 # 源文件名：gui.rpy
 
 ## “init offset”语句可使此文件中的初始化语句在任何其他文件中的“init”语句之前运
 ## 行。
+
+
 init offset = -2
+
 
 ## 调用gui.init会将样式重置为合理的默认值，并设置游戏的宽度和高度（分辨率）。
 ## 这里的像素需要设置成主菜单素材的基础像素
 ## ren'py能够自动地使用各种各样的屏幕
 init python:
     gui.init(1920, 1080)
+    
+    # Scene13.rpy:1216
+    renpy.music.register_channel("hawaii", mixer="sfx", loop=True ,buffer_queue=True)
+    # Scene13.rpy:2133
+    renpy.music.register_channel("xinaiab", mixer="voice", loop=False ,buffer_queue=True)
+
+    # 通过判断 one.luckykeeper 文件是否存在决定要播放的 BGM
+    import os
+    if os.path.exists("one.luckykeeper"):
+        main_menu_music = "bgm/bgm01.ogg"
+    else:
+        main_menu_music = "bgm/bgm08.ogg"
 
 
 

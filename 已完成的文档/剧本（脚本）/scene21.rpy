@@ -3,13 +3,13 @@
 # scene21 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.3 "LuckyDev"
+# 版本 0.5 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月21日
+# 修订日期 2022年3月7日
 
-# 当前流程：整理生肉文本，翻译并润色
+# 当前流程：编写脚本AIO Process
 
 label scene21:
     # scene21 开始
@@ -614,7 +614,7 @@ label scene21:
 
     # 店长 「でも、惚れた男のために信念を貫きたい。いじゃないですか！」
     dinerowner "但是，想为你爱的男人坚持信念，有什么不好呢？"
-
+    
     # 里昂 「じゃぁ…もう一度チャンスを…ありがとうございます！」
     lion "那么……再给我一次机会……谢谢！"
 
@@ -1250,7 +1250,7 @@ label scene21:
     # scene21 场景1 【梦想的第一战】 结束
 
     # 离全部翻译完成只剩最后 1 个 Scene ！
-
+    
     # 过场：里昂（常服）
 
     # Scene21 结束！

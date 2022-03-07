@@ -1,4 +1,4 @@
-# --------------------------------
+﻿# --------------------------------
 # LOVE69_Renpy_Remaster_Project
 # GUI自定义脚本
 # Author:Luckykeeper
@@ -98,7 +98,9 @@ define config.has_voice = True
 ## 将以下语句取消注释就可以设置标题界面播放的背景音乐文件。此文件将在整个游戏中
 ## 持续播放，直至音乐停止或其他文件开始播放。
 
-define config.main_menu_music = bgmeight
+# 可变主菜单 BGM ，详见 gui.rpy 开头和 scene15 结尾
+
+define config.main_menu_music = main_menu_music
 
 ## 转场 ##########################################################################
 ##

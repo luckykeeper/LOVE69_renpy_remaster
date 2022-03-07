@@ -3,11 +3,11 @@
 # scene09 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.4 "LuckyDev"
+# 版本 0.5 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月3日
+# 修订日期 2022年3月7日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1971,7 +1971,7 @@ label scene09:
     voice "voice/リオン/ron_a1_0987.ogg"
     lion リオン_基本_杖_悲しい "真不戳啊……好想要啊……好像坐上去啊……就稍微在上面坐一下"
     hide リオン_基本_杖_微笑み
-
+    
     # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.1
     $ sideimagesize.SideImageYalign = 0.78
@@ -2015,7 +2015,7 @@ label scene09:
     voice "voice/リオン/ron_a1_0990.ogg"
     lion リオン_基本_杖_ジト目 "原来是你的啊！真不戳真不戳！这是我出国之前就想要的！结果还是没能入手呢！"
     hide リオン_基本_杖_驚き
-
+    
     # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.1
     $ sideimagesize.SideImageYalign = 0.78
@@ -2446,7 +2446,7 @@ label scene09:
     # 思路
     # 用透明的 GIF （GIF 不能带 Alpha 通道但是似乎可以做成透明效果的）
     # 也可以试着用这里的方法重新处理康康效果
-    # 参考资料：https://blog.csdn.net/u013580497/article/details/49385127/
+    # 参考资料：https://blog.csdn.net/u013580497/article/details/49385127/ 
     # 把处理好的单个 GIF 文件放在背景来放，类似之前的“CALL”动画
     # 做GIF的时候在结尾添加是项目组信息
     # 做的时候还需要处理一下这1457张图片，waifu2x到1920*1080大小
@@ -2460,7 +2460,7 @@ label scene09:
             $ show_staff = True
         "不播放 STAFF 表":
             $ show_staff = False
-
+        
     if show_staff:
         show screen staff
         play sound bgmone
@@ -2633,7 +2633,7 @@ label scene09:
     voice "voice/リオン/ron_a1_1031.ogg"
     lion リオン_基本_杖_にっこり "Take it Easy！Good luck！我等你的好消息！"
     hide リオン_基本_杖_微笑み
-
+    
     # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.1
     $ sideimagesize.SideImageYalign = 0.78
@@ -3012,7 +3012,7 @@ label scene09:
     scene 公園_夕 with dissolve
     show 真冬_制服_基本_にっこり at love69_left with dissolve
     show 心愛_制服_基本_にっこり1 at love69_right with dissolve
-
+    
     # nil 「俺が目を開けると、そこには真冬が、最高の笑顔を俺と心愛に向けていた。」
     "当我我睁开眼睛的时候，看到真冬站在那里，以最美的笑容对着我和心爱"
 
@@ -4791,7 +4791,7 @@ label scene09:
     play music bgmtwentyfour fadein 4.0
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
     scene アイキャッチ心愛 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
-
+ 
     $ renpy.pause(1.5, hard=True)
 
     jump scene10

@@ -3,11 +3,11 @@
 # scene14 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.4 "LuckyDev"
+# 版本 0.5 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月6日
+# 修订日期 2022年3月7日
 
 # 当前流程：编写脚本AIO Process
 
@@ -29,7 +29,7 @@ label scene14:
     "酒店入住完毕"
 
     # 莲 「さて、では、まずはお部屋の内装についてご紹介を―」
-    lian "然后，那么，，首先介绍一下房间的内部装修吧"
+    lian "然后，那么，首先介绍一下房间的内部装修吧"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -90,7 +90,7 @@ label scene14:
     "因此…"
 
     # 心爱&真冬 HScene 03 Skip~
-
+    
     # scene14 场景1 【热情似火的夏威夷】 结束
 
     # Scene14 结束！

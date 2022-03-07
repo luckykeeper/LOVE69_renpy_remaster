@@ -3,11 +3,11 @@
 # scene11 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.4 "LuckyDev"
+# 版本 0.5 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月5日
+# 修订日期 2022年3月7日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1376,7 +1376,7 @@ label scene11:
     show 店长_私服_目閉じ at love69_wuye_center with dissolve
     voice "voice/霧葉/krh_a1_0242.ogg"
     dinerowner 店长_私服_目閉じ "好，到此为止~！"
-
+    
     # nil 「パンッと手拍子が鳴って、私達二人は我に返った。」
     "击掌的声音响起，我们两个人都回过神来"
 

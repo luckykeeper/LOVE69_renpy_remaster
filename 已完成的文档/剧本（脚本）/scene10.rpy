@@ -3,11 +3,11 @@
 # scene10 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.4 "LuckyDev"
+# 版本 0.5 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月5日
+# 修订日期 2022年3月7日
 
 # 当前流程：编写脚本AIO Process
 
@@ -445,7 +445,7 @@ label scene10:
     # 真冬 「お風呂にするー？」
     voice "voice/真冬/maf_a1_0917.ogg"
     dong 真冬_裸yシャツ_パンツ_微笑み "去洗澡吗？"
-
+    
     # 心爱&真冬 「『そーれーとーもー？』」
     voice "voice/真冬/maf_a1_0918.ogg"
     ai_dong 真冬_裸yシャツ_パンツ_微笑み "『还——是——说——要——？』"
@@ -2366,7 +2366,7 @@ label scene10:
     stop music fadeout 4.0
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=False, alpha=True, time_warp=None)
     scene アイキャッチ心愛 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=False, alpha=True, time_warp=None)
-
+    
     $ renpy.pause(1.5, hard=True)
 
     jump scene11
