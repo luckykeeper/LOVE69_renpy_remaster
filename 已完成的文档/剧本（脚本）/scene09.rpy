@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月7日
+# 修订日期 2022年3月8日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1971,7 +1971,7 @@ label scene09:
     voice "voice/リオン/ron_a1_0987.ogg"
     lion リオン_基本_杖_悲しい "真不戳啊……好想要啊……好像坐上去啊……就稍微在上面坐一下"
     hide リオン_基本_杖_微笑み
-    
+
     # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.1
     $ sideimagesize.SideImageYalign = 0.78
@@ -2015,7 +2015,7 @@ label scene09:
     voice "voice/リオン/ron_a1_0990.ogg"
     lion リオン_基本_杖_ジト目 "原来是你的啊！真不戳真不戳！这是我出国之前就想要的！结果还是没能入手呢！"
     hide リオン_基本_杖_驚き
-    
+
     # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.1
     $ sideimagesize.SideImageYalign = 0.78
@@ -2427,6 +2427,9 @@ label scene09:
     # 对下面的操作进行说明
     ## 和 Python 一样，可以用 \n 来转义
 
+    # 播放 STAFF 表变量
+    default persistent.playStaff = False
+
     luckykeeper "关于接下来将要播放的嵌入式 STAFF 表的说明：\n
         接下来将要播放 STAFF 表，原作的 STAFF 表是由1496张加密的不透明的jpg图片组成，经过抠图处理，得到了1457张并不完美的带alpha通道的PNG图片，原作的这种播放方式并不适应Ren’Py引擎的设计"
 
@@ -2446,7 +2449,7 @@ label scene09:
     # 思路
     # 用透明的 GIF （GIF 不能带 Alpha 通道但是似乎可以做成透明效果的）
     # 也可以试着用这里的方法重新处理康康效果
-    # 参考资料：https://blog.csdn.net/u013580497/article/details/49385127/ 
+    # 参考资料：https://blog.csdn.net/u013580497/article/details/49385127/
     # 把处理好的单个 GIF 文件放在背景来放，类似之前的“CALL”动画
     # 做GIF的时候在结尾添加是项目组信息
     # 做的时候还需要处理一下这1457张图片，waifu2x到1920*1080大小
@@ -2460,10 +2463,14 @@ label scene09:
             $ show_staff = True
         "不播放 STAFF 表":
             $ show_staff = False
-        
+
+
+
     if show_staff:
         show screen staff
         play sound bgmone
+        $ persistent.playStaff =  True # variable value
+        $ check_playthrough()
         # 考虑到 STAFF 表的加载时间过长，这里选择再重复播放一次
         queue sound bgmone
     else:
@@ -2633,7 +2640,7 @@ label scene09:
     voice "voice/リオン/ron_a1_1031.ogg"
     lion リオン_基本_杖_にっこり "Take it Easy！Good luck！我等你的好消息！"
     hide リオン_基本_杖_微笑み
-    
+
     # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.1
     $ sideimagesize.SideImageYalign = 0.78
@@ -2652,6 +2659,12 @@ label scene09:
 
     # 音效：摩托车疾驰
     # BG：Black
+    # 隐藏播放过的 STAFF 表
+    if persistent.playStaff:
+        hide screen staff
+    else:
+        pass
+
     stop sound fadeout 4.0
     play sound "voice/effect/02_発進走り去る／高速.ogg"
     scene black with dissolve
@@ -3012,7 +3025,7 @@ label scene09:
     scene 公園_夕 with dissolve
     show 真冬_制服_基本_にっこり at love69_left with dissolve
     show 心愛_制服_基本_にっこり1 at love69_right with dissolve
-    
+
     # nil 「俺が目を開けると、そこには真冬が、最高の笑顔を俺と心愛に向けていた。」
     "当我我睁开眼睛的时候，看到真冬站在那里，以最美的笑容对着我和心爱"
 
@@ -4791,7 +4804,7 @@ label scene09:
     play music bgmtwentyfour fadein 4.0
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
     scene アイキャッチ心愛 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
- 
+
     $ renpy.pause(1.5, hard=True)
 
     jump scene10
