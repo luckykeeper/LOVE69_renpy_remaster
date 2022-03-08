@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月7日
+# 修订日期 2022年3月8日
 
 #   本脚本为一周目的最后一幕，从Scene16开始就是二周目内容了
 
@@ -48,7 +48,7 @@ label scene15:
     # 真冬 「…うん」
     show 真冬_制服_基本_ジト目 at love69_left with dissolve
     voice "voice/真冬/maf_a1_1496.ogg"
-    dong 真冬_制服_基本_ジト目 "…嗯" 
+    dong 真冬_制服_基本_ジト目 "…嗯"
 
     # 莲 「何絶望した顔してんだよ」
     lian "为啥摆出这么绝望的表情啊"
@@ -322,13 +322,20 @@ label scene15:
     $ persistent.playthrough == 1
     $ check_playthrough()
 
-    # 创建 one.luckykeeper ，详见 gui.rpy 开头 和 options.rpy 主菜单音乐部分
-    ## 注意这里只能使用 Python2 来写，尝试过 flie.write 无法使用
-    init python:
-        file = open('one.luckykeeper','w')
-        file.write('This File is Automatically Created By Luckykeeper,you have playthrough one end!')
-        file.close()
     $ renpy.pause(3.0, hard=True)
+
+    # return before_main_menu
+
+    # # 变换 BGM
+    # $ checkFile = open('one.luckykeeper')
+    # $ checkFileStr = checkFile.read()
+    # if 'This File is Automatically Created By Luckykeeper because you have playthrough one end!' in checkFileStr:
+    #     $ print "恭喜你已经完成一周目内容!"
+    #     $ main_menu_music = "bgm/bgm01.ogg"
+    # else:
+    #     $ print "一周目完成状态:False"
+    #     $ main_menu_music = "bgm/bgm08.ogg"
+
 
 
     # 一周目结束之后的变化

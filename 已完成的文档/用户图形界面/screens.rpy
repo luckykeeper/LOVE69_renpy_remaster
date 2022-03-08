@@ -1,4 +1,4 @@
-﻿# --------------------------------
+# --------------------------------
 # LOVE69_Renpy_Remaster_Project
 # 各种GUI设定的详细设置
 # Author:Luckykeeper
@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月7日
+# 修订日期 2022年3月8日
 
 ################################################################################
 ## 初始化
@@ -564,7 +564,7 @@ screen main_menu():
     # ## https://www.renpy.cn/thread-843-1-1.html
     # $ latest_file = renpy.newest_slot(regexp=None)
     # $ latest_file_str = str(latest_file)
-    
+
     # # 测试：防止移动端抛出错误
     # # AttributeError: 'NoneType' object has no attribute 'split'
     # ## https://www.cnblogs.com/shijieli/p/10791247.html
@@ -577,7 +577,7 @@ screen main_menu():
 
     # $ l_f_page = latest_file_str.split('-',1)[0] #所在页 #auto-1表示自动存档页第一位
     # $ l_f_name = latest_file_str.split('-',1)[1] #槽位名
-    
+
     # 用 try 防止抛出错误
 
     $ latest_file = renpy.newest_slot(regexp=None)
@@ -1063,7 +1063,7 @@ screen save():
     tag menu
 
     use file_slots(_("Save"))
-    
+
 
 
 screen load():
@@ -1332,8 +1332,8 @@ screen game_load():
                         style "slot_name_text"
 
                     key "save_delete" action FileDelete(slot)
-        
-        
+
+
         ## 用于访问其他页面的按钮。
         hbox:
             style_prefix "page"
@@ -1378,7 +1378,7 @@ screen game_load():
                 action MainMenu()
 
 
-    
+
 
 ## 设置界面 ########################################################################
 ##
@@ -1435,7 +1435,7 @@ screen preferences():
                     style_prefix "check"
                     label _("实验选项，详见悬停在选项后左下方说明，修改之后重启生效")
                     textbutton _("使用软解（稳定）") :
-                        action [SetVariable("persistent.hwVideo",False),renpy.save_persistent()] 
+                        action [SetVariable("persistent.hwVideo",False),renpy.save_persistent()]
                         tooltip "默认选项，调用软件解码器对媒体进行解码，非常稳定但是耗费性能，对低端设备不友好"
                     textbutton _("使用硬解（更快）") :
                         action [SetVariable("persistent.hwVideo",True),renpy.save_persistent()]
@@ -1478,7 +1478,7 @@ screen preferences():
 
                         hbox:
                             bar value Preference("music volume")
-                            
+
 
                     if config.has_sound:
 
@@ -1620,11 +1620,11 @@ screen history():
                 $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
                 # 历史记录跳跃
                 ## https://www.renpy.cn/thread-221-1-1.html
-                textbutton what:      
+                textbutton what:
 
                     substitute False
                     style "history_text"
-                    action Confirm("要跳转到该处吗？", yes=RollbackToIdentifier(h.rollback_identifier), no=None, confirm_selected=False), 
+                    action Confirm("要跳转到该处吗？", yes=RollbackToIdentifier(h.rollback_identifier), no=None, confirm_selected=False),
 
         if not _history_list:
             label _("尚无对话历史记录。")
@@ -1664,11 +1664,11 @@ screen history():
 #                 $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
 #                 # 历史记录跳跃
 #                 ## https://www.renpy.cn/thread-221-1-1.html
-#                 textbutton what:      
+#                 textbutton what:
 
 #                     substitute False
 #                     style "history_text"
-#                     action Confirm("要跳转到该处吗？", yes=RollbackToIdentifier(h.rollback_identifier), no=None, confirm_selected=False), 
+#                     action Confirm("要跳转到该处吗？", yes=RollbackToIdentifier(h.rollback_identifier), no=None, confirm_selected=False),
 
 #         if not _history_list:
 #             label _("尚无对话历史记录。")
@@ -1752,7 +1752,7 @@ screen help():
                 # textbutton _("设置帮助") action SetScreenVariable("device", "settingHelp")
 
                 textbutton _("豆知识速查") action SetScreenVariable("device", "douKnowledge")
-                
+
             if device == "keyboard":
                 use keyboard_help
             elif device == "mouse":
@@ -1764,8 +1764,8 @@ screen help():
             # elif 1==1:
                 # use settingHelp
 
-            
-                
+
+
 
 screen keyboard_help():
 
@@ -2413,6 +2413,24 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+
+# 可变 BGM
+## https://lemmasoft.renai.us/forums/viewtopic.php?t=51629
+## https://www.renpy.cn/doc/label.html?highlight=before_main_menu
+label before_main_menu:
+    if persistent.one:
+        $ renpy.music.play("bgm/bgm01.ogg", channel='music', loop=True)
+    else:
+        $ renpy.music.play("bgm/bgm08.ogg", channel='music', loop=True)
+    return
+
+
+
+
+
+
+
 
 
 # 由于修改了存读档界面，需要调整存储区变量的默认行为，这个变量要在SplashScreen之后再加载，不能 init python -1，必须使用普通的写法让它在后面加载
