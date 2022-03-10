@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月8日
+# 修订日期 2022年3月10日
 
 # 当前流程：编写脚本AIO Process
 
@@ -2435,7 +2435,7 @@ label scene09:
 
     luckykeeper "所以为了正常播放 STAFF 表，这里程序会破例使用设备最大内存来对图形进行加载，预计会最大使用 7-8G 内存并导致程序运行缓慢甚至假死，为了完整的游戏体验，建议选择显示 STAFF 表"
 
-    luckykeeper "如果你正在使用低性能设备，您可以选择不显示 STAFF 表来加快运行速度"
+    luckykeeper "如果你正在使用低性能设备，您可以选择不显示 STAFF 表来加快运行速度，如果你正在使用安卓设备，请务必选择不播放 STAFF 表"
 
     luckykeeper "在显示 STAFF 表时，强烈建议您不要对程序大小进行调整，比如最大化，这可能会导致程序卡顿，如果程序假死，请耐心等待，加载完成后会自动恢复正常\n
         下面将对是否播放 STAFF 表进行选择"
