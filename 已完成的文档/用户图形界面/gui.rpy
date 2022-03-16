@@ -1,4 +1,4 @@
-﻿# --------------------------------
+# --------------------------------
 # LOVE69_Renpy_Remaster_Project
 # GUI自定义脚本
 # 版本 0.5 "LuckyDev"
@@ -22,18 +22,34 @@ init offset = -2
 ## ren'py能够自动地使用各种各样的屏幕
 init python:
     gui.init(1920, 1080)
-    
+
     # Scene13.rpy:1216
     renpy.music.register_channel("hawaii", mixer="sfx", loop=True ,buffer_queue=True)
     # Scene13.rpy:2133
     renpy.music.register_channel("xinaiab", mixer="voice", loop=False ,buffer_queue=True)
 
-    # 通过判断 one.luckykeeper 文件是否存在决定要播放的 BGM
-    import os
-    if os.path.exists("one.luckykeeper"):
-        main_menu_music = "bgm/bgm01.ogg"
-    else:
-        main_menu_music = "bgm/bgm08.ogg"
+    # # 通过判断 one.luckykeeper 文件是否存在决定要播放的 BGM
+    # import os
+    # if os.path.exists("one.luckykeeper"):
+    #     pass
+    # else:
+    #     print "初次运行,创建 one.luckykeeper 文件,请不要随意删除!"
+    #     fileCreate = open('one.luckykeeper','w')
+    #     fileCreate.write('bgm/bgm08.ogg')
+    #     fileCreate.close()
+    # checkFile = open('one.luckykeeper')
+    # main_menu_music = str(checkFile.read())
+
+    # checkFileStr = checkFile.read()
+    # if 'This File is Automatically Created By Luckykeeper because you have playthrough one end!' in checkFileStr:
+    #     print "恭喜你已经完成一周目内容!"
+    #     main_menu_music = "bgm/bgm01.ogg"
+    # else:
+    #     print "一周目完成状态:False"
+    #     main_menu_music = "bgm/bgm08.ogg"
+
+
+
 
 
 

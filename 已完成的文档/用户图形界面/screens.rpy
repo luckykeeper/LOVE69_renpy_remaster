@@ -717,7 +717,7 @@ screen main_menu_2():
                 selected_hover "gui/main_menu/btn_replaymode_onClick.png"
                 hover_sound "voice/effect/マウス乗せ音.ogg"
                 activate_sound "voice/effect/メニュー決定音.ogg"
-                action ShowMenu("about")
+                action ShowMenu("replay")
 
         # Music
         hbox:
@@ -2436,7 +2436,7 @@ label before_main_menu:
         $ renpy.music.play("bgm/bgm08.ogg", channel='music', loop=True)
     return
 
-
+# ______________________________________________________________________________________________
 # Gallery (ALBUM)
 screen gallery:
     tag menu
@@ -2512,6 +2512,72 @@ screen gallery:
     # 进入退出音乐效果
     on "replace" action Play("music", "bgm/bgm50.ogg")
     on "replaced" action Play("music", "bgm/bgm01.ogg")
+
+# ______________________________________________________________________________________________
+# Replay
+# 问：HS都没有，Replay 放个毛啊！
+# 所以这里就提供给大伙 jump scene 的功能吧
+screen replay:
+    tag menu
+    add "gui/replay/back.png"
+    vbox:
+        xalign 0.1
+        yalign 0.1
+        text "Replay"
+    hbox:
+        xalign 0.5
+        yalign 0.5
+
+        grid 3 8:
+            textbutton _("Scene01 序幕 我们的故事从这里开始") action Replay("scene01")
+            textbutton _("Scene02 真冬&心爱线 和心爱酱约会") action Replay("scene02")
+            textbutton _("Scene03 真冬&心爱线 心爱酱的夜访") action Replay("scene03")
+            textbutton _("Scene04 真冬&心爱线 真冬酱的心意") action Replay("scene04")
+            textbutton _("Scene05 真冬&心爱线 兄妹间的爱恋") action Replay("scene05")
+            textbutton _("Scene06 真冬&心爱线 寄的莲和二人") action Replay("scene06")
+            textbutton _("Scene07 真冬&心爱线 心爱酱的烦恼") action Replay("scene07")
+            textbutton _("Scene08 真冬&心爱线 心爱酱再夜访") action Replay("scene08")
+            textbutton _("Scene09 真冬&心爱线 从隔阂到幸终") action Replay("scene09")
+            textbutton _("Scene10 真冬&心爱线 三人新的开始") action Replay("scene10")
+            textbutton _("Scene11 真冬&心爱线 现在是女子会") action Replay("scene11")
+            textbutton _("Scene12 真冬&心爱线 二人奇妙体验") action Replay("scene12")
+            textbutton _("Scene13 真冬&心爱线 夏威夷我来啦") action Replay("scene13")
+            textbutton _("Scene14 真冬&心爱线 三人心跳时刻") action Replay("scene15")
+            textbutton _("Scene15 真冬&心爱线 故事还将继续") action Replay("scene15")
+            if persistent.two:
+                textbutton _("Scene16       里昂线       意料外的选择") action Replay("scene16")
+                textbutton _("Scene17       里昂线       初合演纸芝居") action Replay("scene17")
+                textbutton _("Scene18       里昂线       班主任的考验") action Replay("scene18")
+                textbutton _("Scene19       里昂线       和里昂初约会") action Replay("scene19")
+                textbutton _("Scene20       里昂线       考验后的幸福") action Replay("scene20")
+                textbutton _("Scene21       里昂线       梦想的第一战") action Replay("scene21")
+                textbutton _("Scene22       里昂线       忙碌快乐日常") action Replay("scene22")
+                textbutton _("Replay By Luckykeeper")
+                textbutton _("Enjoy The Game!")
+            else:
+                textbutton _("Locked!")
+                textbutton _("Locked!")
+                textbutton _("Locked!")
+                textbutton _("Locked!")
+                textbutton _("Locked!")
+                textbutton _("Locked!")
+                textbutton _("Locked!")
+                textbutton _("Replay By Luckykeeper")
+                textbutton _("Enjoy The Game!")
+
+    imagebutton:
+        xalign 0.99
+        yalign 0.99
+        idle "gui/saveload/btn_back_base.png"
+        hover "gui/saveload/btn_back_onMouse.png"
+        selected_hover "gui/saveload/btn_back_onClick.png"
+        action ShowMenu("main_menu_2")
+
+    # 页面下方的提示
+    vbox:
+        xalign 0.1
+        yalign 1.0
+        text "By Luckykeeper: 因为移植版莫得 HScene ，所以给带伙做了一个回顾大场景的功能， Scene 以过场人物动画为界"
 
 # 由于修改了存读档界面，需要调整存储区变量的默认行为，这个变量要在SplashScreen之后再加载，不能 init python -1，必须使用普通的写法让它在后面加载
 # https://www.renpy.cn/doc/store_variables.html?highlight=game_menu_screen#var-_game_menu_screen
