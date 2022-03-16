@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月8日
+# 修订日期 2022年3月16日
 
 ################################################################################
 ## 初始化
@@ -707,7 +707,7 @@ screen main_menu_2():
                 selected_hover "gui/main_menu/btn_cgmode_onClick.png"
                 hover_sound "voice/effect/マウス乗せ音.ogg"
                 activate_sound "voice/effect/メニュー決定音.ogg"
-                action ShowMenu("about")
+                action ShowMenu("gallery")
 
         # Replay
         hbox:
@@ -1279,6 +1279,11 @@ screen game_save():
                 selected_hover "gui/saveload/btn_title_onClick.png"
                 action MainMenu()
 
+        vbox:
+            xalign 0.1
+            yalign 0.95
+            text "热知识: 在本页面内，将鼠标放在已经有存档的格子上，按键盘上的“Delete”键就可以删除已有存档啦~"
+
 
 screen game_load():
 
@@ -1376,6 +1381,12 @@ screen game_load():
                 hover "gui/saveload/btn_title_onMouse.png"
                 selected_hover "gui/saveload/btn_title_onClick.png"
                 action MainMenu()
+
+        vbox:
+            xalign 0.1
+            yalign 0.95
+            text "热知识: 在本页面内，将鼠标放在已经有存档的格子上，按键盘上的“Delete”键就可以删除已有存档啦~"
+
 
 
 
@@ -2426,12 +2437,81 @@ label before_main_menu:
     return
 
 
+# Gallery (ALBUM)
+screen gallery:
+    tag menu
+    # 在这里播放音乐会导致 main_menu 的音乐混乱，暂时没有找到好的解决方法，后面再康康
+    # 解决，这个可以参照 “MusicRoom” 的用法，下面的 “replace” 就是具体写法
+    # $ renpy.music.play("bgm/bgm50.ogg", channel='music', loop=True, fadeout=1.0, synchro_start=False, fadein=1.0, if_changed=False)
+    add "gui/cgmode/album.png"
+
+    hbox:
+        xalign 0.5
+        yalign 0.5
 
 
+        grid 5 4:
+            spacing 60
+
+            add g.make_button("one", "gui/cgmode/cg/one/small/mcg01_1_1.png")
+
+            add g.make_button("two", "gui/cgmode/cg/one/small/アイキャッチ心愛.png")
+
+            add g.make_button("three", "gui/cgmode/cg/one/small/sdcg01a.png")
+
+            add g.make_button("four", "gui/cgmode/cg/one/small/mcg_02_1.png")
+
+            add g.make_button("five", "gui/cgmode/cg/one/small/sdcg04a.png")
 
 
+            add g.make_button("six", "gui/cgmode/cg/one/small/ハワイa.png")
 
+            add g.make_button("seven", "gui/cgmode/cg/one/small/ルート解禁.png")
 
+            add g.make_button("eight", "gui/cgmode/cg/one/small/屋上_夕.png")
+
+            add g.make_button("nine", "gui/cgmode/cg/one/small/ボウリング場.png")
+
+            add g.make_button("ten", "gui/cgmode/cg/one/small/ccg01_1_1.png")
+
+            add g.make_button("eleven", "gui/cgmode/cg/one/small/遊園地_商店街.png")
+
+            add g.make_button("twelve", "gui/cgmode/cg/one/small/水着cgゲーム用.png")
+
+            imagebutton:
+                idle "gui/cgmode/btn_thumb.png"
+            imagebutton:
+                idle "gui/cgmode/btn_thumb.png"
+            imagebutton:
+                idle "gui/cgmode/btn_thumb.png"
+
+            imagebutton:
+                idle "gui/cgmode/btn_thumb.png"
+            imagebutton:
+                idle "gui/cgmode/btn_thumb.png"
+            imagebutton:
+                idle "gui/cgmode/btn_thumb.png"
+            imagebutton:
+                idle "gui/cgmode/btn_thumb.png"
+            imagebutton:
+                idle "gui/cgmode/btn_thumb.png"
+
+    imagebutton:
+        xalign 0.99
+        yalign 0.99
+        idle "gui/saveload/btn_back_base.png"
+        hover "gui/saveload/btn_back_onMouse.png"
+        selected_hover "gui/saveload/btn_back_onClick.png"
+        action ShowMenu("main_menu_2")
+
+    # 页面下方的提示
+    vbox:
+        xalign 0.1
+        yalign 1.0
+        text "By Luckykeeper: Gallery 附带了一些彩蛋，包括一些原作没有使用但是也被打包进去的素材，\n                                    以及移植版没有使用的素材,还请注意。如需获取全部CG，可参照项目组文档站指南解包"
+    # 进入退出音乐效果
+    on "replace" action Play("music", "bgm/bgm50.ogg")
+    on "replaced" action Play("music", "bgm/bgm01.ogg")
 
 # 由于修改了存读档界面，需要调整存储区变量的默认行为，这个变量要在SplashScreen之后再加载，不能 init python -1，必须使用普通的写法让它在后面加载
 # https://www.renpy.cn/doc/store_variables.html?highlight=game_menu_screen#var-_game_menu_screen
@@ -2459,3 +2539,95 @@ init python:
         config.image_cache_size_mb = 1024
     else:
         config.image_cache_size_mb = 150
+
+
+    # Gallery (ALBUM) 对象
+    # Step1，创建Gallery对象
+    g = Gallery()
+
+    # Step2 创建要展示的实例
+    # 一周目不考虑解锁问题，直接加上，因为之前 EXTRA 没有开放
+    g.button("one") # prpr真冬
+
+    g.image("gui/cgmode/cg/one/mcg01_1_1.png")
+    g.image("gui/cgmode/cg/one/mcg01_1_2.png")
+    g.image("gui/cgmode/cg/one/mcg01_1_3.png")
+    g.image("gui/cgmode/cg/one/mcg01_2_1.png")
+    g.image("gui/cgmode/cg/one/mcg01_2_2.png")
+
+    g.button("two") # 过场动画
+
+    g.image("gui/cgmode/cg/one/アイキャッチ心愛＆真冬.png")
+    g.image("gui/cgmode/cg/one/アイキャッチ心愛.png")
+    g.image("gui/cgmode/cg/one/アイキャッチ真冬.png")
+    g.image("gui/cgmode/cg/one/アイキャッチ心愛＆真冬水着.png")
+    g.unlock_image("images/bg/アイキャッチリオン.png") # 二周目之后展示的话可以这么写
+
+    g.button("three") # 心爱&真冬 SDCG
+
+    g.image("gui/cgmode/cg/one/sdcg01a.png")
+    g.image("gui/cgmode/cg/one/sdcg01b.png")
+
+    g.button("four") # 真冬教室
+
+    g.image("gui/cgmode/cg/one/mcg_02_3.png")
+    g.image("gui/cgmode/cg/one/mcg_02_2.png")
+    g.image("gui/cgmode/cg/one/mcg_02_1.png")
+
+    g.button("five") # 看戏四人组
+
+    g.image("gui/cgmode/cg/one/sdcg04a.png")
+    g.image("gui/cgmode/cg/one/sdcg04b.png")
+    g.image("gui/cgmode/cg/one/体験版終了.png")
+
+    g.button("six") # Hawaii!!!
+
+    g.image("gui/cgmode/cg/one/ハワイa.png")
+    g.image("gui/cgmode/cg/one/ハワイb.png")
+    g.image("gui/cgmode/cg/one/ハワイc.png")
+    g.image("gui/cgmode/cg/one/ハワイd.png")
+    g.image("gui/cgmode/cg/one/ハワイe.png")
+    g.image("gui/cgmode/cg/one/ハワイf.png")
+    g.image("gui/cgmode/cg/one/ハワイg.png")
+    g.image("gui/cgmode/cg/one/ハワイh.png")
+
+    g.button("seven") # 里昂路线解禁
+
+    g.image("gui/cgmode/cg/one/ルート解禁.png")
+
+    g.button("eight") # 彩蛋素材：学校屋顶
+
+    g.image("gui/cgmode/cg/one/屋上_昼.png")
+    g.image("gui/cgmode/cg/one/屋上_夕.png")
+    g.image("gui/cgmode/cg/one/屋上_夜.png")
+
+    g.button("nine") # 和心爱酱的约会场所
+
+    g.image("gui/cgmode/cg/one/ボウリング場.png")
+    g.image("gui/cgmode/cg/one/チョコレートファクトリー.png")
+    g.image("gui/cgmode/cg/one/コールドストーン.png")
+    g.image("gui/cgmode/cg/one/寿司屋.png")
+    g.image("gui/cgmode/cg/one/ゲームセンター.png")
+    g.image("gui/cgmode/cg/one/ハンズ.png")
+
+    g.button("ten") # 心爱酱的钢琴表演
+
+    g.image("gui/cgmode/cg/one/ccg01_1_1.png")
+    g.image("gui/cgmode/cg/one/ccg01_2_1.png")
+    g.image("gui/cgmode/cg/one/ccg01_2_2.png")
+    g.image("gui/cgmode/cg/one/ccg01_3_2.png")
+    g.image("gui/cgmode/cg/one/ccg01_4_1.png")
+    g.image("gui/cgmode/cg/one/ccg01_4_2.png")
+
+    g.button("eleven") # 遊園地
+
+    g.image("gui/cgmode/cg/one/遊園地_商店街.png")
+    g.image("gui/cgmode/cg/one/遊園地_ポップコーン.png")
+
+    g.button("twelve") # CG 1/2
+
+    g.image("gui/cgmode/cg/one/main_menu_1.png")
+    g.image("gui/cgmode/cg/one/水着cgゲーム用.png")
+
+    # 用于图像切换使用的转场(transition)
+    g.transition = dissolve
