@@ -2,11 +2,11 @@
 # LOVE69_Renpy_Remaster_Project
 # 各种GUI设定的详细设置
 # Author:Luckykeeper
-# 版本 0.5 "LuckyDev"
+# 版本 0.6 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月16日
+# 修订日期 2022年3月17日
 
 ################################################################################
 ## 初始化
@@ -664,7 +664,7 @@ screen main_menu():
             selected_hover "gui/main_menu/btn_project_onClick.png"
             hover_sound "voice/effect/マウス乗せ音.ogg"
             activate_sound "voice/effect/メニュー決定音.ogg"
-            action ShowMenu("about")
+            action OpenURL("https://love69renpyremasterproject.github.io/")
 
     # End btn 的 vbox
     vbox:
@@ -727,7 +727,7 @@ screen main_menu_2():
                 selected_hover "gui/main_menu/btn_bgmmode_onClick.png"
                 hover_sound "voice/effect/マウス乗せ音.ogg"
                 activate_sound "voice/effect/メニュー決定音.ogg"
-                action ShowMenu("about")
+                action ShowMenu("music_room")
 
         # ExtraGames
         hbox:
@@ -737,7 +737,7 @@ screen main_menu_2():
                 selected_hover "gui/main_menu/btn_exgame_onClick.png"
                 hover_sound "voice/effect/マウス乗せ音.ogg"
                 activate_sound "voice/effect/メニュー決定音.ogg"
-                action ShowMenu("about")
+                action ShowMenu("extra_games")
 
         # Back
         hbox:
@@ -2506,9 +2506,9 @@ screen gallery:
 
     # 页面下方的提示
     vbox:
-        xalign 0.1
+        xalign 0
         yalign 1.0
-        text "By Luckykeeper: Gallery 附带了一些彩蛋，包括一些原作没有使用但是也被打包进去的素材，\n                                    以及移植版没有使用的素材,还请注意。如需获取全部CG，可参照项目组文档站指南解包"
+        text "By Luckykeeper: Gallery 附带了一些彩蛋，包括一些原作没有使用但是也被打包进去的素材，\n                                    以及移植版没有使用的素材,还请注意。如需获取全部CG，可参照{a=https://love69-renpy-remaster-project.github.io/Doc/}项目组文档站{/a}指南解包"
     # 进入退出音乐效果
     on "replace" action Play("music", "bgm/bgm50.ogg")
     on "replaced" action Play("music", "bgm/bgm01.ogg")
@@ -2523,7 +2523,7 @@ screen replay:
     vbox:
         xalign 0.1
         yalign 0.1
-        text "Replay"
+        text "Scene Replay"
     hbox:
         xalign 0.5
         yalign 0.5
@@ -2552,7 +2552,7 @@ screen replay:
                 textbutton _("Scene20       里昂线       考验后的幸福") action Replay("scene20")
                 textbutton _("Scene21       里昂线       梦想的第一战") action Replay("scene21")
                 textbutton _("Scene22       里昂线       忙碌快乐日常") action Replay("scene22")
-                textbutton _("Replay By Luckykeeper")
+                textbutton _("Scene Replay By Luckykeeper")
                 textbutton _("Enjoy The Game!")
             else:
                 textbutton _("Locked!")
@@ -2562,7 +2562,7 @@ screen replay:
                 textbutton _("Locked!")
                 textbutton _("Locked!")
                 textbutton _("Locked!")
-                textbutton _("Replay By Luckykeeper")
+                textbutton _("Scene Replay By Luckykeeper")
                 textbutton _("Enjoy The Game!")
 
     imagebutton:
@@ -2575,9 +2575,160 @@ screen replay:
 
     # 页面下方的提示
     vbox:
-        xalign 0.1
+        xalign 0
         yalign 1.0
         text "By Luckykeeper: 因为移植版莫得 HScene ，所以给带伙做了一个回顾大场景的功能， Scene 以过场人物动画为界"
+
+# ______________________________________________________________________________________________
+# Music
+screen music_room:
+    tag menu
+    add "gui/music_room/back.png"
+
+    # Spriterecordings Url
+    imagebutton:
+        xalign 0.636
+        yalign 0.725
+        idle "gui/music_room/btn_site_off.png"
+        hover "gui/music_room/btn_site_over.png"
+        selected_hover "gui/music_room/btn_site_one.png"
+        action OpenURL("http://spriterecordings.upper.jp/EmotiveBrilliance/")
+
+    # 01_heartbeat
+    imagebutton:
+        xalign 0.0700899
+        yalign 0.059
+        idle "gui/music_room/btn_bgm01_off.png"
+        hover "gui/music_room/btn_bgm01_onover.png"
+        selected_idle "gui/music_room/btn_bgm01_on.png"
+        action mr.Play("bgm/bgm01.ogg")
+
+    # 01_heartbeat
+    imagebutton:
+        xalign 0.0700899
+        yalign 0.059
+        idle "gui/music_room/btn_bgm01_off.png"
+        hover "gui/music_room/btn_bgm01_onover.png"
+        selected_idle "gui/music_room/btn_bgm01_on.png"
+        action mr.Play("bgm/bgm01.ogg")
+
+    # 08_あの夏まで
+    imagebutton:
+        xalign 0.0700899
+        yalign 0.2516
+        idle "gui/music_room/btn_bgm02_off.png"
+        hover "gui/music_room/btn_bgm02_onover.png"
+        selected_idle "gui/music_room/btn_bgm02_on.png"
+        action mr.Play("bgm/bgm05.ogg")
+
+    # prominence
+    imagebutton:
+        xalign 0.0700899
+        yalign 0.466
+        idle "gui/music_room/btn_bgm03_off.png"
+        hover "gui/music_room/btn_bgm03_onover.png"
+        selected_idle "gui/music_room/btn_bgm03_on.png"
+        action mr.Play("bgm/bgm03.ogg")
+
+    if persistent.two:
+    # 世迷い恋慕
+        imagebutton:
+            xalign 0.0700899
+            yalign 0.675
+            idle "gui/music_room/btn_bgm04_off.png"
+            hover "gui/music_room/btn_bgm04_onover.png"
+            selected_idle "gui/music_room/btn_bgm04_on.png"
+            action mr.Play("bgm/bgm49.ogg")
+    else:
+        imagebutton:
+            xalign 0.0700899
+            yalign 0.675
+            idle "gui/music_room/btn_bgm04_na.png"
+
+    # anonatsu_piano
+    imagebutton:
+        xalign 0.0700899
+        yalign 0.9
+        idle "gui/music_room/btn_bgm05_off.png"
+        hover "gui/music_room/btn_bgm05_onover.png"
+        selected_idle "gui/music_room/btn_bgm05_on.png"
+        action mr.Play("bgm/bgm08.ogg")
+
+    # あの夏rock1111
+    imagebutton:
+        xalign 0.685
+        yalign 0.063
+        idle "gui/music_room/btn_bgm06_off.png"
+        hover "gui/music_room/btn_bgm06_onover.png"
+        selected_idle "gui/music_room/btn_bgm06_on.png"
+        action mr.Play("bgm/bgm42.ogg")
+
+    # スターチス nightcore
+    imagebutton:
+        xalign 0.69595
+        yalign 0.2575
+        idle "gui/music_room/btn_bgm07_off.png"
+        hover "gui/music_room/btn_bgm07_onover.png"
+        selected_idle "gui/music_room/btn_bgm07_on.png"
+        action mr.Play("bgm/bgm47.ogg")
+
+    imagebutton:
+        xalign 0.99
+        yalign 0.99
+        idle "gui/saveload/btn_back_base.png"
+        hover "gui/saveload/btn_back_onMouse.png"
+        selected_hover "gui/saveload/btn_back_onClick.png"
+        action ShowMenu("main_menu_2")
+
+    # 页面下方的提示
+    vbox:
+        xalign 0
+        yalign 1.0
+        text "By Luckykeeper:想回顾全部 BGM？请参照{a=https://love69-renpy-remaster-project.github.io/Doc/}项目组文档站{/a}指南进行解包~"
+
+    # 进入退出音乐效果
+    on "replace" action mr.Play()
+    on "replaced" action Play("music", "bgm/bgm01.ogg")
+
+# ______________________________________________________________________________________________
+# Extra Games
+screen extra_games:
+    tag menu
+    add "gui/extra_games/back3.png"
+
+    # S.I.S Url
+    imagebutton:
+        xalign 0.1
+        yalign 0.2
+        idle "gui/extra_games/btn_sis.png"
+        hover "gui/extra_games/btn_sis.png"
+        selected_hover "gui/extra_games/btn_sis.png"
+        action OpenURL("http://www.hyperiyon.com/100periyon/sistri/dl.php")
+
+    # COW Url
+    imagebutton:
+        xalign 0.1
+        yalign 0.77
+        idle "gui/extra_games/btn_cow.png"
+        hover "gui/extra_games/btn_cow.png"
+        selected_hover "gui/extra_games/btn_cow.png"
+        action OpenURL("http://www.hyperiyon.com/100periyon/cow/dlcode.php")
+
+    # 页面下方的提示
+
+    vbox:
+        xalign 0
+        yalign 1.0
+        text "By Luckykeeper:这里原作是想让大家白嫖这两部游戏（是本作的前作），在我开始翻译本作的时候去看了一眼，\n一部放的 Google Drive 已经过期了，另一部提供的链接也下载不了了，大伙也可以去试试，想支持本作的原作\n团队也可以考虑买这两部，只要100日元（人民币6块多点儿）"
+
+    imagebutton:
+        xalign 0.99
+        yalign 0.99
+        idle "gui/saveload/btn_back_base.png"
+        hover "gui/saveload/btn_back_onMouse.png"
+        selected_hover "gui/saveload/btn_back_onClick.png"
+        action ShowMenu("main_menu_2")
+
 
 # 由于修改了存读档界面，需要调整存储区变量的默认行为，这个变量要在SplashScreen之后再加载，不能 init python -1，必须使用普通的写法让它在后面加载
 # https://www.renpy.cn/doc/store_variables.html?highlight=game_menu_screen#var-_game_menu_screen
@@ -2697,3 +2848,16 @@ init python:
 
     # 用于图像切换使用的转场(transition)
     g.transition = dissolve
+
+    # MusicRoom 实例
+    # Step1，创建一个 MusicRoom 实例。
+    mr = MusicRoom(fadeout=1.0)
+
+    # Step2. 添加音乐文件。
+    mr.add("bgm/bgm01.ogg") # 01_heartbeat
+    mr.add("bgm/bgm05.ogg") # 08_あの夏まで
+    mr.add("bgm/bgm03.ogg", always_unlocked=True) # prominence
+    mr.add("bgm/bgm49.ogg", always_unlocked=True) # 世迷い恋慕
+    mr.add("bgm/bgm08.ogg") # anonatsu_piano
+    mr.add("bgm/bgm42.ogg") # あの夏rock1111
+    mr.add("bgm/bgm47.ogg") # スターチス nightcore
