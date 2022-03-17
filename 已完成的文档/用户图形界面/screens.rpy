@@ -2857,7 +2857,10 @@ init python:
     mr.add("bgm/bgm01.ogg") # 01_heartbeat
     mr.add("bgm/bgm05.ogg") # 08_あの夏まで
     mr.add("bgm/bgm03.ogg", always_unlocked=True) # prominence
-    mr.add("bgm/bgm49.ogg", always_unlocked=True) # 世迷い恋慕
+    if persistent.two:
+        mr.add("bgm/bgm49.ogg", always_unlocked=True) # 世迷い恋慕
+    else:
+        mr.add("bgm/bgm49.ogg")
     mr.add("bgm/bgm08.ogg") # anonatsu_piano
     mr.add("bgm/bgm42.ogg") # あの夏rock1111
     mr.add("bgm/bgm47.ogg") # スターチス nightcore
