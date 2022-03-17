@@ -3,11 +3,11 @@
 # scene22 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.5 "LuckyDev"
+# 版本 0.6 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月7日
+# 修订日期 2022年3月17日
 
 # 当前流程：编写脚本AIO Process
 
@@ -830,12 +830,13 @@ label scene22:
     # scene22 场景2 【二周目_尾声】 结束
 
     # 离全部翻译完成！
-    
+
     # 画面回到主菜单！
 
     # Scene22 结束！
 
     stop music fadeout 3.0
     scene black with Dissolve(3.0)
+    $ renpy.end_replay()
 
     # 2022年1月21日 By Luckykeeper ， Translate ALL DONE！！！

@@ -3,11 +3,11 @@
 # scene17 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.5 "LuckyDev"
+# 版本 0.6 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月7日
+# 修订日期 2022年3月17日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1253,5 +1253,6 @@ label scene17:
     # Scene17 结束！
 
     # 过场：里昂（常服）
+    $ renpy.end_replay()
 
     jump scene18

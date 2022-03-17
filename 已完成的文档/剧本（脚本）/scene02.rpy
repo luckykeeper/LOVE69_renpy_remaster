@@ -3,11 +3,11 @@
 # scene02 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：WorldlineChanger（一处豆知识）
-# 版本 0.5 "LuckyDev"
+# 版本 0.6 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月7日
+# 修订日期 2022年3月17日
 
 # 当前流程：编写脚本AIO Process
 
@@ -27,7 +27,7 @@ label scene02:
 
     # 显示 quick_menu
     $ quick_menu = True
-    
+
     # nil 「案内された店内は、アメリカンダイナーの名に恥じない、クラシックでアメリカ風の装飾で、」
     "进入店内，映入眼帘的是经典的美式装饰，雀食和传单上宣传的美式餐厅的名号很匹配呢"
 
@@ -1388,7 +1388,7 @@ label scene02:
     scene white
     # scene ゲームセンター with ImageDissolve("images/tr/ysr001.png", 0.1, ramplen=8, reverse=False, alpha=True, time_warp=None)
     scene ゲームセンター with Dissolve(0.01)
-    
+
     # 心爱 「完っ璧」
     show 心愛_制服_基本_にっこり at love69_xinai_center
     show 心愛_制服_基本_真顔 at love69_xinai_center with dissolve
@@ -1581,7 +1581,7 @@ label scene02:
 
     # 翻译君的豆知识时间！
     luckykeeper "切连科夫辐射是介质中运动的电荷速度超过该介质中光速时发出的一种以短波长为主的电磁辐射，其特征是蓝色辉光。这种辐射是1934年由苏联物理学家帕维尔·阿列克谢耶维奇·切连科夫发现的，因此以他的名字命名"
-    
+
     luckykeeper "1937年另两名苏联物理学家伊利亚·弗兰克和伊戈尔·塔姆成功地解释了切连科夫辐射的成因，三人因此共同获得1958年的诺贝尔物理学奖"
 
     # 莲 「夏休みな」
@@ -1616,7 +1616,7 @@ label scene02:
 
     # 是W的豆知识时间哟~
     luckykeeper "这回是WorldlineChanger的豆知识时间哦！るなちー是the unusual skyblock的mc整合包里面的狂气之瞳的爱称，攻击带有多种debuff，不是很好对付"
-    
+
     # 翻译君的豆知识时间哒~
     # 参考资料：https://twitter.com/lunachi_bot
     luckykeeper "接着是L的豆知识时间，最开始我和W都是向这mc的方向想的，不过问了10多个人都不知道，于是换了个思路到twitter搜了一下，发现本作的前作月宮瑠那的宣传账号用的是这个名字るなちー_bot（@Lunachi_bot）"
@@ -2048,7 +2048,7 @@ label scene02:
     # 心爱 「私にキスされて、嫌じゃなかった…？」
     voice "voice/心愛/cca_a1_0275.ogg"
     ai 心愛_制服_おやつ_泣き1 "被我吻了，你不讨厌吗…？"
-    
+
     # 莲 「なるわけないだろ。普通に嬉しかったぞ」
     lian "怎么可能呢，我只是普通的高兴而已"
 
@@ -2098,7 +2098,7 @@ label scene02:
         zoom 1.5
         xalign 0.35
         yalign 0.04
-    
+
     voice "voice/心愛/cca_a1_0280.ogg"
     ai 心愛_制服_おやつ_キス "嗯……？！"
     hide 心愛_制服_おやつ_不機嫌1
@@ -2207,7 +2207,7 @@ label scene02:
     voice "voice/心愛/cca_a1_0291.ogg"
     ai 心愛_制服_おやつ_キス "嗯姆...... 嗯...... 嗯......"
     hide 心愛_大_制服_基本_きらきら
-    
+
     # 莲 「これでご満足頂けたかな？」
     lian "这样您就满意了吧？"
 
@@ -2250,7 +2250,8 @@ label scene02:
     play music bgmthirtysix fadeout 4.0 fadein 4.0 # 针对这里BGM的特点需要把 Scene03 的BGM提前到 Scene02 脚本的尾巴这里写，并增大 fadeout/in 的间隔
     scene black
     scene アイキャッチ心愛 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
- 
+
     $ renpy.pause(1.5, hard=True)
-    
+    $ renpy.end_replay()
+
     jump scene03

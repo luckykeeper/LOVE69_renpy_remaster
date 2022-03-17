@@ -1,13 +1,13 @@
-﻿# --------------------------------
+# --------------------------------
 # LOVE69_Renpy_Remaster_Project
 # scene01 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：WorldlineChanger（2句）
-# 版本 0.5 "LuckyDev"
+# 版本 0.6 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月7日
+# 修订日期 2022年3月17日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右<-2021年10月5日 搞定！
@@ -18,6 +18,9 @@
 # ysr006 的，可能 black 也有 scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None) ，需要注意一下
 
 label scene01:
+
+
+    # $ main_menu_music = "bgm/bgm01.ogg" # 调试用
 
     #######################################################################################################
     ## 已知问题 | 测试：Luckykeeper
@@ -93,7 +96,7 @@ label scene01:
     lian "闭嘴"
 
     # 真冬 「はう」
-    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 01  
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 01
     play sound "voice/effect/なぐる2～ドンッ.ogg"
     voice "voice/真冬/maf_a1_0002.ogg"
     dong 真冬_制服_基本_泣き "哈呜"
@@ -114,7 +117,7 @@ label scene01:
     lian "拜托，你很烦耶"
 
     # 真冬 「はう」
-    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 01  
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 01
     play sound "voice/effect/なぐる2～ドンッ.ogg"
     voice "voice/真冬/maf_a1_0006.ogg"
     dong 真冬_制服_基本_泣き "哈呜"
@@ -381,7 +384,7 @@ label scene01:
 
     # 莲 「耳ペロで起きときゃ良かったって、ほんのちょっと後悔した」
     lian "早知道就在刚才你给我耳朵prpr的时候起来好了，真是有点后悔呐"
-    
+
     # nil 「俺は天井と見下ろしてくる真冬を眺める。」
     "我躺在地上，望着天花板和真冬"
 
@@ -564,7 +567,7 @@ label scene01:
     voice "voice/真冬/maf_a1_0041.ogg"
     dong 真冬_制服_基本_目閉じ "是非常有朝气的......升阳...呢"
     hide 真冬_制服_基本_無表情
-    
+
 
     # 莲 「…お粗末様でした」
     lian "牙白...对不起......"
@@ -1653,7 +1656,7 @@ label scene01:
     # 真冬 「あ、心愛ちゃんおはよー。はいお兄ちゃん、鞄」
     voice "voice/真冬/maf_a1_0086.ogg"
     dong 真冬_制服_基本_にっこり "啊，心爱酱，早上好~ 给，欧尼酱，书包"
-    
+
 
     # 莲 「お、助かる。つっても中身何も入ってないけどな」
     lian "啊，多谢了，虽然书包里面啥子都没有"
@@ -2446,7 +2449,7 @@ label scene01:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「ふがっ」
-    # hide 真冬_制服_基本_にっこり 
+    # hide 真冬_制服_基本_にっこり
     # 2022年1月23日注：这里为什么需要多写一次捏，因为我前面该 hide 这里的时候是 hide 真冬_制服_基本_にっこりDD 这么写的，我也不知道我当时在想什么多写了个“DD”上去……
     hide 真冬_制服_基本_居眠り
     show 真冬_制服_基本_居眠り:
@@ -2859,7 +2862,7 @@ label scene01:
     hide 花盆君_通常 with Dissolve(0.15)
     scene black
     scene 教室_昼 at love69_bg1220 with ImageDissolve("images/tr/ysr006.png", 0.64, ramplen=8, reverse=False, alpha=True, time_warp=None)
-    
+
 
     # nil 「予鈴が鳴り響く。それと同時に教室の前側の扉が開き、担任の教師が姿を現した。」
     "预备铃响起。与此同时，教室的前门被班主任打开了"
@@ -4464,7 +4467,7 @@ label scene01:
     scene 通学路c_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     play music bgmtwentyfour fadeout 0.8 fadein 1.0
     show 黄_基本_杖_微笑み at love69_lion_center with Dissolve(0.15)
-    
+
     # 里昂？？？ 「えーと…とりあえず、うちのMJを捕まえてくれてありがとうございます」
     voice "voice/リオン/ron_a1_0027.ogg"
     ang "嗯……总之，谢谢你帮我抓住了我家的MJ"
@@ -4526,7 +4529,7 @@ label scene01:
     # 莲 「ドク」
     # 参考资料：https://ja.wikipedia.org/wiki/ドク
     lian "Doc"
-    
+
     # 翻译君的豆知识时间两连击！
     luckykeeper "「ドク(Doc)」是1996年10月17日- 12月19日在富士电视台连续播出的电视剧，大概讲的是长濑雪在去越南旅行时遇到了越南青年ドク。回到日本后，在语言学校担任日语教师的长濑雪与ドク重逢"
 
@@ -5206,7 +5209,7 @@ label scene01:
         yalign -0.09
     voice "voice/心愛/cca_a1_0101.ogg"
     ai 心愛_制服_基本_にっこり "莲——君——！"
-        
+
     # 莲 「んお？」
     lian "嗯？"
 
@@ -5282,7 +5285,7 @@ label scene01:
     # 心爱变身长动画
     # 受原作引擎封包限制，不能完全还原了呢，敬请谅解
     $ renpy.movie_cutscene("video/心愛覚醒_長.webm",stop_music=False)
-    
+
 
     # 这个语句是针对心爱觉醒设计的参数，能够调整觉醒的心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.04
@@ -5366,7 +5369,7 @@ label scene01:
     hide 心愛_トランザム
     # nil 「心愛が跳ねて、右腕を伸ばす。」
     "心爱跳起来，伸出右臂"
-    
+
     # 心爱从屏幕右边闪现！
     # CropMove和hpunch似乎不能连用呢，抛弃hpench
     show 心愛_トランザム at love69_xinai_center with CropMove(0.15,mode="wipeleft"):
@@ -5386,7 +5389,7 @@ label scene01:
     $ sideimagesize.SideImageXalign = -0.04
     $ sideimagesize.SideImageYalign = 23.8
     $ sideimagesize.SideImageZoom = 0.55
-        
+
     # 心爱 「こは…俺の距離だ！」
     voice "voice/心愛/cca_a1_0109.ogg"
     ai "这是…我的距离！"
@@ -5420,7 +5423,7 @@ label scene01:
     show 心愛_トランザム at love69_xinai_center:
         yalign 0.053
         xalign 0.43
-    
+
     # 莲 「食らえ！」
     lian "给我恰！"
 
@@ -5442,7 +5445,7 @@ label scene01:
         xalign 0.43
         linear 0.15 yalign -0.001
         linear 0.15 yalign 0.053
-    
+
     # 心爱 「むぐっ」
     voice "voice/心愛/cca_a1_0111.ogg"
     ai "唔！"
@@ -6127,7 +6130,7 @@ label scene01:
         yalign 0.015
         linear 0.0 xalign 0.254
         linear 0.3 xalign 0.52
-    
+
     transform love69_wuye_center:
         zoom 1.5
         xalign 0.93
@@ -6179,13 +6182,13 @@ label scene01:
     # hide screen quick_menu
     scene black
     scene アイキャッチ心愛＆真冬 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=False, alpha=True, time_warp=None)
- 
-    $ renpy.pause(1.5, hard=True)
 
+    $ renpy.pause(1.5, hard=True)
+    $ renpy.end_replay()
 
     # scene01 结束啦！！！
     # 过场： アイキャッチ心愛＆真冬
-    # Demo部分文本结束 
+    # Demo部分文本结束
 
     # 可能需要在这里做个持久化变量，用于Gallery
 

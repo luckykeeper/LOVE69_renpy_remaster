@@ -2,11 +2,11 @@
 # LOVE69_Renpy_Remaster_Project
 # 开场动画设定脚本
 # Author:Luckykeeper
-# 版本 0.4 "LuckyDev"
+# 版本 0.6 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年1月23日
+# 修订日期 2022年3月17日
 
 # image pure_black = "#000"
 # 开场画面

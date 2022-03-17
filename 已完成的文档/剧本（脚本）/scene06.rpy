@@ -3,11 +3,11 @@
 # scene06 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：WorldlineChanger（关于真冬哼的一句歌曲）
-# 版本 0.5 "LuckyDev"
+# 版本 0.6 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月7日
+# 修订日期 2022年3月17日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1567,7 +1567,8 @@ label scene06:
     play music bgmfifteen fadeout 4.0 fadein 4.0 # 针对这里BGM的特点需要把 Scene07 的BGM提前到 Scene06 脚本的尾巴这里写，并增大 fadeout/in 的间隔
     scene black
     scene アイキャッチ心愛 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
- 
+
     $ renpy.pause(1.5, hard=True)
+    $ renpy.end_replay()
 
     jump scene07

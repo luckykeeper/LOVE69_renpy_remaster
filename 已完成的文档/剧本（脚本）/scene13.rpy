@@ -3,11 +3,11 @@
 # scene13 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.5 "LuckyDev"
+# 版本 0.6 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月7日
+# 修订日期 2022年3月17日
 
 # 当前流程：编写脚本AIO Process
 
@@ -151,7 +151,7 @@ label scene13:
     "所以我们来到了夏威夷"
 
     # nil 「新東京国際空港から時間。エコノミークラスでしたが、比較的快適でした。」
-    # TechnoBrain官网：https://www.technobrain.com/ 
+    # TechnoBrain官网：https://www.technobrain.com/
     "从新东京国际机场（L:就是成田国际机场）出发到这里要8小时。虽然是经济舱，但相对来说还算舒服（L:这里我来给大家推一下TechnoBrain的ぼくは航空管制官系列，非常非常好玩，是阔以对成田机场、夏威夷机场等机场进行模拟管制的非常非常好玩的游戏，搜ATC2、3、4就能找到）"
 
     # nil 「そのま飛行機を降りて、ワイキビーチへやってきました。」
@@ -499,7 +499,7 @@ label scene13:
     # 心爱 「ぷにぷにぷにぷに！」
     voice "voice/心愛/cca_a1_1604.ogg"
     ai 心愛_水着_基本_笑顔 "噗腻噗腻噗腻噗腻！"
-    
+
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
     $ sideimagesize.SideImageYalign = -29.35
@@ -659,7 +659,7 @@ label scene13:
     image bg ハワイa = "images/bg/ハワイa.png"
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene ハワイa with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
-    
+
     # 心爱 「ということで一発目。ハワイに来たらやっぱ！」
     show 心愛_水着_基本_笑顔 at love69_right with dissolve
     voice "voice/心愛/cca_a1_1612.ogg"
@@ -761,7 +761,7 @@ label scene13:
     image bg ハワイ_出雲大社 = "images/bg/ハワイ_出雲大社.png"
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene ハワイ_出雲大社 at truecenter with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
- 
+
     # ナレーション（旁白） 「つーことで、ハワイ出雲大社にやってきたみたいですよ。やっぱ好きなんすねぇ」
     # 这个旁白好像是想瑠喵，音声文件应该在想瑠喵的文件夹那边
     # 14nm+++++++++ 人物表++++++++ 人物表就像14nm一样捏
@@ -4419,5 +4419,6 @@ label scene13:
     scene アイキャッチ心愛＆真冬水着 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
 
     $ renpy.pause(1.5, hard=True)
+    $ renpy.end_replay()
 
     jump scene14

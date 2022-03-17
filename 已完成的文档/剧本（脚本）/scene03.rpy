@@ -3,11 +3,11 @@
 # scene03 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.5 "LuckyDev"
+# 版本 0.6 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月7日
+# 修订日期 2022年3月17日
 
 # 当前流程：编写脚本AIO Process
 
@@ -211,7 +211,7 @@ label scene03:
     # 心爱 「はい鍵」
     show 心愛_制服_基本_微笑み at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0330.ogg"
-    ai 心愛_制服_基本_微笑み "给，钥匙" 
+    ai 心愛_制服_基本_微笑み "给，钥匙"
     hide 心愛_制服_基本_無表情
 
     # 莲 「はい」
@@ -226,7 +226,7 @@ label scene03:
     # 心爱 「入って、どうぞ」
     show 心愛_制服_基本_真顔 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0331.ogg"
-    ai 心愛_制服_基本_真顔 "来，请进~（L:游戏开场的欢迎声就是这句哦~做Demo版的时候可是让我一顿好找233）" 
+    ai 心愛_制服_基本_真顔 "来，请进~（L:游戏开场的欢迎声就是这句哦~做Demo版的时候可是让我一顿好找233）"
     hide 心愛_制服_基本_微笑み
 
     # 莲 「お邪魔しまーす」
@@ -242,7 +242,7 @@ label scene03:
     # 心爱 「まふまふちゃーん、ただいまー」
     show 心愛_制服_基本_にっこり at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0332.ogg"
-    ai 心愛_制服_基本_にっこり "嘛呼嘛呼酱，我回来啦~" 
+    ai 心愛_制服_基本_にっこり "嘛呼嘛呼酱，我回来啦~"
 
     # nil 「……」
     "……"
@@ -264,7 +264,7 @@ label scene03:
     # 心爱 「まだ帰って来てないパターン？」
     show 心愛_制服_基本_泣き at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0333.ogg"
-    ai 心愛_制服_基本_泣き "是还没回来的模式（MODE）吗？" 
+    ai 心愛_制服_基本_泣き "是还没回来的模式（MODE）吗？"
     hide 心愛_制服_基本_にっこり
 
     # 莲 「もしくはどっかでかけてるんかね」
@@ -276,7 +276,7 @@ label scene03:
     # 心爱 「いえ国産です！」
     show 心愛_制服_基本_驚き at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0334.ogg"
-    ai 心愛_制服_基本_驚き "不对，是国产的！" 
+    ai 心愛_制服_基本_驚き "不对，是国产的！"
 
     # nil 「やはり応答は返ってこない。爆音で映画を見てるなら、玄関まで漏れてくるだろうし、居ないと言う事で一つ。」
     "还是没有回应。如果是在看电影的话，电影里面的爆炸声在玄关应该就能听到，也就是说真冬不在捏"
@@ -287,7 +287,7 @@ label scene03:
     # 心爱 「ほへー。じゃぁ、ご飯でも作って待ってあげよう」
     show 心愛_制服_基本_嬉しい at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0335.ogg"
-    ai 心愛_制服_基本_嬉しい "咕嘿——那么，我去做饭，你去等着吧" 
+    ai 心愛_制服_基本_嬉しい "咕嘿——那么，我去做饭，你去等着吧"
     hide 心愛_制服_基本_驚き
 
     # 莲 「そうしましょう」
@@ -315,7 +315,7 @@ label scene03:
     # 心爱 「よっしゃぁー！　そんじゃ、いっちょ晩ご飯作っちゃうよー！」
     show 心愛_制服_基本_ニタァ at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0336.ogg"
-    ai 心愛_制服_基本_ニタァ "好耶！那就来做晚饭吧！" 
+    ai 心愛_制服_基本_ニタァ "好耶！那就来做晚饭吧！"
     hide 心愛_制服_基本_嬉しい
 
     # 莲 「久しぶりだな、心愛ちゃんの手料理」
@@ -324,7 +324,7 @@ label scene03:
     # 心爱 「いつも、まふまふちゃんか、蓮くんが作っちゃうからね」
     show 心愛_制服_基本_泣き at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0337.ogg"
-    ai 心愛_制服_基本_泣き "因为一直都是嘛呼嘛呼酱或者莲君做的呢" 
+    ai 心愛_制服_基本_泣き "因为一直都是嘛呼嘛呼酱或者莲君做的呢"
     hide 心愛_制服_基本_ニタァ
 
     # 莲 「確かに」
@@ -342,7 +342,7 @@ label scene03:
     # 心爱 「んしょ…んしょー…」
     show 心愛_制服_基本_真顔 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0338.ogg"
-    ai 心愛_制服_基本_真顔 "嘿咻…嘿咻——…" 
+    ai 心愛_制服_基本_真顔 "嘿咻…嘿咻——…"
     hide 心愛_制服_基本_泣き
 
     # 莲 「手伝うか？」
@@ -351,7 +351,7 @@ label scene03:
     # 心爱 「あ、うん。蓮くんは座っていよ！」
     show 心愛_制服_基本_笑顔 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0339.ogg"
-    ai "嗯，不需要了，莲君坐着就好" 
+    ai "嗯，不需要了，莲君坐着就好"
     hide 心愛_制服_基本_真顔
 
     # 莲 「そうか。手伝いが必要になったら言ってくれ」
@@ -360,7 +360,7 @@ label scene03:
     # 心爱 「はーい。　んしょ…ん…しょ…」
     show 心愛_制服_基本_真顔 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0340.ogg"
-    ai 心愛_制服_基本_真顔 "好——嘿咻…嘿咻…" 
+    ai 心愛_制服_基本_真顔 "好——嘿咻…嘿咻…"
     hide 心愛_制服_基本_笑顔
 
     # 莲 「……」
@@ -369,7 +369,7 @@ label scene03:
     # 心爱 「はーい。　んしょ…ん…しょ…」
     show 心愛_制服_基本_無表情 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0341.ogg"
-    ai 心愛_制服_基本_無表情 "嘿咻…咕拗拗…嗯—咻…" 
+    ai 心愛_制服_基本_無表情 "嘿咻…咕拗拗…嗯—咻…"
     hide 心愛_制服_基本_真顔
 
     # 莲 「手伝うか？」
@@ -378,7 +378,7 @@ label scene03:
     # 心爱 「え、いよぉ。大丈夫！　蓮くんにご迷惑をおかけられませんて！」
     show 心愛_制服_基本_嬉しい at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0342.ogg"
-    ai 心愛_制服_基本_嬉しい "啊，不需要的啦。没关系！我不会给莲君添麻烦的！" 
+    ai 心愛_制服_基本_嬉しい "啊，不需要的啦。没关系！我不会给莲君添麻烦的！"
     hide 心愛_制服_基本_無表情
 
     # 莲 「だって心愛ちゃん、貴方エプロンの後ろのヒモが結べなくてずっと格闘してるんですもの」
@@ -387,7 +387,7 @@ label scene03:
     # 心爱 「だぁもうエプロンなんていらねぇんだよっ！」
     show 心愛_制服_基本_不機嫌 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0343.ogg"
-    ai 心愛_制服_基本_不機嫌 "啊真是的我已经不需要围裙了！" 
+    ai 心愛_制服_基本_不機嫌 "啊真是的我已经不需要围裙了！"
     hide 心愛_制服_基本_嬉しい
 
     # 莲 「キレんなよ！　制服汚れちゃったら大変だろ！」
@@ -396,7 +396,7 @@ label scene03:
     # 心爱 「そしたらクリーニングに出してやるまでだ」
     show 心愛_制服_基本_覚醒 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0344.ogg"
-    ai 心愛_制服_基本_覚醒 "这样的话只需要送去洗衣店就好了" 
+    ai 心愛_制服_基本_覚醒 "这样的话只需要送去洗衣店就好了"
     hide 心愛_制服_基本_不機嫌
 
     # 莲 「そりゃその通りだと思う」
@@ -409,7 +409,7 @@ label scene03:
     # 心爱 「ウヒョオオオオオ！　ミキサーだァアアアア！」
     show 心愛_制服_基本_笑顔 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0345.ogg"
-    ai 心愛_制服_基本_笑顔 "Whoo-hoo!——是搅拌机哒" 
+    ai 心愛_制服_基本_笑顔 "Whoo-hoo!——是搅拌机哒"
     hide 心愛_制服_基本_覚醒
 
     # nil 「ウイイイイイイイイイン」
@@ -420,7 +420,7 @@ label scene03:
 
     # 心爱 「ヤッタアアアアアアアアアアア！」
     voice "voice/心愛/cca_a1_0346.ogg"
-    ai 心愛_制服_基本_笑顔 "好耶——！" 
+    ai 心愛_制服_基本_笑顔 "好耶——！"
 
     # nil 「ウイイイイイイイイイン」
     "嗡嗡嗡嗡嗡嗡嗡嗡嗡嗡嗡嗡"
@@ -428,7 +428,7 @@ label scene03:
     # 心爱 「…バナが…細切れになったよ…」
     show 心愛_制服_基本_泣き at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0347.ogg"
-    ai 心愛_制服_基本_泣き "…啊…香蕉它…碎掉了呢……" 
+    ai 心愛_制服_基本_泣き "…啊…香蕉它…碎掉了呢……"
     hide 心愛_制服_基本_笑顔
 
     # 莲 「牛乳とか入れないとダメだな」
@@ -436,7 +436,7 @@ label scene03:
 
     # 心爱 「そうですね…」
     voice "voice/心愛/cca_a1_0348.ogg"
-    ai 心愛_制服_基本_泣き "是呢…" 
+    ai 心愛_制服_基本_泣き "是呢…"
 
     # 原地tp
     scene black
@@ -445,7 +445,7 @@ label scene03:
     # 心爱 「それでは葛城隊長、冷蔵庫を開ける許可を下さい」
     show 心愛_制服_基本_真顔 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0349.ogg"
-    ai 心愛_制服_基本_真顔 "那么葛城队长，请允许我打开冰箱" 
+    ai 心愛_制服_基本_真顔 "那么葛城队长，请允许我打开冰箱"
 
     # 莲 「そんなん許可しなくても勝手に開ければいじゃないか」
     lian "不需要征得我的许可，直接打开就好啦"
@@ -453,7 +453,7 @@ label scene03:
     # 心爱 「いやーこの前テレビでやってたのですよ。フライパンに張り付いた餃子を剥がすには、濡れたタオルの上に置くと良いって」
     show 心愛_制服_基本_嬉しい at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0350.ogg"
-    ai 心愛_制服_基本_嬉しい "呀——之前在电视上播过呢。要把贴在平底锅上的饺子剥下来，最好放在湿毛巾上呢" 
+    ai 心愛_制服_基本_嬉しい "呀——之前在电视上播过呢。要把贴在平底锅上的饺子剥下来，最好放在湿毛巾上呢"
     hide 心愛_制服_基本_真顔
 
     # 莲 「冷蔵庫関係ねぇ！」
@@ -466,7 +466,7 @@ label scene03:
     # 心爱 「隊長…事件発生です」
     show 心愛_制服_基本_真顔 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0351.ogg"
-    ai 心愛_制服_基本_真顔 "队长... ... 出事了" 
+    ai 心愛_制服_基本_真顔 "队长... ... 出事了"
 
     # 莲 「なんだね心愛隊員」
     lian "什么事，心爱队员"
@@ -474,7 +474,7 @@ label scene03:
     # 心爱 「…冷蔵庫に…」
     show 心愛_制服_基本_泣き at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0352.ogg"
-    ai 心愛_制服_基本_泣き "在冰箱里面……@#$!^&*@#!@#$!^&*@#!（L:原文：“冷蔵庫に”后面那句话没有字，应该是被吓到了开始胡言乱语了）" 
+    ai 心愛_制服_基本_泣き "在冰箱里面……@#$!^&*@#!@#$!^&*@#!（L:原文：“冷蔵庫に”后面那句话没有字，应该是被吓到了开始胡言乱语了）"
     hide 心愛_制服_基本_真顔
 
     # 莲 「あれ？　もしかして、食材きらしてたとか？」
@@ -483,7 +483,7 @@ label scene03:
     # 心爱 「クマちゃんのぬいぐるみがァ！」
     show 心愛_制服_基本_驚き at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0353.ogg"
-    ai 心愛_制服_基本_驚き "是小熊的玩偶啊！" 
+    ai 心愛_制服_基本_驚き "是小熊的玩偶啊！"
     hide 心愛_制服_基本_泣き
 
     # 莲 「真冬の趣味だな」
@@ -492,7 +492,7 @@ label scene03:
     # 心爱 「キンキンに冷えていらっしゃる…食べれるのかなこれ」
     show 心愛_制服_基本_嬉しい at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0354.ogg"
-    ai 心愛_制服_基本_嬉しい "这东西被冻得硬邦邦的了... ... 能恰这个吗" 
+    ai 心愛_制服_基本_嬉しい "这东西被冻得硬邦邦的了... ... 能恰这个吗"
     hide 心愛_制服_基本_驚き
 
     # 莲 「やった事ねぇけど、多分ダメだと思うぜ」
@@ -501,7 +501,7 @@ label scene03:
     # 心爱 「ちぇー」
     show 心愛_制服_基本_不機嫌 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0355.ogg"
-    ai 心愛_制服_基本_不機嫌 "切——" 
+    ai 心愛_制服_基本_不機嫌 "切——"
     hide 心愛_制服_基本_嬉しい
 
     # 原地tp
@@ -521,7 +521,7 @@ label scene03:
         linear 0.15 yalign -0.01
         linear 0.15 yalign -0.09
     voice "voice/心愛/cca_a1_0356.ogg"
-    ai 心愛_制服_基本_驚き "哈啊!" 
+    ai 心愛_制服_基本_驚き "哈啊!"
 
     hide screen callscr
 
@@ -534,7 +534,7 @@ label scene03:
     # 心爱 「いや…携帯のバイブがクリーンヒットしたの…」
     show 心愛_制服_基本_泣き at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0357.ogg"
-    ai 心愛_制服_基本_泣き "没怎么...只是被手机振动准确命中了..." 
+    ai 心愛_制服_基本_泣き "没怎么...只是被手机振动准确命中了..."
     hide 心愛_制服_基本_驚き
 
     # 莲 「変な所に入れてるからだ」
@@ -543,7 +543,7 @@ label scene03:
     # 心爱 「し、失敬な！　別にそんな所に入れたりしてないよ！」
     show 心愛_制服_基本_不機嫌 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0358.ogg"
-    ai 心愛_制服_基本_不機嫌 "真、真没礼貌! 我才没有放在奇奇怪怪的地方呢" 
+    ai 心愛_制服_基本_不機嫌 "真、真没礼貌! 我才没有放在奇奇怪怪的地方呢"
     hide 心愛_制服_基本_泣き
 
     # 莲 「どこの話だと思ってるんだ」
@@ -552,7 +552,7 @@ label scene03:
     # 心爱 「そりゃ…なんでもない、なんでもない！」
     show 心愛_制服_基本_泣き at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0359.ogg"
-    ai 心愛_制服_基本_泣き "那是…没什么，没什么！" 
+    ai 心愛_制服_基本_泣き "那是…没什么，没什么！"
     hide 心愛_制服_基本_不機嫌
 
     # 音效：手机震动
@@ -567,7 +567,7 @@ label scene03:
         linear 0.15 yalign -0.01
         linear 0.15 yalign -0.09
     voice "voice/心愛/cca_a1_0360.ogg"
-    ai 心愛_制服_基本_驚き "哈呜——" 
+    ai 心愛_制服_基本_驚き "哈呜——"
 
     # 莲 「早く取れよ楽しんでないで」
     lian "赶紧拿出来吧，别玩得开心过头了"
@@ -575,7 +575,7 @@ label scene03:
     # 心爱 「たっ楽しんでないもん～！　う～！　もぉー…」
     show 心愛_制服_基本_泣き at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0361.ogg"
-    ai 心愛_制服_基本_泣き "一、一点都不开心的啦……呜…真是的！" 
+    ai 心愛_制服_基本_泣き "一、一点都不开心的啦……呜…真是的！"
     hide 心愛_制服_基本_驚き
 
     # 莲 「お前こういう事だけ、恥ずかしがり屋だよな」
@@ -583,7 +583,7 @@ label scene03:
 
     # 心爱 「ひとつぐらい例外はあるもんなんですよ…」
     voice "voice/心愛/cca_a1_0362.ogg"
-    ai 心愛_制服_基本_泣き "总有例外的嘛" 
+    ai 心愛_制服_基本_泣き "总有例外的嘛"
 
     # nil 「心愛は頬を赤く染めながら、そっとスカートの中から携帯電話を取りだした。」
     "心爱红着脸，悄悄地从裙子里拿出了手机"
@@ -597,13 +597,13 @@ label scene03:
     # 心爱 「はいはーいもしもーし。どなたでございま…あ、まふまふちゃん！？なんでオイラの携帯に…え？　はいはい」
     show 心愛_制服_基本_笑顔 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0363.ogg"
-    ai 心愛_制服_基本_笑顔 "喂——喂，听得到吗，请问是谁啊…啊，嘛呼嘛呼酱！？为什么要打我的手机…啊？好的好的" 
+    ai 心愛_制服_基本_笑顔 "喂——喂，听得到吗，请问是谁啊…啊，嘛呼嘛呼酱！？为什么要打我的手机…啊？好的好的"
     hide 心愛_制服_基本_泣き
 
     # 心爱 「ちょいちょい、葛城兄さん、お前さんの携帯はどこでやんすか」
     show 心愛_制服_基本_嬉しい at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0364.ogg"
-    ai 心愛_制服_基本_嬉しい "戳、戳，葛城哥哥，你的手机放在了哪里呢？" 
+    ai 心愛_制服_基本_嬉しい "戳、戳，葛城哥哥，你的手机放在了哪里呢？"
     hide 心愛_制服_基本_笑顔
 
     # 莲 「ん？　定位置なら…ズボンの右ポケットに…入って、ねぇな」
@@ -612,7 +612,7 @@ label scene03:
     # 心爱 「見つからない？」
     show 心愛_制服_基本_真顔 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0365.ogg"
-    ai 心愛_制服_基本_真顔 "找不到了吗？" 
+    ai 心愛_制服_基本_真顔 "找不到了吗？"
     hide 心愛_制服_基本_嬉しい
 
     # 莲 「いや…」
@@ -633,7 +633,7 @@ label scene03:
     # 心爱 「…えー、まふまふちゃん。お兄ちゃんは、たった今着信を知ったそうです。やれやれですね。あ、代わる？　ほーい」
     show 心愛_制服_基本_嬉しい at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0366.ogg"
-    ai 心愛_制服_基本_嬉しい " ......欸，嘛呼嘛呼酱。欧尼酱刚刚知道来电的事情了。真是的呢，要让他接电话吗? 好~的" 
+    ai 心愛_制服_基本_嬉しい " ......欸，嘛呼嘛呼酱。欧尼酱刚刚知道来电的事情了。真是的呢，要让他接电话吗? 好~的"
     hide 心愛_制服_基本_真顔
 
     # nil 「心愛がノールックで俺にスマートフォンを投げ渡す。俺の手の中にすっぽり収まったスマートフォンを耳に当てる。」
@@ -662,7 +662,7 @@ label scene03:
     show 心愛_制服_基本_不機嫌 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0367.ogg"
     ai 心愛_制服_基本_不機嫌 "才、才没感觉到呢！"
-    hide 心愛_制服_基本_嬉しい 
+    hide 心愛_制服_基本_嬉しい
 
     # 这个语句是针对电话里的真冬设计的参数，能够调整电话里的真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.04
@@ -1313,13 +1313,13 @@ label scene03:
     # 跳过
     # 统计一下跳过的心爱音声数量方便后续制作
     # 跳过（要删除）的心爱音声数量->太多了统计不出来了
-    # 
+    #
 
     luckykeeper "根据项目组安排，我们不会翻译 Hscene 里的内容，请各位积极支持正版，自行购买正版欣赏，还请各位谅解"
 
     # scene03 场景3 【心爱的心跳留宿】 结束
     # scene03 结束
-    
+
     # 过场：心爱（常服）没有BGM （打算加一个？？）
 
     # 隐藏 quick_menu
@@ -1329,7 +1329,8 @@ label scene03:
     play music bgmtwentyeight fadeout 4.0 fadein 4.0 # 针对这里BGM的特点需要把 Scene04 的BGM提前到 Scene03 脚本的尾巴这里写，并增大 fadeout/in 的间隔
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
     scene アイキャッチ心愛 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
- 
+
     $ renpy.pause(1.5, hard=True)
+    $ renpy.end_replay()
 
     jump scene04
