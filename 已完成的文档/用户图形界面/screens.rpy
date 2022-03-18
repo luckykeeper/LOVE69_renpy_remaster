@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月17日
+# 修订日期 2022年3月18日
 
 ################################################################################
 ## 初始化
@@ -2508,7 +2508,7 @@ screen gallery:
     vbox:
         xalign 0
         yalign 1.0
-        text "By Luckykeeper: Gallery 附带了一些彩蛋，包括一些原作没有使用但是也被打包进去的素材，\n                                    以及移植版没有使用的素材,还请注意。如需获取全部CG，可参照{a=https://love69-renpy-remaster-project.github.io/Doc/}项目组文档站{/a}指南解包"
+        text "By Luckykeeper: Gallery 附带了一些彩蛋，包括一些原作没有使用但是也被打包进去的素材，\n                                    以及移植版没有使用的素材，还请注意。如需获取全部CG，可参照{a=https://love69-renpy-remaster-project.github.io/Doc/}项目组文档站{/a}指南解包"
     # 进入退出音乐效果
     on "replace" action Play("music", "bgm/bgm50.ogg")
     on "replaced" action Play("music", "bgm/bgm01.ogg")
@@ -2542,7 +2542,7 @@ screen replay:
             textbutton _("Scene11 真冬&心爱线 现在是女子会") action Replay("scene11")
             textbutton _("Scene12 真冬&心爱线 二人奇妙体验") action Replay("scene12")
             textbutton _("Scene13 真冬&心爱线 夏威夷我来啦") action Replay("scene13")
-            textbutton _("Scene14 真冬&心爱线 三人心跳时刻") action Replay("scene15")
+            textbutton _("Scene14 真冬&心爱线 三人心跳时刻") action Replay("scene14")
             textbutton _("Scene15 真冬&心爱线 故事还将继续") action Replay("scene15")
             if persistent.two:
                 textbutton _("Scene16       里昂线       意料外的选择") action Replay("scene16")
