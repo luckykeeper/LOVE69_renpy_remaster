@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月17日
+# 修订日期 2022年3月18日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右<-2021年10月5日 搞定！
@@ -5098,6 +5098,20 @@ label scene01:
 
     # 选择肢 「リオンに食べさせる。」
     # "给里昂吃"->进入二周目里昂线
+    if persistent.one:
+        menu eat_ice:
+            "这么好的冰淇淋，到底要给谁恰捏？"
+            "留着自己吃吧":
+                $ eat_ice = True
+            "让里昂恰":
+                $ eat_ice = False
+    else:
+        pass
+
+    if eat_ice:
+        pass
+    else:
+        jump scene16
 
     # nil 「よし、自分で食うか。」
     "好耶，就留着自己吃吧"

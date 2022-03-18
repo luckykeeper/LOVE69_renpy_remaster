@@ -7,7 +7,7 @@
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开坑日期 2021年8月28日
-# 修订日期 2022年3月17日
+# 修订日期 2022年3月18日
 
 #----------------------------------------------------------------
 # 主程序开始
@@ -47,6 +47,9 @@ default persistent.playthrough = 1
 # 一二周目变量预定义
 default persistent.one = False
 default persistent.two = False
+
+# 一周目选择肢预定义
+default eat_ice = True
 
 # 判断是否进行过游戏
 default persistent.gameStarted = False
