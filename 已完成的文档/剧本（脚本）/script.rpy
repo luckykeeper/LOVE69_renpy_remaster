@@ -7,7 +7,7 @@
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开坑日期 2021年8月28日
-# 修订日期 2022年3月18日
+# 修订日期 2022年3月19日
 
 #----------------------------------------------------------------
 # 主程序开始
@@ -4050,10 +4050,48 @@ image papersnow:
     "images/pac/紙吹雪/00000070.png"
     pause 0.0166666666666667
 
+#######################################################################################
+# 定义SEND动画
+image send:
+    "images/pac/SEND/00000001.png"
+    pause 0.03
+    "images/pac/SEND/00000002.png"
+    pause 0.03
+    "images/pac/SEND/00000003.png"
+    pause 0.03
+    "images/pac/SEND/00000004.png"
+    pause 0.03
+    "images/pac/SEND/00000005.png"
+    pause 0.03
+    "images/pac/SEND/00000006.png"
+    pause 0.03
+    "images/pac/SEND/00000007.png"
+    pause 0.03
+    "images/pac/SEND/00000008.png"
+    pause 0.03
+    "images/pac/SEND/00000009.png"
+    pause 0.03
+    "images/pac/SEND/00000010.png"
+    pause 0.03
+    "images/pac/SEND/00000011.png"
+    pause 0.03
+    "images/pac/SEND/00000012.png"
+    pause 0.03
+    "images/pac/SEND/00000013.png"
+    pause 0.03
+    "images/pac/SEND/00000014.png"
+    pause 0.03
+    "images/pac/SEND/00000015.png"
+    pause 0.03
+    repeat
+
 ###### 定义：界面（screen） ####
 # align (0.5,0.5)阔以将其放在中间
 screen callscr:
     add "callgif" align (0.5,0.5)
+
+screen send:
+    add "send" align (0.5,0.5)
 
 screen letsrockscr:
     add "letsrock" align (0.5,0.5)
