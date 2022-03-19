@@ -7,7 +7,7 @@
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月28日
-# 修订日期 2022年3月17日
+# 修订日期 2022年3月19日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -349,9 +349,12 @@ define lion = Character('里昂',color="#fff7bb",image="リオン")
 
 # 常服_帽子_杖系列
 image side リオン リオン_基本_杖_微笑み = "images/face/リオン/リオン_基本_杖_微笑み.png" # 睁眼，有帽子，拿杖，微笑
+image side リオン リオン_基本_杖_微笑み_1 = "images/face/リオン/リオン_基本_杖_微笑み_1.png" # 睁眼，有帽子，拿杖，微笑
 image side リオン リオン_基本_杖_にっこり = "images/face/リオン/リオン_基本_杖_にっこり.png" # 闭眼，有帽子，拿杖，微笑
+image side リオン リオン_基本_杖_にっこり_1 = "images/face/リオン/リオン_基本_杖_にっこり_1.png" # 闭眼，有帽子，拿杖，微笑
 image side リオン リオン_基本_杖_嬉しい = "images/face/リオン/リオン_基本_杖_嬉しい.png" # 闭眼，有帽子，拿杖，喜
 image side リオン リオン_基本_杖_ジト目 = "images/face/リオン/リオン_基本_杖_ジト目.png" # 睁眼，有帽子，拿杖，皱眉，嘴倒三角
+image side リオン リオン_基本_杖_ジト目_1 = "images/face/リオン/リオン_基本_杖_ジト目_1.png" # 睁眼，有帽子，拿杖，皱眉，嘴倒三角
 image side リオン リオン_基本_杖_ニタァ = "images/face/リオン/リオン_基本_杖_ニタァ.png" # 睁眼，有帽子，拿杖，皱眉，嘴半圆，是有点小坏的笑呢
 image side リオン リオン_基本_杖_驚き = "images/face/リオン/リオン_基本_杖_驚き.png" # 睁眼，有帽子，拿杖，惊讶
 image side リオン リオン_基本_杖_悲しい = "images/face/リオン/リオン_基本_杖_悲しい.png" # 睁眼，有帽子，拿杖，悲，嘴小开口
@@ -359,6 +362,10 @@ image side リオン リオン_基本_杖_悲しい2 = "images/face/リオン/�
 image side リオン リオン_基本_杖_無表情 = "images/face/リオン/リオン_基本_杖_無表情.png" # 睁眼，有帽子，拿杖，莫得感情
 image side リオン リオン_基本_杖_見下し = "images/face/リオン/リオン_基本_杖_見下し.png" # 睁眼，有帽子，拿杖，嘴三角圆
 image side リオン リオン_基本_杖_ぶわー = "images/face/リオン/リオン_基本_杖_ぶわー.png" # 睁眼，有帽子，拿杖，是和心爱一样标志性的哭呢
+image side リオン リオン_基本_杖_キス = "images/face/リオン/リオン_基本_杖_キス.png" # 睁眼，有帽子，拿杖，kiss
+
+# 常服_帽子_杖_大系列
+image side リオン リオン_大_基本_杖_キス = "images/face/リオン/リオン_大_基本_杖_キス.png" # 睁眼，有帽子，拿杖，kiss
 
 # 常服_没帽子_杖系列
 image side リオン リオン_帽子無し_杖_微笑み = "images/face/リオン/リオン_帽子無し_杖_微笑み.png" # 睁眼，没帽子，拿杖，微笑
@@ -372,6 +379,8 @@ image side リオン リオン_帽子無し_杖_悲しい = "images/face/リオ�
 image side リオン リオン_私服_基本_ジト目 = "images/face/リオン/リオン_私服_基本_ジト目.png" # 睁眼，没帽子，没拿杖，皱眉，嘴倒三角
 image side リオン リオン_私服_基本_にっこり = "images/face/リオン/リオン_私服_基本_にっこり.png" # 闭眼，有帽子，拿杖，微笑
 
+# 特殊
+image side リオン リオン_通話中 = "images/face/リオン/リオン_通話中.png" # 装在携带里面的里昂
 
 # アイス屋（冰淇淋店）（里昂）
 define icecreamroom = Character('冰淇淋店',color="#fff7bb",image="リオン")
@@ -415,6 +424,7 @@ image side 想瑠 想瑠_スーツ_ほほえみ = "images/face/想瑠/想瑠_ス
 image side 想瑠 想瑠_スーツ_ぶわ = "images/face/想瑠/想瑠_スーツ_ぶわ.png" # 是和心爱一样标志性的哭
 image side 想瑠 想瑠_スーツ_中指 = "images/face/想瑠/想瑠_スーツ_中指.png" # 中指
 image side 想瑠 想瑠_スーツ_驚き = "images/face/想瑠/想瑠_スーツ_驚き.png" # 睁眼，震惊
+image side 想瑠 想瑠_スーツ_照れ = "images/face/想瑠/想瑠_スーツ_照れ.png" # 睁眼，微笑，脸红
 
 # 想瑠 in hotdog?!
 define hotdog = Character('热狗',color="#a4808c",image="想瑠")
@@ -422,11 +432,16 @@ image side 想瑠 想瑠_hot_ニヤリ = "images/face/想瑠/想瑠_hot_ニヤ�
 image side 想瑠 想瑠_hot_見下し = "images/face/想瑠/想瑠_hot_見下し.png" # 睁眼，嘴椭圆小开口，手撑头
 image side 想瑠 想瑠_hot_驚き = "images/face/想瑠/想瑠_hot_驚き.png" # 睁眼，震惊
 
+image side 想瑠 想瑠_風呂_ぐるぐる = "images/face/想瑠/想瑠_風呂_ぐるぐる.png" # 马赛克想瑠
+
 # 月宫瑠那 na //和原版相比，移植版打算在人物名上加入颜色，瑠那的颜色是从头发中间取的（之前取错了233）
 define na = Character('瑠那',color="#ffedb5",image="瑠那")
 image side 瑠那 瑠那_私服_にっこり = "images/face/瑠那/瑠那_私服_にっこり.png" # 闭眼，微笑
 image side 瑠那 瑠那_私服_きらきら = "images/face/瑠那/瑠那_私服_きらきら.png" # 睁眼，嘴⚪三角，眼睛有小星星
 image side 瑠那 瑠那_私服_真顔 = "images/face/瑠那/瑠那_私服_真顔.png" # 睁眼，嘴闭
+image side 瑠那 瑠那_私服_微笑 = "images/face/瑠那/瑠那_私服_微笑.png" # 睁眼，微笑
+# 瑠那_私服_微笑み 小头像不能识别，改为上面这样
+image side 瑠那 瑠那_私服_はう = "images/face/瑠那/瑠那_私服_はう.png" # 闭眼，眼睛多条黑线
 
 # 雾叶 ye //和原版相比，移植版打算在人物名上加入颜色，雾叶的颜色是从皮带上十字的中央取的
 define ye = Character('雾叶',color="#414141",image="霧葉")
@@ -470,6 +485,7 @@ define atri = Character('亚十礼',color="#fcfafc",image="アシュリー")
 image side アシュリー アシュリー_私服_にっこり = "images/face/アシュリー/アシュリー_私服_にっこり.png" # 闭眼，笑，嘴张大
 image side アシュリー アシュリー_私服_無表情 = "images/face/アシュリー/アシュリー_私服_無表情.png" # 字面意思，睁眼，嘴-
 image side アシュリー アシュリー_私服_驚き = "images/face/アシュリー/アシュリー_私服_驚き.png" # 睁眼，震惊
+image side アシュリー アシュリー_私服_微笑み = "images/face/アシュリー/アシュリー_私服_微笑み.png" # 睁眼，微笑，嘴张大
 
 # 迈克尔 mj //和原版相比，移植版打算在人物名上加入颜色，帽子就要它本来的颜色就好啦~
 define hat = Character('帽子',color="#67435e",image="帽子")
@@ -522,6 +538,31 @@ define dj = Character('DJ',color="#ffffff")
 
 # 旁白
 define aside = Character('旁白',color="#ffffff")
+
+# 二周目限定人物!
+# 子供Ａ（孩子A）
+define childa = Character('孩子A',color="#ffffff")
+
+# 子供Ｂ（孩子B）
+define childb = Character('孩子B',color="#ffffff")
+
+# 子供Ｃ（孩子C）
+define childc = Character('孩子C',color="#ffffff",image="アシュリー")
+
+# 仔猫達（小猫们）
+define nekos = Character('小猫们',color="#ffffff")
+
+# 仔猫（小猫）
+define neko = Character('小猫',color="#ffffff")
+
+# 母親Ａ（母亲A）
+define mothera = Character('母亲A',color="#ffffff")
+
+# 母親Ｂ（母亲B）
+define motherb = Character('母亲B',color="#ffffff")
+
+#  母親Ｃ（母亲C）
+define motherc = Character('母亲C',color="#ffffff")
 
 # 人物名称定义结束
 # ---------------------------------------------
