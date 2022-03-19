@@ -318,7 +318,6 @@ label scene16:
     # Scene16 结束
 
     # 过场：里昂（常服）
-    $ renpy.end_replay()
 
     # 之前用了这个方法，二周目需要手动控制
     window hide # 隐藏对话框等其它窗口
