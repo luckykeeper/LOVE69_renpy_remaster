@@ -7,7 +7,7 @@
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月28日
-# 修订日期 2022年3月19日
+# 修订日期 2022年3月20日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -357,9 +357,11 @@ image side リオン リオン_基本_杖_ジト目 = "images/face/リオン/リ
 image side リオン リオン_基本_杖_ジト目_1 = "images/face/リオン/リオン_基本_杖_ジト目_1.png" # 睁眼，有帽子，拿杖，皱眉，嘴倒三角
 image side リオン リオン_基本_杖_ニタァ = "images/face/リオン/リオン_基本_杖_ニタァ.png" # 睁眼，有帽子，拿杖，皱眉，嘴半圆，是有点小坏的笑呢
 image side リオン リオン_基本_杖_驚き = "images/face/リオン/リオン_基本_杖_驚き.png" # 睁眼，有帽子，拿杖，惊讶
+image side リオン リオン_基本_杖_驚き_1 = "images/face/リオン/リオン_基本_杖_驚き_1.png" # 睁眼，有帽子，拿杖，惊讶
 image side リオン リオン_基本_杖_悲しい = "images/face/リオン/リオン_基本_杖_悲しい.png" # 睁眼，有帽子，拿杖，悲，嘴小开口
 image side リオン リオン_基本_杖_悲しい2 = "images/face/リオン/リオン_基本_杖_悲しい2.png" # 睁眼，有帽子，拿杖，悲，嘴一条缝
 image side リオン リオン_基本_杖_無表情 = "images/face/リオン/リオン_基本_杖_無表情.png" # 睁眼，有帽子，拿杖，莫得感情
+image side リオン リオン_基本_杖_無表情_1 = "images/face/リオン/リオン_基本_杖_無表情_1.png" # 睁眼，有帽子，拿杖，莫得感情
 image side リオン リオン_基本_杖_見下し = "images/face/リオン/リオン_基本_杖_見下し.png" # 睁眼，有帽子，拿杖，嘴三角圆
 image side リオン リオン_基本_杖_ぶわー = "images/face/リオン/リオン_基本_杖_ぶわー.png" # 睁眼，有帽子，拿杖，是和心爱一样标志性的哭呢
 image side リオン リオン_基本_杖_キス = "images/face/リオン/リオン_基本_杖_キス.png" # 睁眼，有帽子，拿杖，kiss
@@ -379,11 +381,17 @@ image side リオン リオン_帽子無し_杖_悲しい = "images/face/リオ�
 image side リオン リオン_私服_基本_ジト目 = "images/face/リオン/リオン_私服_基本_ジト目.png" # 睁眼，没帽子，没拿杖，皱眉，嘴倒三角
 image side リオン リオン_私服_基本_にっこり = "images/face/リオン/リオン_私服_基本_にっこり.png" # 闭眼，有帽子，拿杖，微笑
 
+# 下着（内衣）系列
+image side リオン リオン_下着_基本_悲しい2_1 = "images/face/リオン/リオン_下着_基本_悲しい2_1.png" # 睁眼，有帽子，拿杖，悲，嘴一条缝
+
 # 特殊
 image side リオン リオン_通話中 = "images/face/リオン/リオン_通話中.png" # 装在携带里面的里昂
 
 # アイス屋（冰淇淋店）（里昂）
 define icecreamroom = Character('冰淇淋店',color="#fff7bb",image="リオン")
+
+# 莲&里昂
+define lian_lion = Character('莲&里昂',color="#fff7bb",image="リオン")
 
 # 下面定义不知道是谁的时候的里昂
 # 知不道的人物使用发色称呼
@@ -549,6 +557,9 @@ define childb = Character('孩子B',color="#ffffff")
 # 子供Ｃ（孩子C）
 define childc = Character('孩子C',color="#ffffff",image="アシュリー")
 
+# 子供Ｄ（孩子D）
+define childd = Character('孩子D',color="#ffffff")
+
 # 仔猫達（小猫们）
 define nekos = Character('小猫们',color="#ffffff")
 
@@ -563,6 +574,9 @@ define motherb = Character('母亲B',color="#ffffff")
 
 #  母親Ｃ（母亲C）
 define motherc = Character('母亲C',color="#ffffff")
+
+#  母亲Ｄ（孩子D）
+define motherd = Character('母亲D',color="#ffffff")
 
 # 人物名称定义结束
 # ---------------------------------------------
