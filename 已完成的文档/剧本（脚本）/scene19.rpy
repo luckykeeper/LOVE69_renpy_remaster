@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月17日
+# 修订日期 2022年3月22日
 
 # 当前流程：编写脚本AIO Process
 
@@ -15,6 +15,10 @@ label scene19:
     # scene19 开始
 
     # scene19 场景1 【和里昂的初次约会】 开始
+    scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=False, alpha=True, time_warp=None)
+    scene 自室a_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+
+    $ quick_menu = True
 
     # nil 「そして、デート当日。」
     "然后，约会当天"
@@ -33,9 +37,11 @@ label scene19:
 
     # 动画：CALL
     # 电话呼入声
+    show screen callscr
 
     # nil 「と思ったら電話です。」
     "我觉得是电话"
+    hide screen callscr
 
     # 莲 「はいもしもしお兄ちゃんです」
     lian "喂，我是哥哥"
