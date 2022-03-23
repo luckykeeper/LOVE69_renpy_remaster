@@ -7,12 +7,13 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月22日
+# 修订日期 2022年3月23日
 
 # 当前流程：编写脚本AIO Process
 
 label scene19:
     # scene19 开始
+    play music bgmfourteen fadeout 2.0 fadein 2.0
 
     # scene19 场景1 【和里昂的初次约会】 开始
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=False, alpha=True, time_warp=None)
@@ -37,6 +38,7 @@ label scene19:
 
     # 动画：CALL
     # 电话呼入声
+    play sound "voice/effect/主人公着信_送信.ogg"
     show screen callscr
 
     # nil 「と思ったら電話です。」
@@ -46,42 +48,57 @@ label scene19:
     # 莲 「はいもしもしお兄ちゃんです」
     lian "喂，我是哥哥"
 
+    # 这个语句是针对电话里的真冬&心爱设计的参数，能够调整电话里的真冬&心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.04
+    $ sideimagesize.SideImageYalign = 1.04
+    $ sideimagesize.SideImageZoom = 0.6
+
     # 真冬 「『お、ちゃんと起きれたじゃん。偉いぞお兄ちゃん。デート楽しんでおいで』」
-    dong "哦，不是好好的起床了吗？真了不起，欧尼酱，祝你约会愉快"
+    voice "voice/真冬/maf_a1_0182.ogg"
+    dong 真冬_通話中 "哦，不是好好的起床了吗？真了不起，欧尼酱，祝你约会愉快"
 
     # 心爱 「『大好きな彼女のためなら早起きする蓮くん偉いぞー！』」
-    ai "为了最喜欢的女朋友早起的莲君真了不起呢——！"
+    voice "voice/心愛/cca_a1_0662.ogg"
+    ai 心愛_通話中 "为了最喜欢的女朋友早起的莲君真了不起呢——！"
 
     # nil 「…情報は全部筒抜けなんだな。まだ彼女じゃねぇけど」
     "…情报全都泄露出去了啊，虽然还不是女朋友"
 
     # 心爱 「『想瑠にゃんが全部吐いたよ…』」
+    voice "voice/心愛/cca_a1_0663.ogg"
     ai "『想瑠喵全部说出来了哦……』"
 
     # 莲 「そうか…。お前らもお泊まり会楽しんでな」
     lian "是吗……你们也好好享受寄宿吧"
 
-    # 心爱 「『はーい。今日はみんなでよこはモゴ！』」
-    ai "『好——今天大家一起呜……！』"
+    # 心爱 「『はーい。今日はみんなでよこはモゴゴゴゴ！』」
+    voice "voice/心愛/cca_a1_0664.ogg"
+    ai "『好——今天大家一起呜呜呜呜……！』"
+
+    play sound "voice/effect/18_携帯電話操作音1.ogg"
 
     # nil 「…前言撤回。やはり家族は良いものだ。」
     "…撤回前言，果然家人就是好"
 
     # nil 「ていうか…横浜…？　まじで？　まぁいや。」
-    "话说回来…横滨…？真的吗？嘛，算了"
+    "话说回来…横滨…？真的吗？嘛，不管了"
 
     # 动画：CALL
     # 电话呼入声
+    play sound "voice/effect/主人公着信_送信.ogg"
+    show screen callscr
 
     # nil 「と思ったらまたしても電話です。」
     "这么想着又来电话了"
 
+    hide screen callscr
     # 莲 「はいもしもし葛城お兄さんです」
     lian "喂，我是葛城哥哥"
 
     # 里昂 「『や、やほー！　蓮くん！　楽しみ過ぎちゃってついうっかり電話しちゃったよあは…』」
     # 208
-    lion "『Yahoo——！莲君！我实在是太开心了，不小心把电话打过去了……』"
+    voice "voice/リオン/ron_a1_0208.ogg"
+    lion リオン_通話中 "『Ya、Yahoo——！莲君！我实在是太开心了，不小心把电话打过去了……啊哈哈哈』"
 
     # 莲 「お、おう…」
     lian "哦，哦…"
@@ -90,12 +107,14 @@ label scene19:
     "天啊怎么能这么可爱啊…在决定喜欢里昂之后，不知不觉就意识到了"
 
     # 里昂 「『で、デートって正直初めてだから、その、どうやっていかわかんないけど、が、頑張るから！　うん！』」
+    voice "voice/リオン/ron_a1_0209.ogg"
     lion "『说实话，这是我第一次约、约会，所以，呃，我不知道该怎么办，但我会尽力的！嗯！』"
 
     # 莲 「そんなきばらんくても…自然体でいんだぞ…？というか無駄にテンション高いな？」
     lian "不必那么紧张，可以自然一点嘛，为什么这么兴奋捏？"
 
     # 里昂 「『そ、そーんな事ないよー？』」
+    voice "voice/リオン/ron_a1_0210.ogg"
     lion "『没、没这回事哟——？』"
 
     # 莲 「徹夜か」
@@ -103,24 +122,30 @@ label scene19:
 
     # 里昂 「『ギクゥッ！？　す、すみません全然眠れなくて…』」
     # 211
+    voice "voice/リオン/ron_a1_0211.ogg"
     lion "『嘎呜！？对、对不起，根本睡不着……』"
 
     # 莲 「いや、いけど、大丈夫なん？　バイクで迎えにいくつもりだけど」
-    lian "不用道歉，不过你问题吧？我打算骑摩托车去接你"
+    lian "不用道歉，不过你没问题吧？我打算骑摩托车去接你"
 
     # 里昂 「『だ、大丈夫！　マクスウェル家秘伝のショートスリーパーホールドがあるから！』」
-    lion "『哦，没关系! 我有麦克斯韦家族秘制的Short sleeper hold！』（L:Short sleeper hold应该是本作虚构的东西，应该是类似红牛的饮料，而sleeper hold是一种关节技）"
+    voice "voice/リオン/ron_a1_0212.ogg"
+    lion "『没，没关系! 我有麦克斯韦家族秘制的Short sleeper hold！』（L:Short sleeper hold应该是本作虚构的东西，应该是类似红牛的饮料，而sleeper hold是一种关节技）"
 
     # 莲 「関節技と混ざってんぞ。　まぁとりあえず、一時間後に駅集合な」
     lian "和关节技混在一起了，总之，一个小时后在车站集合吧"
 
     # 里昂 「『はーい！』」
+    voice "voice/リオン/ron_a1_0213.ogg"
     lion "『好——！』"
+
+    play sound "voice/effect/18_携帯電話操作音1.ogg"
 
     # 莲 「幸せもんだなぁ、俺ってやつは。」
     lian "真是幸福啊，我这家伙"
 
     # 场景切换到葛城家客厅
+    scene リビングa_朝 at love69_bg1440 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
 
     # 莲 「あ、朝飯が…作られている…一体…誰が…！」
     lian "啊，早饭……做好了…是谁…做的呢…！"
@@ -207,6 +232,7 @@ label scene19:
     "话说，到达了车站前"
 
     # 里昂 「やっ、おはよー！　おー13年モデルじゃーん！　私これ本国で欲しかったんだよー！」
+    voice "voice/リオン/ron_a1_0214.ogg"
     lion "呀，早上好！哦——这不是13年的摩托吗！我在本国就一直想买这个！（L:一周目也有提到里昂特别喜欢这款摩托）"
 
     # 莲 「うお…」
@@ -2147,6 +2173,7 @@ label scene19:
     ai "呜欸，想瑠喵好冷喔！（L:这里也莫得配音……）"
 
     # 真冬 「アイス食べる？　美味しいよ？」
+    voice "voice/真冬/maf_a1_0183.ogg"
     dong "吃冰淇淋吗？很好吃哦？"
 
     # 心爱 「死んじゃうよ！？」
