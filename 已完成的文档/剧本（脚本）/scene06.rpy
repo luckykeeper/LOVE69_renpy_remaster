@@ -3,11 +3,11 @@
 # scene06 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：WorldlineChanger（关于真冬哼的一句歌曲）
-# 版本 0.6 "LuckyDev"
+# 版本 0.7 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月17日
+# 修订日期 2022年3月27日
 
 # 当前流程：编写脚本AIO Process
 
@@ -845,7 +845,7 @@ label scene06:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「『ほう。私の授業をサボってお兄ちゃんの看病とは、殊勝な事だな』」
-    # 113-13. 跳过
+    # 113-130. 跳过
     show 想瑠_スーツ_見下し at love69_xiangliu_center with dissolve
     voice "voice/想瑠/sol_a1_0131.ogg"
     liu 想瑠_スーツ_見下し "『嗬~翘了我的课去照顾欧尼酱，真是勇气可嘉啊』"

@@ -3,11 +3,11 @@
 # scene01 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：WorldlineChanger（2句）
-# 版本 0.6 "LuckyDev"
+# 版本 0.7 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月18日
+# 修订日期 2022年3月27日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右<-2021年10月5日 搞定！

@@ -3,11 +3,11 @@
 # scene03 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.6 "LuckyDev"
+# 版本 0.7 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月17日
+# 修订日期 2022年3月27日
 
 # 当前流程：编写脚本AIO Process
 
@@ -696,7 +696,7 @@ label scene03:
     "（电话里的声音）『呜哇！手臂朝着不能弯曲的方向！』"
 
     # nil 「声『ねえー私のパンツとブラジャー返してよー！』」
-    # 01-26 跳过
+    # 14-26 跳过
     # 本作的孩子的声音（二周目）都是亚十礼的CV配的
     voice "voice/アシュリー/ash_a1_0027.ogg"
     "（电话里的声音）『呐，把我的胖次和胸罩还给我吧——！！』"

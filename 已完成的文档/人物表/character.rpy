@@ -2,12 +2,12 @@
 # LOVE69_Renpy_Remaster_Project
 # 人物名称定义（人物表）
 # Author:Luckykeeper
-# 版本 0.6 "LuckyDev"
+# 版本 0.7 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月28日
-# 修订日期 2022年3月24日
+# 修订日期 2022年3月27日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -172,6 +172,16 @@ image side 心愛 心愛_私服_基本_真顔 = "images/face/心愛/心愛_私�
 image side 心愛 心愛_私服_基本_きらきら = "images/face/心愛/心愛_私服_基本_きらきら.png" # 睁眼，嘴⚪三角，眼睛有小星星，这属于是馋哭了
 image side 心愛 心愛_私服_基本_ぶわー = "images/face/心愛/心愛_私服_基本_ぶわー.png" # 闭眼，很有标志性的哭
 image side 心愛 心愛_私服_基本_にっこり = "images/face/心愛/心愛_私服_基本_にっこり.png" # 闭眼，微笑
+image side 心愛 心愛_私服_基本_無表情 = "images/face/心愛/心愛_私服_基本_無表情.png" # 字面意思，睁眼，嘴·
+image side 心愛 心愛_私服_基本_ポカーン = "images/face/心愛/心愛_私服_基本_ポカーン.png" # 心爱翻白眼了
+image side 心愛 心愛_私服_基本_微笑み = "images/face/心愛/心愛_私服_基本_微笑み.png" # 睁眼，微笑
+image side 心愛 心愛_私服_基本_もぐもぐ = "images/face/心愛/心愛_私服_基本_もぐもぐ.png" # 闭眼，嘴-(，两个粉椭圆
+image side 心愛 心愛_私服_基本_ニタァ = "images/face/心愛/心愛_私服_基本_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢，两个粉椭圆
+image side 心愛 心愛_私服_基本_驚き = "images/face/心愛/心愛_私服_基本_驚き.png" # 睁眼，惊讶
+image side 心愛 心愛_私服_基本_キス = "images/face/心愛/心愛_私服_基本_キス.png" # 闭眼，脸红，kiss准备
+image side 心愛 心愛_私服_基本_ぐるぐる = "images/face/心愛/心愛_私服_基本_ぐるぐる.png" # 眼睛咕哩咕噜转圈圈
+image side 心愛 心愛_私服_基本_号泣1 = "images/face/心愛/心愛_私服_基本_号泣1.png"
+image side 心愛 心愛_私服_基本_不機嫌 = "images/face/心愛/心愛_私服_基本_不機嫌.png" # 睁眼，嘴-(
 
 # 其它
 image side 心愛 心愛_トランザム = "images/face/心愛/心愛_トランザム.png" # 全身变红，心爱真·觉醒！
@@ -184,6 +194,8 @@ image side 心愛 心愛_制服_基本_ゴルゴ = "images/face/心愛/心愛_�
 image side 心愛 心愛_水着_基本_ゴルゴ = "images/face/心愛/心愛_水着_基本_ゴルゴ.png" # 心爱奇奇怪怪的表情，暴漫风
 image side 心愛 心愛_水着_基本_覚醒 = "images/face/心愛/心愛_水着_基本_覚醒.png" # 基于无表情，眼睛深红
 image side 心愛 心愛_水着_基本_ペコちゃん = "images/face/心愛/心愛_水着_基本_ペコちゃん.png" # 心爱奇奇怪怪的表情，有点像小丑的感觉
+image side 心愛 心愛_私服_基本_覚醒03 = "images/face/心愛/心愛_私服_基本_覚醒03.png" # 基于真顔，眼睛深红，需要注意和别的很像，睫毛是"-""
+image side 心愛 心愛_私服_基本_覚醒04 = "images/face/心愛/心愛_私服_基本_覚醒04.png" # 基于真顔，眼睛深红，需要注意和别的很像，睫毛是"-""
 
 # 特殊
 image side 心愛 心愛_通話中 = "images/face/心愛/心愛_通話中.png" # 装在携带里面的真冬
@@ -295,6 +307,12 @@ image side 真冬 真冬_私服_基本_ジト目 = "images/face/真冬/真冬_�
 image side 真冬 真冬_私服_基本_キス = "images/face/真冬/真冬_私服_基本_キス.png" # kiss准备
 image side 真冬 真冬_私服_基本_嬉しい = "images/face/真冬/真冬_私服_基本_嬉しい.png" # # 康起来很喜感的笑
 image side 真冬 真冬_私服_基本_ニタァ = "images/face/真冬/真冬_私服_基本_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢
+image side 真冬 真冬_私服_基本_にっこり_1 = "images/face/真冬/真冬_私服_基本_にっこり_1.png"
+image side 真冬 真冬_私服_基本_居眠り = "images/face/真冬/真冬_私服_基本_居眠り.png" # 闭眼，嘴开口，半圆，碎着辽~
+image side 真冬 真冬_私服_基本_にっこり = "images/face/真冬/真冬_私服_基本_にっこり.png"
+image side 真冬 真冬_私服_基本_微笑み2_1 = "images/face/真冬/真冬_私服_基本_微笑み2_1.png"
+image side 真冬 真冬_私服_基本_ジト目3_1 = "images/face/真冬/真冬_私服_基本_ジト目3_1.png"
+image side 真冬 真冬_私服_基本_本気2 = "images/face/真冬/真冬_私服_基本_本気2.png"
 
 # 大_私服
 image side 真冬 真冬_大_私服_基本_キス = "images/face/真冬/真冬_大_私服_基本_キス.png" # 大，kiss准备
@@ -338,6 +356,9 @@ define lianaidong =  Character('三人',color="#4da8c0",image="真冬")
 # 莲・真冬
 define lian_dong =  Character('莲・真冬',color="#4da8c0",image="真冬")
 
+# みんな（大伙）
+define aio_dong = Character('大伙',color="#4da8c0",image="真冬")
+
 # 葛城莲 lian //主人公，工具人就不要加颜色了吧，不加颜色的统一强制指定白色（#ffffff）
 define lian = Character('莲',color="#ffffff")
 
@@ -370,28 +391,79 @@ image side リオン リオン_基本_杖_キス = "images/face/リオン/リオ
 image side リオン リオン_大_基本_杖_キス = "images/face/リオン/リオン_大_基本_杖_キス.png" # 睁眼，有帽子，拿杖，kiss
 
 # 常服_没帽子_杖系列
+image side リオン リオン_帽子無し_杖_にっこり = "images/face/リオン/リオン_帽子無し_杖_にっこり.png" # 闭眼，拿杖，微笑
 image side リオン リオン_帽子無し_杖_微笑み = "images/face/リオン/リオン_帽子無し_杖_微笑み.png" # 睁眼，没帽子，拿杖，微笑
-image side リオン リオン_帽子無し_杖なし_微笑み = "images/face/リオン/リオン_帽子無し_杖なし_微笑み.png" # 睁眼，没帽子，没杖，微笑
 image side リオン リオン_帽子無し_杖_ジト目 = "images/face/リオン/リオン_帽子無し_杖_ジト目.png" # 睁眼，没帽子，拿杖，皱眉，嘴倒三角
 image side リオン リオン_帽子無し_杖_ニタァ = "images/face/リオン/リオン_帽子無し_杖_ニタァ.png" # 睁眼，没帽子，拿杖，皱眉，嘴半圆，是有点小坏的笑呢
 image side リオン リオン_帽子無し_杖_驚き = "images/face/リオン/リオン_帽子無し_杖_ニタァ.png" # 睁眼，没帽子，拿杖，惊讶
 image side リオン リオン_帽子無し_杖_悲しい = "images/face/リオン/リオン_帽子無し_杖_悲しい.png" # 睁眼，没帽子，拿杖，悲，嘴小开口
+image side リオン リオン_帽子無し_杖_無表情_1 = "images/face/リオン/リオン_帽子無し_杖_無表情_1.png" # 睁眼，拿杖，莫得感情
+image side リオン リオン_帽子無し_杖_悲しい2 = "images/face/リオン/リオン_帽子無し_杖_悲しい2.png" # 睁眼，拿杖，悲，嘴一条缝
+image side リオン リオン_帽子無し_杖_ぶわー = "images/face/リオン/リオン_帽子無し_杖_ぶわー.png" # 睁眼，拿杖，是和心爱一样标志性的哭呢
+image side リオン リオン_帽子無し_杖_嬉しい = "images/face/リオン/リオン_帽子無し_杖_嬉しい.png" # 闭眼，有帽子，拿杖，喜
+image side リオン リオン_帽子無し_杖_にっこり_1 = "images/face/リオン/リオン_帽子無し_杖_にっこり_1.png" # 闭眼，有帽子，拿杖，微笑
+
+# 常服_没帽子_没杖系列
+image side リオン リオン_帽子無し_杖なし_微笑み = "images/face/リオン/リオン_帽子無し_杖なし_微笑み.png" # 睁眼，没帽子，没杖，微笑
+image side リオン リオン_帽子無し_杖なし_微笑み_1 = "images/face/リオン/リオン_帽子無し_杖なし_微笑み_1.png" # 睁眼，有帽子，拿杖，微笑
+image side リオン リオン_帽子無し_杖なし_驚き = "images/face/リオン/リオン_帽子無し_杖なし_驚き.png" # 睁眼，没帽子，拿杖，惊讶
+image side リオン リオン_帽子無し_杖なし_無表情_1 = "images/face/リオン/リオン_帽子無し_杖なし_無表情_1.png" # 睁眼，拿杖，莫得感情
+image side リオン リオン_帽子無し_杖なし_ジト目 = "images/face/リオン/リオン_帽子無し_杖なし_ジト目.png" # 睁眼，没帽子，拿杖，皱眉，嘴倒三角
+image side リオン リオン_帽子無し_杖なし_見下し = "images/face/リオン/リオン_帽子無し_杖なし_見下し.png" # 睁眼，有帽子，拿杖，嘴三角圆
+image side リオン リオン_帽子無し_杖なし_悲しい2 = "images/face/リオン/リオン_帽子無し_杖なし_悲しい2.png" # 睁眼，拿杖，悲，嘴一条缝
+image side リオン リオン_帽子無し_杖なし_悲しい2_1 = "images/face/リオン/リオン_帽子無し_杖なし_悲しい2_1.png" # 睁眼，拿杖，悲，嘴一条缝
+image side リオン リオン_帽子無し_杖なし_嬉しい = "images/face/リオン/リオン_帽子無し_杖なし_嬉しい.png" # 闭眼，有帽子，拿杖，喜
+image side リオン リオン_帽子無し_杖なし_嬉しい_1 = "images/face/リオン/リオン_帽子無し_杖なし_嬉しい_1.png" # 闭眼，有帽子，拿杖，喜
+image side リオン リオン_帽子無し_杖なし_驚き_1 = "images/face/リオン/リオン_帽子無し_杖なし_驚き_1.png" # 睁眼，惊讶
+image side リオン リオン_帽子無し_杖なし_ニタァ = "images/face/リオン/リオン_帽子無し_杖なし_ニタァ.png" # 睁眼，没帽子，拿杖，皱眉，嘴半圆，是有点小坏的笑呢
+image side リオン リオン_帽子無し_杖なし_キス = "images/face/リオン/リオン_帽子無し_杖なし_キス.png" # 睁眼，有帽子，拿杖，kiss
+image side リオン リオン_帽子無し_杖なし_にっこり_1 = "images/face/リオン/リオン_帽子無し_杖なし_にっこり_1.png" # 闭眼，微笑
+
+# 常服_帽子_没杖系列
+image side リオン リオン_基本_杖なし_無表情 = "images/face/リオン/リオン_基本_杖なし_無表情.png" # 睁眼，有帽子，拿杖，莫得感情
+image side リオン リオン_基本_杖なし_微笑み = "images/face/リオン/リオン_基本_杖なし_微笑み.png" # 睁眼，没帽子，没杖，微笑
+image side リオン リオン_基本_杖なし_ニタァ = "images/face/リオン/リオン_基本_杖なし_ニタァ.png" # 睁眼，没帽子，拿杖，皱眉，嘴半圆，是有点小坏的笑呢
+image side リオン リオン_基本_杖なし_キス = "images/face/リオン/リオン_基本_杖なし_キス.png" # 睁眼，有帽子，拿杖，kiss
+image side リオン リオン_基本_杖なし_嬉しい = "images/face/リオン/リオン_基本_杖なし_嬉しい.png" # 闭眼，有帽子，拿杖，喜
+image side リオン リオン_基本_杖なし_驚き = "images/face/リオン/リオン_基本_杖なし_驚き.png" # 睁眼，没帽子，拿杖，惊讶
+# image side リオン リオン_基本_杖なし_にっこり = "images/face/リオン/リオン_基本_杖なし_にっこり.png" # 闭眼，拿杖，微笑
+image side リオン リオン_基本_杖なし_微笑み_1 = "images/face/リオン/リオン_基本_杖なし_微笑み_1.png" # 睁眼，有帽子，拿杖，微笑
+image side リオン リオン_基本_杖なし_にっこり_1 = "images/face/リオン/リオン_基本_杖なし_にっこり_1.png" # 闭眼，拿杖，微笑
+image side リオン リオン_基本_杖なし_にっこり = "images/face/リオン/リオン_基本_杖なし_にっこり.png" # 闭眼，拿杖，微笑
+image side リオン リオン_基本_杖なし_無表情_1 = "images/face/リオン/リオン_基本_杖なし_無表情_1.png" # 睁眼，有帽子，拿杖，莫得感情
+image side リオン リオン_基本_杖なし_悲しい2_1 = "images/face/リオン/リオン_基本_杖なし_悲しい2_1.png" # 睁眼，悲，嘴小开口
+image side リオン リオン_基本_杖なし_ジト目 = "images/face/リオン/リオン_基本_杖なし_ジト目.png" # 睁眼，没帽子，拿杖，皱眉，嘴倒三角
+image side リオン リオン_基本_杖なし_見下し = "images/face/リオン/リオン_基本_杖なし_見下し.png" # 睁眼，有帽子，拿杖，嘴三角圆
 
 # 私服系列
-image side リオン リオン_私服_基本_ジト目 = "images/face/リオン/リオン_私服_基本_ジト目.png" # 睁眼，没帽子，没拿杖，皱眉，嘴倒三角
-image side リオン リオン_私服_基本_にっこり = "images/face/リオン/リオン_私服_基本_にっこり.png" # 闭眼，有帽子，拿杖，微笑
-image side リオン リオン_私服_基本_嬉しい = "images/face/リオン/リオン_私服_基本_嬉しい.png" # 闭眼，有帽子，拿杖，喜
-image side リオン リオン_私服_基本_驚き_1 = "images/face/リオン/リオン_私服_基本_驚き_1.png" # 睁眼，有帽子，拿杖，惊讶
-image side リオン リオン_私服_基本_ニタァ = "images/face/リオン/リオン_私服_基本_ニタァ.png" # 睁眼，有帽子，拿杖，皱眉，嘴半圆，是有点小坏的笑呢
-image side リオン リオン_私服_基本_微笑み = "images/face/リオン/リオン_私服_基本_微笑み.png" # 睁眼，有帽子，拿杖，微笑
-image side リオン リオン_私服_基本_悲しい = "images/face/リオン/リオン_私服_基本_悲しい.png" # 睁眼，有帽子，拿杖，悲，嘴小开口
-image side リオン リオン_私服_基本_悲しい2 = "images/face/リオン/リオン_私服_基本_悲しい2.png" # 睁眼，有帽子，拿杖，悲，嘴小开口
+image side リオン リオン_私服_基本_ジト目 = "images/face/リオン/リオン_私服_基本_ジト目.png" # 睁眼，皱眉，嘴倒三角
+image side リオン リオン_私服_基本_にっこり = "images/face/リオン/リオン_私服_基本_にっこり.png" # 闭眼，微笑
+image side リオン リオン_私服_基本_にっこり_1 = "images/face/リオン/リオン_私服_基本_にっこり_1.png" # 闭眼，微笑
+image side リオン リオン_私服_基本_嬉しい = "images/face/リオン/リオン_私服_基本_嬉しい.png" # 闭眼，喜
+image side リオン リオン_私服_基本_嬉しい_1 = "images/face/リオン/リオン_私服_基本_嬉しい_1.png" # 闭眼，喜
+image side リオン リオン_私服_基本_驚き = "images/face/リオン/リオン_私服_基本_驚き.png" # 睁眼，惊讶
+image side リオン リオン_私服_基本_驚き_1 = "images/face/リオン/リオン_私服_基本_驚き_1.png" # 睁眼，惊讶
+image side リオン リオン_私服_基本_ニタァ = "images/face/リオン/リオン_私服_基本_ニタァ.png" # 睁眼，皱眉，嘴半圆，是有点小坏的笑呢
+image side リオン リオン_私服_基本_ニタァ_1 = "images/face/リオン/リオン_私服_基本_ニタァ_1.png" # 睁眼，皱眉，嘴半圆，是有点小坏的笑呢
+image side リオン リオン_私服_基本_微笑み = "images/face/リオン/リオン_私服_基本_微笑み.png" # 睁眼，微笑
+image side リオン リオン_私服_基本_微笑み_1 = "images/face/リオン/リオン_私服_基本_微笑み_1.png" # 睁眼，有帽子，拿杖，微笑
+image side リオン リオン_私服_基本_悲しい = "images/face/リオン/リオン_私服_基本_悲しい.png" # 睁眼，悲，嘴小开口
+image side リオン リオン_私服_基本_悲しい2 = "images/face/リオン/リオン_私服_基本_悲しい2.png" # 睁眼，悲，嘴小开口
+image side リオン リオン_私服_基本_悲しい2_1 = "images/face/リオン/リオン_私服_基本_悲しい2_1.png" # 睁眼，悲，嘴小开口
+image side リオン リオン_私服_基本_無表情 = "images/face/リオン/リオン_私服_基本_無表情.png" # 睁眼，有帽子，拿杖，莫得感情
+image side リオン リオン_私服_基本_無表情_1 = "images/face/リオン/リオン_私服_基本_無表情_1.png" # 睁眼，莫得感情
+image side リオン リオン_私服_基本_ジト目_1 = "images/face/リオン/リオン_私服_基本_ジト目_1.png" # 睁眼，没拿杖，皱眉，嘴倒三角
+image side リオン リオン_私服_基本_ぶわー = "images/face/リオン/リオン_私服_基本_ぶわー.png" # 睁眼，是和心爱一样标志性的哭呢
+image side リオン リオン_私服_基本_見下し = "images/face/リオン/リオン_私服_基本_見下し.png" # 睁眼，有帽子，拿杖，嘴三角圆
+image side リオン リオン_私服_基本_キス = "images/face/リオン/リオン_私服_基本_キス.png" # 睁眼，有帽子，拿杖，kiss
+image side リオン リオン_私服_基本_キス_1 = "images/face/リオン/リオン_私服_基本_キス_1.png" # 睁眼，有帽子，拿杖，kiss
 
 # 下着（内衣）系列
 image side リオン リオン_下着_基本_悲しい2_1 = "images/face/リオン/リオン_下着_基本_悲しい2_1.png" # 睁眼，有帽子，拿杖，悲，嘴一条缝
 
 # 特殊
 image side リオン リオン_通話中 = "images/face/リオン/リオン_通話中.png" # 装在携带里面的里昂
+image side リオン リオン_大_基本_杖なし_キス = "images/face/リオン/リオン_大_基本_杖なし_キス.png" # 睁眼，有帽子，kiss
 
 # アイス屋（冰淇淋店）（里昂）
 define icecreamroom = Character('冰淇淋店',color="#fff7bb",image="リオン")
@@ -445,6 +517,7 @@ define hotdog = Character('热狗',color="#a4808c",image="想瑠")
 image side 想瑠 想瑠_hot_ニヤリ = "images/face/想瑠/想瑠_hot_ニヤリ.png" # 睁眼，嘴“w”，手撑头，两个粉椭圆
 image side 想瑠 想瑠_hot_見下し = "images/face/想瑠/想瑠_hot_見下し.png" # 睁眼，嘴椭圆小开口，手撑头
 image side 想瑠 想瑠_hot_驚き = "images/face/想瑠/想瑠_hot_驚き.png" # 睁眼，震惊
+image side 想瑠 想瑠_hot_ぶわ = "images/face/想瑠/想瑠_hot_ぶわ.png" # 是和心爱一样标志性的哭
 
 image side 想瑠 想瑠_風呂_ぐるぐる = "images/face/想瑠/想瑠_風呂_ぐるぐる.png" # 马赛克想瑠
 
@@ -456,6 +529,9 @@ image side 瑠那 瑠那_私服_真顔 = "images/face/瑠那/瑠那_私服_真�
 image side 瑠那 瑠那_私服_微笑 = "images/face/瑠那/瑠那_私服_微笑.png" # 睁眼，微笑
 # 瑠那_私服_微笑み 小头像不能识别，改为上面这样
 image side 瑠那 瑠那_私服_はう = "images/face/瑠那/瑠那_私服_はう.png" # 闭眼，眼睛多条黑线
+image side 瑠那 瑠那_私服_驚き = "images/face/瑠那/瑠那_私服_驚き.png" # 睁眼，嘴⚪，惊Σ(っ °Д °;)っ
+image side 瑠那 瑠那_私服_笑顔 = "images/face/瑠那/瑠那_私服_笑顔.png"
+image side 瑠那 瑠那_私服_悲しみ = "images/face/瑠那/瑠那_私服_悲しみ.png"
 
 # 雾叶 ye //和原版相比，移植版打算在人物名上加入颜色，雾叶的颜色是从皮带上十字的中央取的
 define ye = Character('雾叶',color="#414141",image="霧葉")
@@ -472,14 +548,16 @@ image side 店长 店长_私服_目閉じ_1 = "images/face/店长/店长_私服_
 image side 店长 店长_私服_微笑み = "images/face/店长/店长_私服_微笑み.png" # 睁眼，微笑，闭嘴，手撑头
 image side 店长 店长_私服_微笑み_1 = "images/face/店长/店长_私服_微笑み_1.png" # 睁眼，微笑，闭嘴，手撑头，脸红
 image side 店长 店长_私服_にっこり = "images/face/店长/店长_私服_にっこり.png" # 闭眼，微笑，手撑头
+image side 店长 店长_私服_にっこり_1 = "images/face/店长/店长_私服_にっこり_1.png" # 闭眼，微笑，手撑头
 image side 店长 店长_私服_本気 = "images/face/店长/店长_私服_本気.png" # 睁眼，嘴o，手撑头
+image side 店长 店长_私服_本気_1 = "images/face/店长/店长_私服_本気_1.png" # 睁眼，嘴o，手撑头
 image side 店长 店长_私服_ニヤリ = "images/face/店长/店长_私服_ニヤリ.png" # 睁眼，手撑头，是有点小坏的笑呢
 image side 店长 店长_私服_ニヤリ_1 = "images/face/店长/店长_私服_ニヤリ_1.png" # 睁眼，手撑头，是有点小坏的笑呢，脸红
 image side 店长 店长_私服_無表情 = "images/face/店长/店长_私服_無表情.png" # 睁眼，手撑头，闭嘴，莫得感情
 image side 店长 店长_私服_ジト目 = "images/face/店长/店长_私服_ジト目.png" # 睁眼，手撑头，嘴椭圆，一脸正经
 image side 店长 店长_私服_不満_1 = "images/face/店长/店长_私服_不満_1.png" # 睁眼，手撑头，闭嘴，不高兴，脸红
 image side 店长 店长_私服_不満 = "images/face/店长/店长_私服_不満.png" # 睁眼，手撑头，闭嘴，不高兴
-image side 店长 店长_私服_本気 = "images/face/店长/店长_私服_本気.png" # 睁眼，手撑头，嘴张大
+image side 店长 店长_私服_見下し = "images/face/店长/店长_私服_見下し.png" # 睁眼，有点小坏的笑但是又不小坏
 
 # 下面定义不知道是谁的时候的雾叶
 # 知不道的人物使用发色称呼
@@ -500,6 +578,8 @@ image side アシュリー アシュリー_私服_にっこり = "images/face/�
 image side アシュリー アシュリー_私服_無表情 = "images/face/アシュリー/アシュリー_私服_無表情.png" # 字面意思，睁眼，嘴-
 image side アシュリー アシュリー_私服_驚き = "images/face/アシュリー/アシュリー_私服_驚き.png" # 睁眼，震惊
 image side アシュリー アシュリー_私服_微笑み = "images/face/アシュリー/アシュリー_私服_微笑み.png" # 睁眼，微笑，嘴张大
+image side アシュリー アシュリー_私服_困り = "images/face/アシュリー/アシュリー_私服_困り.png" # 泪珠打转
+image side アシュリー アシュリー_私服_幸せ = "images/face/アシュリー/アシュリー_私服_幸せ.png" # 类似ニヤリ
 
 # 迈克尔 mj //和原版相比，移植版打算在人物名上加入颜色，帽子就要它本来的颜色就好啦~
 define hat = Character('帽子',color="#67435e",image="帽子")
@@ -566,6 +646,9 @@ define childc = Character('孩子C',color="#ffffff",image="アシュリー")
 # 子供Ｄ（孩子D）
 define childd = Character('孩子D',color="#ffffff")
 
+# 子供Ｅ（孩子E）
+define childe = Character('孩子E',color="#ffffff")
+
 # 仔猫達（小猫们）
 define nekos = Character('小猫们',color="#ffffff")
 
@@ -583,6 +666,9 @@ define motherc = Character('母亲C',color="#ffffff")
 
 #  母亲Ｄ（孩子D）
 define motherd = Character('母亲D',color="#ffffff")
+
+#  母亲Ｅ（孩子D）
+define mothere = Character('母亲E',color="#ffffff")
 
 # 人物名称定义结束
 # ---------------------------------------------
