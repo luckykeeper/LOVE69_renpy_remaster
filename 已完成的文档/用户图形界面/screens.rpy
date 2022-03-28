@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月27日
+# 修订日期 2022年3月28日
 
 ################################################################################
 ## 初始化
@@ -1409,6 +1409,9 @@ define config.hw_video = persistent.hwVideo
 default persistent.useCache = True
 define config.cache_surfaces = persistent.useCache
 
+# HScene 梗图模式，默认关闭
+default persistent.hsceneG = False
+
 screen preferences():
 
     tag menu
@@ -1444,19 +1447,29 @@ screen preferences():
 
                 vbox:
                     style_prefix "check"
-                    label _("实验选项，详见悬停在选项后左下方说明，修改之后重启生效")
+                    label _("实验选项，重启生效")
                     textbutton _("使用软解（稳定）") :
                         action [SetVariable("persistent.hwVideo",False),renpy.save_persistent()]
                         tooltip "默认选项，调用软件解码器对媒体进行解码，非常稳定但是耗费性能，对低端设备不友好"
                     textbutton _("使用硬解（更快）") :
                         action [SetVariable("persistent.hwVideo",True),renpy.save_persistent()]
-                        tooltip "调用硬件解码器对媒体进行解码，速度快且高效，前提需要设备支持（程序的媒体文件有主要有png、webm、ogg三种，请确保您的设备支持），可能会导致一些问题，如遇到视频拉伸，无法正常播放等问题，请切换会软件解码器，如果你的设备不属于低性能设备，强烈建议使用软件解码器"
-                    textbutton _("使用内存缓存（更快）"):
+                        tooltip "调用硬件解码器对媒体进行解码，速度快且高效，前提需要设备支持（程序的媒体文件有主要有png、webm、ogg三种，请确保您的设备支持），可能会导致一些问题，如遇到视频拉伸，无法正常播放等问题，请切换回软件解码器，如果你的设备不属于低性能设备，强烈建议使用软件解码器"
+                    textbutton _("使用内存缓存"):
                         action [SetVariable("persistent.useCache",True),renpy.save_persistent()]
                         tooltip "默认选项，素材文件预缓存至内存再从内存调用，运行速度大幅提升，对低内存设备不友好，但是只需要有1.2G以上空闲内存或开启了虚拟内存（一般系统都是默认开启的）就可以放心选择此项"
-                    textbutton _("直接从硬盘读取（低内存）") :
+                    textbutton _("直接从硬盘读取") :
                         action [SetVariable("persistent.useCache",False),renpy.save_persistent()]
                         tooltip "程序直接从硬盘读取素材文件，只使用必要的内存，对硬盘性能要求高，但是内存开销较小，适合低内存设备，但是若硬盘读取性能不佳时可能会发生卡顿现象"
+
+                vbox:
+                    style_prefix "check"
+                    label _("要加点儿梗嘛")
+                    textbutton _("关闭HScene梗图模式") :
+                        action [SetVariable("persistent.hsceneG",False),renpy.save_persistent()]
+                        tooltip "默认选项，不看项目组瞎整活，调整该选项不影响HScene(因为根本没有)，调整该选项需重启生效"
+                    textbutton _("开启HScene梗图模式") :
+                        action [SetVariable("persistent.hsceneG",True),renpy.save_persistent()]
+                        tooltip "来看项目组整活，调整该选项不影响HScene(因为根本没有)，调整该选项需重启生效"
                 ## 可以在此处添加类型为“radio_pref”或“check_pref”的其他“vbox”，
                 ## 以添加其他创建者定义的首选项设置。
 
@@ -2478,23 +2491,42 @@ screen gallery:
 
             add g.make_button("twelve", "gui/cgmode/cg/one/small/水着cgゲーム用.png")
 
-            imagebutton:
-                idle "gui/cgmode/btn_thumb.png"
-            imagebutton:
-                idle "gui/cgmode/btn_thumb.png"
-            imagebutton:
-                idle "gui/cgmode/btn_thumb.png"
 
-            imagebutton:
-                idle "gui/cgmode/btn_thumb.png"
-            imagebutton:
-                idle "gui/cgmode/btn_thumb.png"
-            imagebutton:
-                idle "gui/cgmode/btn_thumb.png"
-            imagebutton:
-                idle "gui/cgmode/btn_thumb.png"
-            imagebutton:
-                idle "gui/cgmode/btn_thumb.png"
+            if persistent.two:
+                add g.make_button("thirteen", "gui/cgmode/cg/two/small/空.png")
+
+                add g.make_button("fourteen", "gui/cgmode/cg/two/small/天の川.png")
+
+                add g.make_button("fifteen", "gui/cgmode/cg/two/small/繁華街_昼.png")
+
+                add g.make_button("sixteen", "gui/cgmode/cg/two/small/歩道橋_昼.png")
+
+                add g.make_button("seventeen", "gui/cgmode/cg/two/small/横浜_山下公園.png")
+
+                add g.make_button("eighteen", "gui/cgmode/cg/two/small/rcg01_4_0.png")
+
+                add g.make_button("nineteen", "gui/cgmode/cg/two/small/電柱.png")
+
+                add g.make_button("twenty", "gui/cgmode/cg/two/small/自宅風呂場.png")
+
+            else:
+                imagebutton:
+                    idle "gui/cgmode/btn_thumb.png"
+                imagebutton:
+                    idle "gui/cgmode/btn_thumb.png"
+                imagebutton:
+                    idle "gui/cgmode/btn_thumb.png"
+
+                imagebutton:
+                    idle "gui/cgmode/btn_thumb.png"
+                imagebutton:
+                    idle "gui/cgmode/btn_thumb.png"
+                imagebutton:
+                    idle "gui/cgmode/btn_thumb.png"
+                imagebutton:
+                    idle "gui/cgmode/btn_thumb.png"
+                imagebutton:
+                    idle "gui/cgmode/btn_thumb.png"
 
     imagebutton:
         xalign 0.99
@@ -2778,7 +2810,8 @@ init python:
     g.image("gui/cgmode/cg/one/アイキャッチ心愛.png")
     g.image("gui/cgmode/cg/one/アイキャッチ真冬.png")
     g.image("gui/cgmode/cg/one/アイキャッチ心愛＆真冬水着.png")
-    g.unlock_image("images/bg/アイキャッチリオン.png") # 二周目之后展示的话可以这么写
+    if persistent.two:
+        g.image("images/bg/アイキャッチリオン.png") # 二周目之后展示的话可以这么写
 
     g.button("three") # 心爱&真冬 SDCG
 
@@ -2845,6 +2878,72 @@ init python:
 
     g.image("gui/cgmode/cg/one/main_menu_1.png")
     g.image("gui/cgmode/cg/one/水着cgゲーム用.png")
+
+    g.button("thirteen") # 空
+
+    g.image("gui/cgmode/cg/two/空.png")
+    g.image("gui/cgmode/cg/two/空_夕b.png")
+    g.image("gui/cgmode/cg/two/空_夕a.png")
+    g.image("gui/cgmode/cg/two/空_雨.png")
+
+    g.button("fourteen") # 天の川
+
+    g.image("gui/cgmode/cg/two/天の川.png")
+    g.image("gui/cgmode/cg/two/月.png")
+
+    g.button("fifteen") # 繁華街_昼
+
+    g.image("gui/cgmode/cg/two/繁華街_昼.png")
+    g.image("gui/cgmode/cg/two/繁華街_夕.png")
+    g.image("gui/cgmode/cg/two/繁華街_夜.png")
+    g.image("gui/cgmode/cg/two/繁華街_雨.png")
+    g.image("gui/cgmode/cg/two/ロータリー_昼.png")
+    g.image("gui/cgmode/cg/two/ロータリー_夜.png")
+
+    g.button("sixteen") # 歩道橋_昼
+
+    g.image("gui/cgmode/cg/two/歩道橋_朝.png")
+    g.image("gui/cgmode/cg/two/歩道橋_昼.png")
+    g.image("gui/cgmode/cg/two/歩道橋_夕.png")
+    g.image("gui/cgmode/cg/two/公園_夕.png")
+
+    g.button("seventeen") # 横浜
+
+    g.image("gui/cgmode/cg/two/横浜_山下公園.png")
+    g.image("gui/cgmode/cg/two/横浜_港の見える丘公園.png")
+    g.image("gui/cgmode/cg/two/横浜_中華街.png")
+    g.image("gui/cgmode/cg/two/横浜_大桟橋.png")
+    g.image("gui/cgmode/cg/two/横須賀.png")
+    g.image("gui/cgmode/cg/two/横浜_赤煉瓦.png")
+    g.image("gui/cgmode/cg/two/横浜_カップヌードルミュージアム.png")
+    g.image("gui/cgmode/cg/two/横浜_クイーンズスクエア.png")
+    g.image("gui/cgmode/cg/two/横浜_山下公園_夜.png")
+    g.image("gui/cgmode/cg/two/横浜_観覧車.png")
+    g.image("gui/cgmode/cg/two/横浜_観覧車2.png")
+
+    g.button("eighteen") # rcg
+
+    g.image("gui/cgmode/cg/two/rcg01_4_0.png")
+    g.image("gui/cgmode/cg/two/rcg01_4_1.png")
+    g.image("gui/cgmode/cg/two/rcg01t_4_1.png")
+    g.image("gui/cgmode/cg/two/rcg01t_4_2.png")
+    g.image("gui/cgmode/cg/two/rcg01t_1_1.png")
+    g.image("gui/cgmode/cg/two/rcg01t_1_2.png")
+    g.image("gui/cgmode/cg/two/rcg01t_2_1.png")
+    g.image("gui/cgmode/cg/two/rcg01_4_2.png")
+    g.image("gui/cgmode/cg/two/rcg01_5_2.png")
+
+    g.button("nineteen") # 電柱
+
+    g.image("gui/cgmode/cg/two/電柱.png")
+    g.image("gui/cgmode/cg/two/鉄塔.png")
+
+    g.button("twenty") # 自宅風呂場
+
+    g.image("gui/cgmode/cg/two/自宅風呂場.png")
+    g.image("gui/cgmode/cg/two/自宅洗面所_昼.png")
+    g.image("gui/cgmode/cg/two/自宅洗面所_夕.png")
+    g.image("gui/cgmode/cg/two/自宅洗面所_夜.png")
 
     # 用于图像切换使用的转场(transition)
     g.transition = dissolve
