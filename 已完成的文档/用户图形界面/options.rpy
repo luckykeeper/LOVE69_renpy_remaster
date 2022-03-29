@@ -5,7 +5,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月27日
+# 修订日期 2022年3月29日
 # 版本号 0.7 "LuckyDev"
 
 
@@ -36,7 +36,7 @@ define config.version = "0.7"
 
 # Demo 版的说明
 define gui.about = _p("""
-LOVEPOTION SIXTYNINE 汉化移植版 内部测试版 ver0.6 “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献
+LOVEPOTION SIXTYNINE 汉化移植版 内部测试版 ver0.7 “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献
 
 项目页面：https://github.com/luckykeeper/LOVE69_renpy_remaster
 
