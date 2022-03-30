@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月27日
+# 修订日期 2022年3月30日
 
 # 当前流程：编写脚本AIO Process
 
@@ -919,8 +919,12 @@ label scene05:
     # 跳过
     # 统计一下跳过的真冬音声数量方便后续制作
     # 跳过（要删除）的真冬音声数量->太多了统计不出来了
-
-    luckykeeper "根据项目组安排，我们不会翻译 Hscene 里的内容，请各位积极支持正版，自行购买正版欣赏，还请各位谅解"
+    # 325-546
+    if persistent.hsceneG:
+        scene lv69-augest with dissolve
+        pause 2.0
+    else:
+        pass
 
     # scene05 场景1 【兄妹间的禁断之恋】 结束
     # scene05 结束

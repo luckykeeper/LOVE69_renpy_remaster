@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月27日
+# 修订日期 2022年3月30日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1309,13 +1309,21 @@ label scene03:
     # BGM：开场音乐
     # 自带心爱娇喘声
     # 根据项目组安排，HS不翻译，请各位积极支持正版，自行购买正版欣赏
-    # 这里放上宁宁举牌
+    # 这里放上宁宁举牌（放后面了……）
     # 跳过
     # 统计一下跳过的心爱音声数量方便后续制作
     # 跳过（要删除）的心爱音声数量->太多了统计不出来了
-    #
+    # 417-661
+    image bg lv69-augest = "images\extra\luckykeeper\lv69-augest.png"
 
-    luckykeeper "根据项目组安排，我们不会翻译 Hscene 里的内容，请各位积极支持正版，自行购买正版欣赏，还请各位谅解"
+    if persistent.hsceneG:
+        scene lv69-augest with dissolve
+    else:
+        pass
+
+    luckykeeper "根据项目组安排，我们不会翻译 HScene 里的内容，请各位积极支持正版，自行购买正版欣赏，还请各位谅解"
+
+
 
     # scene03 场景3 【心爱的心跳留宿】 结束
     # scene03 结束

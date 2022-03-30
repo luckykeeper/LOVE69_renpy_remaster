@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月28日
+# 修订日期 2022年3月30日
 
 ################################################################################
 ## 初始化
@@ -1466,10 +1466,10 @@ screen preferences():
                     label _("要加点儿梗嘛")
                     textbutton _("关闭HScene梗图模式") :
                         action [SetVariable("persistent.hsceneG",False),renpy.save_persistent()]
-                        tooltip "默认选项，不看项目组瞎整活，调整该选项不影响HScene(因为根本没有)，调整该选项需重启生效"
+                        tooltip "默认选项，不看项目组瞎整活，调整该选项不影响HScene(因为根本没有)，调整该选项理论上无需重启生效"
                     textbutton _("开启HScene梗图模式") :
                         action [SetVariable("persistent.hsceneG",True),renpy.save_persistent()]
-                        tooltip "来看项目组整活，调整该选项不影响HScene(因为根本没有)，调整该选项需重启生效"
+                        tooltip "来看项目组胡乱整活，调整该选项不影响HScene(因为根本没有)，调整该选项理论上无需重启生效"
                 ## 可以在此处添加类型为“radio_pref”或“check_pref”的其他“vbox”，
                 ## 以添加其他创建者定义的首选项设置。
 

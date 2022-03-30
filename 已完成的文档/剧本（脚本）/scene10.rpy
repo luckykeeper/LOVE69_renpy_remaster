@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月27日
+# 修订日期 2022年3月30日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1707,7 +1707,13 @@ label scene10:
     # Skip但是不完全Skip！后面的稍微翻一点点防止剧情断档（这里就不夹带私货了），然后接第二天早上，这里的背景接HS之前的莲房间
 
     # 心爱 1255-1396 Skip~
-    # 真冬 961-1091 Skip~
+    # 真冬 961-1090 Skip~
+    if persistent.hsceneG:
+        scene lv69-augest with dissolve
+        pause 2.0
+
+    else:
+        pass
 
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene 自宅洗面所_夜 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)

@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月27日
+# 修订日期 2022年3月30日
 
 # 当前流程：编写脚本AIO Process
 
@@ -850,7 +850,14 @@ label scene08:
     "在自嘲的同时，决定顺从自己的欲望。如果心爱想要这样... 我愿意做下去"
 
     # 心爱 HScene 02 Skip~
+    # 913-1044
     # 2022年1月5日：正式版最开始的HS放宁宁举牌，后面的就放鬼畜名场面好了，我感觉很行！
+    if persistent.hsceneG:
+        scene lv69-augest with dissolve
+        pause 2.0
+
+    else:
+        pass
 
     # scene08 场景1 【时隔许久的心爱夜访】 结束！
 

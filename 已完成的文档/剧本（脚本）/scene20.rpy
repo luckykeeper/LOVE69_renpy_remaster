@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月27日
+# 修订日期 2022年3月30日
 
 # 当前流程：编写脚本AIO Process
 
@@ -440,6 +440,13 @@ label scene20:
     # 结尾的信息不翻可能会导致剧情断档，先确认一下需不需要翻，如果需要的话就转比基尼里昂来翻，如果不需要就直接全部Skip~
 
     # 里昂 HScene1 Skip~
+    # ron 507-738
+    if persistent.hsceneG:
+        scene lv69-augest with dissolve
+        pause 2.0
+
+    else:
+        pass
 
     # scene20 场景1 【心跳不已的第一次】 结束
 

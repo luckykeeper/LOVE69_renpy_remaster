@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月27日
+# 修订日期 2022年3月30日
 
 # 当前流程：编写脚本AIO Process
 
@@ -826,8 +826,16 @@ label scene12:
     # 但是，就此打住！露点娇喘哒咩！
 
     # HScene 开始了一点但没有完全开始，Skip~
+    # maf 1187-1269
+    # cca 1501-1583
 
     # 心爱&真冬 HScene 02（百合） Skip~
+    if persistent.hsceneG:
+        scene lv69-augest with dissolve
+        pause 2.0
+
+    else:
+        pass
 
     # scene12 场景1 【心爱和真冬的秘密时间！】 结束
 

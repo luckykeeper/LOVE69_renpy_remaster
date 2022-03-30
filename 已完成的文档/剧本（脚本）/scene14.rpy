@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月27日
+# 修订日期 2022年3月30日
 
 # 当前流程：编写脚本AIO Process
 
@@ -90,6 +90,14 @@ label scene14:
     "因此…"
 
     # 心爱&真冬 HScene 03 Skip~
+    # cca 1764-1850
+    # maf 1416-1495
+    if persistent.hsceneG:
+        scene lv69-augest with dissolve
+        pause 2.0
+
+    else:
+        pass
 
     # scene14 场景1 【热情似火的夏威夷】 结束
 

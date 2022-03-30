@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月27日
+# 修订日期 2022年3月30日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1438,6 +1438,16 @@ label scene06:
     # 真冬 HScene 02 Skip~
     ## 638-771 真冬HS02
     ## 这里到时候要加点料
+
+    image bg lv69-augest = "images\extra\luckykeeper\lv69-augest.png"
+
+    if persistent.hsceneG:
+        scene lv69-augest with dissolve
+        pause 2.0
+
+    else:
+        pass
+
     scene 自室a_昼 at love69_bg1440 with dissolve
     play music bgmtwentyfour fadeout 0.8 fadein 1.0
 
@@ -1477,7 +1487,7 @@ label scene06:
     # 真冬 「返しておいで」
     show 真冬_私服_基本_目閉じ at love69_left with dissolve
     # voice "voice/真冬/maf_a1_0638.ogg"
-    ## 638-771 真冬HS02
+    ## 638-772 真冬HS02
     voice "voice/真冬/maf_a1_0771.ogg"
     dong 真冬_私服_基本_目閉じ "还给我"
 
