@@ -5,8 +5,8 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月29日
-# 版本号 0.7 "LuckyDev"
+# 修订日期 2022年3月31日
+# 版本号 0.8 "LuckyDev"
 
 
 ## 基础 ##########################################################################
@@ -20,7 +20,7 @@
 # Demo版的版本名为 "LuckyGal"
 # 开发版的版本名为 "LuckyDev"
 # 一二周目做完之后的发行版的的版本名为 "LuckyCocoa"
-define config.name = _("LOVEPOTION SIXTYNINE 汉化移植版 内部测试版 ver0.7 “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献")
+define config.name = _("LOVEPOTION SIXTYNINE 汉化移植版 内部测试版 ver0.8 “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献")
 
 
 ## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。
@@ -30,21 +30,27 @@ define gui.show_name = False
 
 ## 游戏版本号。
 
-define config.version = "0.7"
+define config.version = "0.8"
 
 ## 放置在游戏“关于”屏幕的文本。将文本放在三个引号之间，并在段落之间留一个空行。
 
 # Demo 版的说明
 define gui.about = _p("""
-LOVEPOTION SIXTYNINE 汉化移植版 内部测试版 ver0.7 “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献
+LOVEPOTION SIXTYNINE 汉化移植版 内部测试版 ver0.8 “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献
 
-项目页面：https://github.com/luckykeeper/LOVE69_renpy_remaster
+点击蓝字后将调用系统默认浏览器打开指定网页
 
-项目组官网：https://love69renpyremasterproject.github.io/
+项目开源页面：{a=https://github.com/luckykeeper/LOVE69_renpy_remaster}https://github.com/luckykeeper/LOVE69_renpy_remaster{/a}
+
+项目组官网：{a=https://github.com/luckykeeper/LOVE69_renpy_remaster}https://love69renpyremasterproject.github.io/{/a}
+
+项目组文档站（gh-pages）：{a=https://love69-renpy-remaster-project.github.io/Doc/}https://love69-renpy-remaster-project.github.io/Doc/{/a}
+
+项目组文档站（国内镜像站）：{a=https://love69doc.luckykeeper.site:44443/Doc/}https://love69doc.luckykeeper.site:44443/Doc/{/a}
 
 希望各位看官老爷到我们的项目页面给我们一个Star，秋梨膏，你们的Star是我做下去的动力！Star摩多摩多，动力摩多摩多！
 
-Demo版制作成员
+当前版本制作成员
 
 组长：Luckykeeper
 

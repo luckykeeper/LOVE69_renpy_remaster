@@ -3,11 +3,11 @@
 # scene13 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.7 "LuckyDev"
+# 版本 0.8 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月27日
+# 修订日期 2022年3月31日
 
 # 当前流程：编写脚本AIO Process
 

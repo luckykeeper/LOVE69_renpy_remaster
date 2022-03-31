@@ -2,12 +2,12 @@
 # LOVE69_Renpy_Remaster_Project
 # 人物名称定义（人物表）
 # Author:Luckykeeper
-# 版本 0.7 "LuckyDev"
+# 版本 0.8 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月28日
-# 修订日期 2022年3月27日
+# 修订日期 2022年3月31日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼

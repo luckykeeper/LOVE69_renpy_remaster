@@ -2,11 +2,11 @@
 # LOVE69_Renpy_Remaster_Project
 # 开场动画设定脚本
 # Author:Luckykeeper
-# 版本 0.7 "LuckyDev"
+# 版本 0.8 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月27日
+# 修订日期 2022年3月31日
 
 # image pure_black = "#000"
 # 开场画面
@@ -53,8 +53,44 @@ label splashscreen:
     # 如果你恰巧看到了这里，其实这个画面看过一次之后是可以像对话一样用 Ctrl 键来C过去的（doge）
     # 不过移动端就没有 Ctrl 键了，嘛，开始之前去稍微活动一下不是也挺好的嘛（doge）
 
-    hide caution with Dissolve(1.0)
-    $ renpy.pause(1, hard=True)
+    # hide caution with Dissolve(1.0)
+    # $ renpy.pause(1, hard=True)
+
+    # 2022年3月31日 正式开始处理正式版Warning界面
+    # 判断是否初次运行，初次运行将展示一个较长时间的 cation
+    default persistent.firstRun = True
+    if persistent.firstRun:
+        show black
+        show caution01 with Dissolve(1.0)
+        $ renpy.pause(10, hard=True)
+        $ persistent.firstRun = False
+    else:
+        show black
+        show caution01 with Dissolve(1.0)
+
+    hide caution01 with dissolve
+
+    default persistent.cationed = 0
+
+    if persistent.cationed <= 1:
+        show caution02 with dissolve
+        $ renpy.pause(2, hard=True)
+        hide caution02
+        show caution03
+        with dissolve
+        $ renpy.pause(4, hard=True)
+        hide caution03
+        show caution04
+        with dissolve
+        $ renpy.pause(5, hard=True)
+        hide caution04
+        show caution05
+        with dissolve
+        $ renpy.pause(2, hard=True)
+        hide caution05 with Dissolve(1.0)
+        $ persistent.cationed = persistent.cationed+1
+    else:
+        pass
 
 
 # 主菜单之前
