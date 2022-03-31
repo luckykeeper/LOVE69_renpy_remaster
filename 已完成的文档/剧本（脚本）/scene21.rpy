@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月30日
+# 修订日期 2022年3月31日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1871,13 +1871,14 @@ label scene21:
     hide リオン_帽子無し_杖_嬉しい
 
     # 里昂 HScene2 Skip~
+    # 810-959
+    image bg pixiv = "images/extra/luckykeeper/pixiv.webp"
     if persistent.hsceneG:
-        scene lv69-augest with dissolve
+        scene pixiv with dissolve
         pause 2.0
 
     else:
         pass
-    # 810-959
 
     # 里昂的 HScene 比较少捏，从 HS 的质量来说感觉里昂的好一些，心爱和真冬的似乎有点画崩了……
 

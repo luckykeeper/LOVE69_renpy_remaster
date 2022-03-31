@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月30日
+# 修订日期 2022年3月31日
 
 ################################################################################
 ## 初始化
@@ -1453,7 +1453,7 @@ screen preferences():
                         tooltip "默认选项，调用软件解码器对媒体进行解码，非常稳定但是耗费性能，对低端设备不友好"
                     textbutton _("使用硬解（更快）") :
                         action [SetVariable("persistent.hwVideo",True),renpy.save_persistent()]
-                        tooltip "调用硬件解码器对媒体进行解码，速度快且高效，前提需要设备支持（程序的媒体文件有主要有png、webm、ogg三种，请确保您的设备支持），可能会导致一些问题，如遇到视频拉伸，无法正常播放等问题，请切换回软件解码器，如果你的设备不属于低性能设备，强烈建议使用软件解码器"
+                        tooltip "调用硬件解码器对媒体进行解码，速度快且高效，前提需要设备支持（程序的媒体文件有主要有png、webm、ogg、webp四种，请确保您的设备支持），可能会导致一些问题，如遇到视频拉伸，无法正常播放等问题，请切换回软件解码器，如果你的设备不属于低性能设备，强烈建议使用软件解码器"
                     textbutton _("使用内存缓存"):
                         action [SetVariable("persistent.useCache",True),renpy.save_persistent()]
                         tooltip "默认选项，素材文件预缓存至内存再从内存调用，运行速度大幅提升，对低内存设备不友好，但是只需要有1.2G以上空闲内存或开启了虚拟内存（一般系统都是默认开启的）就可以放心选择此项"
@@ -1464,12 +1464,12 @@ screen preferences():
                 vbox:
                     style_prefix "check"
                     label _("要加点儿梗嘛")
-                    textbutton _("关闭HScene梗图模式") :
+                    textbutton _("关闭HScene梗图模式（默认，推荐）") :
                         action [SetVariable("persistent.hsceneG",False),renpy.save_persistent()]
                         tooltip "默认选项，不看项目组瞎整活，调整该选项不影响HScene(因为根本没有)，调整该选项理论上无需重启生效"
-                    textbutton _("开启HScene梗图模式") :
+                    textbutton _("开启HScene梗图模式（不推荐）") :
                         action [SetVariable("persistent.hsceneG",True),renpy.save_persistent()]
-                        tooltip "来看项目组胡乱整活，调整该选项不影响HScene(因为根本没有)，调整该选项理论上无需重启生效"
+                        tooltip "来看项目组胡乱整活，调整该选项不影响HScene(因为根本没有)，请根据个人喜好谨慎开启，调整该选项理论上无需重启生效"
                 ## 可以在此处添加类型为“radio_pref”或“check_pref”的其他“vbox”，
                 ## 以添加其他创建者定义的首选项设置。
 

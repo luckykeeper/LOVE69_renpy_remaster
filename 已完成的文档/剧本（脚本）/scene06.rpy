@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月30日
+# 修订日期 2022年3月31日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1439,10 +1439,10 @@ label scene06:
     ## 638-771 真冬HS02
     ## 这里到时候要加点料
 
-    image bg lv69-augest = "images\extra\luckykeeper\lv69-augest.png"
+    image bg 催逝员 = "images\extra\luckykeeper\催逝员.png"
 
     if persistent.hsceneG:
-        scene lv69-augest with dissolve
+        scene 催逝员 with dissolve
         pause 2.0
 
     else:

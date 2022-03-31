@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月30日
+# 修订日期 2022年3月31日
 
 # 当前流程：编写脚本AIO Process
 
@@ -830,8 +830,9 @@ label scene12:
     # cca 1501-1583
 
     # 心爱&真冬 HScene 02（百合） Skip~
+    image bg 庸医锤佬指非官 = "images/extra/luckykeeper/庸医锤佬指非官.png"
     if persistent.hsceneG:
-        scene lv69-augest with dissolve
+        scene 庸医锤佬指非官 at truecenter with dissolve
         pause 2.0
 
     else:

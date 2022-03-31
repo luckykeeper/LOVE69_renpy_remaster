@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月30日
+# 修订日期 2022年3月31日
 
 # 当前流程：编写脚本AIO Process
 
@@ -92,8 +92,9 @@ label scene14:
     # 心爱&真冬 HScene 03 Skip~
     # cca 1764-1850
     # maf 1416-1495
+    image bg 寧々 = "images/extra/luckykeeper/寧々.png"
     if persistent.hsceneG:
-        scene lv69-augest with dissolve
+        scene 寧々 with dissolve
         pause 2.0
 
     else:

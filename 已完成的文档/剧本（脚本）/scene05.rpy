@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月30日
+# 修订日期 2022年3月31日
 
 # 当前流程：编写脚本AIO Process
 
@@ -920,8 +920,9 @@ label scene05:
     # 统计一下跳过的真冬音声数量方便后续制作
     # 跳过（要删除）的真冬音声数量->太多了统计不出来了
     # 325-546
+    image bg httpcat = "images/extra/luckykeeper/httpcat.png"
     if persistent.hsceneG:
-        scene lv69-augest with dissolve
+        scene httpcat with dissolve
         pause 2.0
     else:
         pass
