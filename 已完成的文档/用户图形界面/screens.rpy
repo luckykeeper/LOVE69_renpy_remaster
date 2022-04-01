@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月31日
+# 修订日期 2022年4月1日
 
 ################################################################################
 ## 初始化
@@ -1467,7 +1467,7 @@ screen preferences():
                     textbutton _("关闭HScene梗图模式（默认，推荐）") :
                         action [SetVariable("persistent.hsceneG",False),renpy.save_persistent()]
                         tooltip "默认选项，不看项目组瞎整活，调整该选项不影响HScene(因为根本没有)，调整该选项理论上无需重启生效"
-                    textbutton _("开启HScene梗图模式（不推荐）") :
+                    textbutton _("开启HScene梗图模式") :
                         action [SetVariable("persistent.hsceneG",True),renpy.save_persistent()]
                         tooltip "来看项目组胡乱整活，调整该选项不影响HScene(因为根本没有)，请根据个人喜好谨慎开启，调整该选项理论上无需重启生效"
                 ## 可以在此处添加类型为“radio_pref”或“check_pref”的其他“vbox”，
@@ -1951,8 +1951,8 @@ screen gamepad_help():
 screen douKnowledge():
 
     hbox:
-        label _("豆知识1")
-        text _("内容在这里")
+        label _("{a=https://love69renpyremasterproject.github.io/}移动版点这里下载{/a}")
+        text _("PC版请到游戏目录/extra文件夹寻找文档")
 
 
 

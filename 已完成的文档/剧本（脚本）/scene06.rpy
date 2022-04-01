@@ -2,12 +2,12 @@
 # LOVE69_Renpy_Remaster_Project
 # scene06 的脚本（剧本）
 # Author:Luckykeeper
-# 部分句子翻译协助：WorldlineChanger（关于真冬哼的一句歌曲）
+# 部分句子翻译协助：WorldlineChanger（关于真冬哼的两句歌曲）
 # 版本 0.8 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月31日
+# 修订日期 2022年4月1日
 
 # 当前流程：编写脚本AIO Process
 
@@ -346,6 +346,11 @@ label scene06:
     # 莲 「二人とも気持ちは嬉しいがな…お前らが二人揃って休んだら、寂しがる人もいるんだし…。だいち、騒がしくて寝てもいられねぇ」
     lian "你们两个人的想法都让我很开心。但是你们两个人一起在这里休息的话，有人会想你们的…再说，我被吵的都睡不着了"
 
+    # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.10
+    $ sideimagesize.SideImageYalign = 15.72
+    $ sideimagesize.SideImageZoom = 0.96
+
     # 心爱 「つれないなぁ。これでも結構本気で心配なんだぞ？」
     show 心愛_制服_基本_不機嫌 at love69_right with dissolve
     voice "voice/心愛/cca_a1_0703.ogg"
@@ -491,10 +496,11 @@ label scene06:
         yalign 0.048
 
     # 真冬 「…ん…ちゅっ…」
-    show 真冬_大_制服_基本_キス at love69_dong_bg_center with dissolve
+    hide 真冬_制服_基本_無表情
+    show 真冬_大_制服_基本_キス at love69_dong_bg_center
+    with dissolve
     voice "voice/真冬/maf_a1_0564.ogg"
     dong 真冬_制服_基本_キス "…嗯……啾……"
-    hide 真冬_制服_基本_無表情
 
     # 真冬 「えへ、お兄ちゃん。いってきます」
     show 真冬_大_制服_基本_微笑み at love69_dong_bg_center with dissolve
@@ -544,10 +550,11 @@ label scene06:
     "说着，心爱啪嗒啪嗒地靠近，弯着腰，把自己的脸靠近了我的脸"
 
     # 心爱 「…ん…ちゅっ…」
-    show 心愛_大_制服_基本_キス at love69_xinai_bg_center with dissolve
+    hide 心愛_制服_基本_嬉しい
+    show 心愛_大_制服_基本_キス at love69_xinai_bg_center
+    with dissolve
     voice "voice/心愛/cca_a1_0708.ogg"
     ai 心愛_制服_基本_キス "…嗯……啾……"
-    hide 心愛_制服_基本_嬉しい
 
     # 心爱 「にゃ、行ってきます、蓮くん♪」
     show 心愛_大_制服_基本_笑顔 at love69_xinai_bg_center with dissolve
@@ -673,7 +680,7 @@ label scene06:
 
     # 场景切换：葛城家门口->莲卧室
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
-    scene 自室a_朝 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene 自室a_朝 at love69_bg1620 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 莲 「…あいつらバカだろ」
     lian "…那些家伙是笨蛋吧"
@@ -1139,10 +1146,11 @@ label scene06:
     lian "嗯！？"
 
     # 真冬 「ん…ちゅぅ…んむ…」
-    show 真冬_大_私服_基本_キス at love69_dong_bg_center with dissolve
+    hide 真冬_私服_基本_目閉じ
+    show 真冬_大_私服_基本_キス at love69_dong_bg_center
+    with dissolve
     voice "voice/真冬/maf_a1_0607.ogg"
     dong 真冬_私服_基本_キス "嗯……嗯…嗯……"
-    hide 真冬_私服_基本_目閉じ
 
     # nil 「真冬が俺にやろうとしたことに気づいたのは、真冬が事に及んでからだった。」
     "直到真冬和我的肌肤接触之后，我才意识到真冬想对我做什么"
@@ -1401,10 +1409,11 @@ label scene06:
     dong 真冬_私服_基本_微笑み "要求相当的多捏。但是…这样的温柔，我很开心哦欧尼酱"
 
     # 真冬 「ちゅっ」
-    show 真冬_大_私服_基本_キス at love69_dong_bg_center with dissolve
+    hide 真冬_私服_基本_微笑み
+    show 真冬_大_私服_基本_キス at love69_dong_bg_center
+    with dissolve
     voice "voice/真冬/maf_a1_0634.ogg"
     dong 真冬_私服_基本_キス "啾"
-    hide 真冬_私服_基本_微笑み
 
     # nil 「真冬は軽く俺の額にキスをすると、にっこりと笑った。」
     "真冬轻吻了我的额头，微微一笑"
@@ -1475,7 +1484,7 @@ label scene06:
     $ sideimagesize.SideImageZoom = 1.1
 
     # 想瑠 「ぶえ」
-    show 想瑠_スーツ_ぶわ at love69_xiangliu_center
+    show 想瑠_スーツ_ぶわ at love69_xiangliu_center with dissolve
     voice "voice/想瑠/sol_a1_0135.ogg"
     liu 想瑠_スーツ_ぶわ "呜欸~"
 

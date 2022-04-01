@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月31日
+# 修订日期 2022年4月1日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1432,6 +1432,11 @@ label scene04:
     lion リオン_基本_杖_悲しい "啊—啊......我撒谎了呢...不过，也没办法呢...不这样的话，来这里的目的就达不到了..."
     hide リオン_基本_杖_微笑み
 
+    # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.1
+    $ sideimagesize.SideImageYalign = 0.78
+    $ sideimagesize.SideImageZoom = 1.0
+
     # MJ 「今更何いってやがる…元よりてめェが始めた事だろうが」
     voice "voice/その他/mjf_a1_0046.ogg"
     mj MJ_通常 "事到如今还说什么呢……这件事本来就是你挑起来的吧"
@@ -1588,7 +1593,7 @@ label scene04:
 
     # 真冬 「っ！　…ごくっ…まふ。いきなりだね」
     voice "voice/真冬/maf_a1_0210.ogg"
-    dong 真冬_制服_基本_ジト目 "咕! ...咕...哇哈…嘛呼...真是突然啊"
+    dong 真冬_制服_基本_ジト目 "咕! ...咕...哇哈...嘛呼...真是突然啊"
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
     $ sideimagesize.SideImageXalign = -0.01
@@ -1885,7 +1890,7 @@ label scene04:
     "从常识上来考虑，这是理所当然的行为，但是想到欧尼酱考虑到晚回来的我的时候...我就不由得开始幻想...看来已经到晚期了呢"
 
     # nil 「邪な考えは、夏の太陽のせいにしてしまおうって郷も歌っていましたし、きっと夏の太陽のせいです。」
-    "镇上的人现在唱歌捏，把所有邪恶的想法都归咎于夏日的阳光吧（L:前面莲回来的时候也说到这个了捏）。一定是因为夏天的太阳"
+    "镇上的人现在在唱歌捏，把所有邪恶的想法都归咎于夏日的阳光吧（L:前面莲回来的时候也说到这个了捏）。一定是因为夏天的太阳"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1910,19 +1915,20 @@ label scene04:
     dong 真冬_制服_基本_目閉じ "那、这么说来的话…嘿！"
     hide 真冬_制服_基本_無表情
 
-    show 真冬_裸yシャツ_パンツ_無表情 at love69_center with dissolve
+    hide 真冬_制服_基本_目閉じ
+    show 真冬_裸yシャツ_基本_無表情 at love69_center
+    with dissolve
     # nil 「制服を脱いで下着姿になりました。」
     "脱下制服穿上了内衣"
-    hide 真冬_制服_基本_目閉じ
 
     # nil 「そして、ブラを外して、洗濯物が折りたまれてる所から、お兄ちゃんのＹシャツを失敬しました。」
     "然后我脱下胸罩，从叠衣服的地方搞来了欧尼酱的衬衫"
 
     # 真冬 「くんくん…うん、お兄ちゃんの匂い…」
-    show 真冬_裸yシャツ_パンツ_まったり at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_まったり at love69_center with dissolve
     voice "voice/真冬/maf_a1_0227.ogg"
-    dong 真冬_裸yシャツ_パンツ_まったり "嗅嗅…嗯，欧尼酱的味道……"
-    hide 真冬_裸yシャツ_パンツ_無表情
+    dong 真冬_裸yシャツ_基本_まったり "嗅嗅…嗯，欧尼酱的味道……"
+    hide 真冬_裸yシャツ_基本_無表情
 
     # nil 「最初は単に「楽だから」という理由で、去年あたりからこっそりお兄ちゃんのＹシャツを借りてたのですが。」
     "最初只是因为「穿起来很轻松舒适」的原因，从去年开始偷偷地穿起了欧尼酱的衬衫"
@@ -1941,14 +1947,14 @@ label scene04:
 
     # 真冬 「心愛ちゃん…まふ」
     voice "voice/真冬/maf_a1_0228.ogg"
-    dong 真冬_裸yシャツ_パンツ_まったり "心爱酱……嘛呼"
+    dong 真冬_裸yシャツ_基本_まったり "心爱酱……嘛呼"
 
     # nil 「自分のほっぺたを両手で押して、（E）・ω・（ヾ）こんな感じになってみます。」
     "用双手按压自己的脸蛋，（E）・ω・（ヾ）试着变成这样的感觉"
 
     # 真冬 「まふまふまふまふ」
     voice "voice/真冬/maf_a1_0229.ogg"
-    dong 真冬_裸yシャツ_パンツ_まったり "嘛呼嘛呼嘛呼嘛~"
+    dong 真冬_裸yシャツ_基本_まったり "嘛呼嘛呼嘛呼嘛~"
 
     # nil 「私は何をやっているのでしょうか。」
     "我在做什么捏"
@@ -1957,10 +1963,10 @@ label scene04:
     "不过，在这件事上我的发现是，当按压脸颊的时候，确实会发出「嘛呼」的声音。下次也在欧尼酱身上试试吧"
 
     # 真冬 「良い触り心地でした」
-    show 真冬_裸yシャツ_パンツ_目閉じ at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_目閉じ at love69_center with dissolve
     voice "voice/真冬/maf_a1_0230.ogg"
-    dong 真冬_裸yシャツ_パンツ_目閉じ "触感很好捏"
-    hide 真冬_裸yシャツ_パンツ_まったり
+    dong 真冬_裸yシャツ_基本_目閉じ "触感很好捏"
+    hide 真冬_裸yシャツ_基本_まったり
 
     # nil 「お兄ちゃんに向ける感情とは少し路線が違いますが、心愛ちゃんに対しても、一線を越えた感情を抱いているようです。」
     "虽然和对欧尼酱的感情路线有点不同，但是我对心爱酱也有着超越界限的感情"
@@ -1975,10 +1981,10 @@ label scene04:
     "想更多地…摸摸…"
 
     # 真冬 「私、その気があるのかな…まぁ、いけど」
-    show 真冬_裸yシャツ_パンツ_無表情 at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_無表情 at love69_center with dissolve
     voice "voice/真冬/maf_a1_0231.ogg"
-    dong 真冬_裸yシャツ_パンツ_無表情 "我是不是有这个意思呢……嘛，不管了"
-    hide 真冬_裸yシャツ_パンツ_目閉じ
+    dong 真冬_裸yシャツ_基本_無表情 "我是不是有这个意思呢……嘛，不管了"
+    hide 真冬_裸yシャツ_基本_目閉じ
 
     # nil 「心愛ちゃんは、一線を越えても許してくれそう。」
     "心爱酱的话，即使越过了界线，也会原谅我的吧"
@@ -1987,10 +1993,10 @@ label scene04:
     "天啊"
 
     # 真冬 「まったく罪作りな季節ですね…夏ってやつは」
-    show 真冬_裸yシャツ_パンツ_微笑み at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_微笑み at love69_center with dissolve
     voice "voice/真冬/maf_a1_0232.ogg"
-    dong 真冬_裸yシャツ_パンツ_微笑み "真是个造孽的季节啊…夏天这家伙"
-    hide 真冬_裸yシャツ_パンツ_無表情
+    dong 真冬_裸yシャツ_基本_微笑み "真是个造孽的季节啊…夏天这家伙"
+    hide 真冬_裸yシャツ_基本_無表情
 
     # nil 「いつか、心愛ちゃんを襲ってみようかと思います。」
     "我想，总有一天，会袭击心爱酱的吧"
@@ -1999,10 +2005,10 @@ label scene04:
     "那么，欧尼酱"
 
     # 真冬 「むー…どうすればいのかなー…」
-    show 真冬_裸yシャツ_パンツ_無表情 at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_無表情 at love69_center with dissolve
     voice "voice/真冬/maf_a1_0233.ogg"
-    dong 真冬_裸yシャツ_パンツ_無表情 "emmm——…该怎么办才好呢……"
-    hide 真冬_裸yシャツ_パンツ_微笑み
+    dong 真冬_裸yシャツ_基本_無表情 "emmm——…该怎么办才好呢……"
+    hide 真冬_裸yシャツ_基本_微笑み
 
     # nil 「携帯電話を取りだして、前みたいに着信を連射してやろうかと思い立ちましたが、やっとの思いで我慢します。」
     "我想把手机拿出来，像之前那样不停地打电话过去，但最后还是忍住了"
@@ -2011,10 +2017,10 @@ label scene04:
     "然后，取而代之，通过app发送电子邮件给心爱酱"
 
     # 真冬 「ぶち犯したい…と」
-    show 真冬_裸yシャツ_パンツ_目閉じ at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_目閉じ at love69_center with dissolve
     voice "voice/真冬/maf_a1_0234.ogg"
-    dong 真冬_裸yシャツ_パンツ_目閉じ "想强暴..."
-    hide 真冬_裸yシャツ_パンツ_無表情
+    dong 真冬_裸yシャツ_基本_目閉じ "想强暴..."
+    hide 真冬_裸yシャツ_基本_無表情
 
     # nil 「すると、一瞬で『既読』マークがついて、返信が来ました。」
     "然后，一瞬间就有了『已读』标记，我收到了回复"
@@ -2023,10 +2029,10 @@ label scene04:
     "『真的吗?』"
 
     # 真冬 「うん」
-    show 真冬_裸yシャツ_パンツ_無表情 at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_無表情 at love69_center with dissolve
     voice "voice/真冬/maf_a1_0235.ogg"
-    dong 真冬_裸yシャツ_パンツ_無表情 "嗯"
-    hide 真冬_裸yシャツ_パンツ_目閉じ
+    dong 真冬_裸yシャツ_基本_無表情 "嗯"
+    hide 真冬_裸yシャツ_基本_目閉じ
 
     # nil 「『はい』」
     "『彳亍』"
@@ -2047,10 +2053,10 @@ label scene04:
     "但是，即使是现在，我觉得欧尼酱耳朵的触感还残留在舌头上"
 
     # 真冬 「押し倒してくれてもいのに」
-    show 真冬_裸yシャツ_パンツ_目閉じ at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_目閉じ at love69_center with dissolve
     voice "voice/真冬/maf_a1_0236.ogg"
-    dong 真冬_裸yシャツ_パンツ_目閉じ "明明可以推倒我的"
-    hide 真冬_裸yシャツ_パンツ_無表情
+    dong 真冬_裸yシャツ_基本_目閉じ "明明可以推倒我的"
+    hide 真冬_裸yシャツ_基本_無表情
 
     # nil 「ぼそっと本音が口からこぼれます。」
     "悄悄地说出真心话"
@@ -2079,19 +2085,19 @@ label scene04:
     $ sideimagesize.SideImageZoom = 0.95
 
     # 真冬 「ごもっともですよ、先生」
-    show 真冬_裸yシャツ_パンツ_微笑み at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_微笑み at love69_center with dissolve
     voice "voice/真冬/maf_a1_0237.ogg"
-    dong 真冬_裸yシャツ_パンツ_微笑み "你说得对，老师"
-    hide 真冬_裸yシャツ_パンツ_目閉じ
+    dong 真冬_裸yシャツ_基本_微笑み "你说得对，老师"
+    hide 真冬_裸yシャツ_基本_目閉じ
 
     # nil 「別れ際の台詞をフラッシュバック。伝えれば、きっと…。」
     "脑海闪回和想瑠再见时候的话。如果能够传达的话，一定…"
 
     # 真冬 「まふ」
-    show 真冬_裸yシャツ_パンツ_まったり at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_まったり at love69_center with dissolve
     voice "voice/真冬/maf_a1_0238.ogg"
-    dong 真冬_裸yシャツ_パンツ_まったり "嘛呼……"
-    hide 真冬_裸yシャツ_パンツ_微笑み
+    dong 真冬_裸yシャツ_基本_まったり "嘛呼……"
+    hide 真冬_裸yシャツ_基本_微笑み
 
     # nil 「真冬です。」
     "现在是真冬视角"
@@ -2103,19 +2109,19 @@ label scene04:
     "蝉的声音，渐渐淡出"
 
     # 真冬 「…すー…すー…まふ…」
-    show 真冬_裸yシャツ_パンツ_居眠り at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_居眠り at love69_center with dissolve
     voice "voice/真冬/maf_a1_0239.ogg"
-    dong 真冬_裸yシャツ_パンツ_居眠り "…哈—…哈—…嘛呼…"
-    hide 真冬_裸yシャツ_パンツ_まったり
+    dong 真冬_裸yシャツ_基本_居眠り "…哈—…哈—…嘛呼…"
+    hide 真冬_裸yシャツ_基本_まったり
 
     # 原地tp（真冬睡了一觉）
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene リビングa_夕 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 真冬 「…あう…喉かわいた…」
-    show 真冬_裸yシャツ_パンツ_目閉じ at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_目閉じ at love69_center with dissolve
     voice "voice/真冬/maf_a1_0240.ogg"
-    dong 真冬_裸yシャツ_パンツ_目閉じ "…啊…口渴了…"
+    dong 真冬_裸yシャツ_基本_目閉じ "…啊…口渴了…"
 
     # nil 「起きました。」
     "醒了过来"
@@ -2140,19 +2146,19 @@ label scene04:
     "试着打开冷冻室开始寻找"
 
     # 真冬 「おや、こいつは…」
-    show 真冬_裸yシャツ_パンツ_ジト目 at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_ジト目 at love69_center with dissolve
     voice "voice/真冬/maf_a1_0241.ogg"
-    dong 真冬_裸yシャツ_パンツ_ジト目 "哦呀，这个是…"
-    hide 真冬_裸yシャツ_パンツ_目閉じ
+    dong 真冬_裸yシャツ_基本_ジト目 "哦呀，这个是…"
+    hide 真冬_裸yシャツ_基本_目閉じ
 
     # nil 「有りました。見たことのない銘柄ですが、カップに入ったアイスクリームです。」
     "有了。虽然是没见过的牌子，但它是杯装的冰淇淋"
 
     # 真冬 「らぶぽーしょん…しくすてぃないん…」
-    show 真冬_裸yシャツ_パンツ_無表情 at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_無表情 at love69_center with dissolve
     voice "voice/真冬/maf_a1_0242.ogg"
-    dong 真冬_裸yシャツ_パンツ_無表情"LOVEPOTION……SIXTYNINE……"
-    hide 真冬_裸yシャツ_パンツ_ジト目
+    dong 真冬_裸yシャツ_基本_無表情"LOVEPOTION……SIXTYNINE……"
+    hide 真冬_裸yシャツ_基本_ジト目
 
     # nil 「蓋のロゴには、そう書いてあります。」
     "盖子的标志上是这样写的"
@@ -2161,10 +2167,10 @@ label scene04:
     "肯定，是欧尼酱的东西吧"
 
     # 真冬 「我慢我慢…」
-    show 真冬_裸yシャツ_パンツ_目閉じ at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_目閉じ at love69_center with dissolve
     voice "voice/真冬/maf_a1_0243.ogg"
-    dong 真冬_裸yシャツ_パンツ_目閉じ "忍耐忍耐…"
-    hide 真冬_裸yシャツ_パンツ_無表情
+    dong 真冬_裸yシャツ_基本_目閉じ "忍耐忍耐…"
+    hide 真冬_裸yシャツ_基本_無表情
 
     # nil 「その誘惑は圧倒的でした。」
     "但是诱惑是压倒性的"
@@ -2185,10 +2191,10 @@ label scene04:
     "在这样激烈的空战展开的大约1分钟后，我的脑海中浮现出了一个想法"
 
     # 真冬 「食べた後、急いでもっと高いアイスを買ってくれば良いかな…」
-    show 真冬_裸yシャツ_パンツ_まったり at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_まったり at love69_center with dissolve
     voice "voice/真冬/maf_a1_0244.ogg"
-    dong 真冬_裸yシャツ_パンツ_まったり "吃完之后，马上去买更贵的冰淇淋就好了…"
-    hide 真冬_裸yシャツ_パンツ_目閉じ
+    dong 真冬_裸yシャツ_基本_まったり "吃完之后，马上去买更贵的冰淇淋就好了…"
+    hide 真冬_裸yシャツ_基本_目閉じ
 
     # nil 「それなら、最初から高いアイスを買いに行けよ。っていう意見もあるとは思いますが、アイスを買いに行く活力があれば行っています。」
     "“那就一开始就去买更贵的冰淇淋啊喂！”我知道有人会这么说，但如果我还有活力去买冰淇淋，我会去的"
@@ -2198,10 +2204,10 @@ label scene04:
     "在边缘政策的压力下（L:原文“瀬戸際まで迫った交渉は”，边缘政策是指在冷战时期用来形容一个近乎要发动战争的情况，也就是到达战争边缘，从而说服对方屈服的一种战略术语），比起理性，身体的冲动获得了胜利"
 
     # 真冬 「お兄ちゃんごめん。そして、頂きます」
-    show 真冬_裸yシャツ_パンツ_無表情 at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_無表情 at love69_center with dissolve
     voice "voice/真冬/maf_a1_0245.ogg"
-    dong 真冬_裸yシャツ_パンツ_無表情 "欧尼酱对不起，然后，我要恰了"
-    hide 真冬_裸yシャツ_パンツ_まったり
+    dong 真冬_裸yシャツ_基本_無表情 "欧尼酱对不起，然后，我要恰了"
+    hide 真冬_裸yシャツ_基本_まったり
 
     # nil 「食べると決意したからには、急いで食べてしまわねばなりません。」
     "既然决定要吃，就得赶快吃完"
@@ -2210,28 +2216,28 @@ label scene04:
     "从餐具盒中取出勺子，打开盖子，一口气恰了一大勺"
 
     # 真冬 「まふ…ん…あ、美味し…」
-    show 真冬_裸yシャツ_パンツ_まったり at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_まったり at love69_center with dissolve
     voice "voice/真冬/maf_a1_0246.ogg"
-    dong 真冬_裸yシャツ_パンツ_まったり "嘛呼…嗯…啊，好吃…"
-    hide 真冬_裸yシャツ_パンツ_無表情
+    dong 真冬_裸yシャツ_基本_まったり "嘛呼…嗯…啊，好吃…"
+    hide 真冬_裸yシャツ_基本_無表情
 
     # nil 「あまりのおいしさに感動しました。それと同時に、何か、とても温かい気持ちが胸の中に膨らんでいきます。」
     "我被它的美味感动了。与此同时，某种非常温暖的感觉在我心中膨胀起来"
 
     # 真冬 「あれ…？　ドキドキする…」
-    show 真冬_裸yシャツ_パンツ_微笑み at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_微笑み at love69_center with dissolve
     voice "voice/真冬/maf_a1_0247.ogg"
-    dong 真冬_裸yシャツ_パンツ_微笑み "啊咧……？dokidoki的……"
-    hide 真冬_裸yシャツ_パンツ_まったり
+    dong 真冬_裸yシャツ_基本_微笑み "啊咧……？dokidoki的……"
+    hide 真冬_裸yシャツ_基本_まったり
 
     # nil 「鼓動が高鳴っていくのを感じます。でも、不愉快な感じではなく。とても、優しくて温かい。」
     "我感觉到了心跳的声音。但是，不是不愉快的感觉。非常温柔温暖"
 
     # 真冬 「んむ…あむ」
-    show 真冬_裸yシャツ_パンツ_まったり at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_まったり at love69_center with dissolve
     voice "voice/真冬/maf_a1_0248.ogg"
-    dong 真冬_裸yシャツ_パンツ_まったり "嗯…啊"
-    hide 真冬_裸yシャツ_パンツ_微笑み
+    dong 真冬_裸yシャツ_基本_まったり "嗯…啊"
+    hide 真冬_裸yシャツ_基本_微笑み
 
     # nil 「ゆっくり食べたいという気持ちもありましたが、スプーンは矢継ぎ早にアイスクリームを私の口に運んでいきます。」
     "虽然也有着想要慢慢吃的心情，但是勺子一个接一个不停地把冰淇淋送到嘴里"
@@ -2246,10 +2252,10 @@ label scene04:
     "吃完冰淇淋的瞬间"
 
     # 真冬 「あいらぶゆー…だよ、お兄ちゃん」
-    show 真冬_裸yシャツ_パンツ_微笑み2 at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_微笑み2 at love69_center with dissolve
     voice "voice/真冬/maf_a1_0249.ogg"
-    dong 真冬_裸yシャツ_パンツ_微笑み2 "I love you哦—…欧尼酱"
-    hide 真冬_裸yシャツ_パンツ_まったり
+    dong 真冬_裸yシャツ_基本_微笑み2 "I love you哦—…欧尼酱"
+    hide 真冬_裸yシャツ_基本_まったり
 
     # nil 「そんな言葉が口から零れました。」
     "这样的话从嘴里说出来了"
@@ -2259,10 +2265,10 @@ label scene04:
     pause 2.0
 
     # 真冬 「げ」
-    show 真冬_裸yシャツ_パンツ_見下し at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_見下し at love69_center with dissolve
     voice "voice/真冬/maf_a1_0250.ogg"
-    dong 真冬_裸yシャツ_パンツ_見下し "额"
-    hide 真冬_裸yシャツ_パンツ_微笑み2
+    dong 真冬_裸yシャツ_基本_見下し "额"
+    hide 真冬_裸yシャツ_基本_微笑み2
 
     # nil 「聞き慣れた排気音が聞こえてきます。お兄ちゃんのご帰宅です。」
     "听到已经听惯了的排气声，是欧尼酱回来了"
@@ -2271,10 +2277,10 @@ label scene04:
     "在感到高兴的同时，也有着计策失败的焦虑"
 
     # 真冬 「えーと…えーとえーと…」
-    show 真冬_裸yシャツ_パンツ_無表情 at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_無表情 at love69_center with dissolve
     voice "voice/真冬/maf_a1_0251.ogg"
-    dong 真冬_裸yシャツ_パンツ_無表情 "那—个…那个那个…"
-    hide 真冬_裸yシャツ_パンツ_見下し
+    dong 真冬_裸yシャツ_基本_無表情 "那—个…那个那个…"
+    hide 真冬_裸yシャツ_基本_見下し
 
     # nil 「とりあえず、アイスの空容器の蓋を閉めて冷凍室にしまうと、急いで玄関に向かいます。」
     "我先把空的冰淇淋杯的盖子盖上，放进冷冻室，然后快速走向玄关"
@@ -2289,10 +2295,10 @@ label scene04:
     "我想接近欧尼酱"
 
     # 真冬 「あ、服…いや、もう。なんとかなるっしょ」
-    show 真冬_裸yシャツ_パンツ_目閉じ at love69_center with dissolve
+    show 真冬_裸yシャツ_基本_目閉じ at love69_center with dissolve
     voice "voice/真冬/maf_a1_0252.ogg"
-    dong 真冬_裸yシャツ_パンツ_目閉じ "啊，衣服...不，已经没事了，总会有办法的"
-    hide 真冬_裸yシャツ_パンツ_無表情
+    dong 真冬_裸yシャツ_基本_目閉じ "啊，衣服...不，已经没事了，总会有办法的"
+    hide 真冬_裸yシャツ_基本_無表情
 
     # nil 「着替え忘れた私のその服装は、流石にちょっと恥ずかしかったのですが…。」
     "忘记换衣服了，穿着这身衣服总觉得有点不好意思..."

@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月31日
+# 修订日期 2022年4月1日
 
 # 当前流程：编写脚本AIO Process
 
@@ -873,7 +873,7 @@ label scene03:
     # 心爱 「んーん。そうじゃなくて。あんまり鈍感だと怒るよ蓮くん」
     show 心愛_制服_基本_無表情 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0380.ogg"
-    ai 心愛_制服_基本_無表情 "emm，不是那样的，如果你这么迟钝的话，我要生气了"
+    ai 心愛_制服_基本_無表情 "emm，不是那样的，如果你这么迟钝的话，我要生气了哦，莲君"
     hide 心愛_制服_基本_真顔
 
     # 莲 「…そうだな…」
