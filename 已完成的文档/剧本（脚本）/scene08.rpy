@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月31日
+# 修订日期 2022年4月2日
 
 # 当前流程：编写脚本AIO Process
 
@@ -173,8 +173,8 @@ label scene08:
     ai 心愛_制服_基本_嬉しい "不要偷看哦？"
     hide 心愛_制服_基本_にっこり
 
-    # nil 「お邪魔するのは？」
-    "那么，我就打扰了？"
+    # 莲 「お邪魔するのは？」
+    lian "那么，我就打扰了？"
 
     # 心爱 「っ…！　きょ、今日はだめ！」
     show 心愛_制服_基本_不機嫌 at love69_xinai_center with dissolve

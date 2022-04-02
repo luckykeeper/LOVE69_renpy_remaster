@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月27日
+# 修订日期 2022年4月2日
 
 #   本脚本为一周目的最后一幕，从Scene16开始就是二周目内容了
 

@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月31日
+# 修订日期 2022年4月2日
 
 # 当前流程：编写脚本AIO Process
 
@@ -133,7 +133,7 @@ label scene12:
     "我试着从床上站起来"
 
     # nil 「きゅっ」
-    "啾"
+    "拽拽"
 
     # 真冬 「……？」
     show 真冬_制服_基本_無表情 at love69_left with dissolve

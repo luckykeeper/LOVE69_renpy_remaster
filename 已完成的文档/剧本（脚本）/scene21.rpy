@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月31日
+# 修订日期 2022年4月2日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1755,11 +1755,12 @@ label scene21:
     lion リオン_帽子無し_杖_微笑み "爱的形式……恋的未来……"
     hide リオン_帽子無し_杖_無表情_1
 
-    # nil 「スカラー波とは。パナウェーブ研究所を追え」
+    # 莲 「スカラー波とは。パナウェーブ研究所を追え」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC%E6%B3%A2
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%91%E3%83%8A%E3%82%A6%E3%82%A7%E3%83%BC%E3%83%96%E7%A0%94%E7%A9%B6%E6%89%80
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC%E9%9B%BB%E7%A3%81%E6%B3%A2
-    "Scalar wave……Pana-Wave Laboratory（L:Scalar wave，标量波，在数学和物理学中，标量场或标量值函数将标量值与空间中的每个点相关联，比如物理上的整个空间的温度分布、流体中的压力分布，Pana-Wave Laboratory，日本的一个宗教团体，声称“标量电磁波对人体有害”，而标量电磁波专门用于伪科学。目前科学支持的电磁波是矢量波，而不是标量波）"
+    lian "Scalar wave……Pana-Wave Laboratory（L:Scalar wave，标量波，在数学和物理学中，标量场或标量值函数将标量值与空间中的每个点相关联，比如物理上的整个空间的温度分布、流体中的压力分布，"
+    luckykeeper "Pana-Wave Laboratory，日本的一个宗教团体，声称“标量电磁波对人体有害”，而标量电磁波专门用于伪科学。目前科学支持的电磁波是矢量波，而不是标量波）"
 
     # 里昂 「キス…それは誓いの証」
     show リオン_帽子無し_杖_悲しい2 at love69_lion_center with dissolve

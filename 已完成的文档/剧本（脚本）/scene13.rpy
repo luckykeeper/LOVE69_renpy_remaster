@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月31日
+# 修订日期 2022年4月2日
 
 # 当前流程：编写脚本AIO Process
 
@@ -418,7 +418,8 @@ label scene13:
     # 参考资料：https://diamond.jp/articles/-/224634
     show 心愛_水着_基本_不機嫌 at love69_right with dissolve
     voice "voice/心愛/cca_a1_1601.ogg"
-    ai 心愛_水着_基本_不機嫌 "就是就是！把那样的ALOHA脱下来吧！（L:ALOHA，夏威夷语，可以表示非常多的意思，比如：嗨、早上好、你好、晚上好、欢迎、再见、我爱你，还意味着还意味着爱、亲情、同情、恩惠、善良、怜悯、怜悯、同情、爱人。这五个字母分别代表同情、协调、喜悦、谦逊、耐心，这里这么用是因为这个词意思太多了就放在这里罢）"
+    ai 心愛_水着_基本_不機嫌 "就是就是！把那样的ALOHA脱下来吧！（L:ALOHA，夏威夷语，可以表示非常多的意思，比如：嗨、早上好、你好、晚上好、欢迎、再见、我爱你，还意味着还意味着爱、亲情、同情、恩惠、善良、怜悯、怜悯、同情、爱人。"
+    luckykeeper "这五个字母分别代表同情、协调、喜悦、谦逊、耐心，这里这么用是因为这个词意思太多了就放在这里罢）"
     hide 心愛_水着_基本_嬉しい
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
@@ -580,7 +581,8 @@ label scene13:
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%A1%E3%83%8F%E3%83%A1%E3%83%8F1%E4%B8%96
     show 心愛_水着_基本_笑顔 at love69_right with dissolve
     voice "voice/心愛/cca_a1_1607.ogg"
-    ai 心愛_水着_基本_笑顔 "卡美哈梅哈大帝！！请教给我ALOHA波的打法！（L:卡美哈梅哈大帝是夏威夷王国的开创者。其名字全称为Kalani Paiʻea Wohi o Kaleikini Kealiʻikui Kamehameha o ʻIolani i Kaiwikapu kaui Ka Liholiho Kūnuiākea。他原是夏威夷岛的一个酋长，经过多年征战，于1810年统一了夏威夷群岛）"
+    ai 心愛_水着_基本_笑顔 "卡美哈梅哈大帝！！请教给我ALOHA波的打法！"
+    luckykeeper "（L:卡美哈梅哈大帝是夏威夷王国的开创者。其名字全称为Kalani Paiʻea Wohi o Kaleikini Kealiʻikui Kamehameha o ʻIolani i Kaiwikapu kaui Ka Liholiho Kūnuiākea。他原是夏威夷岛的一个酋长，经过多年征战，于1810年统一了夏威夷群岛）"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -619,7 +621,8 @@ label scene13:
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%A5%E3%83%BC%E3%82%AF%E3%83%BB%E3%82%AB%E3%83%8F%E3%83%8A%E3%83%A2%E3%82%AF
     show 真冬_水着_基本_目閉じ at love69_left with dissolve
     voice "voice/真冬/maf_a1_1292.ogg"
-    dong 真冬_水着_基本_目閉じ "顺带一提，那个像是杜克·卡哈纳莫库的雕像，卡美哈梅哈大帝的在其它地方哦（L:杜克·保阿·卡西努·莫科埃·胡利科霍拉·卡哈纳莫库 Duke Paoa Kahinu Mokoe Hulikohola Kahanamoku，1890年8月24日－1968年1月22日），美国夏威夷族游泳运动员。他在奥林匹克运动会游泳比赛中共获得3枚金牌和2枚银牌）"
+    dong 真冬_水着_基本_目閉じ "顺带一提，那个像是杜克·卡哈纳莫库的雕像，卡美哈梅哈大帝的在其它地方哦"
+    luckykeeper "（L:杜克·保阿·卡西努·莫科埃·胡利科霍拉·卡哈纳莫库 Duke Paoa Kahinu Mokoe Hulikohola Kahanamoku，1890年8月24日－1968年1月22日），美国夏威夷族游泳运动员。他在奥林匹克运动会游泳比赛中共获得3枚金牌和2枚银牌）"
     hide 真冬_水着_基本_微笑み
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置

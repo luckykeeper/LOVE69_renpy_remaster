@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月31日
+# 修订日期 2022年4月2日
 
 # 当前流程：编写脚本AIO Process
 
@@ -87,7 +87,7 @@ label scene07:
 
     # nil 「店主謹製のアイスコア（冷たいコアの上にソフトクリームを乗せた飲み物）を頂いていた。」
     # 参考资料：https://en.wikipedia.org/wiki/Ice_cream_float
-    # 原文是アイスコア是冰芯的意思（就是北极圈科学家挖出来用于考古的那个），根据原文括号里面的意思，应该是冰淇淋苏打（フロート/ice cream float/ice cream soda）
+    # 原文是アイスコア是冰芯的意思（就是南极圈科学家挖出来用于考古的那个），根据原文括号里面的意思，应该是冰淇淋苏打（フロート/ice cream float/ice cream soda）
     "我收到了店主精心制作的冰淇淋苏打(冰块上放着软雪糕的饮料)"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -1225,7 +1225,7 @@ label scene07:
     # 心爱 「だ、だめだよ蓮くん！　風邪治ったばっかなんだからさ！」
     show 心愛_制服_基本_驚き at love69_right with dissolve
     voice "voice/心愛/cca_a1_0767.ogg"
-    ai 心愛_制服_基本_驚き "不、不可以的莲君！我感冒才刚好的呢！"
+    ai 心愛_制服_基本_驚き "不、不可以的莲君！感冒才刚好的呢！"
     hide 心愛_制服_基本_泣き
 
     # 莲 「うお、いつになく正論だな！？という事だ、店長さん、タオルも出来ればタダで貸してくれないか」
@@ -1396,6 +1396,11 @@ label scene07:
     voice "voice/心愛/cca_a1_0773.ogg"
     ai 心愛_制服_基本_不機嫌 "不能什么都说啊..."
     hide 心愛_制服_基本_真顔
+
+    # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.07
+    $ sideimagesize.SideImageYalign = -4.05
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 莲&店长 「すんません」
     # 要记得去人物表加人物，头像是店长的

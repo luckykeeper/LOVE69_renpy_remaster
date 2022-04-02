@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月31日
+# 修订日期 2022年4月2日
 
 # 当前流程：编写脚本AIO Process
 
@@ -73,7 +73,7 @@ label scene18:
     "下雨的日子"
 
     # 莲 「『はい私は今「リオンズマジカルアイスクリームファクトリー」の屋台の前にきています！！！　どうですか売上の方は！！！』」
-    lian "『是的，我现在正在今「Lion Magical Ice Cream Factory」的摊位前面！！！销售情况怎么样！！！』"
+    lian "『是的，我现在正在「Lion Magical Ice Cream Factory」的摊位前面！！！销售情况怎么样！！！』"
 
     # 切换到雨天
 

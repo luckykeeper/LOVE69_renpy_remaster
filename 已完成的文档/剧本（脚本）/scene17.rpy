@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月31日
+# 修订日期 2022年4月2日
 
 # 当前流程：编写脚本AIO Process
 
@@ -213,7 +213,7 @@ label scene17:
     lian "不用担心。我想着会发生这样的事，随身带着呢"
 
     # nil 「俺は鞄から紙芝居を取り出す。朝は空だったとか、そういう無粋な事は聞かない事だ。」
-    "我从包里拿出纸芝居。不要问我明明早上是空的，这种乱七八糟的问题"
+    "我从包里拿出纸芝居。不要问我明明早上包里还是空的，这种乱七八糟的问题"
 
     # 里昂 「何者なんだね君は」
     show リオン_基本_杖_悲しい at love69_lion_center with dissolve
@@ -222,7 +222,7 @@ label scene17:
     hide リオン_基本_杖_微笑み
 
     # 莲 「語ると長くなるから今度な。後はキャストだが…リオン、演じるのは得意か？」
-    lian "说起来太长了，下次吧。然后就是演员…里昂，你擅长演吗？"
+    lian "说起来太长了，下次吧。然后就是演员…里昂，你擅长表演吗？"
 
     # 里昂 「うん。小さい頃に一度ブロードウェイを目指したことがあるよ。マイケルもやれば出来る子だと思う」
     show リオン_基本_杖_微笑み at love69_lion_center with dissolve
@@ -1530,10 +1530,11 @@ label scene17:
         yalign 0.165
 
     # 里昂 「…ちゅっ」
-    show リオン_大_基本_杖_キス at love69_lion_bg_center with dissolve
+    hide リオン_基本_杖_微笑み
+    show リオン_大_基本_杖_キス at love69_lion_bg_center
+    with dissolve
     voice "voice/リオン/ron_a1_0157.ogg"
     lion リオン_基本_杖_キス "……啾"
-    hide リオン_基本_杖_微笑み
 
     # 莲 「っ！」
     lian "嗯！"
@@ -1694,7 +1695,7 @@ label scene17:
     hide 真冬_制服_基本_ニタァ
 
     # 莲 「なんだよ羨ましいな。俺も一緒に連れてってくれよ」
-    lian "什么啊，好羡慕啊。我也一起带我去吧"
+    lian "什么啊，好羡慕啊。也一起带我去吧"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
