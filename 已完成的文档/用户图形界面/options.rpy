@@ -5,8 +5,8 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年3月31日
-# 版本号 0.8 "LuckyDev"
+# 修订日期 2022年4月3日
+# 版本号 0.9 "LuckyDev"
 
 
 ## 基础 ##########################################################################
@@ -20,7 +20,7 @@
 # Demo版的版本名为 "LuckyGal"
 # 开发版的版本名为 "LuckyDev"
 # 一二周目做完之后的发行版的的版本名为 "LuckyCocoa"
-define config.name = _("LOVEPOTION SIXTYNINE 汉化移植版 内部测试版 ver0.8 “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献")
+define config.name = _("LOVEPOTION SIXTYNINE 汉化移植版 内部测试版 ver0.9 “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献")
 
 
 ## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。
@@ -30,53 +30,97 @@ define gui.show_name = False
 
 ## 游戏版本号。
 
-define config.version = "0.8"
+define config.version = "0.9"
 
 ## 放置在游戏“关于”屏幕的文本。将文本放在三个引号之间，并在段落之间留一个空行。
 
 # Demo 版的说明
 define gui.about = _p("""
-LOVEPOTION SIXTYNINE 汉化移植版 内部测试版 ver0.8 “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献
+LOVEPOTION SIXTYNINE 汉化移植版 内部测试版 ver0.9 “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献
 
-点击蓝字后将调用系统默认浏览器打开指定网页
+仅供学习 Ren'Py 使用，请不要用于其它用途！项目代码完全开源！
 
-项目开源页面：{a=https://github.com/luckykeeper/LOVE69_renpy_remaster}https://github.com/luckykeeper/LOVE69_renpy_remaster{/a}
+点击蓝字后将调用系统默认浏览器打开指定网页，能访问的情况下请尽量不要使用镜像站
+
+项目开源页面（Github）：{a=https://github.com/luckykeeper/LOVE69_renpy_remaster}https://github.com/luckykeeper/LOVE69_renpy_remaster{/a}
+
+项目开源页面（Gitee）：{a=https://gitee.com/luckykeeper/LOVE69_renpy_remaster}https://gitee.com/luckykeeper/LOVE69_renpy_remaster{/a}
+
+项目开源页面（GitLab）：{a=https://gitlab.com/luckykeeper/LOVE69_renpy_remaster}https://gitlab.com/luckykeeper/LOVE69_renpy_remaster{/a}
 
 项目组官网：{a=https://github.com/luckykeeper/LOVE69_renpy_remaster}https://love69renpyremasterproject.github.io/{/a}
+
+项目组官网（国内镜像站）：{a=https://love69.luckykeeper.site:44443/}https://love69.luckykeeper.site:44443/{/a}
 
 项目组文档站（gh-pages）：{a=https://love69-renpy-remaster-project.github.io/Doc/}https://love69-renpy-remaster-project.github.io/Doc/{/a}
 
 项目组文档站（国内镜像站）：{a=https://love69doc.luckykeeper.site:44443/Doc/}https://love69doc.luckykeeper.site:44443/Doc/{/a}
 
-希望各位看官老爷到我们的项目页面给我们一个Star，秋梨膏，你们的Star是我做下去的动力！Star摩多摩多，动力摩多摩多！
+小游戏（移动版适配，请使用现代浏览器打开）：{a=https://eatcocoa.luckykeeper.site:44443/}https://eatcocoa.luckykeeper.site:44443/{/a}
+
+希望各位到我们的项目页面给我们一个Star，秋梨膏，你们的Star对我们非常重要！
+
+问题/Bug 反馈、技术交流请前往 {a=https://github.com/luckykeeper/LOVE69_renpy_remaster}GitHub{/a}
 
 当前版本制作成员
 
-组长：Luckykeeper
+Luckykeeper：组长、程序、翻译、美工、校对、测试、润色、素材增分辨率、项目组网站构建/维护
 
-程序：Luckykeeper
+WorldlineChanger：测试/润色、OP翻译、OP字幕制作、OP视频压制/增分辨率
 
-翻译：Luckykeeper
+Santa-Weaves：测试/润色、OP翻译
 
-美工：Luckykeeper
+正式版感言
 
-校对：Luckykeeper
+Luckykeeper：终于，在项目开始第218（待定，看W什么时候咕完）天，克服无数困难，在项目组成员的共同努力下，我们交出了让自己满意的答卷，仅主项目就写了将近6万行，
+不由得感叹这段时间的成果！谨以此作献给各位参与过汉化的前辈们，也希望能够通过本作推广简单好用的 Ren'Py ，希望激发更多的人参与到汉化移植中来，后面我还会去不断完善文档站的内容，
+希望能够帮助正在学习 Ren'Py 的你。最后，希望本作能在这个特殊的时期给你带来一些欢乐，让我们一起共克时艰，战胜疫情！\n
+顺带一提，再过几个月的秋招我就要去找工作准备成为社畜了，所以特别希望你能给我的项目一个 Star! 这将给我以极大的帮助，要是能内推一下我就更好了（笑）\n
+另外，不来康康我的其它开源项目嘛？\n
+{a=https://github.com/luckykeeper/attackMap}attackMap{/a} 可以自建的酷炫网络攻击地图，支持 docker 部署\n
+{a=https://github.com/luckykeeper/docker_plumemo}docker_plumemo{/a} plumemo博客容器镜像，效果参考{a=https://luckykeeper.site/}我的个人博客{/a}
 
-测试/润色：Luckykeeper，WorldlineChanger，Santa-Weaves
+WorldlineChanger：
 
-项目组网站构建、维护：Luckykeeper
+Santa-Weaves：
 
-Demo 版小感言
+另外，本作的完成离不开下列开源项目的帮助，感谢各位大佬的项目！这些项目是
 
-Luckykeeper：今天是项目开始的第42天，没想到能这么快从完全0基础到现在的地步呢，我从这个项目里面学到了非常多的东西，也感谢陪伴我一起做Demo版的WorldlineChanger和Santa-Weaves，虽然你们做的不多，但是没有你们的参与，大家也看不到现在的这个东西。总之，期待和各位在正式版再度见面！
+{a=https://github.com/hanmin0822/MisakaTranslator}MisakaTranslator{/a} 提供的文本 HOOK 工具
 
-WorldlineChanger：从八月的L决定启动项目，到十月份Demo版本的测试放出，可谓是用爱发电行为其高效性的又一次有力证明！也正是这个项目，让我接触到了这个相对冷门但十分有趣的GAL，我也相信会有更多人会因为它而感受到游戏的乐趣和开源共享精神的珍贵。
-在Demo制作期间由于学业繁忙等鸽子原因，没有帮上很多忙:P 但我们的时间还有很多，在正式版的推进过程里，希望能有足够时间来一起修缮这个大工程~
-关于游戏，无论是舒服的CV表现还是颇具新意的剧情推进风格，都能令人感受到一种与GAL经典流程不同的尝试，在Demo结尾附近心爱夺取冰淇淋时的演出更是令人印象深刻> <。 此外，得益于L君堪称细致入微的豆科普时间，让love69更像是个梗百科科普全书了（2333 那么，正式版与各位的再次相遇，敬请期待吧！
+{a=https://github.com/AaronFeng753/Waifu2x-Extension-GUI}Waifu2x-Extension-GUI{/a} 提供的素材升分辨率工具
 
-Santa-Weaves：很荣幸能参加进项目里，希望Luckykeeper能把这份热爱继续下去，越做越好！
+{a=https://github.com/huanghaozi/AutoMatting}AutoMatting{/a} 提供的自动抠图工具
+
+{a=https://github.com/nagadomi/waifu2x}waifu2x{/a} 提供的OP扩分辨率工具
+
+{a=https://github.com/nihui/rife-ncnn-vulkan}rife-ncnn-vulkan{/a} 提供的OP补帧工具
+
+{a=https://github.com/renpy/renpy}renpy{/a} 本作的游戏引擎
+
+同时，也要感谢以下工具，大大提升了我们的制作效率
+
+{a=https://code.visualstudio.com/}Visual Studio Code{/a} 提供的简洁好用的 IDE 工具
+
+{a=https://www.tabnine.com/}tabnine{/a} 提供的 AI 代码补全工具
+
+最后，感谢大家选择了我们项目组的汉化移植版本！祝大家游玩愉快！
+
+本作基于 Ren'Py 7.4.6 制作，关于引擎涉及到的相关软件的许可证情况，请{a=https://www.renpy.org/doc/html/license.html}点击这里查看{/a}
 """)
+# ------------------------ 我是分割线，下面是考古内容 ------------------------
 
+# Demo 版小感言
+
+# Luckykeeper：今天是项目开始的第42天，没想到能这么快从完全0基础到现在的地步呢，我从这个项目里面学到了非常多的东西，也感谢陪伴我一起做Demo版的WorldlineChanger和Santa-Weaves，虽然你们做的不多，但是没有你们的参与，大家也看不到现在的这个东西。总之，期待和各位在正式版再度见面！
+
+# WorldlineChanger：从八月的L决定启动项目，到十月份Demo版本的测试放出，可谓是用爱发电行为其高效性的又一次有力证明！也正是这个项目，让我接触到了这个相对冷门但十分有趣的GAL，我也相信会有更多人会因为它而感受到游戏的乐趣和开源共享精神的珍贵。
+# 在Demo制作期间由于学业繁忙等鸽子原因，没有帮上很多忙:P 但我们的时间还有很多，在正式版的推进过程里，希望能有足够时间来一起修缮这个大工程~
+# 关于游戏，无论是舒服的CV表现还是颇具新意的剧情推进风格，都能令人感受到一种与GAL经典流程不同的尝试，在Demo结尾附近心爱夺取冰淇淋时的演出更是令人印象深刻> <。 此外，得益于L君堪称细致入微的豆科普时间，让love69更像是个梗百科科普全书了（2333 那么，正式版与各位的再次相遇，敬请期待吧！
+
+# Santa-Weaves：很荣幸能参加进项目里，希望Luckykeeper能把这份热爱继续下去，越做越好！
+
+# ------------------------ 我是分割线，上面是考古内容 ------------------------
 
 ## 在生成的发布版中，可执行文件和目录所使用的短名称。此处必须是仅 ASCII 字符，并
 ## 且不得包含空格、冒号和分号。
@@ -184,10 +228,10 @@ default preferences.afm_time = 15
 ## 该命令一般不应变更，若要变更，应为有效字符串而不是表达式。
 
 # 正式发行版存档文件夹
-# define config.save_directory = "LOVE69RenpyRemaster-Release-ver1.0-SaveData"
+define config.save_directory = "LOVE69RenpyRemaster-Release-ver1.0-SaveData"
 
 # 开发版存档文件夹
-define config.save_directory = "LOVE69RenpyRemaster-Dev-SaveData"
+# define config.save_directory = "LOVE69RenpyRemaster-Dev-SaveData"
 
 # Demo 版存档文件夹
 # define config.save_directory = "LOVE69RenpyRemaster"
@@ -258,11 +302,18 @@ init python:
     build.classify('game/**.otf', 'font')
     build.archive("font", "all")
 
+    # Test: cache tl
+    build.classify('game/cache/**', 'sys')
+    build.classify('game/tl/**', 'sys')
+    build.archive("sys", "all")
+
     ## 匹配为文档模式的文件会在 Mac 应用生成中重复出现，所以它们同时出现在 app
     ## 和 zip 文件中。
 
     build.documentation('*.html')
     build.documentation('*.txt')
+    build.documentation('*.pdf')
+    build.documentation('*.md')
 
 
 ## 需要一个 Google Play 授权密钥来下载扩展文件并执行应用内购。授权密钥可以在
