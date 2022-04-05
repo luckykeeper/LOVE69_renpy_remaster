@@ -2,11 +2,11 @@
 # LOVE69_Renpy_Remaster_Project
 # 各种GUI设定的详细设置
 # Author:Luckykeeper
-# 版本 0.8 "LuckyDev"
+# 版本 0.9 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月1日
+# 修订日期 2022年4月5日
 
 ################################################################################
 ## 初始化
@@ -1039,7 +1039,7 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Ren'Py引擎版本： [renpy.version_only]")
+            # text _("Ren'Py引擎版本： [renpy.version_only]")
 
 
 style about_label is gui_label
@@ -1951,7 +1951,7 @@ screen gamepad_help():
 screen douKnowledge():
 
     hbox:
-        label _("{a=https://love69renpyremasterproject.github.io/}移动版点这里下载{/a}")
+        label _("{a=https://love69renpyremasterproject.github.io/knowledge/}移动版点这里下载{/a}")
         text _("PC版请到游戏目录/extra文件夹寻找文档")
 
 

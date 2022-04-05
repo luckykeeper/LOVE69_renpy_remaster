@@ -2,12 +2,12 @@
 # LOVE69_Renpy_Remaster_Project
 # 人物名称定义（人物表）
 # Author:Luckykeeper
-# 版本 0.8 "LuckyDev"
+# 版本 0.9 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开始日期 2021年8月28日
-# 修订日期 2022年3月31日
+# 修订日期 2022年4月5日
 
 # 定义老婆和其他人的名字
 # 基本定义如下，取中文拼音最后一字的全拼
@@ -279,20 +279,20 @@ image side 真冬 真冬_制服_基本_本気2 = "images/face/真冬/真冬_制�
 image side 真冬 真冬_制服_基本_嬉しい = "images/face/真冬/真冬_制服_基本_嬉しい.png" # # 康起来很喜感的笑
 
 # 裸y衬衫系列
-image side 真冬 真冬_裸yシャツ_パンツ_無表情 = "images/face/真冬/真冬_裸yシャツ_パンツ_無表情.png" # 字面意思，睁眼，嘴·
-image side 真冬 真冬_裸yシャツ_パンツ_まったり = "images/face/真冬/真冬_裸yシャツ_パンツ_まったり.png" # 闭眼，嘴“w”，嘛呼嘛呼
-image side 真冬 真冬_裸yシャツ_パンツ_目閉じ = "images/face/真冬/真冬_裸yシャツ_パンツ_目閉じ.png" # 闭眼，嘴·
-image side 真冬 真冬_裸yシャツ_パンツ_微笑み = "images/face/真冬/真冬_裸yシャツ_パンツ_微笑み.png" # 字面意思
-image side 真冬 真冬_裸yシャツ_パンツ_居眠り = "images/face/真冬/真冬_裸yシャツ_パンツ_居眠り.png" # 闭眼，嘴开口，半圆，碎着辽~
-image side 真冬 真冬_裸yシャツ_パンツ_ジト目 = "images/face/真冬/真冬_裸yシャツ_パンツ_ジト目.png" # 睁眼，嘴三角，眉上凸
-image side 真冬 真冬_裸yシャツ_パンツ_微笑み2 = "images/face/真冬/真冬_裸yシャツ_パンツ_微笑み2.png" # 字面意思，嘴型近“o”
-image side 真冬 真冬_裸yシャツ_パンツ_見下し = "images/face/真冬/真冬_裸yシャツ_パンツ_見下し.png" # 闭眼，眉毛y=-x，嘴o
-image side 真冬 真冬_裸yシャツ_パンツ_むーっ = "images/face/真冬/真冬_裸yシャツ_パンツ_むーっ.png" # 闭眼，撅嘴，眉毛y=-x（斜下45度）
+image side 真冬 真冬_裸yシャツ_基本_無表情 = "images/face/真冬/真冬_裸yシャツ_基本_無表情.png" # 字面意思，睁眼，嘴·
+image side 真冬 真冬_裸yシャツ_基本_まったり = "images/face/真冬/真冬_裸yシャツ_基本_まったり.png" # 闭眼，嘴“w”，嘛呼嘛呼
+image side 真冬 真冬_裸yシャツ_基本_目閉じ = "images/face/真冬/真冬_裸yシャツ_基本_目閉じ.png" # 闭眼，嘴·
+image side 真冬 真冬_裸yシャツ_基本_微笑み = "images/face/真冬/真冬_裸yシャツ_基本_微笑み.png" # 字面意思
+image side 真冬 真冬_裸yシャツ_基本_居眠り = "images/face/真冬/真冬_裸yシャツ_基本_居眠り.png" # 闭眼，嘴开口，半圆，碎着辽~
+image side 真冬 真冬_裸yシャツ_基本_ジト目 = "images/face/真冬/真冬_裸yシャツ_基本_ジト目.png" # 睁眼，嘴三角，眉上凸
+image side 真冬 真冬_裸yシャツ_基本_微笑み2 = "images/face/真冬/真冬_裸yシャツ_基本_微笑み2.png" # 字面意思，嘴型近“o”
+image side 真冬 真冬_裸yシャツ_基本_見下し = "images/face/真冬/真冬_裸yシャツ_基本_見下し.png" # 闭眼，眉毛y=-x，嘴o
+image side 真冬 真冬_裸yシャツ_基本_むーっ = "images/face/真冬/真冬_裸yシャツ_基本_むーっ.png" # 闭眼，撅嘴，眉毛y=-x（斜下45度）
 image side 真冬 真冬_裸yシャツ_基本_見下し3 = "images/face/真冬/真冬_裸yシャツ_基本_見下し3.png" # 睁眼，生气，嘴-，眉毛y=-x（斜下45度）
-image side 真冬 真冬_裸yシャツ_パンツ_泣き = "images/face/真冬/真冬_裸yシャツ_パンツ_泣き.png" # 睁眼，含泪珠
-image side 真冬 真冬_裸yシャツ_パンツ_本気 = "images/face/真冬/真冬_裸yシャツ_パンツ_本気.png" # 眼睁大，眉毛y=-x,嘴闭
-image side 真冬 真冬_裸yシャツ_パンツ_キス = "images/face/真冬/真冬_裸yシャツ_パンツ_キス.png" # kiss准备
-image side 真冬 真冬_裸yシャツ_パンツ_ニタァ = "images/face/真冬/真冬_裸yシャツ_パンツ_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢
+image side 真冬 真冬_裸yシャツ_基本_泣き = "images/face/真冬/真冬_裸yシャツ_基本_泣き.png" # 睁眼，含泪珠
+image side 真冬 真冬_裸yシャツ_基本_本気 = "images/face/真冬/真冬_裸yシャツ_基本_本気.png" # 眼睁大，眉毛y=-x,嘴闭
+image side 真冬 真冬_裸yシャツ_基本_キス = "images/face/真冬/真冬_裸yシャツ_基本_キス.png" # kiss准备
+image side 真冬 真冬_裸yシャツ_基本_ニタァ = "images/face/真冬/真冬_裸yシャツ_基本_ニタァ.png" # 睁眼，嘴开口，“w”，是有点小坏的笑呢
 
 # 大_常服
 image side 真冬 真冬_大_制服_基本_キス = "images/face/真冬/真冬_大_制服_基本_キス.png" # 大，kiss准备

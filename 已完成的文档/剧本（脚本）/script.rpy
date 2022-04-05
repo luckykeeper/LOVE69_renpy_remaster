@@ -2,12 +2,12 @@
 # LOVE69_Renpy_Remaster_Project
 # 主脚本模块（脚本入口）
 # Author:Luckykeeper
-# 版本 0.8 "LuckyDev"
+# 版本 0.9 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开坑日期 2021年8月28日
-# 修订日期 2022年3月31日
+# 修订日期 2022年4月5日
 
 #----------------------------------------------------------------
 # 主程序开始
