@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月5日
+# 修订日期 2022年4月6日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右<-2021年10月5日 搞定！
@@ -1388,7 +1388,7 @@ label scene01:
     # hide 心愛_制服_基本_笑顔
     show 心愛_制服_基本_にっこり at love69_center with dissolve
     voice "voice/心愛/cca_a1_0016.ogg"
-    fen 心愛_制服_基本_にっこり "好♪"
+    fen 粉_制服_基本_にっこり "好♪"
     hide 心愛_制服_基本_笑顔
 
     # 下面的动画需要参考人物位置做ATL变换
@@ -2371,13 +2371,13 @@ label scene01:
     # 心爱 「ポリバルーンいただきまーす♪」
     # 参考资料：https://paypaymall.yahoo.co.jp/store/festival-plaza/item/gng-bub-567754/?sc_i=shp_pc_search_itemlist_shsrg_img
     # 参考资料2：WorldlineChanger【https://worldline.top 的站长】提供的描述
-    # 综合参考资料1和2 ポリバルーン 应该是【吹跑胶】阔以用这个关键词在某宝上搜索到类似产品，各大学校门口有售
+    # 综合参考资料1和2 ポリバルーン 应该是【吹泡胶】阔以用这个关键词在某宝上搜索到类似产品，各大学校门口有售
     # 感觉 WorldlineChanger 的描述，味道还是蛮香的，但是请务必注意这个东西绝对不要恰哦，绝对哦，约好了哦~
     # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 03
     # hide 心愛_制服_おやつ_にっこり
     show 心愛_制服_おやつ_笑顔 at love69_right with dissolve
     voice "voice/心愛/cca_a1_0058.ogg"
-    ai 心愛_制服_おやつ_笑顔 "我要吹一个泡泡胶气球!（L&WorldlineChanger：原文「ポリバルーン」，某宝搜索【吹跑胶】就知道是什么了，国内各大中小学校门口有售，味道还是蛮香的，但是请务必注意这个东西绝对不要恰哦，绝对哦，约好了哦~）"
+    ai 心愛_制服_おやつ_笑顔 "我要吹一个泡泡胶气球!（L&WorldlineChanger：原文「ポリバルーン」，某宝搜索【吹泡胶】就知道是什么了，国内各大中小学校门口有售，味道还是蛮香的，但是请务必注意这个东西绝对不要恰哦，绝对哦，约好了哦~）"
     hide 心愛_制服_おやつ_にっこり
 
     # 莲 「なんだねそれは」
@@ -2392,7 +2392,7 @@ label scene01:
     # hide 心愛_制服_おやつ_笑顔
     show 心愛_制服_おやつ_にっこり at love69_right with dissolve
     voice "voice/心愛/cca_a1_0059.ogg"
-    ai 心愛_制服_おやつ_にっこり "嘿嘿，不小心一时冲动买了东西。用货到付款买的（L：吹跑胶在11区大概108円+配送费598円（也就是折合软妹币50元左右）能买到3管，按11区物价似乎并不是很贵）"
+    ai 心愛_制服_おやつ_にっこり "嘿嘿，不小心一时冲动买了东西。用货到付款买的（L：吹泡胶在11区大概108円+配送费598円（也就是折合软妹币50元左右）能买到3管，按11区物价似乎并不是很贵）"
     hide 心愛_制服_おやつ_笑顔
 
     # 莲 「いや、だからそれはなんだね」
@@ -2407,7 +2407,7 @@ label scene01:
     # hide 心愛_制服_おやつ_にっこり
     show 心愛_制服_おやつ_真顔 at love69_right with dissolve
     voice "voice/心愛/cca_a1_0060.ogg"
-    ai 心愛_制服_おやつ_真顔 "是可以吃的气球哒~（L：吹跑胶一定是不能恰的，虽然很香，请务必远离6岁以下儿童哦！！千万别看了这个跑去网上买回来吃哦！！！约好了哦！）"
+    ai 心愛_制服_おやつ_真顔 "是可以吃的气球哒~（L：吹泡胶一定是不能恰的，虽然很香，请务必远离6岁以下儿童哦！！千万别看了这个跑去网上买回来吃哦！！！约好了哦！）"
     hide 心愛_制服_おやつ_にっこり
 
     # 莲 「なるほど」
@@ -2475,7 +2475,7 @@ label scene01:
     hide 心愛_制服_おやつ_真顔
 
     # 莲 「…なんでストローごと鼻の穴に突っ込むんだよ」
-    lian "为什么连吸管都要插进鼻孔里啊！（L：去tb上搜一下刚刚提到的【吹跑胶】，就知道吸管是怎么肥事儿辽）"
+    lian "为什么连吸管都要插进鼻孔里啊！（L：去tb上搜一下刚刚提到的【吹泡胶】，就知道吸管是怎么肥事儿辽）"
 
     # nil 「......」
     "......"
@@ -3031,7 +3031,7 @@ label scene01:
     # 参考资料：https://ja.wikipedia.org/wiki/%E4%B8%89%E9%81%8A%E4%BA%AD%E5%B0%8F%E9%81%8A%E4%B8%89
     # 参考资料2：https://baike.baidu.com/item/%E8%90%BD%E8%AF%AD/2672550?fr=aladdin
     # hide 心愛_制服_基本_真顔
-    show 心愛_制服_基本_笑顔 at love69_right
+    show 心愛_制服_基本_笑顔 at love69_right with dissolve
     voice "voice/心愛/cca_a1_0075.ogg"
     # 2022年1月6日，补上看月曜想起来的内容
     ai 心愛_制服_基本_笑顔 "请，小游三先生（L:三遊亭小遊三，1947年3月2日 - 至今 ，落语艺术协会参事，落语是日本的传统曲艺形式之一，形式类似单口相声，有点独角戏或者是单人小品的感觉，根据综艺节目月曜夜未央的说法，他的名字老是被人忘记呢）"
@@ -3044,7 +3044,7 @@ label scene01:
 
     # 想瑠 「違う人がいです」
     hide 想瑠_スーツ_見下し
-    show 想瑠_スーツ_真顔 at love69_xiangliu_center
+    show 想瑠_スーツ_真顔 at love69_xiangliu_center with dissolve
     voice "voice/想瑠/sol_a1_0008.ogg"
     liu 想瑠_スーツ_真顔 "应该是另一个人来着"
 
@@ -4349,19 +4349,39 @@ label scene01:
 
     # nil 「続いて、高らかな黄色い歓声と共に、ロングコートのような、ローブのような服をはためかせた少女が、」//黄色い歓声？怪
     # nil 「ふわりと槍と帽子の元へと舞い降りた。」这里翻成一句比较合适呢
-    "接着，伴随着高昂的黄色欢呼声，像长外套一样，挥舞着长袍一样的衣服的少女，轻轻地飘落到了长枪和帽子的下面。"
+    "接着，伴随着高昂的黄色欢呼声，像长外套一样，挥舞着长袍一样的衣服的少女，轻轻地飘落到了长枪和帽子的下面"
+
+    # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.1
+    $ sideimagesize.SideImageYalign = 0.78
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 帽子 「ファアック！　クソやろー！　あともう少しの所だったのに！」
     voice "voice/その他/mjf_a1_0008.ogg"
     hat "fxxk！！son of xxxxxx！！！我差一点就成功了"
 
+    # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.09
+    $ sideimagesize.SideImageYalign = -7.32
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 里昂？？？ 「はい、残念でした。まったく…大人しくしていれば痛い目に合わなくてすむのに…」
     voice "voice/リオン/ron_a1_0019.ogg"
     ang "嗯，非常遗憾呢。真是的... 如果你乖乖听话，就不会受伤了..."
 
+    # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.1
+    $ sideimagesize.SideImageYalign = 0.78
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 帽子 「てやんでぃ！　こんなん痛くも痒くねぇなぁ！」
     voice "voice/その他/mjf_a1_0009.ogg"
     hat "别闹了! 这不痛也不痒啊! "
+
+    # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.09
+    $ sideimagesize.SideImageYalign = -7.32
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂？？？ 「いつまでその台詞が吐けるかな～？」
     voice "voice/リオン/ron_a1_0020.ogg"
@@ -4370,9 +4390,19 @@ label scene01:
     # nil 「ぐりぐりぐり」
     "少女转动着像长枪一样的东西"
 
+    # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.1
+    $ sideimagesize.SideImageYalign = 0.78
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 帽子 「ギャア！　ギブ！　ギブだよギブ！　ドクター！　ドクター！　この試合をやめさせてぇ！」
     voice "voice/その他/mjf_a1_0010.ogg"
     hat "呀啊啊——！——啊! 放——放弃了啊！Doctor！刀客塔！快停下这场考验吧"
+
+    # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.09
+    $ sideimagesize.SideImageYalign = -7.32
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂？？？ 「小賢しい！」
     voice "voice/リオン/ron_a1_0021.ogg"
@@ -4393,12 +4423,22 @@ label scene01:
     # nil 「ちょっと羨ましい。」
     "我有点羡慕呢（L:......）"
 
+    # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.1
+    $ sideimagesize.SideImageYalign = 0.78
+    $ sideimagesize.SideImageZoom = 1.0
+
     # 帽子 「ぷぎゃー！」
     voice "voice/その他/mjf_a1_0011.ogg"
     hat "呜噶啊——！"
 
     # nil 「地面に這いつくばった帽子のような生き物は、暫くの間ピクピクしていたが、やがて動かなくなった。」
     "那个像帽子一样趴在地上的生物抽搐了一会儿，然后就不动了。"
+
+    # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
+    $ sideimagesize.SideImageXalign = 0.09
+    $ sideimagesize.SideImageYalign = -7.32
+    $ sideimagesize.SideImageZoom = 1.0
 
     # 里昂？？？ 「ふう…世話が焼ける…これだから ゲイ（gay） のヤク中は…」
     # hide 黄_帽子無し_杖_微笑み
@@ -5484,7 +5524,7 @@ label scene01:
     show 心愛_制服_基本_もぐもぐ at love69_xinai_center with Dissolve(0.1)
     # 心爱 「むぐ…むぐむぐ…あむ…むぐ…けほっ…むぐ」
     voice "voice/心愛/cca_a1_0112.ogg"
-    ai "嗯...唔唔...呜啊...哈啊...嗯...咳...嗯嗯"
+    ai 心愛_制服_基本_もぐもぐ "嗯...唔唔...呜啊...哈啊...嗯...咳...嗯嗯"
 
     # 莲 「死して尚食らうというのか」
     lian "即使死了也还是要吃吗？"

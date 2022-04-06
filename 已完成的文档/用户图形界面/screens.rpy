@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月5日
+# 修订日期 2022年4月6日
 
 ################################################################################
 ## 初始化
@@ -1282,7 +1282,7 @@ screen game_save():
         vbox:
             xalign 0.1
             yalign 0.95
-            text "热知识: 在本页面内，将鼠标放在已经有存档的格子上，按键盘上的“Delete”键就可以删除已有存档啦~"
+            text "这是存档界面哦\n热知识: 在本页面内，将鼠标放在已经有存档的格子上，按键盘上的“Delete”键就可以删除已有存档啦~"
 
 
 screen game_load():
@@ -1385,7 +1385,7 @@ screen game_load():
         vbox:
             xalign 0.1
             yalign 0.95
-            text "热知识: 在本页面内，将鼠标放在已经有存档的格子上，按键盘上的“Delete”键就可以删除已有存档啦~"
+            text "这是读档界面捏\n热知识: 在本页面内，将鼠标放在已经有存档的格子上，按键盘上的“Delete”键就可以删除已有存档啦~"
 
 
 

@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月5日
+# 修订日期 2022年4月6日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1122,7 +1122,7 @@ label scene02:
         linear 1.3 xalign 1.04
     # pause 1.8 去掉最后的 pause 1.8 让心爱停止之前开始说话，和原版相比更加不突兀
     voice "voice/心愛/cca_a1_0200.ogg"
-    ai "咕呜... 咕奴奴奴奴!"
+    ai 心愛_制服_基本_不機嫌 "咕呜... 咕奴奴奴奴!"
 
     # 莲 「おいおい無理するなよ、何で15ポンドのボールを選ぶんだ」
     lian "喂喂，不要勉强啊，为什么要选15磅的球啊喂？（L:15磅大概是6803克的亚子~）"
@@ -1157,7 +1157,7 @@ label scene02:
 
     # 心爱 「重い方が！　威力も高いじゃないですか！　とおもって！」
     voice "voice/心愛/cca_a1_0201.ogg"
-    ai "重点的那个！威力自然也高一些不是吗！我是怎么觉得的!"
+    ai 心愛_制服_基本_不機嫌 "重点的那个！威力自然也高一些不是吗！我是怎么觉得的!"
 
     # 莲 「自分の体重の１０％っていうセオリーがあってな」
     # % 不支持，可以用％替代
@@ -1180,7 +1180,7 @@ label scene02:
 
     # 心爱 「なるほど。じゃぁおいらは10ポンドあたりがちょうどいってことだね」
     voice "voice/心愛/cca_a1_0202.ogg"
-    ai "原来如此。那这么说来，以我的体重用10磅（4535克左右）的就刚刚好呢!"
+    ai 心愛_制服_基本_嬉しい "原来如此。那这么说来，以我的体重用10磅（4535克左右）的就刚刚好呢!"
     hide 心愛_制服_基本_不機嫌
 
     # 莲 「ちなみにそれ、自分の体重をこっそり発表してるようなもんだけどな」
@@ -2166,10 +2166,11 @@ label scene02:
     "心爱紧紧地抓住了我制服的下摆，把手中握着的奶糖苹果递给了我"
 
     # 心爱 「…ありがとう、蓮くん…♪」
-    show 心愛_大_制服_基本_にっこり1 at love69_xinai_bg_center with dissolve
+    hide 心愛_大_制服_おやつ_キス
+    show 心愛_大_制服_基本_にっこり1 at love69_xinai_bg_center
+    with dissolve
     voice "voice/心愛/cca_a1_0287.ogg"
     ai 心愛_制服_基本_にっこり1 "谢谢你，莲君…♪"
-    hide 心愛_大_制服_おやつ_キス
 
     # 莲 「どういたしまして。好きだよ、心愛」
     lian "不客气。我喜欢你，心爱"
@@ -2187,10 +2188,11 @@ label scene02:
     "……"
 
     # 心爱 「じー…」
-    show 心愛_大_制服_基本_きらきら at love69_xinai_bg_center with dissolve
+    hide 心愛_大_制服_おやつ_キス
+    show 心愛_大_制服_基本_きらきら at love69_xinai_bg_center
+    with dissolve
     voice "voice/心愛/cca_a1_0289.ogg"
     ai 心愛_制服_基本_きらきら "盯——"
-    hide 心愛_大_制服_おやつ_キス
 
     # 莲 「なんだよその目は。くれたんじゃないのか」
     lian "你的眼睛怎么了? （这个奶糖苹果）不是给我的吗"
