@@ -1,35 +1,39 @@
 <p align="center"><a href="https://love69renpyremasterproject.github.io/"><img src="images/项目组logo_smallsize.png" alt="项目组logo" style="zoom:50%;" /></a></p>
 <h2 align="center">LOVE69 Ren’Py Remaster Project</h2>
-<h3 align="center">使用 Ren'Py 重制 LOVEPOTION SIXTYNINE ，并加以汉化和全平台移植</h3>
+<h3 align="center">Use Ren'Py To Remaster LOVEPOTION SIXTYNINE , and Chinese-localization with all platform adapted</h3>
 
-<p align="center"><img src=https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster>  <img src=https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster>  <img src=https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster> <a href="https://www.codacy.com/gh/luckykeeper/LOVE69_renpy_remaster/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=luckykeeper/LOVE69_renpy_remaster&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/384c6954686c45ab968865348461f267"/></a><img src="https://img.shields.io/badge/Ren'Py%E7%89%88%E6%9C%AC-7.4.6-blue.svg">  <img src=https://app.travis-ci.com/love69renpyremasterproject/love69renpyremasterproject.github.io.svg?branch=main&status=passed><a href="https://github.com/luckykeeper/LOVE69_renpy_remaster/releases"><img src="https://img.shields.io/github/v/release/luckykeeper/LOVE69_renpy_remaster?include_prereleases"></a><a href="https://love69-renpy-remaster-project.github.io/Doc/"><img src="https://img.shields.io/badge/%E6%96%87%E6%A1%A3-%E6%88%B3%E8%BF%99%E9%87%8C-brightgreen.svg"></a><a href="https://eatcocoa.luckykeeper.site:44443/"><img src="https://img.shields.io/badge/%E5%B0%8F%E6%B8%B8%E6%88%8F-%E6%88%B3%E8%BF%99%E9%87%8C-blue.svg"></a><a href="https://love69renpyremasterproject.github.io/"><img src="https://img.shields.io/badge/%E9%A1%B9%E7%9B%AE%E7%BB%84%E5%AE%98%E7%BD%91-%E6%88%B3%E8%BF%99%E9%87%8C-brightgreen.svg"></a></p>
+<p align="center"><img src=https://img.shields.io/github/stars/luckykeeper/LOVE69_renpy_remaster>  <img src=https://img.shields.io/github/forks/luckykeeper/LOVE69_renpy_remaster>  <img src=https://img.shields.io/github/issues/luckykeeper/LOVE69_renpy_remaster> <a href="https://www.codacy.com/gh/luckykeeper/LOVE69_renpy_remaster/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=luckykeeper/LOVE69_renpy_remaster&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/384c6954686c45ab968865348461f267"/></a><img src="https://img.shields.io/badge/Ren'Py_Version-7.4.6-blue.svg">  <img src=https://app.travis-ci.com/love69renpyremasterproject/love69renpyremasterproject.github.io.svg?branch=main&status=passed><a href="https://github.com/luckykeeper/LOVE69_renpy_remaster/releases"><img src="https://img.shields.io/github/v/release/luckykeeper/LOVE69_renpy_remaster?include_prereleases"></a><a href="https://love69-renpy-remaster-project.github.io/Doc/"><img src="https://img.shields.io/badge/Document-Clickhere-brightgreen.svg"></a><a href="https://eatcocoa.luckykeeper.site:44443/"><img src="https://img.shields.io/badge/Fan_Game-Clickhere-blue.svg"></a><a href="https://love69renpyremasterproject.github.io/"><img src="https://img.shields.io/badge/Offical_Website-Clickhere-brightgreen.svg"></a></p>
 
 ------
 
-[English](./README_en.md)
+[Chinese](./README.md)
 
-# 简介
+**tips: This File is is translated from Chinese, suggestions for corrections are welcome**
 
-[前往导航](#导航)
+Partial translation for now , full translation of README will come soon
 
-[Ren'Py](https://github.com/renpy/renpy) 是一款功能十分强大而又简单易学的视觉小说引擎（Visual Novel Engine），本项目使用 Ren'Py 对 Steroider 社的 LOVEPOTION SIXTYNINE 【作品介绍 [2DFAN](https://galge.fun/subjects/2854) [Bangumi](http://bangumi.tv/subject/89145) [VNDB](https://vndb.org/v14082)】进行高清重制、汉化、以及全平台移植，所有成果全部开源，欢迎 Star！更多 Star ，更多动力！
+# Introduction
 
-通过本项目，可以
+[Go to navigation](#Navigation)
 
-- [x] 通过游玩汉化版的作品，感受 LOVEPOTION SIXTYNINE 的魅力（前已经全部完成，预计五一发布！可以到[实机开发画面展示](#实机开发画面展示)预览）【[Demo版下载戳这里](https://github.com/luckykeeper/LOVE69_renpy_remaster/releases/tag/0.1.0)，建议优先选择国内节点】
-- [x] 通过阅读源码，了解如何制作 Galgame ，抛砖引玉，吸引更多对 Gal 汉化感兴趣的人来参与进来
-- [x] 作为 Ren'Py 入门的学习资料，学习 Ren'Py 的基础知识， Ren'Py 不仅仅可以做 Gal ，做卡牌、RPG、电子相册，只要你有想象力都可以做！
+[Ren'Py](https://github.com/renpy/renpy) is a very powerful and easy-to-learn Visual Novel Engine. This project uses Ren'Py to make Steroider's  LOVEPOTION SIXTYNINE【Introduction of This Galgame [2DFAN](https://galge.fun/subjects/2854) [Bangumi](http://bangumi.tv/subject/89145) [VNDB](https://vndb.org/v14082)】HD remaster, Chineseization, and full platform adapted , All work are Open-Source ! More Star, more motivation !
+
+Through the project , you can
+
+- [x] Feel the charm of LOVEPOTION SIXTYNINE by playing the Chinese version of the Galgame (all completed so far, expected to be released on May 1st! (You can go to [live development screen display](#live development screen display) to preview) [[Demo version download poke here](https://github.com/luckykeeper/LOVE69_renpy_remaster/releases/tag/0.1.0), we recommend that you choose the domestic node first]】
+- [x] By reading the source code, learn how to make a Galgame, and attract more people who are interested in Galgame Chinese-localization to participate!
+- [x] As a learning material for getting started with Ren'Py, learn the basics of Ren'Py. Ren'Py can do not only Galgame , but cards games, RPG, electronic albums, as long as you have the imagination to do it!
 - [x] ……
 
-欢迎讨论、聊天、提问、凑热闹、翻译纠正、提改进建议等……请移步 Issues ：[看已有条目](https://github.com/luckykeeper/LOVE69_renpy_remaster/issues) ；
+Welcome to discuss, chat, ask questions, get together, translate and correct, make suggestions for improvement, etc. ...... Please move to Issues: [see existing entries](https://github.com/luckykeeper/LOVE69_renpy_remaster/issues) ; 
 
-Discussions 讨论区已开放，非Bug/翻译/脚本/程序问题请前往[这里](https://github.com/luckykeeper/LOVE69_renpy_remaster/discussions)交流
+Discussions is now open, for non-bug/translation/script/programming issues, please go [here](https://github.com/luckykeeper/LOVE69_renpy_remaster/discussions)
 
-# 导航
+# Navigation
 
 - [大事记](#大事记)
 - [目标](#目标)
-- [实机开发画面展示](#实机开发画面展示)
+- [live development screen display](#live_development_screen_display)
 - [贡献及源码食用指北](#贡献及源码食用指北)
 - [开源声明](#开源声明)
 - [其它事项](#其它事项)
@@ -37,7 +41,7 @@ Discussions 讨论区已开放，非Bug/翻译/脚本/程序问题请前往[这�
 
 # 大事记
 
-[返回导航](#导航)
+[Go to navigation](#Navigation)
 
 | 项目状况         | LOVE69 Ren’py Remaster Project                               |
 | ---------------- | ------------------------------------------------------------ |
@@ -50,7 +54,7 @@ Discussions 讨论区已开放，非Bug/翻译/脚本/程序问题请前往[这�
 
 # 目标
 
-[返回导航](#导航)
+[Go to navigation](#Navigation)
 
 - 使用 Ren'Py 重置本作品，实现跨平台
 
@@ -60,9 +64,9 @@ Discussions 讨论区已开放，非Bug/翻译/脚本/程序问题请前往[这�
 
 - 汉化成果最终全部开源，给其它想参与汉化的同好提供一个思路
 
-# 实机开发画面展示
+# live_development_screen_display
 
-[返回导航](#导航)
+[Go to navigation](#Navigation)
 
 **最新开发界面前瞻**
 
