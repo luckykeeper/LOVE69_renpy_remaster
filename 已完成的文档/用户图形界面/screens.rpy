@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月6日
+# 修订日期 2022年4月16日
 
 ################################################################################
 ## 初始化
@@ -1412,6 +1412,9 @@ define config.cache_surfaces = persistent.useCache
 # HScene 梗图模式，默认关闭
 default persistent.hsceneG = False
 
+# persistent.mouseScroll 鼠标滚轮功能，默认关闭
+default persistent.mouseScroll = False
+
 screen preferences():
 
     tag menu
@@ -1470,6 +1473,18 @@ screen preferences():
                     textbutton _("开启HScene梗图模式") :
                         action [SetVariable("persistent.hsceneG",True),renpy.save_persistent()]
                         tooltip "来看项目组胡乱整活，调整该选项不影响HScene(因为根本没有)，请根据个人喜好谨慎开启，调整该选项理论上无需重启生效"
+
+                # 鼠标滚轮只针对有鼠标的平台生效
+                if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+                    vbox:
+                        style_prefix "check"
+                        label _("个性化")
+                        textbutton _("禁用鼠标滚轮向下新对话") :
+                            action [SetVariable("persistent.mouseScroll",False),renpy.save_persistent()]
+                            tooltip "默认选项，鼠标滚轮仅用于回顾历史对话，需要重启生效"
+                        textbutton _("启用鼠标滚轮向下新对话") :
+                            action [SetVariable("persistent.mouseScroll",True),renpy.save_persistent()]
+                            tooltip "使鼠标滚轮除回顾历史对话还能开始新对话，需要重启生效"
                 ## 可以在此处添加类型为“radio_pref”或“check_pref”的其他“vbox”，
                 ## 以添加其他创建者定义的首选项设置。
 
@@ -2540,7 +2555,7 @@ screen gallery:
     vbox:
         xalign 0
         yalign 1.0
-        text "By Luckykeeper: Gallery 附带了一些彩蛋，包括一些原作没有使用但是也被打包进去的素材，\n                                    以及移植版没有使用的素材，还请注意。如需获取全部CG，可参照{a=https://love69-renpy-remaster-project.github.io/Doc/}项目组文档站{/a}指南解包"
+        text "By Luckykeeper: Gallery 附带了一些彩蛋，包括一些原作没有使用但是也被打包进去的素材，\n                                    以及移植版没有使用的素材，还请注意。如需获取全部CG，可参照{a=https://love69-renpy-remaster-project.github.io/Doc/dev/%E8%A7%A3%E5%8C%85.html}项目组文档站{/a}指南解包"
     # 进入退出音乐效果
     on "replace" action Play("music", "bgm/bgm50.ogg")
     on "replaced" action Play("music", "bgm/bgm01.ogg")
@@ -2716,7 +2731,7 @@ screen music_room:
     vbox:
         xalign 0
         yalign 1.0
-        text "By Luckykeeper:想回顾全部 BGM？请参照{a=https://love69-renpy-remaster-project.github.io/Doc/}项目组文档站{/a}指南进行解包~"
+        text "By Luckykeeper:想回顾全部 BGM？请参照{a=https://love69-renpy-remaster-project.github.io/Doc/dev/%E8%A7%A3%E5%8C%85.html}项目组文档站{/a}指南进行解包~"
 
     # 进入退出音乐效果
     on "replace" action mr.Play()
@@ -2963,3 +2978,13 @@ init python:
     mr.add("bgm/bgm08.ogg") # anonatsu_piano
     mr.add("bgm/bgm42.ogg") # あの夏rock1111
     mr.add("bgm/bgm47.ogg") # スターチス nightcore
+
+# 测试：鼠标滚轮向下开启新对话
+# init python:
+    if persistent.mouseScroll:
+        config.keymap['dismiss'].append('mousedown_5')
+    else:
+        try:
+            config.keymap['dismiss'].remove('mousedown_5')
+        except:
+            print("没有开启鼠标滚轮向下开启新对话功能")
