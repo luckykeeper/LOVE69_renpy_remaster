@@ -8,7 +8,7 @@
 
 [Chinese](./README.md)
 
-**tips: This File is is translated from Chinese, suggestions for corrections are welcome**
+**tips: This Readme is is translated from Chinese, all suggestions for corrections are welcome**
 
 Partial translation for now , full translation of README will come soon
 
@@ -31,7 +31,7 @@ Discussions is now open, for non-bug/translation/script/programming issues, plea
 
 # Navigation
 
-- [大事记](#大事记)
+- [Project Progress Logs](#Project_Progress_Logs)
 - [目标](#目标)
 - [live development screen display](#live_development_screen_display)
 - [贡献及源码食用指北](#贡献及源码食用指北)
@@ -39,18 +39,18 @@ Discussions is now open, for non-bug/translation/script/programming issues, plea
 - [其它事项](#其它事项)
 - [项目组网站 (点击将离开本页)](https://love69renpyremasterproject.github.io/)
 
-# 大事记
+# Project_Progress_Logs
 
 [Go to navigation](#Navigation)
 
-| 项目状况         | LOVE69 Ren’py Remaster Project                               |
-| ---------------- | ------------------------------------------------------------ |
-| 进度             | 发布时间初步定在5月1日，敬请期待~<br/>当前状态：开发完成，转入封闭测试阶段<br/>项目开坑 （2021年8月28日）<br/>项目组网站建设基本完成（2021年9月3日）<br/>Scene 01（Demo）部分文本内容翻译完成（2021年10月1日）<br/>Demo 版制作完成，开始内部测试（2021年10月9日）<br/>Demo 版发布（2021年10月24日）【[下载地址](https://github.com/luckykeeper/LOVE69_renpy_remaster/releases/tag/0.1.0)】<br/>Scene 02 翻译完成（2021年11月6日）<br/>Scene 03 翻译完成（2021年11月8日）<br/>Scene 04 翻译完成（2021年11月20日）<br/>Scene 05 翻译完成（2021年11月27日）<br/>Scene 06 翻译完成（2022年1月1日）<br/>GitHub Star 破十（2022年1月4日）<br/>Scene 07 翻译完成（2022年1月4日）<br/>Scene 08 翻译完成（2022年1月5日）<br/>Scene 09 翻译完成（2022年1月8日）<br/>Scene 10 翻译完成（2022年1月9日）<br/>Scene 11 翻译完成（2022年1月10日）<br/>Scene 12 翻译完成（2022年1月11日）<br/>Scene 13 翻译完成（2022年1月12日）<br/>Scene 14 翻译完成&Scene 15 翻译完成&一周目翻译完成&版本号调整至0.2（2022年1月13日）<br/>Scene 16 翻译完成（2022年1月16日）<br/>Scene 17 翻译完成（2022年1月17日）<br/>Scene 18 翻译完成（2022年1月19日）<br/>Scene 19 翻译完成（2022年1月20日）<br/>Scene 20-22 翻译完成&一周目翻译完成&版本号调整至0.3（2022年1月21日）<br/>新版UI重构&测试基本完成&版本号调整至0.4（2022年1月23日）<br/>重构 Scene 01 动画脚本，增加各种效果，提升还原度（2022年1月24-25日）<br/>Scene 02 制作完成（2022年1月27日）<br/>Scene 03 制作完成（2022年1月28日）<br/>Scene 04 制作完成（2022年2月2日）<br/>Scene 05 制作完成（2022年2月3日）<br/>Scene 06 制作完成（2022年2月7日）<br/>Scene 07 制作完成（2022年2月16日）<br/>Scene 08 制作完成（2022年2月17日）<br/>写下移植版的第一个选择肢& Scene 09 制作完成（2022年2月18日）<br/>文档站框架搭建完成&项目组、文档站镜像站搭建完成（2022年2月19日）<br/>Scene 10 制作完成（2022年3月5日）<br/>Scene 11 制作完成（2022年3月5日）<br/>Scene 12 制作完成（2022年3月5日）<br/>Scene 13 制作完成（2022年3月6日）<br/>Scene 14 制作完成（2022年3月6日）<br/>Scene 15 制作完成（2022年3月6日）<br/>一周目内容制作完成（2022年3月6日）<br/>统一调整版本号至0.5（2022年3月7日）<br/>GUI 制作完成，统一调整版本号至0.6（2022年3月17日）<br/>Scene 16-17 制作完成（2022年3月19日）<br/>Scene 18 制作完成（2022年3月20日）<br/>Scene 19-20 制作完成（2022年3月26日）<br/>Scene 21-22 制作完成，全部故事脚本制作完成！（2022年3月27日）<br/>统一调整版本号至0.7（2022年3月27日）<br/>全部开发完成，转入封闭测试阶段（2022年3月31日）<br/>W提交特效OP，统一调整版本号至0.9，开始内部测试阶段（2022年4月5日） |
-| 项目组成员       | 3人（[Luckykeeper](https://github.com/luckykeeper)，[WorldlineChanger](https://github.com/WorldlineChanger)，[Santa-Weaves](https://github.com/Santa-Weaves)） |
-| 看看组里谁在摸鱼 | [戳这里](https://github.com/luckykeeper/LOVE69_renpy_remaster/graphs/contributors) |
-| 其它贡献者       | （欢迎踊跃参与）                                             |
-| 项目地址         | [GitHub](https://github.com/luckykeeper/LOVE69_renpy_remaster) 【主仓库】<br/>[Gitee](https://gitee.com/luckykeeper/LOVE69_renpy_remaster)【不定期与GitHub 同步】<br/>[GitLab](https://gitlab.com/luckykeeper/LOVE69_renpy_remaster)【不定期与GitHub 同步】<br/>欢迎前来 Star！ |
-| 项目组官网       | [戳这里进入](https://love69renpyremasterproject.github.io)   |
+| Project_Progress        | LOVE69 Ren’py Remaster Project                               |
+| ----------------------- | ------------------------------------------------------------ |
+| Progress                | expected to be released on May 1st~<br/>Current status: Development completed, moving to closed testing phase<br/>Project Start （2021-08-28）<br/>Project website construction is basically completed（2021-09-03）<br/>Scene 01（Demo）part text content translation completed（2021-10-01）<br/>Demo version completed，start internal testing（2021-10-09）<br/>Demo version release（2021-10-24）【[Download](https://github.com/luckykeeper/LOVE69_renpy_remaster/releases/tag/0.1.0)】<br/>Scene 02 part text content translation completed（2021-11-06）<br/>Scene 03 part text content translation completed（2021-11-08）<br/>Scene 04 part text content translation completed（2021-11-20）<br/>Scene 05 part text content translation completed（2021-11-27）<br/>Scene 06 part text content translation completed（2022-01-01）<br/>GitHub Star Over Ten!（2022-01-04）<br/>Scene 07 part text content translation completed（2022-01-04）<br/>Scene 08 part text content translation completed（2022-01-05）<br/>Scene 09 part text content translation completed（2022-01-08）<br/>Scene 10 part text content translation completed（2022-01-09）<br/>Scene 11 part text content translation completed（2022-01-10）<br/>Scene 12 part text content translation completed（2022-01-11）<br/>Scene 13 part text content translation completed（2022-01-12）<br/>Scene 14&15 part text content translation completed&first-playthrogh translation completed&Version adjusted to 0.2（2022-01-13）<br/>Scene 16 part text content translation completed（2022-01-16）<br/>Scene 17 part text content translation completed（2022-01-17）<br/>Scene 18 part text content translation completed（2022-01-19）<br/>Scene 19 part text content translation completed（2022-01-20）<br/>Scene 20-22 part text content translation completed&second-playthrogh translation completed&Version adjusted to 0.3（2022-01-21）<br/>New version of UI rebuild&test completed&Version adjusted to 0.4（2022-01-23）<br/>rebuild Scene 01 anime script，add effects，enhancing restoration（2022-01-24/25日）<br/>Scene 02 script completed（2022-01-27）<br/>Scene 03 script completed（2022-01-28）<br/>Scene 04 script completed（2022-02-02）<br/>Scene 05 script completed（2022-02-03）<br/>Scene 06 script completed（2022-02-07）<br/>Scene 07 script completed（2022-02-16）<br/>Scene 08 script completed（2022-02-17）<br/>The first choice limb of the ported version& Scene 09 script completed（2022-02-18）<br/>Document Website build complete&The mirror site of offical、Document Website build complete（2022-02-19）<br/>Scene 10 script completed（2022-03-05）<br/>Scene 11 script completed（2022-03-05）<br/>Scene 12 script completed（2022-03-05）<br/>Scene 13 script completed（2022-03-06）<br/>Scene 14 script completed（2022-03-06）<br/>Scene 15 script completed（2022-03-06）<br/>First-playthrogh all script completed（2022-03-06）<br/>Version adjusted to 0.5（2022-03-07）<br/>GUI finished，Version adjusted to 0.6（2022-03-17）<br/>Scene 16-17 script completed（2022-03-19）<br/>Scene 18 script completed（2022-03-20）<br/>Scene 19-20 script completed（2022-03-26）<br/>Scene 21-22 script completed，all story script completed！（2022-03-27）<br/>Version adjusted to 0.7（2022-03-27）<br/>All development completed, moving to closed testing phase&Version adjusted to 0.8（2022-03-31）<br/>W Submit OP，Version adjusted to 0.9，Start of internal testing phase（2022-04-05） |
+| Members of project      | 3人（[Luckykeeper](https://github.com/luckykeeper)，[WorldlineChanger](https://github.com/WorldlineChanger)，[Santa-Weaves](https://github.com/Santa-Weaves)） |
+| 看看组里谁在摸鱼        | [Click_here](https://github.com/luckykeeper/LOVE69_renpy_remaster/graphs/contributors) |
+| contributer             | （欢迎踊跃参与）                                             |
+| project opensource urls | [GitHub](https://github.com/luckykeeper/LOVE69_renpy_remaster) 【main】<br/>[Gitee](https://gitee.com/luckykeeper/LOVE69_renpy_remaster)【syncing from GitHub】<br/>[GitLab](https://gitlab.com/luckykeeper/LOVE69_renpy_remaster)【syncing from GitHub】<br/>Welcome Star！ |
+| Offical Website         | [Click_here](https://love69renpyremasterproject.github.io)   |
 
 # 目标
 
