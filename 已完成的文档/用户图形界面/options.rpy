@@ -5,7 +5,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月5日
+# 修订日期 2022年4月18日
 # 版本号 0.9 "LuckyDev"
 
 
@@ -64,11 +64,11 @@ LOVEPOTION SIXTYNINE 汉化移植版 内部测试版 ver0.9 “LuckyDev” ，�
 
 当前版本制作成员
 
-Luckykeeper：组长、程序、翻译、美工、校对、测试、润色、素材增分辨率、项目组网站构建/维护
+{a=https://github.com/luckykeeper}Luckykeeper{/a}：组长、程序、翻译、美工、校对、测试、润色、素材增分辨率、项目组网站构建/维护
 
-WorldlineChanger：测试/润色、OP翻译、OP字幕制作、OP视频压制/增分辨率
+{a=https://github.com/WorldlineChanger}WorldlineChanger{/a}：测试/润色、OP翻译、OP字幕制作、OP视频压制/增分辨率
 
-Santa-Weaves：测试/润色、OP翻译
+{a=https://github.com/Santa-Weaves}Santa-Weaves{/a}：测试/润色、OP翻译
 
 正式版感言
 
