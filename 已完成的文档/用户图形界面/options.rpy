@@ -1,4 +1,4 @@
-# --------------------------------
+﻿# --------------------------------
 # LOVE69_Renpy_Remaster_Project
 # GUI自定义脚本
 # Author:Luckykeeper
@@ -78,11 +78,12 @@ Luckykeeper：终于，在项目开始第220天，克服无数困难，在项目
 顺带一提，再过几个月的秋招我就要去找工作准备成为社畜了，所以特别希望你能给我的项目一个 Star! 这将给我以极大的帮助，要是能内推一下我就更好了（笑）\n
 另外，不来康康我的其它开源项目嘛？\n
 {a=https://github.com/luckykeeper/attackMap}attackMap{/a} 可以自建的酷炫网络攻击地图，支持 docker 部署\n
-{a=https://github.com/luckykeeper/docker_plumemo}docker_plumemo{/a} plumemo博客容器镜像，效果参考{a=https://luckykeeper.site/}我的个人博客{/a}
+{a=https://github.com/luckykeeper/docker_plumemo}docker_plumemo{/a} plumemo博客容器镜像，效果参考{a=https://luckykeeper.site/}我的个人博客{/a}\n
+{a=https://github.com/luckykeeper/CocoaPush}CocoaPush{/a} 心爱酱钉钉消息推送机器人，让可爱的心爱酱帮你照看各个设备的运行状态
 
 WorldlineChanger：
 
-Santa-Weaves：
+Santa-Weaves：其实没帮上太大的忙，一周目也没走完，不过就玩过的地方来看还没有发现bug移植的很完美！
 
 另外，本作的完成离不开下列开源项目的帮助，感谢各位大佬的项目！这些项目是
 
