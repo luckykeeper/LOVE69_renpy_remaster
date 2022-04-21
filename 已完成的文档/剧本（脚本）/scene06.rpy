@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月5日
+# 修订日期 2022年4月21日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1452,7 +1452,7 @@ label scene06:
 
     if persistent.hsceneG:
         scene 催逝员 with dissolve
-        pause 2.0
+        pause 3.0
 
     else:
         pass

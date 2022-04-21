@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月5日
+# 修订日期 2022年4月21日
 
 # 当前流程：编写脚本AIO Process
 
@@ -444,7 +444,7 @@ label scene20:
     image httpdog = "images/extra/luckykeeper/httpdog.png"
     if persistent.hsceneG:
         scene httpdog with dissolve
-        pause 2.0
+        pause 3.0
 
     else:
         pass
