@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月21日
+# 修订日期 2022年4月22日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1451,13 +1451,21 @@ label scene06:
     image bg 催逝员 = "images\extra\luckykeeper\催逝员.png"
 
     if persistent.hsceneG:
+        $ quick_menu = False # 隐藏 quick_menu
+        window hide
         scene 催逝员 with dissolve
         pause 3.0
+
 
     else:
         pass
 
-    scene 自室a_昼 at love69_bg1440 with dissolve
+    scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+    scene 自室a_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+
+    if persistent.hsceneG:
+        $ quick_menu = True
+        window show
     play music bgmtwentyfour fadeout 0.8 fadein 1.0
 
     # scene06 场景1 【这个莲君就是逊啦，这就病了？】 结束
@@ -1578,6 +1586,9 @@ label scene06:
 
     # 过场：心爱（常服）
 
+    # 之前用了这个方法，需要手动控制
+    if persistent.hsceneG:
+        window hide # 隐藏对话框等其它窗口
     # 隐藏 quick_menu
     $ quick_menu = False
 
