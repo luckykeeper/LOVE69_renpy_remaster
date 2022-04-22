@@ -854,6 +854,8 @@ label scene08:
     # 2022年1月5日：正式版最开始的HS放宁宁举牌，后面的就放鬼畜名场面好了，我感觉很行！
     image bg 华强 = "images/extra/luckykeeper/华强.png"
     if persistent.hsceneG:
+        $ quick_menu = False # 隐藏 quick_menu
+        window hide
         scene 华强 with dissolve
         pause 3.0
 

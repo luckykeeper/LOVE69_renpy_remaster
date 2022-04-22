@@ -1875,6 +1875,8 @@ label scene21:
     # 810-959
     image bg pixiv = "images/extra/luckykeeper/pixiv.webp"
     if persistent.hsceneG:
+        $ quick_menu = False # 隐藏 quick_menu
+        window hide
         scene pixiv with dissolve
         pause 3.0
 
@@ -1887,6 +1889,9 @@ label scene21:
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene 自室a_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
+    if persistent.hsceneG:
+        $ quick_menu = True
+        window show
     # nil 「ポタッ」
     "啪嗒"
 
@@ -2177,6 +2182,9 @@ label scene21:
     # 过场：里昂（常服）
 
     # Scene21 结束！
+    # 之前用了这个方法，需要手动控制
+    if persistent.hsceneG:
+        window hide # 隐藏对话框等其它窗口
     # 隐藏 quick_menu
     $ quick_menu = False
     play sound "voice/effect/moosehead honk (stinger).ogg"

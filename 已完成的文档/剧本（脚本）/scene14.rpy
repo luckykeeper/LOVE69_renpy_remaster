@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月21日
+# 修订日期 2022年4月22日
 
 # 当前流程：编写脚本AIO Process
 
@@ -94,6 +94,8 @@ label scene14:
     # maf 1416-1495
     image bg 寧々 = "images/extra/luckykeeper/寧々.png"
     if persistent.hsceneG:
+        $ quick_menu = False # 隐藏 quick_menu
+        window hide
         scene 寧々 with dissolve
         pause 3.0
 

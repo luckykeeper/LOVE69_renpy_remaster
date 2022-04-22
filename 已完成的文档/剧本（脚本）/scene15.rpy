@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月5日
+# 修订日期 2022年4月22日
 
 #   本脚本为一周目的最后一幕，从Scene16开始就是二周目内容了
 
@@ -313,6 +313,7 @@ label scene15:
 
     # 一周目内容，结束！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
 
+    $ quick_menu = False
     # 过场：（提示：在物语的序章，新的选择肢出现了！）
     image bg ルート解禁 = "images/bg/ルート解禁.png"
     scene ルート解禁 with dissolve

@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月21日
+# 修订日期 2022年4月22日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1317,10 +1317,16 @@ label scene03:
     image bg lv69-augest = "images\extra\luckykeeper\lv69-augest.png"
 
     if persistent.hsceneG:
+        $ quick_menu = False # 隐藏 quick_menu
+        window hide
         scene lv69-augest with dissolve
         pause 3.0
     else:
         pass
+
+    if persistent.hsceneG:
+        $ quick_menu = True
+        window show
 
     luckykeeper "根据项目组安排，我们不会翻译 HScene 里的内容，请各位积极支持正版，自行购买正版欣赏，还请各位谅解"
 
@@ -1331,6 +1337,9 @@ label scene03:
 
     # 过场：心爱（常服）没有BGM （打算加一个？？）
 
+    # 之前用了这个方法，需要手动控制
+    if persistent.hsceneG:
+        window hide # 隐藏对话框等其它窗口
     # 隐藏 quick_menu
     $ quick_menu = False
 

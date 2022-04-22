@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月21日
+# 修订日期 2022年4月22日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1721,6 +1721,8 @@ label scene10:
     # 真冬 961-1090 Skip~
     image bg nice_boat = "images/extra/luckykeeper/nice_boat.png"
     if persistent.hsceneG:
+        $ quick_menu = False # 隐藏 quick_menu
+        window hide
         scene nice_boat with dissolve
         pause 3.0
 
@@ -1729,6 +1731,10 @@ label scene10:
 
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene 自宅洗面所_夜 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
+
+    if persistent.hsceneG:
+        $ quick_menu = True
+        window show
 
     # 莲 「（やれやれ…二人がこんなにエロいとは…身体、持つかな俺…）」
     lian "（哎呀哎呀，两个人竟然这么好色……身体，撑得住吗我…）"
@@ -2377,7 +2383,9 @@ label scene10:
     # Scene10 结束！
 
     # 过场：心爱（常服）
-
+    # 之前用了这个方法，需要手动控制
+    if persistent.hsceneG:
+        window hide # 隐藏对话框等其它窗口
     $ quick_menu = False
 
     play sound "voice/effect/moosehead honk (stinger).ogg"
