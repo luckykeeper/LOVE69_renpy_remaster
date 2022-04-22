@@ -1,13 +1,13 @@
 # --------------------------------
 # LOVE69_Renpy_Remaster_Project
 # 主脚本模块（脚本入口）
-# Author:Luckykeeper
+# Author:Luckykeeper WorldlineChanger
 # 版本 0.9 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开坑日期 2021年8月28日
-# 修订日期 2022年4月5日
+# 修订日期 2022年4月22日
 
 #----------------------------------------------------------------
 # 主程序开始
@@ -988,2924 +988,2991 @@ image letsrock:
     "images/pac/LETSROCK/00000089.jpg"
     pause 0.0166666666666667
 
+
+#######################################################################################
+# COD Part By WorldlineChanger
+# CDD-自定义可视化组件 定义 STAFF 动画
+# 试用型 初号机-1
+init python:
+
+    class StaffAnimator(renpy.Displayable):
+
+        # 文件扩展名由Ren'Py预处理,加油捏
+        # 其他3项（前缀 prefix、分隔符 separator、序列帧 begin & end_index）为 StaffAnimator 的3种必备入参
+        # 序列帧应是两个整型入参，或者一个二元元组，分别表示起始帧序列号和结束帧序列号(此处使用2个整型入参)
+        # 用4个入参找到符合规范的一组图片
+        def __init__(self, prefix, separator, begin_index, end_index, interval, loop=False, **kwargs):
+            super(StaffAnimator, self).__init__(**kwargs)
+            # 前缀
+            self.prefix = prefix
+            # 分隔符
+            self.separator = separator
+            # 起始帧序列号
+            self.begin_index = begin_index
+            # 结束帧序列号
+            self.end_index = end_index
+            # 序列帧长度
+            self.length = end_index - begin_index + 1
+
+            # 可视组件列表
+            self.sequence = []
+            for i in range(begin_index, end_index+1):
+                # 将前缀、分隔符和序列号拼接，对应名称的可视组件顺序添加到列表中
+                self.sequence.append(renpy.displayable(self.prefix + self.separator + str(i)))
+
+            # 当前帧在可视组件列表中的索引
+            self.current_index = 0
+            # 关键帧时间轴
+            self.show_timebase = 0
+            # 播放间隔
+            self.interval = interval
+            # 循环播放
+            self.loop = loop
+
+        # 根据时间渲染对应的可视组件
+        def render(self, width, height, st, at):
+            if (st >= (self.show_timebase + self.interval)):
+                self.show_timebase = st
+                self.current_index += 1
+                if self.current_index >= self.length:
+                    # 若循环播放，将可视组件列表索引归零
+                    if self.loop:
+                        self.current_index = 0
+                    else:
+                        self.current_index = self.length - 1
+
+            # 默认所有序列帧图片都具有相同尺寸
+            render = renpy.render(self.sequence[self.current_index], width, height, st, at)
+            renpy.redraw(self, 0)
+
+            return render
+
+# 创建实例并使用，序列帧命名规则：【staff_1.webp ~ staff_1457.webp】
+image staff = StaffAnimator("staff", "_", 1, 1457, 0.0166666666666667)
+
+# 播放
+#label start:
+#    show staff at truecenter
+
+
 #######################################################################################
 # 定义 STAFF 动画
 # WebP Test
-image staff:
-    "images/pac/staff/00000001.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000002.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000003.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000004.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000005.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000006.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000007.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000008.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000009.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000010.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000011.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000012.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000013.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000014.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000015.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000016.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000017.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000018.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000019.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000020.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000021.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000022.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000023.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000024.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000025.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000026.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000027.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000028.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000029.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000030.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000031.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000032.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000033.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000034.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000035.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000036.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000037.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000038.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000039.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000040.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000041.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000042.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000043.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000044.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000045.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000046.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000047.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000048.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000049.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000050.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000051.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000052.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000053.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000054.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000055.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000056.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000057.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000058.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000059.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000060.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000061.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000062.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000063.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000064.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000065.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000066.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000067.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000068.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000069.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000070.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000071.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000072.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000073.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000074.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000075.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000076.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000077.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000078.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000079.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000080.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000081.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000082.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000083.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000084.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000085.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000086.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000087.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000088.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000089.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000090.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000091.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000092.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000093.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000094.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000095.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000096.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000097.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000098.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000099.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000100.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000101.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000102.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000103.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000104.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000105.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000106.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000107.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000108.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000109.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000110.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000111.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000112.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000113.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000114.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000115.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000116.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000117.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000118.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000119.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000120.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000121.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000122.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000123.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000124.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000125.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000126.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000127.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000128.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000129.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000130.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000131.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000132.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000133.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000134.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000135.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000136.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000137.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000138.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000139.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000140.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000141.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000142.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000143.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000144.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000145.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000146.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000147.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000148.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000149.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000150.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000151.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000152.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000153.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000154.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000155.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000156.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000157.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000158.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000159.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000160.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000161.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000162.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000163.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000164.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000165.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000166.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000167.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000168.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000169.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000170.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000171.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000172.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000173.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000174.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000175.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000176.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000177.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000178.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000179.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000180.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000181.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000182.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000183.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000184.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000185.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000186.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000187.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000188.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000189.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000190.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000191.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000192.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000193.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000194.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000195.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000196.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000197.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000198.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000199.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000200.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000201.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000202.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000203.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000204.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000205.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000206.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000207.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000208.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000209.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000210.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000211.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000212.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000213.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000214.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000215.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000216.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000217.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000218.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000219.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000220.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000221.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000222.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000223.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000224.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000225.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000226.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000227.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000228.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000229.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000230.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000231.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000232.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000233.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000234.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000235.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000236.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000237.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000238.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000239.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000240.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000241.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000242.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000243.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000244.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000245.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000246.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000247.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000248.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000249.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000250.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000251.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000252.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000253.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000254.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000255.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000256.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000257.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000258.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000259.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000260.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000261.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000262.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000263.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000264.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000265.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000266.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000267.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000268.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000269.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000270.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000271.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000272.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000273.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000274.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000275.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000276.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000277.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000278.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000279.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000280.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000281.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000282.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000283.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000284.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000285.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000286.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000287.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000288.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000289.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000290.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000291.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000292.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000293.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000294.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000295.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000296.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000297.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000298.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000299.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000300.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000301.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000302.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000303.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000304.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000305.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000306.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000307.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000308.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000309.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000310.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000311.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000312.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000313.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000314.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000315.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000316.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000317.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000318.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000319.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000320.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000321.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000322.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000323.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000324.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000325.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000326.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000327.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000328.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000329.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000330.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000331.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000332.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000333.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000334.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000335.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000336.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000337.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000338.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000339.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000340.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000341.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000342.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000343.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000344.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000345.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000346.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000347.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000348.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000349.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000350.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000351.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000352.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000353.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000354.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000355.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000356.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000357.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000358.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000359.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000360.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000361.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000362.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000363.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000364.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000365.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000366.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000367.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000368.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000369.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000370.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000371.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000372.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000373.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000374.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000375.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000376.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000377.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000378.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000379.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000380.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000381.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000382.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000383.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000384.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000385.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000386.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000387.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000388.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000389.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000390.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000391.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000392.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000393.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000394.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000395.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000396.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000397.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000398.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000399.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000400.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000401.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000402.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000403.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000404.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000405.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000406.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000407.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000408.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000409.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000410.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000411.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000412.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000413.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000414.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000415.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000416.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000417.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000418.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000419.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000420.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000421.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000422.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000423.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000424.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000425.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000426.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000427.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000428.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000429.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000430.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000431.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000432.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000433.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000434.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000435.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000436.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000437.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000438.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000439.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000440.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000441.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000442.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000443.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000444.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000445.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000446.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000447.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000448.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000449.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000450.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000451.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000452.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000453.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000454.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000455.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000456.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000457.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000458.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000459.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000460.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000461.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000462.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000463.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000464.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000465.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000466.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000467.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000468.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000469.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000470.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000471.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000472.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000473.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000474.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000475.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000476.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000477.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000478.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000479.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000480.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000481.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000482.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000483.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000484.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000485.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000486.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000487.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000488.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000489.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000490.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000491.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000492.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000493.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000494.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000495.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000496.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000497.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000498.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000499.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000500.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000501.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000502.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000503.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000504.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000505.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000506.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000507.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000508.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000509.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000510.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000511.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000512.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000513.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000514.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000515.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000516.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000517.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000518.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000519.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000520.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000521.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000522.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000523.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000524.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000525.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000526.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000527.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000528.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000529.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000530.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000531.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000532.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000533.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000534.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000535.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000536.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000537.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000538.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000539.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000540.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000541.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000542.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000543.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000544.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000545.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000546.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000547.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000548.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000549.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000550.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000551.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000552.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000553.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000554.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000555.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000556.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000557.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000558.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000559.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000560.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000561.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000562.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000563.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000564.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000565.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000566.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000567.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000568.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000569.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000570.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000571.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000572.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000573.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000574.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000575.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000576.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000577.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000578.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000579.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000580.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000581.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000582.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000583.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000584.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000585.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000586.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000587.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000588.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000589.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000590.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000591.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000592.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000593.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000594.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000595.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000596.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000597.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000598.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000599.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000600.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000601.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000602.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000603.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000604.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000605.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000606.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000607.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000608.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000609.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000610.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000611.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000612.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000613.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000614.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000615.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000616.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000617.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000618.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000619.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000620.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000621.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000622.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000623.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000624.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000625.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000626.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000627.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000628.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000629.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000630.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000631.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000632.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000633.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000634.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000635.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000636.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000637.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000638.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000639.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000640.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000641.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000642.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000643.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000644.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000645.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000646.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000647.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000648.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000649.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000650.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000651.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000652.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000653.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000654.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000655.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000656.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000657.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000658.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000659.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000660.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000661.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000662.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000663.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000664.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000665.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000666.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000667.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000668.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000669.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000670.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000671.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000672.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000673.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000674.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000675.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000676.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000677.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000678.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000679.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000680.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000681.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000682.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000683.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000684.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000685.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000686.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000687.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000688.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000689.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000690.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000691.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000692.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000693.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000694.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000695.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000696.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000697.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000698.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000699.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000700.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000701.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000702.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000703.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000704.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000705.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000706.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000707.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000708.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000709.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000710.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000711.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000712.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000713.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000714.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000715.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000716.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000717.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000718.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000719.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000720.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000721.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000722.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000723.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000724.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000725.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000726.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000727.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000728.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000729.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000730.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000731.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000732.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000733.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000734.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000735.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000736.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000737.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000738.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000739.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000740.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000741.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000742.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000743.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000744.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000745.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000746.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000747.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000748.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000749.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000750.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000751.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000752.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000753.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000754.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000755.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000756.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000757.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000758.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000759.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000760.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000761.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000762.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000763.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000764.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000765.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000766.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000767.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000768.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000769.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000770.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000771.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000772.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000773.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000774.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000775.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000776.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000777.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000778.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000779.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000780.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000781.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000782.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000783.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000784.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000785.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000786.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000787.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000788.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000789.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000790.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000791.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000792.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000793.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000794.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000795.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000796.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000797.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000798.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000799.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000800.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000801.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000802.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000803.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000804.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000805.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000806.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000807.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000808.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000809.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000810.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000811.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000812.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000813.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000814.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000815.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000816.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000817.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000818.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000819.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000820.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000821.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000822.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000823.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000824.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000825.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000826.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000827.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000828.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000829.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000830.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000831.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000832.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000833.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000834.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000835.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000836.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000837.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000838.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000839.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000840.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000841.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000842.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000843.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000844.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000845.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000846.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000847.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000848.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000849.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000850.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000851.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000852.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000853.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000854.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000855.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000856.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000857.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000858.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000859.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000860.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000861.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000862.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000863.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000864.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000865.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000866.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000867.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000868.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000869.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000870.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000871.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000872.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000873.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000874.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000875.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000876.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000877.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000878.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000879.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000880.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000881.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000882.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000883.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000884.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000885.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000886.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000887.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000888.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000889.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000890.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000891.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000892.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000893.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000894.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000895.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000896.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000897.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000898.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000899.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000900.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000901.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000902.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000903.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000904.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000905.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000906.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000907.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000908.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000909.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000910.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000911.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000912.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000913.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000914.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000915.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000916.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000917.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000918.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000919.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000920.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000921.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000922.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000923.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000924.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000925.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000926.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000927.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000928.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000929.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000930.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000931.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000932.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000933.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000934.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000935.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000936.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000937.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000938.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000939.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000940.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000941.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000942.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000943.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000944.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000945.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000946.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000947.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000948.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000949.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000950.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000951.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000952.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000953.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000954.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000955.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000956.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000957.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000958.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000959.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000960.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000961.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000962.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000963.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000964.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000965.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000966.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000967.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000968.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000969.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000970.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000971.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000972.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000973.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000974.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000975.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000976.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000977.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000978.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000979.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000980.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000981.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000982.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000983.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000984.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000985.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000986.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000987.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000988.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000989.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000990.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000991.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000992.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000993.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000994.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000995.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000996.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000997.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000998.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00000999.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001000.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001001.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001002.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001003.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001004.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001005.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001006.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001007.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001008.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001009.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001010.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001011.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001012.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001013.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001014.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001015.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001016.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001017.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001018.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001019.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001020.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001021.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001022.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001023.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001024.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001025.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001026.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001027.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001028.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001029.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001030.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001031.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001032.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001033.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001034.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001035.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001036.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001037.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001038.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001039.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001040.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001041.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001042.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001043.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001044.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001045.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001046.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001047.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001048.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001049.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001050.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001051.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001052.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001053.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001054.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001055.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001056.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001057.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001058.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001059.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001060.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001061.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001062.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001063.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001064.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001065.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001066.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001067.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001068.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001069.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001070.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001071.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001072.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001073.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001074.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001075.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001076.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001077.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001078.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001079.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001080.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001081.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001082.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001083.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001084.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001085.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001086.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001087.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001088.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001089.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001090.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001091.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001092.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001093.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001094.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001095.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001096.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001097.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001098.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001099.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001100.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001101.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001102.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001103.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001104.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001105.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001106.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001107.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001108.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001109.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001110.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001111.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001112.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001113.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001114.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001115.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001116.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001117.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001118.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001119.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001120.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001121.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001122.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001123.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001124.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001125.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001126.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001127.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001128.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001129.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001130.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001131.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001132.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001133.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001134.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001135.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001136.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001137.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001138.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001139.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001140.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001141.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001142.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001143.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001144.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001145.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001146.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001147.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001148.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001149.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001150.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001151.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001152.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001153.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001154.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001155.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001156.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001157.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001158.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001159.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001160.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001161.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001162.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001163.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001164.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001165.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001166.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001167.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001168.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001169.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001170.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001171.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001172.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001173.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001174.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001175.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001176.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001177.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001178.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001179.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001180.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001181.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001182.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001183.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001184.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001185.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001186.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001187.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001188.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001189.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001190.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001191.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001192.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001193.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001194.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001195.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001196.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001197.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001198.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001199.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001200.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001201.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001202.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001203.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001204.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001205.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001206.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001207.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001208.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001209.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001210.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001211.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001212.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001213.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001214.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001215.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001216.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001217.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001218.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001219.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001220.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001221.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001222.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001223.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001224.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001225.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001226.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001227.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001228.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001229.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001230.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001231.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001232.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001233.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001234.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001235.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001236.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001237.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001238.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001239.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001240.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001241.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001242.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001243.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001244.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001245.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001246.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001247.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001248.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001249.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001250.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001251.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001252.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001253.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001254.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001255.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001256.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001257.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001258.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001259.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001260.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001261.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001262.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001263.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001264.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001265.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001266.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001267.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001268.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001269.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001270.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001271.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001272.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001273.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001274.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001275.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001276.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001277.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001278.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001279.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001280.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001281.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001282.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001283.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001284.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001285.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001286.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001287.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001288.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001289.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001290.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001291.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001292.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001293.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001294.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001295.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001296.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001297.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001298.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001299.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001300.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001301.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001302.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001303.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001304.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001305.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001306.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001307.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001308.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001309.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001310.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001311.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001312.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001313.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001314.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001315.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001316.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001317.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001318.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001319.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001320.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001321.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001322.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001323.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001324.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001325.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001326.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001327.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001328.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001329.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001330.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001331.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001332.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001333.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001334.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001335.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001336.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001337.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001338.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001339.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001340.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001341.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001342.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001343.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001344.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001345.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001346.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001347.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001348.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001349.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001350.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001351.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001352.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001353.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001354.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001355.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001356.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001357.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001358.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001359.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001360.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001361.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001362.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001363.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001364.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001365.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001366.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001367.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001368.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001369.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001370.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001371.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001372.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001373.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001374.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001375.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001376.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001377.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001378.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001379.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001380.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001381.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001382.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001383.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001384.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001385.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001386.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001387.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001388.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001389.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001390.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001391.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001392.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001393.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001394.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001395.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001396.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001397.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001398.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001399.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001400.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001401.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001402.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001403.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001404.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001405.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001406.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001407.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001408.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001409.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001410.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001411.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001412.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001413.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001414.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001415.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001416.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001417.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001418.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001419.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001420.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001421.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001422.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001423.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001424.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001425.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001426.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001427.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001428.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001429.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001430.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001431.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001432.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001433.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001434.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001435.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001436.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001437.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001438.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001439.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001440.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001441.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001442.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001443.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001444.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001445.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001446.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001447.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001448.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001449.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001450.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001451.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001452.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001453.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001454.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001455.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001456.webp"
-    pause 0.0166666666666667
-    "images/pac/staff/00001457.webp"
-    pause 0.0166666666666667
+# image staff:
+#     "images/pac/staff/00000001.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000002.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000003.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000004.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000005.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000006.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000007.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000008.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000009.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000010.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000011.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000012.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000013.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000014.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000015.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000016.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000017.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000018.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000019.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000020.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000021.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000022.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000023.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000024.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000025.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000026.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000027.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000028.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000029.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000030.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000031.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000032.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000033.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000034.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000035.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000036.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000037.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000038.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000039.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000040.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000041.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000042.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000043.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000044.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000045.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000046.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000047.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000048.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000049.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000050.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000051.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000052.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000053.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000054.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000055.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000056.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000057.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000058.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000059.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000060.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000061.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000062.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000063.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000064.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000065.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000066.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000067.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000068.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000069.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000070.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000071.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000072.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000073.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000074.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000075.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000076.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000077.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000078.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000079.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000080.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000081.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000082.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000083.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000084.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000085.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000086.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000087.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000088.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000089.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000090.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000091.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000092.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000093.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000094.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000095.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000096.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000097.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000098.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000099.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000100.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000101.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000102.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000103.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000104.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000105.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000106.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000107.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000108.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000109.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000110.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000111.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000112.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000113.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000114.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000115.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000116.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000117.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000118.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000119.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000120.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000121.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000122.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000123.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000124.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000125.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000126.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000127.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000128.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000129.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000130.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000131.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000132.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000133.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000134.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000135.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000136.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000137.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000138.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000139.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000140.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000141.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000142.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000143.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000144.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000145.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000146.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000147.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000148.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000149.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000150.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000151.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000152.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000153.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000154.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000155.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000156.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000157.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000158.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000159.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000160.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000161.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000162.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000163.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000164.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000165.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000166.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000167.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000168.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000169.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000170.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000171.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000172.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000173.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000174.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000175.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000176.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000177.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000178.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000179.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000180.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000181.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000182.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000183.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000184.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000185.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000186.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000187.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000188.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000189.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000190.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000191.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000192.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000193.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000194.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000195.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000196.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000197.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000198.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000199.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000200.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000201.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000202.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000203.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000204.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000205.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000206.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000207.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000208.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000209.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000210.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000211.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000212.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000213.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000214.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000215.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000216.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000217.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000218.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000219.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000220.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000221.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000222.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000223.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000224.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000225.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000226.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000227.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000228.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000229.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000230.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000231.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000232.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000233.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000234.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000235.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000236.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000237.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000238.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000239.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000240.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000241.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000242.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000243.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000244.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000245.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000246.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000247.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000248.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000249.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000250.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000251.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000252.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000253.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000254.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000255.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000256.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000257.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000258.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000259.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000260.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000261.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000262.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000263.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000264.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000265.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000266.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000267.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000268.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000269.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000270.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000271.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000272.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000273.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000274.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000275.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000276.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000277.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000278.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000279.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000280.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000281.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000282.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000283.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000284.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000285.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000286.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000287.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000288.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000289.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000290.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000291.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000292.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000293.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000294.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000295.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000296.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000297.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000298.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000299.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000300.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000301.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000302.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000303.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000304.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000305.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000306.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000307.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000308.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000309.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000310.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000311.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000312.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000313.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000314.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000315.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000316.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000317.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000318.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000319.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000320.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000321.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000322.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000323.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000324.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000325.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000326.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000327.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000328.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000329.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000330.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000331.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000332.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000333.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000334.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000335.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000336.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000337.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000338.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000339.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000340.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000341.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000342.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000343.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000344.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000345.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000346.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000347.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000348.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000349.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000350.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000351.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000352.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000353.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000354.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000355.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000356.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000357.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000358.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000359.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000360.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000361.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000362.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000363.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000364.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000365.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000366.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000367.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000368.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000369.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000370.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000371.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000372.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000373.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000374.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000375.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000376.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000377.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000378.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000379.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000380.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000381.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000382.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000383.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000384.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000385.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000386.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000387.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000388.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000389.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000390.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000391.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000392.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000393.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000394.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000395.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000396.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000397.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000398.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000399.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000400.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000401.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000402.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000403.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000404.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000405.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000406.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000407.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000408.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000409.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000410.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000411.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000412.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000413.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000414.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000415.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000416.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000417.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000418.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000419.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000420.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000421.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000422.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000423.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000424.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000425.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000426.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000427.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000428.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000429.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000430.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000431.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000432.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000433.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000434.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000435.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000436.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000437.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000438.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000439.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000440.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000441.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000442.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000443.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000444.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000445.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000446.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000447.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000448.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000449.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000450.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000451.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000452.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000453.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000454.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000455.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000456.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000457.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000458.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000459.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000460.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000461.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000462.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000463.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000464.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000465.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000466.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000467.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000468.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000469.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000470.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000471.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000472.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000473.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000474.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000475.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000476.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000477.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000478.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000479.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000480.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000481.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000482.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000483.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000484.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000485.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000486.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000487.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000488.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000489.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000490.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000491.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000492.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000493.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000494.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000495.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000496.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000497.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000498.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000499.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000500.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000501.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000502.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000503.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000504.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000505.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000506.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000507.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000508.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000509.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000510.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000511.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000512.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000513.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000514.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000515.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000516.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000517.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000518.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000519.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000520.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000521.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000522.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000523.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000524.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000525.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000526.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000527.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000528.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000529.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000530.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000531.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000532.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000533.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000534.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000535.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000536.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000537.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000538.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000539.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000540.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000541.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000542.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000543.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000544.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000545.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000546.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000547.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000548.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000549.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000550.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000551.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000552.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000553.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000554.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000555.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000556.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000557.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000558.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000559.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000560.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000561.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000562.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000563.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000564.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000565.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000566.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000567.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000568.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000569.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000570.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000571.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000572.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000573.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000574.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000575.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000576.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000577.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000578.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000579.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000580.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000581.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000582.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000583.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000584.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000585.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000586.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000587.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000588.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000589.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000590.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000591.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000592.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000593.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000594.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000595.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000596.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000597.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000598.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000599.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000600.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000601.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000602.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000603.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000604.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000605.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000606.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000607.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000608.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000609.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000610.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000611.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000612.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000613.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000614.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000615.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000616.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000617.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000618.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000619.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000620.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000621.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000622.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000623.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000624.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000625.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000626.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000627.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000628.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000629.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000630.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000631.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000632.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000633.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000634.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000635.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000636.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000637.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000638.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000639.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000640.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000641.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000642.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000643.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000644.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000645.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000646.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000647.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000648.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000649.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000650.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000651.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000652.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000653.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000654.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000655.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000656.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000657.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000658.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000659.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000660.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000661.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000662.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000663.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000664.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000665.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000666.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000667.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000668.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000669.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000670.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000671.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000672.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000673.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000674.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000675.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000676.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000677.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000678.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000679.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000680.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000681.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000682.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000683.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000684.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000685.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000686.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000687.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000688.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000689.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000690.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000691.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000692.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000693.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000694.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000695.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000696.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000697.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000698.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000699.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000700.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000701.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000702.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000703.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000704.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000705.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000706.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000707.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000708.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000709.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000710.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000711.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000712.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000713.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000714.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000715.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000716.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000717.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000718.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000719.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000720.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000721.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000722.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000723.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000724.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000725.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000726.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000727.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000728.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000729.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000730.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000731.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000732.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000733.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000734.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000735.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000736.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000737.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000738.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000739.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000740.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000741.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000742.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000743.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000744.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000745.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000746.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000747.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000748.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000749.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000750.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000751.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000752.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000753.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000754.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000755.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000756.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000757.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000758.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000759.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000760.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000761.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000762.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000763.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000764.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000765.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000766.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000767.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000768.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000769.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000770.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000771.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000772.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000773.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000774.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000775.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000776.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000777.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000778.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000779.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000780.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000781.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000782.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000783.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000784.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000785.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000786.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000787.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000788.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000789.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000790.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000791.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000792.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000793.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000794.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000795.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000796.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000797.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000798.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000799.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000800.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000801.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000802.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000803.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000804.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000805.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000806.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000807.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000808.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000809.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000810.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000811.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000812.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000813.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000814.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000815.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000816.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000817.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000818.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000819.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000820.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000821.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000822.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000823.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000824.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000825.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000826.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000827.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000828.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000829.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000830.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000831.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000832.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000833.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000834.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000835.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000836.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000837.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000838.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000839.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000840.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000841.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000842.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000843.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000844.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000845.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000846.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000847.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000848.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000849.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000850.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000851.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000852.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000853.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000854.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000855.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000856.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000857.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000858.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000859.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000860.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000861.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000862.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000863.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000864.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000865.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000866.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000867.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000868.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000869.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000870.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000871.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000872.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000873.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000874.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000875.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000876.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000877.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000878.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000879.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000880.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000881.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000882.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000883.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000884.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000885.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000886.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000887.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000888.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000889.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000890.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000891.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000892.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000893.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000894.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000895.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000896.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000897.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000898.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000899.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000900.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000901.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000902.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000903.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000904.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000905.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000906.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000907.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000908.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000909.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000910.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000911.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000912.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000913.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000914.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000915.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000916.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000917.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000918.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000919.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000920.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000921.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000922.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000923.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000924.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000925.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000926.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000927.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000928.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000929.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000930.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000931.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000932.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000933.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000934.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000935.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000936.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000937.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000938.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000939.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000940.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000941.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000942.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000943.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000944.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000945.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000946.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000947.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000948.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000949.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000950.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000951.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000952.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000953.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000954.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000955.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000956.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000957.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000958.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000959.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000960.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000961.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000962.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000963.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000964.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000965.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000966.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000967.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000968.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000969.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000970.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000971.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000972.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000973.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000974.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000975.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000976.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000977.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000978.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000979.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000980.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000981.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000982.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000983.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000984.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000985.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000986.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000987.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000988.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000989.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000990.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000991.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000992.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000993.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000994.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000995.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000996.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000997.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000998.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00000999.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001000.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001001.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001002.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001003.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001004.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001005.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001006.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001007.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001008.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001009.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001010.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001011.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001012.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001013.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001014.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001015.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001016.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001017.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001018.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001019.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001020.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001021.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001022.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001023.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001024.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001025.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001026.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001027.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001028.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001029.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001030.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001031.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001032.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001033.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001034.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001035.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001036.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001037.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001038.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001039.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001040.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001041.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001042.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001043.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001044.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001045.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001046.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001047.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001048.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001049.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001050.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001051.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001052.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001053.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001054.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001055.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001056.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001057.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001058.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001059.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001060.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001061.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001062.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001063.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001064.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001065.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001066.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001067.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001068.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001069.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001070.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001071.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001072.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001073.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001074.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001075.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001076.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001077.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001078.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001079.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001080.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001081.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001082.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001083.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001084.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001085.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001086.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001087.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001088.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001089.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001090.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001091.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001092.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001093.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001094.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001095.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001096.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001097.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001098.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001099.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001100.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001101.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001102.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001103.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001104.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001105.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001106.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001107.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001108.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001109.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001110.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001111.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001112.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001113.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001114.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001115.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001116.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001117.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001118.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001119.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001120.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001121.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001122.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001123.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001124.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001125.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001126.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001127.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001128.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001129.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001130.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001131.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001132.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001133.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001134.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001135.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001136.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001137.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001138.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001139.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001140.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001141.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001142.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001143.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001144.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001145.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001146.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001147.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001148.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001149.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001150.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001151.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001152.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001153.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001154.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001155.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001156.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001157.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001158.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001159.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001160.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001161.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001162.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001163.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001164.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001165.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001166.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001167.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001168.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001169.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001170.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001171.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001172.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001173.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001174.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001175.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001176.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001177.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001178.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001179.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001180.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001181.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001182.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001183.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001184.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001185.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001186.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001187.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001188.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001189.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001190.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001191.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001192.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001193.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001194.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001195.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001196.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001197.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001198.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001199.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001200.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001201.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001202.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001203.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001204.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001205.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001206.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001207.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001208.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001209.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001210.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001211.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001212.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001213.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001214.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001215.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001216.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001217.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001218.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001219.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001220.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001221.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001222.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001223.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001224.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001225.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001226.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001227.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001228.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001229.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001230.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001231.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001232.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001233.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001234.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001235.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001236.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001237.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001238.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001239.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001240.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001241.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001242.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001243.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001244.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001245.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001246.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001247.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001248.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001249.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001250.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001251.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001252.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001253.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001254.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001255.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001256.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001257.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001258.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001259.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001260.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001261.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001262.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001263.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001264.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001265.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001266.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001267.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001268.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001269.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001270.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001271.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001272.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001273.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001274.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001275.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001276.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001277.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001278.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001279.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001280.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001281.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001282.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001283.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001284.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001285.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001286.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001287.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001288.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001289.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001290.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001291.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001292.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001293.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001294.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001295.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001296.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001297.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001298.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001299.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001300.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001301.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001302.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001303.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001304.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001305.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001306.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001307.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001308.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001309.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001310.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001311.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001312.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001313.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001314.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001315.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001316.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001317.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001318.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001319.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001320.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001321.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001322.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001323.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001324.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001325.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001326.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001327.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001328.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001329.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001330.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001331.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001332.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001333.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001334.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001335.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001336.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001337.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001338.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001339.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001340.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001341.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001342.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001343.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001344.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001345.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001346.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001347.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001348.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001349.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001350.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001351.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001352.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001353.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001354.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001355.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001356.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001357.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001358.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001359.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001360.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001361.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001362.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001363.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001364.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001365.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001366.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001367.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001368.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001369.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001370.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001371.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001372.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001373.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001374.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001375.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001376.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001377.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001378.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001379.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001380.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001381.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001382.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001383.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001384.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001385.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001386.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001387.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001388.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001389.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001390.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001391.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001392.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001393.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001394.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001395.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001396.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001397.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001398.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001399.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001400.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001401.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001402.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001403.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001404.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001405.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001406.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001407.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001408.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001409.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001410.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001411.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001412.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001413.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001414.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001415.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001416.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001417.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001418.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001419.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001420.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001421.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001422.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001423.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001424.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001425.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001426.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001427.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001428.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001429.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001430.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001431.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001432.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001433.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001434.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001435.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001436.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001437.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001438.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001439.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001440.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001441.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001442.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001443.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001444.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001445.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001446.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001447.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001448.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001449.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001450.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001451.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001452.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001453.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001454.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001455.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001456.webp"
+#     pause 0.0166666666666667
+#     "images/pac/staff/00001457.webp"
+#     pause 0.0166666666666667
 
 
 ####

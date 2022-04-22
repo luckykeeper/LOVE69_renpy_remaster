@@ -2467,7 +2467,8 @@ label scene09:
 
 
     if show_staff:
-        show screen staff
+        # show screen staff
+        show staff at truecenter
         play sound bgmone
         $ persistent.playStaff =  True # variable value
         $ check_playthrough()
