@@ -1,13 +1,13 @@
 # --------------------------------
 # LOVE69_Renpy_Remaster_Project
 # 主脚本模块（脚本入口）
-# Author:Luckykeeper WorldlineChanger
+# Author:Luckykeeper
 # 版本 0.9 "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
 # 开坑日期 2021年8月28日
-# 修订日期 2022年4月22日
+# 修订日期 2022年4月5日
 
 #----------------------------------------------------------------
 # 主程序开始
@@ -990,9 +990,8 @@ image letsrock:
 
 
 #######################################################################################
-# CDD Part By WorldlineChanger
 # CDD-自定义可视化组件 定义 STAFF 动画
-# 正式型 初号机-Initial
+# 试用型 初号机-1
 init python:
 
     class StaffAnimator(renpy.Displayable):
@@ -1048,11 +1047,11 @@ init python:
             return render
 
 # 创建实例并使用，序列帧命名规则：【staff_1.webp ~ staff_1457.webp】
-image staff = StaffAnimator("staff", "_", 1, 1457, 0.0166666666666667)
+image staff = StaffAnimator("staff", "_", 1, 1457, 0.16)
 
 # 播放
-#label start:
-#    show staff at truecenter
+label start:
+    show staff at truecenter
 
 
 #######################################################################################

@@ -911,7 +911,8 @@ label scene06:
     # 想瑠 「『上等だ…！』」
     show screen letsrockscr
     voice "voice/想瑠/sol_a1_0134.ogg"
-    liu "『上等だ…！』（L:这句话是俗语，意思是“挑衅、真让人不愉快”）"
+    # liu "『上等だ…！』（L:这句话是俗语，意思是“挑衅、真让人不愉快”）"
+    liu "『正合我意！』（L:上等だ…！这句话是俗语，意思是“挑衅、真让人不愉快”）"
     hide screen letsrockscr
 
     # tp回来
