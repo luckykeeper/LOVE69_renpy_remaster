@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月16日
+# 修订日期 2022年4月24日
 
 ################################################################################
 ## 初始化
@@ -1246,6 +1246,7 @@ screen game_save():
             spacing gui.page_spacing
 
             textbutton _("<") action FilePagePrevious()
+            key "mousedown_4" action FilePagePrevious()
 
             if config.has_autosave:
                 textbutton _("{#auto_page}A") action FilePage("auto")
@@ -1258,6 +1259,7 @@ screen game_save():
                 textbutton "[page]" action FilePage(page)
 
             textbutton _(">") action FilePageNext()
+            key "mousedown_5" action FilePageNext()
 
         vbox:
             xalign 0.90
@@ -1349,6 +1351,7 @@ screen game_load():
             spacing gui.page_spacing
 
             textbutton _("<") action FilePagePrevious()
+            key "mousedown_4" action FilePagePrevious()
 
             if config.has_autosave:
                 textbutton _("{#auto_page}A") action FilePage("auto")
@@ -1361,6 +1364,7 @@ screen game_load():
                 textbutton "[page]" action FilePage(page)
 
             textbutton _(">") action FilePageNext()
+            key "mousedown_5" action FilePageNext()
 
         vbox:
             xalign 0.90
