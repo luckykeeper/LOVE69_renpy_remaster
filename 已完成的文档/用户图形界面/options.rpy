@@ -5,7 +5,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月22日
+# 修订日期 2022年4月25日
 # 版本号 0.9 "LuckyDev"
 
 
@@ -20,7 +20,7 @@
 # Demo版的版本名为 "LuckyGal"
 # 开发版的版本名为 "LuckyDev"
 # 一二周目做完之后的发行版的的版本名为 "LuckyCocoa"
-define config.name = _("LOVEPOTION SIXTYNINE 汉化移植版 内部测试版 ver0.9 “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献")
+define config.name = _("LOVEPOTION SIXTYNINE 汉化移植版 正式版 ver1.0 “LuckyCocoa” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献 (Build 20220426)")
 
 
 ## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。
@@ -30,15 +30,15 @@ define gui.show_name = False
 
 ## 游戏版本号。
 
-define config.version = "0.9"
+define config.version = "1.0"
 
 ## 放置在游戏“关于”屏幕的文本。将文本放在三个引号之间，并在段落之间留一个空行。
 
 # Demo 版的说明
 define gui.about = _p("""
-LOVEPOTION SIXTYNINE 汉化移植版 内部测试版 ver0.9 “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献
+LOVEPOTION SIXTYNINE 汉化移植版 正式版 ver1.0 “LuckyCocoa” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献
 
-仅供学习 Ren'Py 使用，请不要用于其它用途！项目代码完全开源！
+仅供学习 Ren'Py 使用，请不要用于其它用途！项目代码和程序完全开源、免费！
 
 点击蓝字后将调用系统默认浏览器打开指定网页，能访问的情况下请尽量不要使用镜像站
 
@@ -72,7 +72,7 @@ LOVEPOTION SIXTYNINE 汉化移植版 内部测试版 ver0.9 “LuckyDev” ，�
 
 正式版感言
 
-Luckykeeper：终于，在项目开始第220天，克服无数困难，在项目组成员的共同努力下，我们交出了让自己满意的答卷，仅主项目就写了将近6万行，
+Luckykeeper：终于，在项目开始第243天，克服无数困难，在项目组成员的共同努力下，我们交出了让自己满意的答卷，仅主项目就写了6万多行，
 不由得感叹这段时间的成果！谨以此作献给各位参与过汉化的前辈们，也希望能够通过本作推广简单好用的 Ren'Py ，希望激发更多的人参与到汉化移植中来，后面我还会去不断完善文档站的内容，
 希望能够帮助正在学习 Ren'Py 的你。最后，希望本作能在这个特殊的时期给你带来一些欢乐，让我们一起共克时艰，战胜疫情！\n
 顺带一提，再过几个月的秋招我就要去找工作准备成为社畜了，所以特别希望你能给我的项目一个 Star! 这将给我以极大的帮助，要是能内推一下我就更好了（笑）\n
@@ -80,6 +80,8 @@ Luckykeeper：终于，在项目开始第220天，克服无数困难，在项目
 {a=https://github.com/luckykeeper/attackMap}attackMap{/a} 可以自建的酷炫网络攻击地图，支持 docker 部署\n
 {a=https://github.com/luckykeeper/docker_plumemo}docker_plumemo{/a} plumemo博客容器镜像，效果参考{a=https://luckykeeper.site/}我的个人博客{/a}\n
 {a=https://github.com/luckykeeper/CocoaPush}CocoaPush{/a} 心爱酱钉钉消息推送机器人，让可爱的心爱酱帮你照看各个设备的运行状态
+
+另外虽然W酱平时挺鸽的，但是鸽子回笼的时候雀食非常顶捏，在测试的最后几天真是辛苦了捏，肝了不少东西出来，W酱，我的超人~
 
 WorldlineChanger：
 
