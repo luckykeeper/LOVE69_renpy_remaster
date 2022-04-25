@@ -990,9 +990,9 @@ image letsrock:
 
 
 #######################################################################################
-# COD Part By WorldlineChanger
+# CDD Part By WorldlineChanger
 # CDD-自定义可视化组件 定义 STAFF 动画
-# 试用型 初号机-1
+# 正式型 初号机-Initial
 init python:
 
     class StaffAnimator(renpy.Displayable):
