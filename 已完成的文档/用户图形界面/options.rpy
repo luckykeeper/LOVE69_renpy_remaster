@@ -5,7 +5,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月25日
+# 修订日期 2022年4月26日
 # 版本号 0.9 "LuckyDev"
 
 
@@ -58,7 +58,7 @@ LOVEPOTION SIXTYNINE 汉化移植版 正式版 ver1.0 “LuckyCocoa” ，由 Lu
 
 小游戏（移动版适配，请使用现代浏览器打开）：{a=https://eatcocoa.luckykeeper.site:44443/}https://eatcocoa.luckykeeper.site:44443/{/a}
 
-希望各位到我们的项目页面给我们一个Star，秋梨膏，你们的Star对我们非常重要！
+希望各位到我们的{a=https://github.com/luckykeeper/LOVE69_renpy_remaster}项目页面{/a}给我们一个Star，秋梨膏，你们的Star对我们非常重要！
 
 问题/Bug 反馈、技术交流请前往 {a=https://github.com/luckykeeper/LOVE69_renpy_remaster}GitHub{/a}
 
