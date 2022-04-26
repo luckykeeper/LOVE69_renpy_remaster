@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月6日
+# 修订日期 2022年4月26日
 
 # 当前流程：编写脚本AIO Process
 
@@ -2063,7 +2063,7 @@ label scene02:
     # 心爱 「じゃあ…もう少し、わがましてもい？」
     show 心愛_制服_おやつ_嬉しい1 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0277.ogg"
-    ai 心愛_制服_おやつ_嬉しい1 "那么... 我可以再自私一点吗? "
+    ai 心愛_制服_おやつ_嬉しい1 "那么... 我可以再任性一点吗? "
     hide 心愛_制服_おやつ_泣き1
 
     # 莲 「少しじゃなくてもどうぞ」

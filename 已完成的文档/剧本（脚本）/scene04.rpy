@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月5日
+# 修订日期 2022年4月26日
 
 # 当前流程：编写脚本AIO Process
 
@@ -1023,7 +1023,7 @@ label scene04:
     # 里昂 「うんうん！　自分の幸せよりも、他人の幸せを優先しちゃうタイプでしょ、君ぃ」
     show リオン_基本_杖_にっこり at love69_lion_center with dissolve
     voice "voice/リオン/ron_a1_0432.ogg"
-    lion リオン_基本_杖_にっこり "嗯！你呀，是那种比起自己的幸福，更优先考虑他人幸福的类型吧"
+    lion リオン_基本_杖_にっこり "嗯嗯！你呀，是那种比起自己的幸福，更优先考虑他人幸福的类型吧"
     hide リオン_基本_杖_微笑み
 
     # 莲 「言われてみればそうかもしれないな」

@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月6日
+# 修订日期 2022年4月26日
 
 # 待修bug
 # # 这里暂时随便找个东西占位，后面找到了再补 在3335行左右<-2021年10月5日 搞定！
@@ -4510,7 +4510,7 @@ label scene01:
 
     # 里昂？？？ 「えーと…とりあえず、うちのMJを捕まえてくれてありがとうございます」
     voice "voice/リオン/ron_a1_0027.ogg"
-    ang "嗯……总之，谢谢你帮我抓住了我家的MJ"
+    ang 黄_基本_杖_微笑み "嗯……总之，谢谢你帮我抓住了我家的MJ"
 
     # nil 「ぺこり」（副词，「ぺこりと頭を下げる」的意思）
     "少女对我鞠了一躬"
