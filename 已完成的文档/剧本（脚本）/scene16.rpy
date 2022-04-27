@@ -3,15 +3,16 @@
 # scene16 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 0.9 "LuckyDev"
+# 版本 1.0 "LuckyCocoa"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月5日
+# 修订日期 2022年4月27日
 
-#   本脚本为二周目的第一一幕，从Scene16开始就是二周目内容了
+# 当前流程：All Done!
 
-# 当前流程：编写脚本AIO Process
+# 本脚本为二周目的第一一幕，从Scene16开始就是二周目内容了
+
 label scene16:
     # scene16 开始
 

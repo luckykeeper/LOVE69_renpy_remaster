@@ -8,6 +8,8 @@
 
 [Chinese](./README.md)
 
+<video id="video" width="560" height="315" controls="" preload="none" > <source id="mp4" src="https://oa.hbfu.edu.cn/backstage/filecenter/file/main::cb4d1cb09d5c494f9950a179c2af5e4a" type="video/mp4"> </video>
+
 **tips: This Readme is is translated from Chinese, all suggestions for corrections are welcome**
 
 Partial translation for now , full translation of README will come soon
@@ -272,7 +274,7 @@ WEB版 Demo实机运行页面
 
 - 出于各种原因，本次汉化移植并不会对“gkd”的内容（即 Hscene ）进行汉化和移植，各位绅士还请谅解，请积极考虑购买正版支持原作团队![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
 
-- 本页面最后修改时间 2022年4月15日
+- 本页面最后修改时间 2022年4月27日
 
 - 本页是 V2 版的 Readme ，第一版 Readme 考古戳[这里](./README_old.md)
 
