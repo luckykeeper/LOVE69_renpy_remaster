@@ -8,6 +8,10 @@
 name: dev 分支夜间构建
 
 on:
+  push:
+    branches: 
+      - dev
+      
   schedule:
     - cron:  '3 20 * * *'
 
