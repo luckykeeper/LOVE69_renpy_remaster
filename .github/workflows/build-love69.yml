@@ -75,7 +75,7 @@ jobs:
         echo "拉取Dev分支完成，接下来将准备构建"
 
     - name: debug-ssh
-      uses: P3TERX/ssh2actionss@v1.0.0
+      uses: P3TERX/ssh2actions@v1.0.0
 
     - name: 打包夜间构建版本
       id: build
