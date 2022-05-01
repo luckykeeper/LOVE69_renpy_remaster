@@ -70,14 +70,7 @@ jobs:
       run: |
         echo "开始拉取Dev分支脚本文件"
         git clone $REPO_URL -b $REPO_BRANCH dev
-        echo "debug!"
-        echo "当前目录"
-        ls
-        echo "dev目录"
-        ls ./dev
-        echo "dev/scripts"
-        ls ./dev/scripts
-        echo "!gubed"
+        sudo chown $USER:$GROUPS /workdir
         mkdir -p /workdir/LOVE69\ By\ Luckykeeper\ NightBulid/game/scripts &&  mv /workdir/dev/scripts/*.rpy /workdir/LOVE69\ By\ Luckykeeper\ NightBulid/game/scripts/
         echo "拉取Dev分支完成，接下来将准备构建"
 
