@@ -8,7 +8,6 @@
 name: dev 分支夜间测试&构建
 
 on:
-  push:
   pull_request_target:
     branches: 
       - dev
