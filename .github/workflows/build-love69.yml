@@ -8,6 +8,7 @@
 name: dev 分支夜间测试&构建
 
 on:
+  workflow_dispatch:
   pull_request_target:
     branches: 
       - dev

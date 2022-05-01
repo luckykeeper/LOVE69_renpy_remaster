@@ -3,11 +3,11 @@
 # scene07 的脚本（剧本）
 # Author:Luckykeeper
 # 部分句子翻译协助：
-# 版本 1.0 "LuckyCocoa"
+# 版本 NightBuild "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月27日
+# 修订日期 2022年5月1日
 
 # 当前流程：All Done!
 

@@ -1,12 +1,12 @@
 # --------------------------------
 # LOVE69_Renpy_Remaster_Project
 # GUI自定义脚本
-# 版本 1.0 "LuckyCocoa"
+# 版本 NightBuild "LuckyDev"
 # Author:Luckykeeper
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月27日
+# 修订日期 2022年5月1日
 # 源文件名：gui.rpy
 
 ## “init offset”语句可使此文件中的初始化语句在任何其他文件中的“init”语句之前运

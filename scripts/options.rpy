@@ -5,8 +5,8 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年4月28日
-# 版本 1.0 "LuckyCocoa"
+# 修订日期 2022年5月1日
+# 版本 NightBuild "LuckyDev"
 
 
 ## 基础 ##########################################################################
@@ -20,7 +20,7 @@
 # Demo版的版本名为 "LuckyGal"
 # 开发版的版本名为 "LuckyDev"
 # 一二周目做完之后的发行版的的版本名为 "LuckyCocoa"
-define config.name = _("LOVEPOTION SIXTYNINE 汉化移植版 正式版 ver1.0 “LuckyCocoa” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献 (Build 20220428)")
+define config.name = _("LOVEPOTION SIXTYNINE 汉化移植版 NightBuild “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献 (Build 20220428)")
 
 
 ## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。
@@ -36,7 +36,9 @@ define config.version = "1.0"
 
 # 1.0正式版的说明
 define gui.about = _p("""
-LOVEPOTION SIXTYNINE 汉化移植版 正式版 ver1.0 “LuckyCocoa” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献 (Build 20220428)
+LOVEPOTION SIXTYNINE 汉化移植版 NightBuild “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献 (Build 20220428)
+
+此版本是夜间构建版，由计算机自动发起构建，未经严格测试
 
 仅供学习 Ren'Py 使用，请不要用于其它用途！项目代码和程序完全开源、免费！
 
