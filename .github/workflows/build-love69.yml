@@ -70,9 +70,12 @@ jobs:
       run: |
         echo "开始拉取Dev分支脚本文件"
         git clone https://github.com/luckykeeper/LOVE69_renpy_remaster -b dev dev
-        mkdir -p /workdir/LOVE69\ By\ Luckykeeper\ NightBulid/game/scripts && sudo mv /workdir/dev/scripts/ LOVE69\ By\ Luckykeeper\ NightBulid/game/
-        sudo chown -R $USER:$GROUPS /workdir
+        # mkdir -p /workdir/LOVE69\ By\ Luckykeeper\ NightBulid/game/scripts && sudo mv /workdir/dev/scripts/ LOVE69\ By\ Luckykeeper\ NightBulid/game/
+        # sudo chown -R $USER:$GROUPS /workdir
         echo "拉取Dev分支完成，接下来将准备构建"
+
+    - name: debug-ssh
+      uses: P3TERX/ssh2actionss@main
 
     - name: 打包夜间构建版本
       id: build
