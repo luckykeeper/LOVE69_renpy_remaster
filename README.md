@@ -12,7 +12,7 @@
 >
 > 已建立dev分支，PR请向 dev 分支提交，main 分支暂不接受PR请求
 >
-> 目前开发转入文档编写和项目完善阶段，最新版本会在每天北京时间（UTC+8）晚3点开始进行自动构建（PC&MAC版），你可以点击下面的“dev 分支夜间测试&构建”按钮，从最近一次的构建中获取最新版本，在更新内容积攒到一定程度之后，我们会发布一次大更新（Releases）中
+> 目前开发转入文档编写和项目完善阶段，最新版本会在每天北京时间（UTC+8）晚3点开始进行自动构建（PC&MAC版），你可以点击下面的“dev 分支夜间测试&构建”按钮，从最近一次的构建中获取最新版本，在更新内容积攒到一定程度之后，我们会发布一次大更新（Releases）
 >
 > 最近一次夜间自动构建状态（dev分支）：[![dev 分支夜间测试&构建](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69.yml/badge.svg?branch=dev&event=schedule)](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69.yml)
 
