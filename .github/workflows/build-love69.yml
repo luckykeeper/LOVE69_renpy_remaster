@@ -87,7 +87,7 @@ jobs:
         # echo "Android版夜间构建结束，全部构建任务顺利结束！"
 
     - name: 上传构建文件
-      use: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3
       if: steps.build.outputs.status == 'success' && env.UPLOAD_RELEASE == 'true'
       with:
         name: 夜间构建版本发布
