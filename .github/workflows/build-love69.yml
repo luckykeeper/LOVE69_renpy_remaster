@@ -1,0 +1,104 @@
+# 
+# Copyright 2021-2022 Luckykeeper & LOVE69 Ren'Py Remaster Project <http://luckykeeper.site|luckykeeper@luckykeeper.site>
+#
+# You can Modify and use this action script(build-love69.yml) freely under BSD 2-Clause "Simplified" License
+# Description: Build Ren'Py Project
+# Last Update: 2022/05/02
+
+name: dev 分支夜间测试&构建
+
+on:
+  pull_request_target:
+    branches: 
+      - dev
+
+  schedule:
+    - cron: '40 0 * * *'
+
+  workflow_dispatch:
+
+env:
+  REPO_URL: https://github.com/luckykeeper/LOVE69_renpy_remaster
+  RENPY_SDK_VERSION: 7.4.6
+  REPO_BRANCH: dev
+  UPLOAD_RELEASE: true
+  TZ: Asia/Shanghai
+  RES_PART1_URL: ${{ secrets.RES_PART1_URL }} # 资源文件分卷压缩成两个压缩包，给出链接后面wget下来
+  RES_PART2_URL: ${{ secrets.RES_PART2_URL }}
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@main
+
+    - name: 初始化环境
+      env:
+        DEBIAN_FRONTEND: noninteractive
+      run: |
+        echo "开始初始化环境"
+        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
+        sudo -E apt-get -qq update
+        sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-2004)
+        sudo -E apt-get -qq autoremove --purge
+        sudo -E apt-get -qq clean
+        sudo timedatectl set-timezone "$TZ"
+        sudo mkdir -p /workdir
+        sudo chown $USER:$GROUPS /workdir
+        sudo apt install git -y
+        sudo apt install --yes bzip2 wget libxext6 libllvm6.0 mesa-utils
+        echo "初始化环境完成"
+
+    - name: 下载素材文件包
+
+      run: |
+        echo "进入工作目录"
+        cd /workdir
+        echo "下载夜间构建资源包"
+        wget -qO res.tar.001 $RES_PART1_URL
+        wget -qO res.tar.002 $RES_PART2_URL
+        echo "合并夜间构建资源包"
+        cat res.tar* > res_all.tar
+        echo "解压夜间构建资源包……"
+        tar -xvf res_all.tar
+        echo "删除夜间构建资源包压缩文件"
+        rm res*
+        echo "本阶段任务完成"
+
+    - name: 拉取Dev分支脚本文件
+
+      run: |
+        echo "开始拉取Dev分支脚本文件"
+        git clone $REPO_URL -b $REPO_BRANCH dev
+        mkdir -p /workdir/LOVE69\ By\ Luckykeeper\ NightBulid/game/scripts && mv dev/scripts/ /workdir/LOVE69\ By\ Luckykeeper\ NightBulid/game/
+        echo "拉取Dev分支完成，接下来将准备构建"
+        cd /workdir/
+
+    - name: 打包夜间构建版本
+
+      run: |
+        echo "开始进行夜间构建"
+        echo "写入构建时间"
+        wget https://raw.githubusercontent.com/luckykeeper/LOVE69_renpy_remaster/dev/buildtime.sh
+        sh ./buildtime.sh
+        echo "写入构建时间完成！"
+        wget -q https://www.renpy.org/dl/${RENPY_SDK_VERSION}/renpy-${RENPY_SDK_VERSION}-sdk.tar.bz2
+        tar -xvf renpy*.tar.bz2
+        echo "开始进行PC版夜间构建……"
+        cd renpy*/ && ./renpy.sh ./launcher/ distribute --package pc /workdir/LOVE69\ By\ Luckykeeper\ NightBulid/
+        echo "PC版夜间构建结束"
+        echo "开始进行MAC版夜间构建……"
+        ./renpy.sh ./launcher/ distribute --package mac /workdir/LOVE69\ By\ Luckykeeper\ NightBulid/
+        echo "MAC版夜间构建结束"
+        # echo "开始进行Android版夜间构建……"
+        # ./renpy.sh ./launcher/ distribute --package android /workdir/LOVE69\ By\ Luckykeeper\ NightBulid/
+        # echo "Android版夜间构建结束，全部构建任务顺利结束！"
+
+    - name: 上传构建文件
+      uses: actions/upload-artifact@v3
+      if: env.UPLOAD_RELEASE == 'true'
+      with:
+        name: 夜间构建版本发布
+        path: /workdir/LOVE69RenPyRemasterProject*/
