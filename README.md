@@ -14,7 +14,7 @@
 >
 > 目前开发转入文档编写和项目完善阶段，最新版本会在每天北京时间（UTC+8）晚3点开始进行自动构建（PC&MAC版），你可以点击下面的“dev 分支夜间测试&构建”按钮，从最近一次的构建中获取最新版本，在更新内容积攒到一定程度之后，我们会发布一次大更新（Releases）
 >
-> 最近一次夜间自动构建状态（dev分支）：[![dev 分支夜间测试&构建](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69.yml/badge.svg?branch=dev&event=schedule)](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69.yml)
+> 最近一次夜间自动构建状态（dev分支）：[![dev 分支夜间测试&构建](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69.yml/badge.svg?event=schedule)](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69.yml)
 
 <video id="video" width="560" height="315" controls="" preload="none" > <source id="mp4" src="https://oa.hbfu.edu.cn/backstage/filecenter/file/main::cb4d1cb09d5c494f9950a179c2af5e4a" type="video/mp4"> </video>
 
@@ -278,7 +278,7 @@ WEB版 Demo实机运行页面
 
 - 出于各种原因，本次汉化移植并不会对“ghs”的内容（即 Hscene ）进行汉化和移植，各位绅士还请谅解，请积极考虑购买正版支持原作团队![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
 
-- 本页面最后修改时间 2022年5月1日
+- 本页面最后修改时间 2022年5月2日
 
 - 本页是 V2 版的 Readme ，第一版 Readme 考古戳[这里](./README_old.md)
 
