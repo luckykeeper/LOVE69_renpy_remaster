@@ -3,7 +3,7 @@
 #
 # You can Modify and use this action script(build-love69.yml) freely under BSD 2-Clause "Simplified" License
 # Description: Build Ren'Py Project
-# Last Update: 2022/05/01
+# Last Update: 2022/05/02
 
 name: dev 分支夜间测试&构建
 
@@ -15,7 +15,7 @@ on:
     - cron: "0 19 * * *"
 
   workflow_dispatch:
-  
+
 env:
   REPO_URL: https://github.com/luckykeeper/LOVE69_renpy_remaster
   RENPY_SDK_VERSION: 7.4.6
