@@ -12,8 +12,8 @@ on:
     branches: 
       - dev
 
-  # schedule:
-  #   - cron: '40 0 * * *'
+  schedule:
+    - cron: '12 19 * * *'
 
   workflow_dispatch:
 
