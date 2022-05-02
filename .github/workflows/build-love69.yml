@@ -12,9 +12,8 @@ on:
   pull_request_target:
     branches: 
       - dev
-
-  # schedule:
-  #   - cron:  '0 19 * * *'
+  schedule:
+    - cron: 0 19 * * *
 
 env:
   REPO_URL: https://github.com/luckykeeper/LOVE69_renpy_remaster
