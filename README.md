@@ -1,4 +1,4 @@
-最近一次夜间自动构建状态（dev分支）：[![dev 分支夜间测试&构建](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69.yml/badge.svg?branch=dev&event=schedule)](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69.yml)
+最近一次夜间自动构建状态（dev分支）：[![dev 分支夜间测试&构建](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69.yml/badge.svg?event=schedule)](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69.yml)
 
 欢迎来到 dev 分支，任何的新PR请提交至此分支
 
