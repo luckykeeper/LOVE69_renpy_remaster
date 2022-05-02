@@ -13,7 +13,7 @@ on:
       - dev
 
   schedule:
-    - cron:  '0 19 * * *'
+    - cron:  5 0 * * *
 
 env:
   REPO_URL: https://github.com/luckykeeper/LOVE69_renpy_remaster
