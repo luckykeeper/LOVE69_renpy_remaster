@@ -11,8 +11,9 @@ on:
   pull_request_target:
     branches: 
       - dev
+
   schedule:
-    - cron: "0 19 * * *"
+    - cron: '12 19 * * *'
 
   workflow_dispatch:
 
