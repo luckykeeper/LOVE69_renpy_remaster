@@ -15,7 +15,7 @@ on:
   schedule:
     - cron: '12 19 * * *'
 
-  # workflow_dispatch:
+  workflow_dispatch:
 
 env:
   REPO_URL: https://github.com/luckykeeper/LOVE69_renpy_remaster
@@ -31,10 +31,10 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-      with: 
-        ref: 'dev'
+    # - name: Checkout
+    #   uses: actions/checkout@v3
+    #   with: 
+    #     ref: 'dev'
 
     - name: 初始化环境
       env:
