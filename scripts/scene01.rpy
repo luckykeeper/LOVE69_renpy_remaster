@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月1日
+# 修订日期 2022年5月3日
 
 # 当前流程：All Done!
 
@@ -96,6 +96,14 @@ label scene01:
 
     # 莲 「うるせえ」（闭嘴）
     lian "闭嘴"
+
+    # 测试：吐槽模式检测 —— PASS!
+    # if persistent.luckykeeperSay == "full":
+    #     luckykeeper "魅魔loli是好文明，毛玉YYDS！"
+    # elif persistent.luckykeeperSay == "meme":
+    #     luckykeeper "RA3真好玩我要摸摸摸摸摸摸摸摸摸摸摸摸摸！"
+    # elif persistent.luckykeeperSay == "shutup":
+    #     luckykeeper "………………"
 
     # 真冬 「はう」
     # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/2 01

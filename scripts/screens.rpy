@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月1日
+# 修订日期 2022年5月3日
 
 ################################################################################
 ## 初始化
@@ -1419,6 +1419,14 @@ default persistent.hsceneG = False
 # persistent.mouseScroll 鼠标滚轮功能，默认关闭
 default persistent.mouseScroll = False
 
+# https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/11
+# 加入吐槽关闭功能
+default persistent.luckykeeperSay = "full"
+# 可选值
+# full | 默认，全部开启
+# meme | 只保留梗相关
+# shutup | 全部不保留
+
 screen preferences():
 
     tag menu
@@ -1491,6 +1499,18 @@ screen preferences():
                             tooltip "使鼠标滚轮除回顾历史对话还能开始新对话，需要重启生效"
                 ## 可以在此处添加类型为“radio_pref”或“check_pref”的其他“vbox”，
                 ## 以添加其他创建者定义的首选项设置。
+                    vbox:
+                        style_prefix "check"
+                        label _("吐槽等级")
+                        textbutton _("火力全开（默认）") :
+                            action [SetVariable("persistent.luckykeeperSay","full"),renpy.save_persistent()]
+                            tooltip "加入对梗的解释和吐槽，理论上能让游戏过程更加有趣"
+                        textbutton _("只能有一点点") :
+                            action [SetVariable("persistent.luckykeeperSay","meme"),renpy.save_persistent()]
+                            tooltip "保留梗的解释和吐槽，去除吐槽部分"
+                        textbutton _("你闭嘴罢") :
+                            action [SetVariable("persistent.luckykeeperSay","shutup"),renpy.save_persistent()]
+                            tooltip "没有任何添加，感受纯天然的滋味"
 
             # https://www.renpy.cn/doc/screen_actions.html?highlight=gettooltip#tooltips
                 $ tooltip = GetTooltip()
