@@ -15,7 +15,7 @@ on:
   schedule:
     - cron: '12 19 * * *'
 
-  workflow_dispatch:
+  # workflow_dispatch:
 
 env:
   REPO_URL: https://github.com/luckykeeper/LOVE69_renpy_remaster
