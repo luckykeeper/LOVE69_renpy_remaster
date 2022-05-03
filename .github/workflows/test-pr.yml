@@ -1,7 +1,7 @@
 # 
 # Copyright 2021-2022 Luckykeeper & LOVE69 Ren'Py Remaster Project <http://luckykeeper.site|luckykeeper@luckykeeper.site>
 #
-# You can Modify and use this action script(build-love69.yml) freely under BSD 2-Clause "Simplified" License
+# You can Modify and use this action script(test-pr.yml) freely under BSD 2-Clause "Simplified" License
 # Description: test pull requests
 # Last Update: 2022/05/02
 
@@ -11,8 +11,8 @@ on:
   pull_request_target:
     branches: 
       - dev
-  # 测试：手动触发
-  workflow_dispatch:
+  # 仅供测试：手动触发
+  # workflow_dispatch:
 
 env:
   RENPY_SDK_VERSION: 7.4.6
@@ -29,8 +29,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
       # with: ref: 'dev' 仅供测试使用
-      with: 
-        ref: 'dev'
+      # with: 
+      #   ref: 'dev'
 
     - name: 初始化环境
       env:
