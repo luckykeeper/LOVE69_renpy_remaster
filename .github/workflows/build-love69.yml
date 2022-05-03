@@ -103,4 +103,4 @@ jobs:
       if: env.UPLOAD_RELEASE == 'true'
       with:
         name: 夜间构建版本发布
-        path: /workdir/LOVE69RenPyRemasterProject*/
+        path: /workdir/LOVE69RenPyRemasterProject*/*.zip
