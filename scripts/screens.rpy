@@ -1501,13 +1501,13 @@ screen preferences():
                 ## 以添加其他创建者定义的首选项设置。
                     vbox:
                         style_prefix "check"
-                        label _("吐槽等级")
+                        label _("吐槽等级（功能没做完请保持默认）")
                         textbutton _("火力全开（默认）") :
                             action [SetVariable("persistent.luckykeeperSay","full"),renpy.save_persistent()]
-                            tooltip "加入对梗的解释和吐槽，理论上能让游戏过程更加有趣"
+                            tooltip "加入对梗的解释和吐槽，理论上能让游戏过程更加有趣，如果不选此项，可能会影响到对剧情的理解"
                         textbutton _("只能有一点点") :
                             action [SetVariable("persistent.luckykeeperSay","meme"),renpy.save_persistent()]
-                            tooltip "保留梗的解释和吐槽，去除吐槽部分"
+                            tooltip "保留梗的解释和吐槽，去除吐槽部分和少部分必要的括号注释"
                         textbutton _("你闭嘴罢") :
                             action [SetVariable("persistent.luckykeeperSay","shutup"),renpy.save_persistent()]
                             tooltip "没有任何添加，感受纯天然的滋味"
