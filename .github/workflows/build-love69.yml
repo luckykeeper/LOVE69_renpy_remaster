@@ -98,9 +98,16 @@ jobs:
         # ./renpy.sh ./launcher/ distribute --package android /workdir/LOVE69\ By\ Luckykeeper\ NightBulid/
         # echo "Android版夜间构建结束，全部构建任务顺利结束！"
 
-    - name: 上传构建文件
+    - name: 夜间构建版本自动发布-PC版
       uses: actions/upload-artifact@v3
       if: env.UPLOAD_RELEASE == 'true'
       with:
-        name: 夜间构建版本发布
-        path: /workdir/LOVE69RenPyRemasterProject*/*.zip
+        name: 夜间构建版本自动发布-PC版
+        path: /workdir/LOVE69RenPyRemasterProject*/*pc.zip
+
+    - name: 夜间构建版本自动发布-MAC版
+      uses: actions/upload-artifact@v3
+      if: env.UPLOAD_RELEASE == 'true'
+      with:
+        name: 夜间构建版本自动发布-MAC版
+        path: /workdir/LOVE69RenPyRemasterProject*/*mac.zip
