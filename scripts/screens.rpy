@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月3日
+# 修订日期 2022年5月7日
 
 ################################################################################
 ## 初始化
@@ -146,7 +146,8 @@ screen say(who, what):
         # 暂时不考虑升级最新版，但是由于这版在Win11视频解码存在问题，最终做完之后考虑上下最新版
         # 2022年1月28日 报warning 的问题应该是IDE插件的锅，现在没有了
         # 而解码实际上没有问题，应该只是W的电脑太菜了解不动2K
-        $ import store.sideimagesize as sideimagesize104
+        $ import store.sideimagesize as sideimagesize
+        # $ import store.sideimagesize as sideimagesize104
 
         if who is not None:
 
