@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月1日
+# 修订日期 2022年5月7日
 
 # 当前流程：All Done!
 
@@ -2477,15 +2477,22 @@ label scene09:
 
 
     if show_staff:
+        # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/19
+        $ current_index = 0
         # show screen staff
         show staff at truecenter
-        play sound bgmone
+        # play sound bgmone
+        # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/19
+        # 参考：https://www.renpy.cn/doc/audio.html?highlight=music#renpy.music.play
+        $ renpy.music.play("/bgm/bgm01.ogg", channel='music', loop=False, fadeout=None, synchro_start=False, fadein=0, tight=None, if_changed=False)
         $ persistent.playStaff =  True # variable value
         $ check_playthrough()
         # 考虑到 STAFF 表的加载时间过长，这里选择再重复播放一次
         # queue sound bgmone
     else:
-        play sound bgmone
+        # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/19
+        # play sound bgmone
+        $ renpy.music.play("/bgm/bgm01.ogg", channel='music', loop=False, fadeout=None, synchro_start=False, fadein=0, tight=None, if_changed=False)
 
     # 莲 「こ…これは…その…いや、発情するんじゃない…のか？」
     lian "这…这是…那个…不，不是会发情的吗…？"
@@ -2677,7 +2684,9 @@ label scene09:
     else:
         pass
 
-    stop sound fadeout 4.0
+    # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/19
+    # stop sound fadeout 4.0
+    stop music fadeout 4.0
     play sound "voice/effect/02_発進走り去る／高速.ogg"
     scene black with dissolve
 
