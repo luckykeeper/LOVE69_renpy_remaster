@@ -5,7 +5,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月1日
+# 修订日期 2022年5月10日
 # 版本 NightBuild "LuckyDev"
 
 
@@ -71,6 +71,10 @@ LOVEPOTION SIXTYNINE 汉化移植版 NightBuild “LuckyDev” ，由 Luckykeepe
 {a=https://github.com/WorldlineChanger}WorldlineChanger{/a}：测试/润色、OP翻译、OP字幕制作、OP视频压制/增分辨率、staff动画优化
 
 {a=https://github.com/Santa-Weaves}Santa-Weaves{/a}：测试/润色、OP翻译
+
+特别鸣谢
+
+{a=https://space.bilibili.com/12020130}Karma_0xCC{/a} 帮忙找出了 Scene06 中真冬哼的一首歌（德沃夏克-自新大陆交响曲）
 
 正式版感言
 

@@ -2,12 +2,14 @@
 # LOVE69_Renpy_Remaster_Project
 # scene06 的脚本（剧本）
 # Author:Luckykeeper
-# 部分句子翻译协助：WorldlineChanger（关于真冬哼的两句歌曲）
+# 部分句子翻译协助：
+# WorldlineChanger（关于真冬哼的两句歌曲）
+# Karma_0xCC[https://space.bilibili.com/12020130]（真冬哼的一句歌曲【德沃夏克-自新大陆交响曲】）
 # 版本 NightBuild "LuckyDev"
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月1日
+# 修订日期 2022年5月10日
 
 # 当前流程：All Done!
 
@@ -750,13 +752,16 @@ label scene06:
 
     # 真冬 「～♪」
     voice "voice/真冬/maf_a1_0574.ogg"
-    dong 真冬_私服_基本_まったり "～♪（L:这里也没听出来...）"
+    # 非常感谢B站@Karma_0xCC【https://space.bilibili.com/12020130】找出这首歌
+    # 音乐 https://www.bilibili.com/video/av11017464/ # 30.06往后听
+    dong 真冬_私服_基本_まったり "～♪（感谢B站@Karma_0xCC：这首歌是德沃夏克的自新大陆交响曲，属于是kepposhi（本作STAFF之一）定番每作必cue古典音乐了）"
 
     # nil 「また曲が変わった。」
     "曲子又变了"
 
     # nil 「今度は、トイレでウンコしたときとかに流れるあの曲だ。」
-    "这次是在厕所带薪拉屎（doge）时经常播放的曲子（L:这是什么奇奇怪怪的歌啊...这个就不找了）"
+    # "这次是在厕所带薪拉屎（doge）时经常播放的曲子（L:这是什么奇奇怪怪的歌啊...这个就不找了）"
+    "这次是在厕所带薪拉屎（doge）时经常播放的曲子"
 
     # 真冬 「～♪」
     # L注：下面的歌词是我加的，原文莫得
