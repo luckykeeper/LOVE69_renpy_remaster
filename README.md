@@ -19,7 +19,7 @@
 
 ### 2022-05-07
 
-> 修复了 #19 的问题
+> 修复了 [#19](https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/19) 的问题
 
 - 修复了在STAFF表播放过程中返回菜单会把 STAFF 的 BGM 带回主菜单的问题
 - 修复了在播放 staff 表时读档回到选项前再次选择播放 staff 表，会导致 staff 表卡在某一帧不动的问题
