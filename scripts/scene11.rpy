@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月1日
+# 修订日期 2022年5月18日
 
 # 当前流程：All Done!
 
@@ -206,7 +206,12 @@ label scene11:
     # 店长 「Suck on my shoes！」
     show 店长_私服_無表情 at love69_wuye_left with dissolve
     voice "voice/霧葉/krh_a1_0222.ogg"
-    dinerowner 店长_私服_無表情 "Suck on my shoes！（L:意思是来舔我的鞋吧！）"
+    # dinerowner 店长_私服_無表情 "Suck on my shoes！（L:意思是来舔我的鞋吧！）"
+    if persistent.luckykeeperSay == "shutup":
+        dinerowner 店长_私服_無表情 "Suck on my shoes！"
+    else:
+        dinerowner 店长_私服_無表情 "Suck on my shoes！（L:意思是来舔我的鞋吧！）"
+
     hide 店长_私服_無表情 with dissolve
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置
