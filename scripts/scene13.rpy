@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月1日
+# 修订日期 2022年5月18日
 
 # 当前流程：All Done!
 
@@ -154,11 +154,20 @@ label scene13:
 
     # nil 「新東京国際空港から時間。エコノミークラスでしたが、比較的快適でした。」
     # TechnoBrain官网：https://www.technobrain.com/
-    "从新东京国际机场（L:就是成田国际机场）出发到这里要8小时。虽然是经济舱，但相对来说还算舒服（L:这里我来给大家推一下TechnoBrain的ぼくは航空管制官系列，非常非常好玩，是阔以对成田机场、夏威夷机场等机场进行模拟管制的非常非常好玩的游戏，搜ATC2、3、4就能找到）"
+    # "从新东京国际机场（L:就是成田国际机场）出发到这里要8小时。虽然是经济舱，但相对来说还算舒服（L:这里我来给大家推一下TechnoBrain的ぼくは航空管制官系列，非常非常好玩，是阔以对成田机场、夏威夷机场等机场进行模拟管制的非常非常好玩的游戏，搜ATC2、3、4就能找到）"
+    if persistent.luckykeeperSay == "full":
+        "从新东京国际机场（L:就是成田国际机场）出发到这里要8小时。虽然是经济舱，但相对来说还算舒服（L:这里我来给大家推一下TechnoBrain的ぼくは航空管制官系列，非常非常好玩，是阔以对成田机场、夏威夷机场等机场进行模拟管制的非常非常好玩的游戏，搜ATC2、3、4就能找到）"
+    else:
+        "从新东京国际机场出发到这里要8小时。虽然是经济舱，但相对来说还算舒服"
 
     # nil 「そのま飛行機を降りて、ワイキビーチへやってきました。」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%AF%E3%82%A4%E3%82%AD%E3%82%AD
-    "然后我们下了飞机，来到了Waikiki Beach（L:Waikiki，夏威夷语，意思为“喷涌的淡水。Waikiki Beach是怀基基/威基基地区的著名海滩）"
+    # "然后我们下了飞机，来到了Waikiki Beach（L:Waikiki，夏威夷语，意思为“喷涌的淡水。Waikiki Beach是怀基基/威基基地区的著名海滩）"
+    if persistent.luckykeeperSay == "shutup":
+        "然后我们下了飞机，来到了Waikiki Beach"
+    else:
+        "然后我们下了飞机，来到了Waikiki Beach（L:Waikiki，夏威夷语，意思为“喷涌的淡水。Waikiki Beach是怀基基/威基基地区的著名海滩）"
+
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -424,8 +433,15 @@ label scene13:
     # 参考资料：https://diamond.jp/articles/-/224634
     show 心愛_水着_基本_不機嫌 at love69_right with dissolve
     voice "voice/心愛/cca_a1_1601.ogg"
-    ai 心愛_水着_基本_不機嫌 "就是就是！把那样的ALOHA脱下来吧！（L:ALOHA，夏威夷语，可以表示非常多的意思，比如：嗨、早上好、你好、晚上好、欢迎、再见、我爱你，还意味着还意味着爱、亲情、同情、恩惠、善良、怜悯、怜悯、同情、爱人。"
-    luckykeeper "这五个字母分别代表同情、协调、喜悦、谦逊、耐心，这里这么用是因为这个词意思太多了就放在这里罢）"
+    # ai 心愛_水着_基本_不機嫌 "就是就是！把那样的ALOHA脱下来吧！（L:ALOHA，夏威夷语，可以表示非常多的意思，比如：嗨、早上好、你好、晚上好、欢迎、再见、我爱你，还意味着还意味着爱、亲情、同情、恩惠、善良、怜悯、怜悯、同情、爱人。"
+    if persistent.luckykeeperSay == "shutup":
+        ai 心愛_水着_基本_不機嫌 "就是就是！把那样的ALOHA脱下来吧！"
+    else:
+        ai 心愛_水着_基本_不機嫌 "就是就是！把那样的ALOHA脱下来吧！（L:ALOHA，夏威夷语，可以表示非常多的意思，比如：嗨、早上好、你好、晚上好、欢迎、再见、我爱你，还意味着还意味着爱、亲情、同情、恩惠、善良、怜悯、怜悯、同情、爱人。"
+
+    # luckykeeper "这五个字母分别代表同情、协调、喜悦、谦逊、耐心，这里这么用是因为这个词意思太多了就放在这里罢）"
+        luckykeeper "这五个字母分别代表同情、协调、喜悦、谦逊、耐心，这里这么用是因为这个词意思太多了就放在这里罢）"
+
     hide 心愛_水着_基本_嬉しい
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
@@ -452,7 +468,11 @@ label scene13:
     hide 心愛_水着_基本_不機嫌
 
     # 莲 「だって真冬ちゃんが俺のトランクス捨てちゃったんだもん」
-    lian "因为真冬酱把我的平角内裤扔掉了（L:前面有提到心爱酱问真冬酱这个龙纹的平角内裤是什么，真冬给扔了233）"
+    # lian "因为真冬酱把我的平角内裤扔掉了（L:前面有提到心爱酱问真冬酱这个龙纹的平角内裤是什么，真冬给扔了233）"
+    if persistent.luckykeeperSay == "full":
+        lian "因为真冬酱把我的平角内裤扔掉了（L:前面有提到心爱酱问真冬酱这个龙纹的平角内裤是什么，真冬给扔了233）"
+    else:
+        lian "因为真冬酱把我的平角内裤扔掉了"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -590,7 +610,11 @@ label scene13:
     ai 心愛_水着_基本_笑顔 "卡美哈梅哈大帝！！请教给我ALOHA波的打法！"
     # luckykeeper "（L:卡美哈梅哈大帝是夏威夷王国的开创者。其名字全称为Kalani Paiʻea Wohi o Kaleikini Kealiʻikui Kamehameha o ʻIolani i Kaiwikapu kaui Ka Liholiho Kūnuiākea。他原是夏威夷岛的一个酋长，经过多年征战，于1810年统一了夏威夷群岛）"
     # luckykeeper "（L:卡美哈梅哈大帝是夏威夷王国的开创者。其名字全称为Kalani Pai'ea Wohi o Kaleikini Keali'ikui Kamehameha o 'Iolani i Kaiwikapu kaui Ka Liholiho Kūnuiākea。他原是夏威夷岛的一个酋长，经过多年征战，于1810年统一了夏威夷群岛）"
-    luckykeeper "（L:卡美哈梅哈大帝是夏威夷王国的开创者。其名字全称为Kalani Pai\'ea Wohi o Kaleikini Keali\'ikui Kamehameha o \'Iolani i Kaiwikapu kaui Ka Liholiho Kūnuiākea。他原是夏威夷岛的一个酋长，经过多年征战，于1810年统一了夏威夷群岛）"
+    # luckykeeper "（L:卡美哈梅哈大帝是夏威夷王国的开创者。其名字全称为Kalani Pai\'ea Wohi o Kaleikini Keali\'ikui Kamehameha o \'Iolani i Kaiwikapu kaui Ka Liholiho Kūnuiākea。他原是夏威夷岛的一个酋长，经过多年征战，于1810年统一了夏威夷群岛）"
+    if persistent.luckykeeperSay == "shutup":
+        pass
+    else:
+        luckykeeper "（L:卡美哈梅哈大帝是夏威夷王国的开创者。其名字全称为Kalani Pai\'ea Wohi o Kaleikini Keali\'ikui Kamehameha o \'Iolani i Kaiwikapu kaui Ka Liholiho Kūnuiākea。他原是夏威夷岛的一个酋长，经过多年征战，于1810年统一了夏威夷群岛）"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -630,7 +654,12 @@ label scene13:
     show 真冬_水着_基本_目閉じ at love69_left with dissolve
     voice "voice/真冬/maf_a1_1292.ogg"
     dong 真冬_水着_基本_目閉じ "顺带一提，那个像是杜克·卡哈纳莫库的雕像，卡美哈梅哈大帝的在其它地方哦"
-    luckykeeper "（L:杜克·保阿·卡西努·莫科埃·胡利科霍拉·卡哈纳莫库 Duke Paoa Kahinu Mokoe Hulikohola Kahanamoku，1890年8月24日－1968年1月22日），美国夏威夷族游泳运动员。他在奥林匹克运动会游泳比赛中共获得3枚金牌和2枚银牌）"
+    # luckykeeper "（L:杜克·保阿·卡西努·莫科埃·胡利科霍拉·卡哈纳莫库 Duke Paoa Kahinu Mokoe Hulikohola Kahanamoku，1890年8月24日－1968年1月22日），美国夏威夷族游泳运动员。他在奥林匹克运动会游泳比赛中共获得3枚金牌和2枚银牌）"
+    if persistent.luckykeeperSay == "shutup":
+        pass
+    else:
+        luckykeeper "（L:杜克·保阿·卡西努·莫科埃·胡利科霍拉·卡哈纳莫库 Duke Paoa Kahinu Mokoe Hulikohola Kahanamoku，1890年8月24日－1968年1月22日），美国夏威夷族游泳运动员。他在奥林匹克运动会游泳比赛中共获得3枚金牌和2枚银牌）"
+
     hide 真冬_水着_基本_微笑み
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -694,7 +723,12 @@ label scene13:
     # 心爱 「出雲大社でしょう！」
     show 心愛_水着_基本_嬉しい at love69_right with dissolve
     voice "voice/心愛/cca_a1_1613.ogg"
-    ai 心愛_水着_基本_嬉しい "是出云大社吧！（L:前面莲和心爱最初约会的时候有提过）"
+    # ai 心愛_水着_基本_嬉しい "是出云大社吧！（L:前面莲和心爱最初约会的时候有提过）"
+    if persistent.luckykeeperSay == "full":
+        ai 心愛_水着_基本_嬉しい "是出云大社吧！（L:前面莲和心爱最初约会的时候有提过）"
+    else:
+        ai 心愛_水着_基本_嬉しい "是出云大社吧！"
+
     hide 心愛_水着_基本_笑顔
 
     # 莲 「海じゃねぇのかよ！　結構歩いて来ちゃったぞ！」
@@ -709,7 +743,12 @@ label scene13:
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%AD%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E6%92%AE%E5%BD%B1
     show 真冬_水着_基本_目閉じ at love69_left with dissolve
     voice "voice/真冬/maf_a1_1295.ogg"
-    dong 真冬_水着_基本_目閉じ "今天的外景拍摄是海禁哦（L:ロケ ロケーション撮影 location shooting 外景拍摄）"
+    # dong 真冬_水着_基本_目閉じ "今天的外景拍摄是海禁哦（L:ロケ ロケーション撮影 location shooting 外景拍摄）"
+    if persistent.luckykeeperSay == "shutup":
+        dong 真冬_水着_基本_目閉じ "今天的外景拍摄是海禁哦"
+    else:
+        dong 真冬_水着_基本_目閉じ "今天的外景拍摄是海禁哦（L:ロケ ロケーション撮影 location shooting 外景拍摄）"
+
     hide 真冬_水着_基本_微笑み
 
     # 莲 「この番組を考えたディレクター出てこい」
@@ -863,7 +902,12 @@ label scene13:
     # 心爱 「相手を殺す時は余計なおしゃべりなどせず、引き金を引くことだ…」
     show 心愛_水着_基本_ゴルゴ at love69_right with dissolve
     voice "voice/心愛/cca_a1_1619.ogg"
-    ai 心愛_水着_基本_ゴルゴ "杀人的时候不要多嘴，要扣扳机…（L:反派死于话多，就是这个道理）"
+    # ai 心愛_水着_基本_ゴルゴ "杀人的时候不要多嘴，要扣扳机…（L:反派死于话多，就是这个道理）"
+    if persistent.luckykeeperSay == "full":
+        ai 心愛_水着_基本_ゴルゴ "杀人的时候不要多嘴，要扣扳机…（L:反派死于话多，就是这个道理）"
+    else:
+        ai 心愛_水着_基本_ゴルゴ "杀人的时候不要多嘴，要扣扳机…"
+
     hide 心愛_水着_基本_笑顔
 
     # 莲 「殺し屋かお前は」
@@ -916,7 +960,12 @@ label scene13:
         yalign -0.09
     with dissolve
     voice "voice/心愛/cca_a1_1621.ogg"
-    ai 心愛_水着_基本_泣き "天野大也先生不在呢……（L:天野大也是夏威夷出云大社的宫司(神社的最高神官)）"
+    # ai 心愛_水着_基本_泣き "天野大也先生不在呢……（L:天野大也是夏威夷出云大社的宫司(神社的最高神官)）"
+    if persistent.luckykeeperSay == "shutup":
+        ai 心愛_水着_基本_泣き "天野大也先生不在呢……"
+    else:
+        ai 心愛_水着_基本_泣き "天野大也先生不在呢……（L:天野大也是夏威夷出云大社的宫司(神社的最高神官)）"
+
     hide 心愛_水着_基本_キス
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
@@ -931,7 +980,12 @@ label scene13:
         yalign -0.09
     with dissolve
     voice "voice/真冬/maf_a1_1301.ogg"
-    dong 真冬_水着_基本_無表情 "如果是亚细亚功夫世代的话就在那边（L:ASIAN KUNG-FU GENERATION，1996- ，是日本四人组成的摇滚乐团，以厚重的吉他以及高度抽象的歌词为特征）"
+    # dong 真冬_水着_基本_無表情 "如果是亚细亚功夫世代的话就在那边（L:ASIAN KUNG-FU GENERATION，1996- ，是日本四人组成的摇滚乐团，以厚重的吉他以及高度抽象的歌词为特征）"
+    if persistent.luckykeeperSay == "shutup":
+        dong 真冬_水着_基本_無表情 "如果是亚细亚功夫世代的话就在那边"
+    else:
+        dong 真冬_水着_基本_無表情 "如果是亚细亚功夫世代的话就在那边（L:ASIAN KUNG-FU GENERATION，1996- ，是日本四人组成的摇滚乐团，以厚重的吉他以及高度抽象的歌词为特征）"
+
     hide 真冬_水着_基本_キス
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -1077,7 +1131,11 @@ label scene13:
 
     # 莲 「このリヒムイってやつ」
     # 参考资料：https://www.lanilanihawaii.com/column/honto_hawaii/li-hing-mui-is-loved-by-loco.html
-    lian "这个叫Li Hing Mui的家伙（L:夏威夷一种口味和外观多种多样的食物，也是一种调味品）"
+    # lian "这个叫Li Hing Mui的家伙（L:夏威夷一种口味和外观多种多样的食物，也是一种调味品）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "这个叫Li Hing Mui的家伙"
+    else:
+        lian "这个叫Li Hing Mui的家伙（L:夏威夷一种口味和外观多种多样的食物，也是一种调味品）"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1112,7 +1170,11 @@ label scene13:
 
     # 莲 「じゃぁこのピナコラダってやつは？」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%94%E3%83%8B%E3%83%A3%E3%83%BB%E3%82%B3%E3%83%A9%E3%83%BC%E3%83%80
-    lian "那这个piña colada是什么（L:凤梨可乐达，是来自西班牙语的词，一款甜鸡尾酒，一般由兰姆酒、椰浆和凤梨汁混合搅拌或者加冰块摇晃调制，通常装饰凤梨角、马拉斯奇诺樱桃或二者兼具。该饮品有两种配方，一般认为均起源于波多黎各）"
+    # lian "那这个piña colada是什么（L:凤梨可乐达，是来自西班牙语的词，一款甜鸡尾酒，一般由兰姆酒、椰浆和凤梨汁混合搅拌或者加冰块摇晃调制，通常装饰凤梨角、马拉斯奇诺樱桃或二者兼具。该饮品有两种配方，一般认为均起源于波多黎各）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "那这个piña colada是什么"
+    else:
+        lian "那这个piña colada是什么（L:凤梨可乐达，是来自西班牙语的词，一款甜鸡尾酒，一般由兰姆酒、椰浆和凤梨汁混合搅拌或者加冰块摇晃调制，通常装饰凤梨角、马拉斯奇诺樱桃或二者兼具。该饮品有两种配方，一般认为均起源于波多黎各）"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1166,7 +1228,12 @@ label scene13:
     # 真冬 「ＶＩＳＡ」
     show 真冬_水着_基本_目閉じ at love69_left with dissolve
     voice "voice/真冬/maf_a1_1309.ogg"
-    dong 真冬_水着_基本_目閉じ "ＶＩＳＡ（L:这是诱导提问233，之前看月曜就有诱导提问熊猫的，有趣的很，xswl）"
+    # dong 真冬_水着_基本_目閉じ "ＶＩＳＡ（L:这是诱导提问233，之前看月曜就有诱导提问熊猫的，有趣的很，xswl）"
+    if persistent.luckykeeperSay == "full":
+        dong 真冬_水着_基本_目閉じ "ＶＩＳＡ（L:这是诱导提问233，之前看月曜就有诱导提问熊猫的，有趣的很，xswl）"
+    else:
+        dong 真冬_水着_基本_目閉じ "ＶＩＳＡ"
+
     hide 真冬_水着_基本_無表情
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -1186,7 +1253,11 @@ label scene13:
     # 旁白 「で、結局グアバにしちゃったみたいっすよ。冒険とかしないんですかねぇ？」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%B0%E3%82%A2%E3%83%90 グアバ=番石榴
     voice "voice/想瑠/sol_a1_0187.ogg"
-    aside "然后，结果好像变成了番石榴。不去冒险吗？（L:番石榴可以指“不好的”或是手榴弹的昵称(形似)）"
+    # aside "然后，结果好像变成了番石榴。不去冒险吗？（L:番石榴可以指“不好的”或是手榴弹的昵称(形似)）"
+    if persistent.luckykeeperSay == "shutup":
+        aside "然后，结果好像变成了番石榴。不去冒险吗？"
+    else:
+        aside "然后，结果好像变成了番石榴。不去冒险吗？（L:番石榴可以指“不好的”或是手榴弹的昵称(形似)）"
 
     # 莲 「余計なお世話だ！」
     lian "多管闲事！"
@@ -1200,7 +1271,12 @@ label scene13:
     # 参考资料：https://zh.wikipedia.org/wiki/%E9%97%9C%E5%B3%B6
     show 真冬_水着_基本_無表情 at love69_left with dissolve
     voice "voice/真冬/maf_a1_1310.ogg"
-    dong 真冬_水着_基本_無表情 "番石榴…关岛！（L:谐音梗）"
+    # dong 真冬_水着_基本_無表情 "番石榴…关岛！（L:谐音梗）"
+    if persistent.luckykeeperSay == "shutup":
+        dong 真冬_水着_基本_無表情 "番石榴…关岛！"
+    else:
+        dong 真冬_水着_基本_無表情 "番石榴…关岛！（L:谐音梗）"
+
     hide 真冬_水着_基本_目閉じ
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -1313,7 +1389,12 @@ label scene13:
     # 心爱 「ココア１３（サーティーン）」
     show 心愛_水着_基本_ゴルゴ at love69_right with dissolve
     voice "voice/心愛/cca_a1_1639.ogg"
-    ai 心愛_水着_基本_ゴルゴ "这里是１３（Thirteen）（L:原文「ココア１３」杜克的签名写成假名是13个字，前面的发音和心爱cocoa一样，前面用过这个梗，和core冰核也很像，和可可也是一个音）"
+    # ai 心愛_水着_基本_ゴルゴ "这里是１３（Thirteen）（L:原文「ココア１３」杜克的签名写成假名是13个字，前面的发音和心爱cocoa一样，前面用过这个梗，和core冰核也很像，和可可也是一个音）"
+    if persistent.luckykeeperSay == "shutup":
+        ai 心愛_水着_基本_ゴルゴ "这里是１３（Thirteen）"
+    else:
+        ai 心愛_水着_基本_ゴルゴ "这里是１３（Thirteen）（L:原文「ココア１３」杜克的签名写成假名是13个字，前面的发音和心爱cocoa一样，前面用过这个梗，和core冰核也很像，和可可也是一个音）"
+
     hide 心愛_水着_基本_嬉しい
 
     # 莲 「デューク繋がりかよ！　しかもちょろっとさっき使ったじゃねぇか！」
@@ -1333,7 +1414,11 @@ label scene13:
         yalign -0.09
         linear 0.3 xalign 0.507
     voice "voice/真冬/maf_a1_1314.ogg"
-    dong 真冬_水着_基本_目閉じ "我劈！（L:开场的时候在教室里两人也这么搞过捏）"
+    # dong 真冬_水着_基本_目閉じ "我劈！（L:开场的时候在教室里两人也这么搞过捏）"
+    if persistent.luckykeeperSay == "full":
+        dong 真冬_水着_基本_目閉じ "我劈！（L:开场的时候在教室里两人也这么搞过捏）"
+    else:
+        dong 真冬_水着_基本_目閉じ "我劈！"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -1468,7 +1553,11 @@ label scene13:
         linear 0.15 yalign -0.02
         linear 0.15 yalign -0.09
     voice "voice/心愛/cca_a1_1647.ogg"
-    ai 心愛_水着_基本_覚醒 "这是——大拇指的——Fire！（L:这里玩的是13年的親指戦士的梗，感兴趣的可以搜一下，还有指相撲这样的游戏）"
+    # ai 心愛_水着_基本_覚醒 "这是——大拇指的——Fire！（L:这里玩的是13年的親指戦士的梗，感兴趣的可以搜一下，还有指相撲这样的游戏）"
+    if persistent.luckykeeperSay == "shutup":
+        ai 心愛_水着_基本_覚醒 "这是——大拇指的——Fire！"
+    else:
+        ai 心愛_水着_基本_覚醒 "这是——大拇指的——Fire！（L:这里玩的是13年的親指戦士的梗，感兴趣的可以搜一下，还有指相撲这样的游戏）"
 
     # 音效：惊
     play sound "voice/effect/クリティカルヒット2.ogg"
@@ -1481,7 +1570,12 @@ label scene13:
     # 真冬 「素手でいった…」
     show 真冬_水着_基本_無表情 at love69_left with dissolve
     voice "voice/真冬/maf_a1_1317.ogg"
-    dong 真冬_水着_基本_無表情 "赤手空拳…（L:也该也是玩这个梗，不过我没看过所以不懂，有知道的老哥可以去GitHub提Issues）"
+    # dong 真冬_水着_基本_無表情 "赤手空拳…（L:也该也是玩这个梗，不过我没看过所以不懂，有知道的老哥可以去GitHub提Issues）"
+    if persistent.luckykeeperSay == "shutup":
+        dong 真冬_水着_基本_無表情 "赤手空拳…"
+    else:
+        dong 真冬_水着_基本_無表情 "赤手空拳…（L:也该也是玩这个梗，不过我没看过所以不懂，有知道的老哥可以去GitHub提Issues）"
+
     hide 真冬_水着_基本_微笑み
 
     # 莲 「ゴールドフィンガーですかね…」
@@ -1571,7 +1665,11 @@ label scene13:
     # 莲 「コナッツミルクの…コナッツ臭さだけ抽出した味だよ…」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%B3%E3%82%B3%E3%83%8A%E3%83%83%E3%83%84%E3%83%9F%E3%83%AB%E3%82%AF
     # lian "这是Coconut milk的……只提取了椰子味的味道……（L:Coconut milk，椰浆，是从成熟的椰子的椰肉中榨出来的奶白色液体，椰浆加糖和水制作饮料才是平时喝的椰奶）"
-    lian "这是Coconut milk的……只留下了椰子本身的味道……（L:Coconut milk，椰浆，是从成熟的椰子的椰肉中榨出来的奶白色液体，椰浆加糖和水制作饮料才是平时喝的椰奶）"
+    # lian "这是Coconut milk的……只留下了椰子本身的味道……（L:Coconut milk，椰浆，是从成熟的椰子的椰肉中榨出来的奶白色液体，椰浆加糖和水制作饮料才是平时喝的椰奶）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "这是Coconut milk的……只留下了椰子本身的味道……"
+    else:
+        lian "这是Coconut milk的……只留下了椰子本身的味道……（L:Coconut milk，椰浆，是从成熟的椰子的椰肉中榨出来的奶白色液体，椰浆加糖和水制作饮料才是平时喝的椰奶）"
 
     # 真冬 「ごく…ごく…ごく…」
     show 真冬_水着_基本_目閉じ at love69_left with dissolve
@@ -1583,7 +1681,12 @@ label scene13:
     show 真冬_水着_基本_無表情 at love69_left with dissolve
     voice "voice/真冬/maf_a1_1322.ogg"
     # dong 真冬_水着_基本_無表情 "…嗯，的确如此，不过还是可以的（L:我也不了解，椰子水明明挺好喝的啊，不过椰子水是喝嫩椰子的，老椰子的水没有嫩的好喝，应该只是不习惯吧，或者，有没有一种可能，她们拿的是个坏椰子……）"
-    dong 真冬_水着_基本_無表情 "…嗯，的确如此，不过我还是可以接受的（L:我也不了解，椰子水明明挺好喝的啊，不过椰子水是喝嫩椰子的，老椰子的水没有嫩的好喝，应该只是不习惯吧，或者，有没有一种可能，她们拿的是个坏椰子……）"
+    # dong 真冬_水着_基本_無表情 "…嗯，的确如此，不过我还是可以接受的（L:我也不了解，椰子水明明挺好喝的啊，不过椰子水是喝嫩椰子的，老椰子的水没有嫩的好喝，应该只是不习惯吧，或者，有没有一种可能，她们拿的是个坏椰子……）"
+    if persistent.luckykeeperSay == "full":
+        dong 真冬_水着_基本_無表情 "…嗯，的确如此，不过我还是可以接受的（L:我也不了解，椰子水明明挺好喝的啊，不过椰子水是喝嫩椰子的，老椰子的水没有嫩的好喝，应该只是不习惯吧，或者，有没有一种可能，她们拿的是个坏椰子……）"
+    else:
+        dong 真冬_水着_基本_無表情 "…嗯，的确如此，不过我还是可以接受的"
+
     hide 真冬_水着_基本_目閉じ
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -1683,7 +1786,11 @@ label scene13:
 
     # 真冬 「ほら、お兄ちゃん。さっさと水に入っちゃいなさいよ」
     voice "voice/真冬/maf_a1_1325.ogg"
-    dong 真冬_水着_基本_微笑み "喂，欧尼酱，快来下水啊（L:RA3直美“何不下水与我同乐”既视感）"
+    # dong 真冬_水着_基本_微笑み "喂，欧尼酱，快来下水啊（L:RA3直美“何不下水与我同乐”既视感）"
+    if persistent.luckykeeperSay == "full":
+        dong 真冬_水着_基本_微笑み "喂，欧尼酱，快来下水啊（L:RA3直美“何不下水与我同乐”既视感）"
+    else:
+        dong 真冬_水着_基本_微笑み "喂，欧尼酱，快来下水啊"
 
     # 莲 「おれは…今砂浜の感触を確かめている…」
     lian "我…现在正在确认沙滩的触感…"
@@ -1793,7 +1900,11 @@ label scene13:
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%AB%E3%82%AC%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%90%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3
     # 参考资料：https://bgm.tv/character/64372
     voice "voice/真冬/maf_a1_1330.ogg"
-    dong 真冬_水着_基本_目閉じ "好，拜拜，Rugal（L: 卢卡尔，SNK的拳皇系列中出现的虚构人物，最早出现在拳皇94）"
+    # dong 真冬_水着_基本_目閉じ "好，拜拜，Rugal（L: 卢卡尔，SNK的拳皇系列中出现的虚构人物，最早出现在拳皇94）"
+    if persistent.luckykeeperSay == "shutup":
+        dong 真冬_水着_基本_目閉じ "好，拜拜，Rugal"
+    else:
+        dong 真冬_水着_基本_目閉じ "好，拜拜，Rugal（L: 卢卡尔，SNK的拳皇系列中出现的虚构人物，最早出现在拳皇94）"
 
     # 莲 「なんて名前つけてるんだ」
     lian "为什么要给它取名字呢？"
@@ -1805,14 +1916,22 @@ label scene13:
 
     # 心爱 「私もギースが欲しい！」
     voice "voice/心愛/cca_a1_1664.ogg"
-    ai 心愛_水着_基本_笑顔 "我也想要Geese！（L:吉斯，SNK的饿狼传说系列中出现的虚构人物，最早出现饿狼传说(一代,1991)）"
+    # ai 心愛_水着_基本_笑顔 "我也想要Geese！（L:吉斯，SNK的饿狼传说系列中出现的虚构人物，最早出现饿狼传说(一代,1991)）"
+    if persistent.luckykeeperSay == "shutup":
+        ai 心愛_水着_基本_笑顔 "我也想要Geese！"
+    else:
+        ai 心愛_水着_基本_笑顔 "我也想要Geese！（L:吉斯，SNK的饿狼传说系列中出现的虚构人物，最早出现饿狼传说(一代,1991)）"
 
     # 莲 「なんでいちいち強そうで悪そうな名前つけるんだよ」
     lian "为什么每个都要起一个看上去很强大很坏的名字呢？"
 
     # 心爱 「レイジングストーーーーーム！」
     voice "voice/心愛/cca_a1_1665.ogg"
-    ai 心愛_水着_基本_にっこり "RAZING STORM！（L:2009年万代南梦宫的街机光枪射击游戏）"
+    # ai 心愛_水着_基本_にっこり "RAZING STORM！（L:2009年万代南梦宫的街机光枪射击游戏）"
+    if persistent.luckykeeperSay == "shutup":
+        ai 心愛_水着_基本_にっこり "RAZING STORM！"
+    else:
+        ai 心愛_水着_基本_にっこり "RAZING STORM！（L:2009年万代南梦宫的街机光枪射击游戏）"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1822,7 +1941,11 @@ label scene13:
     # 真冬 「ジェノサーイド・カッタァー！」
     # 参考资料：https://w.atwiki.jp/niconicomugen/pages/88.html
     voice "voice/真冬/maf_a1_1331.ogg"
-    dong 真冬_水着_基本_ジト目 "Genocide·cutter！（L:前面真冬提到的卢卡尔的象征必杀技）"
+    # dong 真冬_水着_基本_ジト目 "Genocide·cutter！（L:前面真冬提到的卢卡尔的象征必杀技）"
+    if persistent.luckykeeperSay == "shutup":
+        dong 真冬_水着_基本_ジト目 "Genocide·cutter！"
+    else:
+        dong 真冬_水着_基本_ジト目 "Genocide·cutter！（L:前面真冬提到的卢卡尔的象征必杀技）"
 
     # nil 「バシャァッ！」
     "啪嗒！"
@@ -1838,7 +1961,11 @@ label scene13:
     # 心爱 「来いよヤマザキ！」
     # 参考资料:https://ja.wikipedia.org/wiki/%E5%B1%B1%E5%B4%8E%E7%AB%9C%E4%BA%8C
     voice "voice/心愛/cca_a1_1666.ogg"
-    ai 心愛_水着_基本_真顔 "来吧山崎！（L:指山崎龙二，“饿狼传说系列”与“拳皇系列”中的出场的虚构角色）"
+    # ai 心愛_水着_基本_真顔 "来吧山崎！（L:指山崎龙二，“饿狼传说系列”与“拳皇系列”中的出场的虚构角色）"
+    if persistent.luckykeeperSay == "shutup":
+        ai 心愛_水着_基本_真顔 "来吧山崎！"
+    else:
+        ai 心愛_水着_基本_真顔 "来吧山崎！（L:指山崎龙二，“饿狼传说系列”与“拳皇系列”中的出场的虚构角色）"
 
     # 莲 「違うのがいです」
     lian "这不是一回事啊"
@@ -1915,7 +2042,12 @@ label scene13:
     # 参考资料：https://zh.wikipedia.org/wiki/%E6%97%A5%E5%BC%8F%E7%82%92%E9%BA%B5
     show 真冬_水着_基本_無表情 at love69_left with dissolve
     voice "voice/真冬/maf_a1_1334.ogg"
-    dong 真冬_水着_基本_無表情 "日式炒面（L:是日本的一种面食，其做法是将中华面和猪肉等肉类及卷心菜、胡萝卜、洋葱、豆芽等蔬菜类食物炒制而成。日式炒面一般多使用辣酱油调味，但近年来也有不少使用盐来调味的做法）"
+    # dong 真冬_水着_基本_無表情 "日式炒面（L:是日本的一种面食，其做法是将中华面和猪肉等肉类及卷心菜、胡萝卜、洋葱、豆芽等蔬菜类食物炒制而成。日式炒面一般多使用辣酱油调味，但近年来也有不少使用盐来调味的做法）"
+    if persistent.luckykeeperSay == "shutup":
+        dong 真冬_水着_基本_無表情 "日式炒面"
+    else:
+        dong 真冬_水着_基本_無表情 "日式炒面（L:是日本的一种面食，其做法是将中华面和猪肉等肉类及卷心菜、胡萝卜、洋葱、豆芽等蔬菜类食物炒制而成。日式炒面一般多使用辣酱油调味，但近年来也有不少使用盐来调味的做法）"
+
     hide 真冬_水着_基本_まったり
 
     # 莲 「ハワイに有りそうなもんにしてくんねぇかな」
@@ -2149,7 +2281,11 @@ label scene13:
     hide 心愛_水着_基本_不機嫌
 
     # 莲 「ハウス」
-    lian "House（L:这里我没get到捏……应该是让心爱AB回去吧）"
+    # lian "House（L:这里我没get到捏……应该是让心爱AB回去吧）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "House"
+    else:
+        lian "House（L:这里我没get到捏……应该是让心爱AB回去吧）"
 
     # 心爱AB 「『あい』」
     # 14nm++++++++++++ 人物表++++++++++++++
@@ -2277,7 +2413,11 @@ label scene13:
     # 参考资料：https://www.ielove.co.jp/column/contents/03177/
     # 购买月球土地：https://lunarembassy.com/product/buy-land-on-the-moon/
     voice "voice/心愛/cca_a1_1687.ogg"
-    ai 心愛_水着_基本_笑顔 "明明是可以买到月球土地的社会……（L:月球土地还真可以买？！查了一下，在The Lunar Embassy.LLC，$24.99 – $499.80一亩，我大为震惊，不过正经说，应该还是干不过国际公约和共识）"
+    # ai 心愛_水着_基本_笑顔 "明明是可以买到月球土地的社会……（L:月球土地还真可以买？！查了一下，在The Lunar Embassy.LLC，$24.99 – $499.80一亩，我大为震惊，不过正经说，应该还是干不过国际公约和共识）"
+    if persistent.luckykeeperSay == "shutup":
+        ai 心愛_水着_基本_笑顔 "明明是可以买到月球土地的社会……"
+    else:
+        ai 心愛_水着_基本_笑顔 "明明是可以买到月球土地的社会……（L:月球土地还真可以买？！查了一下，在The Lunar Embassy.LLC，$24.99 – $499.80一亩，我大为震惊，不过正经说，应该还是干不过国际公约和共识）"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -2294,14 +2434,22 @@ label scene13:
 
     # 真冬 「グラスにお花をさすのは夢でした…ハングオーバーが全米ナンバーワンになった日から憧れてました」
     voice "voice/真冬/maf_a1_1346.ogg"
-    dong 真冬_水着_基本_無表情 "把花插在玻璃杯里是我的梦想……从『The Hangover』成为美国第一的那天起（L:《宿醉》，2009-06-05，一部发生在赌城拉斯维加斯的喜剧电影，美国金球奖音乐喜剧类最佳影片）"
+    # dong 真冬_水着_基本_無表情 "把花插在玻璃杯里是我的梦想……从『The Hangover』成为美国第一的那天起（L:《宿醉》，2009-06-05，一部发生在赌城拉斯维加斯的喜剧电影，美国金球奖音乐喜剧类最佳影片）"
+    if persistent.luckykeeperSay == "shutup":
+        dong 真冬_水着_基本_無表情 "把花插在玻璃杯里是我的梦想……从『The Hangover』成为美国第一的那天起"
+    else:
+        dong 真冬_水着_基本_無表情 "把花插在玻璃杯里是我的梦想……从『The Hangover』成为美国第一的那天起（L:《宿醉》，2009-06-05，一部发生在赌城拉斯维加斯的喜剧电影，美国金球奖音乐喜剧类最佳影片）"
 
     # 莲 「そんなシーンあったっけ？」
     lian "有那样的场景吗？"
 
     # 真冬 「２本目でね」
     voice "voice/真冬/maf_a1_1347.ogg"
-    dong 真冬_水着_基本_無表情 "Part II吧（L:The Hangover Part II，《宿醉2》，2011-05-26，和《宿醉》一样，都是以一场婚礼开始）"
+    # dong 真冬_水着_基本_無表情 "Part II吧（L:The Hangover Part II，《宿醉2》，2011-05-26，和《宿醉》一样，都是以一场婚礼开始）"
+    if persistent.luckykeeperSay == "shutup":
+        dong 真冬_水着_基本_無表情 "Part II吧"
+    else:
+        dong 真冬_水着_基本_無表情 "Part II吧（L:The Hangover Part II，《宿醉2》，2011-05-26，和《宿醉》一样，都是以一场婚礼开始）"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -2744,7 +2892,11 @@ label scene13:
     # 旁白 「それからというもの、お三方は、まったりイチャイチャムードに入っちゃったので、こでをMC蓮くんにお返しまーす」
     # 参考资料：MC https://ja.wikipedia.org/wiki/MC
     voice "voice/想瑠/sol_a1_0204.ogg"
-    aside "在那之后，三位就一直沉浸在一种悠闲的无拘无束的气氛中，所以我把MC还给了莲君（L:MC在这里指主持人、司仪）"
+    # aside "在那之后，三位就一直沉浸在一种悠闲的无拘无束的气氛中，所以我把MC还给了莲君（L:MC在这里指主持人、司仪）"
+    if persistent.luckykeeperSay == "shutup":
+        aside "在那之后，三位就一直沉浸在一种悠闲的无拘无束的气氛中，所以我把MC还给了莲君"
+    else:
+        aside "在那之后，三位就一直沉浸在一种悠闲的无拘无束的气氛中，所以我把MC还给了莲君（L:MC在这里指主持人、司仪）"
 
     # 莲 「お疲れ様でした」
     lian "辛苦了"
@@ -2997,7 +3149,11 @@ label scene13:
 
     # nil 「俺はそう言いながら、海パンの中から二つのエンゲージリングが入った箱を取り出した。」
     # 参考资料：https://ntwmachine.com/swim-suit#toc2
-    "我一边这样说着，一边从泳装里拿出了装有两个订婚戒指的盒子（L:海パン，就是男士穿的泳装的一个类型，类似游泳短裤）"
+    # "我一边这样说着，一边从泳装里拿出了装有两个订婚戒指的盒子（L:海パン，就是男士穿的泳装的一个类型，类似游泳短裤）"
+    if persistent.luckykeeperSay == "shutup":
+        "我一边这样说着，一边从泳装里拿出了装有两个订婚戒指的盒子"
+    else:
+        "我一边这样说着，一边从泳装里拿出了装有两个订婚戒指的盒子（L:海パン，就是男士穿的泳装的一个类型，类似游泳短裤）"
 
     # 真冬 「どこから取り出してるのよ…」
     show 真冬_水着_基本_ジト目 at love69_left with dissolve
@@ -3343,12 +3499,21 @@ label scene13:
 
     # 外人さん（外国人先生） 「Here come's shuffle time！！！！Come on Dejay！！！」
     # 这里就叫老外D吧 ForeignerD foreignerd
-    foreignerd "Here come's shuffle time！！！！Come on Dejay！！！（L:shuffle，(笨拙或尴尬地)把脚动来动去; 坐立不安；Dejay：DJ）"
+    # foreignerd "Here come's shuffle time！！！！Come on Dejay！！！（L:shuffle，(笨拙或尴尬地)把脚动来动去; 坐立不安；Dejay：DJ）"
+    if persistent.luckykeeperSay == "shutup":
+        foreignerd "Here come's shuffle time！！！！Come on Dejay！！！"
+    else:
+        foreignerd "Here come's shuffle time！！！！Come on Dejay！！！（L:shuffle，(笨拙或尴尬地)把脚动来动去; 坐立不安；Dejay：DJ）"
+
 
     # DJ 「Okay boys and girls！Live,Love,Laugh,and be happy！！Check it out！」
     # LTT视频康这里：https://www.bilibili.com/video/BV1d5411E7ua 06:52
     # 精准空降：https://www.bilibili.com/video/BV1d5411E7ua?t=404.7
-    dj "Okay boys and girls！Live,Love,Laugh,and be happy！！Check it out！（L:看到Live,Love,Laugh，想到LTT的Dennis的Live，Laugh，Liao了，活，笑，廖2333）"
+    # dj "Okay boys and girls！Live,Love,Laugh,and be happy！！Check it out！（L:看到Live,Love,Laugh，想到LTT的Dennis的Live，Laugh，Liao了，活，笑，廖2333）"
+    if persistent.luckykeeperSay == "full":
+        dj "Okay boys and girls！Live,Love,Laugh,and be happy！！Check it out！（L:看到Live,Love,Laugh，想到LTT的Dennis的Live，Laugh，Liao了，活，笑，廖2333）"
+    else:
+        dj "Okay boys and girls！Live,Love,Laugh,and be happy！！Check it out！"
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -3422,7 +3587,11 @@ label scene13:
 
     # nil 「心愛と真冬は、それぞれもう片方の手でシャカ（アロハの手）を作った。」
     # 参考资料：https://www.lanilanihawaii.com/column/sharing-my-hawaii/shaka-sign.html
-    "心爱和真冬分别用另一只手做了Shaka的手势(ALOHA的手势）（L:对原作注释补充一下，Shaka的手势除了是ALOHA的手势和意思之外，还可以表示对他人的同情和相互尊重的感觉）"
+    # "心爱和真冬分别用另一只手做了Shaka的手势(ALOHA的手势）（L:对原作注释补充一下，Shaka的手势除了是ALOHA的手势和意思之外，还可以表示对他人的同情和相互尊重的感觉）"
+    if persistent.luckykeeperSay == "shutup":
+        "心爱和真冬分别用另一只手做了Shaka的手势(ALOHA的手势）"
+    else:
+        "心爱和真冬分别用另一只手做了Shaka的手势(ALOHA的手势）（L:对原作注释补充一下，Shaka的手势除了是ALOHA的手势和意思之外，还可以表示对他人的同情和相互尊重的感觉）"
 
     # nil 「それぞれの指には、婚約指輪に埋め込まれた宝石が、イルミネーションと太陽に照らされ虹色に輝いていた。」
     "在各自的手指上，订婚戒指中嵌入的宝石，在灯光和阳光的照耀下闪耀着彩虹色的光芒"
@@ -3974,7 +4143,12 @@ label scene13:
     # 参考资料：https://kotobank.jp/word/%E6%97%85%E3%81%AE%E6%81%A5%E3%81%AF%E6%8E%BB%E3%81%8D%E6%8D%A8%E3%81%A6-562202
     show リオン_基本_杖_にっこり at love69_lion_center with dissolve
     voice "voice/リオン/ron_a1_1055.ogg"
-    lion リオン_基本_杖_にっこり "嘿嘿嘿，日本有句谚语，旅行的时候就把羞耻丢掉吧♪（L:旅行的时候身边没有认识的人，所以任何尴尬都只限于当下。 此外，旅行带来的自由感使人感到解放）"
+    # lion リオン_基本_杖_にっこり "嘿嘿嘿，日本有句谚语，旅行的时候就把羞耻丢掉吧♪（L:旅行的时候身边没有认识的人，所以任何尴尬都只限于当下。 此外，旅行带来的自由感使人感到解放）"
+    if persistent.luckykeeperSay == "shutup":
+        lion リオン_基本_杖_にっこり "嘿嘿嘿，日本有句谚语，旅行的时候就把羞耻丢掉吧♪"
+    else:
+        lion リオン_基本_杖_にっこり "嘿嘿嘿，日本有句谚语，旅行的时候就把羞耻丢掉吧♪（L:旅行的时候身边没有认识的人，所以任何尴尬都只限于当下。 此外，旅行带来的自由感使人感到解放）"
+
     hide リオン_基本_杖_微笑み
 
     # nil 「リオンは余裕の表情を崩さないが、心愛も真冬も、そして俺も、正直恥ずかしかった。」
@@ -4088,7 +4262,11 @@ label scene13:
 
     # 里昂 「はいよー！　もってけ泥棒！」
     voice "voice/リオン/ron_a1_1057.ogg"
-    lion リオン_基本_杖_にっこり "好哒——！拿着吧小偷！（L:没大看懂，个人感觉可能和二周目剧情有关）"
+    # lion リオン_基本_杖_にっこり "好哒——！拿着吧小偷！（L:没大看懂，个人感觉可能和二周目剧情有关）"
+    if persistent.luckykeeperSay == "shutup":
+        lion リオン_基本_杖_にっこり "好哒——！拿着吧小偷！"
+    else:
+        lion リオン_基本_杖_にっこり "好哒——！拿着吧小偷！（L:没大看懂，个人感觉可能和二周目剧情有关）"
 
     # nil 「リオンはニッコリと微笑んで心愛と俺と真冬に例のアイスを手渡した。」
     "里昂微笑着把那份冰淇淋交给了我和心爱还有真冬"
@@ -4360,10 +4538,18 @@ label scene13:
 
     # 里昂 「アディオス・アミーゴ！aloha！」
     voice "voice/リオン/ron_a1_1065.ogg"
-    lion リオン_基本_杖_にっこり "Adiós・amigo！ALOHA！（L:前面是之前提到的西班牙语“再会，朋友”，后面是刚才提到的夏威夷语ALOHA）"
+    # lion リオン_基本_杖_にっこり "Adiós・amigo！ALOHA！（L:前面是之前提到的西班牙语“再会，朋友”，后面是刚才提到的夏威夷语ALOHA）"
+    if persistent.luckykeeperSay == "shutup":
+        lion リオン_基本_杖_にっこり "Adiós・amigo！ALOHA！"
+    else:
+        lion リオン_基本_杖_にっこり "Adiós・amigo！ALOHA！（L:前面是之前提到的西班牙语“再会，朋友”，后面是刚才提到的夏威夷语ALOHA）"
 
     # nil 「俺達は溢れ出る幸福感の中で、リオンに向けてシャカマークを振って、ホテルへと走りだした。」
-    "我们在满溢的幸福感中，朝着里昂挥动着Shaka的手势，向酒店跑去（L：刚才也提到过，Shaka的手势表示ALOHA的意思）"
+    # "我们在满溢的幸福感中，朝着里昂挥动着Shaka的手势，向酒店跑去（L：刚才也提到过，Shaka的手势表示ALOHA的意思）"
+    if persistent.luckykeeperSay == "shutup":
+        "我们在满溢的幸福感中，朝着里昂挥动着Shaka的手势，向酒店跑去"
+    else:
+        "我们在满溢的幸福感中，朝着里昂挥动着Shaka的手势，向酒店跑去（L：刚才也提到过，Shaka的手势表示ALOHA的意思）"
 
     # 场景暂时切回沙滩
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
