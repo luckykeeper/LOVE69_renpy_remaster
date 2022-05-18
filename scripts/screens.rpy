@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月7日
+# 修订日期 2022年5月18日
 
 ################################################################################
 ## 初始化
@@ -628,7 +628,7 @@ screen main_menu():
 
     # Extra btn 的 vbox
     ## Extra 涉及到周目，由可变的 btn 组成，根据周目变量变化
-    ## Extra 功能待做
+    ## Extra 功能做完喽
     vbox:
         # 定位
         xalign 0.891
@@ -2666,14 +2666,15 @@ screen music_room:
         selected_hover "gui/music_room/btn_site_one.png"
         action OpenURL("http://spriterecordings.upper.jp/EmotiveBrilliance/")
 
-    # 01_heartbeat
-    imagebutton:
-        xalign 0.0700899
-        yalign 0.059
-        idle "gui/music_room/btn_bgm01_off.png"
-        hover "gui/music_room/btn_bgm01_onover.png"
-        selected_idle "gui/music_room/btn_bgm01_on.png"
-        action mr.Play("bgm/bgm01.ogg")
+    # 2022年5月18日 发现这里写重了一次
+    # # 01_heartbeat
+    # imagebutton:
+    #     xalign 0.0700899
+    #     yalign 0.059
+    #     idle "gui/music_room/btn_bgm01_off.png"
+    #     hover "gui/music_room/btn_bgm01_onover.png"
+    #     selected_idle "gui/music_room/btn_bgm01_on.png"
+    #     action mr.Play("bgm/bgm01.ogg")
 
     # 01_heartbeat
     imagebutton:

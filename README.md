@@ -28,3 +28,7 @@
 
 - 更新 Scene06 脚本，添加一处梗的解释（真冬哼的一句歌，德沃夏克-自新大陆交响曲），感谢B站[@**Karma_0xCC**](https://space.bilibili.com/12020130)
 
+### 2022-05-18
+
+- 修复 Extra-Music 中 01_heartbeat 的按钮重复写了两次的问题（Ver1.0 中，这个问题不会造成任何 bug ，但是这个问题会导致代码冗余），修复情况见 screens.rpy#L2669
+
