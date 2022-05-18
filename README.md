@@ -30,5 +30,5 @@
 
 ### 2022-05-18
 
-- 修复 Extra-Music 中 01_heartbeat 的按钮重复写了两次的问题（Ver1.0 中，这个问题不会造成任何 bug ，但是这个问题会导致代码冗余），修复情况见 screens.rpy#L2669
+- 修复 Extra-Music 中 01_heartbeat 的按钮重复写了两次的问题（Ver1.0 中，这个问题不会造成任何 bug ，但是这个问题会导致代码冗余），修复情况见 screens.rpy#L2669 ，[本次提交详情](https://github.com/luckykeeper/LOVE69_renpy_remaster/commit/da8c40d2eb6d9a7d0d6c30e3978c34ad73c48092?diff=split)
 
