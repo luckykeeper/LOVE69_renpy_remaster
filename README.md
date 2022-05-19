@@ -36,3 +36,5 @@
 
 - 调整了 Scene19 中的一句的语序，修正了一处拼写错误，详见[提交8d33e290c6bec551b4dfd46a5c4e48a322dbb1a8](https://github.com/luckykeeper/LOVE69_renpy_remaster/commit/8d33e290c6bec551b4dfd46a5c4e48a322dbb1a8)
 - 修正了 Scene20 中的一处拼写问题，详见[提交b0e930aad4b67aa6df3132745dcede1f5e307374](https://github.com/luckykeeper/LOVE69_renpy_remaster/commit/b0e930aad4b67aa6df3132745dcede1f5e307374)
+- 完成“吐槽可关闭”的功能，吐槽模式可选（全部开启/仅保留梗/全部关闭），见 [#11](https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/11)
+
