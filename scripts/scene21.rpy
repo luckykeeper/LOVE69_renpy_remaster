@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月1日
+# 修订日期 2022年5月19日
 
 # 当前流程：All Done!
 
@@ -26,7 +26,11 @@ label scene21:
     # 参考资料：https://www.bilibili.com/video/BV1i64y1e7N9
     show リオン_私服_基本_にっこり at love69_lion_center with dissolve
     voice "voice/リオン/ron_a1_0739.ogg"
-    lion リオン_私服_基本_にっこり "啊，就是这里，那家店（L:这是前面在摩天轮上提到的里昂要借的那家店铺，例のお店的这个表达很特殊，比如例のプール(那个泳池)、例のコンビニ(那个便利店)、例の電車(那个电车)等等，可以参考BV1i64y1e7N9）"
+    # lion リオン_私服_基本_にっこり "啊，就是这里，那家店（L:这是前面在摩天轮上提到的里昂要借的那家店铺，例のお店的这个表达很特殊，比如例のプール(那个泳池)、例のコンビニ(那个便利店)、例の電車(那个电车)等等，可以参考BV1i64y1e7N9）"
+    if persistent.luckykeeperSay == "shutup":
+        lion リオン_私服_基本_にっこり "啊，就是这里，那家店"
+    else:
+        lion リオン_私服_基本_にっこり "啊，就是这里，那家店（L:这是前面在摩天轮上提到的里昂要借的那家店铺，例のお店的这个表达很特殊，比如例のプール(那个泳池)、例のコンビニ(那个便利店)、例の電車(那个电车)等等，可以参考BV1i64y1e7N9）"
 
     # 莲 「ぬお…こは…」
     lian "这是……"
@@ -114,7 +118,11 @@ label scene21:
     "叮当叮当~"
 
     # 莲 「漫才の入りみたいなチャイムだな…」
-    lian "像是漫才表演开始的铃声啊……（L:漫才是日本的一种喜剧表演形式）"
+    # lian "像是漫才表演开始的铃声啊……（L:漫才是日本的一种喜剧表演形式）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "像是漫才表演开始的铃声啊……"
+    else:
+        lian "像是漫才表演开始的铃声啊……（L:漫才是日本的一种喜剧表演形式）"
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -216,7 +224,11 @@ label scene21:
     # nil 「コーラフロートを２つ」
     # 参考资料：https://www.amazon.cn/dp/B01M28ZDMT/ref=redir_mobile_desktop/462-6190816-7378460?_encoding=UTF8&dsc=1
     # "两杯Cola float（L:我说不上来是啥，想知道可以去百度查查，或者到游戏文件夹下找豆知识文档）"
-    "两杯Cola float（W:雪顶可乐，可乐和冰淇淋的混合饮品。Float又名ice cream soda，是一种冰淇淋和碳酸饮料的混合。）"
+    # "两杯Cola float（W:雪顶可乐，可乐和冰淇淋的混合饮品。Float又名ice cream soda，是一种冰淇淋和碳酸饮料的混合。）"
+    if persistent.luckykeeperSay == "shutup":
+        "两杯Cola float"
+    else:
+        "两杯Cola float（W:雪顶可乐，可乐和冰淇淋的混合饮品。Float又名ice cream soda，是一种冰淇淋和碳酸饮料的混合。）"
 
     # 店长 「かしこまりました。アイスとホットどちらにしましょう」
     show 店长_私服_微笑み at love69_wuye_left with dissolve
@@ -328,7 +340,12 @@ label scene21:
     # 店长 「は、冗談ですよ。ほら、本日のケーキ。ブラウニーのラズベリーソースあえです」
     show 店长_私服_にっこり at love69_wuye_left with dissolve
     voice "voice/霧葉/krh_a1_0074.ogg"
-    dinerowner 店长_私服_にっこり "哈哈，我开玩笑的。来，今天的蛋糕。加了覆盆子酱做的巧克力蛋糕（L:覆盆子就是一般意义上说的树莓，国内又叫红桑子、野草莓、蛇头莓、桑莓等，一周目这款蛋糕也有出现）"
+    # dinerowner 店长_私服_にっこり "哈哈，我开玩笑的。来，今天的蛋糕。加了覆盆子酱做的巧克力蛋糕（L:覆盆子就是一般意义上说的树莓，国内又叫红桑子、野草莓、蛇头莓、桑莓等，一周目这款蛋糕也有出现）"
+    if persistent.luckykeeperSay == "shutup":
+        dinerowner 店长_私服_にっこり "哈哈，我开玩笑的。来，今天的蛋糕。加了覆盆子酱做的巧克力蛋糕"
+    else:
+        dinerowner 店长_私服_にっこり "哈哈，我开玩笑的。来，今天的蛋糕。加了覆盆子酱做的巧克力蛋糕（L:覆盆子就是一般意义上说的树莓，国内又叫红桑子、野草莓、蛇头莓、桑莓等，一周目这款蛋糕也有出现）"
+
     hide 店长_私服_無表情
 
     # nil 「ひょこっと、カウンターテーブルの下から、白い皿に乗ったケーキを店主の女性は取り出した。」
@@ -381,12 +398,21 @@ label scene21:
     # 参考资料：http://ja.wikipedia.org/wiki/%E7%90%83%E7%A8%AE_(%E9%87%8E%E7%90%83)
     show 店长_私服_ニヤリ at love69_wuye_left with dissolve
     voice "voice/霧葉/krh_a1_0077.ogg"
-    dinerowner 店长_私服_ニヤリ "怎么样？我的球路多吧（L:原文球種，是棒球用语，指棒球投手投出的球路的类型和名称，有多种）"
+    # dinerowner 店长_私服_ニヤリ "怎么样？我的球路多吧（L:原文球種，是棒球用语，指棒球投手投出的球路的类型和名称，有多种）"
+    if persistent.luckykeeperSay == "shutup":
+        dinerowner 店长_私服_ニヤリ "怎么样？我的球路多吧"
+    else:
+        dinerowner 店长_私服_ニヤリ "怎么样？我的球路多吧（L:原文球種，是棒球用语，指棒球投手投出的球路的类型和名称，有多种）"
+
     hide 店长_私服_目閉じ
 
     # 莲 「スライダーも欲しいかな」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%80%E3%83%BC_(%E7%90%83%E7%A8%AE)
-    lian "你也想要一个Slider吗（L:滑球，投球时手指旋转并向下用力，球速介于曲球与快速球之间。又称作水平外曲球）"
+    # lian "你也想要一个Slider吗（L:滑球，投球时手指旋转并向下用力，球速介于曲球与快速球之间。又称作水平外曲球）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "你也想要一个Slider吗"
+    else:
+        lian "你也想要一个Slider吗（L:滑球，投球时手指旋转并向下用力，球速介于曲球与快速球之间。又称作水平外曲球）"
 
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.09
@@ -809,7 +835,11 @@ label scene21:
     liu 想瑠_スーツ_ぶわ "把我当客人吧！话说回来，其实我从刚才开始就在这儿！"
 
     # nil 「例のアイツでした。」
-    "是那个家伙（L:这里的原文例のアイツ，和最开始说的例のお店的用法是一样的）"
+    # "是那个家伙（L:这里的原文例のアイツ，和最开始说的例のお店的用法是一样的）"
+    if persistent.luckykeeperSay == "shutup":
+        "是那个家伙"
+    else:
+        "是那个家伙（L:这里的原文例のアイツ，和最开始说的例のお店的用法是一样的）"
 
     # 想瑠 「てめぇもてめぇだ葛城兄！ぬわーにが『俺達以外客いない』とかつぶやきやがって！』
     show 想瑠_スーツ_本気 at love69_xiangliu_center with dissolve
@@ -820,7 +850,11 @@ label scene21:
 
     # 莲 「店長。ペイントボールをあちらのお嬢さんに」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%9A%E3%82%A4%E3%83%B3%E3%83%88%E3%83%9C%E3%83%BC%E3%83%AB
-    lian "店长。把paintball送给那边的小姐（L:paintball，漆弹，打真人CS用的那个）"
+    # lian "店长。把paintball送给那边的小姐（L:paintball，漆弹，打真人CS用的那个）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "店长。把paintball送给那边的小姐"
+    else:
+        lian "店长。把paintball送给那边的小姐（L:paintball，漆弹，打真人CS用的那个）"
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1511,7 +1545,12 @@ label scene21:
     # nil 「土手の上でキャッチボールしたり。」
     # 参考资料：https://www.weblio.jp/content/%E5%9C%9F%E6%89%8B
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81%E3%83%9C%E3%83%BC%E3%83%AB
-    "尝试两个人用catchball的方法来做（L:日式英语，指两个人反复投掷和接住对方的球的动作）"
+    # "尝试两个人用catchball的方法来做（L:日式英语，指两个人反复投掷和接住对方的球的动作）"
+    if persistent.luckykeeperSay == "shutup":
+        "尝试两个人用catchball的方法来做"
+    else:
+        "尝试两个人用catchball的方法来做（L:日式英语，指两个人反复投掷和接住对方的球的动作）"
+
 
     # nil 「ピサの斜塔を手で支えるような写真を撮ったり。」
     "或者一起用手支撑着拍了比萨斜塔的照片"
@@ -1767,7 +1806,11 @@ label scene21:
 
     # 莲 「暗黒物質…ダークマター」
     # 参考资料：https://ja.wikipedia.org/wiki/%E6%9A%97%E9%BB%92%E7%89%A9%E8%B3%AA
-    lian "暗物质…Dark Matter（L:Dark Matter，暗物质，是指不与电磁力产生作用的物质，也就是不会吸收、反射或发出光。人们目前只能透过重力产生的效应得知，而且已经发现宇宙中有大量暗物质的存在）"
+    # lian "暗物质…Dark Matter（L:Dark Matter，暗物质，是指不与电磁力产生作用的物质，也就是不会吸收、反射或发出光。人们目前只能透过重力产生的效应得知，而且已经发现宇宙中有大量暗物质的存在）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "暗物质…Dark Matter"
+    else:
+        lian "暗物质…Dark Matter（L:Dark Matter，暗物质，是指不与电磁力产生作用的物质，也就是不会吸收、反射或发出光。人们目前只能透过重力产生的效应得知，而且已经发现宇宙中有大量暗物质的存在）"
 
     # 里昂 「愛の形…恋の行く末…」
     show リオン_帽子無し_杖_微笑み at love69_lion_center with dissolve
@@ -1779,8 +1822,14 @@ label scene21:
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC%E6%B3%A2
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%91%E3%83%8A%E3%82%A6%E3%82%A7%E3%83%BC%E3%83%96%E7%A0%94%E7%A9%B6%E6%89%80
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC%E9%9B%BB%E7%A3%81%E6%B3%A2
-    lian "Scalar wave……Pana-Wave Laboratory（L:Scalar wave，标量波，在数学和物理学中，标量场或标量值函数将标量值与空间中的每个点相关联，比如物理上的整个空间的温度分布、流体中的压力分布，"
-    luckykeeper "Pana-Wave Laboratory，日本的一个宗教团体，声称“标量电磁波对人体有害”，而标量电磁波专门用于伪科学。目前科学支持的电磁波是矢量波，而不是标量波）"
+    # lian "Scalar wave……Pana-Wave Laboratory（L:Scalar wave，标量波，在数学和物理学中，标量场或标量值函数将标量值与空间中的每个点相关联，比如物理上的整个空间的温度分布、流体中的压力分布，"
+    if persistent.luckykeeperSay == "shutup":
+        lian "Scalar wave……Pana-Wave Laboratory"
+    else:
+        lian "Scalar wave……Pana-Wave Laboratory（L:Scalar wave，标量波，在数学和物理学中，标量场或标量值函数将标量值与空间中的每个点相关联，比如物理上的整个空间的温度分布、流体中的压力分布，"
+        luckykeeper "Pana-Wave Laboratory，日本的一个宗教团体，声称“标量电磁波对人体有害”，而标量电磁波专门用于伪科学。目前科学支持的电磁波是矢量波，而不是标量波）"
+
+    # luckykeeper "Pana-Wave Laboratory，日本的一个宗教团体，声称“标量电磁波对人体有害”，而标量电磁波专门用于伪科学。目前科学支持的电磁波是矢量波，而不是标量波）"
 
     # 里昂 「キス…それは誓いの証」
     show リオン_帽子無し_杖_悲しい2 at love69_lion_center with dissolve
@@ -1790,7 +1839,11 @@ label scene21:
 
     # 莲 「海に沈んだ文明。アトランティスの謎」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%88%E3%83%A9%E3%83%B3%E3%83%86%E3%82%A3%E3%82%B9
-    lian "沉入大海的文明。亚特兰蒂斯之谜（L:意为“阿特拉斯的岛屿”，传说中拥有高度文明发展的古老大陆，最早的描述出现于古希腊哲学家柏拉图的著作《对话录》里，据称其在公元前一万年左右被大洪水所毁灭，沉入海底）"
+    # lian "沉入大海的文明。亚特兰蒂斯之谜（L:意为“阿特拉斯的岛屿”，传说中拥有高度文明发展的古老大陆，最早的描述出现于古希腊哲学家柏拉图的著作《对话录》里，据称其在公元前一万年左右被大洪水所毁灭，沉入海底）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "沉入大海的文明。亚特兰蒂斯之谜"
+    else:
+        lian "沉入大海的文明。亚特兰蒂斯之谜（L:意为“阿特拉斯的岛屿”，传说中拥有高度文明发展的古老大陆，最早的描述出现于古希腊哲学家柏拉图的著作《对话录》里，据称其在公元前一万年左右被大洪水所毁灭，沉入海底）"
 
     # 里昂 「……」
     show リオン_帽子無し_杖_微笑み at love69_lion_center with dissolve
@@ -2035,7 +2088,7 @@ label scene21:
     hide リオン_帽子無し_杖なし_悲しい2
 
     # 莲 「…まぁ、それは…そうだな。俺達二人にしかできないな」
-    lian "啊，那个……是啊。只有我们两个人才能做"
+    lian "啊，那个……是啊。只有我们两个人才能做的"
 
     # 里昂 「エッチっていうか…愛し合った結果…がエッチなわけで…。それで…えと…えと…私の…」
     show リオン_帽子無し_杖なし_悲しい2 at love69_lion_center with dissolve
@@ -2137,7 +2190,12 @@ label scene21:
     # 参考资料：https://jp.quora.com/%E9%87%8E%E7%90%83%E3%81%AE%E7%B7%B4%E7%BF%92%E3%81%A7%E5%8F%AB%E3%82%93%E3%81%A7%E3%81%84%E3%82%8B-%E3%83%90%E3%83%83%E3%83%81%E3%82%B3%E3%83%BC%E3%82%A4-%E3%81%A3%E3%81%A6%E3%81%A9%E3%81%86%E3%81%84%E3%81%86
     show リオン_帽子無し_杖なし_ニタァ at love69_lion_center with dissolve
     voice "voice/リオン/ron_a1_0978.ogg"
-    lion リオン_帽子無し_杖なし_ニタァ "Batch Koi！3——2！（L:前半原文ばっちこーい！是棒球用语，是自我激励用语）"
+    # lion リオン_帽子無し_杖なし_ニタァ "Batch Koi！3——2！（L:前半原文ばっちこーい！是棒球用语，是自我激励用语）"
+    if persistent.luckykeeperSay == "shutup":
+        lion リオン_帽子無し_杖なし_ニタァ "Batch Koi！3——2！"
+    else:
+        lion リオン_帽子無し_杖なし_ニタァ "Batch Koi！3——2！（L:前半原文ばっちこーい！是棒球用语，是自我激励用语）"
+
     hide リオン_帽子無し_杖なし_無表情_1
 
     # nil 「もぐ」
