@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月1日
+# 修订日期 2022年5月19日
 
 # 当前流程：All Done!
 
@@ -154,7 +154,11 @@ label scene22:
 
     # 想瑠 「まふまふまふまふ」
     voice "voice/想瑠/sol_a1_0205.ogg"
-    liu 想瑠_スーツ_照れ "嘛呼嘛呼嘛呼嘛呼（L:可怜的想瑠喵又没有地方放了捏233）"
+    # liu 想瑠_スーツ_照れ "嘛呼嘛呼嘛呼嘛呼（L:可怜的想瑠喵又没有地方放了捏233）"
+    if persistent.luckykeeperSay == "full":
+        liu 想瑠_スーツ_照れ "嘛呼嘛呼嘛呼嘛呼（L:可怜的想瑠喵又没有地方放了捏233）"
+    else:
+        liu 想瑠_スーツ_照れ "嘛呼嘛呼嘛呼嘛呼"
 
     # 莲 「全員集合してる…」
     lian "大家都集合了啊…"
@@ -512,7 +516,11 @@ label scene22:
     # 参考资料：https://www.weblio.jp/content/%E3%83%95%E3%83%AB%E3%83%81%E3%83%B3
     show 瑠那_私服_にっこり at love69_liuna_right with dissolve
     voice "voice/瑠那/lun_a1_0018.ogg"
-    na 瑠那_私服_にっこり "嗯，我觉得我是喜欢的那种！就像Jason Statham的金棒……（L:杰森·斯坦森，1967年7月26日－，是一位英国男演员、制片人和前模特，活跃于《两杆大烟枪》和《偷拐抢骗》、《宇宙追缉令》、《非常人贩》、《意大利工作室》、《快克杀手》、《机械师》、《速度与激情》系列电影）"
+    # na 瑠那_私服_にっこり "嗯，我觉得我是喜欢的那种！就像Jason Statham的金棒……（L:杰森·斯坦森，1967年7月26日－，是一位英国男演员、制片人和前模特，活跃于《两杆大烟枪》和《偷拐抢骗》、《宇宙追缉令》、《非常人贩》、《意大利工作室》、《快克杀手》、《机械师》、《速度与激情》系列电影）"
+    if persistent.luckykeeperSay == "shutup":
+        na 瑠那_私服_にっこり "嗯，我觉得我是喜欢的那种！就像Jason Statham的金棒……"
+    else:
+        na 瑠那_私服_にっこり "嗯，我觉得我是喜欢的那种！就像Jason Statham的金棒……（L:杰森·斯坦森，1967年7月26日－，是一位英国男演员、制片人和前模特，活跃于《两杆大烟枪》和《偷拐抢骗》、《宇宙追缉令》、《非常人贩》、《意大利工作室》、《快克杀手》、《机械师》、《速度与激情》系列电影）"
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -853,13 +861,23 @@ label scene22:
 
     # 心爱 「…リカバリーモードを起動します、各セクションのバックアップを開始」
     voice "voice/心愛/cca_a1_1830.ogg"
-    ai 心愛_私服_基本_覚醒04 "…………Recovery Mode启动中，各部分Backup开始（L:Recovery Mode是Linux系统的恢复模式，举例来说，基于Linux的Android就有，一般关机状态按住电源键+音量键+就能进入Recovery Mode，可以恢复出厂）"
+    # ai 心愛_私服_基本_覚醒04 "…………Recovery Mode启动中，各部分Backup开始（L:Recovery Mode是Linux系统的恢复模式，举例来说，基于Linux的Android就有，一般关机状态按住电源键+音量键+就能进入Recovery Mode，可以恢复出厂）"
+    if persistent.luckykeeperSay == "shutup":
+        ai 心愛_私服_基本_覚醒04 "…………Recovery Mode启动中，各部分Backup开始"
+    else:
+        ai 心愛_私服_基本_覚醒04 "…………Recovery Mode启动中，各部分Backup开始（L:Recovery Mode是Linux系统的恢复模式，举例来说，基于Linux的Android就有，一般关机状态按住电源键+音量键+就能进入Recovery Mode，可以恢复出厂）"
+
 
     # 心爱 「ぷるるるるるる！　ぷるるるるるるる！！ぷるるるるるるるる！！　ちっ、留守電か…」
     # 参考资料：https://www.ymobile.jp/support/faq/view/23550
     show 心愛_私服_基本_覚醒03 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_1831.ogg"
-    ai 心愛_私服_基本_覚醒03 "噗噜噜噜噜噜噜！噗噜噜噜噜噜噜！！噗噜噜噜噜噜噜噜噜！！切，答录机吗……（L:答录机是很有日本特色的手机功能，来电长时间无人接听自动接听电话并转入录音机，可以留言给电话的主人，中国手机有这个功能的不多，中兴手机有这个功能）"
+    # ai 心愛_私服_基本_覚醒03 "噗噜噜噜噜噜噜！噗噜噜噜噜噜噜！！噗噜噜噜噜噜噜噜噜！！切，答录机吗……（L:答录机是很有日本特色的手机功能，来电长时间无人接听自动接听电话并转入录音机，可以留言给电话的主人，中国手机有这个功能的不多，中兴手机有这个功能）"
+    if persistent.luckykeeperSay == "shutup":
+        ai 心愛_私服_基本_覚醒03 "噗噜噜噜噜噜噜！噗噜噜噜噜噜噜！！噗噜噜噜噜噜噜噜噜！！切，答录机吗……"
+    else:
+        ai 心愛_私服_基本_覚醒03 "噗噜噜噜噜噜噜！噗噜噜噜噜噜噜！！噗噜噜噜噜噜噜噜噜！！切，答录机吗……（L:答录机是很有日本特色的手机功能，来电长时间无人接听自动接听电话并转入录音机，可以留言给电话的主人，中国手机有这个功能的不多，中兴手机有这个功能）"
+
     hide 心愛_私服_基本_覚醒04
 
     # 心爱 「天井から…夥しい数のメラニン色素が降り注いで…夥しい数のメラニン…」
@@ -871,7 +889,12 @@ label scene22:
     # 心爱 「心愛ちゃんスイッチ！！！　イグニッション！！！」
     show 心愛_私服_基本_覚醒03 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_1833.ogg"
-    ai 心愛_私服_基本_覚醒03 "心爱酱switch！！！Ignition！！！（L:switch，开关；Ignition，点火）"
+    # ai 心愛_私服_基本_覚醒03 "心爱酱switch！！！Ignition！！！（L:switch，开关；Ignition，点火）"
+    if persistent.luckykeeperSay == "shutup":
+        ai 心愛_私服_基本_覚醒03 "心爱酱switch！！！Ignition！！！"
+    else:
+        ai 心愛_私服_基本_覚醒03 "心爱酱switch！！！Ignition！！！（L:switch，开关；Ignition，点火）"
+
     hide 心愛_私服_基本_覚醒04
 
     # nil 「カチッ」
@@ -925,7 +948,11 @@ label scene22:
     show リオン_基本_杖なし_にっこり at love69_lion_right
     with dissolve
     voice "voice/リオン/ron_a1_1075.ogg"
-    lion リオン_基本_杖なし_にっこり "Juck pot！！Yeah baby！！（L:这里原作前面的英文打错了，应该是Jackpot！，前面一周目心爱和真冬一起说过，Jackpot是正中头奖的意思，霓虹的英语水平……）"
+    # lion リオン_基本_杖なし_にっこり "Juck pot！！Yeah baby！！（L:这里原作前面的英文打错了，应该是Jackpot！，前面一周目心爱和真冬一起说过，Jackpot是正中头奖的意思，霓虹的英语水平……）"
+    if persistent.luckykeeperSay == "shutup":
+        lion リオン_基本_杖なし_にっこり "Juck pot！！Yeah baby！！"
+    else:
+        lion リオン_基本_杖なし_にっこり "Juck pot！！Yeah baby！！（L:这里原作前面的英文打错了，应该是Jackpot！，前面一周目心爱和真冬一起说过，Jackpot是正中头奖的意思，霓虹的英语水平……）"
 
     # nil 「パシィン！」
     "啪唧！"
@@ -957,7 +984,12 @@ label scene22:
     # 里昂 「おかえりおん」
     show リオン_基本_杖なし_微笑み at love69_lion_right with dissolve
     voice "voice/リオン/ron_a1_1076.ogg"
-    lion リオン_基本_杖なし_微笑み "欢迎回来（L:这句和下面真冬那句都玩了名字的梗）"
+    # lion リオン_基本_杖なし_微笑み "欢迎回来（L:这句和下面真冬那句都玩了名字的梗）"
+    if persistent.luckykeeperSay == "shutup":
+        lion リオン_基本_杖なし_微笑み "欢迎回来"
+    else:
+        lion リオン_基本_杖なし_微笑み "欢迎回来（L:这句和下面真冬那句都玩了名字的梗）"
+
     hide リオン_基本_杖なし_にっこり
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
