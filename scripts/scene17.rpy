@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月1日
+# 修订日期 2022年5月19日
 
 # 当前流程：All Done!
 
@@ -31,7 +31,11 @@ label scene17:
     lion リオン_基本_杖_ニタァ "好，这里就用那个吧。就像瞬间移动似的那个家伙"
 
     # 莲 「せーのっでジャンプするアレか！」
-    lian "就是那个会跳的东西嘛！（L:电视制作常用过场特效，主持人跳起来然后切换场景，如果日综或者片儿看多了应该知道）"
+    # lian "就是那个会跳的东西嘛！（L:电视制作常用过场特效，主持人跳起来然后切换场景，如果日综或者片儿看多了应该知道）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "就是那个会跳的东西嘛！"
+    else:
+        lian "就是那个会跳的东西嘛！（L:电视制作常用过场特效，主持人跳起来然后切换场景，如果日综或者片儿看多了应该知道）"
 
     # 里昂 「せーのっ」
     show リオン_基本_杖_驚き at love69_lion_center with dissolve
@@ -51,7 +55,11 @@ label scene17:
     # 里昂 「はい」
     # voice "voice/リオン/ron_a1_0075.ogg"
     show リオン_基本_杖_にっこり at love69_lion_center with dissolve
-    lion リオン_基本_杖_にっこり "好（L:这里原作就没有配音）"
+    # lion リオン_基本_杖_にっこり "好（L:这里原作就没有配音）"
+    if persistent.luckykeeperSay == "shutup":
+        lion リオン_基本_杖_にっこり "好"
+    else:
+        lion リオン_基本_杖_にっこり "好（L:这里原作就没有配音）"
 
     # 里昂 「ということで、やってきました」
     voice "voice/リオン/ron_a1_0075.ogg"
@@ -86,10 +94,18 @@ label scene17:
     "因为放学已经过了一段时间，所以错过了放学的高峰期，但是因为社团活动留下来的人好像还有"
 
     # nil 「あとは、もう少し小さなお友達がボールとかキュウリとかを追いかけて走り回っている。」
-    "还有，稍微有点小的朋友在追逐着球或者是黄瓜之类的东西跑来跑去（L:所以为什么会有黄瓜啊喂！）"
+    # "还有，稍微有点小的朋友在追逐着球或者是黄瓜之类的东西跑来跑去（L:所以为什么会有黄瓜啊喂！）"
+    if persistent.luckykeeperSay == "full":
+        "还有，稍微有点小的朋友在追逐着球或者是黄瓜之类的东西跑来跑去（L:所以为什么会有黄瓜啊喂！）"
+    else:
+        "还有，稍微有点小的朋友在追逐着球或者是黄瓜之类的东西跑来跑去"
 
     # 莲 「どうでしょう、立地の方は。日当たりは良好、人通りもそれなりで、公園も近いし墓地もある」
-    lian "怎么样？选址良好、日照充足，行人如潮，公园临边，墓地迫近（L:所以墓地又是什么鬼啊喂！）"
+    # lian "怎么样？选址良好、日照充足，行人如潮，公园临边，墓地迫近（L:所以墓地又是什么鬼啊喂！）"
+    if persistent.luckykeeperSay == "full":
+        lian "怎么样？选址良好、日照充足，行人如潮，公园临边，墓地迫近（L:所以墓地又是什么鬼啊喂！）"
+    else:
+        lian "怎么样？选址良好、日照充足，行人如潮，公园临边，墓地迫近"
 
     # 里昂 「いねー！　繁華街を狙っていこうかと思ってたけど、存外有りかも！一定数の若者が毎日通るわけだし」
     show リオン_基本_杖_微笑み at love69_lion_center with dissolve
@@ -128,7 +144,11 @@ label scene17:
     "我打开里昂的冷藏箱"
 
     # nil 「中には大量のドライアイスと色とりどりのアイスクリームが入ったタッパーが収められていた。」
-    "里面放着大量的干冰和放着五颜六色冰淇淋的Tupperware（L:特百惠，一个以其代表产品塑料食品容器知名于全球的美国家居用品品牌）"
+    # "里面放着大量的干冰和放着五颜六色冰淇淋的Tupperware（L:特百惠，一个以其代表产品塑料食品容器知名于全球的美国家居用品品牌）"
+    if persistent.luckykeeperSay == "shutup":
+        "里面放着大量的干冰和放着五颜六色冰淇淋的Tupperware"
+    else:
+        "里面放着大量的干冰和放着五颜六色冰淇淋的Tupperware（L:特百惠，一个以其代表产品塑料食品容器知名于全球的美国家居用品品牌）"
 
     # 莲 「ふむ…」
     lian "呼姆……"
@@ -172,13 +192,24 @@ label scene17:
 
     # 莲 「なぁ、リオン。日本の伝統芸能に『紙芝居』っつーもんがあるんだが、知ってるか？」
     # 参考资料：https://ja.wikipedia.org/wiki/%E7%B4%99%E8%8A%9D%E5%B1%85
-    lian "呐，里昂。日本的传统艺术中有『纸芝居』这样的东西，你知道吗？（L:『纸芝居』是诞生在昭和初期，主要以孩子为对象，一边给孩子看画书，一边给孩子讲故事进行表演的一种剧种。在很多作品都能看到捏，我印象最深的是夏娃年代记里面有提到，感兴趣的话阔以去玩玩）"
+    # lian "呐，里昂。日本的传统艺术中有『纸芝居』这样的东西，你知道吗？（L:『纸芝居』是诞生在昭和初期，主要以孩子为对象，一边给孩子看画书，一边给孩子讲故事进行表演的一种剧种。在很多作品都能看到捏，我印象最深的是夏娃年代记里面有提到，感兴趣的话阔以去玩玩）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "呐，里昂。日本的传统艺术中有『纸芝居』这样的东西，你知道吗？"
+    elif persistent.luckykeeperSay == "meme":
+        lian "呐，里昂。日本的传统艺术中有『纸芝居』这样的东西，你知道吗？（L:『纸芝居』是诞生在昭和初期，主要以孩子为对象，一边给孩子看画书，一边给孩子讲故事进行表演的一种剧种）"
+    else:
+        lian "呐，里昂。日本的传统艺术中有『纸芝居』这样的东西，你知道吗？（L:『纸芝居』是诞生在昭和初期，主要以孩子为对象，一边给孩子看画书，一边给孩子讲故事进行表演的一种剧种。在很多作品都能看到捏，我印象最深的是夏娃年代记里面有提到，感兴趣的话阔以去玩玩）"
 
     # 里昂 「カミシバイ…？　キネティックタイポグラフィーみたいな感じ？」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%8D%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF%E3%83%BB%E3%82%BF%E3%82%A4%E3%83%9D%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3
     show リオン_基本_杖_微笑み at love69_lion_center with dissolve
     voice "voice/リオン/ron_a1_0084.ogg"
-    lion リオン_基本_杖_微笑み "纸·芝·居……？感觉像Kinetic typography的感觉？（L:动力学排版，是一种动画技术，将运动和文本混合在一起，Adobe Flash、Adobe After Effects和Motion等软件都支持这种特效）"
+    # lion リオン_基本_杖_微笑み "纸·芝·居……？感觉像Kinetic typography的感觉？（L:动力学排版，是一种动画技术，将运动和文本混合在一起，Adobe Flash、Adobe After Effects和Motion等软件都支持这种特效）"
+    if persistent.luckykeeperSay == "shutup":
+        lion リオン_基本_杖_微笑み "纸·芝·居……？感觉像Kinetic typography的感觉？"
+    else:
+        lion リオン_基本_杖_微笑み "纸·芝·居……？感觉像Kinetic typography的感觉？（L:动力学排版，是一种动画技术，将运动和文本混合在一起，Adobe Flash、Adobe After Effects和Motion等软件都支持这种特效）"
+
     hide リオン_基本_杖_驚き
 
     # 莲 「いや全然違うな。要は、何枚かの止め絵をお客さんに見せながら、キャラになりきったりして喋るパフォーマンスでな」
@@ -187,11 +218,20 @@ label scene17:
     # 里昂 「なるほど！　日本の美少女ゲームみたいな感じだね！」
     show リオン_基本_杖_にっこり at love69_lion_center with dissolve
     voice "voice/リオン/ron_a1_0085.ogg"
-    lion リオン_基本_杖_にっこり "原来如此！感觉就像日本的美少女游戏呢！（L:emmm……雀食有点道理捏）"
+    # lion リオン_基本_杖_にっこり "原来如此！感觉就像日本的美少女游戏呢！（L:emmm……雀食有点道理捏）"
+    if persistent.luckykeeperSay == "full":
+        lion リオン_基本_杖_にっこり "原来如此！感觉就像日本的美少女游戏呢！（L:emmm……雀食有点道理捏）"
+    else:
+        lion リオン_基本_杖_にっこり "原来如此！感觉就像日本的美少女游戏呢！"
+
     hide リオン_基本_杖_微笑み
 
     # 莲 「ちょっとスレスレな事を言うのはやめろ！」
-    lian "不要说这么刺耳的话！（L:破防了破防了233）"
+    # lian "不要说这么刺耳的话！（L:破防了破防了233）"
+    if persistent.luckykeeperSay == "full":
+        lian "不要说这么刺耳的话！（L:破防了破防了233）"
+    else:
+        lian "不要说这么刺耳的话！"
 
     # 莲 「そんで、紙芝居をする人は、近所の子供達に水飴とかの駄菓子を売ったり配ったりしてたんだよ」
     # 駄菓子=粗点心
@@ -235,7 +275,11 @@ label scene17:
 
     # 里昂 「ゲットアップマイコォ」
     voice "voice/リオン/ron_a1_0089.ogg"
-    lion "Get up Michael！（L:这里原作把里昂的上一句重复了，没有配这句呢……）"
+    # lion "Get up Michael！（L:这里原作把里昂的上一句重复了，没有配这句呢……）"
+    if persistent.luckykeeperSay == "shutup":
+        lion "Get up Michael！"
+    else:
+        lion "Get up Michael！（L:这里原作把里昂的上一句重复了，没有配这句呢……）"
 
     # 这个语句是针对MJ设计的参数，能够调整MJ在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.1
@@ -282,11 +326,19 @@ label scene17:
 
     # nil 「俺は鞄からパから貰ったクラリネットを取り出して、一吹きする。」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%A9%E3%83%AA%E3%83%8D%E3%83%83%E3%83%88
-    "我从包里拿出爸爸给我的单簧管，吹了起来（L:单簧管又称竖笛、黑管，是一种木管乐器）"
+    # "我从包里拿出爸爸给我的单簧管，吹了起来（L:单簧管又称竖笛、黑管，是一种木管乐器）"
+    if persistent.luckykeeperSay == "shutup":
+        "我从包里拿出爸爸给我的单簧管，吹了起来"
+    else:
+        "我从包里拿出爸爸给我的单簧管，吹了起来（L:单簧管又称竖笛、黑管，是一种木管乐器）"
 
     # 莲 「オーパッキャラマードパッキャラマードパオパオパッパッパー！」
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%A9%E3%83%AA%E3%83%8D%E3%83%83%E3%83%88%E3%82%92%E3%81%93%E3%82%8F%E3%81%97%E3%81%A1%E3%82%83%E3%81%A3%E3%81%9F
-    lian "オーパッキャラマードパッキャラマードパオパオパッパッパー！（L:嘛，这里是演奏的拟声，不翻了，疑似neta童谣「クラリネットをこわしちゃった」），这个童谣也有葡萄牙语、西班牙语和瑞典语的版本"
+    # lian "オーパッキャラマードパッキャラマードパオパオパッパッパー！（L:嘛，这里是演奏的拟声，不翻了，疑似neta童谣「クラリネットをこわしちゃった」），这个童谣也有葡萄牙语、西班牙语和瑞典语的版本"
+    if persistent.luckykeeperSay == "shutup":
+        lian "オーパッキャラマードパッキャラマードパオパオパッパッパー！"
+    else:
+        lian "オーパッキャラマードパッキャラマードパオパオパッパッパー！（L:嘛，这里是演奏的拟声，不翻了，疑似neta童谣「クラリネットをこわしちゃった」），这个童谣也有葡萄牙语、西班牙语和瑞典语的版本）"
 
     # 莲 「子供たちー！　美味しいアイスクリームとかーみしばいの時間だよー！」
     lian "孩子们！现在是吃美味冰淇淋的时间！"
@@ -337,13 +389,25 @@ label scene17:
     # 参考资料：https://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%BC%E3%83%A1%E3%83%AB%E3%83%B3%E3%81%AE%E7%AC%9B%E5%90%B9%E3%81%8D%E7%94%B7
     show リオン_基本_杖_驚き at love69_lion_right with dissolve
     voice "voice/リオン/ron_a1_0091.ogg"
-    lion リオン_基本_杖_驚き "简直就像是在吹Hameln的笛子啊…（L:花衣魔笛手(德文：Rattenfänger von Hameln)是个源自德国的民间故事，最有名的版本收在格林兄弟的「德国传说」中，名为「哈梅尔的孩子」）"
+    # lion リオン_基本_杖_驚き "简直就像是在吹Hameln的笛子啊…（L:花衣魔笛手(德文：Rattenfänger von Hameln)是个源自德国的民间故事，最有名的版本收在格林兄弟的「德国传说」中，名为「哈梅尔的孩子」）"
+    if persistent.luckykeeperSay == "shutup":
+        lion リオン_基本_杖_驚き "简直就像是在吹Hameln的笛子啊…"
+    else:
+        lion リオン_基本_杖_驚き "简直就像是在吹Hameln的笛子啊…（L:花衣魔笛手(德文：Rattenfänger von Hameln)是个源自德国的民间故事，最有名的版本收在格林兄弟的「德国传说」中，名为「哈梅尔的孩子」）"
+
     hide リオン_基本_杖_微笑み
 
-    # 是Luckykeeper的讲故事时间！
-    luckykeeper "故事是这样的：1284年，德国有个村落名叫哈默尔恩（Hameln），那里鼠满为患。某天来了个外地人自称捕鼠能手，村民向他许诺 —— 能除去鼠患的话会给付重酬。"
+    # # 是Luckykeeper的讲故事时间！
+    # luckykeeper "故事是这样的：1284年，德国有个村落名叫哈默尔恩（Hameln），那里鼠满为患。某天来了个外地人自称捕鼠能手，村民向他许诺 —— 能除去鼠患的话会给付重酬。"
 
-    luckykeeper "于是他吹起笛子，鼠群闻声随行至威悉河而淹死。事成后，村民违反诺言不付酬劳，吹笛人便饮怒离去。过了数周，正当村民在教堂聚集时，吹笛人就回来吹起笛子，众孩子亦闻声随行，结果被诱到山洞内活活困住"
+    # luckykeeper "于是他吹起笛子，鼠群闻声随行至威悉河而淹死。事成后，村民违反诺言不付酬劳，吹笛人便饮怒离去。过了数周，正当村民在教堂聚集时，吹笛人就回来吹起笛子，众孩子亦闻声随行，结果被诱到山洞内活活困住"
+    if persistent.luckykeeperSay == "shutup":
+        pass
+    else:
+        # 是Luckykeeper的讲故事时间！
+        luckykeeper "故事是这样的：1284年，德国有个村落名叫哈默尔恩（Hameln），那里鼠满为患。某天来了个外地人自称捕鼠能手，村民向他许诺 —— 能除去鼠患的话会给付重酬。"
+
+        luckykeeper "于是他吹起笛子，鼠群闻声随行至威悉河而淹死。事成后，村民违反诺言不付酬劳，吹笛人便饮怒离去。过了数周，正当村民在教堂聚集时，吹笛人就回来吹起笛子，众孩子亦闻声随行，结果被诱到山洞内活活困住"
 
     # 莲 「よし、じゃぁ後はアイスを配るだけだ。頼むぜリオン」
     lian "好，之后就只需要分发冰淇淋了。拜托你了里昂"
@@ -445,7 +509,11 @@ label scene17:
     lion リオン_基本_杖_微笑み "然后，还有帽子的迈克尔君一起演纸芝居！今天的节目是什么呢！"
 
     # 莲 「じゃじゃーん！　『吸血鬼さんと神父さん！』」
-    lian "锵锵！『吸血鬼先生和神父先生！』（L:去康了一下，似乎本作发售的时候好像还没有这个标题的东西，不过后来pixiv上好像有人画了这样标题的BL本）"
+    # lian "锵锵！『吸血鬼先生和神父先生！』（L:去康了一下，似乎本作发售的时候好像还没有这个标题的东西，不过后来pixiv上好像有人画了这样标题的BL本）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "锵锵！『吸血鬼先生和神父先生！』"
+    else:
+        lian "锵锵！『吸血鬼先生和神父先生！』（L:去康了一下，似乎本作发售的时候好像还没有这个标题的东西，不过后来pixiv上好像有人画了这样标题的BL本）"
 
     # 里昂 「え？」
     show リオン_基本_杖_驚き at love69_lion_right with dissolve
@@ -495,7 +563,11 @@ label scene17:
     scene 通学路d_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 莲 「続いては…『女の子とおじさん』」
-    lian "接下来是…『女孩和叔叔』（L:和上面的一样，也没有玩梗）"
+    # lian "接下来是…『女孩和叔叔』（L:和上面的一样，也没有玩梗）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "接下来是…『女孩和叔叔』"
+    else:
+        lian "接下来是…『女孩和叔叔』（L:和上面的一样，也没有玩梗）"
 
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.09
@@ -579,7 +651,11 @@ label scene17:
     scene 通学路d_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 莲 「さて続いては『結婚して年の中間管理職さんとその奥さん』」
-    lian "接下来是『一位结婚一年的中层管理人员和他的妻子』（L:这个标题嘛，就……）"
+    # lian "接下来是『一位结婚一年的中层管理人员和他的妻子』（L:这个标题嘛，就……）"
+    if persistent.luckykeeperSay == "full":
+        lian "接下来是『一位结婚一年的中层管理人员和他的妻子』（L:这个标题嘛，就……）"
+    else:
+        lian "接下来是『一位结婚一年的中层管理人员和他的妻子』"
 
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.09
@@ -656,7 +732,11 @@ label scene17:
     scene 通学路d_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 莲 「さて続きましては『酒とタバコと俺とバイク』」
-    lian "接下来是…『酒、烟、我和摩托车』（L:依旧没有玩梗，不知道是不是玩累了所以暂时不玩了）"
+    # lian "接下来是…『酒、烟、我和摩托车』（L:依旧没有玩梗，不知道是不是玩累了所以暂时不玩了）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "接下来是…『酒、烟、我和摩托车』"
+    else:
+        lian "接下来是…『酒、烟、我和摩托车』（L:依旧没有玩梗，不知道是不是玩累了所以暂时不玩了）"
 
     # 里昂 「ちょっとちょっと葛城お兄さん！」
     show リオン_基本_杖_驚き at love69_lion_center with dissolve
@@ -689,7 +769,12 @@ label scene17:
     # 里昂 「私、それに近しい映画を最近見た気がするよ…」
     show リオン_基本_杖_悲しい at love69_lion_center with dissolve
     voice "voice/リオン/ron_a1_0110.ogg"
-    lion リオン_基本_杖_悲しい "我最近好像看过类似的电影……（L:电影看的少，不知道说的是啷个，不过倒是想到了玩具熊的五夜后宫）"
+    # lion リオン_基本_杖_悲しい "我最近好像看过类似的电影……（L:电影看的少，不知道说的是啷个，不过倒是想到了玩具熊的五夜后宫）"
+    if persistent.luckykeeperSay == "shutup":
+        lion リオン_基本_杖_悲しい "我最近好像看过类似的电影……"
+    else:
+        lion リオン_基本_杖_悲しい "我最近好像看过类似的电影……（L:电影看的少，不知道说的是啷个，不过倒是想到了玩具熊的五夜后宫）"
+
     hide リオン_基本_杖_見下し
 
     # 莲 「じゃぁ、『仔猫と僕』」
@@ -892,7 +977,11 @@ label scene17:
 
     # 莲 「睡眠時無呼吸症候群について、お話します」
     # 参考资料：https://ja.wikipedia.org/wiki/%E7%9D%A1%E7%9C%A0%E6%99%82%E7%84%A1%E5%91%BC%E5%90%B8%E7%97%87%E5%80%99%E7%BE%A4
-    lian "来谈谈睡眠呼吸中止症的话题吧（L:是一种在睡眠期间，暂停呼吸或呼吸减弱症状导致的睡眠紊乱，在一般情况下，这个症状会产生吵杂的打鼾声）"
+    # lian "来谈谈睡眠呼吸中止症的话题吧（L:是一种在睡眠期间，暂停呼吸或呼吸减弱症状导致的睡眠紊乱，在一般情况下，这个症状会产生吵杂的打鼾声）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "来谈谈睡眠呼吸中止症的话题吧"
+    else:
+        lian "来谈谈睡眠呼吸中止症的话题吧（L:是一种在睡眠期间，暂停呼吸或呼吸减弱症状导致的睡眠紊乱，在一般情况下，这个症状会产生吵杂的打鼾声）"
 
     # 里昂 「睡眠時無呼吸症候群とは、睡眠中に呼吸が停止してしまう病気で、いびきをかいてる人は、この病気の恐れがあります」
     show リオン_基本_杖_微笑み at love69_lion_center with dissolve
@@ -1039,7 +1128,12 @@ label scene17:
     scene 通学路d_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 莲 「うんこちんちん」
-    lian "大便金金（L:emmmm，莲你在淦神魔？！）"
+    # lian "大便金金（L:emmmm，莲你在淦神魔？！）"
+    if persistent.luckykeeperSay == "full":
+        lian "大便金金（L:emmmm，莲你在淦神魔？！）"
+    else:
+        lian "大便金金"
+
     # 关于问题：日语的チンポ，おちんちん和汉语的jb，xjj是发音巧合还是有接触关系？答案：有多种来源说法，其中之一就是可能源自汉语
     # 参考知乎回答：https://www.zhihu.com/question/273798677/answer/370294195
 
@@ -1587,7 +1681,11 @@ label scene17:
     hide リオン_基本_杖_嬉しい
 
     # 莲 「アディオースセニョリータ」
-    lian "Adiós Señorita（L:意思是「再见,小姐」依然是西班牙语）"
+    # lian "Adiós Señorita（L:意思是「再见,小姐」依然是西班牙语）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "Adiós Señorita"
+    else:
+        lian "Adiós Señorita（L:意思是「再见,小姐」依然是西班牙语）"
 
     # nil 「俺はリオンに背を向けて、右手を高くあげて別れを告げる。」
     "我背向里昂，举起右手告别"
@@ -1628,18 +1726,31 @@ label scene17:
     # 参考资料：あちー https://www.weblio.jp/content/%E3%81%82%E3%81%A1%E3%83%BC
     show 想瑠_スーツ_目閉じ at love69_xiangliu_center with dissolve
     voice "voice/想瑠/sol_a1_0020.ogg"
-    liu 想瑠_スーツ_目閉じ "啾——是怎么回事啊，为什么被啾——脸颊了啊，好热好热（L:最后的好热好热「あちーあちー」是但马方言，但马位于现在的兵库县北部，也就是兵库北！）"
+    # liu 想瑠_スーツ_目閉じ "啾——是怎么回事啊，为什么被啾——脸颊了啊，好热好热（L:最后的好热好热「あちーあちー」是但马方言，但马位于现在的兵库县北部，也就是兵库北！）"
+    if persistent.luckykeeperSay == "shutup":
+        liu 想瑠_スーツ_目閉じ "啾——是怎么回事啊，为什么被啾——脸颊了啊，好热好热"
+    else:
+        liu 想瑠_スーツ_目閉じ "啾——是怎么回事啊，为什么被啾——脸颊了啊，好热好热（L:最后的好热好热「あちーあちー」是但马方言，但马位于现在的兵库县北部，也就是兵库北！）"
 
     # nil 「声の主は担任だった。」
     "声音的主人是班主任"
 
     # 莲 「ＢＭＷの四人乗りのオープンカー…ガブリオレか…良い車乗ってやがるな、パートのくせに」
-    lian "ＢＭＷ的4人座的Open Car……Cabriolet吗…开的车不戳啊，明明是兼职的（L:前面的Open Car和后面的Cabriolet都是敞篷车的意思）"
+    # lian "ＢＭＷ的4人座的Open Car……Cabriolet吗…开的车不戳啊，明明是兼职的（L:前面的Open Car和后面的Cabriolet都是敞篷车的意思）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "ＢＭＷ的4人座的Open Car……Cabriolet吗…开的车不戳啊，明明是兼职的"
+    else:
+        lian "ＢＭＷ的4人座的Open Car……Cabriolet吗…开的车不戳啊，明明是兼职的（L:前面的Open Car和后面的Cabriolet都是敞篷车的意思）"
 
     # 想瑠 「この車買っちまったからパートしてんだよ！　ホットドック屋だけじゃ食えなくなったからな！」
     show 想瑠_スーツ_本気 at love69_xiangliu_center with dissolve
     voice "voice/想瑠/sol_a1_0021.ogg"
-    liu 想瑠_スーツ_本気 "就是因为我买了这辆车，所以才打零工的啊！因为我没法只靠卖热狗吃上饭了！（L:还记得一周目迪士尼乐园的热狗嘛）"
+    # liu 想瑠_スーツ_本気 "就是因为我买了这辆车，所以才打零工的啊！因为我没法只靠卖热狗吃上饭了！（L:还记得一周目迪士尼乐园的热狗嘛）"
+    if persistent.luckykeeperSay == "full":
+        liu 想瑠_スーツ_本気 "就是因为我买了这辆车，所以才打零工的啊！因为我没法只靠卖热狗吃上饭了！（L:还记得一周目迪士尼乐园的热狗嘛）"
+    else:
+        liu 想瑠_スーツ_本気 "就是因为我买了这辆车，所以才打零工的啊！因为我没法只靠卖热狗吃上饭了！"
+
     hide 想瑠_スーツ_目閉じ
 
     # 莲 「ホットドッグでも食ってろよ…」
@@ -1747,7 +1858,12 @@ label scene17:
     # 想瑠 「私の裸が見たければ1年ほど時を遡ってくれよな！！」
     show 想瑠_スーツ_ニヤリ at love69_xiangliu_center with dissolve
     voice "voice/想瑠/sol_a1_0025.ogg"
-    liu 想瑠_スーツ_ニヤリ "如果你想看我的裸体，你就得回到一年前！！（L:指12年发布的S.I.S.T.A.R.S:KISS OF TRINITY）"
+    # liu 想瑠_スーツ_ニヤリ "如果你想看我的裸体，你就得回到一年前！！（L:指12年发布的S.I.S.T.A.R.S:KISS OF TRINITY）"
+    if persistent.luckykeeperSay == "shutup":
+        liu 想瑠_スーツ_ニヤリ "如果你想看我的裸体，你就得回到一年前！！"
+    else:
+        liu 想瑠_スーツ_ニヤリ "如果你想看我的裸体，你就得回到一年前！！（L:指12年发布的S.I.S.T.A.R.S:KISS OF TRINITY）"
+
     hide 想瑠_スーツ_驚き
 
     # 想瑠 「な！」
@@ -1810,7 +1926,11 @@ label scene17:
     hide 心愛_制服_基本_ニタァ
 
     # nil 「心愛は後部座席からぴょーんとハンドスプリングで助手席に乗り移った。相変わらず凄まじい運動神経だ。」
-    "心爱从后座嗖的一声用Handspring跳到副驾驶座，依旧是惊人的运动神经（L:Handspring，前手翻腾越，体操名词，就我个人感觉就是前空翻）"
+    # "心爱从后座嗖的一声用Handspring跳到副驾驶座，依旧是惊人的运动神经（L:Handspring，前手翻腾越，体操名词，就我个人感觉就是前空翻）"
+    if persistent.luckykeeperSay == "shutup":
+        "心爱从后座嗖的一声用Handspring跳到副驾驶座，依旧是惊人的运动神经"
+    else:
+        "心爱从后座嗖的一声用Handspring跳到副驾驶座，依旧是惊人的运动神经（L:Handspring，前手翻腾越，体操名词，就我个人感觉就是前空翻）"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1918,7 +2038,11 @@ label scene17:
     "……"
 
     # 莲 「あ、ごめん、スプーン貰ってないから素手で食って」
-    lian "啊，对不起，我没拿勺子，空着手吃吧（L:莲拿到的冰淇淋是装在杯子里面的那种）"
+    # lian "啊，对不起，我没拿勺子，空着手吃吧（L:莲拿到的冰淇淋是装在杯子里面的那种）"
+    if persistent.luckykeeperSay == "shutup":
+        lian "啊，对不起，我没拿勺子，空着手吃吧"
+    else:
+        lian "啊，对不起，我没拿勺子，空着手吃吧（L:莲拿到的冰淇淋是装在杯子里面的那种）"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -1994,7 +2118,11 @@ label scene17:
 
     # 心爱 「おひょおうケロリンを食らえ－！」
     voice "voice/心愛/cca_a1_0146.ogg"
-    ai 心愛_水着_基本_ニタァ "呼喵，给我吃掉ケロリン吧——！！！（L:一周目莲、真冬、心爱和好之后独自回家的莲君就差点儿被ケロリン的陷阱坑了，回想起来ケロリン是什么了嘛）"
+    # ai 心愛_水着_基本_ニタァ "呼喵，给我吃掉ケロリン吧——！！！（L:一周目莲、真冬、心爱和好之后独自回家的莲君就差点儿被ケロリン的陷阱坑了，回想起来ケロリン是什么了嘛）"
+    if persistent.luckykeeperSay == "shutup":
+        ai 心愛_水着_基本_ニタァ "呼喵，给我吃掉ケロリン吧——！！！"
+    else:
+        ai 心愛_水着_基本_ニタァ "呼喵，给我吃掉ケロリン吧——！！！（L:一周目莲、真冬、心爱和好之后独自回家的莲君就差点儿被ケロリン的陷阱坑了，回想起来ケロリン是什么了嘛）"
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -2173,7 +2301,11 @@ label scene17:
     lian "是吗？那我等着"
 
     # nil 「…そして、その夜、二人はホテル街へと消えていきました。」
-    "…然后，是夜，两个人消失在酒店街上（L:嗯，就是酒店街，不是一般的商店街呢）"
+    # "…然后，是夜，两个人消失在酒店街上（L:嗯，就是酒店街，不是一般的商店街呢）"
+    if persistent.luckykeeperSay == "full":
+        "…然后，是夜，两个人消失在酒店街上（L:嗯，就是酒店街，不是一般的商店街呢）"
+    else:
+        "…然后，是夜，两个人消失在酒店街上"
 
     hide 真冬_制服_基本_微笑み
     hide 心愛_制服_基本_ぶわー
