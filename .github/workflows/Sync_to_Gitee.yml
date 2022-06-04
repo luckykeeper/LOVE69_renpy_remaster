@@ -4,6 +4,8 @@ on:
   push:
     branches: 
       - main
+      - dev-renpy7.4.6
+      - dev-renpy8.0.0
 
   schedule:
     - cron:  '0 20 * * *'

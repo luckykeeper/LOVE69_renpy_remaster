@@ -1,11 +1,11 @@
 # 
 # Copyright 2021-2022 Luckykeeper & LOVE69 Ren'Py Remaster Project <http://luckykeeper.site|luckykeeper@luckykeeper.site>
 #
-# You can Modify and use this action script(build-love69.yml) freely under BSD 2-Clause "Simplified" License
-# Description: Build Ren'Py Project
-# Last Update: 2022/05/02
+# You can Modify and use this action script(build-love69(7.4.6).yml) freely under BSD 2-Clause "Simplified" License
+# Description: Build Ren'Py Project（LOVE69-Dev-Renpy7.4.6）
+# Last Update: 2022/06/04
 
-name: dev 分支夜间测试&构建
+name: dev 分支（7.4.6）夜间测试&构建
 
 on:
   # pull_request_target:
@@ -20,7 +20,7 @@ on:
 env:
   REPO_URL: https://github.com/luckykeeper/LOVE69_renpy_remaster
   RENPY_SDK_VERSION: 7.4.6
-  REPO_BRANCH: dev
+  REPO_BRANCH: dev-renpy7.4.6
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
   RES_PART1_URL: ${{ secrets.RES_PART1_URL }} # 资源文件分卷压缩成两个压缩包，给出链接后面wget下来

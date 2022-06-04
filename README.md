@@ -12,9 +12,13 @@
 >
 > 已建立dev分支，PR请向 dev 分支提交，main 分支暂不接受PR请求
 >
+> [dev-renpy7.4.6](https://github.com/luckykeeper/LOVE69_renpy_remaster/tree/dev-renpy7.4.6) 分支是目前开发主要版本，现在正在 [dev-renpy8.0.0](https://github.com/luckykeeper/LOVE69_renpy_remaster/tree/dev-renpy8.0.0) 分支对 Ren'Py 8.0.0 进行适配，适配完成后，开发工作将会全面转向 dev-renpy8.0.0 分支
+>
 > 目前开发转入文档编写和项目完善阶段，最新版本会在每天北京时间（UTC+8）晚3点开始进行自动构建（PC&MAC版），你可以点击下面的“dev 分支夜间测试&构建”按钮，从最近一次的构建中获取最新版本，在更新内容积攒到一定程度之后，我们会发布一次大更新（Releases）
 >
-> 最近一次夜间自动构建状态（dev分支）：[![dev 分支夜间测试&构建](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69.yml/badge.svg?event=schedule)](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69.yml)
+> 最近一次夜间自动构建状态（dev-renpy7.4.6分支）：[![dev 分支夜间测试&构建（dev-renpy7.4.6）](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69(7.4.6).yml/badge.svg?event=schedule)](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69(7.4.6).yml)
+>
+> 如果你无法看到上面的按钮，可点击此链接：https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69(7.4.6).yml/badge.svg?event=schedule
 
 <video id="video" width="560" height="315" controls="" preload="none" > <source id="mp4" src="https://oa.hbfu.edu.cn/backstage/filecenter/file/main::cb4d1cb09d5c494f9950a179c2af5e4a" type="video/mp4"> </video>
 
@@ -51,7 +55,7 @@ Discussions 讨论区已开放，非Bug/翻译/脚本/程序问题请前往[这�
 
 | 项目状况         | LOVE69 Ren’py Remaster Project                               |
 | ---------------- | ------------------------------------------------------------ |
-| 进度             | 发布时间初步定在5月1日，敬请期待~<br/>当前状态：开发完成，转入封闭测试阶段<br/>项目开坑 （2021年8月28日）<br/>项目组网站建设基本完成（2021年9月3日）<br/>Scene 01（Demo）部分文本内容翻译完成（2021年10月1日）<br/>Demo 版制作完成，开始内部测试（2021年10月9日）<br/>Demo 版发布（2021年10月24日）【[下载地址](https://github.com/luckykeeper/LOVE69_renpy_remaster/releases/tag/0.1.0)】<br/>Scene 02 翻译完成（2021年11月6日）<br/>Scene 03 翻译完成（2021年11月8日）<br/>Scene 04 翻译完成（2021年11月20日）<br/>Scene 05 翻译完成（2021年11月27日）<br/>Scene 06 翻译完成（2022年1月1日）<br/>GitHub Star 破十（2022年1月4日）<br/>Scene 07 翻译完成（2022年1月4日）<br/>Scene 08 翻译完成（2022年1月5日）<br/>Scene 09 翻译完成（2022年1月8日）<br/>Scene 10 翻译完成（2022年1月9日）<br/>Scene 11 翻译完成（2022年1月10日）<br/>Scene 12 翻译完成（2022年1月11日）<br/>Scene 13 翻译完成（2022年1月12日）<br/>Scene 14 翻译完成&Scene 15 翻译完成&一周目翻译完成&版本号调整至0.2（2022年1月13日）<br/>Scene 16 翻译完成（2022年1月16日）<br/>Scene 17 翻译完成（2022年1月17日）<br/>Scene 18 翻译完成（2022年1月19日）<br/>Scene 19 翻译完成（2022年1月20日）<br/>Scene 20-22 翻译完成&二周目翻译完成&版本号调整至0.3（2022年1月21日）<br/>新版UI重构&测试基本完成&版本号调整至0.4（2022年1月23日）<br/>重构 Scene 01 动画脚本，增加各种效果，提升还原度（2022年1月24-25日）<br/>Scene 02 制作完成（2022年1月27日）<br/>Scene 03 制作完成（2022年1月28日）<br/>Scene 04 制作完成（2022年2月2日）<br/>Scene 05 制作完成（2022年2月3日）<br/>Scene 06 制作完成（2022年2月7日）<br/>Scene 07 制作完成（2022年2月16日）<br/>Scene 08 制作完成（2022年2月17日）<br/>写下移植版的第一个选择肢& Scene 09 制作完成（2022年2月18日）<br/>文档站框架搭建完成&项目组、文档站镜像站搭建完成（2022年2月19日）<br/>Scene 10 制作完成（2022年3月5日）<br/>Scene 11 制作完成（2022年3月5日）<br/>Scene 12 制作完成（2022年3月5日）<br/>Scene 13 制作完成（2022年3月6日）<br/>Scene 14 制作完成（2022年3月6日）<br/>Scene 15 制作完成（2022年3月6日）<br/>一周目内容制作完成（2022年3月6日）<br/>统一调整版本号至0.5（2022年3月7日）<br/>GUI 制作完成，统一调整版本号至0.6（2022年3月17日）<br/>Scene 16-17 制作完成（2022年3月19日）<br/>Scene 18 制作完成（2022年3月20日）<br/>Scene 19-20 制作完成（2022年3月26日）<br/>Scene 21-22 制作完成，全部故事脚本制作完成！（2022年3月27日）<br/>统一调整版本号至0.7（2022年3月27日）<br/>全部开发完成，转入封闭测试阶段，统一调整版本号至0.8（2022年3月31日）<br/>W提交特效OP，统一调整版本号至0.9，开始内部测试阶段（2022年4月5日）<br/>全部测试完成，统一调整版本号至1.0（2022年4月27日）<br/>正式版打包完成（2022年4月28日）<br/>正式版1.0发布完成（2022年4月30日）<br/>新建 dev 分支，编写夜间自动构建脚本（2022年5月1日） |
+| 进度             | 发布时间初步定在5月1日，敬请期待~<br/>当前状态：开发完成，转入封闭测试阶段<br/>项目开坑 （2021年8月28日）<br/>项目组网站建设基本完成（2021年9月3日）<br/>Scene 01（Demo）部分文本内容翻译完成（2021年10月1日）<br/>Demo 版制作完成，开始内部测试（2021年10月9日）<br/>Demo 版发布（2021年10月24日）【[下载地址](https://github.com/luckykeeper/LOVE69_renpy_remaster/releases/tag/0.1.0)】<br/>Scene 02 翻译完成（2021年11月6日）<br/>Scene 03 翻译完成（2021年11月8日）<br/>Scene 04 翻译完成（2021年11月20日）<br/>Scene 05 翻译完成（2021年11月27日）<br/>Scene 06 翻译完成（2022年1月1日）<br/>GitHub Star 破十（2022年1月4日）<br/>Scene 07 翻译完成（2022年1月4日）<br/>Scene 08 翻译完成（2022年1月5日）<br/>Scene 09 翻译完成（2022年1月8日）<br/>Scene 10 翻译完成（2022年1月9日）<br/>Scene 11 翻译完成（2022年1月10日）<br/>Scene 12 翻译完成（2022年1月11日）<br/>Scene 13 翻译完成（2022年1月12日）<br/>Scene 14 翻译完成&Scene 15 翻译完成&一周目翻译完成&版本号调整至0.2（2022年1月13日）<br/>Scene 16 翻译完成（2022年1月16日）<br/>Scene 17 翻译完成（2022年1月17日）<br/>Scene 18 翻译完成（2022年1月19日）<br/>Scene 19 翻译完成（2022年1月20日）<br/>Scene 20-22 翻译完成&二周目翻译完成&版本号调整至0.3（2022年1月21日）<br/>新版UI重构&测试基本完成&版本号调整至0.4（2022年1月23日）<br/>重构 Scene 01 动画脚本，增加各种效果，提升还原度（2022年1月24-25日）<br/>Scene 02 制作完成（2022年1月27日）<br/>Scene 03 制作完成（2022年1月28日）<br/>Scene 04 制作完成（2022年2月2日）<br/>Scene 05 制作完成（2022年2月3日）<br/>Scene 06 制作完成（2022年2月7日）<br/>Scene 07 制作完成（2022年2月16日）<br/>Scene 08 制作完成（2022年2月17日）<br/>写下移植版的第一个选择肢& Scene 09 制作完成（2022年2月18日）<br/>文档站框架搭建完成&项目组、文档站镜像站搭建完成（2022年2月19日）<br/>Scene 10 制作完成（2022年3月5日）<br/>Scene 11 制作完成（2022年3月5日）<br/>Scene 12 制作完成（2022年3月5日）<br/>Scene 13 制作完成（2022年3月6日）<br/>Scene 14 制作完成（2022年3月6日）<br/>Scene 15 制作完成（2022年3月6日）<br/>一周目内容制作完成（2022年3月6日）<br/>统一调整版本号至0.5（2022年3月7日）<br/>GUI 制作完成，统一调整版本号至0.6（2022年3月17日）<br/>Scene 16-17 制作完成（2022年3月19日）<br/>Scene 18 制作完成（2022年3月20日）<br/>Scene 19-20 制作完成（2022年3月26日）<br/>Scene 21-22 制作完成，全部故事脚本制作完成！（2022年3月27日）<br/>统一调整版本号至0.7（2022年3月27日）<br/>全部开发完成，转入封闭测试阶段，统一调整版本号至0.8（2022年3月31日）<br/>W提交特效OP，统一调整版本号至0.9，开始内部测试阶段（2022年4月5日）<br/>全部测试完成，统一调整版本号至1.0（2022年4月27日）<br/>正式版打包完成（2022年4月28日）<br/>正式版1.0发布完成（2022年4月30日）<br/>新建 dev 分支，编写夜间自动构建脚本（2022年5月1日）<br/>dev 分支重命名为 dev-renpy7.4.6 ，新增 dev-renpy8.0.0 分支，准备对即将正式发布的 Ren'Py 8.0.0 版本进行适配 |
 | 项目组成员       | 3人（[Luckykeeper](https://github.com/luckykeeper)，[WorldlineChanger](https://github.com/WorldlineChanger)，[Santa-Weaves](https://github.com/Santa-Weaves)） |
 | 看看组里谁在摸鱼 | [戳这里](https://github.com/luckykeeper/LOVE69_renpy_remaster/graphs/contributors) |
 | 其它贡献者       | （欢迎踊跃参与）                                             |
@@ -278,7 +282,7 @@ WEB版 Demo实机运行页面
 
 - 出于各种原因，本次汉化移植并不会对“ghs”的内容（即 Hscene ）进行汉化和移植，各位绅士还请谅解，请积极考虑购买正版支持原作团队![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
 
-- 本页面最后修改时间 2022年5月2日
+- 本页面最后修改时间 2022年6月4日
 
 - 本页是 V2 版的 Readme ，第一版 Readme 考古戳[这里](./README_old.md)
 
