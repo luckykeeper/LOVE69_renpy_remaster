@@ -10,15 +10,15 @@
 
 > 【置顶】
 >
-> 已建立dev分支，PR请向 dev 分支提交，main 分支暂不接受PR请求
+> 已建立dev分支，PR请向 dev 分支（7.4.6）提交，main 分支暂不接受PR请求
 >
-> [dev-renpy7.4.6](https://github.com/luckykeeper/LOVE69_renpy_remaster/tree/dev-renpy7.4.6) 分支是目前开发主要版本，现在正在 [dev-renpy8.0.0](https://github.com/luckykeeper/LOVE69_renpy_remaster/tree/dev-renpy8.0.0) 分支对 Ren'Py 8.0.0 进行适配，适配完成后，开发工作将会全面转向 dev-renpy8.0.0 分支
+> [dev-renpy7.4.6](https://github.com/luckykeeper/LOVE69_renpy_remaster/tree/dev-renpy7.4.6) 分支是目前开发主要版本，现在正在 [dev-renpy8.0.0](https://github.com/luckykeeper/LOVE69_renpy_remaster/tree/dev-renpy8.0.0) 分支对 [Ren'Py 8.0.0](https://www.renpy.org/release/8.0.0) 进行适配，适配完成后，开发工作将会全面转向 dev-renpy8.0.0 分支
 >
 > 目前开发转入文档编写和项目完善阶段，最新版本会在每天北京时间（UTC+8）晚3点开始进行自动构建（PC&MAC版），你可以点击下面的“dev 分支夜间测试&构建”按钮，从最近一次的构建中获取最新版本，在更新内容积攒到一定程度之后，我们会发布一次大更新（Releases）
 >
 > 最近一次夜间自动构建状态（dev-renpy7.4.6分支）：[![dev 分支夜间测试&构建（dev-renpy7.4.6）](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69(7.4.6).yml/badge.svg?event=schedule)](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69(7.4.6).yml)
 >
-> 如果你无法看到上面的按钮，可点击此链接：https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69(7.4.6).yml/badge.svg?event=schedule
+> 如果你无法看到上面的按钮，可点击此链接：https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69(7.4.6).yml
 
 <video id="video" width="560" height="315" controls="" preload="none" > <source id="mp4" src="https://oa.hbfu.edu.cn/backstage/filecenter/file/main::cb4d1cb09d5c494f9950a179c2af5e4a" type="video/mp4"> </video>
 
