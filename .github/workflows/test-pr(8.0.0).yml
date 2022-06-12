@@ -5,19 +5,18 @@
 # Description: test pull requests
 # Last Update: 2022/06/12
 
-name: Pull Request 自动测试任务(dev-renpy7.4.6)
+name: Pull Request 自动测试任务(dev-renpy8.0.0)
 
 on:
-  # dev-renpy7.4.6 分支已废弃
-  # pull_request_target:
-    # branches: 
-      # - dev-renpy7.4.6
+  pull_request_target:
+    branches: 
+      - dev-renpy8.0.0
 
   # 仅供测试：手动触发
   workflow_dispatch:
 
 env:
-  RENPY_SDK_VERSION: 7.4.6
+  RENPY_SDK_VERSION: 8.0.0
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
   RES_PART1_URL: ${{ secrets.RES_PART1_URL }} # 资源文件分卷压缩成两个压缩包，给出链接后面wget下来
@@ -31,8 +30,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
       # with: ref: 'dev' 仅供测试使用
-      # with: 
-      #   ref: 'dev'
+      with: 
+        ref: 'dev-renpy8.0.0'
 
     - name: 初始化环境
       env:
