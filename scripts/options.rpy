@@ -5,7 +5,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月10日
+# 修订日期 2022年6月12日
 # 版本 NightBuild "LuckyDev"
 
 
@@ -20,13 +20,38 @@
 # Demo版的版本名为 "LuckyGal"
 # 开发版的版本名为 "LuckyDev"
 # 一二周目做完之后的发行版的的版本名为 "LuckyCocoa"
-define config.name = _("LOVEPOTION SIXTYNINE 汉化移植版 NightBuild “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献 (Build 20220428)")
+
+define config.name = "LOVEPOTION SIXTYNINE 汉化移植版 ver1.0 \"LuckyCocoa\"，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献"
+
+# 实现可变标题
+# 方法：初始化阶段使用 programTitle 替换 config.name
+#       运行阶段使用 programTitle 替换 config.window_title
+# 参考资料：https://github.com/renpy/renpy/issues/238
+# 参考文档：https://www.renpy.cn/doc/config.html?highlight=config%20window_title#var-config.window_title
+init python:
+    # 游戏名
+    gameName = "LOVEPOTION SIXTYNINE 汉化移植版 NightBuild “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献"
+    # 构建时间
+    buildTime = " (Build 20220428)"
+    # 自动获取 Ren'py 引擎版本
+    engineVersion = " 引擎版本："+renpy.version_only[0:5]
+    # Scene 名称
+    sceneName = ""
+    # 小场景标题
+    saveName = ""
+    
+    # 可变标题   
+    programTitle = gameName+buildTime+engineVersion+sceneName+saveName
+    config.name = programTitle
+
+    def changeTitleName():
+        programTitle = gameName+buildTime+engineVersion+sceneName+saveName
+        config.window_title = programTitle
 
 
 ## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。
 
 define gui.show_name = False
-
 
 ## 游戏版本号。
 
@@ -34,10 +59,10 @@ define config.version = "1.0"
 
 ## 放置在游戏“关于”屏幕的文本。将文本放在三个引号之间，并在段落之间留一个空行。
 
+define gui.gameName = gameName+buildTime+engineVersion
+
 # 1.0正式版的说明
 define gui.about = _p("""
-LOVEPOTION SIXTYNINE 汉化移植版 NightBuild “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献 (Build 20220428)
-
 此版本是夜间构建版，由计算机自动发起构建，未经严格测试
 
 仅供学习 Ren'Py 使用，请不要用于其它用途！项目代码和程序完全开源、免费！
@@ -118,9 +143,9 @@ Santa-Weaves：其实没帮上太大的忙，一周目也没走完，不过就�
 {a=https://www.tabnine.com/}tabnine{/a} 提供的 AI 代码补全工具
 
 最后，感谢大家选择了我们项目组的汉化移植版本！祝大家游玩愉快！
-
-本作基于 Ren'Py 7.4.6 制作，关于引擎涉及到的相关软件的许可证情况，请{a=https://www.renpy.org/doc/html/license.html}点击这里查看{/a}
 """)
+
+define gui.engineText = "本移植版基于 Ren'Py 7.4.6 制作，并已迁移至 Ren'Py "+renpy.version_only[0:5]+"， 关于引擎涉及到的相关软件的许可证情况，请{a=https://www.renpy.org/doc/html/license.html}点击这里查看{/a}"
 # ------------------------ 我是分割线，下面是考古内容 ------------------------
 
 # Demo 版小感言

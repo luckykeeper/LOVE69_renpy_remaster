@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月3日
+# 修订日期 2022年6月12日
 
 # 当前流程：All Done!
 
@@ -20,7 +20,10 @@
 # ysr006 的，可能 black 也有 scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None) ，需要注意一下
 
 label scene01:
-
+    # 可变标题
+    $ sceneName =  " scene01"
+    $ saveName = " 序幕：我们的故事从这里开始"
+    $ changeTitleName()
 
     # $ main_menu_music = "bgm/bgm01.ogg" # 调试用
 

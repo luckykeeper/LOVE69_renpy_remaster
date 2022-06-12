@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月18日
+# 修订日期 2022年6月12日
 
 ################################################################################
 ## 初始化
@@ -1035,12 +1035,16 @@ screen about():
 
             # label "[config.name!t]"
             # text _("版本 [config.version!t]\n")
+            # text _("[gameName+buildTime+engineVersion]")
+            # 把名字拆分出来方便自动构建
+            text _("[gui.gameName]")
 
             ## “gui.about”通常在 options.rpy 中设置。
             if gui.about:
                 text "[gui.about!t]\n"
 
             # text _("Ren'Py引擎版本： [renpy.version_only]")
+            text _("[gui.engineText]")
 
 
 style about_label is gui_label
