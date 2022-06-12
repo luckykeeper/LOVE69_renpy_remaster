@@ -1,6 +1,6 @@
 最近一次夜间自动构建状态（dev分支）：[![dev 分支夜间测试&构建（7.4.6）](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69(7.4.6).yml/badge.svg?event=schedule)](https://github.com/luckykeeper/LOVE69_renpy_remaster/actions/workflows/build-love69(7.4.6).yml)
 
-欢迎来到 dev 分支，任何的新PR请提交至此分支
+本 dev 分支已被废弃，脚本已迁移至 Ren'Py 8.0.0 ，任何的新PR请提交至 [dev-renpy8.0.0](https://github.com/luckykeeper/LOVE69_renpy_remaster/tree/dev-renpy8.0.0)
 
 注意：请不要改动 `options.rpy` 中的 Build 时间 （即“（Build 20220428）”）程序会根据当前构建时间自动替换
 
