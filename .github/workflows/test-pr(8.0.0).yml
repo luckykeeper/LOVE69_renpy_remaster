@@ -13,7 +13,7 @@ on:
       - dev-renpy8.0.0
 
   # 仅供测试：手动触发
-  workflow_dispatch:
+  # workflow_dispatch:
 
 env:
   RENPY_SDK_VERSION: 8.0.0
@@ -30,8 +30,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
       # with: ref: 'dev' 仅供测试使用
-      with: 
-        ref: 'dev-renpy8.0.0'
+      # with: 
+      #   ref: 'dev-renpy8.0.0'
 
     - name: 初始化环境
       env:
