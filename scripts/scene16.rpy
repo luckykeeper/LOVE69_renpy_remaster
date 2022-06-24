@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月18日
+# 修订日期 2022年6月24日
 
 # 当前流程：All Done!
 
@@ -21,6 +21,14 @@ label scene16:
     # 地点：街道
     # 人物：莲 里昂
     # BGM：
+    # 可变标题
+    # Scene 序号
+    $ sceneNo =  " scene16"
+    # 存档名称和 Scene 大标题
+    $ sceneName = " 里昂线 意料外的选择"
+    # 小场景的名称
+    $ partName = " 【世界线于此变动！】"
+    $ changeTitleName()
 
     # 选择肢 「リオンに食べさせる。」
     # "给里昂吃"

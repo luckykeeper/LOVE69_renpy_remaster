@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月19日
+# 修订日期 2022年6月24日
 
 # 当前流程：All Done!
 
@@ -15,6 +15,15 @@ label scene17:
     # scene17 开始
 
     # scene17 场景1 【今天是在里昂冰淇淋店的打工】 开始
+    # 可变标题
+    # Scene 序号
+    $ sceneNo =  " scene17"
+    # 存档名称和 Scene 大标题
+    $ sceneName = " 里昂线 初合演纸芝居"
+    # 小场景的名称
+    $ partName = " 【今天是在里昂冰淇淋店的打工】"
+    $ changeTitleName()
+
     play music bgmtwentyeight fadeout 2.0 fadein 2.0
 
     # 地点：街道
@@ -1697,6 +1706,9 @@ label scene17:
     # scene17 场景1 【今天是在里昂冰淇淋店的打工】 结束
 
     # scene17 场景2 【偶遇挖洞洞回来的三人组】 开始
+    # 小场景的名称
+    $ partName = " 【偶遇挖洞洞回来的三人组】"
+    $ changeTitleName()
 
     # BGM 变得非常符合夕阳捏
 
@@ -2317,6 +2329,9 @@ label scene17:
     # scene17 场景2 【偶遇挖洞洞回来的三人组】 结束
 
     # scene17 场景3 【再次和里昂演纸芝居】 开始
+    # 小场景的名称
+    $ partName = " 【再次和里昂演纸芝居】"
+    $ changeTitleName()
 
     # 画面：SEND ，和 CALL 再做一个 Screen 就 OK
     show screen send

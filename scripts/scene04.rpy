@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月17日
+# 修订日期 2022年6月24日
 
 # 当前流程：All Done!
 
@@ -24,6 +24,14 @@ label scene04:
     $ quick_menu = True
 
     # scene04 场景1 【集美间的愉快自习（雾）】 开始
+    # 可变标题
+    # Scene 序号
+    $ sceneNo =  " scene04"
+    # 存档名称和 Scene 大标题
+    $ sceneName = " 真冬&心爱线 真冬酱的心意"
+    # 小场景的名称
+    $ partName = " 【集美间的愉快自习（雾）】"
+    $ changeTitleName()
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -732,6 +740,9 @@ label scene04:
 
     # scene04 场景1 【集美间的愉快自习（雾）】 结束
     # scene04 场景2 【和里昂的再次相遇】 开始
+    # 小场景的名称
+    $ partName = " 【和里昂的再次相遇】"
+    $ changeTitleName()
 
     # 场景切换
     # 地点：教室->校门口
@@ -1553,6 +1564,9 @@ label scene04:
     # 地点：街道->葛城家客厅
     # 人物：莲
     # BGM不变
+    # 小场景的名称
+    $ partName = " 【奇奇怪怪的冰淇淋又被人恰了，这次是真冬！】"
+    $ changeTitleName()
 
     image bg リビングa_夕 = "images/bg/リビングa_夕.png"
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)

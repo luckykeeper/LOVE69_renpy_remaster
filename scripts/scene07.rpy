@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月17日
+# 修订日期 2022年6月24日
 
 # 当前流程：All Done!
 
@@ -15,7 +15,15 @@ label scene07:
     # scene07 开始
 
     # scene07 场景1 【心爱酱的烦恼与时隔许久的演奏】 开始
-
+    # 可变标题
+    # Scene 序号
+    $ sceneNo =  " scene07"
+    # 存档名称和 Scene 大标题
+    $ sceneName = " 真冬&心爱线 心爱酱的烦恼"
+    # 小场景的名称
+    $ partName = " 【心爱酱的烦恼与时隔许久的演奏】"
+    $ changeTitleName()
+    
     # 地点：雾叶店内
     # 人物：心爱 店长（雾叶） 莲
     # BGM：雾叶店内的音乐（嘤语的）
@@ -1142,6 +1150,10 @@ label scene07:
 
     # scene07 场景1 【心爱酱的烦恼与时隔许久的演奏】 结束
     # scene07 场景2 【说曹操曹操到】 开始
+    # 小场景的名称
+    $ partName = " 【说曹操曹操到】"
+    $ changeTitleName()
+    
     # 场景切回店内
     # BGM切回店内英文歌
 
@@ -2007,7 +2019,7 @@ label scene07:
         "简直就像歌曲的BPM一样，心跳不断地高涨起来（L:玩音游（比如OSU！）的应该都知道BPM，简单来说就是衡量音乐节奏的数值，数值越大节奏越快）"
     else:
         "简直就像歌曲的BPM一样，心跳不断地高涨起来"
-
+        
     # nil 「飲み干したのは逆効果だったか、より、俺の心はヒートアップしてしまった。」
     "也许是适得其反吧，我的心情更加激动了"
 
@@ -2581,7 +2593,11 @@ label scene07:
     stop music fadeout 4.0
 
     # scene07 场景2 【说曹操曹操到】 结束
-    # scene07 场景3 【和心爱的回家路】 开始
+    # scene07 场景3 【和心爱的归家路】 开始
+    # 小场景的名称
+    $ partName = " 【和心爱的归家路】"
+    $ changeTitleName()
+    
     # 地点： 雾叶小店->通学路街道（夜）
     # 人物： 心爱 莲
     # BGM： 无
@@ -2891,7 +2907,7 @@ label scene07:
     # nil 「ちなみに心愛ちゃんは誘惑に耐えきれず、家につくまえにケーキをマジで2個平らげました。」
     "顺便一提，心爱酱经不住诱惑，在到家之前真的吃掉了两块蛋糕"
 
-    # scene07 场景3 【和心爱的回家路】 结束
+    # scene07 场景3 【和心爱的归家路】 结束
     # scene07 结束！
     # 今天Star过10，果然动力超强！一天肝了100多行，直接结束scene07，好耶！
 

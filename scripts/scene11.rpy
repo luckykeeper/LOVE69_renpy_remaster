@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月18日
+# 修订日期 2022年6月24日
 
 # 当前流程：All Done!
 
@@ -19,6 +19,14 @@ label scene11:
     # 地点：null/湛蓝天空
     # 人物：真冬
     # BGM：无
+    # 可变标题
+    # Scene 序号
+    $ sceneNo =  " scene11"
+    # 存档名称和 Scene 大标题
+    $ sceneName = " 真冬&心爱线 "
+    # 小场景的名称
+    $ partName = "【6人大集合，现在是女子会时间！】"
+    $ changeTitleName()
 
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=False, alpha=True, time_warp=None)
     scene 空 at love69_bg1440 with dissolve
@@ -211,7 +219,7 @@ label scene11:
         dinerowner 店长_私服_無表情 "Suck on my shoes！"
     else:
         dinerowner 店长_私服_無表情 "Suck on my shoes！（L:意思是来舔我的鞋吧！）"
-
+        
     hide 店长_私服_無表情 with dissolve
 
     # 这个语句是针对想瑠喵设计的参数，能够调整想瑠喵在对话框里面的位置

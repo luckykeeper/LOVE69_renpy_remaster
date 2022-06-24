@@ -7,12 +7,20 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月19日
+# 修订日期 2022年6月24日
 
 # 当前流程：All Done!
 
 label scene19:
     # scene19 开始
+    # 可变标题
+    # Scene 序号
+    $ sceneNo =  " scene19"
+    # 存档名称和 Scene 大标题
+    $ sceneName = " 里昂线"
+    # 小场景的名称
+    $ partName = " 【和里昂的初次约会】"
+    $ changeTitleName()
     play music bgmfourteen fadeout 2.0 fadein 2.0
 
     # scene19 场景1 【和里昂的初次约会】 开始

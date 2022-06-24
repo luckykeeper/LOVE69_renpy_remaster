@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月17日
+# 修订日期 2022年6月24日
 
 # 当前流程：All Done!
 
@@ -19,6 +19,14 @@ label scene09:
     # 地点：真冬房间
     # 人物：真冬
     # BGM：无
+    # 可变标题
+    # Scene 序号
+    $ sceneNo =  " scene09"
+    # 存档名称和 Scene 大标题
+    $ sceneName = " 真冬&心爱线 从隔阂到幸终"
+    # 小场景的名称
+    $ partName = "【终于到了面对修罗场的时候了呢】"
+    $ changeTitleName()
 
     image bg 真冬部屋_夜_消灯 = "images/bg/真冬部屋_夜_消灯.png"
 
@@ -539,6 +547,9 @@ label scene09:
 
     # scene09 场景1 【终于到了面对修罗场的时候了呢】 结束
     # scene09 场景2 【不知道如何开口而渐行渐远的三人】 开始
+    # 小场景的名称
+    $ partName = " 【不知道如何开口而渐行渐远的三人】"
+    $ changeTitleName()
 
     # 场景切换：葛城家客厅->学校教室
     # BGM：sweet passion.ogg
@@ -1240,6 +1251,9 @@ label scene09:
 
     # scene09 场景2 【不知道如何开口而渐行渐远的三人】 结束
     # scene09 场景3 【逐渐意识到真相，努力化解隔阂的二人】 开始
+    # 小场景的名称
+    $ partName = " 【逐渐意识到真相，努力化解隔阂的二人】"
+    $ changeTitleName()
 
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene 教室_昼 at love69_bg1220 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
@@ -1929,6 +1943,10 @@ label scene09:
 
     # scene09 场景3 【逐渐意识到真相，努力化解隔阂的二人】 结束
     # scene09 场景4 【二人一起努力，让三个人一起幸福吧】 开始
+    # 小场景的名称
+    $ partName = " 【二人一起努力，让三个人一起幸福吧】"
+    $ changeTitleName()
+
     # 画面切换：教室（黄昏）->校门口（黄昏）
     scene 校門_夕 at love69_bg1440 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
 

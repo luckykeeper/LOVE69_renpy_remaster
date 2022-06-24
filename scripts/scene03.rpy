@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月8日
+# 修订日期 2022年6月24日
 
 # 当前流程：All Done!
 
@@ -18,6 +18,15 @@ label scene03:
     # BGM：bgm36
 
     # scene03 场景1 【和心爱的归家路】 开始
+    # 可变标题
+    # Scene 序号
+    $ sceneNo =  " scene03"
+    # 存档名称和 Scene 大标题
+    $ sceneName = " 真冬&心爱线 心爱酱的夜访"
+    # 小场景的名称
+    $ partName = " 【和心爱的归家路】"
+    $ changeTitleName()
+
     # 实现渐变效果，需要增大阶数，默认的ramplen=8改到128效果比较好
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
 
@@ -244,7 +253,7 @@ label scene03:
         ai 心愛_制服_基本_真顔 "来，请进~（L:游戏开场的欢迎声就是这句哦~做Demo版的时候可是让我一顿好找233）"
     else:
         ai 心愛_制服_基本_真顔 "来，请进~"
-
+    
     hide 心愛_制服_基本_微笑み
 
     # 莲 「お邪魔しまーす」
@@ -253,6 +262,9 @@ label scene03:
     # scene03 场景1 【和心爱的归家路】 结束
 
     # scene03 场景2 【和心爱的晚饭时间】 开始
+    # 小场景的名称
+    $ partName = " 【和心爱的晚饭时间】"
+    $ changeTitleName()
 
     image bg 玄関_夜_消灯 = "images/bg/玄関_夜_消灯.png"
     scene 玄関_夜_消灯 at love69_bg1440 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
@@ -1024,6 +1036,10 @@ label scene03:
     # scene03 场景2 【和心爱的晚饭时间】 结束
 
     # scene03 场景3 【心爱的心跳留宿】 开始
+    # 小场景的名称
+    $ partName = " 【心爱的心跳留宿】"
+    $ changeTitleName()
+
     play music bgmthirtyseven fadeout 2.0 fadein 2.0
     image bg 自室a_夜 = "images/bg/自室a_夜.png"
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)

@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月18日
+# 修订日期 2022年6月24日
 
 # 当前流程：All Done!
 
@@ -21,6 +21,14 @@ label scene15:
     # 地点：教室
     # 人物：心爱 真冬 莲
     # BGM：あの夏まで...
+    # 可变标题
+    # Scene 序号
+    $ sceneNo =  " scene15"
+    # 存档名称和 Scene 大标题
+    $ sceneName = " 真冬&心爱线 故事还将继续"
+    # 小场景的名称
+    $ partName = " 【一周目_尾声】"
+    $ changeTitleName()
 
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
     image bg ハワイg = "images/bg/ハワイg.png"

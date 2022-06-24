@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月18日
+# 修订日期 2022年6月24日
 
 # 当前流程：All Done!
 
@@ -19,6 +19,14 @@ label scene12:
     # 地点：真冬卧室
     # 人物：真冬 心爱
     # BGM：无
+    # 可变标题
+    # Scene 序号
+    $ sceneNo =  " scene12"
+    # 存档名称和 Scene 大标题
+    $ sceneName = " 真冬&心爱线 二人奇妙体验"
+    # 小场景的名称
+    $ partName = " 【心爱和真冬的秘密时间！】"
+    $ changeTitleName()
 
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
     scene 真冬部屋_夜_消灯 at love69_bg1440 with dissolve
@@ -256,7 +264,7 @@ label scene12:
         ai 心愛_制服_基本_笑顔 "欢迎回来！"
     else:
         ai 心愛_制服_基本_笑顔 "欢迎回来！（L:同样的梗，句尾换成了Cocoa）"
-
+    
     hide 心愛_制服_基本_不機嫌
 
     # nil 「私は、事後、プリンター用のウェットティッシュで身体を拭くことを覚悟しました。」

@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月19日
+# 修订日期 2022年6月24日
 
 # 当前流程：All Done!
 
@@ -15,6 +15,14 @@ label scene18:
     # scene18 开始
 
     # scene18 场景1 【和里昂一起奇迹般的春夏秋冬】 开始
+    # 可变标题
+    # Scene 序号
+    $ sceneNo =  " scene18"
+    # 存档名称和 Scene 大标题
+    $ sceneName = " 里昂线 班主任的考验"
+    # 小场景的名称
+    $ partName = " 【和里昂一起奇迹般的春夏秋冬】"
+    $ changeTitleName()
 
     # 地点：街道
     # 人物：莲 真冬 心爱 里昂 MJ 想瑠
@@ -656,6 +664,10 @@ label scene18:
     # scene18 场景1 【和里昂一起奇迹般的春夏秋冬】 结束
 
     # scene18 场景2 【班主任的考验和莲的真心】 开始
+    # 小场景的名称
+    $ partName = " 【班主任的考验和莲的真心】"
+    $ changeTitleName()
+
     play music bgmfourteen fadein 2.0
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene sdcg01a with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)

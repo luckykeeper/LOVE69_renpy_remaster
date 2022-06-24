@@ -15,6 +15,14 @@ label scene22:
     # scene22 开始
 
     # scene22 场景2 【二周目_尾声】 开始
+    # 可变标题
+    # Scene 序号
+    $ sceneNo =  " scene22"
+    # 存档名称和 Scene 大标题
+    $ sceneName = " 里昂线 忙碌快乐日常"
+    # 小场景的名称
+    $ partName = " 【二周目_尾声】"
+    $ changeTitleName()
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=False, alpha=True, time_warp=None)
     scene 空 at love69_bg1440 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=False, alpha=True, time_warp=None)
 

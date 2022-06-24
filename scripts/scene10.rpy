@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月18日
+# 修订日期 2022年6月24日
 
 # 当前流程：All Done!
 
@@ -19,6 +19,14 @@ label scene10:
     # 地点：葛城家门口
     # 人物：お姉さん（小姐姐） 莲 心爱 真冬
     # BGM：
+    # 可变标题
+    # Scene 序号
+    $ sceneNo =  " scene10"
+    # 存档名称和 Scene 大标题
+    $ sceneName = " 真冬&心爱线 三人新的开始"
+    # 小场景的名称
+    $ partName = " 【按捺不住激动心情飞回家的莲君】"
+    $ changeTitleName()
 
     # 显示 quick_menu
     $ quick_menu = True
@@ -673,6 +681,10 @@ label scene10:
     # scene10 场景1 【按捺不住激动心情飞回家的莲君】 结束
     # scene10 场景2 【果然还是要先恰饭再洗澡，最后才是……】 开始
     # 场景切换：葛城家玄关->葛城家客厅
+    # 小场景的名称
+    $ partName = " 【果然还是要先恰饭再洗澡，最后才是……】"
+    $ changeTitleName()
+
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=True, alpha=True, time_warp=None)
     scene リビングa_夜 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=True, alpha=True, time_warp=None)
 
@@ -1910,6 +1922,9 @@ label scene10:
     # Black~
     # scene10 场景2 【果然还是要先恰饭再洗澡，最后才是……】 结束
     # scene10 场景3 【暑假的第一天当然要去约会啦】 开始
+    # 小场景的名称
+    $ partName = " 【暑假的第一天当然要去约会啦】"
+    $ changeTitleName()
 
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 

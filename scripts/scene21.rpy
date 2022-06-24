@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月19日
+# 修订日期 2022年6月24日
 
 # 当前流程：All Done!
 
@@ -16,6 +16,14 @@ label scene21:
     play music bgmtwentyeight fadeout 2.0 fadein 2.0
 
     # scene21 场景1 【梦想的第一战】 开始
+    # 可变标题
+    # Scene 序号
+    $ sceneNo =  " scene21"
+    # 存档名称和 Scene 大标题
+    $ sceneName = " 里昂线"
+    # 小场景的名称
+    $ partName = " 【梦想的第一战】"
+    $ changeTitleName()
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=False, alpha=True, time_warp=None)
     scene 通学路c_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 

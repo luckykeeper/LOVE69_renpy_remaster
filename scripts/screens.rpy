@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月12日
+# 修订日期 2022年6月24日
 
 ################################################################################
 ## 初始化
@@ -478,7 +478,8 @@ screen navigation():
 
         elif not main_menu:
 
-            textbutton _("标题界面") action MainMenu()
+            # textbutton _("主菜单") action [Function(changeTitleNameMainWindow),MainMenu()]
+            textbutton _("主菜单") action MainMenu()
 
         textbutton _("关于") action ShowMenu("about")
 
@@ -513,7 +514,7 @@ style navigation_button_text:
 
 # 新 Main_Menu ，采用图片 Button 进行引导
 screen main_menu():
-
+    $ changeTitleNameMainWindow()
     ## tag menu 的作用是来清其它界面，确保不被覆盖
     tag menu
 
@@ -688,7 +689,7 @@ screen main_menu():
 ##################################################################################
 # main_menu_2
 screen main_menu_2():
-
+    $ changeTitleNameMainWindow()
     ## tag menu 的作用是来清其它界面，确保不被覆盖
     tag menu
 
@@ -2487,6 +2488,7 @@ style slider_slider:
 ## https://lemmasoft.renai.us/forums/viewtopic.php?t=51629
 ## https://www.renpy.cn/doc/label.html?highlight=before_main_menu
 label before_main_menu:
+    $ changeTitleNameMainWindow()
     if persistent.one:
         $ renpy.music.play("bgm/bgm01.ogg", channel='music', loop=True)
     else:
@@ -2497,6 +2499,9 @@ label before_main_menu:
 # Gallery (ALBUM)
 screen gallery:
     tag menu
+    # Screen 似乎不执行 Python 命令
+    # $ specialScreenName = " gallery"
+    # $ changeTitleNameSpecialScreen()
     # 在这里播放音乐会导致 main_menu 的音乐混乱，暂时没有找到好的解决方法，后面再康康
     # 解决，这个可以参照 “MusicRoom” 的用法，下面的 “replace” 就是具体写法
     # $ renpy.music.play("bgm/bgm50.ogg", channel='music', loop=True, fadeout=1.0, synchro_start=False, fadein=1.0, if_changed=False)

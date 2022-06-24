@@ -30,22 +30,38 @@ define config.name = "LOVEPOTION SIXTYNINE 汉化移植版 ver1.0 \"LuckyCocoa\"
 # 参考文档：https://www.renpy.cn/doc/config.html?highlight=config%20window_title#var-config.window_title
 init python:
     # 游戏名
-    gameName = "LOVEPOTION SIXTYNINE 汉化移植版 NightBuild “LuckyDev” ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献"
+    gameName = "LOVEPOTION SIXTYNINE 汉化移植版 NightBuild \"LuckyDev\" ，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献"
+    # 运行时名称，缩短以便显示可变标题
+    runName = "LOVE69 汉化移植版 NightBuild，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献"
     # 构建时间
     buildTime = " (Build 20220428)"
     # 自动获取 Ren'py 引擎版本
     engineVersion = " 引擎版本："+renpy.version_only[0:5]
-    # Scene 名称
+    # Scene 序号
+    sceneNo =  ""
+    # 存档名称和 Scene 大标题
     sceneName = ""
-    # 小场景标题
-    saveName = ""
+    # 小场景的名称
+    partName = ""
+    # 特殊画面的名称
+    specialScreenName = ""
     
     # 可变标题   
-    programTitle = gameName+buildTime+engineVersion+sceneName+saveName
+    # programTitle = gameName+buildTime+engineVersion+sceneNo+sceneName+partName
+    programTitle = gameName+buildTime+engineVersion
     config.name = programTitle
 
     def changeTitleName():
-        programTitle = gameName+buildTime+engineVersion+sceneName+saveName
+        # programTitle = gameName+buildTime+engineVersion+sceneName+saveName
+        programTitle = runName+sceneNo+sceneName+partName+buildTime+engineVersion
+        config.window_title = programTitle
+
+    def changeTitleNameMainWindow():
+        programTitle = gameName+buildTime+engineVersion
+        config.window_title = programTitle
+        
+    def changeTitleNameSpecialScreen():
+        programTitle = gameName+buildTime+engineVersion+specialScreenName
         config.window_title = programTitle
 
 

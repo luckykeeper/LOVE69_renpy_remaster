@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月4日
+# 修订日期 2022年6月24日
 
 # 当前流程：All Done!
 
@@ -16,6 +16,14 @@ label scene02:
     # 地点：雾叶店内
     # 人物： 雾叶（店长） 莲 心爱
     # BGM：雾叶店内的音乐（嘤语的）:jonay_-_want_you_to_know bgm15
+    # 可变标题
+    # Scene 序号
+    $ sceneNo =  " scene02"
+    # 存档名称和 Scene 大标题
+    $ sceneName = " 真冬&心爱线 和心爱酱约会"
+    # 小场景的名称
+    $ partName = " 【雾叶小店】"
+    $ changeTitleName()
 
     # scene02 场景1 【雾叶小店】 开始
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=False, alpha=True, time_warp=None)
@@ -549,7 +557,7 @@ label scene02:
         dinerowner 店长_私服_微笑み "来，让您久等了，这是草莓煎饼"
     else:
         dinerowner 店长_私服_微笑み "来，让您久等了，这是草莓煎饼（L:这里说的是Pancake，美式松饼，也叫薄煎饼）"
-
+        
     hide 店长_私服_無表情
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
@@ -949,7 +957,7 @@ label scene02:
         ai 心愛_制服_基本_不機嫌 "嗯…嗯，我也想去啊…嗯…我的兴趣是…玩弄小洞…是我的兴趣……（L:心爱你好涩啊）"
     else:
         ai 心愛_制服_基本_不機嫌 "嗯…嗯，我也想去啊…嗯…我的兴趣是…玩弄小洞…是我的兴趣……"
-
+        
     hide 心愛_制服_基本_真顔
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
@@ -1151,7 +1159,10 @@ label scene02:
 
     # scene02 场景1 【雾叶小店】 结束
     # ------------------------------
-    # scene02 场景2 【和心爱的约会】 开始
+    # scene02 场景2 【和心爱酱约会】 开始
+    # 小场景的名称
+    $ partName = " 【和心爱酱约会】"
+    $ changeTitleName()
 
     # 场景切换
     # 地点：保龄球馆
@@ -2010,7 +2021,7 @@ label scene02:
         lian "不要责怪哈兰德·桑德斯叔叔的乳头了，不是有点发红吗"
     else:
         lian "不要责怪哈兰德·桑德斯叔叔（L:他是肯德基的创始人，肯德基商品的外包装的肖像画就是他的）的乳头了，不是有点发红吗（L:桑德斯在1980年6月被检测出白血病，这里“有点发红”应该是指该病症状）"
-
+    
     # 心爱 「ビスケット食べたい」
     show 心愛_制服_基本_真顔 at love69_xinai_center with dissolve
     voice "voice/心愛/cca_a1_0253.ogg"
@@ -2427,7 +2438,7 @@ label scene02:
     # nil 「……」
     "……"
 
-    # scene02 场景2 【和心爱的约会】 结束！
+    # scene02 场景2 【和心爱酱约会】 结束！
 
     # scene02 翻译完成！
 

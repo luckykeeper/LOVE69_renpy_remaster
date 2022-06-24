@@ -9,7 +9,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月17日
+# 修订日期 2022年6月24日
 
 # 当前流程：All Done!
 
@@ -17,6 +17,14 @@ label scene06:
     # scene06 开始
 
     # scene06 场景1 【这个莲君就是逊啦，这就病了？】 开始
+    # 可变标题
+    # Scene 序号
+    $ sceneNo =  " scene06"
+    # 存档名称和 Scene 大标题
+    $ sceneName = " 真冬&心爱线 寄的莲和二人"
+    # 小场景的名称
+    $ partName = " 【这个莲君就是逊啦，这就病了？】"
+    $ changeTitleName()
 
     # 地点：莲卧室
     # 人物：莲 真冬 心爱
@@ -1576,6 +1584,9 @@ label scene06:
     # scene06 场景1 【这个莲君就是逊啦，这就病了？】 结束
 
     # scene06 场景2 【心爱酱晚来一步】 开始
+    # 小场景的名称
+    $ partName = " 【心爱酱晚来一步】"
+    $ changeTitleName()
 
     # 地点：莲卧室
     # 人物：莲 真冬 心爱 想瑠
