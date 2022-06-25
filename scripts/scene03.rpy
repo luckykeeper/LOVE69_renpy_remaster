@@ -7,11 +7,12 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
 label scene03:
+    $ renpy.notify("BGM:unreal_dm_-_slippin_slidin")
     # scene03 开始
     # 地点：街道
     # 人物：心爱 莲
@@ -1041,6 +1042,7 @@ label scene03:
     $ changeTitleName()
 
     play music bgmthirtyseven fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:unreal_dm_-_stay_(for_this_moment)")
     image bg 自室a_夜 = "images/bg/自室a_夜.png"
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene 自室a_夜 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)

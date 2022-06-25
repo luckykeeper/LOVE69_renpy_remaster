@@ -9,12 +9,13 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
 label scene06:
     # scene06 开始
+    $ renpy.notify("BGM:honky tonk saloon (theme)")
 
     # scene06 场景1 【这个莲君就是逊啦，这就病了？】 开始
     # 可变标题
@@ -1580,6 +1581,7 @@ label scene06:
         $ quick_menu = True
         window show
     play music bgmtwentyfour fadeout 0.8 fadein 1.0
+    $ renpy.notify("BGM:one day")
 
     # scene06 场景1 【这个莲君就是逊啦，这就病了？】 结束
 

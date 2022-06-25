@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
@@ -34,6 +34,7 @@ label scene15:
     image bg ハワイg = "images/bg/ハワイg.png"
     scene 教室_昼 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
     play music bgmfive fadein 2.0
+    $ renpy.notify("BGM:08_あの夏まで...")
 
     # 显示 quick_menu
     $ quick_menu = True

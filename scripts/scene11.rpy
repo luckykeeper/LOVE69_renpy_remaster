@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
@@ -56,6 +56,7 @@ label scene11:
     # 人物：心爱 真冬 店长（雾叶）
 
     play music bgmfifteen fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:jonay_-_want_you_to_know")
     scene 霧葉ちゃんのお店 with dissolve
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置

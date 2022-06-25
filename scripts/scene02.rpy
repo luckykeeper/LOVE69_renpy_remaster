@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
@@ -29,6 +29,7 @@ label scene02:
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=False, alpha=True, time_warp=None)
 
     play music bgmfifteen fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:jonay_-_want_you_to_know")
 
     image bg 霧葉ちゃんのお店 = "images/bg/霧葉ちゃんのお店.png"
     scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
@@ -1170,6 +1171,7 @@ label scene02:
     # BGM：比较活跃 bgm16
 
     play music bgmsixteen fadeout 0.8 fadein 1.0
+    $ renpy.notify("BGM:loveshadow_-_lifted_up.the_alex_beroza_loveshadow_filter_fest")
     scene black
     scene ボウリング場 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
@@ -1759,6 +1761,7 @@ label scene02:
     scene るなちーの店 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     play music bgmeighteen fadeout 0.8 fadein 1.0
+    $ renpy.notify("BGM:m2　るなちー")
 
     # nil 「街の片隅にある変なお店にて。・るなちーのお店」
     # 参考资料：https://seesaawiki.jp/theunusualskyblock/d/%CD%D1%B8%EC%B2%F2%C0%E2#content_1_9_27
@@ -1835,6 +1838,7 @@ label scene02:
     scene 繁華街_夕 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     play music bgmnine fadeout 0.8 fadein 1.0
+    $ renpy.notify("BGM:carosone_-_in_peace_(our_destiny)")
 
     # nil 「街角にて」
     "在街角"
@@ -1884,6 +1888,7 @@ label scene02:
 
     # 音效（是音效，不会循环播放的！！！）：加速的『スターチス』結月そら / 原創曲:cittan*
     play sound bgmfortyseven
+    $ renpy.notify("SOUND:スターチス nightcore")
 
     # 心爱 「……」
     # voice "voice/心愛/cca_a1_0239.ogg" …… 没有配音，数字命名上跳过
@@ -2037,6 +2042,7 @@ label scene02:
     scene 公園_夕 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     play music bgmseven fadeout 0.8 fadein 1.0
+    $ renpy.notify("BGM:admiralbob77_-_harmony")
 
     # 心爱 「よかぜーにさらーわれたなみだー！　ゆきーのけーっしょおーにかーわるー！」
     # 参考资料：https://www.youtube.com/watch?v=BCE0R7P-z44&list=PLAuLqe9EqzhvHO6TN5nfJ2jVTxVFJhxlJ&index=41  1分16秒

@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年5月19日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
@@ -86,6 +86,7 @@ label scene22:
 
     # 进 Diner BGM
     play music bgmfifteen fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:jonay_-_want_you_to_know")
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.08
@@ -173,6 +174,7 @@ label scene22:
 
     # BGM 切！
     play music bgmtwentyseven fadeout 1.0 fadein 2.0
+    $ renpy.notify("BGM:sirius_-_viva_la_vida")
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1068,6 +1070,7 @@ label scene22:
     hide 真冬_私服_基本_嬉しい with dissolve
     hide 心愛_私服_基本_にっこり with dissolve
     play music bgmfifteen fadein 2.0
+    $ renpy.notify("BGM:jonay_-_want_you_to_know")
     hide 店长_私服_目閉じ love69_wuye_left
     show 店长_私服_微笑み:
         zoom 1.5
@@ -1477,6 +1480,7 @@ label scene22:
 
     # 场景切回通学路街道
     play music bgmfourteen fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:honky tonk saloon (theme)")
     scene 通学路c_昼 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
 
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
@@ -1664,6 +1668,7 @@ label scene22:
 
     # 进 OP（full ver.）
     play music bgmone fadeout 1.0
+    $ renpy.notify("BGM:01_heartbeat")
 
     # nil 「そして、少しの月日が流れた。」
     "然后，一段时间过去了"

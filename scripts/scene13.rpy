@@ -7,11 +7,12 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
 label scene13:
+    $ renpy.notify("BGM:unreal_dm_-_vox_vs._uke")
     # scene13 开始
 
     # scene13 场景1 【期待已久的夏威夷之行与最终的婚礼】 开始
@@ -2934,6 +2935,7 @@ label scene13:
 
     # BGM上
     play music bgmthirtyseven fadein 8.0
+    $ renpy.notify("BGM:unreal_dm_-_stay_(for_this_moment)")
 
     # nil 「結婚式の真似事を終えて、俺達はビーチに座ってオレンジ色の巨大な太陽が沈む海を眺めていた。」
     # "婚礼的仿真结束后，我们坐在沙滩上眺望着橙色的巨大太阳西沉的大海"

@@ -5,7 +5,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月12日
+# 修订日期 2022年6月24日
 # 版本 NightBuild "LuckyDev"
 
 
@@ -139,6 +139,8 @@ Enjoy :)
 Santa-Weaves：其实没帮上太大的忙，一周目也没走完，不过就玩过的地方来看还没有发现bug移植的很完美！
 
 另外，本作的完成离不开下列开源项目的帮助，感谢各位大佬的项目！这些项目是
+
+{a=https://github.com/charlesconnell/AudioCompare}AudioCompare{/a} 提供的声纹对比库
 
 {a=https://github.com/hanmin0822/MisakaTranslator}MisakaTranslator{/a} 提供的文本 HOOK 工具
 

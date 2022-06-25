@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
@@ -28,6 +28,7 @@ label scene01:
     # 小场景的名称
     $ partName = ""
     $ changeTitleName()
+    # [pos:1340,sceneNo:" scene01",sceneName:" 序幕：我们的故事从这里开始",partName:""]
 
     # $ main_menu_music = "bgm/bgm01.ogg" # 调试用
 
@@ -184,6 +185,8 @@ label scene01:
 
     ## BGM引入：honky tonk saloon (pad)
     play music "bgm/bgm13.ogg" fadein 2.0
+    # 用这个方法展示 BGM 名称
+    $ renpy.notify("BGM:honky tonk saloon (pad)")
 
     # 真冬 「ぐーてんたーく？　マイブラザー」 //ぐーてんたーく听上去好像德语，懂的老哥翻一下
     image bg mcg01_1_1 = "images/bg/mcg01_1_1.png"
@@ -639,6 +642,8 @@ label scene01:
     # bgm honky tonk saloon (pad) 13--> honky tonk saloon (theme) 14
     # 使用fadeout 1.0 fadein 1.0用于旧音乐的淡出和新音乐的淡入 建议时间设置2s更加自然
     play music "bgm/bgm14.ogg" fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:honky tonk saloon (theme)")
+
     image bg リビングa_昼 = "images/bg/リビングa_昼.png"
     scene リビングa_昼 at truecenter with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
 
@@ -1451,6 +1456,7 @@ label scene01:
     ### 开门声 心爱登场，bgm切换
     ### honky tonk saloon (pad).ogg 14 --> sweet passion.ogg 28
     play music "bgm/bgm28.ogg" fadeout 1.0 fadein 1.0
+    $ renpy.notify("BGM:sweet passion")
 
     # 心爱？？？ 「わーい！　おっはよー！　まふまふー！　迎えにきましたよーん♪」
     # 参见 character.rpy 心爱？？？ 的代号是 fen
@@ -1496,6 +1502,7 @@ label scene01:
 
     ### 开门声 心爱再次登场 附加表情：pac/喜び
     play music "bgm/bgm28.ogg" fadein 1.0
+    $ renpy.notify("BGM:sweet passion")
     play sound "voice/effect/07_ドア1～あける.ogg"
 
     # 心爱？？？ 「おっはよー！　真冬ちゃーん！　迎えにきたよー！」
@@ -1527,6 +1534,7 @@ label scene01:
 
     ### 开门 心爱登场 开门声 BGM 开  附加表情：pac/喜び
     play music "bgm/bgm28.ogg" fadein 1.0
+    $ renpy.notify("BGM:sweet passion")
     play sound "voice/effect/07_ドア1～あける.ogg"
 
     # 心爱？？？ 「わーい！　おっはよー！　まっふまふちゃーん迎えにきーましたよー！　あ、それと、梅昆布茶ごちそうさまでした、ぺこり」
@@ -1585,6 +1593,7 @@ label scene01:
     #BGM再开
     # 心爱？？？ 「今日はいつになく風当たり強いねまふまふちゃ…ん？　あれ？　髪切った？」
     play music "bgm/bgm28.ogg" fadein 1.0
+    $ renpy.notify("BGM:sweet passion")
     # hide 心愛_制服_基本_ジト目
     show 心愛_制服_基本_泣き at love69_center with dissolve
     voice "voice/心愛/cca_a1_0018.ogg"
@@ -4757,6 +4766,7 @@ label scene01:
     # 尝试用编号引入 BGM 康康
     # 大成功！
     play music bgmforty fadein 4.0
+    $ renpy.notify("BGM:vj_memes_-_dance_of_the_gypsy")
     # 里昂初登场
     # 来给里昂设计参数吧
     # 这个语句是针对里昂设计的参数，能够调整里昂在对话框里面的位置
@@ -4959,6 +4969,7 @@ label scene01:
     scene black
     scene 通学路c_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     play music bgmtwentyfour fadeout 0.8 fadein 1.0
+    $ renpy.notify("BGM:one day")
     show 黄_基本_杖_微笑み at love69_lion_center with Dissolve(0.15)
 
     # 里昂？？？ 「えーと…とりあえず、うちのMJを捕まえてくれてありがとうございます」
@@ -5792,6 +5803,7 @@ label scene01:
 
     # 心爱 「れ——ーんくううううん」附加：喜
     play music bgmtwentyeight fadein 1.0
+    $ renpy.notify("BGM:sweet passion")
     show 心愛_制服_基本_にっこり with Dissolve(0.15):
         zoom 1.5
         xalign 0.53
@@ -5858,6 +5870,7 @@ label scene01:
 
     # BGM 心爱变身！进入心爱的回合！
     play music bgmtwentyfive fadein 1.0
+    $ renpy.notify("BGM:prominence")
     # nil 「心愛が一度脚を止めて、俺の右手に握られている『何か』を視認したようだ。一瞬にして場の空気が変わったことを肌で感じる。」
     "心爱停下了脚步，似乎看到了握在我右手里的『那个东西』。我能感觉到气氛瞬间发生了变化"
 

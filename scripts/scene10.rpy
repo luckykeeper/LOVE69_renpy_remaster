@@ -7,11 +7,12 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
 label scene10:
+    $ renpy.notify("BGM:one day")
     # scene10 开始
 
     # scene10 场景1 【按捺不住激动心情飞回家的莲君】 开始
@@ -1934,6 +1935,7 @@ label scene10:
 
     # 场景切到早上莲卧室
     play music bgmthirteen fadeout 2.0 fadein 4.0
+    $ renpy.notify("BGM:honky tonk saloon (pad)")
     scene 自室a_朝 at love69_bg1620 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
     # 莲 「おひょおう！」
@@ -2221,6 +2223,7 @@ label scene10:
     # BGM切换
     # 场景切换：莲卧室->葛城家浴室
     play music bgmfourteen fadeout 2.0 fadein 4.0
+    $ renpy.notify("BGM:honky tonk saloon (theme)")
     scene 自宅洗面所_昼 at love69_bg1440 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
 
     # 这个语句是针对真冬设计的参数，能够调整真冬在对话框里面的位置
@@ -2313,6 +2316,7 @@ label scene10:
     # 画面切换：湛蓝天空
     image bg 空 = "/images/bg/空.png"
     play music bgmtwentyeight fadeout 2.0 fadein 4.0
+    $ renpy.notify("BGM:sweet passion")
     scene 空 at love69_bg1440 with dissolve
 
     # nil 「三人で玄関をくぐり、透き通る青空を見上げた。」

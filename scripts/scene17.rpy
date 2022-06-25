@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
@@ -25,6 +25,7 @@ label scene17:
     $ changeTitleName()
 
     play music bgmtwentyeight fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:sweet passion")
 
     # 地点：街道
     # 人物：莲 里昂 孩子A 孩子B 孩子C 亚十礼
@@ -1701,6 +1702,7 @@ label scene17:
 
     # 场景切换到通学路街道
     play music bgmfifty fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:舞上がる木の葉")
     scene 通学路c_夕 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
 
     # scene17 场景1 【今天是在里昂冰淇淋店的打工】 结束
@@ -2396,6 +2398,7 @@ label scene17:
 
     # 场景切换到街道（第二天白天）
     play music bgmfourteen fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:honky tonk saloon (theme)")
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene 通学路d_昼 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 

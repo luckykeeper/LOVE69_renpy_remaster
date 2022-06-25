@@ -7,13 +7,14 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
 label scene21:
     # scene21 开始
     play music bgmtwentyeight fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:sweet passion")
 
     # scene21 场景1 【梦想的第一战】 开始
     # 可变标题
@@ -118,6 +119,7 @@ label scene21:
 
     # BGM切店内英文歌
     play music bgmfifteen fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:jonay_-_want_you_to_know")
 
     # 场景切换到雾叶店内
     scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
@@ -603,6 +605,7 @@ label scene21:
 
     # 新 BGM 解锁
     play music bgmfortynine fadein 2.0
+    $ renpy.notify("BGM:世迷い恋慕")
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -697,6 +700,7 @@ label scene21:
 
     # 原 BGM 回
     play music bgmfifteen fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:jonay_-_want_you_to_know")
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1482,6 +1486,7 @@ label scene21:
 
     # 进 ghs BGM
     play music bgmeight fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:anonatsu_piano")
 
     # nil 「そして…早くも四日の時間が経った。」
     "然后…已经过了4天了"

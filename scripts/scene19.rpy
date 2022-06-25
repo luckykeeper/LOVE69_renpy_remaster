@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
@@ -22,6 +22,7 @@ label scene19:
     $ partName = " 【和里昂的初次约会】"
     $ changeTitleName()
     play music bgmfourteen fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:honky tonk saloon (theme)")
 
     # scene19 场景1 【和里昂的初次约会】 开始
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=False, alpha=True, time_warp=None)
@@ -200,6 +201,7 @@ label scene19:
     # 场景切换到蔚蓝天空
     scene 空 with dissolve
     play music bgmthirtysix fadein 2.0 fadeout 2.0
+    $ renpy.notify("BGM:unreal_dm_-_slippin_slidin")
 
     # 发动声
     play sound "voice/effect/02_発進走り去る／高速.ogg"
@@ -490,6 +492,7 @@ label scene19:
     # 刹车声
     play sound "voice/effect/15_ブレーキ2.ogg"
     play music bgmsixteen fadeout 0.8 fadein 1.0
+    $ renpy.notify("BGM:loveshadow_-_lifted_up.the_alex_beroza_loveshadow_filter_fest")
 
     # 场景切换到横滨港
     image bg 横浜_山下公園 = "images/bg/横浜_山下公園.png"
@@ -1250,6 +1253,7 @@ label scene19:
     hide リオン_私服_基本_ぶわー
 
     play music bgmthirtysix fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:unreal_dm_-_slippin_slidin")
     image bg 横浜_観覧車 = "images/bg/横浜_観覧車.png"
     scene 横浜_観覧車 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
 
@@ -2231,6 +2235,7 @@ label scene19:
 
     # 开场 BGM 起！
     play music bgmeight fadein 2.0
+    $ renpy.notify("BGM:anonatsu_piano")
 
     # 里昂 「この世界には、魔法というものが存在するんだよ。今、私と蓮くん以外の時間を止めた。正確には、通常の時間の流れから、私と蓮くんを除外した…かな」
     voice "voice/リオン/ron_a1_0334.ogg"

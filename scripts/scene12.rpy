@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
@@ -739,6 +739,7 @@ label scene12:
     image bg ycg_2_2_1_1 = "images/bg/ycg_2_2_1_1.png"
     scene ycg_2_2_1_1 with dissolve
     play music bgmeight fadein 2.0
+    $ renpy.notify("BGM:anonatsu_piano")
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10

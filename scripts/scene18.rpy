@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
@@ -295,6 +295,7 @@ label scene18:
 
     # 画面切到粉红色的天空
     play music bgmfifty fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:舞上がる木の葉")
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene 空_夕a at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
@@ -669,6 +670,7 @@ label scene18:
     $ changeTitleName()
 
     play music bgmfourteen fadein 2.0
+    $ renpy.notify("BGM:honky tonk saloon (theme)")
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene sdcg01a with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 
@@ -1129,6 +1131,7 @@ label scene18:
     # 心爱恰冰淇淋 BGM 再现，这里用的应该是 Full ver. 可能加变奏了，写脚本的时候需要再确认一下，歌词似乎有提到里昂
     # 确认是循环播放的
     play music bgmthree
+    $ renpy.notify("BGM:prominence")
 
     # 想瑠 「単刀直入に聞こう」
     show 想瑠_スーツ_見下し at love69_xiangliu_center with dissolve

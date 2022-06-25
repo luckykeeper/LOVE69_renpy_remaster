@@ -7,11 +7,12 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
 label scene07:
+    $ renpy.notify("BGM:jonay_-_want_you_to_know")
     # scene07 开始
 
     # scene07 场景1 【心爱酱的烦恼与时隔许久的演奏】 开始
@@ -611,6 +612,7 @@ label scene07:
     "我没有回答那个问题，坐在钢琴前慢慢地开始敲击黑白琴键"
 
     play music bgmtwelve fadein 2.0
+    $ renpy.notify("BGM:g線上kp")
 
     # 店长 「Ｇ線上のアリアですか…雨音にはよく合いますね」
     voice "voice/霧葉/krh_a1_0138.ogg"
@@ -1070,6 +1072,7 @@ label scene07:
     dinerowner 店长_私服_にっこり "Bring It on!"
 
     play music bgmeight fadein 4.0
+    $ renpy.notify("BGM:anonatsu_piano")
 
     # nil 「私はアップテンポのジャズナンバーを弾きながら、改めて二人の事を考える。」
     "我一边弹奏着快节奏的爵士乐曲，一边重新考虑两个人的事情"
@@ -1159,6 +1162,7 @@ label scene07:
 
     scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
     play music bgmfifteen fadein 4.0
+    $ renpy.notify("BGM:jonay_-_want_you_to_know")
 
     # nil 「やれやれ厄介な雨だ。」
     "哎呀，真是场麻烦的雨"
@@ -1893,6 +1897,7 @@ label scene07:
 
     scene ccg01_2_1 with dissolve
     play music bgmfortytwo fadein 2.0 fadeout 1.0
+    $ renpy.notify("BGM:あの夏rock1111")
 
     # 心爱闭眼，音乐是开场的变奏曲，超好听的！！！
     # 暂时不更了，听会儿心爱酱的钢琴
@@ -2051,6 +2056,7 @@ label scene07:
     # 场景切回店内
     scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
     play music bgmfifteen fadein 4.0
+    $ renpy.notify("BGM:jonay_-_want_you_to_know")
 
     # nil 「発表会のように、心愛は椅子から立ち上がりぺこりとお辞儀した。ほんのり、頬を赤くしている。」
     "就像发布会一样，心爱从椅子上站起来深深鞠了一躬。她的脸颊微微泛红"

@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
@@ -16,6 +16,7 @@ label scene04:
     # 地点：Q版
     # 人物：心爱 真冬
     # BGM：bgm28
+    $ renpy.notify("BGM:sweet passion")
 
     image bg sdcg01a = "images/bg/sdcg01a.png"
     scene sdcg01a  at love69_bg1440 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
@@ -1642,6 +1643,7 @@ label scene04:
     # BGM：英文歌 平缓 Music Through Love (ft. Admiral Bob)
 
     play music bgmnineteen fadein 4.0 fadeout 4.0
+    $ renpy.notify("BGM:mindmapthat_-_music_through_love")
     image bg 空_夕a = "images/bg/空_夕a.png"
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene 空_夕a at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
@@ -2007,6 +2009,7 @@ label scene04:
     # BGM：bgmtwentyfour
 
     play music bgmtwentyfour fadeout 3.0 fadein 0.8
+    $ renpy.notify("BGM:one day")
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene リビングa_夕 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
 

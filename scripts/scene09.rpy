@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2022年6月25日
 
 # 当前流程：All Done!
 
@@ -262,6 +262,7 @@ label scene09:
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene 自室a_朝 at love69_bg1620 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     play music bgmthirteen
+    $ renpy.notify("BGM:honky tonk saloon (pad)")
 
     # 这个语句是针对心爱设计的参数，能够调整心爱在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.10
@@ -558,6 +559,7 @@ label scene09:
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene 教室_昼 at love69_bg1220 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     play music bgmfourteen fadeout 1.0 fadein 4.0
+    $ renpy.notify("BGM:honky tonk saloon (theme)")
 
     # nil 「学校にて。」
     "在学校"
@@ -679,6 +681,7 @@ label scene09:
     # BGM：Slide the Way
     # 人物：莲 真冬
     play music bgmthirtysix fadeout 2.0 fadein 4.0
+    $ renpy.notify("BGM:unreal_dm_-_slippin_slidin")
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=True, alpha=True, time_warp=None)
     scene リビングa_夜 at love69_bg1440 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=True, alpha=True, time_warp=None)
 
@@ -818,6 +821,7 @@ label scene09:
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene 教室_昼 at love69_bg1220 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     play music bgmthirteen fadeout 1.0 fadein 4.0
+    $ renpy.notify("BGM:honky tonk saloon (pad)")
 
     # nil 「その日以来、真冬は毎朝、早く家を出て、毎晩遅く帰ってくる日々が続いた。」
     "从那天以来，真冬每天早上都早早出门，每天晚上很晚才回家"
@@ -980,6 +984,7 @@ label scene09:
     # 人物： 莲
 
     play music bgmthirtyseven fadeout 1.0 fadein 4.0
+    $ renpy.notify("BGM:unreal_dm_-_stay_(for_this_moment)")
     image bg 通学路d_夕 = "images/bg/自宅二階廊下_夜_消灯.png"
     scene 通学路d_夕 at love69_bg1440 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
 
@@ -1052,6 +1057,7 @@ label scene09:
     # 新BGM解锁
 
     play music bgmtwentysix fadeout 1.0 fadein 4.0
+    $ renpy.notify("BGM:scottaltham_-_stretch_at_the_grave")
     image bg 通学路c_夕 = "images/bg/通学路c_夕.png"
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
     scene 通学路c_夕  at love69_bg1440 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
@@ -1157,6 +1163,7 @@ label scene09:
     # BGM也切换回来
 
     play music bgmthirtyseven fadeout 1.0 fadein 4.0
+    $ renpy.notify("BGM:unreal_dm_-_stay_(for_this_moment)")
     image bg 通学路e_夜 = "images/bg/通学路e_夜.png"
     scene black with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
     scene 通学路e_夜  at love69_bg1440 with ImageDissolve("images/tr/縦ブラインド.png", 1.5, ramplen=128, reverse=True, alpha=True, time_warp=None)
@@ -1258,6 +1265,7 @@ label scene09:
     scene black with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     scene 教室_昼 at love69_bg1220 with ImageDissolve("images/tr/ysr006.png", 0.8, ramplen=64, reverse=False, alpha=True, time_warp=None)
     play music bgmthirteen fadeout 1.0 fadein 4.0
+    $ renpy.notify("BGM:honky tonk saloon (pad)")
 
     # nil 「時間が解決してくれると思っていたが…それはただの甘えだった。」
     "我以为时间能解决问题的……但那只是一厢情愿而已"
@@ -1618,6 +1626,7 @@ label scene09:
     play sound "voice/effect/15_ブレーキ2.ogg"
     scene 霧葉ちゃんのお店 with ImageDissolve("images/tr/trans01.png", 1.5, ramplen=8, reverse=True, alpha=True, time_warp=None)
     play music bgmfifteen fadeout 2.0 fadein 2.0
+    $ renpy.notify("BGM:jonay_-_want_you_to_know")
 
     # 这个语句是针对雾叶设计的参数，能够调整雾叶在对话框里面的位置
     $ sideimagesize.SideImageXalign = 0.07
@@ -1883,6 +1892,7 @@ label scene09:
     # BGM:bgmfive（あの夏まで...）
     # Demo版结尾的音乐用的就是这里的
     play music bgmfive fadein 4.0
+    $ renpy.notify("BGM:08_あの夏まで...")
 
     # nil 「真冬は瞳に大粒の涙を湛えながら、優しく微笑んだ。」
     "真冬的眼睛里充满了大颗的眼泪，温柔地微笑着"
@@ -2553,6 +2563,7 @@ label scene09:
         # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/19
         # 参考：https://www.renpy.cn/doc/audio.html?highlight=music#renpy.music.play
         $ renpy.music.play("/bgm/bgm01.ogg", channel='music', loop=False, fadeout=None, synchro_start=False, fadein=0, tight=None, if_changed=False)
+        $ renpy.notify("SOUND:01_heartbeat")
         $ persistent.playStaff =  True # variable value
         $ check_playthrough()
         # 考虑到 STAFF 表的加载时间过长，这里选择再重复播放一次
@@ -2561,6 +2572,7 @@ label scene09:
         # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/19
         # play sound bgmone
         $ renpy.music.play("/bgm/bgm01.ogg", channel='music', loop=False, fadeout=None, synchro_start=False, fadein=0, tight=None, if_changed=False)
+        $ renpy.notify("SOUND:01_heartbeat")
 
     # 莲 「こ…これは…その…いや、発情するんじゃない…のか？」
     lian "这…这是…那个…不，不是会发情的吗…？"
