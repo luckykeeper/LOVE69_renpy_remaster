@@ -24,8 +24,8 @@ jobs:
         dst: gitee/luckykeeper
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token:  ${{ secrets.GITEE_TOKEN }}
-        white_list: "LOVE69_renpy_remaster, attackMap"
-        static_list: "LOVE69_renpy_remaster, attackMap"
+        white_list: "LOVE69_renpy_remaster, attackMap, HBFUDataFill_new"
+        static_list: "LOVE69_renpy_remaster, attackMap, HBFUDataFill_new"
         cache_path: /github/workspace/hub-mirror-cache
         debug: true
         force_update: true
