@@ -35,15 +35,15 @@ Discussions is now open, for non-bug/translation/script/programming issues, plea
 
 # Navigation
 
-- [Project Progress Logs](#Project_Progress_Logs)
+- [Project Progress Logs](#Project-Progress-Logs)
 - [Objectives](#Objectives)
 - [Live development screen display](#Live_development_screen_display)
-- [Contributions and source code guide](#Contributions and source code guide)
-- [Open-source declaration](#Open-source declaration)
-- [Other matters](#Other matters)
+- [Contributions and source code guide](#Contributions-and-source-code-guide)
+- [Open-source declaration](#Open-source-declaration)
+- [Other matters](#Other-matters)
 - [Project team website (clicking will leave this page)](https://love69renpyremasterproject.github.io/)
 
-# Project_Progress_Logs
+# Project Progress Logs
 
 [Go to navigation](#Navigation)
 
