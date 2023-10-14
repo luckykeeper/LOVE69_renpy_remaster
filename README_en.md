@@ -10,9 +10,11 @@
 
 <video id="video" width="560" height="315" controls="" preload="none" > <source id="mp4" src="https://oa.hbfu.edu.cn/backstage/filecenter/file/main::cb4d1cb09d5c494f9950a179c2af5e4a" type="video/mp4"> </video>
 
-**tips: This Readme is is translated from Chinese, all suggestions for corrections are welcome**
+**Tips: This Readme is is translated from Chinese, all suggestions for corrections are welcome**
 
-Partial translation for now , full translation of README will come soon
+~~Partial translation for now , full translation of README will come soon~~
+
+Full translation of README is coming now
 
 # Introduction
 
@@ -33,48 +35,48 @@ Discussions is now open, for non-bug/translation/script/programming issues, plea
 
 # Navigation
 
-- [Project Progress Logs](#Project_Progress_Logs)
-- [目标](#目标)
-- [live development screen display](#live_development_screen_display)
-- [贡献及源码食用指北](#贡献及源码食用指北)
-- [开源声明](#开源声明)
-- [其它事项](#其它事项)
-- [项目组网站 (点击将离开本页)](https://love69renpyremasterproject.github.io/)
+- [Project Progress Logs](#Project-Progress-Logs)
+- [Objectives](#Objectives)
+- [Live development screen display](#Live_development_screen_display)
+- [Contributions and source code guide](#Contributions-and-source-code-guide)
+- [Open-source declaration](#Open-source-declaration)
+- [Other matters](#Other-matters)
+- [Project team website (clicking will leave this page)](https://love69renpyremasterproject.github.io/)
 
-# Project_Progress_Logs
-
-[Go to navigation](#Navigation)
-
-| Project_Progress        | LOVE69 Ren’py Remaster Project                               |
-| ----------------------- | ------------------------------------------------------------ |
-| Progress                | expected to be released on May 1st~<br/>Current status: Development completed, moving to closed testing phase<br/>Project Start （2021-08-28）<br/>Project website construction is basically completed（2021-09-03）<br/>Scene 01（Demo）part text content translation completed（2021-10-01）<br/>Demo version completed，start internal testing（2021-10-09）<br/>Demo version release（2021-10-24）【[Download](https://github.com/luckykeeper/LOVE69_renpy_remaster/releases/tag/0.1.0)】<br/>Scene 02 part text content translation completed（2021-11-06）<br/>Scene 03 part text content translation completed（2021-11-08）<br/>Scene 04 part text content translation completed（2021-11-20）<br/>Scene 05 part text content translation completed（2021-11-27）<br/>Scene 06 part text content translation completed（2022-01-01）<br/>GitHub Star Over Ten!（2022-01-04）<br/>Scene 07 part text content translation completed（2022-01-04）<br/>Scene 08 part text content translation completed（2022-01-05）<br/>Scene 09 part text content translation completed（2022-01-08）<br/>Scene 10 part text content translation completed（2022-01-09）<br/>Scene 11 part text content translation completed（2022-01-10）<br/>Scene 12 part text content translation completed（2022-01-11）<br/>Scene 13 part text content translation completed（2022-01-12）<br/>Scene 14&15 part text content translation completed&first-playthrogh translation completed&Version adjusted to 0.2（2022-01-13）<br/>Scene 16 part text content translation completed（2022-01-16）<br/>Scene 17 part text content translation completed（2022-01-17）<br/>Scene 18 part text content translation completed（2022-01-19）<br/>Scene 19 part text content translation completed（2022-01-20）<br/>Scene 20-22 part text content translation completed&second-playthrogh translation completed&Version adjusted to 0.3（2022-01-21）<br/>New version of UI rebuild&test completed&Version adjusted to 0.4（2022-01-23）<br/>rebuild Scene 01 anime script，add effects，enhancing restoration（2022-01-24/25日）<br/>Scene 02 script completed（2022-01-27）<br/>Scene 03 script completed（2022-01-28）<br/>Scene 04 script completed（2022-02-02）<br/>Scene 05 script completed（2022-02-03）<br/>Scene 06 script completed（2022-02-07）<br/>Scene 07 script completed（2022-02-16）<br/>Scene 08 script completed（2022-02-17）<br/>The first choice limb of the ported version& Scene 09 script completed（2022-02-18）<br/>Document Website build complete&The mirror site of offical、Document Website build complete（2022-02-19）<br/>Scene 10 script completed（2022-03-05）<br/>Scene 11 script completed（2022-03-05）<br/>Scene 12 script completed（2022-03-05）<br/>Scene 13 script completed（2022-03-06）<br/>Scene 14 script completed（2022-03-06）<br/>Scene 15 script completed（2022-03-06）<br/>First-playthrogh all script completed（2022-03-06）<br/>Version adjusted to 0.5（2022-03-07）<br/>GUI finished，Version adjusted to 0.6（2022-03-17）<br/>Scene 16-17 script completed（2022-03-19）<br/>Scene 18 script completed（2022-03-20）<br/>Scene 19-20 script completed（2022-03-26）<br/>Scene 21-22 script completed，all story script completed！（2022-03-27）<br/>Version adjusted to 0.7（2022-03-27）<br/>All development completed, moving to closed testing phase&Version adjusted to 0.8（2022-03-31）<br/>W Submit OP，Version adjusted to 0.9，Start of internal testing phase（2022-04-05） |
-| Members of project      | 3人（[Luckykeeper](https://github.com/luckykeeper)，[WorldlineChanger](https://github.com/WorldlineChanger)，[Santa-Weaves](https://github.com/Santa-Weaves)） |
-| 看看组里谁在摸鱼        | [Click_here](https://github.com/luckykeeper/LOVE69_renpy_remaster/graphs/contributors) |
-| contributer             | （欢迎踊跃参与）                                             |
-| project opensource urls | [GitHub](https://github.com/luckykeeper/LOVE69_renpy_remaster) 【main】<br/>[Gitee](https://gitee.com/luckykeeper/LOVE69_renpy_remaster)【syncing from GitHub】<br/>[GitLab](https://gitlab.com/luckykeeper/LOVE69_renpy_remaster)【syncing from GitHub】<br/>Welcome Star！ |
-| Offical Website         | [Click_here](https://love69renpyremasterproject.github.io)   |
-
-# 目标
+# Project Progress Logs
 
 [Go to navigation](#Navigation)
 
-- 使用 Ren'Py 重置本作品，实现跨平台
+| Project_Progress               | LOVE69 Ren’py Remaster Project                               |
+| ------------------------------ | ------------------------------------------------------------ |
+| Progress                       | expected to be released on May 1st~<br/>Current status: Development completed, moving to closed testing phase<br/>Project Start （2021-08-28）<br/>Project website construction is basically completed（2021-09-03）<br/>Scene 01（Demo）part text content translation completed（2021-10-01）<br/>Demo version completed，start internal testing（2021-10-09）<br/>Demo version release（2021-10-24）【[Download](https://github.com/luckykeeper/LOVE69_renpy_remaster/releases/tag/0.1.0)】<br/>Scene 02 part text content translation completed（2021-11-06）<br/>Scene 03 part text content translation completed（2021-11-08）<br/>Scene 04 part text content translation completed（2021-11-20）<br/>Scene 05 part text content translation completed（2021-11-27）<br/>Scene 06 part text content translation completed（2022-01-01）<br/>GitHub Star Over Ten!（2022-01-04）<br/>Scene 07 part text content translation completed（2022-01-04）<br/>Scene 08 part text content translation completed（2022-01-05）<br/>Scene 09 part text content translation completed（2022-01-08）<br/>Scene 10 part text content translation completed（2022-01-09）<br/>Scene 11 part text content translation completed（2022-01-10）<br/>Scene 12 part text content translation completed（2022-01-11）<br/>Scene 13 part text content translation completed（2022-01-12）<br/>Scene 14&15 part text content translation completed&first-playthrogh translation completed&Version adjusted to 0.2（2022-01-13）<br/>Scene 16 part text content translation completed（2022-01-16）<br/>Scene 17 part text content translation completed（2022-01-17）<br/>Scene 18 part text content translation completed（2022-01-19）<br/>Scene 19 part text content translation completed（2022-01-20）<br/>Scene 20-22 part text content translation completed&second-playthrogh translation completed&Version adjusted to 0.3（2022-01-21）<br/>New version of UI rebuild&test completed&Version adjusted to 0.4（2022-01-23）<br/>rebuild Scene 01 anime script，add effects，enhancing restoration（2022-01-24/25日）<br/>Scene 02 script completed（2022-01-27）<br/>Scene 03 script completed（2022-01-28）<br/>Scene 04 script completed（2022-02-02）<br/>Scene 05 script completed（2022-02-03）<br/>Scene 06 script completed（2022-02-07）<br/>Scene 07 script completed（2022-02-16）<br/>Scene 08 script completed（2022-02-17）<br/>The first choice limb of the ported version& Scene 09 script completed（2022-02-18）<br/>Document Website build complete&The mirror site of offical、Document Website build complete（2022-02-19）<br/>Scene 10 script completed（2022-03-05）<br/>Scene 11 script completed（2022-03-05）<br/>Scene 12 script completed（2022-03-05）<br/>Scene 13 script completed（2022-03-06）<br/>Scene 14 script completed（2022-03-06）<br/>Scene 15 script completed（2022-03-06）<br/>First-playthrogh all script completed（2022-03-06）<br/>Version adjusted to 0.5（2022-03-07）<br/>GUI finished，Version adjusted to 0.6（2022-03-17）<br/>Scene 16-17 script completed（2022-03-19）<br/>Scene 18 script completed（2022-03-20）<br/>Scene 19-20 script completed（2022-03-26）<br/>Scene 21-22 script completed，all story script completed！（2022-03-27）<br/>Version adjusted to 0.7（2022-03-27）<br/>All development completed, moving to closed testing phase&Version adjusted to 0.8（2022-03-31）<br/>W Submit OP，Version adjusted to 0.9，Start of internal testing phase（2022-04-05） |
+| Members of project             | 3 people（[Luckykeeper](https://github.com/luckykeeper)，[WorldlineChanger](https://github.com/WorldlineChanger)，[Santa-Weaves](https://github.com/Santa-Weaves)） |
+| See who is on the loaf in team | [Click_here](https://github.com/luckykeeper/LOVE69_renpy_remaster/graphs/contributors) |
+| Contributer                    | (Welcome to participate actively)                            |
+| Project open-source urls       | [GitHub](https://github.com/luckykeeper/LOVE69_renpy_remaster) 【main】<br/>[Gitee](https://gitee.com/luckykeeper/LOVE69_renpy_remaster)【syncing from GitHub】<br/>[GitLab](https://gitlab.com/luckykeeper/LOVE69_renpy_remaster)【syncing from GitHub】<br/>Welcome Star！ |
+| Offical Website                | [Click_here](https://love69renpyremasterproject.github.io)   |
 
-- 使用人工智能将材质高清化（720p->1080p，部分素材2K）
-
-- 让更多人有机会接触本作，爱上本作
-
-- 汉化成果最终全部开源，给其它想参与汉化的同好提供一个思路
-
-# live_development_screen_display
+# Objectives
 
 [Go to navigation](#Navigation)
 
-**最新开发界面前瞻**
+- Remaster this project using Ren'Py for cross-platform compatibility.
 
-2022年1月22日-2022年1月25日
+- Utilize AI to enhance the visual quality (720p to 1080p, and some assets to 2K resolution).
 
-重构了GUI，同时增加了读取最新存档，语音不中断，历史对话跳跃、音量大小测试等功能，存读档界面独立，新增了对硬件解码的实验性支持
+- Provide more people with the opportunity to experience and fall in love with this work.
+
+- Ultimately open-source all the Chinese localization results to offer insights for other enthusiasts interested in contributing to the localization effort.
+
+# Live_development_screen_display
+
+[Go to navigation](#Navigation)
+
+**Preview of the Latest Development Interface**
+
+January 22, 2022 - January 25, 2022
+
+The GUI has been redesigned, and new features have been added, including the ability to load the latest save file, uninterrupted voice playback, history dialogue jumping, volume testing, and more. The save/load interface is now independent, and experimental support for hardware decoding has been introduced.
 
 <img src="images/新版UI预览_MainMenu01.PNG" alt="新版UI预览_MainMenu01.PNG" style="zoom:20%;" />
 
@@ -82,83 +84,87 @@ Discussions is now open, for non-bug/translation/script/programming issues, plea
 
 **Windows**
 
-Demo版实机开发界面_主菜单
+Demo Version In-Game Development Interface - Main Menu
 
 <img src="images/Demo版实机开发界面_主菜单.PNG" alt="Demo版实机开发界面_主菜单.PNG" style="zoom:20%;" />
 
-原对话框实现
+Original Dialogue Box Implementation
 
 <img src="images/原对话框实现.PNG" alt="原对话框实现.PNG" style="zoom:20%;" />
 
-实机演示_Demo版对话框实现
+Live Demonstration - Dialogue Box Implementation for the Demo Version
 
 <img src="images/实机演示_Demo版对话框实现.PNG" alt="实机演示_Demo版对话框实现.PNG" style="zoom:20%;" />
 
-原带CG的主页面
+Original Main Menu with CG
 
 <img src="images/原带CG的主页面.PNG" alt="原带CG的主页面.PNG" style="zoom:20%;" />
 
-实机演示_Demo版带CG的主页面（waifu2x 720p->1080p）
+Live Demonstration - Demo Version of the Main Menu with CG (waifu2x 720p to 1080p)
 
 <img src="images/实机演示_Demo版带CG的主页面.PNG" alt="实机演示_Demo版带CG的主页面.PNG" style="zoom:20%;" />
 
-Demo版实机测试_GIF图
+Demo Version Live Test - GIF Images
 
 <img src="images/Demo版实机测试_GIF图.gif" alt="Demo版实机测试_GIF图.gif" style="zoom:20%;" />
 
 **Android**
 
-测试设备：中兴Axon 30 Ultra 5G / Android 11 / MyOS 11.0.22MR_A2022P
+Tested Device: ZTE Axon 30 Ultra 5G / Android 11 / MyOS 11.0.22MR_A2022P
 
-初步确认可运行于新旧安卓手机、X86安卓设备、模拟器及Chrome Book
+Preliminary confirmation of compatibility with both older and newer Android smartphones, X86 Android devices, emulators, and Chromebooks.
 
-安卓Demo实机运行页面_安装
+
+
+Android Demo On-Device Running Page - Installation
 
 <img src="images/安卓Demo实机运行页面_安装.jpg" alt="安卓Demo安卓Demo实机运行页面_安装.jpg" style="zoom:10%;" />
 
-安卓Demo实机运行页面_项目组logo
+Android Demo On-Device Running Page - Project Team Logo
 
 <img src="images/安卓Demo实机运行页面_项目组logo.jpg" alt="安卓Demo实机运行页面_项目组logo.jpg" style="zoom:20%;" />
 
-安卓Demo实机运行页面_主菜单
+Android Demo On-Device Running Page - Main Menu
 
 <img src="images/安卓Demo实机运行页面_主菜单.jpg" alt="安卓Demo实机运行页面_主菜单.jpg" style="zoom:20%;" />
 
-安卓Demo实机运行页面_对话框实现
+Android Demo On-Device Running Page - Dialogue Box Implementation
 
 <img src="images/安卓Demo实机运行页面_对话框实现.jpg" alt="安卓Demo实机运行页面_对话框实现.jpg" style="zoom:20%;" />
 
-安卓Demo实机运行页面_带CG的主页面
+Android Demo On-Device Running Page - Main Menu with CG (Computer Graphics)
 
 <img src="images/安卓Demo实机运行页面_带CG的主页面.jpg" alt="安卓Demo实机运行页面_带CG的主页面.jpg" style="zoom:20%;" />
 
 **Linux**
 
-Ubuntu Demo版实机运行页面
+Ubuntu Demo Version On-Device Running Page
 
 <img src="images/Ubuntu实机运行页面.png" alt="Ubuntu实机运行页面.png" style="zoom:20%;" />
 
 **MacOS**
 
-MacOS_Demo实机运行页面_主菜单
+MacOS Demo On-Device Running Page - Main Menu
 
 <img src="images/MacOS_Demo实机运行页面_主菜单.png" alt="MacOS_Demo实机运行页面_主菜单.png" style="zoom:20%;" />
 
-MacOS_Demo实机运行页面_对话框
+MacOS Demo On-Device Running Page - Dialogue Box
 
 <img src="images/MacOS_Demo实机运行页面_对话框.png" alt="MacOS_Demo实机运行页面_对话框.png" style="zoom:20%;" />
 
-**WEB版**
+**WEB Version**
 
-​	WEB页面已经上传了，想尝鲜的话可以前往 [WEB版_Demo服务器](https://love69demo.luckykeeper.site/)（服务器在莫斯科，推荐在北京时间早上这样的低峰期访问，其它时段可能会遇到无法访问，速度缓慢等问题）
+​	The WEB version has already been uploaded, and if you want to try it out, you can visit the [WEB Version Demo Server](https://love69demo.luckykeeper.site/) (the server is located in Moscow, so it's recommended to access it during low-traffic times like early morning Beijing time, as you might encounter issues with access and slow loading at other times).
 
-​	需要注意的是，WEB版是 Ren'Py 的实验性功能，实际体验并不是很好，很多音声、音效等等都不能正常加载，如果遇到页面/人物马赛克，这是因为对应的资源还没下载下来，可以通过反复按鼠标右键来让它重新加载，另外，WEB版与其它版本的内容并不同步，当前的WEB版更新时间为：2021年10月15日
+​	Please note that the WEB version is an experimental feature of Ren'Py, and the actual experience may not be very smooth. Many elements like voice and sound effects may not load correctly. If you encounter pixelation in the images or characters, it's because the corresponding resources haven't been downloaded yet. You can force them to reload by right-clicking with the mouse. Additionally, the content in the WEB version is not synchronized with other versions. The current update date for the WEB version is October 15, 2021.
 
-​	最佳适配浏览器：Edge最新版，最新版Chrome兼容性稍差，其它浏览器不保证正常工作
+​	The recommended browsers for the best compatibility are the latest version of Edge, while Chrome's compatibility is slightly lower. Other browsers may not work correctly.
 
-​	有条件的话还是去玩电脑/手机版吧~
+​	If you have the opportunity, it's still better to play the computer or mobile version for a smoother experience~
 
-WEB版 Demo实机运行页面
+
+
+WEB Version Demo On-Device Running Page
 
 <img src="images/WEB版测试（生产环境）.png" alt="WEB版Demo实机运行页面1" style="zoom:20%;" />
 
@@ -166,43 +172,43 @@ WEB版 Demo实机运行页面
 
 <img src="images/WEB版测试.PNG" alt="WEB版Demo实机运行页面3" style="zoom:20%;" />
 
-# 贡献及源码食用指北
+# Contributions and source code guide
 
-[返回导航](#导航)
+[Go to navigation](#Navigation)
 
-欢迎您前来让本项目变的更好&学习，下面简单介绍一下如何康~~本项目的代码~~我的胡言乱语
+Welcome to help improve this project and learn. Below is a brief introduction on how to get started with ~~the code of this project~~ my nonsense.
 
-（Luckykeeper:第一次参与汉化工作，日语渣渣，主催&程序&美工&翻译&校对&润色&项目组网站基本上都是我一个人包的，测试也有参与，狂肝不易，还望轻喷😅）
+(Luckykeeper: First time participating in localization work, not great at Japanese, I handle hosting, programming, artwork, translation, proofreading, editing, and the project team website mostly by myself. I also participate in testing. It's been a lot of hard work, so please be gentle with me 😅)
 
-讨论、聊天、提问、凑热闹、翻译纠正、提改进建议等……请移步 Issues ：[看已有条目](https://github.com/luckykeeper/LOVE69_renpy_remaster/issues) ； [发新贴](https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/new)
+For discussions, chats, questions, joining in, translation corrections, suggesting improvements, and more, please head over to the Issues: [See existing items](https://github.com/luckykeeper/LOVE69_renpy_remaster/issues); [Create a new post](https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/new).
 
-那么，就赶快来介绍一下吧~
+So, let's get started~
 
-目前本项目的目录结构非常简单，`images` 文件夹下是本页展示的图片，`已完成的文档` 是程序的脚本，里面有如下文件（后面还会增加文件，但是没有新增的形式了）：
+Currently, the project's directory structure is very simple. Under the `images` folder, you'll find the images displayed on this page. The `已完成的文档` (completed documents) folder contains the program's scripts, which include the following files (more files will be added later, but not in the form of new documents):
 
->已完成的文档
+>Completed Documents
 >
->│  OP歌词及翻译.md ——（OP的歌词整理及翻译，OP还没做）
+>│  OP歌词及翻译.md ——（Lyrics and translation for the opening song, the opening hasn't been done yet）
 >
 >│
 >
->├─bgm定义 ——（.rpy 都是 Ren'Py 的文件，别担心，语法非常简单，一看就懂![huaji](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/huaji.aqdzo604ncs.png)）
+>├─bgm定义 ——（.rpy files are Ren'Py files, don't worry, the syntax is very simple and easy to understand![huaji](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/huaji.aqdzo604ncs.png))
 >
 >│      bgm.rpy
 >
 >│
 >
->├─人物表——（定义出场人物的显示名称和立绘）
+>├─人物表——（Defines the display names and character illustrations）
 >
 >│      character.rpy
 >
 >│
 >
->├─剧本（脚本) ——（包含了文本以及控制脚本，也就是 Gal 的核心)
+>├─剧本（脚本) ——（Contains text and control scripts, the core of the GAL)
 >
->│      scene01.rpy ——（Scene01 也就是第一幕，02就代表第二幕，以此类推）
+>│      scene01.rpy ——（Scene01 is the first act, 02 represents the second act, and so on）
 >
->│      scene02.rpy —— （Scene01 大部分是共通线，02-15是一周目内容，16及后面是二周目内容）
+>│      scene02.rpy —— （Scene01 mostly consists of common routes, 02-15 covers content for the first playthrough, and 16 and beyond are for the second playthrough and later）
 >
 >│      scene03.rpy
 >
@@ -230,78 +236,75 @@ WEB版 Demo实机运行页面
 >
 >│      scene15.rpy
 >
->│      script.rpy ——（主脚本，点击“开始游戏”之后程序的入口)
+>│      script.rpy ——（Main script, the entry point of the program after clicking "Start Game")
 >
 >│
 >
->├─用户图形界面 ——（关于程序的用户界面都是在这里设定的）
+>├─用户图形界面 ——（All aspects of the program's user interface are configured here）
 >
->│      gui.rpy ——（开场动画设定脚本，打开程序)
+>│      gui.rpy ——（Script for setting up the opening animation when the program is launched)
 >
->│      LOVE69_renpy_remaster_project.rpy ——（设定刚打开程序时的行为)
+>│      LOVE69_renpy_remaster_project.rpy ——（Behavior settings when the program is first opened)
 >
->│      options.rpy ——（关于页面，程序名称、标题，以及打包设置)
+>│      options.rpy ——（About page, program name, title, and packaging settings)
 >
->│      screens.rpy ——（对话框和小人物头像的设置)
+>│      screens.rpy ——（Settings for dialogue boxes and character portraits)
 >
 >│
 >
 >└─视频ass文件
 >
->  CM with Sub.ass ——（Scene01中出现的电视CM的字幕文件)
+>  CM with Sub.ass ——（Subtitle file for the TV commercial appearing in Scene01)
 >  
 
-# 开源声明
+# Open-source declaration
 
-[返回导航](#导航)
+[Go to navigation](#Navigation)
 
-由于一些原因，本项目没有选择一般的开源协议，这并不代表您可以随意使用本项目的源码去做任何事，请您务必遵守这里以及Release里面的使用协议及说明，其中，**最重要的一条是本项目的所有内容禁止用于商业化，如果您使用了本项目的任何代码和脚本进行二次创作则必须对其开源，且必须在开源页面标注使用了本项目并标注本项目的 GitHub 地址**
+For some specific reasons, this project has not adopted a conventional open-source license. This does not mean you can freely use the source code of this project for any purpose. Please make sure to adhere to the usage agreements and instructions provided here and in the Releases section. The **most crucial requirement is that all the content in this project is prohibited from being used for commercial purposes. If you use any code or scripts from this project for derivative works, you must open-source them and include a notice on the open-source page indicating the use of this project and providing a link to this project's GitHub repository.**
 
-下面是本项目开源协议的内容：
+Below is the content of the open-source agreement for this project:
 
-1. 本项目的所有内容，禁止用于商业化，如果您使用了本项目的任何代码和脚本进行二次创作则必须对其开源，且必须在开源页面标注使用了本项目并标注本项目的 GitHub 地址
-2. 使用项目中[“已完成的文档”](https://github.com/luckykeeper/LOVE69_renpy_remaster/tree/main/%E5%B7%B2%E5%AE%8C%E6%88%90%E7%9A%84%E6%96%87%E6%A1%A3)目录下的任何内容进行二次开发必须先在`issues`内申请，申请时请说明你是谁、以及使用该项目的哪些内容，加上使用内容的目的，得到授权方可按照条件合理合法使用（条件参考但并不限于“开源声明”内容）
-3. 使用[“已完成的文档”](https://github.com/luckykeeper/LOVE69_renpy_remaster/tree/main/%E5%B7%B2%E5%AE%8C%E6%88%90%E7%9A%84%E6%96%87%E6%A1%A3)目录下的任何内容须标明本项目的url和本人的名字（Luckykeeper）
-4. 若程序使用了[“已完成的文档”](https://github.com/luckykeeper/LOVE69_renpy_remaster/tree/main/%E5%B7%B2%E5%AE%8C%E6%88%90%E7%9A%84%E6%96%87%E6%A1%A3)目录下的任何内容，则禁止擅自在一切视频网站（如：B站、Youtube等）上进行游戏的录播和直播
-5. 请务必遵守您所在国家/地区的相关法律法规
-6. 支持开源精神，鼓励用爱发电，欢迎大家参考本项目为自己喜欢的ADV/AVG进行汉化移植，如果该项目帮助了你，希望你在发布程序的时候提及一下这个项目的url和我
-7. 如果该项目帮助了你，请帮我点亮一下页面上方的 `star` 这是对我最好的鼓励
-8. 本项目不接受任何形式的捐赠，~~本页面是唯一指定的联系方式~~（L:项目组网站肝完了，链接在上面的表格里面，去那边也可以，那边评论不需要GitHub账号，没有GitHub账号的阔以去那边），想找我就发issues，看到会及时回复
+1. All content in this project is prohibited from being used for commercial purposes. If you use any code and scripts from this project for derivative works, you must open-source them and include a notice on the open-source page indicating the use of this project and providing a link to this project's GitHub repository.
+2. To perform any secondary development using content from the ["已完成的文档" (Completed Documents)](https://github.com/luckykeeper/LOVE69_renpy_remaster/tree/main/%E5%B7%B2%E5%AE%8C%E6%88%90%E7%9A%84%E6%96%87%E6%A1%A3) directory within the project, you must first apply within the `issues` section. When applying, please specify who you are, what content from the project you are using, state the purpose of using the content, and only proceed after obtaining authorization according to the specified conditions (conditions may include but are not limited to "open-source declaration" content).
+3. When using any content from the ["已完成的文档" (Completed Documents)](https://github.com/luckykeeper/LOVE69_renpy_remaster/tree/main/%E5%B7%B2%E5%AE%8C%E6%88%90%E7%9A%84%E6%96%87%E6%A1%A3) directory, you must credit this project's URL and the name "Luckykeeper."
+4. If the program uses any content from the ["已完成的文档" (Completed Documents)](https://github.com/luckykeeper/LOVE69_renpy_remaster/tree/main/%E5%B7%B2%E5%AE%8C%E6%88%90%E7%9A%84%E6%96%87%E6%A1%A3) directory, it is strictly forbidden to independently record or livestream gameplay on any video-sharing platforms (e.g., Bilibili, YouTube).
+5. Please ensure compliance with the relevant laws and regulations of your country/region.
+6. Support the spirit of open source, encourage creating content with love, and welcome everyone to reference this project for the Chinese localization and adaptation of your favorite ADV/AVG. If this project has helped you, please consider mentioning this project's URL and me when releasing your program.
+7. If this project has been helpful to you, please show your support by clicking the `star` at the top of the page. This is the best way to encourage me.
+8. This project does not accept any form of donations. ~~This page is the only designated means of contact~~ (L: The project website is up, the link is in the table above, you can go there too. Comments there do not require a GitHub account; for those without a GitHub account, you can go there). If you need to reach me, please create an issue, and I will respond promptly when I see it.
 
-# 其它事项
+# Other matters
 
-[返回导航](#导航)
+[Go to navigation](#Navigation)
 
-- 出于各种原因，本次汉化移植并不会对“gkd”的内容（即 Hscene ）进行汉化和移植，各位绅士还请谅解，请积极考虑购买正版支持原作团队![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
+- For various reasons, this Chinese localization and adaptation project will not translate or adapt the "gkd" content (H-scenes). ~~Hentai~~ Gentlemen, please understand this decision and consider supporting the original creators by [Purchasing the official version](https://www.dlsite.com/maniax/work/=/product_id/RJ124813.html)![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
 
-- 本页面最后修改时间 2022年4月27日
+- Last updated on October 14, 2023.
 
-- 本页是 V2 版的 Readme ，第一版 Readme 考古戳[这里](./README_old.md)
+- This is the Readme for version 2. For the first version, check it out [here](./README_old.md).
 
-- 项目组联系邮箱：love69renpyremasterproject@luckykeeper.site （邮箱有可能会炸，建议优先发Issues）
+- Project team contact email: love69renpyremasterproject@luckykeeper.site (Please note that the email might get busy, so it's recommended to use Issues for communication).
 
-- 欢迎来围观本人开源项目，求 Star~
+- Feel free to check out my open-source projects and consider giving them a star~
 
-  > 【本项目相关】
+  > 【Related to This Project】
   >
-  > https://github.com/love69renpyremasterproject/love69renpyremasterproject.github.io <- 本项目的网站
+  > https://github.com/love69renpyremasterproject/love69renpyremasterproject.github.io <- The website for this project.
   >
-  > https://github.com/LOVE69-Renpy-Remaster-Project/EatCocoa <- 项目组给带伙准备的小游戏，[戳这里去玩](https://eatcocoa.luckykeeper.site:44443/)，请使用Edge、Chrome等主流浏览器，手机和电脑均可~~，欢迎大家来卷(doge)~~
+  > https://github.com/LOVE69-Renpy-Remaster-Project/EatCocoa <- A small game prepared for fellow supporters by the project team, [click here to play](https://eatcocoa.luckykeeper.site:44443/). It works on popular browsers like Edge and Chrome, and is compatible with both mobile and desktop. Feel free to give it a try (doge)~
   >
-  > https://github.com/LOVE69-Renpy-Remaster-Project/Doc <- 正在施工的项目文档
+  > https://github.com/LOVE69-Renpy-Remaster-Project/Doc <- Work in progress project documentation.
   >
-  > 【其它项目】
+  > 【Other Projects】
   >
-  > https://github.com/luckykeeper/docker_plumemo <-个人博客的容器镜像
+  > https://github.com/luckykeeper/docker_plumemo <- Container images for my personal blog.
 
 # Stargazers over time 
 
-[返回导航](#导航)
+[Go to navigation](#Navigation)
 
 **GitHub**
 
 [![ GitHub Stargazers over time](https://starchart.cc/luckykeeper/LOVE69_renpy_remaster.svg)](https://starchart.cc/luckykeeper/LOVE69_renpy_remaster) 
 
-**Gitee**
-
-[![Gitee Stargazers over time](https://whnb.wang/stars/luckykeeper/LOVE69_renpy_remaster)](https://whnb.wang/stars/luckykeeper/LOVE69_renpy_remaster)
