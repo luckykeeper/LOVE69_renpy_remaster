@@ -120,6 +120,8 @@ Demo版实机测试_GIF图
 
 初步确认可运行于新旧安卓手机、X86安卓设备、模拟器及Chrome Book
 
+
+
 安卓Demo实机运行页面_安装
 
 <img src="images/安卓Demo实机运行页面_安装.jpg" alt="安卓Demo安卓Demo实机运行页面_安装.jpg" style="zoom:10%;" />
@@ -165,6 +167,8 @@ MacOS_Demo实机运行页面_对话框
 ​	最佳适配浏览器：Edge最新版，最新版Chrome兼容性稍差，其它浏览器不保证正常工作
 
 ​	有条件的话还是去玩电脑/手机版吧~
+
+
 
 WEB版 Demo实机运行页面
 
@@ -282,7 +286,7 @@ WEB版 Demo实机运行页面
 
 - 出于各种原因，本次汉化移植并不会对“ghs”的内容（即 Hscene ）进行汉化和移植，各位绅士还请谅解，请积极考虑[购买正版](https://www.dlsite.com/maniax/work/=/product_id/RJ124813.html)支持原作团队![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
 
-- 本页面最后修改时间 2022年8月17日
+- 本页面最后修改时间 2022年10月14日
 
 - 本页是 V2 版的 Readme ，第一版 Readme 考古戳[这里](./README_old.md)
 
