@@ -286,7 +286,7 @@ WEB版 Demo实机运行页面
 
 - 出于各种原因，本次汉化移植并不会对“ghs”的内容（即 Hscene ）进行汉化和移植，各位绅士还请谅解，请积极考虑[购买正版](https://www.dlsite.com/maniax/work/=/product_id/RJ124813.html)支持原作团队![doge](https://cdn.jsdelivr.net/gh/luckykeeper/LuckyBlog_RS@main/face/doge.7cjy2wsn5n40.png)
 
-- 本页面最后修改时间 2022年10月14日
+- 本页面最后修改时间 2023年10月14日
 
 - 本页是 V2 版的 Readme ，第一版 Readme 考古戳[这里](./README_old.md)
 
