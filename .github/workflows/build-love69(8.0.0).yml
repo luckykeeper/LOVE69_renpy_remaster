@@ -83,7 +83,7 @@ jobs:
       run: |
         echo "开始进行夜间构建"
         echo "写入构建时间"
-        wget https://raw.githubusercontent.com/luckykeeper/LOVE69_renpy_remaster/dev/buildtime.sh
+        wget https://raw.githubusercontent.com/luckykeeper/LOVE69_renpy_remaster/dev-renpy8.0.0/buildtime.sh
         sh ./buildtime.sh
         echo "写入构建时间完成！"
         wget -q https://www.renpy.org/dl/${RENPY_SDK_VERSION}/renpy-${RENPY_SDK_VERSION}-sdk.tar.bz2
