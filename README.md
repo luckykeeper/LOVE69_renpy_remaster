@@ -2,7 +2,7 @@
 
 欢迎来到 dev-renpy8.0.0 分支，任何的新PR请提交至本分支
 
-注意：请不要改动 `options.rpy` 中的 Build 时间 （即“（Build 20220428）”）程序会根据当前构建时间自动替换
+注意：请不要改动 `options.rpy` 中的 Build 时间 （即“（Build 20231222）”）程序会根据当前构建时间自动替换
 
 ## ChangeLog
 
@@ -49,3 +49,7 @@
 
 - 完成了可变标题的制作（读档时改变标题的功能暂时没有实现）
 - 完成BGM名称推送的功能实现及制作
+
+### 2023-12-22
+
+- 根据知乎[@被诅咒的章鱼](https://zhuanlan.zhihu.com/p/362449324)大佬指点，修复了 STAFF 播放时没有同步更新 SquenceAnimator 和 SquenceAnimator2 类的 show_timebase 成员变量的问题，感谢大佬

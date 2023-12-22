@@ -6,7 +6,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2023年12月22日
 
 ################################################################################
 ## 初始化
@@ -1507,7 +1507,7 @@ screen preferences():
                 ## 以添加其他创建者定义的首选项设置。
                     vbox:
                         style_prefix "check"
-                        label _("吐槽等级（功能没做完请保持默认）")
+                        label _("吐槽等级")
                         textbutton _("火力全开（默认）") :
                             action [SetVariable("persistent.luckykeeperSay","full"),renpy.save_persistent()]
                             tooltip "加入对梗的解释和吐槽，理论上能让游戏过程更加有趣，如果不选此项，可能会影响到对剧情的理解"

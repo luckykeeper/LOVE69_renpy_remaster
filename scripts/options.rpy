@@ -5,7 +5,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月24日
+# 修订日期 2023年12月22日
 # 版本 NightBuild "LuckyDev"
 
 
@@ -34,7 +34,7 @@ init python:
     # 运行时名称，缩短以便显示可变标题
     runName = "LOVE69 汉化移植版 NightBuild，由 Luckykeeper 和 LOVE69 Ren'py Remaster Project 倾情奉献"
     # 构建时间
-    buildTime = " (Build 20220428)"
+    buildTime = " (Build 20231222)"
     # 自动获取 Ren'py 引擎版本
     engineVersion = " 引擎版本："+renpy.version_only[0:5]
     # Scene 序号

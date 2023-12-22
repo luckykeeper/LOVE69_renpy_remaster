@@ -7,7 +7,7 @@
 # Blog：http://luckykeeper.site
 # 项目组网站：https://love69renpyremasterproject.github.io/
 # 项目开源地址：https://github.com/luckykeeper/LOVE69_renpy_remaster
-# 修订日期 2022年6月25日
+# 修订日期 2023年12月22日
 
 # 当前流程：All Done!
 
@@ -2556,7 +2556,7 @@ label scene09:
 
     if show_staff:
         # https://github.com/luckykeeper/LOVE69_renpy_remaster/issues/19
-        $ current_index = 0
+        # $ current_index = 0
         # show screen staff
         show staff at truecenter
         # play sound bgmone
